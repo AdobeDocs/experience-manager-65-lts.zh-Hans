@@ -1,0 +1,182 @@
+---
+title: 为WebSphere应用程序服务器配置SSL
+description: 了解如何为WebSphere应用程序服务器配置SSL。
+contentOwner: admin
+content-type: reference
+geptopics: SG_AEMFORMS/categories/configuring_ssl
+products: SG_EXPERIENCEMANAGER/6.5/FORMS
+solution: Experience Manager, Experience Manager Forms
+feature: Document Security
+role: User, Developer
+source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+workflow-type: tm+mt
+source-wordcount: '1220'
+ht-degree: 0%
+
+---
+
+# 为WebSphere应用程序服务器配置SSL {#configuring-ssl-for-websphere-application-server}
+
+此部分包含使用IBM WebSphere应用程序服务器配置SSL的以下步骤。
+
+## 在WebSphere中创建本地用户帐户 {#creating-a-local-user-account-on-websphere}
+
+要启用SSL，WebSphere需要访问本地操作系统用户注册表中具有管理系统管理权限的用户帐户：
+
+* (Windows)创建一个Windows用户，该用户是管理员组的成员，并且有权作为操作系统的一部分进行操作。 （请参阅[为WebSphere创建Windows用户](configuring-ssl-websphere-application-server.md#create-a-windows-user-for-websphere)。）
+* (Linux、UNIX)用户可以是超级用户或具有超级用户权限的其他用户。 在WebSphere上启用SSL时，请使用此用户的服务器标识和密码。
+
+### 为WebSphere创建Linux或UNIX用户 {#create-a-linux-or-unix-user-for-websphere}
+
+1. 以根用户身份登录。
+1. 通过在命令提示符中输入以下命令来创建用户：
+
+   * （Linux 和 Sun Solaris） `useradd`
+   * （IBM AIX） `mkuser`
+
+1. 通过在命令提示符中输入 `passwd` 来设置新用户的密码。
+1. （Linux 和 Solaris）通过在命令提示符中输入 `pwconv` （不带参数）来创建影子密码文件。
+
+   >[!NOTE]
+   >
+   >（Linux 和 Solaris）要使 WebSphere Application Server 本地作系统安全注册表正常工作，必须存在影子密码文件。 影子密码文件通常名为 **/etc/shadow** ，基于 /etc/passwd 文件。 如果影子口令文件不存在，那么在启用全局安全性并将用户注册表配置为本地作系统之后会发生错误。
+
+1. 在文本编辑器中从 /etc 目录中打开组文件。
+1. 将您在步骤 2 中创建的用户添加到组中 `root` 。
+1. 保存并关闭该文件。
+1. （启用SSL的UNIX）以root用户身份启动和停止WebSphere。
+
+### 为WebSphere创建Windows用户 {#create-a-windows-user-for-websphere}
+
+1. 使用管理员用户帐户登录到Windows。
+1. 选择&#x200B;**开始>控制面板>管理工具>计算机管理>本地用户和组**。
+1. 右键单击“用户”并选择&#x200B;**新建用户**。
+1. 在相应的框中键入用户名和密码，并在其余框中键入所需的任何其他信息。
+1. 取消选择&#x200B;**用户必须在下次登录时更改密码**，单击&#x200B;**创建**，然后单击&#x200B;**关闭**。
+1. 单击&#x200B;**用户**，右键单击您创建的用户，然后选择&#x200B;**属性**。
+1. 单击&#x200B;**成员**&#x200B;选项卡，然后单击&#x200B;**添加**。
+1. 在“输入要选择的对象名称”框中，键入`Administrators`，单击“检查名称”以确保组名正确。
+1. 单击&#x200B;**确定**，然后再次单击&#x200B;**确定**。
+1. 选择&#x200B;**开始>控制面板>管理工具>本地安全策略>本地策略**。
+1. 单击用户权限分配，然后右键单击作为操作系统的一部分操作，并选择属性。
+1. 单击&#x200B;**添加用户或组**。
+1. 在“输入要选择的对象名称”框中，键入您在步骤4中创建的用户的名称，单击&#x200B;**检查名称**&#x200B;以确保名称正确，然后单击&#x200B;**确定**。
+1. 单击&#x200B;**确定**&#x200B;以关闭“作为操作系统属性”对话框一部分的Act。
+
+### 配置WebSphere以使用新创建的用户作为管理员 {#configure-websphere-to-use-the-newly-created-user-as-administrator}
+
+1. 确保WebSphere正在运行。
+1. 在WebSphere管理控制台中，选择&#x200B;**安全>全局安全**。
+1. 在管理安全性下，选择&#x200B;**管理用户角色**。
+1. 单击添加，然后执行以下操作：
+
+   1. 在搜索框中键入&#x200B;**&amp;amp；ast；**，然后单击搜索。
+   1. 单击角色下的&#x200B;**管理员**。
+   1. 将新创建的用户添加到映射到角色并将其映射到管理员。
+
+1. 单击&#x200B;**确定**&#x200B;并保存更改。
+1. 重新启动WebSphere配置文件。
+
+## 启用管理安全性 {#enable-administrative-security}
+
+1. 在WebSphere管理控制台中，选择&#x200B;**安全>全局安全**。
+1. 单击&#x200B;**安全配置向导**。
+1. 确保启用了&#x200B;**启用应用程序安全性**&#x200B;复选框。 单击&#x200B;**下一步**。
+1. 选择&#x200B;**联合存储库**，然后单击&#x200B;**下一步**。
+1. 指定要设置的凭据，然后单击&#x200B;**下一步**。
+1. 单击&#x200B;**完成**。
+1. 重新启动WebSphere配置文件。
+
+   WebSphere开始使用默认密钥库和truststore。
+
+## 启用SSL（自定义密钥和信任库） {#enable-ssl-custom-key-and-truststore}
+
+可以使用ikeyman实用程序或Admin Console创建信任库和密钥库。 要使ikeyman正常工作，请确保WebSphere安装路径不包含圆括号。
+
+1. 在WebSphere管理控制台中，选择&#x200B;**安全> SSL证书和密钥管理**。
+1. 单击“相关项目”下的&#x200B;**密钥库和证书**。
+1. 在&#x200B;**密钥库使用情况**&#x200B;下拉列表中，确保选中&#x200B;**SSL密钥库**。 单击&#x200B;**新建**。
+1. 键入逻辑名称和说明。
+1. 指定要创建密钥库的路径。 如果已通过ikeyman创建了keystore，请指定指向keystore文件的路径。
+1. 指定并确认密码。
+1. 选择密钥库类型并单击&#x200B;**应用**。
+1. 保存主配置。
+1. 单击&#x200B;**个人证书**。
+1. 如果您添加了已使用ikeyman创建的密钥库，则会显示您的证书。 否则，您需要通过执行以下步骤来添加新的自签名证书：
+
+   1. 选择“ **创建>自签名证书**”。
+   1. 在证书表单上指定适当的值。 确保将别名和公用名保留为计算机的完全限定域名。
+   1. 单击&#x200B;**应用**。
+
+1. 重复步骤 2 到 10 以创建信任库。
+
+## 将定制密钥库和信任库应用于服务器 {#apply-custom-keystore-and-truststore-to-the-server}
+
+1. 在 WebSphere 管理控制台中，选择“安全性” **>“SSL 证书和密钥管理**”。
+1. 单击管理 **端点安全配置**。 将打开本地拓扑图。
+1. 在“入站”下，选择节点的直接子级。
+1. 在“相关项”下，选择“SSL 配置&#x200B;**”。**
+1. 选择“ **NodeDeafultSSLSetting**”。
+1. 从信任库名称和密钥库名称下拉列表中，选择您创建的自定义信任库和密钥库。
+1. 单击&#x200B;**应用**。
+1. 保存主配置。
+1. 重新启动WebSphere配置文件。
+
+   现在，您的配置文件会在自定义SSL设置和证书上运行。
+
+## 启用对AEM本地表单的支持 {#enabling-support-for-aem-forms-natives}
+
+1. 在WebSphere管理控制台中，选择&#x200B;**安全>全局安全**。
+1. 在“身份验证”部分中，展开&#x200B;**RMI/IIOP安全**，然后单击&#x200B;**CSIv2入站通信**。
+1. 确保在“传输”下拉列表中选择&#x200B;**支持SSL**。
+1. 重新启动WebSphere配置文件。
+
+## 配置WebSphere以转换以https开头的URL {#configuring-websphere-to-convert-urls-that-begins-with-https}
+
+要转换以https开头的URL，请将该URL的签名者证书添加到WebSphere服务器。
+
+**为启用https的站点创建签名者证书**
+
+1. 确保WebSphere正在运行。
+1. 在WebSphere管理控制台中，导航到签名者证书，然后单击“安全”>“SSL证书和密钥管理”>“密钥存储和证书”>“NodeDefaultTrustStore”>“签名者证书”。
+1. 单击从端口检索并执行以下任务：
+
+   * 在主机框中，键入URL。 例如，类型`www.paypal.com`。
+   * 在端口框中，键入`443`。 此端口是默认的SSL端口。
+   * 在“别名”框中，键入别名。
+
+1. 单击检索签名者信息，然后验证是否检索了信息。
+1. 单击应用，然后单击保存。
+
+现在，从添加证书的站点的HTML到PDF的转换将在生成PDF服务中起作用。
+
+>[!NOTE]
+>
+>对于从WebSphere内部连接到SSL站点的应用程序，需要签名者证书。 它由Java安全套接字扩展(JSSE)用来验证在SSL握手期间连接的远程端发送的证书。
+
+## 配置动态端口 {#configuring-dynamic-ports}
+
+启用全局安全后，IBM WebSphere不允许对ORB.init()进行多次调用。 您可以在https://www-01.ibm.com/support/docview.wss?uid=swg1PK58704上阅读有关永久限制的信息。
+
+执行以下步骤，将端口设置为动态并解决问题：
+
+1. 在WebSphere管理控制台中，选择&#x200B;**服务器** > **服务器类型** > **WebSphere应用程序服务器**。
+1. 在“首选项”部分，选择您的服务器。
+1. 在&#x200B;**配置**&#x200B;选项卡的&#x200B;**通信**&#x200B;部分下，展开&#x200B;**端口**，然后单击&#x200B;**详细信息**。
+1. 单击以下端口名称，将&#x200B;**端口号**&#x200B;更改为0，然后单击&#x200B;**确定**。
+
+   * `ORB_LISTENER_ADDRESS`
+   * `SAS_SSL_SERVERAUTH_LISTENER_ADDRESS`
+   * `CSIV2_SSL_SERVERAUTH_LISTENER_ADDRESS`
+   * `CSIV2_SSL_MUTUALAUTH_LISTENER_ADDRESS`
+
+## 配置sling.properties文件 {#configure-the-sling-properties-file}
+
+1. 打开`[aem-forms_root]`\crx-repository\launchpad\sling.properties文件进行编辑。
+1. 找到`sling.bootdelegation.ibm`属性并将`com.ibm.websphere.ssl.*`添加到其值字段。 更新的字段如下所示：
+
+   ```shell
+   sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*
+   ```
+
+1. 保存文件并重新启动服务器。
