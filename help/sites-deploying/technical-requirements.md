@@ -5,9 +5,9 @@ topic-tags: platform
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 1a942dc471cde14fa3b811b31e54644e199f8738
+source-git-commit: 055e99ec1c202acacae1be55b48e828f2634b0f4
 workflow-type: tm+mt
-source-wordcount: '3641'
+source-wordcount: '3291'
 ht-degree: 1%
 
 ---
@@ -79,33 +79,23 @@ Adobe建议进行这些配置，并在标准软件维护协议中提供全面支
 
 ### Java™虚拟机 {#java-virtual-machines}
 
-应用程序需要由Java™开发工具包(JDK)分发提供的Java™虚拟机才能运行。
+该应用程序需要 Java™ 虚拟机才能运行，该虚拟机由 Java™ 开发工具包 （JDK） 分发版提供。
 
-Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
+Adobe Experience Manager 可与以下版本的 Java™ 虚拟机配合使用：
 
 >[!CAUTION]
 >
->跟踪Java™供应商的安全公告。 这样做确保了生产环境的安全与保障。 此外，请始终安装最新的Java™更新。
+>跟踪 Java™ 供应商提供的安全公告。 这样做可确保生产环境的安全性。 此外，请始终安装最新的Java™更新。
 
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
-| Oracle Java™ SE 17 JDK | Z：不支持`[1]` |
-| Oracle Java™ SE 11 JDK - 64位 | A：支持的`[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+11*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=24&lt;td>) |
-| Oracle Java™ SE 10 JDK | Z：不支持`[1]` |
-| Oracle Java™ SE 9 JDK | Z：不支持`[1]` |
-| Oracle Java™ SE 8 JDK - 64位 | A：支持的`[1]` | [下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?fulltext=Oracle*+JDK*+8*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=10) |
-| IBM® J9虚拟机 — 内部版本2.9，JRE 1.8.0 | A：支持的`[2]` |
-| IBM® J9虚拟机 — 内部版本2.8、JRE 1.8.0 | A：支持的`[2]` |
-| Azul Zulu OpenJDK 11 - 64位 | A：支持的`[3]` | |
-| Azul Zulu OpenJDK 8 - 64位 | A：支持的`[3]` | |
+| Oracle Java™ SE 17 JDK | A：支持的`[1]` |
+| IBM® Semeru J9 VM — 内部版本17.0.13.0 | A：支持的`[2]` |
 
-1. Oracle已针对Oracle Java™ SE产品改用“长期支持”(LTS)模型。 Java™ 9、Java™ 10和Java™ 12是Oracle的非LTS版本(请参阅[Oracle Java™ SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM，Adobe仅对Java™的LTS版本提供支持。 Adobe直接为所有使用Oracle Java™ SE技术的AEM客户支持Oracle Java™ SE JDK的支持和分发，包括在公共更新结束之后的LTS版本的所有维护更新。 请参阅适用于Adobe Experience Manager](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)的[Java™支持策略。
-   **重要信息：至少在2026年9月之前支持Oracle Java™ 11。 正在准备对Oracle Java™ 17的支持。**
+1. Oracle已针对Oracle Java™ SE产品改用“长期支持”(LTS)模型。 Java™ 9、Java™ 10、Java™ 12、Java™ 13、Java™ 14、Java™ 15m Java™ 16是Oracle的非LTS版本(请参阅[Oracle Java™ SE支持路线图](https://www.oracle.com/technetwork/java/eol-135779.html))。 要在生产环境中部署AEM，Adobe仅对Java™的LTS版本提供支持。 Adobe直接为所有使用Oracle Java™ SE技术的AEM客户支持Oracle Java™ SE JDK的支持和分发，包括在公共更新结束之后的LTS版本的所有维护更新。 请参阅适用于Adobe Experience Manager](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)的[Java™支持策略。
+   **此版本支持Oracle Java™ 17。**
 
 1. IBM® JRE仅与WebSphere®应用程序服务器一起受支持。
-
-1. 从版本6.5 SP9开始，本地AEM部署支持Azul Zulu OpenJDK LTS版本。 Azul Zulu JDK LTS版本的支持和分发必须由Adobe客户直接从Azul授予许可。
-
 
 ### 存储和持久性 {#storage-persistence}
 
@@ -116,36 +106,20 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 | **带有TAR文件的文件系统** `[1]` | 存储库 | 答：支持 |
 | **具有数据存储的文件系统** `[1]` | 二进制文件 | 答：支持 |
 | 在文件系统`[1]`的TAR文件中存储二进制文件 | 二进制文件 | Z：不支持生产 |
-| 亚马逊 S3 | 二进制文件 | 答：支持 |
+| Amazon S3 | 二进制文件 | 答：支持 |
 | Microsoft® Azure Blob存储 | 二进制文件 | 答：支持 |
-| MongoDB Enterprise 6.0 | 存储库 | A：支持的`[3, 4]` |
-| MongoDB Enterprise 5.0 | 存储库 | A：支持的`[3, 4]` |
-| MongoDB Enterprise 4.4 | 存储库 | A：支持的`[2, 3, 4, 7]` |
-| MongoDB Enterprise 4.2 | 存储库 | A：支持的`[2, 3, 4, 7]` |
-| MongoDB Enterprise 4.0 | 存储库 | Z：不支持 |
-| MongoDB Enterprise 3.6 | 存储库 | Z：不支持 |
-| MongoDB Enterprise 3.4 | 存储库 | Z：不支持 |
-| IBM® DB2® 10.5 | 存储库和Forms数据库 | R：限制的支持`[5]` |
-| Oracle数据库12c (12.1.x) | 存储库和Forms数据库 | R：有限的支持 |
-| Microsoft® SQL Server 2016 | Forms数据库 | 答：支持 |
+| MongoDB Enterprise 6.0和7.0 | 存储库 | A：支持的`[3, 4]` |
 | **Apache Lucene（快速入门内置）** | 搜索服务 | 答：支持 |
-| Apache Solr | 搜索服务 | 答：支持 |
 
 1. “文件系统”包括符合POSIX的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
-1. MongoDB Enterprise版本4.2和4.4至少需要AEM 6.5 SP9。
 1. AEM中不支持MongoDB分片。
 1. 仅支持MongoDB存储引擎WiredTiger。
-1. 支持AEM Forms升级客户。 新安装不支持。
-1. 仅适用于AEM Forms：
-   * 移除了对Oracle Database 12c的支持，并增加了对Oracle Database 19c的支持。
-   * 删除了对Microsoft® SQL Server 2016的支持，并添加了对Microsoft® SQL Server 2019的支持。
-1. AEM Forms不支持。
 
 >[!NOTE]
 >
->MongoDB是第三方软件程序，未包含在AEM许可包中。 有关详细信息，请参阅[MongoDB许可策略](https://www.mongodb.com/licensing/server-side-public-license/faq)页。
+>MongoDB是一个第三方软件程序，不包含在AEM许可包中。 有关详细信息，请参阅[MongoDB许可策略](https://www.mongodb.com/licensing/server-side-public-license/faq)页。
 >
->为了利用MongoDB充分利用AEM部署，Adobe建议许可MongoDB企业版以受益于专业支持。 有关详细信息，请参阅[建议的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)。
+>为了充分利用MongoDB的AEM部署，Adobe建议许可MongoDB Enterprise版本以获得专业支持。 有关详细信息，请参阅 [建议的](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 部署。
 >
 >该许可证包括一个标准副本集，该副本集由一个主实例和两个辅助实例组成，可用于创作或发布部署。
 >
@@ -157,7 +131,7 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 
 >[!NOTE]
 >
->上面列出的受支持的关系数据库是第三方软件，不包含在 AEM 许可包中。
+>上面列出的受支持的关系数据库是第三方软件，未包含在AEM许可包中。
 >
 >要使用受支持的关系数据库运行AEM 6.5，需要与数据库供应商签订单独的支持合同。 Adobe客户关怀团队协助处理与使用AEM 6.5的关系数据库相关的资格确认问题。
 >
@@ -167,23 +141,16 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 
 Adobe Experience Manager可以作为独立服务器（快速入门JAR文件）运行，也可以作为第三方应用程序服务器中的Web应用程序（WAR文件）运行。
 
-需要的最低Servlet API版本是Servlet 3.1
+需要的最低Servlet API版本是Servlet 3.1。此外，AEM支持Jakarta servlet 5 for jar，WAR可以在实施Jakarta servlet API 5/6的应用程序服务器中部署。
 
 | Platform | 支持级别 |
 |---|---|
-| **快速入门内置Servlet引擎(Jetty 9.4)** | 答：支持 |
-| Oracle WebLogic Server 12.2 (12cR2) | Z：不支持 |
-| IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile) with Web Profile 7.0和IBM® JRE 1.8 | R：对新合同的支持受限`[2]` |
-| IBM® WebSphere® Application Server 9.0和IBM® JRE 1.8 | R：对新合同的支持受限`[1]` `[2]` |
-| Apache Tomcat 8.5.x | R：对新合同的支持受限`[2]` |
-| JBoss® EAP 7.2.x带JBoss®应用程序服务器 | Z：不支持 |
-| JBoss® EAP 7.1.4带JBoss®应用程序服务器 | R：对新合同的支持受限`[1]` `[2]` |
-| JBoss® EAP 7.0.x带JBoss®应用程序服务器 | Z：不支持 |
+| **快速入门内置 Servlet 引擎 （Jetty 11.0.x）** | 答：支持 |
+| 带有Web配置文件24.0.0.7和IBM的IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)® Sumeru打开JRE® 17 | R：对新合同的支持受限`[2]` |
+| Apache Tomcat 10.1.x | R：对新合同的支持受限`[2]` |
 
 1. 建议使用AEM Forms进行部署。
 1. 在应用程序服务器中启动AEM 6.5部署后，将转为有限支持。 现有客户可以升级到AEM 6.5并继续使用应用程序服务器。 对于新客户，它附带支持标准和支持计划，如上面的R级描述中所述。
-1. 仅适用于AEM Forms：
-   * 移除了对JBoss® EAP 7.1.4的支持，并添加了对JBoss® EAP 7.4.10的支持。
 
 ### 服务器操作系统 {#server-operating-systems}
 
@@ -194,13 +161,8 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 | **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[3]` |
 | Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` `[2]` |
 | Linux®，基于SUSE®分发 | A：支持的`[1]` |
-| Microsoft® Windows Server 2019 `[4]` | R：对新合同的支持受限`[5]` |
-| Microsoft® Windows Server 2016 `[4]` | R：对新合同的支持受限`[5]` |
-| Microsoft® Windows Server 2012 R2 | Z：不支持 |
-| Oracle Solaris™ 11 | Z：不支持 |
-| IBM® AIX® 7.2 | Z：不支持 |
 
-1. Linux®内核2.6、3。 x， 4. x， 5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。 只有CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8和Red Hat® Enterprise Linux® 9支持AEM Forms附加功能。
+1. Linux®内核5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。 只有CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8和Red Hat® Enterprise Linux® 9支持AEM Forms附加功能。
 1. Ubuntu 20.04 LTS支持AEM Forms。
 1. Adobe Managed Services支持的Linux®分发。
 
@@ -211,19 +173,19 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
    >* libX11.x86_64 (1.6.7-4)
    >* zlib.x86-64 (1.2.7-17)
    >* libxcb.x86_64 (1.13-1.el7)
-   >* libXau.x86_64 （1.0.8-2.1.el7）
+   >* libXau.x86_64 (1.0.8-2.1.el7)
 
-1. ® 升级到 6.5 的客户和非生产用途支持 Microsoft Windows 生产部署。 AEM Sites和Assets会应请求进行新部署。
+1. Microsoft® Windows生产部署支持升级到6.5的客户和非生产使用。 AEM Sites和Assets会应请求进行新部署。
 1. Microsoft® Window Server上支持AEM Forms，但没有支持级别R限制。
-1. AEM Forms移除了对Microsoft® Windows Server 2016的支持。
+1. AEM Forms删除了对Microsoft® Windows Server 2016的支持。
 
 >[!NOTE]
 >
->如果要安装AEM Forms 6.5，请确保已安装了以下32位Microsoft® Visual C++可再发行版本。
+>如果要安装 AEM Forms 6.5，请确保已安装以下 32 位 Microsoft® 可视C++可再发行组件。
 >
->* Microsoft® Visual C++ 2008可再分发
->* Microsoft® Visual C++ 2010可再分发
->* Microsoft® Visual C++ 2012可再分发
+>* ® Microsoft Visual C++ 2008 可再发行组件
+>* ® Microsoft Visual C++ 2010 可再发行组件
+>* ® Microsoft Visual C++ 2012 可再发行组件
 >* Microsoft® Visual C++ 2013可再分发
 >* Microsoft® Visual C++ 2019（VC14.28或更高版本）可再分发
 
@@ -236,7 +198,7 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services的其他文档](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)。
 
-在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境必须按照本页中列出的技术规范运行。 任何与在任何这些云环境中运行的AEM相关的已报告问题，都必须可独立于任何特定于云计算环境的云服务进行重现。 也就是说，除非本页面上列出的技术要求(例如Azure Blob Storage或AWS S3)支持Cloud Service。
+在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境的运行必须符合此页面上列出的技术规范。 与在任何这些云环境中运行的AEM相关的任何报告问题都必须独立于特定于云计算环境的任何云服务重现。 也就是说，除非云服务作为此页面上列出的技术要求的一部分受支持，例如 Azure Blob 存储或 AWS S3。
 
 有关如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建议，Adobe建议直接与云提供商合作。 或者，与Adobe合作伙伴合作，为您选择的云环境中部署AEM提供支持。 选定的云提供商或合作伙伴负责体系结构的规模调整、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
 
@@ -244,15 +206,15 @@ Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe
 
 Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更高版本。
 
-支持以下 Web 服务器与调度程序版本 4.3.2 一起使用：
+以下Web服务器支持与Dispatcher版本4.3.2一起使用：
 
 | Platform | 支持级别 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | 答：支持 |
-| ® Microsoft IIS 10 （Internet Information Server） | 答：支持 |
+| Microsoft® IIS 10 (Internet Information Server) | 答：支持 |
 | ® Microsoft IIS 8.5 （Internet Information Server） | Z：不支持 |
 
-1. 基于 Apache httpd 源代码构建的 Web 服务器的支持与其所基于的 httpd 版本一样多。 如有疑问，请向 Adobe 请求确认与相应服务器产品相关的支持级别。 以下情况：
+1. 基于Apache httpd源代码构建的Web服务器与其所基于的httpd版本具有同样多的支持。 如有疑问，请要求Adobe确认与相应服务器产品相关的支持级别。 以下情况：
 
    1. HTTP服务器仅使用官方的Apache源分发生成，或者
    1. HTTP服务器是作为运行它的操作系统的一部分提供的。 示例： IBM® HTTP Server、Oracle HTTP Server
@@ -306,12 +268,12 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS上的Apple Safari (Evergreen)</td>
+   <td>macOS 上的 Apple Safari （Evergreen）</td>
    <td>答：支持</td>
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS上的Apple Safari 11.x</td>
+   <td>macOS 上的 Apple Safari 11.x</td>
    <td>Z：不支持</td>
    <td>Z：不支持</td>
   </tr>
@@ -353,13 +315,13 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-Adobe Experience Manager 的所有元素（实例、调度程序）均可安装在 IPv4 和 IPv6 网络中。
+Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IPv4和IPv6网络中。
 
 作是无缝的，因为不需要特殊配置。 如有必要，您可以使用适合您的网络类型的格式指定 IP 地址。
 
 当必须指定 IP 地址时，可以（根据需要）从以下选项中进行选择：
 
-* IPv6 地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址。 例如，`https://123.1.1.4:4502`
 
@@ -407,9 +369,9 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 >[!NOTE]
 >
->**NUMA架构：**&#x200B;处理器采用AMD64和英特尔® EM64T的系统通常配置为非统一内存架构(NUMA)平台。 也就是说，内核在引导时构造多个内存节点，而不是构造单个内存节点。
+>**NUMA架构：**&#x200B;处理器采用AMD64和英特尔® EM64T的系统通常配置为非统一内存架构(NUMA)平台。 也就是说，内核在启动时构建多个内存节点，而不是构建单个内存节点。
 >
->该多节点结构可导致一个或多个节点上的存储器耗尽，而其它节点则被耗尽。 当内存耗尽时，即使有可用内存，内核也可以决定终止进程（例如，图像服务器或平台服务器）。
+>该多节点结构可导致一个或多个节点上的存储器耗尽，而其它节点则被耗尽。 当内存耗尽时，即使存在可用内存，内核也可以决定终止进程（例如，图像服务器或平台服务器）。
 >
 >因此，Adobe建议，如果运行的系统导致使用&#x200B;**numa=off**&#x200B;引导选项关闭NUMA，以避免内核终止这些进程。
 
@@ -424,15 +386,15 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 * ® Microsoft Windows Server 2016
 * 交换空间至少等于物理内存量 （RAM） 的两倍
 
-若要在 Windows 上使用动态媒体，请安装 Microsoft® Visual Studio 2010、2013 和 2015 可针对 x64 和 x86 再发行组件。
+要在Windows上使用Dynamic Media，请安装适用于x64和x86的Microsoft®Visual Studio 2010、2013和2015可再发行版本。
 
 对于Windows x64：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
-* 在 https://www.microsoft.com/en-us/download/details.aspx?id=40784 获取 [可再发行Microsoft® Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* 获取Microsoft® Visual Studio 2015 可再发行组件，请访问 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* 在[https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)上获取Microsoft® Visual Studio 2013可再发行版本
+* 在[https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)上获取Microsoft® Visual Studio 2015可再发行组件
 
-对于 Windows x86：
+对于Windows x86：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
 * 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)上获取Microsoft® Visual Studio 2013可再发行版本
@@ -459,15 +421,15 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic track</a>最新版本（已弃用）</td>
-   <td>XPS、图像格式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
+   <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
    <td>® Microsoft Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
-   <td>® Microsoft Office 2016（已弃用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
+   <td>Microsoft® Office 2016（已弃用）</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>WordPerfect 2020<br /> </td>
@@ -528,26 +490,26 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 * 2.35 GB 可用硬盘空间
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
-* Acrobat Pro DC、Acrobat Standard DC 或 Adobe Acrobat Reader DC
-* 安装 Designer 的管理权限
-* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 32 位 AEM 表单设计器的 32 位运行时
+* Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
+* 安装Designer的管理权限
+* Microsoft Visual C++ 2019（VC 14.28或更高版本）32位运行时，适用于32位AEM Forms Designer
 * Microsoft Visual C++ 2019（VC 14.28或更高版本）适用于64位AEM Forms Designer的64位运行时（适用于OSGI和JEE栈栈）
 
 [安装和配置AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
 
 ### AEM Assets XMP元数据回写要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-以下平台和文件格式支持并启用了XMP回写：
+以下平台和文件格式支持并启用了 XMP 回写：
 
 * **操作系统：**
 
-   * Linux®（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
+   * Linux®（在 64 位系统上支持 32 位和 32 位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
 
    * Windows Server
    * macOS X（64位）
 
 * **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 
-### AEM Assets 在 Linux® 上处理元数据密集型资产的要求 {#assetsonlinux}
+### AEM Assets在Linux®上处理大量元数据的资产的要求 {#assetsonlinux}
 
-XMPFilesProcessor 进程需要库 GLIBC_2.14 才能工作。 使用包含 GLIBC_2.14 的 Linux® 内核，例如 Linux® 内核版本 3.1.x。它提高了处理包含大量元数据的资产（如 PSD 文件）的性能。 使用以前版本的GLIBC会导致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`开头的日志中出现错误。
+XMPFilesProcessor进程需要库GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux®内核，例如Linux®内核版本3.1.x。它提高了处理包含大量元数据的资源(如PSD文件)的性能。 使用以前版本的GLIBC会导致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`开头的日志中出现错误。

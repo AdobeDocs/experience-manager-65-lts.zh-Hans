@@ -10,9 +10,9 @@ targetaudience: target-audience upgrader
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2667ac1c1570285df7f18d1b573e5c9fca17d292
+source-git-commit: 168e9f5865d20a53f9abed4bb90aceae9a1c7b6a
 workflow-type: tm+mt
-source-wordcount: '2059'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
@@ -28,143 +28,81 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-1. **模式检测器** — 运行模式检测器，如升级计划中所述，并在[使用模式检测器评估升级复杂性](/help/sites-deploying/pattern-detector.md)页面中详细描述。 您会获得一个模式检测器报告，该报告包含有关AEM的Target版本中除了API/捆绑包不可用之外还必须解决的区域的更多详细信息。 模式检测报告会向您指示代码中的任何不兼容性。 如果不存在任何部署，则表明您的部署已经与6.5兼容。 您仍然可以选择为使用6.5功能执行新开发，但并非只是为了保持兼容性。 如果报告了不兼容情况，您可以选择在兼容模式下运行，并推迟开发新的6.5功能或兼容性。 或者，您可以在升级后决定进行开发，并转到步骤2。 有关更多详细信息，请参阅[AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的向后兼容性。
+1. **AEM Analyzer** — 按照升级计划中的说明运行AEM Analyzer，在[使用AEM Analyzer评估升级复杂性](/help/sites-deploying/pattern-detector.md)页面中有详细介绍。 您会获得一个AEM Analyzer报告，该报告包含有关在AEM的Target版本中不可用的API/捆绑包之外，还必须解决的区域的更多详细信息。 PAEM Analyzer报告会向您指示代码中的任何不兼容性。 如果不存在任何部署，则表明您的部署已经与6.5 LTS兼容。 您仍然可以选择为使用6.5 LTS功能而执行新开发，但并非只是为了保持兼容性。
 
-1. **开发6.5代码库** — 为Target版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
-1. **使用6.5 Uber jar编译** — 更新代码库POM以指向6.5 uber jar并编译针对它的代码。
-1. **更新AEM自定义项*** - *对AEM的任何自定义项或扩展都应进行更新/验证，以便在6.5中运行并添加到6.5代码库中。 包括UI Search Forms、Assets自定义，以及使用/mnt/overlay的任何内容
+1. **开发6.5 LTS的代码库** — 为Target版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
+1. **使用6.5 LTS Uber jar编译** — 更新代码库POM以指向6.5.2025 uber jar并编译针对它的代码。
+1. **部署到6.5 LTS环境** - AEM 6.5 LTS的干净实例（创作+发布）应出现在开发/QA环境中。 应部署更新后的代码库和有代表性的内容示例（来自当前生产）。
+1. **QA验证和错误修复** - QA应在6.5.2025的Author和Publish实例上验证应用程序。找到的任何错误都应修复并提交到6.5 LTS代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
 
-1. **部署到6.5环境** — 应在开发/QA环境中显示AEM 6.5的干净实例（创作+发布）。 应部署更新后的代码库和有代表性的内容示例（来自当前生产）。
-1. **QA验证和错误修复** - QA应在6.5的Author和Publish实例上验证应用程序。找到的任何错误都应修复并提交到6.5代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
-
-在继续升级之前，您应该有一个稳定的应用程序代码库，该代码库已针对AEM的目标版本进行了彻底测试。 根据测试中所做的观察，可以找到优化自定义代码的方法。 例如，其中可能包括重构代码以避免遍历存储库、自定义索引以优化搜索，或在JCR中使用无序节点等。
-
-除了可以选择升级代码库和自定义以与新的AEM版本配合使用外，6.5还可以通过[AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的向后兼容性中所述的向后兼容性功能，帮助更有效地管理您的自定义项。
-
-如上所述和下图所示，在第一步运行[模式检测器](/help/sites-deploying/pattern-detector.md)可以帮助您评估升级的整体复杂性。 它还有助于您决定是要以兼容模式运行，还是更新自定义项以使用所有新的AEM 6.5功能。 有关更多详细信息，请参阅AEM 6.5](/help/sites-deploying/backward-compatibility.md)中的[向后兼容性。
-[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+在继续升级之前，您应该有一个稳定的应用程序代码库，此代码库已针对AEM 6.5 LTS进行了全面测试。
 
 ## 升级代码库 {#upgrade-code-base}
 
-### 在版本控制{#create-a-dedicated-branch-for-6.5-code-in-version-control}中为6.5代码创建专用分支
+### 在版本控制{#create-a-dedicated-branch-for-6.5-lts-code-in-version-control}中为6.5 LTS代码创建专用分支
 
 应使用某种形式的版本控制来管理实施AEM所需的所有代码和配置。 应创建版本控制中的专用分支，以管理目标版本AEM中的代码库所需的任何更改。 此分支管理针对AEM的目标版本迭代测试代码库以及后续错误修复。
 
 ### 更新AEM Uber Jar版本 {#update-the-aem-uber-jar-version}
 
-AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`pom.xml`中。 最佳做法始终是将Uber Jar作为单个依赖项包含在内，而不是包含单个AEM API依赖项。 升级代码库时，请更改Uber Jar的版本以指向AEM的目标版本。 如果您的项目是在存在Uber Jar之前的AEM版本上开发的，请删除所有单独的AEM API依赖项。 替换为包含AEM目标版本的Uber Jar。 针对新版本的Uber Jar重新编译代码库。 更新任何已弃用的API或方法，以便与AEM的目标版本兼容。
+AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`pom.xml`中。 最佳做法始终是将Uber Jar作为单个依赖项包含在内，而不是包含单个AEM API依赖项。 升级代码库时，将Uber Jar的版本更改为指向AEM的6.5 LTS版本。 更新任何已弃用的API或方法，以便与AEM的目标版本兼容。 针对新版本的Uber Jar重新编译代码库。
 
 ```
 <dependency>
     <groupId>com.adobe.aem</groupId>
     <artifactId>uber-jar</artifactId>
-    <version>6.5.0</version>
+    <version>6.6.0</version>
     <classifier>apis</classifier>
     <scope>provided</scope>
 </dependency>
 ```
 
-### 逐步停止使用管理资源解析程序 {#phase-out-use-of-administrative-resource-resolver}
-
-在AEM 6.0之前的代码库中，通过`SlingRepository.loginAdministrative()`和`ResourceResolverFactory.getAdministrativeResourceResolver()`使用管理会话的情况很普遍。出于安全原因，这些方法已被弃用，因为它们提供的访问级别过于宽泛。 [在Sling的未来版本中，将删除这些方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication)。 强烈建议重构任何代码以改用服务用户。 有关服务用户以及如何逐步停用管理会话的信息，请参阅[Adobe Experience Manager (AEM)中的服务用户](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions)。
-
-### 查询和Oak索引 {#queries-and-oak-indexes}
-
-在代码库中使用任何查询都必须作为升级代码库的一部分进行彻底测试。 对于从Jackrabbit 2(AEM 6.0之前的版本)升级的客户，此测试尤其重要，因为Oak不会自动为内容编制索引，并且应创建自定义索引。 如果从AEM 6.x版本升级，开箱即用的Oak索引定义可能已更改，并且可能影响现有查询。
-
-以下工具可用于分析和检查查询性能：
-
-* [AEM Index Tools](/help/sites-deploying/queries-and-indexing.md)
-
-* [操作诊断工具 — 查询性能](/help/sites-administering/operations-dashboard.md#diagnosis-tools)
-
-<!-- URL is 404 as of 04/24/23; commenting out * [Oak Utils](https://oakutils.appspot.com/). This is an open source tool that is not maintained by Adobe. -->
-
-### 经典UI创作 {#classic-ui-authoring}
-
-经典UI创作在AEM 6.5中仍然可用，但已被弃用。 如果您的应用程序在经典UI创作环境中运行，建议升级到AEM 6.5并继续使用经典UI。 然后，可以计划作为单独的项目迁移到Touch UI，以便通过多个开发周期完成。 要在AEM 6.5中使用经典UI，必须将多个OSGi配置提交到代码库。 有关如何进行配置的更多详细信息，请参阅[启用对经典UI的访问](/help/sites-administering/enable-classic-ui.md)。
-
-## AEM自定义  {#aem-customizations}
-
-必须标识对AEM源版本中的AEM创作环境的所有自定义项。 一旦标识，建议将每个自定义项都存储在版本控制中，或至少作为内容包的一部分进行备份。 在进行生产升级之前，应在运行目标版本的AEM的QA或暂存环境中部署和验证所有自定义项。
-
-### 叠加一般信息 {#overlays-in-general}
-
-常见的做法是扩展AEM的开箱即用功能，方法是使用/apps下的其他节点覆盖/libs下的节点和/或文件。 应在版本控制中跟踪这些叠加，并针对AEM的目标版本进行测试。 如果文件（如JS、JSP、HTL）被覆盖，Adobe建议您就增强的功能发表评论，以便于在AEM的目标版本上进行回归测试。 有关一般信息，请参阅[叠加](/help/sites-developing/overlays.md)。 特定AEM叠加图的说明可在下面找到。
-
-### 升级自定义搜索Forms {#upgrading-custom-search-forms}
-
-自定义搜索彩块化需要在升级后进行一些手动调整才能正常运行。 有关详细信息，请参阅[升级自定义搜索Forms](/help/sites-deploying/upgrading-custom-search-forms.md)。
-
-### Assets UI自定义 {#assets-ui-customizations}
-
 >[!NOTE]
 >
->只有从AEM 6.2之前的版本进行升级时，才需要执行此过程。
+>AEM 6.5和AEM 6.5 LTS Uber Jar的打包方式略有不同。 请参阅以下部分：
 
-必须为升级准备已自定义Assets部署的实例。 要确保所有自定义内容与新的6.4节点结构兼容，必须执行此操作。
+**对于AEM 6.5.x，有两种类型的Uber Jar**
 
-您可以通过执行以下操作为Assets UI准备自定义项：
+1. `uber-jar-6.5.x.jar` — 包含AEM 6.5.x的所有公共API
+1. `uber-jar-6.5.x-apis-with-deprecations.jar` — 包括AEM 6.5.x中的公共API和已弃用的API。
 
-1. 在要升级的实例上，转到&#x200B;*https://server:port/crx/de/index.jsp*&#x200B;打开CRXDE Lite
+适用于AEM 6.5.2025.x的&#x200B;**Uber Jar**
 
-1. 转到以下节点：
+对于AEM 6.5.2025.x，再次存在两种类型的Uber Jar：
 
-   * `/apps/dam/content`
+1. `uber-jar-6.5.2025.x.jar` — 包含AEM 6.5.2025.x的所有公共API。
+1. `uber-jar-6.5.2025.x-deprecated.jar` — 仅包含AEM 6.5.2025.x中已弃用的API
 
-1. 将内容节点重命名为&#x200B;**content_backup**，方法是右键单击窗口左侧的资源管理器窗格，然后选择&#x200B;**重命名**。
+**主要区别： AEM 6.5.x与AEM 6.5.2025.x Uber Jars**
 
-1. 重命名节点后，在`/apps/dam`下创建一个名为&#x200B;**content**&#x200B;的名为content的节点，并将其节点类型设置为&#x200B;**sling：Folder**。
+* 在AEM 6.5.x中，如果同时需要公共的和已弃用的API，则可以在`pom.xml`文件中使用包含单个jar `uber-jar-6.5.x-apis-with-deprecations.jar`。
+* 在AEM 6.5.2025.x中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.5.2025.x.jar`和已弃用的API的`uber-jar-6.5.2025.x-deprecated.jar`。
+* 在AEM 6.5.2025.x中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.5.2025.x.jar`和已弃用的API的`uber-jar-6.5.2025.x-deprecated.jar`。
 
-1. 通过右键单击资源管理器窗格中的每个子节点并选择&#x200B;**移动**，将&#x200B;**content_backup**&#x200B;的所有子节点移动到新创建的内容节点。
+已弃用的API Jar的&#x200B;**Maven坐标**
 
-1. 删除&#x200B;**content_backup**&#x200B;节点。
+```
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>uber-jar</artifactId>
+    <version>6.6.0</version>
+    <classifier>apis</classifier>
+    <scope>provided</scope>
+</dependency>
+```
 
-1. 理想情况下，`/apps/dam`下具有正确节点类型`sling:Folder`的已更新节点应保存到版本控制中，并使用代码库进行部署，或者至少作为内容包进行备份。
+### 开发人员备注 {#developer-notes}
 
-### 为现有Assets生成资源ID {#generating-asset-ids-for-existing-assets}
-
-要为现有资源生成资源ID，请在升级AEM实例以运行AEM 6.5时升级资源。启用[Assets Insights功能](/help/assets/asset-insights.md)需要此步骤。 有关详细信息，请参阅[添加嵌入代码](/help/assets/use-page-tracker.md#add-embed-code)。
-
-要升级资产，请在JMX控制台中配置关联资产ID包。 根据存储库中的资源数，`migrateAllAssets`可能需要较长时间。 Adobe的内部测试估计，TarMK上的125000资产大约需要1小时。
-
-![1487758945977](assets/1487758945977.png)
-
-如果您需要整个资产的子集的资产ID，请使用`migrateAssetsAtPath` API。
-
-对于所有其他目的，请使用`migrateAllAssets()` API。
-
-### InDesign脚本自定义 {#indesign-script-customizations}
-
-Adobe建议将自定义脚本放在`/apps/settings/dam/indesign/scripts`位置。 有关InDesign脚本自定义设置的详细信息，请参阅[将Adobe Experience Manager Assets与Adobe InDesign Server集成](/help/assets/indesign.md#configuring-the-aem-assets-workflow)。
-
-### 恢复ContextHub配置 {#recovering-contexthub-configurations}
-
-ContextHub配置受升级影响。 有关如何恢复现有ContextHub配置的说明，请参阅[配置ContextHub](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading)。
-
-### 工作流自定义 {#workflow-customizations}
-
-常用做法是编辑现成的工作流，以添加或删除不需要的功能。 自定义的常用工作流是[!UICONTROL DAM更新资产]工作流。 自定义实施所需的所有工作流都应进行备份，并存储在版本控制中，因为升级期间可能会覆盖这些工作流。
-
-### 可编辑模板 {#editable-templates}
-
->[!NOTE]
->
->仅当使用AEM 6.2中的可编辑模板升级站点时，才需要执行此过程
-
-可编辑模板的结构在AEM 6.2和6.3之间发生了变化。如果要从6.2或更低版本升级，并且使用可编辑模板生成站点内容，则必须使用[响应节点清理工具](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)。 该工具旨在在&#x200B;**升级后运行**&#x200B;以清理内容。 在创作层和发布层上运行它。
-
-### CUG实施更改 {#cug-implementation-changes}
-
-封闭用户组的实施发生了重大变化，以前的版本AEM在性能和可扩展性方面存在限制。 6.3中弃用了以前版本的CUG，并且仅在Touch UI中支持新的实施。
+* AEM 6.5.2025中不包含现成的Google guava库，可以根据需要安装所需的版本。
+* Sling XSS包现在使用Java HTML清理器库，应使用`XSSAPI#filterHTML()`方法安全地呈现HTML内容，而不是将数据传递到其他API。
 
 ## 测试过程 {#testing-procedure}
 
 应该为测试升级准备全面的测试计划。 测试已升级的代码库和应用程序必须先在较低的环境中完成。 发现的错误应以迭代方式修复，直到代码库稳定为止，只有到那时才应升级更高级别的环境。
 
-### 测试升级过程 {#testing-the-upgrade-procedure}
+### 测试升级过程 {#testing-upgrade-procedure}
 
-此处概述的升级过程应在开发和QA环境中进行测试，如自定义运行手册中所述（请参阅[计划升级](/help/sites-deploying/upgrade-planning.md)）。 应重复升级过程，直到所有步骤都记录在升级运行手册中且升级过程顺利完成。
+此处概述的升级过程应在开发和QA环境中进行测试，如自定义运行手册中所述（请参阅[计划升级](/help/sites-deploying/upgrade-planning.md)）。 应重复升级过程，直到所有步骤都记录在升级运行手册中且升级过程顺利完成
 
 ### 实施测试区域  {#implementation-test-areas-}
 
@@ -186,7 +124,7 @@ ContextHub配置受升级影响。 有关如何恢复现有ContextHub配置的�
   </tr>
   <tr>
    <td>与Experience Cloud解决方案集成</td>
-   <td>验证与Analytics、DTM和Target等产品的集成。</td>
+   <td>验证与Analytics等产品的集成。</td>
   </tr>
   <tr>
    <td>与第三方系统的集成</td>

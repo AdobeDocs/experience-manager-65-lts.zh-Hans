@@ -9,9 +9,9 @@ docset: aem65
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+source-git-commit: ee5f1f68f6f961ba0a18296eaf198ebe8671b226
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 升级后检查 {#post-upgrade-checks}
 
-在[就地升级](/help/sites-deploying/in-place-upgrade.md)后，应执行以下活动以完成升级。 我们假定AEM已使用6.5 jar启动，并且已部署升级的代码库。
+在[就地升级](/help/sites-deploying/in-place-upgrade.md)后，应执行以下活动以完成升级。 我们假定AEM已使用6.5.2025 jar启动，并且已部署升级的代码库。
 
 * [验证日志以确认升级成功](#main-pars-header-290365562)
 
@@ -58,14 +58,6 @@ ht-degree: 0%
 
 为了适应这种情况，已在`upgrade.log`文件中更改生成日志的方式。
 
-以下是一个示例报表，该报表在升级期间未显示任何错误：
-
-![1487887443006](assets/1487887443006.png)
-
-以下是一个示例报告，其中显示了升级过程中未安装的捆绑包：
-
-![1487887532730](assets/1487887532730.png)
-
 **error.log**
 
 在使用Target版本jar启动AEM期间和之后，应该仔细查看error.log。 应审查任何警告或错误。 通常，最好在日志的开头查找问题。 日志中稍后发生的错误实际上可能是文件早期调出的根本原因的副作用。 如果出现重复错误和警告，请参阅下面的[分析升级问题](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md#analyzing-issues-with-the-upgrade)。
@@ -76,27 +68,11 @@ ht-degree: 0%
 
 ### 验证Oak版本 {#verify-oak-version}
 
-升级后，您应会看到Oak版本已更新为&#x200B;**1.10.2**。 要验证Oak版本，请导航到OSGi控制台，并查看与Oak捆绑包关联的版本：Oak Core、Oak Commons、Oak Segment Tar。
-
-### 检查PreUpgradeBackup文件夹 {#inspect-preupgradebackup-folder}
-
-在升级期间，AEM会尝试备份自定义项并将其存储在`/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`下。 若要在CRXDE Lite中查看此文件夹，您可能需要[临时启用CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md)。
-
-具有时间戳的文件夹应具有名为`mergeStatus`的属性，其值为`COMPLETED`。 **to-process**&#x200B;文件夹应为空，**覆盖**&#x200B;节点指示在升级期间覆盖哪些节点。 Leftovers节点下的内容表示在升级期间无法安全合并的内容。 如果您的实施依赖于任何子节点（并且尚未由升级后的代码包安装），则需要手动合并这些子节点。
-
-如果在暂存或生产环境中，请在此练习之后禁用CRXDE Lite。
+升级后，您应会看到Oak版本已更新为&#x200B;**1.68.0**。 要验证Oak版本，请导航到OSGi控制台，并查看与Oak捆绑包关联的版本：Oak Core、Oak Commons、Oak Segment Tar。
 
 ### 页面初始验证 {#initial-validation-of-pages}
 
 对AEM中的多个页面执行初始验证。 如果升级创作环境，请打开起始页和欢迎页( `/aem/start.html`， `/libs/cq/core/content/welcome.html`)。 在创作和发布环境中，打开几个应用程序页面并进行冒烟测试，以使其正确呈现。 如果发生任何问题，请查阅`error.log`以进行故障排除。
-
-### 应用AEM Service Pack {#apply-aem-service-packs}
-
-应用任何相关的AEM 6.5 Service Pack（如果已发布）。
-
-### 迁移AEM功能 {#migrate-aem-features}
-
-升级后，AEM中的多项功能需要执行其他步骤。 您可以在[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)页面上找到这些功能以及在AEM 6.5中迁移这些功能的步骤的完整列表。
 
 ### 验证计划的维护配置 {#verify-scheduled-maintenance-configurations}
 
@@ -126,23 +102,17 @@ ht-degree: 0%
 
 ## 分析升级问题 {#analyzing-issues-with-upgrade}
 
-此部分包含升级到AEM 6.3的过程中可能会遇到的一些问题场景。
+此部分包含升级到AEM 6.5.2025的过程中可能会遇到的一些问题场景。
 
 这些场景应该有助于找到与升级相关问题的根本原因，并且应该有助于确定项目或产品特定的问题。
-
-### 存储库迁移失败  {#repository-migration-failing-}
-
-从基于CQ 5.4的CRX实例开始的任何场景，都应该适合从Source2到Oak的数据迁移。请确保完全按照本文档中的升级说明进行操作，包括准备`repository.xml`，并确保未通过JAAS启动自定义身份验证器，并且在开始迁移之前已检查实例是否不一致。
-
-如果迁移仍然失败，您可以通过检查`upgrade.log`找出根本原因。 如果问题尚不清楚，请向客户支持部门报告。
-
-### 升级未运行 {#the-upgrade-did-not-run}
-
-在开始准备步骤之前，请确保先运行&#x200B;**source**&#x200B;实例，方法是使用Java™ -jar aem-quickstart.jar命令执行该实例。 这是确保正确生成quickstart.properties文件所必需的。 如果缺少该参数，升级将无法工作。 或者，您可以通过查看源实例安装文件夹中的`crx-quickstart/conf`来检查文件是否存在。 此外，在启动AEM以开始升级时，必须使用Java™ -jar aem-quickstart.jar命令执行该升级。 从启动脚本启动时，在升级模式下不会启动AEM。
 
 ### 包和捆绑包无法更新  {#packages-and-bundles-fail-to-update-}
 
 如果在升级期间无法安装包，则也不会更新包中包含的包。 此类问题是由数据存储配置错误导致的。 它们还将在error.log中显示为&#x200B;**ERROR**&#x200B;和&#x200B;**WARN**&#x200B;消息。 由于大多数情况下，默认登录可能无法工作，因此您可以直接使用CRXDE检查并查找配置问题。
+
+### 升级未运行 {#the-upgrade-did-not-run}
+
+在开始准备步骤之前，请确保先运行&#x200B;**source**&#x200B;实例，方法是使用Java™ -jar aem-quickstart.jar命令执行该实例。 这是确保正确生成quickstart.properties文件所必需的。 如果缺少该参数，升级将无法工作。 或者，您可以通过查看源实例安装文件夹中的`crx-quickstart/conf`来检查文件是否存在。 此外，在启动AEM以开始升级时，必须使用Java™ -jar aem-quickstart.jar命令执行该升级。 从启动脚本启动时，在升级模式下不会启动AEM。
 
 ### 某些AEM捆绑包未切换到活动状态 {#some-aem-bundles-are-not-switching-to-the-active-state}
 
@@ -150,33 +120,13 @@ ht-degree: 0%
 
 如果出现此问题，但此问题基于失败的软件包安装，从而导致捆绑包无法升级，则系统将认为它们与新版本不兼容。 有关如何解决此问题的更多信息，请参阅上面的&#x200B;**无法更新的包和包**。
 
-此外，还建议将新的AEM 6.5实例的捆绑包列表与已升级的实例进行比较，以检测未升级的捆绑包。 这将提供在`error.log`中搜索内容的更近范围。
+此外，还建议将新的AEM 6.5.2025实例的捆绑包列表与升级后的实例进行比较，以检测未升级的捆绑包。 这将提供在`error.log`中搜索内容的更近范围。
 
 ### 自定义捆绑包未切换到活动状态 {#custom-bundles-not-switching-to-the-active-state}
 
 如果您的自定义捆绑包未切换到活动状态，则很可能是因为存在未导入更改API的代码。 这通常会导致依赖关系得不到满足。
 
-以前发行的版本中，已删除的API应标记为已弃用。 您可以在此弃用通知中找到有关直接迁移代码的说明。 Adobe旨在尽可能进行语义版本控制，以便版本能够指示重大更改。
-
 另外，最好检查是否有必要执行导致问题的更改，如果没有，则恢复原状态。 此外，在严格的语义版本控制后，检查资源包导出的版本增加是否超过需要。
-
-### 平台UI故障 {#malfunctioning-platform-ui}
-
-如果某些UI功能在升级后无法正常工作，则应该首先检查界面的自定义叠加图。 某些结构可能已更改，并且叠加可能需要更新或已过时。
-
-接下来，检查是否存在任何可向下跟踪到与客户端库关联的自定义添加扩展的JavaScript错误。 这同样适用于可能导致AEM布局问题的自定义CSS。
-
-最后，检查JavaScript可能无法处理的配置错误。 如果扩展未正确停用，则通常会出现这种情况。
-
-### 不正常的自定义组件、模板或UI扩展 {#malfunctioning-custom-components-templates-or-ui-extensions}
-
-通常，这些问题的根本原因与未启动的捆绑包或未安装的捆绑包相同，只是首次使用组件时问题开始发生。
-
-处理错误自定义代码的方法是首先执行烟雾测试以识别原因。 找到建议后，请查看文章的此[链接]部分中的建议以了解修复方法。
-
-### /etc下缺少自定义项 {#missing-customizations-under-etc}
-
-升级处理得当`/apps`和`/libs`，但在升级后可能需要从`/var/upgrade/PreUpgradeBackup`手动还原`/etc`下的更改。 请确保检查此位置，以查看是否有任何需要手动合并的内容。
 
 ### 正在分析error.log和upgrade.log {#analyzing-the-error.log-and-upgrade.log}
 
