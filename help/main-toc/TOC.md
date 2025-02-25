@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5
-source-git-commit: 72bf54362948b6429627466111a088bcebfd2a2b
+source-git-commit: 0f125455f975417590e7481e2d34da372d5428c2
 workflow-type: tm+mt
 source-wordcount: '7022'
 ht-degree: 21%
@@ -782,7 +782,7 @@ ht-degree: 21%
       + [Designer FormCalc引用](https://www.adobe.com/go/learn_aemforms_formCalc_65)
       + [在HTML5 Forms中使用涂写签名](/help/forms/using/scribble-signature.md)
       + [在 Designer 中更改 Page Zero 内容](/help/forms/using/changing-page-zero-content-designer.md)
-      + [辅助功能最佳实践]{#accessibility-best-practices}
+      + 辅助功能最佳实践{#accessibility-best-practices}
          + [简介](/help/forms/using/introduction-accessibility-forms-designer.md)
          + [创建表单的最佳实践](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
          + [用于测试表单辅助功能的技术](/help/forms/using/techniques-for-testing-form-accessibility.md)
