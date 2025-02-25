@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Manager 6.5 LTS的最新发行说明
 description: 这些是Adobe Experience Manager 6.5 LTS的当前发行说明。
-source-git-commit: e062ab3ff820c85ebcbd0052c28e9e719222154f
+source-git-commit: 37dca00eef6918b1a0d3a56c87e0859fbc062e03
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 22%
@@ -17,7 +17,7 @@ ht-degree: 22%
 |---|---|
 | 版本 | 6.5磅 |
 | 类型 | 主要版本 |
-| 正式发布日期 | 2025年2月28日 |
+| 正式发布日期 | 2025年3月7日 |
 
 ## 新增功能 {#what-s-new}
 
