@@ -1,5 +1,5 @@
 ---
-source-git-commit: 0deac9cb7fb13c6fec515739168eb2dbfd9a58c7
+source-git-commit: 9ce5f66295ee94fbd1dcc837681f36021804b456
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 100%
@@ -7,7 +7,7 @@ ht-degree: 100%
 ---
 # MIT 许可证
 
-© Copyright 2024 Adobe. All rights reserved.
+© Copyright 2025 Adobe. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

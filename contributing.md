@@ -1,13 +1,13 @@
 ---
-source-git-commit: 0deac9cb7fb13c6fec515739168eb2dbfd9a58c7
+source-git-commit: dc9fe33c0b32fe8bd11ddbf8d25339a6a2003857
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 64%
+source-wordcount: '503'
+ht-degree: 63%
 
 ---
-# 为Adobe Experience Manager 6.6文档贡献内容
+# 为Adobe Experience Manager 6.5 LTS文档贡献内容
 
-感谢您选择为Adobe Experience Manager 6.6文档贡献内容！ 文档团队欢迎整个读者社区以及Adobe员工贡献内容。
+感谢您选择向Adobe Experience Manager 6.5 LTS文档投稿！ 文档团队欢迎整个读者社区以及Adobe员工贡献内容。
 
 本文件介绍了如何贡献内容，并指出了在贡献内容时应遵循的准则。
 
