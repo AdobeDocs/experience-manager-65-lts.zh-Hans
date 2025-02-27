@@ -9,9 +9,9 @@ docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+source-git-commit: 6bf0f8866016e973b0724279e228865cf158a4ba
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
@@ -61,13 +61,6 @@ ht-degree: 2%
  </tbody>
 </table>
 
-## 安装问题 {#installation-issues}
-
-有关以下故障排除方案的信息，请参阅[常见安装问题](/help/sites-deploying/troubleshooting.md#common-installation-issues)：
-
-* 双击“快速入门”Jar对使用其他程序（如“存档管理器”）的JAR文件无效。
-* 在CRX上运行的应用程序引发内存不足错误。
-* 双击AEM快速入门后，浏览器中不显示AEM欢迎屏幕。
 
 ## 疑难解答分析方法 {#methods-for-troubleshooting-analysis}
 

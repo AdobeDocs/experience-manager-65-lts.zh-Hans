@@ -8,9 +8,9 @@ topic-tags: deploying
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+source-git-commit: 6bf0f8866016e973b0724279e228865cf158a4ba
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -247,8 +247,3 @@ AEM提供单个war文件来进行部署。
    * 将其复制到tomcat的webapps文件夹中。
    * 等待安装AEM。
 
-## 疑难解答 {#troubleshooting}
-
-有关处理安装过程中可能出现的问题信息，请参阅：
-
-* [疑难解答](/help/sites-deploying/troubleshooting.md)

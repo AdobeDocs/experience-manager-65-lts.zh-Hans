@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Manager 6.5 LTS的最新发行说明
 description: 这些是Adobe Experience Manager 6.5 LTS的当前发行说明。
-source-git-commit: 37dca00eef6918b1a0d3a56c87e0859fbc062e03
+source-git-commit: baa7e84c30117645d6a2e4ef8d8e182a9dd73321
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '796'
 ht-degree: 22%
 
 ---
@@ -95,6 +95,7 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 解决方案 | 不支持社交/社区。 | 没有可用的替换。 | 6.5 LTS GA |
 | Screens | 不支持Screens。 | 没有可用的替换。 | 6.5 LTS GA |
 | 资源 | 不支持`dam-pim`和`dam-rating`，因为捆绑包依赖于social。 | 没有可用的替换。 | 6.5 LTS GA |
+| 资源 | `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettings()`已删除。 | 使用已添加的替代API `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettingsList()`。 | 6.5 LTS GA |
 | Granite | 已删除包`com.adobe.granite.socketio`。 | 没有可用的替换。 | 6.5 LTS GA |
 | Granite | 不支持`com.adobe.granite.crx-explorer`。 | 没有可用的替换。 | 6.5 LTS GA |
 | 瓜瓦 | AEM中的所有Guava依赖项现已删除，因此`com.adobe.granite.osgi.wrapper.guava-15.0.0-0002`包不是AEM的一部分。 | 如果客户依赖瓜瓦，则可以自行添加瓜瓦；如果可能，还可以使用Java收藏集或其他替代项替换瓜瓦代码。 | 6.5 LTS GA |

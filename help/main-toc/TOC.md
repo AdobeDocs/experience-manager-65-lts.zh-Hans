@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5
-source-git-commit: 0f125455f975417590e7481e2d34da372d5428c2
+source-git-commit: 1d306a12ebff41e5f31e5b7fbe8086cd2e657500
 workflow-type: tm+mt
-source-wordcount: '7022'
+source-wordcount: '7019'
 ht-degree: 21%
 
 ---
@@ -213,7 +213,6 @@ ht-degree: 21%
          + [与Dynamic Media Classic集成(Scene7)](/help/sites-administering/scene7.md)
          + [集成问题疑难解答](/help/sites-administering/troubleshooting-integration-issues.md)
          + [与BrightEdge Content Optimizer集成](/help/sites-administering/brightedge.md)
-         + [目录生成器](/help/sites-administering/catalog-producer.md)
          + [与Silverpop Engage集成](/help/sites-administering/silverpop.md)
          + [与 Adobe Campaign 集成](/help/sites-administering/campaign.md)
          + [与ExactTarget集成](/help/sites-administering/exacttarget.md)
@@ -1442,7 +1441,6 @@ ht-degree: 21%
          + [Oak-run.jar索引用例](/help/sites-deploying/oak-run-indexing-usecases.md)
          + [Oak索引疑难解答](/help/sites-deploying/troubleshooting-oak-indexes.md)
          + [选择收集汇总的使用情况统计数据](/help/sites-deploying/opt-in-aggregated-usage-statistics.md)
-         + [疑难解答](/help/sites-deploying/troubleshooting.md)
       + 配置AEM {#configuring}
          + [基本配置概念](/help/sites-deploying/configuring.md)
          + [日志记录](/help/sites-deploying/configure-logging.md)
