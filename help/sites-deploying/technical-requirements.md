@@ -5,9 +5,9 @@ topic-tags: platform
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 055e99ec1c202acacae1be55b48e828f2634b0f4
+source-git-commit: e77dfbdbe5d540590f7552ddd07f5f7b10f7b41e
 workflow-type: tm+mt
-source-wordcount: '3291'
+source-wordcount: '3044'
 ht-degree: 1%
 
 ---
@@ -39,10 +39,10 @@ Adobe支持平台上的(AEM) Adobe Experience Manager，如本文档中的以下
 >[!NOTE]
 >
 >* 数字资产用例需要更多基本内存。 有关详细信息，请参阅[部署和维护](/help/sites-deploying/deploy.md#default-local-install)。
->* [AEM Forms附加组件包](/help/forms/using/installing-configuring-aem-forms-osgi.md)需要15 GB的临时空间。
+>* [AEM Forms加载项包](/help/forms/using/installing-configuring-aem-forms-osgi.md) 需要15 GB的临时空间。
 >
 
-有关详细信息，请参阅[硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md)。
+有关详细信息，请参阅 [硬件大小调整指南](/help/managing/hardware-sizing-guidelines.md)。
 
 ### 支持级别 {#support-levels}
 
@@ -60,16 +60,16 @@ Adobe建议进行这些配置，并在标准软件维护协议中提供全面支
   </tr>
   <tr>
    <td><strong>答：支持</strong></td>
-   <td>Adobe为此配置提供全面支持和维护。 Adobe的质量保证流程涵盖此配置。</td>
+   <td>Adobe 为此配置提供全面支持和维护。 Adobe 的质量保证流程涵盖了此配置。</td>
   </tr>
   <tr>
    <td><strong>R：有限的支持</strong></td>
-   <td>为了确保客户项目成功，Adobe在受限制的支持计划内提供了全面支持，该计划要求满足特定条件。 r级支持需要正式的客户请求和Adobe的确认。 有关更多信息，请联系Adobe客户关怀部门。</td>
+   <td>为了确保客户项目取得成功，Adobe 在受限支持计划中提供全面支持，该计划要求满足特定条件。 R 级别支持需要正式的客户请求和 Adobe 的确认。 有关详细信息，请联系 Adobe 客户关怀。</td>
   </tr>
  </tbody>
 </table>
 
-### 不支持的配置 {#unsupported-configurations}
+### 不受支持的配置 {#unsupported-configurations}
 
 | 支持级别 | 描述 |
 |---|---|
@@ -79,13 +79,13 @@ Adobe建议进行这些配置，并在标准软件维护协议中提供全面支
 
 ### Java™虚拟机 {#java-virtual-machines}
 
-该应用程序需要 Java™ 虚拟机才能运行，该虚拟机由 Java™ 开发工具包 （JDK） 分发版提供。
+应用程序需要由Java™开发工具包(JDK)分发提供的Java™虚拟机才能运行。
 
-Adobe Experience Manager 可与以下版本的 Java™ 虚拟机配合使用：
+Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 
 >[!CAUTION]
 >
->跟踪 Java™ 供应商提供的安全公告。 这样做可确保生产环境的安全性。 此外，请始终安装最新的Java™更新。
+>跟踪Java™供应商的安全公告。 这样做确保了生产环境的安全与保障。 此外，请始终安装最新的Java™更新。
 
 | **平台** | **支持级别** | **链接** |
 |---|---|---|
@@ -108,8 +108,8 @@ Adobe Experience Manager 可与以下版本的 Java™ 虚拟机配合使用：
 | 在文件系统`[1]`的TAR文件中存储二进制文件 | 二进制文件 | Z：不支持生产 |
 | Amazon S3 | 二进制文件 | 答：支持 |
 | Microsoft® Azure Blob存储 | 二进制文件 | 答：支持 |
-| MongoDB Enterprise 6.0和7.0 | 存储库 | A：支持的`[3, 4]` |
-| **Apache Lucene（快速入门内置）** | 搜索服务 | 答：支持 |
+| MongoDB Enterprise 6.0和7.0 | 存储库 | 答：支持 `[3, 4]` |
+| **Apache Lucene（内置快速入门）** | 搜索服务 | 答：支持 |
 
 1. “文件系统”包括符合POSIX的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
 1. AEM中不支持MongoDB分片。
@@ -117,9 +117,9 @@ Adobe Experience Manager 可与以下版本的 Java™ 虚拟机配合使用：
 
 >[!NOTE]
 >
->MongoDB是一个第三方软件程序，不包含在AEM许可包中。 有关详细信息，请参阅[MongoDB许可策略](https://www.mongodb.com/licensing/server-side-public-license/faq)页。
+>MongoDB是第三方软件程序，未包含在AEM许可包中。 有关详细信息，请参阅[MongoDB许可策略](https://www.mongodb.com/licensing/server-side-public-license/faq)页。
 >
->为了充分利用MongoDB的AEM部署，Adobe建议许可MongoDB Enterprise版本以获得专业支持。 有关详细信息，请参阅 [建议的](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk) 部署。
+>为了利用MongoDB充分利用AEM部署，Adobe建议许可MongoDB企业版以受益于专业支持。 有关详细信息，请参阅[建议的部署](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk)。
 >
 >该许可证包括一个标准副本集，该副本集由一个主实例和两个辅助实例组成，可用于创作或发布部署。
 >
@@ -129,14 +129,6 @@ Adobe Experience Manager 可与以下版本的 Java™ 虚拟机配合使用：
 >
 >有关详细信息，请参阅[Adobe Experience Manager的MongoDB页面](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager)。
 
->[!NOTE]
->
->上面列出的受支持的关系数据库是第三方软件，未包含在AEM许可包中。
->
->要使用受支持的关系数据库运行AEM 6.5，需要与数据库供应商签订单独的支持合同。 Adobe客户关怀团队协助处理与使用AEM 6.5的关系数据库相关的资格确认问题。
->
->**目前AEM 6.5上的R级支持大多数关系数据库，该数据库附带支持标准和支持程序，如上述R级说明中所述。**
-
 ### Servlet引擎/应用程序服务器 {#servlet-engines-application-servers}
 
 Adobe Experience Manager可以作为独立服务器（快速入门JAR文件）运行，也可以作为第三方应用程序服务器中的Web应用程序（WAR文件）运行。
@@ -145,11 +137,10 @@ Adobe Experience Manager可以作为独立服务器（快速入门JAR文件）�
 
 | Platform | 支持级别 |
 |---|---|
-| **快速入门内置 Servlet 引擎 （Jetty 11.0.x）** | 答：支持 |
-| 带有Web配置文件24.0.0.7和IBM的IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)® Sumeru打开JRE® 17 | R：对新合同的支持受限`[2]` |
-| Apache Tomcat 10.1.x | R：对新合同的支持受限`[2]` |
+| **快速入门内置Servlet引擎(Jetty 11.0.x)** | 答：支持 |
+| 带有Web配置文件24.0.0.7和IBM的IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)® Sumeru打开JRE® 17 | R：对新合同的支持受限`[1]` |
+| Apache Tomcat 11.0.x | R：对新合同的支持受限`[1]` |
 
-1. 建议使用AEM Forms进行部署。
 1. 在应用程序服务器中启动AEM 6.5部署后，将转为有限支持。 现有客户可以升级到AEM 6.5并继续使用应用程序服务器。 对于新客户，它附带支持标准和支持计划，如上面的R级描述中所述。
 
 ### 服务器操作系统 {#server-operating-systems}
@@ -175,21 +166,6 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
    >* libxcb.x86_64 (1.13-1.el7)
    >* libXau.x86_64 (1.0.8-2.1.el7)
 
-1. Microsoft® Windows生产部署支持升级到6.5的客户和非生产使用。 AEM Sites和Assets会应请求进行新部署。
-1. Microsoft® Window Server上支持AEM Forms，但没有支持级别R限制。
-1. AEM Forms删除了对Microsoft® Windows Server 2016的支持。
-
->[!NOTE]
->
->如果要安装 AEM Forms 6.5，请确保已安装以下 32 位 Microsoft® 可视C++可再发行组件。
->
->* ® Microsoft Visual C++ 2008 可再发行组件
->* ® Microsoft Visual C++ 2010 可再发行组件
->* ® Microsoft Visual C++ 2012 可再发行组件
->* Microsoft® Visual C++ 2013可再分发
->* Microsoft® Visual C++ 2019（VC14.28或更高版本）可再分发
-
-
 ### 虚拟和云计算环境 {#virtual-cloud-computing-environments}
 
 支持在云计算环境中的虚拟机中运行Adobe Experience Manager。 这些环境包括Microsoft®Azure和Amazon Web Services (AWS)，其运行符合本页列出的技术要求并符合Adobe的标准支持条款。
@@ -198,21 +174,21 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services的其他文档](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)。
 
-在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境的运行必须符合此页面上列出的技术规范。 与在任何这些云环境中运行的AEM相关的任何报告问题都必须独立于特定于云计算环境的任何云服务重现。 也就是说，除非云服务作为此页面上列出的技术要求的一部分受支持，例如 Azure Blob 存储或 AWS S3。
+在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境必须按照本页中列出的技术规范运行。 任何与在任何这些云环境中运行的AEM相关的已报告问题，都必须可独立于任何特定于云计算环境的云服务进行重现。 也就是说，除非本页面上列出的技术要求(例如Azure Blob Storage或AWS S3)支持Cloud Service。
 
 有关如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建议，Adobe建议直接与云提供商合作。 或者，与Adobe合作伙伴合作，为您选择的云环境中部署AEM提供支持。 选定的云提供商或合作伙伴负责体系结构的规模调整、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
 
 ### Dispatcher平台（Web服务器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更高版本。
+Dispatcher是缓存和负载平衡组件。 [下载最新的调度程序版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
 
-以下Web服务器支持与Dispatcher版本4.3.2一起使用：
+支持以下 Web 服务器与调度程序版本 4.3.2 一起使用：
 
 | Platform | 支持级别 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | 答：支持 |
 | Microsoft® IIS 10 (Internet Information Server) | 答：支持 |
-| ® Microsoft IIS 8.5 （Internet Information Server） | Z：不支持 |
+| Microsoft® IIS 8.5 (Internet Information Server) | Z：不支持 |
 
 1. 基于Apache httpd源代码构建的Web服务器与其所基于的httpd版本具有同样多的支持。 如有疑问，请要求Adobe确认与相应服务器产品相关的支持级别。 以下情况：
 
@@ -268,18 +244,18 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS 上的 Apple Safari （Evergreen）</td>
+   <td>macOS上的Apple Safari (Evergreen)</td>
    <td>答：支持</td>
    <td>答：支持</td>
   </tr>
   <tr>
-   <td>macOS 上的 Apple Safari 11.x</td>
+   <td>macOS上的Apple Safari 11.x</td>
    <td>Z：不支持</td>
    <td>Z：不支持</td>
   </tr>
   <tr>
-   <td>iOS 12.x上的Apple Safari</td>
-   <td>答：支持的[2]</td>
+   <td>iOS 12.x 版的 Apple Safari</td>
+   <td>答：支持 [2]</td>
    <td>Z：不支持</td>
   </tr>
   <tr>
@@ -291,23 +267,11 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
 </table>
 
 1. Firefox [的扩展支持版本了解有关mozilla.org的更多信息](https://www.mozilla.org/en-US/firefox/enterprise/)
-1. 支持 Apple iPad
+1. 支持Apple iPad
 
-### 网站支持的浏览器 {#supported-browsers-for-websites}
+### 支持的网站浏览器 {#supported-browsers-for-websites}
 
 通常，AEM Sites渲染的网站的浏览器支持取决于AEM页面模板的实施、设计和组件输出，因此受实施这些部分的方的控制。
-
-### WebDAV客户端 {#webdav-clients}
-
-**Microsoft® Windows 7+**
-
-在与Microsoft® Windows 7+连接到一个不使用SSL保护的AEM实例时，必须在Windows中启用通过不安全网络进行的基础身份验证。 它需要在WebClient的Windows注册表中进行更改：
-
-1. 找到注册表子项：
-
-   * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
-
-1. 使用值2或更多将BasicAuthLevel注册表项添加到此子项。
 
 ## 其他平台说明 {#additional-platform-notes}
 
@@ -315,7 +279,7 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IPv4和IPv6网络中。
+Adobe Experience Manager 的所有元素（实例、调度程序）均可安装在 IPv4 和 IPv6 网络中。
 
 作是无缝的，因为不需要特殊配置。 如有必要，您可以使用适合您的网络类型的格式指定 IP 地址。
 
@@ -386,19 +350,19 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
 * ® Microsoft Windows Server 2016
 * 交换空间至少等于物理内存量 （RAM） 的两倍
 
-要在Windows上使用Dynamic Media，请安装适用于x64和x86的Microsoft®Visual Studio 2010、2013和2015可再发行版本。
+若要在 Windows 上使用动态媒体，请安装 Microsoft® Visual Studio 2010、2013 和 2015 可针对 x64 和 x86 再发行组件。
 
 对于Windows x64：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)上获取Microsoft® Visual Studio 2013可再发行版本
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)上获取Microsoft® Visual Studio 2015可再发行组件
+* 获取Microsoft® Visual Studio 2015 可再发行组件，请访问 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
-对于Windows x86：
+对于 Windows x86：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
-* 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)上获取Microsoft® Visual Studio 2013可再发行版本
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)上获取Microsoft® Visual Studio 2015可再发行组件
+* 在 https://www.microsoft.com/en-in/download/details.aspx?id=40769 获取 [Microsoft® Visual Studio 2013 可再发行组件](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
+* 在 https://www.microsoft.com/en-us/download/details.aspx?id=52685 获取 [Microsoft® Visual Studio 2015 可再发行组件](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
 #### macOS {#macos}
 
@@ -421,14 +385,14 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic track</a>最新版本（已弃用）</td>
-   <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td>XPS、图像格式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
   </tr>
   <tr>
    <td>® Microsoft Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
-   <td>Microsoft® Office 2016（已弃用）</td>
+   <td>® Microsoft Office 2016（已弃用）</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
@@ -490,20 +454,20 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
 * 2.35 GB 可用硬盘空间
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
-* Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
-* 安装Designer的管理权限
-* Microsoft Visual C++ 2019（VC 14.28或更高版本）32位运行时，适用于32位AEM Forms Designer
+* Acrobat Pro DC、Acrobat Standard DC 或 Adobe Acrobat Reader DC
+* 安装 Designer 的管理权限
+* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 32 位 AEM 表单设计器的 32 位运行时
 * Microsoft Visual C++ 2019（VC 14.28或更高版本）适用于64位AEM Forms Designer的64位运行时（适用于OSGI和JEE栈栈）
 
 [安装和配置AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
 
-### AEM Assets XMP元数据回写要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
+### AEM Assets XMP 元数据写回的要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
 以下平台和文件格式支持并启用了 XMP 回写：
 
 * **操作系统：**
 
-   * Linux®（在 64 位系统上支持 32 位和 32 位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
+   * Linux®（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
 
    * Windows Server
    * macOS X（64位）
