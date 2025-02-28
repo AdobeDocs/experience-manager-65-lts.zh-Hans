@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Manager 6.5 LTS的最新发行说明
 description: 这些是Adobe Experience Manager 6.5 LTS的当前发行说明。
-source-git-commit: baa7e84c30117645d6a2e4ef8d8e182a9dd73321
+source-git-commit: 54f3f3019dcceda4307160aa2126c37835f6626e
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '783'
 ht-degree: 22%
 
 ---
@@ -37,17 +37,13 @@ ht-degree: 22%
 * 为获得最佳性能，请用其他值覆盖默认的GC值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
 * Java™ 17维护更新由Adobe分发，以供客户在AEM相关项目中使用(如果未从Oracle公开提供)。
 
-#### Java™开发 {#java-development}
+#### Uberjar包装 {#uber-jar-packaging}
 
-* Uberjar](/help/sites-developing/ht-projects-maven.md#experience-manager-api-dependencies)现在有[两个版本，一个是推荐版本，带有未标记为弃用的公共接口，另一个是仅包含标记为弃用的接口的版本。
+* AEM 6.5 LTS的Uberjar包装略有不同。 有关详细信息[请参阅](/help/sites-deploying/upgrading-code-and-customizations.md#update-the-aem-uber-jar-version-update-the-aem-uber-jar-version)。
 
 #### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-
-#### 存储库 {#repository}
-
-* Adobe Experience Manager 6.5 LTS的基础基于基于OSGi的框架的更新版本（Apache Sling和Apache Felix）以及Java™ Content Repository： Apache Jackrabbit Oak 1.68.0。
 
 ## 安装和更新 {#install-update}
 
@@ -98,13 +94,17 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 资源 | `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettings()`已删除。 | 使用已添加的替代API `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettingsList()`。 | 6.5 LTS GA |
 | Granite | 已删除包`com.adobe.granite.socketio`。 | 没有可用的替换。 | 6.5 LTS GA |
 | Granite | 不支持`com.adobe.granite.crx-explorer`。 | 没有可用的替换。 | 6.5 LTS GA |
+| Granite | 不支持`crx2oak`。 | 选择[Oak-upgrade](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade)的相关版本 | 6.5 LTS GA |
+| Adobe | 不支持`com.adobe.cq.cq-searchpromote-integration`。 | 没有可用的替换。 | 6.5 LTS GA |
 | 瓜瓦 | AEM中的所有Guava依赖项现已删除，因此`com.adobe.granite.osgi.wrapper.guava-15.0.0-0002`包不是AEM的一部分。 | 如果客户依赖瓜瓦，则可以自行添加瓜瓦；如果可能，还可以使用Java收藏集或其他替代项替换瓜瓦代码。 | 6.5 LTS GA |
 | We.Retail | 不支持We-Retail示例站点。 | 没有可用的替换。 | 6.5 LTS GA |
 | 开源 | 不支持`oak-solr-osgi`包。 | 没有可用的替换。 | 6.5 LTS GA |
 | 开源 | 不支持`org.apache.servicemix.bundles.abdera-parser`、`org.apache.servicemix.bundles.jdom`和`org.apache.sling.atom.taglib`。 | 没有可用的替换。 | 6.5 LTS GA |
-| 开源 | `org.apache.commons.io packages`现已从`org.apache.commons.commons-io`中导出。 | 无需更改。 | 6.5 LTS GA |
+| 开源 | 现在从`org.apache.commons.commons-io`导出`org.apache.commons.io`个包。 | 无需更改。 | 6.5 LTS GA |
 | 开源 | 正在从`com.sun.javax.mail`包中导出`javax.mail`个包。 | 无需更改。 | 6.5 LTS GA |
 | 开源 | 现在从`org.apache.jackrabbit.oak-jackrabbit-api`包中导出`org.apache.jackrabbit.api`个包。 | 无需更改。 | 6.5 LTS GA |
+| 开源 | 不支持`com.github.jknack.handlebars` | 选择相关的[版本](https://mvnrepository.com/artifact/com.github.jknack/handlebars) | 6.5 LTS GA |
+
 
 ## 受限制的网站{#restricted-sites}
 
