@@ -1,20 +1,20 @@
 ---
 cloud: Experience Cloud
 product: Adobe Experience Manager
-sub-product: Adobe Experience Manager 6.5
+sub-product: Adobe Experience Manager 6.5 LTS
 solution-title: Experience Cloud
-user-guide-description: 使用Adobe Experience Manager 6.5文档了解它的工作方式以及软件可以对您的作用。
+user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
-user-guide-title: AEM 6.5
-source-git-commit: 1d306a12ebff41e5f31e5b7fbe8086cd2e657500
+user-guide-title: AEM 6.5磅
+source-git-commit: 4a13ad21a3ea4ce6a1db9dac459b2b9ffd0d27c3
 workflow-type: tm+mt
-source-wordcount: '7019'
+source-wordcount: '7020'
 ht-degree: 21%
 
 ---
 
 
-# Adobe Experience Manager 6.5文档 {#content}
+# Adobe Experience Manager 6.5 LTS文档 {#content}
 
 + 发行说明 {#release-notes}
    + [发行说明](/help/release-notes/release-notes.md)
@@ -44,7 +44,7 @@ ht-degree: 21%
    + [处理AEM Foundation的GDPR请求](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md)
    + [权限管理的主体视图](/help/sites-administering/touch-ui-principal-view.md)
    + [内容处置过滤器](/help/sites-administering/content-disposition-filter.md)
-   + [AEM 6.5中的自定义用户组映射](/help/sites-administering/cug-mapping.md)
+   + [自定义用户组映射](/help/sites-administering/cug-mapping.md)
    + [相同网站Cookie支持](/help/sites-administering/same-site-cookie-support.md)
    + [在 Adobe Developer Console 中弃用 JWT 凭据](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [为AEM设置IMS集成](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
@@ -1424,7 +1424,7 @@ ht-degree: 21%
       + AEM平台简介{#introduction}
          + [AEM平台简介](/help/sites-deploying/platform.md)
          + [技术要求](/help/sites-deploying/technical-requirements.md)
-         + [AEM 6.5中的存储元素](/help/sites-deploying/storage-elements-in-aem-6.md)
+         + [AEM中的存储元素](/help/sites-deploying/storage-elements-in-aem-6.md)
          + [带有MongoDB的AEM](/help/sites-deploying/aem-with-mongodb.md)
       + 部署AEM {#deploying}
          + [部署和维护](/help/sites-deploying/deploy.md)
@@ -1436,7 +1436,7 @@ ht-degree: 21%
          + [修订版清理](/help/sites-deploying/revision-cleanup.md)
          + [Oak查询和索引](/help/sites-deploying/queries-and-indexing.md)
          + [如何在TarMK冷待机状态下运行AEM](/help/sites-deploying/tarmk-cold-standby.md)
-         + [AEM 6.5中的RDBMS支持](/help/sites-deploying/rdbms-support-in-aem.md)
+         + [AEM中的RDBMS支持](/help/sites-deploying/rdbms-support-in-aem.md)
          + [通过Oak-run Jar编制索引](/help/sites-deploying/indexing-via-the-oak-run-jar.md)
          + [Oak-run.jar索引用例](/help/sites-deploying/oak-run-indexing-usecases.md)
          + [Oak索引疑难解答](/help/sites-deploying/troubleshooting-oak-indexes.md)
@@ -1462,11 +1462,11 @@ ht-degree: 21%
          + [Assets Performance指南](/help/sites-deploying/assets-performance-sizing.md)
          + [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
          + [配置Web控制台](/help/sites-deploying/configuring-web-console.md)
-      + 升级到AEM 6.5 {#upgrading}
-         + [升级到AEM 6.5](/help/sites-deploying/upgrade.md)
+      + 正在升级到AEM 6.5 LTS {#upgrading}
+         + [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
          + [规划升级](/help/sites-deploying/upgrade-planning.md)
          + [使用模式检测器评估升级复杂性](/help/sites-deploying/pattern-detector.md)
-         + [AEM 6.5中的向后兼容性](/help/sites-deploying/backward-compatibility.md)
+         + [AEM 6.5 LTS中的向后兼容性](/help/sites-deploying/backward-compatibility.md)
          + [升级过程](/help/sites-deploying/upgrade-procedure.md)
          + [执行就地升级](/help/sites-deploying/in-place-upgrade.md)
          + [使用离线重新索引以减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)
