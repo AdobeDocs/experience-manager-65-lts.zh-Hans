@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: 4a13ad21a3ea4ce6a1db9dac459b2b9ffd0d27c3
+source-git-commit: fe361e43288ad0242faa1d82af086aee9fc7804b
 workflow-type: tm+mt
-source-wordcount: '7020'
+source-wordcount: '7044'
 ht-degree: 21%
 
 ---
@@ -1472,12 +1472,15 @@ ht-degree: 21%
          + [使用离线重新索引以减少升级期间的停机时间](/help/sites-deploying/upgrade-offline-reindexing.md)
          + [延迟内容迁移](/help/sites-deploying/lazy-content-migration.md)
          + [使用CRX2Oak迁移工具](/help/sites-deploying/using-crx2oak.md)
+         + [使用Oak将AEM 6.5迁移到AEM 6.5 LTS内容](/help/sites-deploying/aem-65-to-aem-65lts-content-migration-using-oak-upgrade.md)
          + [升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
          + [升级后检查和故障排除](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
          + [升级自定义搜索Forms](/help/sites-deploying/upgrading-custom-search-forms.md)
          + [可持续升级](/help/sites-deploying/sustainable-upgrades.md)
          + [升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)
          + [应用程序服务器安装的升级步骤](/help/sites-deploying/app-server-upgrade.md)
+         + [应用程序服务器安装的升级步骤(WLP)](/help/sites-deploying/app-server-upgrade-wlp.md)
+         + [应用程序服务器安装的升级步骤(Tomcat)](/help/sites-deploying/app-server-upgrade-tomcat.md)
          + [升级后卸载的过时包列表](/help/sites-deploying/obsolete-bundles.md)
       + 最佳实践 {#practices}
          + [部署最佳实践](/help/sites-deploying/best-practices.md)
