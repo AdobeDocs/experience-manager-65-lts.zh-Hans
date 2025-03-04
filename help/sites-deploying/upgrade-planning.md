@@ -9,9 +9,9 @@ docset: aem65
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f66bb283e5c2a746821839269e112be8c2714ba7
+source-git-commit: ac803ef9ac38380d7ce7fdf4490c428fd0039688
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ AEM升级过程需要仔细处理规划、分析和执行阶段，并为每个�
 >
 >最后6个Service Pack支持升级到AEM 6.5 LTS
 
-务必确保您运行的是受支持的操作系统、Java™运行时、httpd和Dispatcher版本。 有关更多信息，请参阅TBD：链接AEM 6.5 LTS的技术要求。 您必须在升级计划中考虑升级这些组件，并且应在升级AEM之前进行升级。
+务必确保您运行的是受支持的操作系统、Java™运行时、httpd和Dispatcher版本。 有关详细信息，请参阅AEM 6.5 LTS的[技术要求](/help/sites-deploying/technical-requirements.md)。 您必须在升级计划中考虑升级这些组件，并且应在升级AEM之前进行升级。
 
 <!-- Alexandru: drafting for now
 
@@ -106,15 +106,15 @@ New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/rel
 
 ### 创建测试计划 {#creating-a-test-plan}
 
-每个客户的AEM实施都是独一无二的，并且已经过自定义以满足其业务要求。 因此，必须确定已对系统所做的所有自定义设置，以便将其包含在测试计划中。 此测试计划将支持Adobe在已升级的实例上执行的QA过程。
+每个客户的AEM实施都是独一无二的，并且已经过自定义以满足其业务要求。 因此，必须确定已对系统所做的所有自定义设置，以便将其包含在测试计划中。
 
 需要复制确切的生产环境，并且应在升级后对其执行测试，以确保所有应用程序和自定义代码仍按需运行。 回退所有自定义设置并运行性能、负载和安全测试。 在组织测试计划时，除了开箱即用的UI和日常操作中使用的工作流之外，还要确保涵盖针对系统所做的所有自定义设置。 这些集成包括自定义OSGI服务和Servlet、与Adobe Experience Cloud的集成、通过AEM连接器与第三方的集成、自定义第三方集成、自定义组件和模板、AEM中的自定义UI叠加以及自定义工作流。 此外，仍应测试自定义查询，以确保其索引在升级后继续有效工作。
 
 ### 评估升级复杂性 {#assessing-upgrade-complexity}
 
-由于Adobe客户在其AEM环境中应用的自定义设置的数量和性质多种多样，因此请务必提前一些时间来确定在您的升级中应需要的总体工作级别。 Analyzer for AEM可以帮助您评估升级的复杂性。
+由于Adobe客户在其AEM环境中应用的自定义设置的数量和性质多种多样，因此请务必提前一些时间来确定在您的升级中应需要的总体工作级别。 [适用于AEM 6.5 LTS的AEM Analyzer](/help/sites-deploying/pattern-detector.md)可以帮助您评估升级的复杂性。
 
-适用于AEM 6.5 LTS的AEM Analyzer应该可以相当准确地估计在大多数情况下升级过程中会出现的情况。 但是，对于具有不兼容更改的更复杂的自定义和部署，您可以根据[执行就地升级](/help/sites-deploying/in-place-upgrade.md)中的说明将开发实例升级到AEM 6.5 LTS。 完成后，在此环境中执行一些高级烟雾测试。 本练习的目标不是详尽地完成测试案例清单并生成正式的缺陷清单，而是粗略地估计升级代码以实现6.5 LTS兼容性所需的工作量。 在与AEM分析器和上一节中确定的体系结构更改相结合时，可以为项目管理团队提供粗略的估计，以规划升级。
+适用于AEM 6.5 LTS的[AEM Analyer](/help/sites-deploying/pattern-detector.md)应该可以相当准确地估计在大多数情况下升级过程中会出现的情况。 但是，对于具有不兼容更改的更复杂的自定义和部署，您可以根据[执行就地升级](/help/sites-deploying/in-place-upgrade.md)中的说明将开发实例升级到AEM 6.5 LTS。 完成后，在此环境中执行一些高级烟雾测试。 本练习的目标不是详尽地完成测试用例清单并生成正式的缺陷清单，而是粗略估计升级AEM 6.5 LTS兼容性代码所需的工作量。 在与[AEM分析器](/help/sites-deploying/pattern-detector.md)以及上一节中确定的体系结构更改结合使用时，可以为项目管理团队提供粗略的估计值，以计划升级。
 
 ### 构建升级和回滚Runbook {#building-the-upgrade-and-rollback-runbook}
 
@@ -128,7 +128,7 @@ Adobe在[升级过程](/help/sites-deploying/upgrade-procedure.md)中提供了�
 
 ### 制定升级计划 {#developing-an-upgrade-plan}
 
-先前练习的输出可用于构建升级计划，该计划涵盖测试或开发工作、培训和实际升级执行的预期时间线。
+先前练习的输出可用于构建升级计划，该计划涵盖测试或开发工作的预期时间表以及实际的升级执行。
 
 <!--Alexandru: drafting for now
 
