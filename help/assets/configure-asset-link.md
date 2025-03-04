@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 role: Admin
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 238ff31ed4e5e833a14cb64e3eae75377038a857
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '3059'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 1. 要将Creative Cloud许可的用户映射到Experience Manager用户，请管理[用户访问控制](#user-access)。
 
-1. 创建[自定义查询索引](#create-custom-index)，为InDesign配置[FPO呈现版本](/help/assets/configure-fpo-renditions.md)，配置[Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md)，并配置[视觉或相似性搜索](https://experienceleague.adobe.com/docs/experience-manager-65-2025/assets/using/search-assets.html#configvisualsearch)。
+1. 创建[自定义查询索引](#create-custom-index)，为InDesign配置[FPO呈现版本](/help/assets/configure-fpo-renditions.md)，配置[Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md)，并配置[视觉或相似性搜索](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/search-assets.html#configvisualsearch)。
 
 ## 各种功能的先决条件和支持 {#prerequisites}
 
@@ -242,7 +242,7 @@ Adobe Asset Link用户登录其Creative Cloud应用程序后，可以连接到Ex
 
 配置对于业务线用户和营销人员非常有用，例如在几个特定文件夹上创建自定义工作流。 假设某个机构照片拍摄的所有资产都可以添加水印，或者自由职业者上传的所有资产都可以经过处理以创建特定演绎版。
 
-有关Experience Manager配置的详细信息，请参阅[对资产自动执行工作流](https://experienceleague.adobe.com/docs/experience-manager-65-2025/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets)。
+有关Experience Manager配置的详细信息，请参阅[对资产自动执行工作流](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets)。
 
 
 ## 在Experience Manager 6.4.x版本中创建自定义索引 {#create-custom-index}
@@ -260,7 +260,7 @@ Experience Manager包含用于查询的索引。 为指定版本创建以下自�
 
 ## 配置视觉或相似性搜索 {#configure-visual-similarity-search}
 
-通过可视化搜索功能，您可以使用Adobe Asset Link面板在AEM Assets存储库中搜索视觉上类似的资源。 该功能在6.5.0或更高版本中可用，并且只搜索索引资产。 有关详细信息，请参阅[如何配置可视化搜索](https://experienceleague.adobe.com/docs/experience-manager-65-2025/assets/using/search-assets.html#configvisualsearch)。
+通过可视化搜索功能，您可以使用Adobe Asset Link面板在AEM Assets存储库中搜索视觉上类似的资源。 该功能在6.5.0或更高版本中可用，并且只搜索索引资产。 有关详细信息，请参阅[如何配置可视化搜索](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/search-assets.html#configvisualsearch)。
 
 ## 为Adobe InDesign生成“仅用于置入”演绎版 {#fpo-renditions}
 

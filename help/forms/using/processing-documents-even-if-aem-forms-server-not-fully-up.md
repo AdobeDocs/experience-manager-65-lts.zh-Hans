@@ -4,7 +4,7 @@ description: 在所有服务都启动并在JEE服务器和OSGi服务器上运行
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 3%
@@ -26,4 +26,4 @@ ht-degree: 3%
 
 ## 解决方案 {#solution}
 
-要解决此问题，请在服务器启动期间向[批处理文件](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/deploying/command-line-start-and-stop.html#windows-platform-start-bat-script-example)添加参数`Dcom.adobe.livecycle.dsc.deferServiceStart=true`。
+要解决此问题，请在服务器启动期间向[批处理文件](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/command-line-start-and-stop.html#windows-platform-start-bat-script-example)添加参数`Dcom.adobe.livecycle.dsc.deferServiceStart=true`。

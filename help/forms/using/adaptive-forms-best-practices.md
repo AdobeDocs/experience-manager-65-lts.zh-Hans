@@ -6,7 +6,7 @@ topic-tags: author
 feature: Adaptive Forms,Foundation Components,Core Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '5538'
 ht-degree: 1%
@@ -104,9 +104,9 @@ Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简�
 
 * 仅作者建议使用&#x200B;**nosamplecontent**&#x200B;运行模式，而不建议发布节点使用。
 * 仅通过创作节点创作自适应表单、主题、模板或云配置等资产，这些节点可在配置的发布节点发布。
-有关详细信息，请参阅[发布和取消发布表单和文档](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
+有关详细信息，请参阅[发布和取消发布表单和文档](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
 * 创作和发布需要Forms附加组件包来支持文档服务操作；因此，它可以被视为依赖项。
-如果只需要Forms相关的示例模板、主题和DOR包，则可以从[aemforms-references-*包](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)下载它们。
+如果只需要Forms相关的示例模板、主题和DOR包，则可以从[aemforms-references-*包](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)下载它们。
 
 有关详细信息，请参阅[自适应表单创作简介](/help/forms/using/introduction-forms-authoring.md)中的最佳实践。
 
@@ -328,7 +328,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 * 通过Web服务器压缩模块启用HTML。 有关详细信息，请参阅[AEM Forms服务器的性能优化](/help/forms/using/performance-tuning-aem-forms.md)。
 * 增加大型表单的每个请求配置的调用。 请参阅[优化大型复杂表单的性能](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms)。
-* 创建由错误处理程序](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/platform/customizing-errorhandler-pages.html)显示的[自定义错误页面。
+* 创建由错误处理程序](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/platform/customizing-errorhandler-pages.html)显示的[自定义错误页面。
 * 安全的AEM Forms服务器。
 
    * 使用`nosamplecontent`运行模式以确保在生产服务器上没有部署示例内容和示例用户。 请参阅[在生产就绪模式下运行AEM](/help/sites-administering/production-ready.md)。

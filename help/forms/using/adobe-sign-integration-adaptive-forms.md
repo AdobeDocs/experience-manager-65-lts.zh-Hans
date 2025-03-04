@@ -8,7 +8,7 @@ docset: aem65
 feature: Adaptive Forms,Foundation Components,Acrobat Sign
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '2071'
 ht-degree: 16%
@@ -146,7 +146,7 @@ ht-degree: 16%
 1. 打开&#x200B;**[!UICONTROL Forms Common Configuration Service].**
 1. 在&#x200B;**[!UICONTROL 允许]**&#x200B;字段中，**选择**&#x200B;所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击&#x200B;**[!UICONTROL 保存]。**&#x200B;创作实例配置为使用[!DNL Adobe Sign]。
 1. 发布配置。
-1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
+1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
 
 现在，[!DNL Adobe Sign]已与AEM [!DNL Forms]集成并准备好在自适应表单中使用。 要在自适应表单](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)中[使用Adobe Sign服务，请在自适应表单属性中指定上面创建的配置容器。
 
@@ -261,7 +261,7 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 1. 在&#x200B;**[!UICONTROL 允许]**&#x200B;字段中，**选择**&#x200B;所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击&#x200B;**[!UICONTROL 保存]。**&#x200B;创作实例配置为使用[!DNL Adobe Sign]。
 
 1. 发布配置。
-1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
+1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
 
 现在，您可以[在自适应表单](working-with-adobe-sign.md)或[Adobe Acrobat Sign Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)中添加AEM字段。 确保将用于Cloud Service配置的配置容器添加到为[!DNL Adobe Acrobat Sign]启用的所有自适应Forms。 您可以从自适应表单的属性中指定配置容器。
 

@@ -4,7 +4,7 @@ description: 使用OAuth 2.0客户端凭据流将Salesforce集成与AEM Forms集
 solution: Experience Manager, Experience Manager Forms
 feature: Form Data Model
 role: Admin, User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 68%
@@ -69,4 +69,4 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 1. 单击&#x200B;**[!UICONTROL 测试连接]**。
 1. 如果连接成功，请单击&#x200B;**[!UICONTROL 创建]**&#x200B;按钮。
 
-现在，您可以[创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/form-data-model/create-form-data-models.html?lang=en)以将配置的数据源与您的自适应Forms集成。
+现在，您可以[创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/form-data-model/create-form-data-models.html?lang=en)以将配置的数据源与您的自适应Forms集成。

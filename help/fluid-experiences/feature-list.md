@@ -5,7 +5,7 @@ index: n
 feature: Authoring
 solution: Experience Manager Sites,Experience Manager Assets
 role: Admin
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Adobe Experience Manager Fluid Experiences可利用AEM Sites、AEM Dynamic Media和AEM Assets的强大功能集，为Headless内容投放提供可靠的解决方案。
 
-AEM Fluid Experiences与经典AEM的不同之处在于，它仅涉及Headless投放用例。 [完整AEM Sites、AEM和Dynamic Media解决方案提供了Headful内容创作和交付，以及Assets对混合用例的强大支持。](https://experienceleague.adobe.com/docs/experience-manager-65-2025/user-guide/home.html)
+AEM Fluid Experiences与经典AEM的不同之处在于，它仅涉及Headless投放用例。 [完整AEM Sites、AEM和Dynamic Media解决方案提供了Headful内容创作和交付，以及Assets对混合用例的强大支持。](https://experienceleague.adobe.com/docs/experience-manager-65-lts/user-guide/home.html)
 
 下表定义了AEM Fluid Experiences的功能，并链接到相关支持文档。
 

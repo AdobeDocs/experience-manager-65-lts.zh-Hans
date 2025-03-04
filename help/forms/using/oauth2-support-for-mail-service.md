@@ -4,7 +4,7 @@ description: 为Microsoft&reg (Forms JEE OAuth)；Office 365邮件服务器协�
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 5%
@@ -150,7 +150,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要了解有关任务通知的更多信息，[单击此处](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)。
+   > 若要了解有关任务通知的更多信息，[单击此处](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-email-endpoints.html#create-an-email-endpoint-for-the-complete-task-service)。
 
 ## 配置电子邮件端点 {#configure_email_endpoint}
 
@@ -164,7 +164,7 @@ ht-degree: 5%
 
    >[!NOTE]
    >
-   > 若要了解有关配置电子邮件端点的详细信息，请单击[配置电子邮件端点](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/forms/administrator-help/configuring-email-endpoints.html)。
+   > 若要了解有关配置电子邮件端点的详细信息，请单击[配置电子邮件端点](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-email-endpoints.html)。
 
 ## 疑难解答 {#troubleshooting}
 

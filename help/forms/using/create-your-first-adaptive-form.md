@@ -4,7 +4,7 @@ description: 了解如何创建企业级、交互式和响应式表单。
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 9bb44a58e919fd038c83cab89620256501137bef
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 5%
@@ -42,7 +42,7 @@ ht-degree: 5%
 
 ### 先决条件 {#prerequisite}
 
-* 设置[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
+* 设置[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
 * 在创作实例上安装[AEM Forms加载项](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 * 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于[!DNL MySQL]数据库并使用[!DNL Oracle's] [MySQL JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 

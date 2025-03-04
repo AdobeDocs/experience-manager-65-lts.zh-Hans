@@ -10,7 +10,7 @@ tagskeywords: querybuilder
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Search,Query Builder
 role: Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '2033'
 ht-degree: 0%
@@ -31,7 +31,7 @@ REST API通过HTTP提供对相同功能的访问，响应以JSON发送。
 
 >[!NOTE]
 >
->QueryBuilder API是使用JCR API构建的。 您还可以使用OSGi捆绑包中的JCR API查询Adobe Experience Manager JCR。 有关信息，请参阅使用JCR API的[Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/platform/access-jcr.html)。
+>QueryBuilder API是使用JCR API构建的。 您还可以使用OSGi捆绑包中的JCR API查询Adobe Experience Manager JCR。 有关信息，请参阅使用JCR API的[Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/platform/access-jcr.html)。
 
 ## Gem会议 {#gem-session}
 

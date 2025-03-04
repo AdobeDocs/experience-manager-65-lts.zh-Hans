@@ -11,7 +11,7 @@ legacypath: /content/docs/en/aem/6-0/administer/integration/dynamic-media/image-
 feature: Image Presets
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '3792'
 ht-degree: 7%
@@ -403,7 +403,7 @@ Dynamic Media集成使用以下脚本：
     </ul>
     <div>
       中介绍了锐化
-     <a href="https://experienceleague.adobe.com/docs/experience-manager-65-2025/assets/sharpening_images.pdf">锐化图像</a>。
+     <a href="https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/sharpening_images.pdf">锐化图像</a>。
     </div> </td>
   </tr>
   <tr>

@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: fe361e43288ad0242faa1d82af086aee9fc7804b
+source-git-commit: 8253f7c3b779f9ef08a15c9a5dfc9ae1b437756a
 workflow-type: tm+mt
 source-wordcount: '7044'
 ht-degree: 21%
@@ -105,7 +105,7 @@ ht-degree: 21%
          + [参与工作流程](/help/sites-authoring/workflows-participating.md)
          + [使用项目工作流程](/help/sites-authoring/projects-with-workflows.md)
       + 页面性能{#page-performance}
-         + [内容分析](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/sites/authoring/siteandpage/content-insights.html)
+         + [内容分析](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/sites/authoring/siteandpage/content-insights.html)
          + [分析页面性能](/help/sites-authoring/ci-analyze.md)
          + [查看页面分析数据](/help/sites-authoring/pa-using.md)
       + 个性化 {#personalization}
@@ -181,7 +181,7 @@ ht-degree: 21%
          + [Admin Console](/help/sites-administering/enable-classic-ui-admin.md)
       + 个性化 {#personalization}
          + [个性化](/help/sites-administering/personalization.md)
-         + [配置ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/developing/personlization/ch-configuring.html)
+         + [配置ContextHub](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/developing/personlization/ch-configuring.html)
          + [ClientContext](/help/sites-administering/client-context.md)
          + [营销活动](/help/sites-administering/campaigns.md)
          + [使用 ContextHub 配置分段](/help/sites-administering/segmentation.md)
@@ -226,10 +226,10 @@ ht-degree: 21%
          + [电子邮件模板的最佳实践](/help/sites-administering/best-practices-for-email-templates.md)
       + 最佳实践 {#bestpractices}
          + [最佳实践](/help/sites-administering/administer-best-practices.md)
-         + [翻译最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/sites/administering/introduction/tc-bp.html)
-         + [MSM最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/sites/administering/introduction/msm-best-practices.html)
+         + [翻译最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/sites/administering/introduction/tc-bp.html)
+         + [MSM最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/sites/administering/introduction/msm-best-practices.html)
          + [AEM Sites - GDPR就绪](/help/sites-administering/gdpr-compliance-sites.md)
-         + [处理AEM Foundation的GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/security/handling-gdpr-requests-for-aem-platform.html)
+         + [处理AEM Foundation的GDPR请求](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/security/handling-gdpr-requests-for-aem-platform.html)
          + [AEM Commerce - GDPR准备工作](/help/sites-administering/gdpr-compliance-commerce.md)
       + 内容管理{#contentmanagement}
          + [包管理器](/help/sites-administering/package-manager.md)
@@ -1226,7 +1226,7 @@ ht-degree: 21%
          + [开发报告](/help/sites-developing/dev-reports.md)
       + 组件{#components}
          + [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)
-         + [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/sites/authoring/siteandpage/style-system.html)
+         + [样式系统](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/sites/authoring/siteandpage/style-system.html)
          + [组件概述](/help/sites-developing/components.md)
          + [AEM组件 — 基础知识](/help/sites-developing/components-basics.md)
          + [开发AEM组件](/help/sites-developing/developing-components.md)
@@ -1256,21 +1256,21 @@ ht-degree: 21%
          + [Headless 和 AEM](/help/sites-developing/headless/introduction.md)
          + Headless 历程 {#journeys}
             + Headless 开发人员历程 {#developer}
-               + [了解AEM中的Headless](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/overview.html)
-               + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/learn-about.html)
-               + [AEM Headless as a Cloud Service 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/getting-started.html)
-               + [首次 AEM Headless 使用体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/path-to-first-experience.html)
-               + [如何将您的内容建模为AEM内容模型](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/model-your-content.html)
-               + [如何通过 AEM 交付 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/access-your-content.html)
-               + [如何通过 AEM Assets API 更新您的内容](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/update-your-content.html)
-               + [如何将其整合在一起](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/put-it-all-together.html)
-               + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/go-live.html)
-               + [可选 — 如何使用AEM创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/developer/create-spa.html)
+               + [了解AEM中的Headless](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/overview.html)
+               + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/learn-about.html)
+               + [AEM Headless as a Cloud Service 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/getting-started.html)
+               + [首次 AEM Headless 使用体验的路径](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/path-to-first-experience.html)
+               + [如何将您的内容建模为AEM内容模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/model-your-content.html)
+               + [如何通过 AEM 交付 API 访问您的内容](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/access-your-content.html)
+               + [如何通过 AEM Assets API 更新您的内容](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/update-your-content.html)
+               + [如何将其整合在一起](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/put-it-all-together.html)
+               + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/go-live.html)
+               + [可选 — 如何使用AEM创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/create-spa.html)
             + Headless 内容架构师历程 {#architect}
-               + [AEM Headless内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/architect/overview.html)
-               + 使用AEM对Headless进行[内容建模 — 简介](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/architect/introduction.html)
-               + [了解使用AEM对Headless进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/architect/basics.html)
-               + [了解如何在AEM中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/headless/architect/model-structure.html)
+               + [AEM Headless内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/overview.html)
+               + 使用AEM对Headless进行[内容建模 — 简介](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/introduction.html)
+               + [了解使用AEM对Headless进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html)
+               + [了解如何在AEM中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/model-structure.html)
          + 入门指南{#getting-started}
             + [简介](/help/sites-developing/headless/getting-started/introduction.md)
             + [创建配置](/help/sites-developing/headless/getting-started/create-configuration.md)
@@ -1279,28 +1279,28 @@ ht-degree: 21%
             + [创建内容片段](/help/sites-developing/headless/getting-started/create-content-fragment.md)
             + [访问和交付内容片段](/help/sites-developing/headless/getting-started/create-api-request.md)
          + 内容片段{#content-fragments}
-            + [使用内容片段和 GraphQL 进行 Headless 交付](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-graphql.html)
-            + [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments.html)
-            + [为您的实例启用内容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-configuration-browser.html)
-            + [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-models.html)
-            + [管理内容片段](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-managing.html)
-            + [变量 - 创作片段内容](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-variations.html)
-            + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-markdown.html)
-            + [使用关联内容](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-assoc-content.html)
-            + [元数据 - 片段属性](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-metadata.html)
-            + [结构树](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-structure-tree.html)
-            + [预览 - JSON 呈现](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/content-fragments/content-fragments-json-preview.html)
+            + [使用内容片段和 GraphQL 进行 Headless 交付](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-graphql.html)
+            + [使用内容片段](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments.html)
+            + [为您的实例启用内容片段功能](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-configuration-browser.html)
+            + [内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-models.html)
+            + [管理内容片段](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-managing.html)
+            + [变量 - 创作片段内容](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-variations.html)
+            + [Markdown](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-markdown.html)
+            + [使用关联内容](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-assoc-content.html)
+            + [元数据 - 片段属性](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-metadata.html)
+            + [结构树](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-structure-tree.html)
+            + [预览 - JSON 呈现](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/content-fragments/content-fragments-json-preview.html)
          + 投放API{#delivery-api}
-            + [资产 HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/mac-api-assets.html)
-            + [内容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/assets-api-content-fragments.html)
-            + [内容片段 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/graphql-api-content-fragments.html)
+            + [资产 HTTP API](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/mac-api-assets.html)
+            + [内容片段 REST API](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/assets-api-content-fragments.html)
+            + [内容片段 GraphQL API](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/graphql-api-content-fragments.html)
             + [管理GraphQL端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)
-            + [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/graphiql-ide.html)
-            + [持久查询](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/persisted-queries.html)
+            + [使用GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/graphiql-ide.html)
+            + [持久查询](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/persisted-queries.html)
             + [优化 GraphQL 查询](/help/sites-developing/headless/graphql-api/graphql-optimization.md)
             + [更新内容片段以进行优化的 GraphQL 筛选](/help/sites-developing/headless/graphql-api/graphql-optimized-filtering-content-update.md)
-            + [对内容片段的远程 AEM GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/graphql-authentication-content-fragments.html)
-            + [带内容片段的 AEM GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/assets/extending/content-fragments-graphql-samples.html)
+            + [对内容片段的远程 AEM GraphQL 查询的身份验证](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/graphql-authentication-content-fragments.html)
+            + [带内容片段的 AEM GraphQL API - 示例内容和查询](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/assets/extending/content-fragments-graphql-samples.html)
          + 通用编辑器{#universal-editor}
             + [简介](/help/sites-developing/universal-editor/introduction.md)
       + 混合和SPA AEM开发{#spas}
@@ -1320,7 +1320,7 @@ ht-degree: 21%
          + [RemotePage 组件](/help/sites-developing/spa-remote-page.md)
          + [在 AEM 中编辑外部 SPA](/help/sites-developing/spa-edit-external.md)
          + [SPA 中的复合组件](/help/sites-developing/spa-composite-component.md)
-         + [为组件启用 JSON 导出](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/developing/components/json-exporter-components.html)
+         + [为组件启用 JSON 导出](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/developing/components/json-exporter-components.html)
          + [启动集成](/help/sites-developing/spa-launch.md)
          + [SPA参考资料](/help/sites-developing/spa-reference-materials.md)
       + 开发工具{#devtools}
@@ -1386,7 +1386,7 @@ ht-degree: 21%
          + 正在扩展经典UI{#extending-classic-ui}
             + [自定义网站控制台（经典UI）](/help/sites-developing/customizing-siteadmin.md)
             + [自定义欢迎控制台（经典UI）](/help/sites-developing/customizing-the-welcome-console.md)
-            + [正在开发报告](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/developing/platform/dev-reports.html)
+            + [正在开发报告](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/developing/platform/dev-reports.html)
       + 正在测试{#testing}
          + [规划](/help/sites-developing/planning.md)
          + [需要哪些测试环境？](/help/sites-developing/test-environments.md)
@@ -1399,10 +1399,10 @@ ht-degree: 21%
          + [下一个版本……](/help/sites-developing/the-next-release.md)
          + [核对清单](/help/sites-developing/checklists.md)
          + [艰难的一天](/help/sites-developing/tough-day.md)
-         + [正在测试您的UI](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/developing/components/hobbes.html)
+         + [正在测试您的UI](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/developing/components/hobbes.html)
       + 最佳实践 {#bestpractices}
          + [最佳实践概述](/help/sites-developing/best-practices.md)
-         + [AEM开发准则和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-2025/content/implementing/developing/introduction/dev-guidelines-bestpractices.html)
+         + [AEM开发准则和最佳实践](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/developing/introduction/dev-guidelines-bestpractices.html)
          + [开发最佳实践](/help/sites-developing/development-practices.md)
          + [内容架构](/help/sites-developing/content-architecture.md)
          + [软件体系结构](/help/sites-developing/software-architecture.md)

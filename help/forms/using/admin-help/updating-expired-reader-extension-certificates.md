@@ -4,7 +4,7 @@ description: Reader扩展证书的过期及其影响
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -72,7 +72,7 @@ A. Adobe Acrobat Reader 2020或更高版本需要使用扩展了“Adobe根CA 2�
 
 **Q.如何检查应用于PDF文档的使用权限？**
 
-A.您可以使用[getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API检索有关应用于PDF文档的使用权限的信息。
+A.您可以使用[getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API检索有关应用于PDF文档的使用权限的信息。
 
 **Q.如何更改Acrobat Reader扩展证书文件的密码？**
 
@@ -96,7 +96,7 @@ You can choose one of the following paths to apply latest certificates:
 Updating the certificates requires using actions available on AEM Forms administrator console and Reader Extension APIs provided by AEM Forms. The document is intended for users and administrators with knowledge of using Adobe Experience Manger Forms APIs. Before you start, ensure that: 
 
 * the user has administrator rights on underlying AEM Forms environment. 
-* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/devtools/howto-projects-eclipse.html) and has access to it.
+* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/devtools/howto-projects-eclipse.html) and has access to it.
 * [obtain the certificates](#obtain-the-certificates).
 
 

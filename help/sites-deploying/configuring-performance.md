@@ -8,7 +8,7 @@ topic-tags: configuring
 feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '6470'
 ht-degree: 12%
@@ -202,7 +202,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 >[!NOTE]
 >
->请参阅[性能优化](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/configuring/configuring-performance.html)。
+>请参阅[性能优化](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/configuring-performance.html)。
 
 ### 搜索索引 {#search-indexing}
 

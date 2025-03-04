@@ -5,7 +5,7 @@ keywords: 添加自定义函数、使用自定义函数、创建自定义函数�
 content-type: reference
 feature: Adaptive Forms, Core Components
 role: Admin, User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '3385'
 ht-degree: 2%
@@ -571,7 +571,7 @@ var c = {
 
 >[!NOTE]
 >
-> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/en/docs/experience-manager-65-2025/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
+> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
 
 ### 在自定义函数中支持异步函数 {#support-of-async-functions}
 

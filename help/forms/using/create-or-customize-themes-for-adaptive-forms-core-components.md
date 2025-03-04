@@ -8,10 +8,10 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '1939'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 * 安装[Apache Maven的最新版本。](https://maven.apache.org/download.cgi) Apache Maven是常用于Java™项目的生成自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖项。
 
-* 了解如何在Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/introduction/clientlibs.html)中创建[客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
+* 了解如何在Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/introduction/clientlibs.html)中创建[客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
 
 * 安装纯文本编辑器。 例如，Microsoft® Visual Studio Code。 使用Microsoft等纯文本编辑器®Visual Studio Code为编辑和修改主题文件提供了用户友好的环境。
 

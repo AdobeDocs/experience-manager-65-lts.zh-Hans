@@ -8,7 +8,7 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi, AEM Forms Upgrade
-source-git-commit: 68dec4a149ea13b25766ad721ebd7bf1177b0970
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 1%
@@ -48,7 +48,7 @@ ht-degree: 1%
       1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
       1. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
    1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
-   1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-2025/administering/contentmanagement/package-manager.html)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+   1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
    1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
       您还可以使用[AEM Forms发行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。

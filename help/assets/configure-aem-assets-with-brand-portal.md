@@ -9,7 +9,7 @@ feature: Brand Portal
 role: Admin
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 4%
@@ -76,11 +76,11 @@ This help describes the following two use-cases:
 
 * 如果您是Adobe合作伙伴，请使用[Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)请求AEM 6.5。
 
-下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/deploying/deploy.html#default-local-install)。
+下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/deploy.html#default-local-install)。
 
 ### 下载并安装最新的AEM Service Pack {#servicepack}
 
-有关详细说明，请参阅当前的[AEM 6.5 Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-2025/release-notes/release-notes.html)。
+有关详细说明，请参阅当前的[AEM 6.5 Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/release-notes.html)。
 
 如果找不到最新的Adobe包或Service Pack，请&#x200B;**联系AEM客户支持**。
 
@@ -122,11 +122,11 @@ This help describes the following two use-cases:
 
 #### 在Adobe Developer Console中配置OAuth凭据 {#config-oauth}
 
-[在Adobe Developer Console中配置OAuth凭据](https://experienceleague.adobe.com/en/docs/experience-manager-65-2025/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)，然后选择Brand Portal API。
+[在Adobe Developer Console中配置OAuth凭据](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)，然后选择Brand Portal API。
 
 #### 使用OAuth创建新的Adobe IMS集成 {#create-ims-account-configuration}
 
-[使用OAuth创建新的Adobe IMS集成](https://experienceleague.adobe.com/en/docs/experience-manager-65-2025/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration)，然后从下拉列表中选择Brand Portal。
+[使用OAuth创建新的Adobe IMS集成](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration)，然后从下拉列表中选择Brand Portal。
 
 #### 配置云服务 {#configure-cloud-service}
 

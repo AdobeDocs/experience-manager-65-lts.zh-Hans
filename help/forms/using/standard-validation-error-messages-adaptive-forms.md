@@ -9,7 +9,7 @@ discoiquuid: ec062567-1c6b-497b-a1e7-1dbac2d60852
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '2357'
 ht-degree: 86%
@@ -186,7 +186,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 ## 使用规则编辑器添加错误处理程序 {#add-error-handler-using-rule-editor}
 
-通过使用[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作，可以根据用于自适应表单的数据源来定义验证标准。如果您使用 RESTful Web 服务作为数据源，则可以在 Swagger 定义文件中定义验证标准。通过在自适应表单中使用错误处理函数和规则编辑器，可以有效地管理和自定义错误处理。可以使用规则编辑器定义条件，并配置在触发规则时要执行的所需操作。自适应表单根据预设验证标准验证您在字段中输入的信息。如果输入值未达到验证标准，则将在自适应表单的字段级别显示错误消息。
+通过使用[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作，可以根据用于自适应表单的数据源来定义验证标准。如果您使用 RESTful Web 服务作为数据源，则可以在 Swagger 定义文件中定义验证标准。通过在自适应表单中使用错误处理函数和规则编辑器，可以有效地管理和自定义错误处理。可以使用规则编辑器定义条件，并配置在触发规则时要执行的所需操作。自适应表单根据预设验证标准验证您在字段中输入的信息。如果输入值未达到验证标准，则将在自适应表单的字段级别显示错误消息。
 
 >[!NOTE]
 >
@@ -202,7 +202,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 ### 添加默认错误处理程序函数 {#add-default-errror-handler}
 
 如果错误响应处于标准架构或服务器端验证失败，则支持默认错误处理程序以在字段上显示错误消息。
-为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来使用默认错误处理程序，以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用默认错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用规则编辑器的调用服务操作添加默认错误处理程序，请执行以下步骤：
+为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来使用默认错误处理程序，以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用默认错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用规则编辑器的调用服务操作添加默认错误处理程序，请执行以下步骤：
 
 1. 在创作模式下打开自适应表单，选择一个表单组件，然后选择&#x200B;**[!UICONTROL 规则编辑器]**&#x200B;以打开规则编辑器。
 1. 选择&#x200B;**[!UICONTROL 创建]**。
@@ -231,7 +231,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 自定义错误处理程序是一个函数（客户端库），旨在响应由外部服务返回的错误并向最终用户提供自定义响应。任何带注释 `@errorHandler` 的客户端库均被视为自定义错误处理程序函数。此注释有助于识别`.js`文件中指定的错误处理程序函数。
 
-为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来创建和使用自定义错误处理程序，我们以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用自定义错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
+为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来创建和使用自定义错误处理程序，我们以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用自定义错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
 
 要在自适应表单中添加和使用自定义错误处理程序，请执行以下步骤：
 

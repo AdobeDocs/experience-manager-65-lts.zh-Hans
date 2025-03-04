@@ -4,7 +4,7 @@ description: 使用Adobe Developer App Builder扩展 [!DNL Adobe Experience Mana
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -29,7 +29,7 @@ App Builder自2020年夏季起通过Adobe的Developer Preview向企业客户和�
 
 >[!NOTE]
 >
->对于希望使用App Builder的AEM as a Cloud Service客户，请参阅[使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/extending-aem/app-builder.html)。
+>对于希望使用App Builder的AEM as a Cloud Service客户，请参阅[使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/extending-aem/app-builder.html)。
 
 ## 架构 {#architecture}
 

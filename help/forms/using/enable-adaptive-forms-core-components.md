@@ -5,7 +5,7 @@ keywords: 启用核心组件、核心组件自适应Forms、6.5上的核心组�
 role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 8efb1eb0b4a69cf59fa5853aa335dbf3d6061185
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 13%
@@ -31,7 +31,7 @@ ht-degree: 13%
 
 在AEM 6.5 Forms环境中启用自适应Forms核心组件之前：
 
-* [升级到AEM 6.5 Forms Service Pack 16 (6.5.16.0)或更高版本](https://experienceleague.adobe.com/docs/experience-manager-65-2025/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
+* [升级到AEM 6.5 Forms Service Pack 16 (6.5.16.0)或更高版本](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
 
 * 安装[Apache Maven](https://maven.apache.org/download.cgi)的最新版本。
 
@@ -130,7 +130,7 @@ ht-degree: 13%
 
    成功构建AEM原型项目后，将生成一个AEM包。 您可以在[AEM原型项目文件夹]\all\target\[appid].all-[version].zip中找到该包
 
-1. 使用[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-2025/administering/contentmanagement/package-manager.html?lang=en)在所有创作实例和发布实例上部署[AEM原型项目文件夹]\all\target\[appid].all-[version].zip包。
+1. 使用[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html?lang=en)在所有创作实例和发布实例上部署[AEM原型项目文件夹]\all\target\[appid].all-[version].zip包。
 
 >[!NOTE]
 >

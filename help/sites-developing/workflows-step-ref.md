@@ -9,7 +9,7 @@ docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 2%
@@ -187,7 +187,7 @@ function check(){
 
 >[!NOTE]
 >
->请参阅[OR拆分步骤](https://experienceleague.adobe.com/docs/experience-manager-65-2025/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
+>请参阅[OR拆分步骤](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
 
 使用OR拆分进行![分支](assets/variables_orsplit_new.png)
 

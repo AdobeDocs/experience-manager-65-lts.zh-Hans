@@ -8,7 +8,7 @@ content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: eff477824f2d1e5dfe5417835e8ced4b7eb85a0f
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '1454'
 ht-degree: 3%
@@ -39,7 +39,7 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 >
 >* 参与工作流，请参阅[使用工作流](/help/sites-authoring/workflows.md)。
 >* 管理工作流和工作流实例，请参阅[管理工作流](/help/sites-administering/workflows.md)。
->* 有关端到端社区文章，请参阅[使用Adobe Experience Manager工作流修改数字Assets。](https://experienceleague.adobe.com/docs/experience-manager-65-2025/assets/using/assets-workflow.html)
+>* 有关端到端社区文章，请参阅[使用Adobe Experience Manager工作流修改数字Assets。](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/assets-workflow.html)
 >* 查看[关于工作流的“向AEM专家提问”网络研讨会](https://communities.adobeconnect.com/p5s33iburd54/)。
 >* 对信息位置的更改，请参阅[工作流最佳实践 — 位置](/help/sites-developing/workflows-best-practices.md#locations)。
 >

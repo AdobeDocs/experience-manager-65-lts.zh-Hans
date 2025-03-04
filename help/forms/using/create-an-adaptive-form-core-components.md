@@ -9,7 +9,7 @@ docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 33%
@@ -36,7 +36,7 @@ ht-degree: 33%
 
 * [自适应表单基础组件](creating-adaptive-form.md)：这些是经典（旧版）数据捕获组件。您可以继续使用这些组件来编辑您现有的基于基础组件的自适应表单。如果要创建表单，Adobe建议使用[自适应Forms核心组件](/help/forms/using/create-adaptive-form.md)创建自适应Forms。
 
-## 先决条件
+## 前提条件
 
 您需要以下项来创建自适应表单：
 
@@ -61,7 +61,7 @@ ht-degree: 33%
 
 ## 创建自适应表单 {#create-an-adaptive-form}
 
-1. 登录到本地[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/deploying/deploy.html?lang=en#author-and-publish-installs)。
+1. 登录到本地[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/deploy.html?lang=en#author-and-publish-installs)。
 
 1. 在 Experience Manager 登录页面上输入您的凭据。登录后，在左上角选择&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**。
 

@@ -8,7 +8,7 @@ content-type: reference
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -179,7 +179,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 ### 准备Runbook并试运行 {#prepare-a-runbook-and-trial-run}
 
-建议先准备[runbook](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook)并执行一些试验，然后再在生产环境中运行升级。
+建议先准备[runbook](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook)并执行一些试验，然后再在生产环境中运行升级。
 
 ### 带脱机索引的文档遍历模式 {#doc-traversal-mode-with-offline-indexing}
 

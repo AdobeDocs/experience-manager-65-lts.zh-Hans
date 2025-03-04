@@ -8,7 +8,7 @@ docset: aem65
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 15%
@@ -36,7 +36,7 @@ AEM Forms提供了表单管理工具，不仅允许您管理自适应表单，�
 
 >[!NOTE]
 >
->在 [AEM 6.5 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65-2025/deploying/deploying/deploy.html)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
+>在 [AEM 6.5 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/deploy.html)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
 
 ![AEM表单功能](do-not-localize/4th-draft-updated.gif)
 

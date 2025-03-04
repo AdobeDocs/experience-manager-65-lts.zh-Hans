@@ -6,7 +6,7 @@ topic-tags: author
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Workbench,Adaptive Forms
-source-git-commit: 887dc1d6d7e11672b62ef5ca5463ea6181ff0320
+source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 0%
@@ -36,11 +36,11 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p>有关AEM Forms以及它如何与其他Adobe产品集成的一般信息</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms概述</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms概述</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>AEM Forms的所有可用文档</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms文档</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms文档</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>有关此产品版本的修补程序更新、技术说明和其他信息</p> </td>
@@ -190,7 +190,7 @@ Workbench安装过程会检测计算机上随Acrobat Pro或Acrobat Pro Extended�
 
 ### 配置超时设置 {#configuring-timeout-settings}
 
-默认情况下，Workbench会在两小时后超时，无论是否处于活动状态或非活动状态。 要编辑超时设置，请参阅<a href="https://experienceleague.adobe.com/docs/experience-manager-65-2025/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理控制台帮助</a>中的“配置用户管理>配置高级系统属性”。
+默认情况下，Workbench会在两小时后超时，无论是否处于活动状态或非活动状态。 要编辑超时设置，请参阅<a href="https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">管理控制台帮助</a>中的“配置用户管理>配置高级系统属性”。
 
 ### 配置Workbench以通过HTTPS进行连接 {#configuring-workbench-to-connect-over-HTTPS}
 
