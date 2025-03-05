@@ -9,7 +9,7 @@ docset: aem65
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: ac803ef9ac38380d7ce7fdf4490c428fd0039688
+source-git-commit: d4f89be13039e53564cd3a3148a4b845bcc183a7
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -112,9 +112,9 @@ New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/rel
 
 ### 评估升级复杂性 {#assessing-upgrade-complexity}
 
-由于Adobe客户在其AEM环境中应用的自定义设置的数量和性质多种多样，因此请务必提前一些时间来确定在您的升级中应需要的总体工作级别。 [适用于AEM 6.5 LTS的AEM Analyzer](/help/sites-deploying/pattern-detector.md)可以帮助您评估升级的复杂性。
+由于Adobe客户在其AEM环境中应用的自定义设置的数量和性质多种多样，因此请务必提前一些时间来确定在您的升级中应需要的总体工作级别。 [适用于AEM 6.5 LTS的AEM Analyzer](/help/sites-deploying/aem-analyzer.md)可以帮助您评估升级的复杂性。
 
-适用于AEM 6.5 LTS的[AEM Analyer](/help/sites-deploying/pattern-detector.md)应该可以相当准确地估计在大多数情况下升级过程中会出现的情况。 但是，对于具有不兼容更改的更复杂的自定义和部署，您可以根据[执行就地升级](/help/sites-deploying/in-place-upgrade.md)中的说明将开发实例升级到AEM 6.5 LTS。 完成后，在此环境中执行一些高级烟雾测试。 本练习的目标不是详尽地完成测试用例清单并生成正式的缺陷清单，而是粗略估计升级AEM 6.5 LTS兼容性代码所需的工作量。 在与[AEM分析器](/help/sites-deploying/pattern-detector.md)以及上一节中确定的体系结构更改结合使用时，可以为项目管理团队提供粗略的估计值，以计划升级。
+适用于AEM 6.5 LTS的[AEM Analyer](/help/sites-deploying/pattern-detector.md)应该可以相当准确地估计在大多数情况下升级过程中会出现的情况。 但是，对于具有不兼容更改的更复杂的自定义和部署，您可以根据[执行就地升级](/help/sites-deploying/in-place-upgrade.md)中的说明将开发实例升级到AEM 6.5 LTS。 完成后，在此环境中执行一些高级烟雾测试。 本练习的目标不是详尽地完成测试用例清单并生成正式的缺陷清单，而是粗略估计升级AEM 6.5 LTS兼容性代码所需的工作量。 在与[AEM Analyzer](/help/sites-deploying/aem-analyzer.md)以及上一节中确定的体系结构更改结合使用时，可以为项目管理团队提供粗略的估计值，以计划升级。
 
 ### 构建升级和回滚Runbook {#building-the-upgrade-and-rollback-runbook}
 
