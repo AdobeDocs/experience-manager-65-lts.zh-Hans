@@ -8,7 +8,7 @@ content-type: reference
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 34693070f2fcb5b468c72118cd5d5fc26d6d9dd0
+source-git-commit: 5b31b74b89334efcae647c216d2ae2be35545b22
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # 升级后卸载的过时包列表{#list-of-obsolete-bundles-uninstalled-after-the-upgrade}
 
-升级到AEM 6.5.2025时，系统将自动卸载以下包，具体取决于执行升级的AEM 6.5 servicepack版本：
+升级到AEM 6.5 LTS时，将自动卸载以下包，具体取决于执行升级的AEM 6.5 servicepack版本：
 
 * com.adobe.cq.social.cq-social-activitystreams
 * com.adobe.cq.social.cq-social-as-provider
@@ -95,7 +95,7 @@ ht-degree: 0%
 * org.apache.jackrabbit.oak-solr-osgi
 * com.adobe.cq.cq-searchpromote-integration
 
-新的AEM 6.5.2025实例中不包含以下包。 升级后，您可能会发现这些捆绑包处于非活动状态。 它们可以手动删除：
+新的AEM 6.5 LTS实例中不包含以下包。 升级后，您可能会发现这些捆绑包处于非活动状态。 它们可以手动删除：
 
 * org.apache.sling.atom.taglib
 * com.github.jknack.handlebars
