@@ -3,9 +3,9 @@ title: 通用编辑器
 description: 了解通用编辑器的灵活性，以及它如何帮助您使用AEM 6.5增强Headless体验。
 feature: Developing
 role: Developer
-source-git-commit: 229fdd9f17bdeb1c4cc1a1ba064d285169dc1cbc
+source-git-commit: 1f4024310858c6973681c079439ae82834cf716f
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1264'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,18 @@ Universal Editor是一项与AEM配合使用的服务，用于无头创作内容�
 * 与Dispatcher在同一主机上运行的通用编辑器服务会将更改写回AEM创作实例。
 
 ![使用通用编辑器的创作流](assets/author-flow.png)
+
+## 要求 {#requirements}
+
+以下内容支持通用编辑器：
+
+* AEM 6.5磅
+   * 支持内部部署和AMS托管。
+* [AEM 6.5](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)（Service Pack 21或22以及功能包）
+   * 支持内部部署和AMS托管。
+* [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)（版本`2023.8.13099`或更高版本）
+
+本文档重点介绍对通用编辑器的AEM 6.5 LTS支持。
 
 ## 设置 {#setup}
 
