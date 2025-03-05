@@ -1,16 +1,15 @@
 ---
 title: 元数据架构定义元数据属性页面的布局
 description: 元数据架构定义属性页面的布局以及为资源显示的元数据属性。 了解如何创建自定义元数据架构、编辑元数据架构以及如何将元数据架构应用于资源。
-contentOwner: AG
 mini-toc-levels: 1
 role: User,Admin
 feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+source-git-commit: c62ad80108619063025772cd991848a3f7d76be8
 workflow-type: tm+mt
-source-wordcount: '3595'
-ht-degree: 8%
+source-wordcount: '3607'
+ht-degree: 7%
 
 ---
 
@@ -89,21 +88,21 @@ ht-degree: 8%
 **[!UICONTROL 构建表单]**&#x200B;选项卡列出了您在架构表单中使用的表单项。 **[!UICONTROL 设置]**&#x200B;选项卡提供您在&#x200B;**[!UICONTROL 构建表单]**&#x200B;选项卡中选择的每个项目的属性。 下表列出了&#x200B;**[!UICONTROL 生成表单]**&#x200B;选项卡中可用的表单项：
 
 | 组件名称 | 描述 |
-| -------------------------------- | ----------------------------------------------------------------------------------- |
-| [!UICONTROL 节标题] | 为常用组件列表添加章节标题。 |
-| [!UICONTROL 单行文本] | 添加单行文本属性。 它存储为字符串。 |
-| [!UICONTROL 多值文本] | 添加多值文本属性。 它存储为字符串数组。 |
-| [!UICONTROL 数字] | 添加一个数值组件。 |
-| [!UICONTROL 日期] | 添加一个日期组件。 |
-| [!UICONTROL 下拉列表] | 添加一个下拉列表。 |
-| [!UICONTROL 标准标记] | 添加标记。 |
-| [!UICONTROL 智能标记] | 通过自动添加元数据标记来增强搜索功能。 |
-| [!UICONTROL 隐藏字段] | 添加隐藏字段。 保存资产时，此参数将作为POST参数发送。 |
-| [!UICONTROL 由]引用的资产 | 添加此组件可查看资产引用的资产列表。 |
-| [!UICONTROL 资源引用] | 添加以显示引用资产的资产列表。 |
-| [!UICONTROL 产品引用] | 添加以显示与资产链接的产品列表。 |
-| [!UICONTROL 资产评级] | 添加以显示用于对资产进行分级的选项。 |
-| [!UICONTROL 上下文元数据] | 添加以控制其他元数据选项卡在资源属性页面中的显示。 |
+|----|----|
+| **[!UICONTROL 节标题]** | 为常用组件列表添加章节标题。 |
+| **[!UICONTROL 单行文本]** | 添加单行文本属性。 它存储为字符串。 |
+| **[!UICONTROL 多值文本]** | 添加多值文本属性。 它存储为字符串数组。 |
+| **[!UICONTROL 数字]** | 添加一个数值组件。 |
+| **[!UICONTROL 日期]** | 添加一个日期组件。 |
+| **[!UICONTROL 下拉列表]** | 添加下拉列表。 |
+| **[!UICONTROL 标准标记]** | 添加标记。 管理员可能需要更改路径值。 例如，`/etc/tags/mac/<tenant_id>/<custom_tag_namespace>`，如果他们从Experience Manager Assets发布元数据架构表单，其中路径不包括租户信息，例如`/etc/tags/<custom_tag_namespace>`。 |
+| **[!UICONTROL 智能标记]** | 如果您已购买并配置Experience Manager Assets智能标记加载项，则为自动检测到的标记。 |
+| **[!UICONTROL 隐藏字段]** | 添加隐藏字段。 保存资产时，此参数将作为POST参数发送。 |
+| **[!UICONTROL 由]**&#x200B;引用的资产 | 添加此组件可查看资产引用的资产列表。 |
+| **[!UICONTROL 资源引用]** | 添加以显示引用资产的资产列表。 |
+| **[!UICONTROL 上下文元数据]** | 添加以控制其他元数据选项卡在资源属性页面中的显示。 |
+
+<!--| **[!UICONTROL Asset Rating]** |  Average rating of an asset added from Experience Manager Assets before it is published to Brand Portal. |-->
 
 #### 编辑元数据组件 {#edit-the-metadata-component}
 
