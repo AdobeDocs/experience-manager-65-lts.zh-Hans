@@ -9,9 +9,9 @@ docset: aem65
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2eb9307f37098ee9f57ba9383600f74a5e3b2501
+source-git-commit: b7304709729915dbcc27533caf88b61cd5657a2c
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,15 @@ ht-degree: 0%
 * [执行脱机修订版清理](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-offline-revision-cleanup)
 * [执行数据存储垃圾收集](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#execute-datastore-garbage-collection)
 * [根据需要升级数据库模式](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#upgradethedatabaseschemaifneeded)
-* [删除可能妨碍升级的用户](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#delete-users-that-might-hinder-the-upgrade)
-
 * [旋转日志文件](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#rotate-log-files)
 
 ## 索引定义 {#index-definitions}
 
-确保您至少安装了随AEM Service Pack 22提供的AEM 6.5 Service Pack一起发布的所需索引定义(有关更多信息，请参阅[AEM 6.5 ServicePack发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/release-notes))。
+确保已安装随提供的AEM 6.5 Service Pack一起发布的所需索引定义，至少直到AEM Service Pack 22为止。 (有关详细信息，请参阅[AEM 6.5 servicepack发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/release-notes))。
 
 ## 确保有足够的磁盘空间 {#ensure-sufficient-disk-space}
 
-在执行升级时，除了内容和代码升级活动之外，还必须执行存储库迁移。 迁移过程会以新的Segment Tar格式创建存储库的副本。 因此，您需要足够的磁盘空间来保留存储库的第二个（可能更大）版本。
+执行升级时，请确保有足够的磁盘空间。
 
 ## 完全备份AEM {#fully-back-up-aem}
 
@@ -56,7 +54,6 @@ ht-degree: 0%
 
 `WorkflowPurgeTask`和`com.day.cq.audit.impl.AuditLogMaintenanceTask`任务需要单独的OSGi配置，没有它们将无法工作。 如果它们在升级前任务执行期间失败，则缺少配置是最可能的原因。 因此，请确保为这些任务添加OSGi配置，或者如果不想运行它们，则从升级前优化任务列表中完全删除它们。 有关配置工作流清除任务的文档可在[管理工作流实例](/help/sites-administering/workflows-administering.md)中找到，有关审核日志维护任务配置的文档可在AEM 6](/help/sites-administering/operations-audit-log.md)中的[审核日志维护中找到。
 
-有关CQ 5.6上的工作流和审核日志清除以及AEM 6.0上的审核日志清除，请参阅[清除工作流和审核节点](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html)。
 
 ## 安装、配置和运行升级前任务 {#install-configure-run-pre-upgrade-tasks}
 
@@ -144,7 +141,7 @@ ht-degree: 0%
 >
 >此步骤仅对于TarMK安装是必需的
 
-如果使用TarMK，则在升级之前应运行脱机修订版清理。 这样做可以使存储库迁移步骤和后续升级任务的执行速度更快，并且有助于确保在升级完成后可以成功执行在线修订版清理。 有关运行脱机修订清理的信息，请参阅[正在执行脱机修订清理](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup)。
+如果使用TarMK，则在升级之前应运行脱机修订版清理。 这样做可以使存储库迁移步骤和后续升级任务的执行速度更快，并且有助于确保在升级完成后可以成功执行在线修订版清理。 有关运行脱机修订清理的信息，请参阅[正在执行脱机修订清理](/help/sites-deploying/revision-cleanup.md#revision-cleanuprevision-cleanup)。
 
 ## 执行数据存储垃圾收集 {#execute-datastore-garbage-collection}
 
