@@ -10,9 +10,9 @@ targetaudience: target-audience upgrader
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 168e9f5865d20a53f9abed4bb90aceae9a1c7b6a
+source-git-commit: 3d4e458e4c96c547b94c08d100271ca6cf96f707
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -22,18 +22,15 @@ ht-degree: 0%
 在计划升级时，必须调查并解决实施的以下方面。
 
 * [升级代码库](#upgrade-code-base)
-* [与6.5存储库结构保持一致](#align-repository-structure)
-* [AEM自定义](#aem-customizations)
 * [测试过程](#testing-procedure)
 
 ## 概述 {#overview}
 
-1. **AEM Analyzer** — 按照升级计划中的说明运行AEM Analyzer，在[使用AEM Analyzer评估升级复杂性](/help/sites-deploying/pattern-detector.md)页面中有详细介绍。 您会获得一个AEM Analyzer报告，该报告包含有关在AEM的Target版本中不可用的API/捆绑包之外，还必须解决的区域的更多详细信息。 PAEM Analyzer报告会向您指示代码中的任何不兼容性。 如果不存在任何部署，则表明您的部署已经与6.5 LTS兼容。 您仍然可以选择为使用6.5 LTS功能而执行新开发，但并非只是为了保持兼容性。
-
-1. **开发6.5 LTS的代码库** — 为Target版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
-1. **使用6.5 LTS Uber jar编译** — 更新代码库POM以指向6.5.2025 uber jar并编译针对它的代码。
-1. **部署到6.5 LTS环境** - AEM 6.5 LTS的干净实例（创作+发布）应出现在开发/QA环境中。 应部署更新后的代码库和有代表性的内容示例（来自当前生产）。
-1. **QA验证和错误修复** - QA应在6.5.2025的Author和Publish实例上验证应用程序。找到的任何错误都应修复并提交到6.5 LTS代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
+1. **AEM Analyzer** — 运行[使用AEM Analyzer评估升级复杂性](/help/sites-deploying/pattern-detector.md)页面中定义的AEM Analyzer。 您会获得一个AEM Analyzer报告，该报告包含有关在AEM的Target版本中不可用的API/捆绑包之外，还必须解决的区域的更多详细信息。 AEM Analyzer报告会向您指示代码中的任何不兼容性。 如果不存在任何版本，则表明您的部署与AEM 6.5 LTS兼容。 您仍然可以选择为使用AEM 6.5 LTS进行新开发，但并非只是为了保持兼容性。
+1. **开发6.5 LTS的代码库** — 为Target AEM版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
+1. **使用6.5 LTS Uber jar编译** — 更新代码库POM以指向AEM 6.5 LTS uber jar并编译针对它的代码。
+1. **部署到6.5 LTS环境** — 应在开发/QA环境中设置AEM 6.5 LTS的干净实例（创作+发布）。 应部署更新后的代码库和有代表性的内容示例（来自当前生产）。
+1. **QA验证和错误修复** - QA应在AEM 6.5 LTS的创作和发布实例上验证应用程序。 找到的任何错误都应修复并提交到AEM 6.5 LTS代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
 
 在继续升级之前，您应该有一个稳定的应用程序代码库，此代码库已针对AEM 6.5 LTS进行了全面测试。
 
@@ -61,23 +58,22 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 >
 >AEM 6.5和AEM 6.5 LTS Uber Jar的打包方式略有不同。 请参阅以下部分：
 
-**对于AEM 6.5.x，有两种类型的Uber Jar**
+适用于AEM 6.5的&#x200B;**Uber Jar**
 
-1. `uber-jar-6.5.x.jar` — 包含AEM 6.5.x的所有公共API
-1. `uber-jar-6.5.x-apis-with-deprecations.jar` — 包括AEM 6.5.x中的公共API和已弃用的API。
+1. `uber-jar-6.5.x.jar` — 包含AEM 6.5的所有公共API。
+1. `uber-jar-6.5.x-apis-with-deprecations.jar` — 包括AEM 6.5中的公共API和已弃用的API。
 
-适用于AEM 6.5.2025.x的&#x200B;**Uber Jar**
+适用于AEM 6.5 LTS的&#x200B;**Uber Jar**
 
-对于AEM 6.5.2025.x，再次存在两种类型的Uber Jar：
+对于AEM 6.5 LTS，再次存在两种类型的Uber Jar：
 
-1. `uber-jar-6.5.2025.x.jar` — 包含AEM 6.5.2025.x的所有公共API。
-1. `uber-jar-6.5.2025.x-deprecated.jar` — 仅包含AEM 6.5.2025.x中已弃用的API
+1. `uber-jar-6.6.x-apis.jar` — 包含AEM 6.5 LTS的所有公共API。
+1. `uber-jar-6.6.x-deprecated-apis.jar` — 仅包含AEM 6.5 LTS中已弃用的API。
 
-**主要区别： AEM 6.5.x与AEM 6.5.2025.x Uber Jars**
+**主要区别： AEM 6.5与AEM 6.5 LTS Uber Jar**
 
-* 在AEM 6.5.x中，如果同时需要公共的和已弃用的API，则可以在`pom.xml`文件中使用包含单个jar `uber-jar-6.5.x-apis-with-deprecations.jar`。
-* 在AEM 6.5.2025.x中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.5.2025.x.jar`和已弃用的API的`uber-jar-6.5.2025.x-deprecated.jar`。
-* 在AEM 6.5.2025.x中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.5.2025.x.jar`和已弃用的API的`uber-jar-6.5.2025.x-deprecated.jar`。
+* 在AEM 6.5中，如果同时需要公共的和已弃用的API，则可以在`pom.xml`文件中使用包含单个jar `uber-jar-6.5.x-apis-with-deprecations.jar`。
+* 在AEM 6.5 LTS中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.6.x-apis.jar`和已弃用的API的`uber-jar-6.6.x-deprecated-apis.jar`。
 
 已弃用的API Jar的&#x200B;**Maven坐标**
 
@@ -93,7 +89,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 
 ### 开发人员备注 {#developer-notes}
 
-* AEM 6.5.2025中不包含现成的Google guava库，可以根据需要安装所需的版本。
+* AEM 6.5 LTS不包括现成的Google guava库，可以根据需要安装所需的版本。
 * Sling XSS包现在使用Java HTML清理器库，应使用`XSSAPI#filterHTML()`方法安全地呈现HTML内容，而不是将数据传递到其他API。
 
 ## 测试过程 {#testing-procedure}
@@ -102,7 +98,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 
 ### 测试升级过程 {#testing-upgrade-procedure}
 
-此处概述的升级过程应在开发和QA环境中进行测试，如自定义运行手册中所述（请参阅[计划升级](/help/sites-deploying/upgrade-planning.md)）。 应重复升级过程，直到所有步骤都记录在升级运行手册中且升级过程顺利完成
+此处概述的升级过程应在开发和QA环境中进行测试，如自定义运行手册中所述（请参阅[计划升级](/help/sites-deploying/upgrade-planning.md)）。 应重复升级过程，直到所有步骤都记录在升级运行手册中且升级过程顺利完成。
 
 ### 实施测试区域  {#implementation-test-areas-}
 
