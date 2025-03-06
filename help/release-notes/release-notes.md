@@ -2,9 +2,9 @@
 title: Adobe Experience Manager 6.5 LTS的最新发行说明
 description: 这些是Adobe Experience Manager 6.5 LTS的当前发行说明。
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 9bbd7acd498a1a0614db246f9d1326a62c199806
+source-git-commit: f9fefb530e9cdcced664bede2e11556ab0345876
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '795'
 ht-degree: 22%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 22%
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
-[!DNL Adobe Experience Manager] 6.5 LTS的平台基于基于OSGi的框架的更新版本（Apache Sling和Apache Felix）以及Java™内容存储库(Apache Jackrabbit Oak 1.68.0)构建。
+[!DNL Adobe Experience Manager] 6.5 LTS的平台基于基于OSGi的框架的更新版本（Apache Sling和Apache Felix）以及Java™内容存储库(Apache Jackrabbit Oak 1.68.x)构建。
 
 快速入门使用Eclipse Jetty 11.0.x作为Servlet引擎。
 
