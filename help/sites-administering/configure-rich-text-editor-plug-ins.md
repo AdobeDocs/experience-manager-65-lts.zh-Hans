@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: f185c622-1681-4221-a082-cac71d6b510b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '4391'
+source-wordcount: '4381'
 ht-degree: 2%
 
 ---
@@ -285,10 +285,6 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 ### 配置RTE以优化日语断字 {#jpwordwrap}
 
 使用AEM创作日语内容的作者可以将样式应用于字符，以避免在不需要换行符时换行。 这允许作者在所需位置处断句。 此功能的样式基于CSS样式表中预定义的CSS类。
-
->[!NOTE]
->
->此功能至少需要AEM 6.5 Service Pack 1。
 
 要创建作者可以应用于日语文本的样式，请执行以下步骤：
 

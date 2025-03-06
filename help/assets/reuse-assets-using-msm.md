@@ -8,9 +8,9 @@ feature: Asset Management,Multi Site Manager
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 29365a8a-7d29-41b2-9a54-d12fe802f6ed
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '3284'
+source-wordcount: '3261'
 ht-degree: 9%
 
 ---
@@ -27,10 +27,6 @@ ht-degree: 9%
 * 创建资产一次，然后制作这些资产的副本以在站点的其他区域重复使用。
 * 使多个副本保持同步，并更新一次原始主副本，以将更改推送到子副本。
 * 通过临时或永久暂停父资产与子资产之间的链接来进行本地更改。
-
-## 前提条件 {#prereq}
-
-若要对[!DNL Assets]使用MSM，请至少安装[!DNL Experience Manager] 6.5 Service Pack 1。 有关详细信息，请参阅[最新Service Pack的发行说明](/help/release-notes/release-notes.md)。
 
 ## 了解优势和概念 {#concepts}
 

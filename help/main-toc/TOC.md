@@ -6,13 +6,12 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: d4f89be13039e53564cd3a3148a4b845bcc183a7
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '7052'
+source-wordcount: '6816'
 ht-degree: 21%
 
 ---
-
 
 # Adobe Experience Manager 6.5 LTS文档 {#content}
 
@@ -305,7 +304,6 @@ ht-degree: 21%
       + [发布 Dynamic Media 资产](/help/assets/publishing-dynamicmedia-assets.md)
       + [使用 Dynamic Media 中的“选择性发布”功能](/help/assets/selective-publishing.md)
       + [通过 Dynamic Media 使 CDN 缓存失效](/help/assets/invalidate-cdn-cache-dynamic-media.md)
-      + [通过 Dynamic Media Classic 使 CDN 缓存失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
       + [安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md)
       + [使用选择器](/help/assets/working-with-selectors.md)
    + 扩展Assets {#extending}
@@ -445,20 +443,7 @@ ht-degree: 21%
          + [在OSGi上安装和配置以Forms为中心的工作流](/help/forms/using/installing-configuring-forms-centric-workflow-on-osgi.md)
          + [安装和配置交互式通信](/help/forms/using/installing-configuring-intreactive-communication-correspondence-management.md)
          + [安装和配置自动表单转换服务](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
-      + 在JEE {#jee-installation}上安装AEM Forms
-         + [JEE上的AEM Forms的支持平台](/help/forms/using/aem-forms-jee-supported-platforms.md)
-         + [在JEE上使用JBoss Turnkey安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installTurnkey_65)
-         + [安装和配置AEM Forms Document Security Server](/help/forms/using/installing-and-configuring-the-document-security-server.md)
-         + [正在准备安装AEM Forms （单服务器）](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_65)
-         + [在JEE上安装和部署Adobe Experience Manager Forms for JBoss](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-         + [在JEE上安装和部署Adobe Experience Manager forms for WebSphere](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
-         + [在JEE for WebLogic上安装和部署AEM Forms](https://www.adobe.com/go/learn_aemforms_installWebLogic_65)
-         + [安装AEM Forms Workbench](/help/forms/using/install-workbench.md)
-         + [安装和配置Designer](/help/forms/using/installing-configuring-designer.md)
-         + [正在准备安装AEM Forms （服务器群集）](https://www.adobe.com/go/learn_aemforms_prepareInstallcluster_65)
-         + [在JBoss群集上的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterJBoss_65)
-         + [在WebSphere群集上的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebSphere_65)
-         + [在WebLogic群集的JEE上配置Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_clusterWebLogic_65)
+      + [安装和配置Designer](/help/forms/using/installing-configuring-designer.md)
       + 配置AEM Forms {#configure-aem-forms}
          + [AEM Forms 服务器性能优化](/help/forms/using/performance-tuning-aem-forms.md)
          + [配置自适应表单缓存](/help/forms/using/configure-adaptive-forms-cache.md)
@@ -471,17 +456,10 @@ ht-degree: 21%
    + 升级AEM Forms {#upgrade-aem-forms}
       + [可用的升级路径](/help/forms/using/upgrade.md)
       + 在OSGi {#aem-forms-osgi-upgrade}上升级AEM Forms
-         + [在OSGi上升级到AEM 6.5表单](/help/forms/using/upgrade-forms-osgi.md)
+         + [在OSGi上升级到AEM 6.5 LTS表单](/help/forms/using/upgrade-forms-osgi.md)
          + [安装兼容包](/help/forms/using/compatibility-package.md)
          + [迁移 AEM Forms 资产和文档](/help/forms/using/migration-utility.md)
-      + 升级JEE {#aem-forms-jee-upgrade}上的AEM Forms
-         + [准备升级AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareupgrade_65)
-         + [Adobe Experience Manager Forms on JEE升级核对清单和规划](https://www.adobe.com/go/learn_aemforms_upgrade_checklist_65)
       + [在JEE上升级到AEM 6.5表单](/help/forms/using/upgrade-forms-jee.md)
-      + [在JEE上为JBoss升级到Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeJBoss_65)
-      + [在JEE上为JBoss Turnkey升级到AEM Forms](https://www.adobe.com/go/learn_aemforms_upgradeTurnkey_65)
-      + [在JEE上为WebSphere升级到Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebSphere_65)
-      + [在JEE上为WebLogic升级到Adobe Experience Manager Forms](https://www.adobe.com/go/learn_aemforms_upgradeWebLogic_65)
    + 管理AEM Forms {#manage-administer-aem-forms}
       + [OSGi组和权限上的AEM Forms](/help/forms/using/forms-groups-privileges-tasks.md)
       + [创建新文件夹以对表单进行分类](/help/forms/using/creating-new-folders-categorize-forms.md)
@@ -809,7 +787,6 @@ ht-degree: 21%
          + [查看和了解事务处理报表](/help/forms/using/viewing-and-understanding-transaction-reports.md)
          + [OSGi上AEM Forms的可计费API列表](/help/forms/using/transaction-reports-billable-apis.md)
          + [记录自定义实施的交易](/help/forms/using/record-transaction-custom-implementation.md)
-      + JEE {#transaction-reports-jee}上AEM Forms的交易报告
          + [启用和查看事务报表](/help/forms/using/transaction-report-overview-jee.md)
          + [适用于AEM Forms on JEE的可计费API列表](/help/forms/using/transaction-reports-billable-apis-jee.md)
          + [记录自定义组件API的事务](/help/forms/using/record-transaction-custom-component-jee.md)
@@ -1099,12 +1076,8 @@ ht-degree: 21%
       + [无法在Windows Server上将Word或Excel文件转换为PDF](/help/forms/using/disable-uac-for-pdfgconfiguration.md)
       + [无法在Google Chrome、Firefox、Microsoft Edge、Microsoft Internet Explorer或Apple Safari中打开基于XFA的PDF forms](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
       + [无法恢复CRX存储库](/help/forms/using/restore-crx-repository.md)
-      + [安装AEM 6.5.15.0 Service Pack后出现“服务不可用”错误](/help/forms/using/aem-service-pack-installation-solution.md)
-      + [JBoss Linux环境中的AEM Forms JEE 6.5.15.0 Service Pack安装问题](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
       + [即使AEM Forms服务器未完全启动并运行，也正在处理文档](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [无法使用输出服务、Forms服务或记录文档(DoR)服务](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
-      + [缓解Experience Manager Forms的Struts 2 RCE漏洞](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
-      + [升级到MySQL的6.5.12.0期间备份数据库失败](/help/forms/using/failed-to-back-up-the-database-on-upgrading-to-aem-forms-service-pack-6-5-12-0.md)
       + [PDF生成无法在WorkBench上打印大量PDF](/help/forms/using/pdf-generation-service-fails-to-print-a-large-number-of-pdfs-on-workbench.md)
       + [如何正确重新启动AEM SDK](/help/forms/using/restart-aem-sdk.md)
       + [PaperCapture服务无法对PDF执行OCR](/help/forms/using/papercapture-service-resolution.md)

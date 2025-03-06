@@ -6,9 +6,9 @@ feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 15face30-3039-49a0-bfee-56bff21e5c27
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '672'
 ht-degree: 3%
 
 ---
@@ -17,9 +17,6 @@ ht-degree: 3%
 
 要开始使用AEM Content和Commerce，您需要安装适用于AEM 6.5的AEM Content和Commerce加载项。
 
-## 最低软件要求
-
-需要[AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7或更高版本。
 
 ## 入门培训 {#onboarding}
 

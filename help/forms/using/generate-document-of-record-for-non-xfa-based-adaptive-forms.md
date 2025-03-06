@@ -1,17 +1,13 @@
 ---
 title: 为自适应表单生成记录文档
 description: 介绍如何为自适应表单生成记录文档(DoR)。
-content-type: reference
-topic-tags: adaptive_forms, develop
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 2d9ec8c4-330e-4474-97f4-1f434025683f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4283'
 ht-degree: 3%
 
 ---
@@ -31,11 +27,6 @@ ht-degree: 3%
 提交表单后，您的客户通常希望以打印或文档格式记录他们在表单中填写的信息，以供将来参考。 这称为记录文档。
 
 本文介绍了如何为自适应Forms或自适应表单片段生成记录文档。
-
->[!NOTE]
->
-> AEM 6.5 Forms Service Pack 19 (6.5.19.0)引入了自适应表单编辑器中对自定义自适应表单片段及其字段的支持。
-
 
 >[!NOTE]
 >

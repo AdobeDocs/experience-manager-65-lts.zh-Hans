@@ -10,9 +10,9 @@ role: Admin
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 22a2428d-3ebd-4368-983e-d140f99de2dd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '675'
 ht-degree: 4%
 
 ---
@@ -68,11 +68,11 @@ This help describes the following two use-cases:
 
 [下载并安装最新的AEM Service Pack](#servicepack)
 
-### 下载并安装AEM 6.5 {#aemquickstart}
+### 下载并安装AEM 6.5 LTS {#aemquickstart}
 
-建议使用AEM 6.5来设置AEM创作实例。 如果您未启动并运行AEM，请从以下位置下载它：
+建议使用AEM 6.5 LTS来设置AEM创作实例。 如果您未启动并运行AEM，请从以下位置下载它：
 
-* 如果您是AEM现有客户，请从[AEM授权网站](https://licensing.adobe.com)下载Adobe 6.5。
+* 如果您是AEM现有客户，请从[AEM授权网站](https://licensing.adobe.com)下载Adobe 6.5 LTS。
 
 * 如果您是Adobe合作伙伴，请使用[Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)请求AEM 6.5。
 
@@ -80,7 +80,7 @@ This help describes the following two use-cases:
 
 ### 下载并安装最新的AEM Service Pack {#servicepack}
 
-有关详细说明，请参阅当前的[AEM 6.5 Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/release-notes.html)。
+有关详细说明，请参阅当前的[AEM 6.5 LTS Service Pack发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/release-notes.html)。
 
 如果找不到最新的Adobe包或Service Pack，请&#x200B;**联系AEM客户支持**。
 

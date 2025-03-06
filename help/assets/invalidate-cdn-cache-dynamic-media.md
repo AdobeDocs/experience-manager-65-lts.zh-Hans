@@ -9,9 +9,9 @@ role: User, Admin
 feature: CDN Cache
 solution: Experience Manager, Experience Manager Assets
 exl-id: bce11a49-bbbe-4dda-8144-7f135bb666d9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1277'
 ht-degree: 1%
 
 ---
@@ -21,18 +21,11 @@ ht-degree: 1%
 Dynamic Media资产通过CDN（内容分发网络）进行缓存，以快速交付给客户。 但是，当您更新这些资产时，希望这些更改能够在您的网站上立即生效。 清除或使CDN缓存失效可让您快速更新Dynamic Media交付的资产。 您可以在Dynamic Media中发送请求，让缓存在几分钟内过期，而不是使用TTL（生存时间）值等待缓存过期（默认值为10小时）。
 
 
-
->[!IMPORTANT]
->
->以下步骤仅适用于Adobe Experience Manager 6.5、Service Pack 6 (Experience Manager 6.5.6)或更高版本中的Dynamic Media - Scene7模式。 此CDN失效功能还要求您使用与Adobe Experience Manager - Dynamic Media捆绑在一起的现成CDN。 此功能不支持任何其他自定义CDN。<br>如果您在Experience Manager 6.5 Service Pack 5 (Experience Manager 6.5.5)或更早版本中使用Dynamic Media，请按照[通过Dynamic Media Classic使CDN缓存失效](/help/assets/invalidate-cdn-cache-dm-classic.md)中所述的步骤操作。
-
-<!-- REMOVED MARCH 28, 2022 BECAUSE OF 404; NO REDIRECT WAS PUT IN PLACE BY SUPPORT See also [Caching overview in Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html). -->
-
 **要使Dynamic Media资产的CDN缓存内容失效，请执行以下操作：**
 
 *第1部分（共2部分）：创建CDN失效模板*
 
-1. 在Experience Manager 6.5.6或更高版本中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL CDN失效]**。
+1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL CDN失效]**。
 
    ![CDN验证功能](/help/assets/assets-dm/cdn-invalidation-template2.png)
 

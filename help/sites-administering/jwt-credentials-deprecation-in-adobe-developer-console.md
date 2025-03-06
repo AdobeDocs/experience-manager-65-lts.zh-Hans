@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 exl-id: 7b6b02fd-fcb2-45ae-a239-e0c68de2bcbb
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 72%
+source-wordcount: '352'
+ht-degree: 75%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe 客户使用 [Adobe Developer Console](https://developer.adobe.com/console
 
 **操作**：由于 AEM 现支持 OAuth 凭据，请迁移您的配置。
 
-**相关的AEM版本**： Adobe Managed Services （Service Pack 21及更高版本）。
+**相关的AEM版本**： Adobe Managed Services。
 
 AEM客户使用AEM来配置与所有其他Adobe解决方案的集成。 例如，Adobe Target、Adobe Analytics 等。
 
@@ -44,6 +44,6 @@ AEM客户使用AEM来配置与所有其他Adobe解决方案的集成。 例如�
 
 **操作**：确认何时可以将这些从 JWT 迁移到 OAuth 凭据。
 
-**相关的AEM版本**： Adobe Managed Services （Service Pack 21及更高版本）。
+**相关的AEM版本**： Adobe Managed Services。
 
 客户创建 Adobe Developer Console 项目，以使其可调用 [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)。在弃用的 JWT 凭证于 2025 年 1 月到期之前，Adobe Developer 项目中的凭据应迁移到 OAuth 服务器到服务器凭据类型。

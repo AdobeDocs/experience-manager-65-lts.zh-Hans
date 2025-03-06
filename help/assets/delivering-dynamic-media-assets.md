@@ -1,19 +1,14 @@
 ---
 title: 传递 Dynamic Media 资产
 description: 了解如何将Dynamic Media资产（如视频和图像）交付到网页。
-contentOwner: Rick Brough
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: dynamic-media
-content-type: reference
-docset: aem65
 role: User, Admin
 feature: Asset Management,Renditions
 solution: Experience Manager, Experience Manager Assets
 exl-id: b91173b4-f1d1-4aad-97d2-782bc8aeaeab
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 47b82956b41c3f78bed5ae220c7e993ce29e0385
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 9%
+source-wordcount: '313'
+ht-degree: 10%
 
 ---
 
@@ -42,9 +37,7 @@ ht-degree: 9%
 * [将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)
 * [为响应式 Site 传送优化的图像](/help/assets/responsive-site.md)
 * [HTTP2内容交付](/help/assets/http2.md)
-* [通过Dynamic Media Classic使CDN缓存失效](/help/assets/invalidate-cdn-cache-dm-classic.md)
 * [使用规则集转换 URL](/help/assets/using-rulesets-to-transform-urls.md)
-
 
 ## Dynamic Media资产的HTTP/2交付 {#http-delivery-of-dynamic-media-assets}
 

@@ -9,9 +9,9 @@ thumbnail: 39476.jpg
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 22fcdadf-12c0-4545-a854-76345806386f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '765'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 基于适用于AEM的Commerce integration framework (CIF)来开发AEM Commerce项目时，遵循与其他AEM项目相同的规则和最佳实践。 请先查看以下内容：
 
-- [AEM 6.5 Developing 用户指南](/help/sites-developing/getting-started.md)
+- [AEM Developing用户指南](/help/sites-developing/getting-started.md)
 - [AEM核心概念](/help/sites-developing/the-basics.md)
 - [AEM 开发 - 准则和最佳实践](/help/sites-developing/dev-guidelines-bestpractices.md)
 - [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md)
@@ -31,17 +31,16 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->以下说明可帮助您使用具有适用于AEM 6.5的CIF为AEM Commerce设置本地AEM开发环境。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)文档。
+>以下说明可帮助您使用具有适用于AEM 6.5 LTS的CIF为AEM Commerce设置本地AEM开发环境。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)文档。
 
-适用于AEM 6.5 aka的AEM Commerce加载项。 CIF加载项可用于本地开发，并作为AEM包提供。 可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载它作为功能包。
+适用于AEM的AEM Commerce加载项(称为CIF加载项)可用于本地开发，并作为AEM包提供。 可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载它作为功能包。
 
 ### 所需的软件
 
 下列内容应本地安装：
 
-- 本地AEM 6.5
-- [AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7或更高版本
-- [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+- 本地AEM 6.5 LTS
+- [Java 17](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 - [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
 - [节点LTS](https://nodejs.org/en/)
 - [npm 6+](https://www.npmjs.com/)
@@ -58,8 +57,6 @@ ht-degree: 3%
 ### 本地设置
 
 对于使用AEM和CIF加载项进行本地CIF项目开发，请执行以下步骤：
-
-1. 获取AEM 6.5版本并安装AEM 6.5 Service Pack。 需要AEM 6.5 Service Pack 7，但Adobe建议安装最后一个可用的Service Pack。
 
 1. 解压缩AEM .jar以创建`crx-quickstart`文件夹，运行：
 

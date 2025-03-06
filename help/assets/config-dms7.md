@@ -1,19 +1,14 @@
 ---
 title: 配置Dynamic Media - Scene7模式
 description: 了解如何配置Dynamic Media - Scene7模式。
-contentOwner: Rick Brough
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: dynamic-media
-content-type: reference
-docset: aem65
 role: User, Admin
 mini-toc-levels: 4
 feature: Configuration,Scene7 Mode
 solution: Experience Manager, Experience Manager Assets
 exl-id: 98bd0c24-6c5e-4b96-a3aa-a3e4ef802baf
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
-source-wordcount: '6507'
+source-wordcount: '6491'
 ht-degree: 3%
 
 ---
@@ -132,7 +127,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 正在发布Assets]** — 您可以从以下三个选项中进行选择：
       * **[!UICONTROL 立即]**&#x200B;表示上传资产时，系统会摄取资产并立即提供URL/嵌入。 发布资产无需用户干预。
-      * **[!UICONTROL 激活时]**&#x200B;意味着必须先明确发布资产，然后才能提供URL/嵌入链接。<br><!-- CQDOC-17478, Added March 9, 2021-->从Experience Manager 6.5.8开始，Experience Manager发布实例仅在&#x200B;**[!UICONTROL 激活时]**&#x200B;发布模式下反映准确的Dynamic Media元数据值，如`dam:scene7Domain`和`dam:scene7FileStatus`。 要启用此功能，请安装Service Pack 8，然后重新启动Experience Manager。 转到Sling配置管理器。 查找`Scene7ActivationJobConsumer Component`的配置或创建新配置)。 选中&#x200B;**[!UICONTROL Dynamic Media发布后复制元数据]**&#x200B;复选框，然后选择&#x200B;**[!UICONTROL 保存]**。
+      * **[!UICONTROL 激活时]**&#x200B;意味着必须先明确发布资产，然后才能提供URL/嵌入链接。<br><!-- CQDOC-17478, Added March 9, 2021-->从Experience Manager 6.5.8开始，Experience Manager发布实例仅在&#x200B;**[!UICONTROL 激活时]**&#x200B;发布模式下反映准确的Dynamic Media元数据值，如`dam:scene7Domain`和`dam:scene7FileStatus`。 转到Sling配置管理器。 查找`Scene7ActivationJobConsumer Component`的配置或创建新配置)。 选中&#x200B;**[!UICONTROL Dynamic Media发布后复制元数据]**&#x200B;复选框，然后选择&#x200B;**[!UICONTROL 保存]**。
 
         ![在Dynamic Media发布后复制元数据复选框](assets-dm/replicate-metadata-setting.png)
 
@@ -250,7 +245,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
 如果您打算使用此功能，请注意以下先决条件和要点：
 
-* 您必须在Dynamic Media - Scene7模式下运行带有Service Pack 6.5.4.0或更高版本的Experience Manager 6.5。
+* 您必须以Dynamic Media - Scene7模式运行Experience Manager 6.5 LTS。
 * 仅&#x200B;[*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)客户支持此大型上传功能。
 * 确保您的Experience Manager实例配置了Amazon S3或Microsoft® Azure Blob Storage。
 

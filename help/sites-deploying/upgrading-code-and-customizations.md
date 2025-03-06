@@ -11,7 +11,7 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 6b94caf1-97b7-4430-92f1-4f4d0415aef3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -29,9 +29,9 @@ ht-degree: 0%
 
 1. **AEM Analyzer** — 按照升级计划中的说明运行AEM Analyzer，在[使用AEM Analyzer评估升级复杂性](/help/sites-deploying/aem-analyzer.md)页面中有详细介绍。 您会获得一个AEM Analyzer报告，该报告包含有关在AEM的Target版本中不可用的API/捆绑包之外，还必须解决的区域的更多详细信息。 AEM Analyzer报告会向您指示代码中的任何不兼容性。 如果不存在任何部署，则表明您的部署已经与6.5 LTS兼容。 您仍然可以选择为使用6.5 LTS功能而执行新开发，但并非只是为了保持兼容性。
 1. **开发6.5 LTS的代码库** — 为Target版本的代码库创建专用分支或存储库。 使用升级前兼容性中的信息来规划要更新的代码区域。
-1. **使用6.5 LTS Uber jar编译** — 更新代码库POM以指向6.5.2025 uber jar并编译针对它的代码。
+1. **使用6.5 LTS Uber jar编译** — 更新代码库POM以指向6.5 LTS uber jar并编译针对它的代码。
 1. **部署到6.5 LTS环境** - AEM 6.5 LTS的干净实例（创作+发布）应出现在开发/QA环境中。 应部署更新后的代码库和有代表性的内容示例（来自当前生产）。
-1. **QA验证和错误修复** - QA应在6.5.2025的Author和Publish实例上验证应用程序。找到的任何错误都应修复并提交到6.5 LTS代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
+1. **QA验证和错误修复** - QA应在6.5 LTS的创作实例和发布实例上验证应用程序。 找到的任何错误都应修复并提交到6.5 LTS代码库。 根据需要重复Dev-Cycle，直到修复所有错误。
 
 在继续升级之前，您应该有一个稳定的应用程序代码库，此代码库已针对AEM 6.5 LTS进行了全面测试。
 
