@@ -8,10 +8,11 @@ docset: aem65
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 300fcbdc-d884-409b-9011-89cdf2706535
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1832'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -43,7 +44,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
 ![reCAPTCHA](/help/forms/using/assets/recaptcha_new.png)
 
-### 配置reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
+### 配置 reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
 1. 创建已启用[reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api)的[reCAPTCHA Enterprise项目](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin)。
 1. [获取](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed)项目ID。
@@ -54,7 +55,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
    1. 执行以下操作可为云配置启用全局文件夹，或跳过此步骤为云服务配置创建和配置其他文件夹。
       1. 在配置浏览器中，选择&#x200B;**[!UICONTROL 全局]**&#x200B;文件夹，然后选择&#x200B;**[!UICONTROL 属性]**。
       1. 在配置属性对话框中，启用&#x200B;**[!UICONTROL 云配置]**。
-      1. 选择&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以保存配置并退出对话框。
+      1. 选择&#x200B;**[!UICONTROL 保存并关闭]**，以保存配置并退出对话框。
 
    1. 在配置浏览器中，选择&#x200B;**[!UICONTROL 创建]**。
    1. 在创建配置对话框中，指定文件夹的标题并启用&#x200B;**[!UICONTROL 云配置]**。
@@ -71,7 +72,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
       >
       > * 表单作者可以在适合不间断表单提交的范围中指定分数。
 
-   1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;以创建云服务配置。
+   1. 选择&#x200B;**[!UICONTROL 创建]**，创建云服务配置。
 
    1. 在“编辑组件”对话框中，指定名称、项目ID、站点密钥、API密钥（在步骤2和3中获得），选择密钥类型，然后输入阈值分数。 选择&#x200B;**[!UICONTROL 保存设置]**，然后选择&#x200B;**[!UICONTROL 确定]**&#x200B;以完成配置。
 
@@ -90,7 +91,7 @@ reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参�
       1. 在配置浏览器中，选择&#x200B;**[!UICONTROL 全局]**&#x200B;文件夹，然后选择&#x200B;**[!UICONTROL 属性]**。
 
       1. 在配置属性对话框中，启用&#x200B;**[!UICONTROL 云配置]**。
-      1. 选择&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以保存配置并退出对话框。
+      1. 选择&#x200B;**[!UICONTROL 保存并关闭]**，以保存配置并退出对话框。
 
    1. 在配置浏览器中，选择&#x200B;**[!UICONTROL 创建]**。
    1. 在创建配置对话框中，指定文件夹的标题并启用&#x200B;**[!UICONTROL 云配置]**。

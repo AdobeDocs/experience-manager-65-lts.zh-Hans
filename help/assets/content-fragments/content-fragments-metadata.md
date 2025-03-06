@@ -4,7 +4,8 @@ description: 了解如何在AEM中查看和编辑内容片段的元数据属性�
 feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 36b6b48b-411c-4ce5-932d-22557cfa0c13
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 79%

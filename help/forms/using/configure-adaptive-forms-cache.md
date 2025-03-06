@@ -8,7 +8,8 @@ docset: aem65
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: a6793fdf-7ee8-4a54-91d8-635eb79ca702
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 1%
@@ -40,7 +41,7 @@ ht-degree: 1%
 
 您还可以在Dispatcher配置自适应表单缓存，以获得额外的性能提升。
 
-### 先决条件 {#pre-requisites}
+### 前提条件 {#pre-requisites}
 
 * 启用[在客户端](prepopulate-adaptive-form-fields.md#prefill-at-client)合并或预填充数据选项。 它有助于合并预填充表单的每个实例的唯一数据。
 

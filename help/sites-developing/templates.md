@@ -9,7 +9,8 @@ legacypath: /content/docs/en/aem/6-1/develop/the-basics/templates
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: a6121f570f7840c9b7a63d10c7a95cd2894fe4ec
+exl-id: 3b3cff43-4edc-4250-8e6d-08eb5906ffcd
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -129,4 +130,3 @@ AEM现在提供了两种用于创建页面的基本模板类型：
 您可以在模板的`jcr:content`节点上使用`cq:allowedTemplates`属性，将此配置应用于使用此模板的所有新创建的页面。
 
 如果要添加更多约束（例如，关于模板层次结构），可以在模板上使用`allowedParents/allowedChildren`属性。 然后，您可以明确指定从模板T创建的页面必须是从模板T创建的页面的父项/子项。
-

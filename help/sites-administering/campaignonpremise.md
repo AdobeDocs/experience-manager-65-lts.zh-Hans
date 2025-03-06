@@ -8,13 +8,13 @@ content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: a3108797-8085-4683-971f-509e7bfa06b0
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1564'
 ht-degree: 52%
 
 ---
-
 
 # 将AEM 6.5与Adobe Campaign Classic集成 {#integrating-campaign-classic}
 

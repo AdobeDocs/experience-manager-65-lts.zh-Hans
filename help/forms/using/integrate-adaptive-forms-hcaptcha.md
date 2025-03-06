@@ -3,7 +3,8 @@ title: 如何在AEM 6.5 Forms中使用hCaptcha&amp；reg；？
 description: 使用 hCaptcha 服务轻松增强表单安全性。里面有分步指南！
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: 1444b0fc0811cbb187d2a4d83b626444e44ef73f
+exl-id: da0f8fc5-732e-41de-b73c-0355ec723d26
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '872'
 ht-degree: 19%

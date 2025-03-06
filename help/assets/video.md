@@ -4,7 +4,8 @@ description: 了解如何在Dynamic Media中使用视频，例如编码视频的
 feature: Asset Management
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 3430ab95465f4f0ee40ab781989ee6cbf563de43
+exl-id: 5dc734b3-22e3-4839-bc72-b96fa6dd8bd2
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '11126'
 ht-degree: 2%

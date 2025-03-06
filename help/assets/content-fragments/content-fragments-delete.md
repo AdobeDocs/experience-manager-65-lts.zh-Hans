@@ -4,7 +4,8 @@ description: 在 AEM 中定义内容片段删除策略之前，请查看这些�
 feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 1460872b-415f-4392-a480-c442790fd0d9
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 79%

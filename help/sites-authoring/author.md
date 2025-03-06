@@ -4,7 +4,8 @@ description: Adobe Experience Manager 6.5中的创作和发布概念。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: d1297182b801ff4db163b8ae91332f5aebb94b9b
+exl-id: 314a6c65-9b90-4f4c-9e4a-d551dbb646e9
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 32%

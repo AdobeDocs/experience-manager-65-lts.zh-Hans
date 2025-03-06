@@ -7,10 +7,11 @@ docset: aem65
 feature: Form Data Model
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 30b7b311-574d-4b01-8b48-0342c160d4d4
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2073'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -108,7 +109,7 @@ AEM中的所有云服务配置都已合并到AEM存储库的`/conf`文件夹中�
 
    1. 在&#x200B;**[!UICONTROL 配置属性]**&#x200B;对话框中，启用&#x200B;**[!UICONTROL 云配置]**。
 
-   1. 选择&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以保存配置并退出对话框。
+   1. 选择&#x200B;**[!UICONTROL 保存并关闭]**，以保存配置并退出对话框。
 
 1. 在&#x200B;**[!UICONTROL 配置浏览器]**&#x200B;中，选择&#x200B;**[!UICONTROL 创建]**。
 1. 在&#x200B;**[!UICONTROL 创建配置]**&#x200B;对话框中，指定文件夹的标题并启用&#x200B;**[!UICONTROL 云配置]**。

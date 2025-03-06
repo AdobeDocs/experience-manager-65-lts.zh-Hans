@@ -1,6 +1,6 @@
 ---
 title: Creative Project与PIM集成
-description: Creative Project优化了整个照片拍摄工作流，包括生成照片拍摄请求、上传照片拍摄、协作拍摄照片以及打包已批准的资产
+description: Creative项目简化了整个照片拍摄工作流，包括生成照片拍摄请求、上传照片拍摄、协作拍摄照片以及打包已批准的资产
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
@@ -8,13 +8,13 @@ content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 4531a41c-99fa-4e98-b4f4-f8fc92ed9095
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
 
 ---
-
 
 # Creative Project与PIM集成 {#creative-project-and-pim-integration}
 

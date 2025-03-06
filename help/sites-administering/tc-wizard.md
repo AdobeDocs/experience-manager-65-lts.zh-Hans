@@ -4,7 +4,8 @@ description: 了解如何使用Adobe Experience Manager中的“语言复制向�
 feature: Language Copy
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 218b4778-86be-4752-8cdf-37705563be13
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 22%

@@ -3,13 +3,13 @@ title: 通用编辑器
 description: 了解通用编辑器的灵活性，以及它如何帮助您使用AEM 6.5增强Headless体验。
 feature: Developing
 role: Developer
-source-git-commit: 1f4024310858c6973681c079439ae82834cf716f
+exl-id: 495df631-5bdd-456b-b115-ec8561f33488
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 1%
 
 ---
-
 
 # 通用编辑器 {#universal-editor}
 

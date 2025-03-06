@@ -4,7 +4,8 @@ description: 了解如何定义翻译规则，标识要翻译的内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
 role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 94534336-1e1f-40eb-8364-9358c1420616
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 91%

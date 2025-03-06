@@ -4,7 +4,8 @@ description: 了解如何创建邀请外部用户处理程序。 它允许Rights
 role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 5e1f1f3c-a2f3-4bf1-ba96-a02f8b16c180
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%

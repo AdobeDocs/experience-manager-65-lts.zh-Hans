@@ -1,13 +1,13 @@
 ---
 title: OSGi上的AEM Forms的支持平台
 description: OSGi上的AEM Forms的支持平台
-source-git-commit: 80dd0b2a34151f2631d1c434d887741921b89be9
+exl-id: 4a2369b7-4ec8-47ad-ac4d-09f41bcd653a
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
-
 
 # OSGi上AEM Forms的支持平台 {#supported-platforms}
 

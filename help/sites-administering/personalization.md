@@ -8,7 +8,8 @@ content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 2a406ca2870e241539819ae62c6a14904ee71211
+exl-id: 558cf29b-34f4-4ead-b8d6-67ef8aaa5dc5
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 2%
@@ -166,4 +167,3 @@ AEM提供了各种组件以进行个性化。 有些功能允许用户登录并�
 | 注销 | 指示当前登录的用户，并提供注销链接。 |
 | 标记云 | 标记云，用于以图形方式显示网站中的标记选择 |
 | Teaser | 显示在主页上的内容（通常是图像），用于“诱惑”用户访问底层内容。 |
-

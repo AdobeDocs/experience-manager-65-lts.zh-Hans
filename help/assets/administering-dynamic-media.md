@@ -6,7 +6,8 @@ products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 role: User, Admin
 feature: Configuration
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 2e03224f-b4eb-4bf5-aba9-a6cc292c96c2
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 1%
@@ -41,5 +42,3 @@ ht-degree: 1%
 >**如果您正在升级：**
 >
 >* Experience Manager启动并运行后，您上传的任何资源都会自动启用Dynamic Media（除非系统管理员明确禁用它）。 如果您在已升级的Experience Manager实例中并且是Dynamic Media的新用户，则必须重新处理您的资源以使其启用Dynamic Media。
-
-

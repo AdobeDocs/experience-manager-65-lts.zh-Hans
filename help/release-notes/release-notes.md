@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Manager 6.5 LTS的最新发行说明
 description: 这些是Adobe Experience Manager 6.5 LTS的当前发行说明。
-source-git-commit: 6a69d4e143c54b22127a1e1ff3546898fcdd0b2d
+exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
+source-git-commit: 9bbd7acd498a1a0614db246f9d1326a62c199806
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 22%
 
 ---
-
 
 # Adobe Experience Manager 6.5 LTS的最新发行说明 {#release-notes}
 
@@ -111,3 +111,4 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 
 * [产品下载位于licensing.adobe.com](https://licensing.adobe.com/)
 * [联系Adobe客户支持](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
+

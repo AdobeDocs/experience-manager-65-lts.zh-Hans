@@ -4,7 +4,8 @@ description: Designer作为独立安装程序提供，并且与Workbench捆绑�
 role: Admin, User, Developer
 feature: Forms Designer,Designer
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 1444b0fc0811cbb187d2a4d83b626444e44ef73f
+exl-id: 526bbc59-62c3-4e6d-a938-e368d07fe6b0
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 # 安装和配置Designer{#installing-and-configuring-designer}
 
-## 先决条件 {#pre-requisites}
+## 前提条件 {#pre-requisites}
 
 +++ 对于64位AEM Forms Designer（推荐）
 
@@ -118,4 +119,3 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
       1. 打开Designer，转到“帮助”，单击“关于设计器”，您会看到设计器版本信息以及bits信息，例如，您会看到64位写入版本末尾，如下所示：
          `6.5.21.20240522.1.161 | 64 bit`
       1. 打开Designer，左上角显示一个品牌图标，其中包含带有产品名称的64位信息。
-

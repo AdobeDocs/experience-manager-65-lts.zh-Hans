@@ -4,13 +4,13 @@ description: 了解解决PaperCapture服务无法对PDF执行OCR（光学字符�
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: de3cd0ad-0b18-4d9a-8c6b-72cc16149cfc
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 2%
 
 ---
-
 
 # PaperCature服务无法对PDF执行OCR操作
 

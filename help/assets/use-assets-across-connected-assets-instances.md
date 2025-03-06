@@ -7,7 +7,8 @@ role: User, Admin, Leader
 feature: Connected Assets,User and Groups
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 61a1c41a-7aec-4ffb-b622-905b3ca62c1b
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 15%
@@ -368,4 +369,3 @@ ht-degree: 15%
   ![无法检索资源远程引用](assets/reference-report-failure.png)
 
 * 如果未将Cookie从Sites服务器发送到Google Chrome中的Assets服务器，这是因为Assets连接不是通过HTTPS进行的。 如果您没有在Assets实例上使用HTTPS，则在您使用Assets服务器进行身份验证后，无法将`SameSite=None`标头添加到响应中。
-

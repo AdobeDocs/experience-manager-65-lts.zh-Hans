@@ -5,7 +5,8 @@ contentOwner: AG
 role: User, Admin
 feature: Metadata
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 16ab2e64-9c12-43ae-a8d2-f71e63899c68
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 7%
@@ -270,7 +271,7 @@ XMP可能包括来自一个或多个架构的资产。 例如，许多Adobe应�
 
 ## 使用IPTC元数据 {#support-for-iptc-metadata}
 
-了解[!DNL Adobe Experience Manager Assets]如何支持通过[!DNL Adobe Bridge]和其他[!DNL Adobe Creative Cloud]应用程序添加到资源的IPTC元数据、创意评级和关键字。
+了解[!DNL Adobe Experience Manager Assets]如何支持通过[!DNL Adobe Bridge]和其他[!DNL Adobe Creative Cloud]应用程序添加到资源的IPTC元数据、Creative评级和关键字。
 
 [!DNL Adobe Experience Manager Assets]支持广泛用于描述资源的IPTC元数据标准。 这样一来，[!DNL Assets]就提高了各方（包括摄影师、创意公司、图书馆、博物馆等）对其图像的接受度。
 

@@ -4,7 +4,8 @@ description: 使用产品驾驶舱，其中提供链接的产品目录和相关�
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: c3a8c33d-2ae7-4a90-862f-3f7faf7b4eb0
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 1%

@@ -4,7 +4,8 @@ description: 使用这些常见问题解答来了解、配置和解决AEM中的�
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: b2e73e28-fa34-436d-8a20-848d353e3b8c
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 0%

@@ -7,7 +7,8 @@ role: User, Admin
 feature: Collaboration,Adobe Asset Link,Desktop App
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 51a2f4bb-5fca-48fa-855d-1d610a5eb7c0
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '3173'
 ht-degree: 11%
@@ -43,7 +44,7 @@ ht-degree: 11%
 
 | 针对所涉角色的价值主张 | Adobe产品 | 涉及的曲面 |
 |---|---|---|
-| 创意用户从[!DNL Experience Manager]中发现资源，打开并使用这些资源，编辑对[!DNL Experience Manager]的更改并将其上传到[!DNL Experience Manager]中，无需离开[!DNL Creative Cloud]应用。 | [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], 和 [!DNL Adobe InDesign]. |
+| Creative用户从[!DNL Experience Manager]中发现资源，打开并使用这些资源，编辑对[!DNL Experience Manager]的更改并将其上载到，在不离开[!DNL Creative Cloud]应用的情况下将新文件上载到[!DNL Experience Manager]。 | [Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html) | [!DNL Adobe Photoshop], [!DNL Adobe Illustrator], 和 [!DNL Adobe InDesign]. |
 | 业务用户可简化打开和使用资产、编辑和上传对[!DNL Experience Manager]的更改，以及从桌面环境将新文件上传到[!DNL Experience Manager]的过程。 他们使用通用集成在本机桌面应用程序中打开任何资源类型，包括非Adobe资源类型。 | [Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Win和Mac桌面上的[!DNL Experience Manager]桌面应用程序 |
 | 营销人员和商业用户从[!DNL Experience Manager]中发现、预览、许可并保存和管理[!DNL Adobe Stock]资源。 已许可和保存的资产提供选择[!DNL Adobe Stock]元数据以实现更好的管理。 | [Experience Manager与Adobe Stock集成](aem-assets-adobe-stock.md) | [!DNL Experience Manager] Web界面 |
 
@@ -118,7 +119,7 @@ ht-degree: 11%
 * 保存到[!DNL Experience Manager]的资源是副本，而不是链接回[!DNL Adobe Stock]。
 
 **在[!DNL Creative Cloud]**&#x200B;中使用从[!DNL Adobe Stock]保存到[!DNL Experience Manager]中的资产。 此集成独立于[!DNL Adobe Asset Link]，但[!DNL Adobe Asset Link]可以识别通过这种方式从[!DNL Stock]保存的这些资源，并在[!DNL Photoshop]、[!DNL Illustrator]或[!DNL InDesign]的[!DNL Adobe Asset Link]扩展UI中，在这些资源上显示其他元数据和[!DNL Adobe Stock]徽标。 这些文件可用于浏览、打开等，因为它们是保存到[!DNL Experience Manager]中的常规资源。
-使用[!DNL Creative Cloud]个存在扩展名为[!DNL Adobe Asset Link]的应用的创意用户，除了可以访问从[!DNL Adobe Stock]到[!DNL Experience Manager]的已许可资产外，还可以使用[!DNL Creative Cloud]库面板来搜索、预览和许可[!DNL Adobe Stock]资产。
+在扩展名为[!DNL Adobe Asset Link]的[!DNL Creative Cloud]应用中工作的Creative用户，除了有权访问从[!DNL Adobe Stock]到[!DNL Experience Manager]的已许可资源外，还可以使用[!DNL Creative Cloud]“库”面板来搜索、预览和许可[!DNL Adobe Stock]资源。
 来自[!DNL Adobe Stock]且已许可并保存到[!DNL Experience Manager]中的[!DNL Assets]可供访问[!DNL Experience Manager Assets]部署的更广泛团队使用，而来自[!DNL Adobe Stock]的创意人员通过[!DNL Creative Cloud]库面板来许可资产，使其仅在默认情况下在其[!DNL Creative Cloud]帐户中可供自己使用。
 
 <!-- 

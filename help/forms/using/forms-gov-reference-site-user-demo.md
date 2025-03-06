@@ -6,7 +6,8 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: a9cbab12-62a6-4779-955f-2858166945e6
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 1%
@@ -15,7 +16,7 @@ ht-degree: 1%
 
 # We.Gov和We.Finance引用站点演练 {#we-gov-reference-site-walkthrough}
 
-## 先决条件 {#pre-requisites}
+## 前提条件 {#pre-requisites}
 
 按照[设置和配置We.Gov和We.Finance引用站点](../../forms/using/forms-install-configure-gov-reference-site.md)中的说明设置引用站点。
 

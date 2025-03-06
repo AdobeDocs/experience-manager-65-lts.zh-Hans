@@ -8,7 +8,8 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: e64a3b6f-7248-4426-9f13-f703eab3632d
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 0%
@@ -281,5 +282,3 @@ AEM Forms环境包含自环境设置以来的数据。
 * **[!UICONTROL 同步]**：将嵌入的Process Reporting存储库与AEM Forms数据库同步。
 * **[!UICONTROL 帮助]**：查看有关流程报告的帮助文档。
 * **[!UICONTROL 注销]**：注销进程报告
-
-

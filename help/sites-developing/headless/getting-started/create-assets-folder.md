@@ -4,7 +4,8 @@ description: 使用 AEM 内容片段模型定义内容片段的结构，也就�
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Architect,Data Architect,Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 4b23daf6-ea08-4cc6-b91d-0b4b029df3a5
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 81%

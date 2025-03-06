@@ -4,7 +4,8 @@ description: 使用在布局模式下可用的响应式网格定义组件的位�
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: d4d66576-98ec-4050-9368-c69f6767d31e
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 6%

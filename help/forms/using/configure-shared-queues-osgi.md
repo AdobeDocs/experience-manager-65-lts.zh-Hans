@@ -7,7 +7,8 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
 role: Admin, User, Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 085fa402-d521-4863-876d-c674317b9ade
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 1%
@@ -20,7 +21,7 @@ ht-degree: 1%
 
 您还可以与其他用户共享收件箱项目。 一旦其他用户有权访问您的收件箱项目，该用户可以声明共享项目并对其采取适当措施。 同样，您可以向其他用户请求对收件箱项目的访问权限。
 
-## 先决条件 {#pre-requisites}
+## 前提条件 {#pre-requisites}
 
 登录用户必须是`workflow-users`组的成员。 只有登录用户对其具有读取权限的用户或者已启用公共配置文件的用户才能共享项目或请求访问项目。
 

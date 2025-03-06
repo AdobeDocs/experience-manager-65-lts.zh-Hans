@@ -6,7 +6,8 @@ topic-tags: author
 feature: Adaptive Forms,Foundation Components,Core Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 168cb023768ff3139937ab7f437ab7d00185bca0
+exl-id: b87629fa-85a9-4024-963a-4761bc093e62
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '5538'
 ht-degree: 1%
@@ -416,6 +417,3 @@ AEM Forms规则编辑器提供了一个用于创建和管理规则的可视化�
 * **高效开发流程：**
    * 模块化允许开发人员专注于特定功能。
    * 通过降低整个代码库的复杂程度来降低开发人员的负担，从而实现更有效的开发过程。
-
-
-

@@ -6,13 +6,13 @@ content-type: reference
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2645745a83477509bac81cb5e122eabc44db3961
+exl-id: 87c30912-c89a-42f1-b37b-ec439e7318c7
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 15%
 
 ---
-
 
 # 使用AEM Analyzer评估升级复杂性 {#assessing-the-upgrade-complexity-with-the-aem-analyzer}
 
@@ -235,8 +235,3 @@ AEM Analyzer报告的剩余到期时间显示在侧边栏中。 建议使用最�
 
 * 有时，删除操作可能会显示通知：*&quot;某些路径未成功删除，请检查日志并重试。“*”。 但是，如果实际删除了路径，则可以安全地忽略此消息
 * 同样，包操作可能会失败，并出现以下错误： *&quot;执行所需操作时出现错误，请检查日志并重试。“*”。 这可能是由于会话过期导致的。 在这种情况下，重试操作应该可以解决此问题。
-
-
-
-
-

@@ -4,7 +4,8 @@ description: 组件控制台允许您浏览针对实例定义的所有组件，�
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: e19f9c2b-dc69-4077-a038-d8eb25a1ad6a
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 57%

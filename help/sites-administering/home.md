@@ -4,13 +4,13 @@ description: 了解如何管理 AEM 6.5。这些指南涉及站点功能、部�
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+exl-id: 1ef575fc-5fc4-43ca-978e-911118dad438
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 88%
 
 ---
-
 
 # AEM 6.5 Administering 用户指南
 

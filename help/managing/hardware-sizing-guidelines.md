@@ -4,7 +4,8 @@ description: 这些大小调整指南提供了部署AEM项目所需的硬件资�
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: ac26c0163309b6cb6c0cfde2098a8cc05955d03f
+exl-id: dac9b87a-cbd2-49e3-bd4d-ebcccdec1659
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%

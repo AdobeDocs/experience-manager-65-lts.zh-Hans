@@ -3,8 +3,9 @@ title: 为JEE上的AEM Forms的自定义组件API记录一个事务。
 description: 了解如何使用TransactionRecorder API记录自定义组件的事务。
 feature: Transaction Reports
 role: Admin, User, Developer
-solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 29391c8e3042a8a04c64165663a228bb4886afb5
+solution: Experience Manager, Experience Manager Forms
+exl-id: 346ebc2a-ac8c-48e6-a80b-1c0e34a7b3ff
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
