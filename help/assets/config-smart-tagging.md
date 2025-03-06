@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: be7c294c-149b-4825-8376-573f9e2987e2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 20e1f9b362a42eb0d6b4ab2b5668f01fbefd2448
 workflow-type: tm+mt
-source-wordcount: '2062'
-ht-degree: 17%
+source-wordcount: '1935'
+ht-degree: 18%
 
 ---
 
@@ -31,22 +31,24 @@ ht-degree: 17%
 
 * [与Adobe Developer Console集成](#integrate-adobe-io)。
 * [训练智能内容服务](#training-the-smart-content-service)。
-
 * 安装最新的[[!DNL Experience Manager] 服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
+
+此外，有关在Assets 6.5中配置智能标记的信息，请参阅[准备AEM以进行智能标记](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/assets/administer/config-smart-tagging)。
 
 ## SCS升级以支持Adobe Managed Services的Oauth {#scs-upgrade-oauth-managed-services}
 
-**新用户**
+<!--**New Users**-->
 
-安装Service Pack 21。 要支持Service Pack 21上的Oauth集成，您需要安装适用于Service Pack 21的[修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)。
+安装Service Pack 22。 要支持Service Pack 22上的Oauth集成，您需要安装适用于Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)的[修补程序。
 
-按照本文中所述的说明设置智能内容服务。
+<!--Follow the instructions mentioned in this article to set up Smart Content Services.
 
-**现有用户**
+**Existing users**
 
-如果您已升级到Service Pack 21，请安装适用于SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[修补程序以支持Oauth集成。 任何现有配置都会自动删除。 按照本文中所述的说明设置智能内容服务。
+If you have upgraded to Service Pack 21, install the [Hotfix for Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) to support Oauth integration. Any existing configuration is automatically deleted. Follow the instructions mentioned in this article to set up Smart Content Services. If you upgrade to Service Pack 22, you must install this [Hotfix for Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip).
 
-对于Service Pack 20及更早版本，您需要为SCS执行解决步骤以支持Oauth集成。 请参阅[OAuth凭据的智能标记疑难解答](config-oauth.md)。
+For Service Pack 20 and older, you need to perform the workaround steps for SCS to support Oauth integration. See [Troubleshooting smart tags for OAuth credentials](config-oauth.md).
+-->
 
 ## SCS升级以支持内部部署用户的Oauth {#scs-upgrade-oauth-on-premise}
 
@@ -57,10 +59,10 @@ ht-degree: 17%
 **现有用户**
 
 已启用此功能的现有内部部署用户可以继续使用智能内容服务。
+<!--
+If you have upgraded to Service Pack 21, install the [Hotfix for Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) to support Oauth integration. Any existing configuration is automatically deleted. Follow the instructions mentioned in this article to set up Smart Content Services. If you upgrade to Service Pack 22, you must install this [Hotfix for Service Pack 22](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip).
 
-如果您已升级到Service Pack 21，请安装适用于SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)的[修补程序以支持Oauth集成。 任何现有配置都会自动删除。 按照本文中所述的说明设置智能内容服务。
-
-对于Service Pack 20及更早版本，您需要为SCS执行解决步骤以支持Oauth集成。 请参阅[OAuth凭据的智能标记疑难解答](config-oauth.md)。
+For Service Pack 20 and older, you need to perform the workaround steps for SCS to support Oauth integration. See [Troubleshooting smart tags for OAuth credentials](config-oauth.md).-->
 
 
 ## 与Adobe Developer Console集成 {#integrate-adobe-io}
