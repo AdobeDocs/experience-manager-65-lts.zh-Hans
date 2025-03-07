@@ -6,7 +6,7 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 exl-id: dd22ea1b-33e9-407d-b7b6-645bdba00b4e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
 source-wordcount: '5660'
 ht-degree: 1%
@@ -74,8 +74,8 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 
 * 已安装在Microsoft®Windows和Linux®上执行PDF生成器转换所需的客户端软件：
 
-   * **Microsoft® Windows**：安装[Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)或[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
-   * **Linux®**：安装[Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
+   * **Microsoft® Windows**：安装&#x200B;**Microsoft® Office**&#x200B;或&#x200B;**Apache OpenOffice**
+   * **Linux®**：安装&#x200B;**Apache OpenOffice**
 
 >[!NOTE]
 >
@@ -654,7 +654,7 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 +++ Adobe Acrobat
 
-* 请确保仅安装了[支持的Microsoft® Office （32位）和Adobe Acrobat版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)，并取消打开对话框。
+* 请确保仅安装了[支持的Microsoft® Office （32位）和Adobe Acrobat版本](/help/sites-deploying/technical-requirements.md)，并取消打开对话框。
 * 确保已禁用Adobe Acrobat更新服务。
 * 确保[Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service)批处理文件以管理员权限运行。
 * 确保在PDF Generator配置UI中添加了PDF用户。
@@ -667,7 +667,7 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 **Microsoft® Windows**
 
-* 请确保已安装32位[支持的Microsoft Office版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)，并取消所有应用程序的打开对话框。
+* 请确保已安装32位[支持的Microsoft Office版本](/help/sites-deploying/technical-requirements.md)，并取消所有应用程序的打开对话框。
 * 确保在PDF Generator配置UI中添加了PDF用户。
 * 确保PDF Generator用户是管理员组的成员，并且已为该用户设置了[替换进程级别令牌](#grant-the-replace-a-process-level-token-privilege)权限。
 * 确保已在PDF Generator UI中配置用户，并执行以下操作：
@@ -681,7 +681,7 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
 **Linux®**
 
-* 安装[支持的OpenOffice版本](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不会显示任何对话框。
+* 安装支持的OpenOffice版本。 AEM Forms支持32位和64位版本。 安装后，打开所有OpenOffice应用程序，取消所有对话框窗口，然后关闭应用程序。 重新打开应用程序，并确保打开OpenOffice应用程序时不会显示任何对话框。
 
 * 在[控制台](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)或dt （设备树）配置文件中，创建环境变量`OpenOffice_PATH`并将其设置为指向已设置的OpenOffice安装。
 * 如果安装OpenOffice时出现问题，请确保OpenOffice安装所需的[32位库](#extrarequirements)可用。

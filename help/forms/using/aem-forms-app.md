@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: 9cc83733-630a-4846-bd9e-72fd76a3286d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-AEM Forms应用程序支持根据您的服务器，在移动设备上同步自适应表单、移动表单和表单集。 您可以在OSGi](/help/forms/using/aem-forms-workflow.md)上定义以[Forms为中心的工作流，或在JEE上定义Forms工作流。 例如，您经营一家银行公司，并使用AEM Forms管理客户应用程序和通信。 您的客户填写并提交表单以进行验证。 如果您在移动设备上启用表单，则客户可以在AEM Forms应用程序中填写表单。 您还可以通过在移动设备上启用验证表单来管理验证工作流。 您的现场工作人员可以向客户携带移动设备、验证详细信息并提交表单。 AEM Forms应用程序与AEM Forms服务器同步，并获取为移动设备启用的表单。 如果应用程序处于离线状态，则会将数据存储在本地。
+AEM Forms应用程序支持根据您的服务器，在移动设备上同步自适应表单、移动表单和表单集。 您可以在OSGi](/help/forms/using/aem-forms-workflow.md) <!--or Forms workflows on JEE-->上定义以[Forms为中心的工作流。 例如，您经营一家银行公司，并使用AEM Forms管理客户应用程序和通信。 您的客户填写并提交表单以进行验证。 如果您在移动设备上启用表单，则客户可以在AEM Forms应用程序中填写表单。 您还可以通过在移动设备上启用验证表单来管理验证工作流。 您的现场工作人员可以向客户携带移动设备、验证详细信息并提交表单。 AEM Forms应用程序与AEM Forms服务器同步，并获取为移动设备启用的表单。 如果应用程序处于离线状态，则会将数据存储在本地。
 
 客户可以通过Software Distribution获取AEM Forms应用程序的源代码。 Software Distribution中的源代码包可用为： `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
 
@@ -62,9 +62,13 @@ AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM For
 
 发布表单后，应用程序将与服务器同步并获取表单。 若要同步多个表单，请在创作实例中选择表单管理器中的多个表单，然后选择&#x200B;**[!UICONTROL 与AEM Forms应用程序同步]**。
 
-## 移动设备支持 {#mobile-device-support}
+<!--
 
-请参阅[AEM Forms应用程序(以前称为Mobile Workspace)](/help/forms/using/aem-forms-jee-supported-platforms.md#aem-forms-workspace-app)
+## Mobile device support {#mobile-device-support}
+
+See [AEM Forms app (previously known as Mobile Workspace)](/help/forms/using/aem-forms-jee-supported-platforms.md#aem-forms-workspace-app)
+
+-->
 
 ## AEM Forms应用程序的主要功能 {#key-features-of-aem-forms-app}
 
@@ -72,7 +76,7 @@ AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM For
 
 您可以将应用程序与AEM Forms服务器同步，并可以在移动设备上处理表单。
 
-使用AEM Forms Workflow Server时，可以将表单与Workbench进程和AEM收件箱应用程序中的起点关联。 AEM收件箱应用程序可以具有与其关联的自适应表单。 起点可以具有自适应表单、HTML5表单或与其关联的表单集。 起点可以作为任务提交，也可以将任务另存为草稿。 有关AEM收件箱应用程序与起点之间差异的更多信息，请参阅[OSGi和AEM Forms JEE工作流中表单中心AEM工作流的操作和功能](capabilities-osgi-jee-workflows.md)。
+使用AEM Forms Workflow Server时，可以将表单与Workbench进程和AEM收件箱应用程序中的起点关联。 AEM收件箱应用程序可以具有与其关联的自适应表单。 起点可以具有自适应表单、HTML5表单或与其关联的表单集。 起点可以作为任务提交，也可以将任务另存为草稿。<!--For more information on differences between an AEM Inbox application and a startpoint see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](capabilities-osgi-jee-workflows.md).-->
 
 借助不具有AEM Forms工作流的AEM Forms服务器，应用程序中启用同步的表单将在AEM Forms应用程序中渲染。 Forms在应用程序的Forms选项卡中可用，可以提交或另存为草稿。 应用程序支持自适应表单和移动表单。
 
@@ -123,7 +127,7 @@ AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM For
 
 ## AEM收件箱和AEM Forms应用程序功能之间的差异 {#differences-between-aem-inbox-and-aem-forms-app-features}
 
-启动以Forms为中心的工作流的两种主要方法是使用[AEM收件箱](/help/forms/using/manage-applications-inbox.md)和AEM Forms应用程序。 但是，AEM收件箱和AEM Forms应用程序的功能有所不同。 AEM收件箱仅适用于以[Forms为中心的工作流](/help/forms/using/aem-forms-workflow.md)，而AEM Forms应用程序同时适用于以Forms为中心的工作流和流程管理。 有关AEM收件箱与AEM Forms应用程序功能之间差异的更多信息，请参阅OSGi和AEM Forms JEE工作流中[表单中心AEM工作流的操作和功能](capabilities-osgi-jee-workflows.md)。
+启动以Forms为中心的工作流的两种主要方法是使用[AEM收件箱](/help/forms/using/manage-applications-inbox.md)和AEM Forms应用程序。 但是，AEM收件箱和AEM Forms应用程序的功能有所不同。 AEM收件箱仅适用于以[Forms为中心的工作流](/help/forms/using/aem-forms-workflow.md)，而AEM Forms应用程序同时适用于以Forms为中心的工作流和流程管理。<!--For more information on differences between AEM Inbox and AEM Forms app capabilities, see [Actions and capabilities of Form-centric AEM Workflows on OSGi and AEM Forms JEE workflows](capabilities-osgi-jee-workflows.md).-->
 
 ## 支持的表单 {#supported-forms}
 
