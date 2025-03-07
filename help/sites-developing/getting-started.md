@@ -1,6 +1,6 @@
 ---
 title: AEM Site 开发入门 – WKND 教程
-description: 了解如何构建您的 AEM 实例。详细了解平台和组件并找到有关开发工具和个性化的信息。
+description: 了解如何生成您的 AEM 实例。详细了解平台和组件并找到有关开发工具和个性化的信息。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
