@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
+source-git-commit: b4a1806c48ab0945f83691a597cad214c6d1b645
 workflow-type: tm+mt
-source-wordcount: '6816'
+source-wordcount: '6819'
 ht-degree: 21%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 21%
 
 + 发行说明 {#release-notes}
    + [发行说明](/help/release-notes/release-notes.md)
+   + [常见问题解答](/help/release-notes/faq.md)
 + 安全性 {#security}
    + [用户管理和安全性](/help/sites-administering/security.md)
    + [用户、组和访问权限管理](/help/sites-administering/user-group-ac-admin.md)
