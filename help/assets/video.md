@@ -5,9 +5,9 @@ feature: Asset Management
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 5dc734b3-22e3-4839-bc72-b96fa6dd8bd2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 6ceb03253f939734478cdc25b468737ceb83faa4
 workflow-type: tm+mt
-source-wordcount: '11126'
+source-wordcount: '10487'
 ht-degree: 2%
 
 ---
@@ -263,10 +263,6 @@ DASH是国际标准，HLS是Apple标准。 两者都用于自适应视频流。 
  </tbody>
 </table>
 
->[!IMPORTANT]
->
->*要在视频中使用DASH，Adobe技术支持必须首先在您的帐户中启用它。 请参阅[在您的Dynamic Media帐户上启用DASH](#enable-dash)。
-
 ## Dynamic Media视频解决方案的架构 {#architecture-of-dynamic-media-video-solution}
 
 下图显示了通过DMGateway（在Dynamic Media混合模式下）上传和编码并可供公众使用的视频的整体创作工作流。
@@ -419,60 +415,6 @@ VBR编码时间较长，但产生的结果最理想；媒体文件的质量更�
 
 Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.264视频编解码器，因此它以压缩文件大小提供高品质视频。
 
-### 在您的Dynamic Media帐户中启用DASH、多字幕和音频跟踪支持 {#enable-dash}
-
-**关于启用帐户上的DASH**
-DASH(Digital Adaptive Streaming over HTTP)是视频流的国际标准，被广泛地应用于不同的视频观看者中。 在您的帐户上启用DASH后，您可以选择使用DASH或HLS进行自适应视频流传输。 或者，当在查看器预设中选择**[!UICONTROL auto]**&#x200B;作为播放类型时，您可以选择在播放器之间自动切换。
-
-在您的帐户中启用DASH的一些主要优势包括：
-
-* 将DASH流视频打包用于自适应比特率流。 这种方法可以提高投放效率。 自适应流管理可确保为客户提供最佳观看体验。
-* 使用Dynamic Media播放器优化的浏览器流可在HLS和DASH流之间切换，以确保最佳服务质量。 在使用Safari浏览器时，视频播放器会自动切换到HLS。
-* 您可以通过编辑视频查看器预设来配置首选的流方法(HLS或DASH)。
-* 优化的视频编码可确保在启用DASH功能时不会使用额外的存储。 为HLS和DASH创建一组视频编码，以优化视频存储成本。
-* 帮助让您的客户更容易访问视频交付。
-* 也通过API获取流URL。
-
-在帐户中启用DASH需要两个步骤：
-
-* 将Dynamic Media配置为使用DASH，您可以轻松执行此操作。
-* 将Experience Manager配置为使用DASH，此操作可通过您创建和提交的Adobe客户支持案例来完成。
-
-当您创建Adobe支持案例以在您的帐户上启用DASH时，也会自动启用多个字幕和音轨支持。 激活后，所有新上传的视频都使用更新的后端架构进行处理，该架构支持添加多个字幕和音轨。
-
->[!IMPORTANT]
->
->在&#x200B;*之前*&#x200B;上传的任何视频在您的Dynamic Media帐户[上启用多个字幕和音轨支持都必须重新处理](/help/assets/processing-profiles.md#reprocessing-assets)。 此视频重新处理步骤是必需的，这样他们才能使用多个字幕和音频跟踪功能。 重新处理之后，视频URL可继续像往常一样正常工作和播放。
-
-**要在您的Dynamic Media帐户中启用DASH、多字幕和多声道支持：**
-
-<!-- 1. **Configure Dynamic Media for DASH** - In Dynamic Media on Experience Manager, navigate to [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-
-1. Search for **AEM Assets Dynamic Media Video Advanced Streaming** feature flag.
-1. To enable (turn on) DASH, select the checkbox. -->
-1. 首先&#x200B;**为DASH配置Dynamic Media** — 从Experience Manager导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**。
-
-1. 从&#x200B;**[!UICONTROL Adobe Experience Manager Web控制台配置]**&#x200B;页面，滚动到名称&#x200B;*AEM Assets Dynamic Media视频高级流功能标志*。
-
-1. 在名称的左侧，选中该复选框以启用（打开）短划线。
-
-1. 选择&#x200B;**[!UICONTROL 保存]**。
-
-1. 现在，使用Admin Console开始[创建新的支持案例](https://helpx.adobe.com/cn/enterprise/using/support-for-experience-cloud.html)。
-1. 要创建支持案例，请按照说明操作，同时确保提供以下信息：
-
-   * 主要联系人姓名、电子邮件、电话。
-   * Dynamic Media帐户的名称。
-   * 指定希望在Experience Manager上的Dynamic Media帐户中启用DASH、多个字幕和多声道支持。
-
-1. Adobe客户支持根据提交请求的顺序将您添加到客户等待列表。
-1. 当Adobe准备好处理您的请求时，客户支持将联系您以协调并设置目标启用日期。
-1. 客户支持会在完成后通知您。
-1. 现在，您可以执行以下任一操作：
-
-   * 照常创建[视频查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
-   * [向视频中添加多个字幕和音轨](#add-msma)。
-
 ## 查看视频报表 {#viewing-video-reports}
 
 >[!NOTE]
@@ -610,7 +552,6 @@ Dynamic Media ](/help/assets/assets-formats.md)和所有Dynamic Media视频查�
 
 * 在AEM环境中设置Dynamic Media。
 * [Dynamic Media视频配置文件已应用于从中摄取视频的文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
-* [您的Dynamic Media帐户已启用多个字幕和音轨](#enable-dash)。
 
 WebVTT和Adobe `.vtt`格式支持添加的字幕和字幕。 此外，添加的MP3格式音频轨道文件也受支持。
 
@@ -842,10 +783,6 @@ Dynamic Media支持通过URL修饰符将单个字幕与视频相加。 请参阅
 
 
 ## 向视频添加隐藏式字幕 {#adding-captions-to-video}
-
->[!IMPORTANT]
->
->Adobe建议您在您的Dynamic Media帐户上[启用多个字幕和音轨功能](#enable-dash)。 这样，您就可以利用最新的Dynamic Media后端架构和简化的工作流程，为您的视频添加字幕、字幕和音轨。
 
 通过将隐藏式字幕添加到单个视频或自适应视频集，您可以将视频扩展到全球市场。 通过添加隐藏式字幕，您无需对音频进行配音，也无需使用母语人士重新录制每种语言的音频。 视频以所录制的语言播放。 出现外语字幕是为了让不同语言的人仍然能够理解音频部分。
 
