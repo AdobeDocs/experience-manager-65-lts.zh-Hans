@@ -8,10 +8,11 @@ docset: aem65
 role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+hide: true
+hidefromtoc: true
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '3989'
+source-wordcount: '4005'
 ht-degree: 1%
 
 ---
@@ -486,6 +487,8 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
 >此外：
 >
 >- PDF Generator仅支持32位零售版Microsoft®Office Professional Plus以及转换所需的其他软件。
+>- Microsoft® Office Professional Plus安装可以使用零售或基于MAK/KMS/AD的批量许可。
+>- 如果Microsoft® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >- PDF Generator不支持Microsoft® Office 365。
 >- 仅在Windows和Linux®上支持OpenOffice的PDF Generator转换。
 >- 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
@@ -493,7 +496,6 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
 >- PDF Generator服务不支持Microsoft® Windows 10。
 >- PDF Generator无法使用Microsoft® Visio 2019转换文件。
 >- PDF Generator无法使用Microsoft® Project 2019转换文件。
->- 如果Microsoft® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 
 <!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->

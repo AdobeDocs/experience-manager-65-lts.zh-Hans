@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 874736b9743ce1d4883e745a342dff0bd8bda43e
 workflow-type: tm+mt
-source-wordcount: '3044'
+source-wordcount: '3064'
 ht-degree: 1%
 
 ---
@@ -150,12 +150,11 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 | **平台** | **支持级别** |
 |---|---|
-| **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[3]` |
-| Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` `[2]` |
+| **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[2]` |
+| Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` |
 | Linux®，基于SUSE®分发 | A：支持的`[1]` |
 
-1. Linux®内核5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。 只有CentOS 7、Red Hat® Enterprise Linux® 7、Red Hat® Enterprise Linux® 8和Red Hat® Enterprise Linux® 9支持AEM Forms附加功能。
-1. Ubuntu 20.04 LTS支持AEM Forms。
+1. Linux®内核5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。
 1. Adobe Managed Services支持的Linux®分发。
 
    >[!NOTE]
@@ -166,6 +165,8 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
    >* zlib.x86-64 (1.2.7-17)
    >* libxcb.x86_64 (1.13-1.el7)
    >* libXau.x86_64 (1.0.8-2.1.el7)
+   >* glibc-locale.x86_64（2.17或更高版本）
+
 
 ### 虚拟和云计算环境 {#virtual-cloud-computing-environments}
 
@@ -181,7 +182,7 @@ Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe
 
 ### Dispatcher平台（Web服务器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是缓存和负载平衡组件。 [下载最新的调度程序版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
+Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
 
 支持以下 Web 服务器与调度程序版本 4.3.2 一起使用：
 
@@ -286,7 +287,7 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 当必须指定 IP 地址时，可以（根据需要）从以下选项中进行选择：
 
-* IPv6地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6 地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址。 例如，`https://123.1.1.4:4502`
 
@@ -342,7 +343,7 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 >[!NOTE]
 >
->**服务器主机名必须解析：** 确保服务器的主机名可解析为 IP 地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
+>**服务器主机名必须解析：**&#x200B;请确保服务器的主机名可解析为IP地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
 >
 >`<ip address> <fully qualified hostname>`
 
@@ -356,13 +357,13 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 对于Windows x64：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
-* 在[https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)上获取Microsoft® Visual Studio 2013可再发行版本
+* 在 https://www.microsoft.com/en-us/download/details.aspx?id=40784 获取 [可再发行Microsoft® Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
 * 获取Microsoft® Visual Studio 2015 可再发行组件，请访问 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 对于 Windows x86：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
-* 在 https://www.microsoft.com/en-in/download/details.aspx?id=40769 获取 [Microsoft® Visual Studio 2013 可再发行组件](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
+* 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)上获取Microsoft® Visual Studio 2013可再发行版本
 * 在 https://www.microsoft.com/en-us/download/details.aspx?id=52685 获取 [Microsoft® Visual Studio 2015 可再发行组件](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
 #### macOS {#macos}
@@ -434,10 +435,12 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 >另外，
 >
 >* PDF Generator需要32位版本的[Acrobat 2020 classic track版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)或Acrobat 2017版本17.011.30078来执行转换。
->* 仅在Windows和Linux®上支持OpenOffice的PDF Generator转换。
->* PDF Generator仅支持32位零售版Microsoft®Office Professional Plus以及在Windows操作系统中进行转换所需的其他软件。
+>* PDF Generator仅支持32位零售版Microsoft®Office Professional Plus以及转换所需的其他软件。
+>* Microsoft® Office Professional Plus安装可以使用零售或基于MAK/KMS/AD的批量许可。
+>* 如果Microsoft® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >* PDF Generator支持Linux®操作系统上的32位和64位版本的OpenOffice。
 >* PDF Generator不支持Microsoft® Office 365。
+>* 仅在Windows和Linux®上支持OpenOffice的PDF Generator转换。
 >* 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
 >* Acrobat的一个版本与AEM Forms捆绑在一起，用于启用PDF Generator功能。 在AEM Forms许可证有效期内，只能以编程方式访问AEM Forms捆绑的版本，以便与AEM Forms PDF Generator结合使用。 有关详细信息，请参阅根据您的部署([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms产品说明
 >* PDF Generator服务不支持Microsoft® Windows 10。
@@ -445,26 +448,26 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 >* PDF Generator无法使用Microsoft® Project 2019转换文件。 您可以继续使用Microsoft® Project 2016转换`.VSD`和`.VSDX`文件。
 >
 
-### AEM Forms Designer的要求 {#requirements-for-aem-forms-designer}
+### AEM 表单设计器的要求 {#requirements-for-aem-forms-designer}
 
-* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10或Windows® 11
+* ® Microsoft Windows® 2016 服务器、Microsoft® Windows® 2019 服务器、Microsoft® Windows® 10 或 Windows® 11
 * 1 GHz 或速度更快的处理器，支持 PAE、NX 和 SSE2。
 * 32 位作系统为 1 GB RAM，64 位作系统为 2 GB RAM
 * 32 位作系统为 16 GB 磁盘空间，64 位作系统为 20 GB 磁盘空间
-* 图形内存 - 128 MB GPU（建议使用 256 MB）
-* 2.35 GB 可用硬盘空间
+* 图形内存 — 128 MB的GPU（建议使用256 MB）
+* 2.35 GB可用硬盘空间
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
 * Acrobat Pro DC、Acrobat Standard DC 或 Adobe Acrobat Reader DC
-* 安装 Designer 的管理权限
+* 安装Designer的管理权限
 * Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 32 位 AEM 表单设计器的 32 位运行时
-* Microsoft Visual C++ 2019（VC 14.28或更高版本）适用于64位AEM Forms Designer的64位运行时（适用于OSGI和JEE栈栈）
+* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 64 位 AEM Forms Designer 的 64 位运行时（适用于 OSGI 和 JEE 堆栈）
 
-[安装和配置AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
+[安装和配置 AEM 表单设计器](/help/forms/using/installing-configuring-designer.md)
 
 ### AEM Assets XMP 元数据写回的要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-以下平台和文件格式支持并启用了 XMP 回写：
+以下平台和文件格式支持并启用了XMP回写：
 
 * **操作系统：**
 

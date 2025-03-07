@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User
 exl-id: 7ec29926-a5f6-4080-a981-597f9632f6e8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1544'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ AEM [!DNL Forms]提供了简单但功能强大的用户界面，用于创建和�
 
 ### 表单和文档  {#forms-documents}
 
-Forms &amp; Documents提供了用于创建交互式通信、自适应表单、自适应表单片段和表单集的选项。 仅对于JEE上的AEM [!DNL Forms]，Forms &amp; Documents提供了一个选项，用于从本地存储导入文件并将AEM [!DNL Forms]资源与Workbench同步。
+Forms &amp; Documents提供了用于创建交互式通信、自适应表单、自适应表单片段和表单集的选项。<!--Only for AEM [!DNL Forms] on JEE, Forms & Documents provides an option to import files from local storage and sync AEM [!DNL Forms] assets with Workbench.-->
 
 创建按钮是创建或上传AEM [!DNL Forms]资源的过程的起点。 它为您提供了创建以下内容的选项：
 

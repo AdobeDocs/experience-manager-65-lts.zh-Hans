@@ -9,9 +9,9 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 4009c85e-cb8a-4bed-a6ff-7c76fe78a47f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,10 @@ ht-degree: 0%
 您可以使用AEM Forms Web Configuration Console中的&#x200B;**移动Forms配置**&#x200B;组件来配置并控制AEM的缓存策略，网址为：
 
 * (OSGi上的AEM Forms) `https://'[server]:[port]'/system/console/configMgr`
-* (JEE上的AEM Forms) `https://'[server]:[port]'/lc/system/console/configMgr`
+
+<!--
+* (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
+-->
 
 缓存的可用选项如下：
 
@@ -150,22 +153,25 @@ Apache可以使用HTTP协议与CRX通信。 这些配置用于使用HTTP进行�
    * [AEM安装目录]\crx-repository\repository
    * [AEM安装目录]\crx-repository\launchpad
 
-* 应用程序服务器临时目录。 默认位置为：
+<!--
 
-   * (JBoss®) [AEM安装目录]\jboss\standalone\tmp
-   * (WebLogic) \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
-   * (WebSphere®) \项目Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
+* Application server temporary directory. The default location is:
 
-* **(仅限JEE上的AEM Forms)**&#x200B;全局文档存储(GDS)目录。 默认位置为：
+    * (JBoss&reg;) [AEM installation directory]\jboss\standalone\tmp
+    * (WebLogic) \Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
+    * (WebSphere&reg;) \Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
-   * (JBoss®) [appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
-   * (WebSphere®) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
+* **(AEM Forms on JEE only)** Global Document Storage (GDS) directory. The default location is:
 
-* **(仅限JEE上的AEM Forms)** AEM Forms Server日志和临时目录。 默认位置为：
+    * (JBoss&reg;) [appserver root]/server/'server'/svcnative/DocumentStorage
+    * (WebLogic) [appserverdomain]/'server'/adobe/LiveCycleServer/DocumentStorage
+    * (WebSphere&reg;) [appserver root]/installedApps/adobe/'server'/DocumentStorage
 
-   * 服务器日志 — [AEM Forms安装目录]\Adobe\AEM forms\[app-server]\server\all\logs
-   * 临时目录 — [AEM Forms安装目录]\temp
+* **(AEM Forms on JEE only)** AEM Forms Server logs and temporary directory. The default location is:
+
+    * Server logs - [AEM Forms installation directory]\Adobe\AEM forms\[app-server]\server\all\logs
+    * Temp directory - [AEM Forms installation directory]\temp
+-->
 
 >[!NOTE]
 >
