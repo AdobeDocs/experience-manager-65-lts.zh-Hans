@@ -9,10 +9,10 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade
 exl-id: 93126750-4645-4084-a21b-5362e3cc08a9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: dde49ddf344d197d07dce883e03d002cc0934b82
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 6%
+source-wordcount: '195'
+ht-degree: 12%
 
 ---
 
@@ -24,18 +24,19 @@ ht-degree: 6%
 | AEM 6.5 | 本文 |
 
 
-AEM 6.5 Forms包括多项新增功能和增强功能，可简化表单和交易记录的创建、管理和用户体验。 要了解AEM 6.5 Forms的所有新增功能和增强功能，请参阅[新增功能摘要文档](../../forms/using/whats-new.md)。
+AEM 6.5 Forms包括多项新增功能和增强功能，可简化表单和交易记录的创建、管理和用户体验。 要了解AEM 6.5的所有新增功能和增强功能，请参阅[新增功能摘要文档](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/release-notes)。
 
 您可以升级现有的LiveCycle或AEM Forms安装，以获得AEM 6.5 Forms中提供的新功能和增强功能，同时保持现有数据、流程和资产不变。 升级时，还会保留进程的元数据和状态。 您可以选择升级路径以开始升级。
 
 下图显示了OSGi上AEM Forms的可用升级路径：
 
-![OSGi升级流程](do-not-localize/osgi-upgrade-path.png)
+![OSGi升级流程](/help/forms/using/assets/updated-img-forms-upgrade-lts.png)
 
 您可以通过以下方式执行直接升级：
 
 * OSGi上的AEM 6.3 Forms
 * OSGi上的AEM 6.4 Forms
+* AEM 6.5.22.0到AEM Forms 6.5 LTS
 
 您还可以从以下位置执行多级跳升级
 
@@ -43,44 +44,48 @@ AEM 6.5 Forms包括多项新增功能和增强功能，可简化表单和交易�
 * OSGi上的AEM 6.1 Forms
 * OSGi上的AEM 6.2 Forms
 
-下图显示了AEM Forms on JEE的可用升级路径：
+<!--
 
-![JEE升级6.5](do-not-localize/jee-upgrade-6-5.png)
+The following diagram displays the available upgrade paths for AEM Forms on JEE:
+
+![JEE upgrade 6.5](do-not-localize/jee-upgrade-6-5.png) 
 
 
-您可以通过以下方式执行直接升级：
+You can perform a direct upgrade from:
 
-* JEE上的AEM 6.3 Forms
-* JEE上的AEM 6.4 Forms
-* JEE上的AEM 6.5.x.x Forms
+* AEM 6.3 Forms on JEE
+* AEM 6.4 Forms on JEE
+* AEM 6.5.x.x Forms on JEE
 
-您还可以从以下位置执行多级跳升级
+You can also perform a multi-hop upgrade from
 
 * LiveCycle ES4 SP1
-* JEE上的AEM 6.0 Forms
-* JEE上的AEM 6.1 Forms
-* JEE上的AEM 6.2 Forms
+* AEM 6.0 Forms on JEE
+* AEM 6.1 Forms on JEE
+* AEM 6.2 Forms on JEE
 
-JEE上的AEM 6.5.18.0 Forms提供两种类型的安装程序： [完整安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)和[修补程序安装程序](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)。
+AEM 6.5.18.0 Forms on JEE provides two types of installers: [Full installer](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) and [Patch installer](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-**完整安装程序**：您可以使用完整安装程序设置新的AEM Forms实例，或从JEE上的AEM 6.5.x.x Forms升级到JEE上的AEM 6.5.18.0 Forms。
+**Full installer**: You can use the full installer to set up fresh AEM Forms instances or perform upgrades from AEM 6.5.x.x Forms on JEE to AEM 6.5.18.0 Forms on JEE.
 
-**修补程序安装程序**：修补程序安装程序适用于已使用AEM 6.5.x.x版本的客户。 您可以使用修补程序安装程序升级到AEM Forms的最新版本。
+**Patch installer**: Patch installer is for customers already using AEM 6.5.x.x versions. You can use the patch installer to upgrade to the latest version of AEM Forms.
 
-下图描述了使用完整安装程序和修补程序安装程序的场景。
+The following image depicts senarios for using full and patch installer.
 
-![完整安装程序和修补程序安装程序](/help/forms/using/assets/full-and-patch-installer.png)
+![Full Installer and Patch Installer](/help/forms/using/assets/full-and-patch-installer.png) 
 
-请参阅[AEM 6.5 Forms Service Pack安装说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html)文章，安装最新的Service Pack for JEE环境。
+Refer to the [AEM 6.5 Forms Service Pack installation instructions](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html) article to install the latest Service Pack for JEE environment.
+
+-->
 
 <!--
+
 [Work in Progress]
 
 Migration involves moving only assets (PDF, XDP, images, adaptive forms, correspondence management assets) from one server to another - processes (LCA), settings, configurations, and a few other pieces of metadata are not migrated. Perform the following steps to migrate to AEM 6.3 Forms:
 
 1. Set up a fresh environment of [AEM 6.3 Forms](https://adobe.com/go/learn_aemforms_documentation_63).
-1. Move XDP or other compatible assets to the freshly set instance. For detailed instructions, see [Importing and exporting assets to AEM Forms](../../forms/using/import-export-forms-templates.md). [
-   ](../../forms/using/import-export-forms-templates.md)
+1. Move XDP or other compatible assets to the freshly set instance. For detailed instructions, see [Importing and exporting assets to AEM Forms](../../forms/using/import-export-forms-templates.md). [import templates](../../forms/using/import-export-forms-templates.md)
 1. Build the required services, if any.
 
    For example, if you are using AEM Forms on JEE Document Services, changes are required in the code to use document services available in AEM Forms on OSGi.
@@ -102,5 +107,6 @@ Migration involves moving only assets (PDF, XDP, images, adaptive forms, corresp
       In AEM 6.3 Forms, traffic variable for source and success event for impression are not available. So, when you upgrade to AEM 6.3 Forms, AEM Forms stops sending data to Adobe Analytics server and analytics reports for adaptive forms are not available. Moreover, AEM 6.3 Forms introduces traffic variable for the version of form analytics and success event for the amount of time spent on a field. So, reconfigure analytics and reports for your AEM Forms environment. For detailed steps, see [Configuring analytics and reports](../../forms/using/configure-analytics-forms-documents.md).
 
       Methods to calculate average fill time for forms and average read time for have changed. So, when you upgrade to AEM 6.3 forms, older data (data from previous AEM Forms release) for these metrics is available only in Adobe Analytics. It is not visible in AEM Forms analytics reports. For these metrics, AEM Forms analytics reports display data which is captured after performing the upgrade.
+
       
       -->

@@ -2,14 +2,13 @@
 title: 使用AEM Analyzer评估升级复杂性
 description: 了解如何使用AEM Analyzer评估升级的复杂性。
 topic-tags: upgrading
-content-type: reference
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 87c30912-c89a-42f1-b37b-ec439e7318c7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 6b846e456466492f4be2c1e5a1f6b3913ae4dab4
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2069'
 ht-degree: 15%
 
 ---
@@ -38,13 +37,13 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 
 ## 可用性 {#analyzer-availability}
 
-可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)以zip文件的形式下载AEM Analyzer。 您可以在源AEM实例上通过[包管理器](/help/sites-administering/package-manager.md)安装包。
+可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)以zip文件的形式下载AEM Analyzer。 您可以在源AEM实例上通过[包管理器](/help/sites-administering/package-manager.md)安装包。
 
 ## 使用AEM Analyzer的重要注意事项 {#important-considerations-for-using-aem-analyzer}
 
 请阅读以下章节，以了解运行AEM Analyzer时的重要注意事项：
 
-* 分析器报告是使用AEM [模式检测器](/help/sites-deploying/pattern-detector.md)的输出生成的。 Analyzer使用的模式检测器的版本包含在AEM Analyzer安装包中
+* 分析器报告是使用AEM模式检测器的输出生成的。 Analyzer使用的模式检测器的版本包含在AEM Analyzer安装包中
 * AEM Analyzer只能由&#x200B;**管理员**&#x200B;用户或&#x200B;**管理员**&#x200B;组中的用户运行
 * 版本6.5及更高版本的AEM实例支持Analyzer。
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: b4a1806c48ab0945f83691a597cad214c6d1b645
+source-git-commit: 96fdfc1f754358bc358595c10ba908a4aabce4af
 workflow-type: tm+mt
-source-wordcount: '6819'
+source-wordcount: '6802'
 ht-degree: 21%
 
 ---
@@ -403,7 +403,7 @@ ht-degree: 21%
 + Forms {#forms}
    + 发行说明 {#release-notes-new-features}
       + [新增功能](/help/forms/using/whats-new.md)
-      + [常见问题](/help/forms/using/frequently-asked-questions-faq.md)
+      + [常见问题解答](/help/forms/using/frequently-asked-questions-faq.md)
    + 快速入门 {#getting-started}
       + [AEM Forms简介](/help/forms/using/introduction-aem-forms.md)
       + [自适应表单创作简介](/help/forms/using/introduction-forms-authoring.md)
@@ -971,12 +971,9 @@ ht-degree: 21%
    + 开发人员参考{#developer-reference}
       + [HTML模板语言](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
       + 用于调试自适应表单的[AEM插件](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/)
-      + [AEM Forms Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html)
-      + [AEM Forms on JEE Java API参考](https://helpx.adobe.com/experience-manager/6-5/forms/programlc/javadoc/index.html)
       + [适用于HTML5表单的Form Bridge API](/help/forms/using/form-bridge-apis.md)
       + 自适应Forms的[JavaScript库API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)
       + [汇编程序服务和DDX引用](https://www.adobe.com/go/learn_aemforms_ddxRef_65)
-      + [Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65)
       + 在JEE {#programming-aem-forms-jee}上使用AEM Forms编程
          + 使用AEM Forms在JEE {#introduction-programming-aem-forms-jee}上进行编程的简介
             + [Java API快速入门简介](/help/forms/developing/introducing-java-api-soap-quick.md)

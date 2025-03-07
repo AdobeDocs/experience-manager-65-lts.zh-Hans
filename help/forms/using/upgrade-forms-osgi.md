@@ -6,9 +6,9 @@ role: Admin, User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, AEM Forms on OSGi, AEM Forms Upgrade
 exl-id: 9233d4b7-441c-4cbd-86f8-2c52b99c3330
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: dd45dfe953a111ccbbc71e8e25a8a2577037587a
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '837'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,6 @@ ht-degree: 1%
       1. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
    1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
    1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-   1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
    1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
       您还可以使用[AEM Forms发行版](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)文章中列出的直接链接下载包。
@@ -43,11 +42,9 @@ ht-degree: 1%
 
       如果服务器是通过脚本或服务启动的，请相应地更新以包含上述内容，以便在后续重新启动后生效。
 
-1. 重新启动AEM实例。
-
-   >[!NOTE]
-   >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+      >[!NOTE]
+      >
+      > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
 
 1. 执行安装后活动。
 

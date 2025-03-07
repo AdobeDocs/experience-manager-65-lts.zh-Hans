@@ -1,17 +1,13 @@
 ---
 title: 运行模式
 description: 了解如何使用运行模式出于特定目的调整AEM实例。
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: configuring
-content-type: reference
 feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: b21555f2-bc07-4653-a5da-966b9aa7ea1f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 3370d62eafb9339a9f9c638f3fb2e2ce0f14d9ec
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -38,18 +34,14 @@ ht-degree: 1%
 
 * `author`
 * `publish`
-* `samplecontent`
-* `nosamplecontent`
 
 这是两对互斥的运行模式；例如，您可以：
 
 * 定义`author`或`publish`，而不是同时定义两者
 
-* 将`author`与`samplecontent`或`nosamplecontent`合并（但不能同时与这两者）
-
 >[!CAUTION]
 >
->使用上述运行模式之一(author、publish、samplecontent、nosamplecontent)时，安装时使用的值将定义该安装的&#x200B;*整个生命周期*&#x200B;的运行模式。
+>使用上述运行模式之一（创作、发布）时，安装时使用的值定义该安装的&#x200B;*整个生命周期*&#x200B;的运行模式。
 >
 >对于这些运行模式，您&#x200B;*无法在安装后更改它们*。
 
@@ -68,16 +60,6 @@ ht-degree: 1%
 * 根据需要。.
 
 每次启动时也可以选择定制的运行模式。
-
-## 使用samplecontent和nosamplecontent {#using-samplecontent-and-nosamplecontent}
-
-这些模式允许您控制示例内容的使用。 示例内容是在构建快速入门之前定义的，可以包含包、配置等：
-
-* `samplecontent`运行模式将安装此内容（默认模式）。
-
-* `nosamplecontent`模式不安装示例内容。
-
-nosamplecontent运行模式专为生产安装而设计。
 
 ## 定义运行模式的配置属性 {#defining-configuration-properties-for-a-run-mode}
 

@@ -1,16 +1,13 @@
 ---
 title: AEM 6.5中的向后兼容性
 description: 了解如何保持您的应用程序和配置与Adobe Experience Manager (AEM) 6.5兼容
-contentOwner: sarchiz
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: upgrading
-content-type: reference
-docset: aem65
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
+hide: true
+hidefromtoc: true
 exl-id: 96e44da3-da89-4671-a4fb-19ce1b9a38c4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 10f0949f6317f060c38791cfe43156a56f8ebe47
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 1%
