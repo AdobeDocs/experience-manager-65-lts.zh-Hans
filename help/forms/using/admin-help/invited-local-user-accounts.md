@@ -4,8 +4,10 @@ description: 使用Document Security，您可以搜索、查看、编辑、锁�
 feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
+hide: true
+hidefromtoc: true
 exl-id: 194ad425-ca1a-4a6e-9f4e-094c4577cde9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 0%

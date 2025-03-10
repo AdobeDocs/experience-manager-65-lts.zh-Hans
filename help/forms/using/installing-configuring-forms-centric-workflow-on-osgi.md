@@ -7,10 +7,10 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,AEM Forms on OSGi
 exl-id: 4b316ade-4431-41fc-bb8a-7262a17fb456
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 3%
+source-wordcount: '1551'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 ## 简介 {#introduction}
 
-企业收集和处理来自多个表单、后端系统和其他数据源的数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，审阅表单并将其转换为 PDF 文档。 手动完成时，重复性任务可能需要大量时间和大量资源。
+企业从多个表单、后端系统和其他数据源收集和处理数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，审阅表单并将其转换为 PDF 文档。 手动完成时，重复性任务可能需要大量时间和大量资源。
 
 您可以在 [OSGi](../../forms/using/aem-forms-workflow.md) 上使用以表单为中心的工作流来快速构建自适应的基于表单的工作流。 这些工作流可以帮助您自动执行审阅和审批工作流、业务流程工作流以及其他重复性任务。 这些工作流程还有助于处理文档（创建、组合、分发和归档 PDF 文档，添加数字签名以限制对文档的访问，解码条形码格式等），以及将 Adobe Sign 签名工作流程用于表单和文档。
 
@@ -28,9 +28,7 @@ AEM Forms是一个功能强大的企业级平台。 OSGi上以Forms为中心的�
 
 >[!NOTE]
 >
->借助OSGi上以Forms为中心的工作流，您可以在OSGi栈栈上快速构建和部署用于各种任务的工作流，而无需在JEE栈栈上安装完整的流程管理功能。 查看OSGi上以Forms为中心的AEM工作流和JEE上的流程管理中的[比较](capabilities-osgi-jee-workflows.md)以了解功能的异同。
->
->比较后，如果选择在JEE栈栈上安装进程管理功能，请参阅[在JEE上安装或升级AEM Forms](/help/forms/using/introduction-aem-forms.md)，以了解有关安装和配置JEE栈栈以及进程管理功能的详细信息。
+>使用OSGi上以Forms为中心的工作流，您可以在OSGi栈栈<!--, without having to install the full-fledged Process Management capability on JEE stack-->.<!-- See a [comparison](capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE to learn the difference and similarities in the capabilities.--><!--After the comparison, If you choose to install the Process Management capability on JEE stack, see [Install or Upgrade AEM Forms on JEE](/help/forms/using/introduction-aem-forms.md) for detailed information about installing and configuring JEE stack and the Process Management capabilities.-->上快速构建和部署各种任务的工作流
 
 ## 部署拓扑 {#deployment-topology}
 
@@ -107,17 +105,17 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包中包含有�
    2. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
 1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
 1. 打开[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择程序包，然后单击“安装&#x200B;]**”。**[!UICONTROL 
+1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过AEM [Forms版本](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) 文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
 
-1. 安装包后，系统会提示您重新启动 AEM 实例。 **不要立即重新启动服务器。** 在停止 AEM Forms 服务器之前，请等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出现在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log 文件中，并且日志稳定。
+1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止 AEM Forms 服务器之前，请等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止出现在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log 文件中，并且日志稳定。
 
    >[!NOTE]
    >
    > 建议使用“Ctrl + C”命令重新启动 SDK。 使用替代方法（例如，停止 Java 进程）重新启动 AEM SDK 可能会导致 AEM 开发环境中出现不一致。
 
-1. 对所有创作实例和发布实例重复步骤1-7。
+1. 在所有创作和发布实例上重复步骤 1-7。
 
 ## 安装后配置 {#post-installation-configurations}
 

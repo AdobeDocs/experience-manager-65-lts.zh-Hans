@@ -1,31 +1,26 @@
 ---
 title: 迁移 AEM Forms 资产和文档
-description: 通过迁移实用程序，您可以将Adobe Experience Manager (AEM) Forms资源和文档从AEM 6.3 Forms或更早版本迁移到AEM 6.4 Forms。
+description: 通过迁移实用程序，您可以将Adobe Experience Manager (AEM) Forms资源和文档从AEM 6.5.22.0 Forms迁移到AEM 6.5 Forms LTS。
 content-type: reference
-topic-tags: correspondence-management, installing
-geptopics: SG_AEMFORMS/categories/jee
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-content-strategy: max-2018
-docset: aem65
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 636f7b61-549e-45c7-ab21-94bb90db2b22
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
 
 # 迁移 AEM Forms 资产和文档{#migrate-aem-forms-assets-and-documents}
 
-迁移实用程序将[自适应Forms资源](../../forms/using/introduction-forms-authoring.md)、[云配置](/help/sites-developing/extending-cloud-config.md)和[通信管理资源](/help/forms/using/cm-overview.md)从早期版本中使用的格式转换为Adobe Experience Manager (AEM) 6.5 Forms中使用的格式。 运行迁移实用程序时，将迁移以下内容：
+迁移实用程序将[自适应Forms资源](../../forms/using/introduction-forms-authoring.md)、[云配置](/help/sites-developing/extending-cloud-config.md)和[通信管理资源](/help/forms/using/cm-overview.md)从早期版本中使用的格式转换为Adobe Experience Manager (AEM) 6.5 LTS Forms中使用的格式。 运行迁移实用程序时，将迁移以下内容：
 
 * 自适应表单的自定义组件
 * 自适应表单和通信管理模板
 * 云配置
-* 通信管理和自适应表单资产
+* 通信管理和自适应的Forms资源
 
 >[!NOTE]
 >
@@ -33,11 +28,11 @@ ht-degree: 1%
 
 ## 迁移方法 {#approach-to-migration}
 
-您可以[将](../../forms/using/upgrade.md)从AEM Forms 6.4、6.3或6.2 升级到最新版本的AEM Forms 6.5，或者进行新的安装。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
+您可以从AEM Forms 6.5.22.0](/help/forms/using/upgrade-forms-osgi.md)将[升级](../../forms/using/upgrade.md)到[AEM Forms 6.5 LTS。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
 
 **如果有就地升级**
 
-如果您执行就地升级，则升级的实例已经具有资源和文档。 但是，必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)（包括通信管理兼容包），然后才能使用资源和文档
+如果您执行了[就地升级](/help/sites-deploying/in-place-upgrade.md)，则升级的实例已经具有资源和文档。 但是，必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)（包括通信管理兼容包），然后才能使用资源和文档。
 
 然后，您必须通过[运行迁移实用程序](#runningmigrationutility)来更新资源和文档。
 
@@ -62,7 +57,7 @@ ht-degree: 1%
 * 由于AEM 6.1 Forms已弃用发布准备就绪状态，因此所有处于发布准备就绪状态的资源都将更改为已修改状态。
 * 由于用户界面在AEM Forms 6.3中进行了更新，因此执行自定义设置的步骤也有所不同。 如果您是从6.3之前的版本迁移，请重做自定义设置。
 * 布局片段从`/content/apps/cm/layouts/fragmentlayouts/1001`移至`/content/apps/cm/modules/fragmentlayouts`。 资产中的数据字典引用显示数据字典的路径而不是其名称。
-* 必须重新调整用于文本模块中对齐的任何制表符空格。 有关详细信息，请参阅[通信管理 — 使用制表符间距排列文本](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)。
+* 必须重新调整用于文本模块中对齐的任何制表符空格。<!--For more information, see [Correspondence Management - Using tab spacing for arranging text](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)-->。
 * 资产编辑器配置会更改为通信管理配置。
 * Assets将移动到名为“现有文本”和“现有列表”等文件夹的下。
 
