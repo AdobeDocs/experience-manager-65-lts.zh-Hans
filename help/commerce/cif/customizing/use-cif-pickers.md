@@ -3,14 +3,13 @@ title: CIF产品和类别选取器的用法
 description: 了解如何在客户商务组件中使用CIF产品和类别选取器，以支持作者和营销人员高效地使用商务产品和目录数据。
 sub-product: Commerce
 topics: Development
-version: Cloud Service
 activity: develop
 audience: developer
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 25442753-8309-452b-881a-d33ab159d5b2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d571dc696e42bae873cd58f2e7f321bd3002f42e
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%

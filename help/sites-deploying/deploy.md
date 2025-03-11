@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 57302061656ebf37a49041753dd5eb34e7ba22ef
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1221'
 ht-degree: 3%
 
 ---
@@ -38,21 +38,21 @@ ht-degree: 3%
    * [解压缩的安装目录](#unpacked-install-directory)
    * [启动和停止](#starting-and-stopping)
 
-熟悉这些基础知识后，您便可以在以下子页面中找到更高级和详细的信息：
+<!-- Once you have familiarized yourself with these basics, you can find in more advanced and detailed information in the following subpages:
 
-* [技术要求](/help/sites-deploying/technical-requirements.md)
-* [建议的部署](/help/sites-deploying/recommended-deploys.md)
-* [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
-* [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
-* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置](/help/sites-deploying/configuring.md)
-* [升级到AEM 6.5](/help/sites-deploying/upgrade.md)
-* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 控制台](/help/sites-deploying/web-console.md)
-* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳实践](/help/sites-deploying/best-practices.md)
-* [AEM平台简介](/help/sites-deploying/platform.md)
-* [性能准则](/help/sites-deploying/performance-guidelines.md)
+* [Technical Requirements](/help/sites-deploying/technical-requirements.md)
+* [Recommended Deployments](/help/sites-deploying/recommended-deploys.md)
+* [Custom Standalone Install](/help/sites-deploying/custom-standalone-install.md)
+* [Application Server Install](/help/sites-deploying/application-server-install.md)
+* [Command Line Start and Stop](/help/sites-deploying/command-line-start-and-stop.md)
+* [Configuring](/help/sites-deploying/configuring.md)
+* [Upgrading to AEM 6.5](/help/sites-deploying/upgrade.md)
+* [Configuration How-To Articles](/help/sites-deploying/ht-deploy.md)
+* [Web Console](/help/sites-deploying/web-console.md)
+* [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
+* [Best Practices](/help/sites-deploying/best-practices.md)
+* [Introduction to the AEM Platform](/help/sites-deploying/platform.md)
+* [Performance Guidelines](/help/sites-deploying/performance-guidelines.md) -->
 
 ## 基本概念 {#basic-concepts}
 
@@ -79,7 +79,7 @@ AEM服务器基于&#x200B;**Java**，并且在支持该平台的大多数操作�
 
 >[!NOTE]
 >
->AEM 6.5 QuickStart中提供的自适应Forms功能仅供探索和评估之用。 由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
+>AEM 6.5 LTS QuickStart中提供的自适应Forms功能仅供探索和评估之用。 由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
 
 ### 典型部署方案 {#typical-deployment-scenarios}
 
@@ -102,37 +102,23 @@ AEM服务器基于&#x200B;**Java**，并且在支持该平台的大多数操作�
 
 ### 内部部署 {#on-premise}
 
-您可以在公司环境中的服务器上安装AEM。 典型安装实例包括：开发、测试和发布环境。 有关如何获取AEM软件以便在本地安装的基本详细信息，请参阅[快速入门](/help/sites-deploying/deploy.md#getting%20started)。
+您可以在公司环境中的服务器上安装AEM。 典型安装实例包括：开发、测试和发布环境。 有关如何获取AEM软件以便在本地安装的基本详细信息，请参阅[快速入门](#getting-started)。
 
-若要了解有关典型内部部署的更多信息，请参阅[推荐的部署](/help/sites-deploying/recommended-deploys.md)。
+<!-- To learn more about the typical on-premises deployments, see [Recommended Deployments](/help/sites-deploying/recommended-deploys.md). -->
 
 ### 使用Cloud Manager的Managed Services {#managed-services-using-cloud-manager}
 
-AEM Managed Services是数字体验管理的完整解决方案。 它提供了云中体验交付解决方案的优势，同时保留了内部部署的所有控制、安全和自定义优势。 AEM Managed Services通过在云中部署并借鉴Adobe的最佳实践和支持，使客户能够更快地启动。 组织和企业用户可以在最短的时间内吸引客户、提高市场份额并专注于创建创新的营销活动，同时减轻IT负担。
-
-通过AEM Managed Services，客户可以实现以下优势：
-
-**加快上市时间：**&#x200B;利用Adobe Managed Services的灵活云基础架构，组织可以快速规划、启动和优化成功的数字体验。 Adobe无需额外资金、硬件或软件即可管理云架构，而Adobe的客户解决方案工程师可协助完成AEM架构、配置、连接到后端应用程序的自定义操作以及上线最佳实践。
-
-**更高的性能：**&#x200B;通过四个服务可用性选项（99.5%、99.9%、99.95%和99.99%），为您的企业提供可靠的数字体验。 此外，它还支持自动备份和多模式灾难恢复模式，以帮助确保可靠性和应急管理。
-
-**优化的IT成本：**&#x200B;主动指导和专业知识可帮助组织及时了解最新版本的AEM。 Adobe Platinum维护和支持自动包含在AMS Enterprise/Basic的新部署中，提供技术专业知识和操作经验以帮助企业维护其任务关键型应用程序。 免费的基本Analytics或Target功能可提供附加价值，尤其是对于分析和个性化需求有限的中端市场组织。
-
-**最高安全性：**&#x200B;通过在受限访问设施、防火墙系统后面或虚拟专用云中托管客户应用程序，确保企业级物理、网络和数据安全性。 它包括具有强健的数据存储加密、防病毒和数据隔离的单租户虚拟机。
-
-**Cloud Manager**： Cloud Manager是Adobe Experience Manager Managed Services产品的一部分，它是一个自助服务门户，进一步使组织能够在云中自行管理Adobe Experience Manager。 它包含一流的持续集成和持续交付(CI/CD)管道，使IT团队和实施合作伙伴能够在不影响性能或安全性的情况下加速自定义项或更新的交付。 Cloud Manager仅适用于Adobe Managed Service客户。
-
-要了解有关Cloud Manger及其资源的更多信息，请参阅&#x200B;[**Cloud Manager用户指南**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)。
+<i>即将宣布。</i>
 
 ## 快速入门 {#getting-started}
 
 ### 前提条件 {#prerequisites}
 
-虽然生产实例在运行官方支持的操作系统的专用计算机上运行（请参阅[技术要求](/help/sites-deploying/technical-requirements.md)），但Experience Manager服务器实际上将在支持&#x200B;[**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8)的任何系统上运行。
+虽然生产实例在运行官方支持的操作系统的专用计算机上运行（请参阅[技术要求](/help/sites-deploying/technical-requirements.md)），但Experience Manager服务器实际上将在支持&#x200B;[**Java™ Standard Edition 17**](https://www.oracle.com/java/technologies/downloads/#java17)的任何系统上运行。
 
 为了熟悉和开发AEM，通常使用安装在运行Apple OS X或Microsoft®Windows或Linux®桌面版本的本地计算机上的实例。
 
-在客户端，AEM可与桌面和平板电脑操作系统上的所有现代浏览器(**Microsoft® Edge**、**Internet Explorer** 11、**Chrome **51+** **、**Firefox **47+、**Safari** 8+)配合使用。 有关详细信息，请参阅[支持的客户端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
+在客户端，AEM可与桌面操作系统和平板电脑操作系统上的所有现代浏览器(**Microsoft® Edge**、**Chrome **51+** **、**Firefox **47+、**Safari** 8+)配合使用。 有关详细信息，请参阅[支持的客户端平台](/help/sites-deploying/technical-requirements.md#supported-client-platforms)。
 
 ### 获取软件 {#getting-the-software}
 
@@ -140,9 +126,9 @@ AEM Managed Services是数字体验管理的完整解决方案。 它提供了�
 
 AEM软件包有两种形式：
 
-* **cq-quickstart-6.5.0.jar：**&#x200B;独立的可执行文件&#x200B;*jar*，其中包含运行所需的一切。
+* **CQ AEM 6.5 LTS jar：**&#x200B;独立的可执行文件&#x200B;*jar*，其中包含您需要运行的所有内容。
 
-* **cq-quickstart-6.5.0.war：**&#x200B;在第三方应用程序服务器中部署的&#x200B;*war*&#x200B;文件。
+* **CQ AEM 6.5 LTS WAR：**&#x200B;在第三方应用程序服务器中部署的&#x200B;*war*&#x200B;文件。
 
 在以下部分中，我们介绍了&#x200B;**独立安装**。 有关在应用程序服务器中安装AEM的详细信息，请参阅[应用程序服务器安装](/help/sites-deploying/application-server-install.md)。
 
@@ -164,18 +150,18 @@ AEM软件包有两种形式：
 
    ```shell
    <aem-install>/
-       cq-quickstart-6.5.0.jar
+       <aem-65-lts>.jar
        license.properties
    ```
 
    如果您未提供`license.properties`文件，AEM会将您的浏览器重定向到启动时的&#x200B;**欢迎**&#x200B;屏幕，您可以在其中输入许可证密钥。 如果您还没有许可证密钥，则需要向Adobe请求有效的许可证密钥。
 
-1. 要在GUI环境中启动实例，请双击&#x200B;**`cq-quickstart-6.5.0.jar`**&#x200B;文件。
+1. 要在GUI环境中启动实例，请双击&#x200B;**`<aem-65-lts>.jar`**&#x200B;文件。
 
    或者，您可以从命令行启动AEM：
 
    ```shell
-       java -Xmx1024M -jar cq-quickstart-6.5.0.jar
+       java -Xmx1024M -jar <aem-65-lts>.jar
    ```
 
 AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述过程会导致：
@@ -217,7 +203,7 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 有关自定义安装的更多详细信息，请参阅以下内容：
 
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
-* [运行模式](/help/sites-deploying/configure-runmodes.md)
+<!-- * [Run Modes](/help/sites-deploying/configure-runmodes.md) -->
 
 ### 解压缩的安装目录 {#unpacked-install-directory}
 
@@ -226,7 +212,7 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 ```xml
 <aem-install>/
     license.properties
-    cq-quickstart-6.5.0.jar
+    <aem-65-lts>.jar
     crx-quickstart/
         app/
         bin/
@@ -279,28 +265,28 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 `https://localhost:4502/`
 
 ![登录屏幕](assets/screen_shot_2019-04-08at83533am.png)
+<!-- 
+After you are logged in, you have access to AEM. For more information, depending on your role, see the following:
 
-登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
+* [Authoring](/help/sites-authoring/first-steps.md)
+* [Administering](/help/sites-administering/home.md)
+* [Developing](/help/sites-developing/getting-started.md)
+* [Managing](/help/managing/best-practices.md)
 
-* [创作](/help/sites-authoring/first-steps.md)
-* [管理](/help/sites-administering/home.md)
-* [开发](/help/sites-developing/getting-started.md)
-* [管理](/help/managing/best-practices.md)
+## Advanced Deployment {#advanced-deployment}
 
-## 高级部署 {#advanced-deployment}
+The above section should give you a good understanding of the basics of AEM installation. However, installing a full production system of AEM can involve considerably more complexity. For full coverage of advanced installation see the following subpages:
 
-通过上部分，您应该能够很好地了解AEM安装的基础知识。 但是，安装AEM的完整生产系统可能会涉及更大的复杂性。 有关高级安装的完整介绍，请参阅以下子页面：
-
-* [技术要求](/help/sites-deploying/technical-requirements.md)
-* [建议的部署](/help/sites-deploying/recommended-deploys.md)
-* [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
-* [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
-* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置](/help/sites-deploying/configuring.md)
-* [升级到AEM 6.5](/help/sites-deploying/upgrade.md)
-* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 控制台](/help/sites-deploying/web-console.md)
-* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳实践](/help/sites-deploying/best-practices.md)
-* [AEM平台简介](/help/sites-deploying/platform.md)
-* [性能准则](/help/sites-deploying/performance-guidelines.md)
+* [Technical Requirements](/help/sites-deploying/technical-requirements.md)
+* [Recommended Deployments](/help/sites-deploying/recommended-deploys.md)
+* [Custom Standalone Install](/help/sites-deploying/custom-standalone-install.md)
+* [Application Server Install](/help/sites-deploying/application-server-install.md)
+* [Command Line Start and Stop](/help/sites-deploying/command-line-start-and-stop.md)
+* [Configuring](/help/sites-deploying/configuring.md)
+* [Upgrading to AEM 6.5](/help/sites-deploying/upgrade.md)
+* [Configuration How-To Articles](/help/sites-deploying/ht-deploy.md)
+* [Web Console](/help/sites-deploying/web-console.md)
+* [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
+* [Best Practices](/help/sites-deploying/best-practices.md)
+* [Introduction to the AEM Platform](/help/sites-deploying/platform.md)
+* [Performance Guidelines](/help/sites-deploying/performance-guidelines.md) -->

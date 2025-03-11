@@ -9,9 +9,9 @@ feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 114a77bc-0b7e-49ce-bca1-e5195b4884dc
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 3cbc2ddd4ff448278e678d1a73c4ee7ba3af56f4
 workflow-type: tm+mt
-source-wordcount: '5696'
+source-wordcount: '5139'
 ht-degree: 0%
 
 ---
@@ -78,18 +78,15 @@ ht-degree: 0%
 
 ## 全压实模式和尾压实模式  {#full-and-tail-compaction-modes}
 
-**AEM 6.5**&#x200B;为联机修订清理进程的&#x200B;**压缩**&#x200B;阶段引入了&#x200B;**两种新模式**：
+**AEM 6.5 LTS**&#x200B;对于联机修订清理进程的&#x200B;**压缩**&#x200B;阶段具有&#x200B;**两种模式**：
 
-* **完全压缩**&#x200B;模式重写整个存储库中的所有区段和tar文件。 因此，后续清理阶段可以清除整个存储库中的最大垃圾量。 由于完全压缩会影响整个存储库，因此它需要大量系统资源和时间才能完成。 完全压缩对应于AEM 6.3中的压缩阶段。
+* **完全压缩**&#x200B;模式重写整个存储库中的所有区段和tar文件。 因此，后续清理阶段可以清除整个存储库中的最大垃圾量。 由于完全压缩会影响整个存储库，因此它需要大量系统资源和时间才能完成。
 * **尾部压缩**&#x200B;模式仅重写存储库中最近的区段和tar文件。 最新的区段和tar文件是自上次运行完全或尾部压缩以来添加的区段。 因此，随后的清理阶段只能清除存储库最近部分中包含的垃圾。 由于尾部压缩仅影响存储库的一部分，因此它比完全压缩需要更少的系统资源和完成时间。
 
 这些压实方式构成了效率与资源消耗之间的权衡：尾压实效果较差，对系统正常运行的影响也较小。 相比之下，完全压实更有效，但对系统正常运行的影响更大。
 
-AEM 6.5还在压缩期间引入了更高效的内容重复数据删除机制，从而进一步减少存储库在磁盘上的占用空间。
+AEM 6.5 LTS在压缩期间具有高效的内容重复数据删除机制，从而进一步减少存储库在磁盘上的占用空间。
 
-下面的两张图表展示了内部实验室测试的结果，这些结果说明了与AEM 6.3相比，AEM 6.5减少了平均执行时间以及磁盘上的平均占用空间：
-
-![onrc-duration-6_4vs63](assets/onrc-duration-6_4vs63.png) ![segmentstore-6_4vs63](assets/segmentstore-6_4vs63.png)
 
 ### 如何配置完全压缩和尾压缩 {#how-to-configure-full-and-tail-compaction}
 
@@ -108,7 +105,7 @@ AEM 6.5还在压缩期间引入了更高效的内容重复数据删除机制，�
 使用新的压缩模式时，请牢记以下事项：
 
 * 您可以监视输入/输出(I/O)活动，例如：I/O操作、CPU等待IO、提交队列大小。 这有助于确定系统是否正在进行I/O绑定并需要升级。
-* `RevisionCleanupTaskHealthCheck`指示联机修订清理的整体运行状况状态。 它的工作方式与AEM 6.3中的相同，并且不区分完全压缩和尾压缩。
+* `RevisionCleanupTaskHealthCheck`指示联机修订清理的整体运行状况状态。
 * 日志消息包含有关压缩模式的相关信息。 例如，当“联机修订清理”启动时，相应的日志消息将指示压缩模式。 此外，在某些角落情况下，当计划运行尾压缩时，系统恢复为完全压缩，并且日志消息指示此更改。 以下日志示例指示压缩模式以及从尾到完全压缩的更改：
 
 ```
@@ -123,83 +120,6 @@ TarMK GC: no base state available, running full compaction instead
 **建议磁盘大小至少比最初估计的存储库大小大两到三倍。**
 
 ## 联机修订清理常见问题解答 {#online-revision-cleanup-frequently-asked-questions}
-
-### AEM 6.5升级注意事项 {#aem-upgrade-considerations}
-
-<table style="table-layout:auto">
- <tbody>
-  <tr>
-   <td>问题 </td>
-   <td>答案</td>
-  </tr>
-  <tr>
-   <td>升级到AEM 6.5时应该了解什么？</td>
-   <td><p>TarMK的持久性格式随AEM 6.5而变化。这些更改不需要主动迁移步骤。 现有存储库会经历滚动迁移，这对于用户是透明的。 首次访问AEM 6.5（或相关工具）存储库时，将启动迁移过程。</p> <p><strong>迁移到AEM 6.5持久性格式后，存储库无法恢复为之前的AEM 6.3持久性格式。</strong></p> </td>
-  </tr>
- </tbody>
-</table>
-
-### 迁移到Oak Segment Tar {#migrating-to-oak-segment-tar}
-
-<table style="table-layout:auto">
- <tbody>
-  <tr>
-   <td><strong>问题</strong></td>
-   <td><strong>答案</strong></td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>为什么需要迁移存储库？</strong></td>
-   <td><p>在AEM 6.3中，需要对存储格式进行更改，尤其是为了提高在线修订清理的性能和效率。 这些更改无法向后兼容，必须迁移使用旧的Oak区段(AEM 6.2及更低版本)创建的存储库。</p> <p>更改存储格式的其他好处：</p>
-    <ul>
-     <li>更好的可扩展性（优化的区段大小）。</li>
-     <li>更快的<a href="/help/sites-administering/data-store-garbage-collection.md" target="_blank">数据存储垃圾收集</a>.<br /> </li>
-     <li>为未来的增强功能做基础工作。</li>
-    </ul> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>是否仍支持以前的Tar格式？</strong></td>
-   <td>AEM 6.3或更高版本仅支持新的Oak区段Tar。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>内容迁移是否始终是强制性的？</strong></td>
-   <td>是。除非从新的实例开始，否则将始终需要迁移内容。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>我是否可以升级到6.3或更高版本，并稍后进行迁移（例如，使用其他维护时段）？</strong></td>
-   <td>否，如上所述，内容迁移是强制性的。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>迁移时能否避免停机？</strong></td>
-   <td>不行。这是一次性工作，无法在正在运行的实例上完成。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>如果意外地针对错误的存储库格式运行，会发生什么情况？</strong></td>
-   <td>如果您尝试对oak-segment-tar存储库运行oak-segment模块（或反之），启动将失败，并出现<em>IllegalStateException</em>消息和“区段格式无效”。 没有发生数据损坏。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>是否需要重新索引搜索索引？</strong></td>
-   <td>不行。从oak-segment迁移到oak-segment-tar会引入容器格式的更改。 包含的数据不受影响，也不会被修改。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>如何最好地计算迁移期间和迁移后所需的预期磁盘空间？</strong></td>
-   <td>迁移等同于以新格式重新创建区段存储。 这可用于估计迁移期间所需的额外磁盘空间。 迁移后，可以删除旧区段存储以回收空间。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>如何最好地估计迁移的持续时间？</strong></td>
-   <td>如果在迁移之前执行<a href="/help/sites-deploying/revision-cleanup.md#how-to-run-offline-revision-cleanup">脱机修订清理</a>，则迁移性能会得到很大提高。 建议所有客户在升级过程中先执行此步骤。 通常，迁移的持续时间应与脱机修订清除任务的持续时间相似，假定已在迁移之前执行了脱机修订清除任务。</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
 
 ### 正在运行联机修订版清理 {#running-online-revision-cleanup}
 
@@ -243,11 +163,6 @@ TarMK GC: no base state available, running full compaction instead
   <tr>
    <td><strong>“创作”和“发布”通常会有不同的“在线修订清理”窗口吗？</strong></td>
    <td>这取决于办公时间和客户在线状态的流量模式。 维护窗口应在主生产时间之外进行配置，以实现最佳的清理效果。 对于多个AEM发布实例（TarMK场），用于在线修订版清理的维护窗口应交错进行。</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><strong>运行在线修订版清理之前是否有任何先决条件？</strong></td>
-   <td><p>只有AEM 6.3及更高版本才提供在线修订清理。 此外，如果您使用的是较低版本的AEM，则必须迁移到新的<a href="/help/sites-deploying/revision-cleanup.md#migrating-to-oak-segment-tar">Oak区段Tar</a>。</p> </td>
    <td> </td>
   </tr>
   <tr>
