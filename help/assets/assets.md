@@ -1,15 +1,15 @@
 ---
 title: 简介 [!DNL Adobe Experience Manager Assets]
-description: 在 Experience Manager 中创建、管理、处理和分发数字资源。这些指南介绍了最佳实践、辅助功能以及如何使用 AEM 6.5 资源。
+description: 在 Experience Manager 中创建、管理、处理和分发数字资源。这些指南介绍了最佳实践、辅助功能以及如何使用AEM 6.5 LTS资源。
 hide: true
 feature: Asset Management
 role: Leader, Architect, User
 solution: Experience Manager, Experience Manager Assets
 exl-id: 2f2eb576-4924-4314-b348-c4b290a57fe3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: aafd340d9ef03f9bf12ed23aad5eb03dc055af38
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 4%
+source-wordcount: '902'
+ht-degree: 3%
 
 ---
 

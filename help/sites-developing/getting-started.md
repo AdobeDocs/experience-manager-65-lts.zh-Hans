@@ -1,16 +1,11 @@
 ---
 title: AEM Site 开发入门 – WKND 教程
 description: 了解如何生成您的 AEM 实例。详细了解平台和组件并找到有关开发工具和个性化的信息。
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: introduction
-docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: eac6c640-1c00-4fd9-9858-50fa2a0ea1ef
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: fa066f9b822f1d5883e79610b239b13224a62fe0
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 80%
