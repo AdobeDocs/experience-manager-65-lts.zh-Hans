@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: 96fdfc1f754358bc358595c10ba908a4aabce4af
+source-git-commit: 3cc47de71aec7e110b55f511ceaa0d314a1369ef
 workflow-type: tm+mt
-source-wordcount: '6802'
+source-wordcount: '6798'
 ht-degree: 21%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 21%
    + [相同网站Cookie支持](/help/sites-administering/same-site-cookie-support.md)
    + [在 Adobe Developer Console 中弃用 JWT 凭据](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [为AEM设置IMS集成](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
-+ Site {#sites}
++ Sites {#sites}
    + 创作 {#authoring}
       + AEM创作{#essentials}的基本任务、工具和概念
          + [作者的首要步骤](/help/sites-authoring/first-steps.md)
@@ -112,8 +112,8 @@ ht-degree: 21%
          + [个性化](/help/sites-authoring/personalization.md)
          + [使用 ContextHub 数据预览页面](/help/sites-authoring/ch-previewing.md)
          + [使用定位模式创作目标内容](/help/sites-authoring/content-targeting-touch.md)
-         + [在多个 Site 中使用目标内容](/help/sites-authoring/multisite-support-targeted-content.md)
-         + [如何构建目标内容的多 Site 管理](/help/sites-authoring/technical-multisite-targeted.md)
+         + [在多个 Sites 中使用目标内容](/help/sites-authoring/multisite-support-targeted-content.md)
+         + [如何构建目标内容的多 Sites 管理](/help/sites-authoring/technical-multisite-targeted.md)
          + [管理活动](/help/sites-authoring/activitylib.md)
          + [管理受众](/help/sites-authoring/managing-audiences.md)
          + [创建和管理产品建议](/help/sites-authoring/offerlib.md)
@@ -136,7 +136,7 @@ ht-degree: 21%
          + [MSM 转出冲突](/help/sites-administering/msm-rollout-conflicts.md)
          + [解决 MSM 问题和常见问题](/help/sites-administering/troubleshoot-msm.md)
          + [MSM 最佳实践](/help/sites-administering/msm-best-practices.md)
-         + [翻译多语言 Site 的内容](/help/sites-administering/translation.md)
+         + [翻译多语言 Sites 的内容](/help/sites-administering/translation.md)
          + [管理翻译项目](/help/sites-administering/tc-manage.md)
          + [标识要翻译的内容](/help/sites-administering/tc-rules.md)
          + [准备内容以进行翻译](/help/sites-administering/tc-prep.md)
@@ -367,13 +367,13 @@ ht-degree: 21%
       + [为您的实例启用内容片段功能](/help/assets/content-fragments/content-fragments-configuration-browser.md)
       + [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
       + [管理内容片段](/help/assets/content-fragments/content-fragments-managing.md)
-      + [变体 – 创作片段内容](/help/assets/content-fragments/content-fragments-variations.md)
+      + [变体——创作片段内容](/help/assets/content-fragments/content-fragments-variations.md)
       + [内容片段关联内容](/help/assets/content-fragments/content-fragments-assoc-content.md)
-      + [元数据 – 片段属性](/help/assets/content-fragments/content-fragments-metadata.md)
-      + [内容片段 – 关于删除的注意事项](/help/assets/content-fragments/content-fragments-delete.md)
+      + [元数据——片段属性](/help/assets/content-fragments/content-fragments-metadata.md)
+      + [内容片段——关于删除的注意事项](/help/assets/content-fragments/content-fragments-delete.md)
       + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
       + [结构树](/help/assets/content-fragments/content-fragments-structure-tree.md)
-      + [预览 – JSON 呈现](/help/assets/content-fragments/content-fragments-json-preview.md)
+      + [预览——JSON 呈现](/help/assets/content-fragments/content-fragments-json-preview.md)
       + [为内容片段创建翻译项目](/help/assets/creating-translation-projects-for-content-fragments.md)
    + 管理Assets {#managing}
       + [管理数字资产](/help/assets/manage-assets.md)
@@ -1128,12 +1128,12 @@ ht-degree: 21%
       + [可选 - 如何使用 AEM 创建单页应用程序](/help/journey-headless/developer/create-spa.md)
    + AEM Headless 内容架构师历程 {#architect}
       + [AEM Headless 内容架构师历程概述](/help/journey-headless/architect/overview.md)
-      + [使用 AEM 对 Headless 进行内容建模 – 简介](/help/journey-headless/architect/introduction.md)
+      + [使用 AEM 对 Headless 进行内容建模——简介](/help/journey-headless/architect/introduction.md)
       + [了解使用 AEM 对 Headless 进行内容建模的基础知识](/help/journey-headless/architect/basics.md)
       + [了解如何在 AEM 中创建内容片段模型](/help/journey-headless/architect/model-structure.md)
    + AEM Headless内容创作历程{#author}
-      + [AEM Headless 内容创作历程 – 概述](/help/journey-headless/author/overview.md)
-      + [使用 AEM 为 Headless 创作 – 简介](/help/journey-headless/author/introduction.md)
+      + [AEM Headless 内容创作历程——概述](/help/journey-headless/author/overview.md)
+      + [使用 AEM 为 Headless 创作——简介](/help/journey-headless/author/introduction.md)
       + [使用 AEM 为 Headless 创作基本内容](/help/journey-headless/author/basics.md)
       + [了解如何在内容片段中使用参考内容](/help/journey-headless/author/references.md)
       + [了解如何为内容片段定义元数据和标记](/help/journey-headless/author/metadata-tagging.md)
@@ -1149,7 +1149,7 @@ ht-degree: 21%
 + 实施 {#implementing}
    + 开发 {#developing}
       + 开发人员简介{#introduction}
-         + [AEM Site 开发入门 – WKND 教程](/help/sites-developing/getting-started.md)
+         + [AEM Sites 开发入门——WKND 教程](/help/sites-developing/getting-started.md)
          + [AEM核心概念](/help/sites-developing/the-basics.md)
          + [AEM触屏优化UI的结构](/help/sites-developing/touch-ui-structure.md)
          + [AEM触屏优化UI的概念](/help/sites-developing/touch-ui-concepts.md)
@@ -1407,7 +1407,6 @@ ht-degree: 21%
          + [修订版清理](/help/sites-deploying/revision-cleanup.md)
          + [Oak查询和索引](/help/sites-deploying/queries-and-indexing.md)
          + [如何在TarMK冷待机状态下运行AEM](/help/sites-deploying/tarmk-cold-standby.md)
-         + [AEM中的RDBMS支持](/help/sites-deploying/rdbms-support-in-aem.md)
          + [通过Oak-run Jar编制索引](/help/sites-deploying/indexing-via-the-oak-run-jar.md)
          + [Oak-run.jar索引用例](/help/sites-deploying/oak-run-indexing-usecases.md)
          + [Oak索引疑难解答](/help/sites-deploying/troubleshooting-oak-indexes.md)

@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: af957cd7-ad3d-46f2-9ca5-e175538104f1
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: b87199e70b4fefc345c86eabbe89054d4b240e95
 workflow-type: tm+mt
-source-wordcount: '6216'
+source-wordcount: '6217'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ AEM作者已连接到`mongod`实例，每个AEM作者均连接到所有三个`mo
 
 ### 操作系统 {#operating-systems}
 
-有关AEM 6支持的操作系统的列表，请参阅[技术要求页面](/help/sites-deploying/technical-requirements.md)。
+有关AEM 6.5 LTS支持的操作系统的列表，请参阅[技术要求页面](/help/sites-deploying/technical-requirements.md)。
 
 ### 环境 {#environments}
 
@@ -649,7 +649,7 @@ Header set X-Content-Type-Options "nosniff"  env=jsonp_request
 Header setifempty Content-Type application/javascript env=jsonp_request
 ```
 
-#### 内容安全策略 {#content-security-policy}
+#### 内容安全性策略 {#content-security-policy}
 
 默认的Dispatcher设置允许打开内容安全策略（也称为CSP）。 这些设置允许页面根据浏览器沙盒的默认策略从所有域加载资源。
 
