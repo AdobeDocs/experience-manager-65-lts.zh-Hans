@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: 3cc47de71aec7e110b55f511ceaa0d314a1369ef
+source-git-commit: 5405b449377e464b7311b09f2f854488e404c1fd
 workflow-type: tm+mt
 source-wordcount: '6798'
 ht-degree: 21%
@@ -1281,7 +1281,7 @@ ht-degree: 21%
          + [使用 React 快速入门](/help/sites-developing/spa-getting-started-react.md)
          + [为 SPA 实施 React 组件](/help/sites-developing/spa-implementing-react-component.md)
          + [使用 Angular 快速入门](/help/sites-developing/spa-getting-started-angular.md)
-         + [SPA 深入了解](/help/sites-developing/spa-deep-dives.md)
+         + [SPA 深入了解](/help/sites-developing/spa-deep-dives-gems.md)
          + [为 AEM 开发 SPA](/help/sites-developing/spa-architecture.md)
          + [SPA 编辑器概述](/help/sites-developing/spa-overview.md)
          + [SPA Blueprint](/help/sites-developing/spa-blueprint.md)
