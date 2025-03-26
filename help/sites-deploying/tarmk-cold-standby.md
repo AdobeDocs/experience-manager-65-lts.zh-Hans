@@ -12,7 +12,7 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 71e3d2cd-4e22-44a2-88dd-1f165bf2b3d8
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: eb6903d0a34e9f9e90eaeee3ca6a89d1a2622dd0
 workflow-type: tm+mt
 source-wordcount: '2672'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Tar微内核的冷备用容量允许一个或多个备用Adobe Experience Manage
 
 #### 性能 {#performance}
 
-在主实例上启用TarMK冷备用对性能几乎没有可衡量的影响。 额外的CPU使用量很低，额外的硬盘和网络IO应该不会产生和性能问题。
+在主实例上启用TarMK冷备用对性能几乎没有可衡量的影响。 额外的CPU使用量很低，额外的硬盘和网络IO应该不会产生任何性能问题。
 
 在待机状态下，您可能会在同步过程中消耗大量的CPU。 由于该过程不是多线程的，因此不能通过使用多个内核来加速该过程。 如果未更改或传输任何数据，则不存在可衡量的活动。 连接速度因硬件和网络环境而异，但并不取决于存储库的大小或SSL的使用。 在估计初始同步所需的时间或在主节点上同时更改许多数据时，请记住这一点。
 
