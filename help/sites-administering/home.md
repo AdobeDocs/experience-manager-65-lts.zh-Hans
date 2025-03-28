@@ -1,6 +1,6 @@
 ---
 title: AEM 6.5 LTS Administering用户指南
-description: 了解如何管理AEM 6.5 LTS。 这些指南涵盖站点功能、部署操作、安全功能、个性化、集成等。
+description: 了解如何管理 AEM 6.5 LTS。这些指南涉及站点功能、部署操作、安全功能、个性化、集成等内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
@@ -8,13 +8,13 @@ exl-id: 1ef575fc-5fc4-43ca-978e-911118dad438
 source-git-commit: 3db401e19e0d819760acb3b470d0beda2c16dc5d
 workflow-type: tm+mt
 source-wordcount: '67'
-ht-degree: 14%
+ht-degree: 71%
 
 ---
 
 # AEM 6.5 LTS Administering用户指南
 
-了解如何管理AEM 6.5 LTS。 这些指南涵盖站点功能、部署操作、安全功能、个性化、集成等。
+了解如何管理 AEM 6.5 LTS。这些指南涉及站点功能、部署操作、安全功能、个性化、集成等内容。
 
 ## 关键管理文章
 

@@ -1,6 +1,6 @@
 ---
 title: AEM Forms简介
-description: 使用此AEM 6.5 LTS指南创建、管理、发布和更新数字表单。 查找有关安装、升级和配置数字表单的帮助，并了解如何创作自适应表单。
+description: 使用此 AEM 6.5 LTS 指南创建、管理、发布和更新数字表单。查找有关安装、升级和配置数字表单的帮助，并了解如何创作自适应表单。
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
@@ -8,7 +8,7 @@ exl-id: e9549ac9-0ada-4661-969a-709f0ed3b133
 source-git-commit: 3b83225e1150f1e623997c9ece6329de995148be
 workflow-type: tm+mt
 source-wordcount: '951'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 作者在AEM中创建内容时的首要步骤
-description: 探索在AEM 6.5 LTS中创建内容和创作的主要概念。 您还可以找到有关使用标记、模板和其他页面功能的信息。
+description: 浏览在 AEM 6.5 LTS 中创建内容和创作的关键概念。您还将找到有关使用标记、模板和其他页面功能的信息。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
@@ -8,7 +8,7 @@ exl-id: 8fc30cfe-cb10-47ba-911c-e4fdfaa970b5
 source-git-commit: 31370571843508acfb5d1e5cc491fdb043153a8f
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 5%
+ht-degree: 12%
 
 ---
 
