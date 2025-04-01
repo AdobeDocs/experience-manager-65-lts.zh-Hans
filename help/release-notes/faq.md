@@ -1,13 +1,14 @@
 ---
-title: 常见问题解答(FAQ)
+title: 常见问题解答（FAQ）
 description: 有关AEM 6.5 LTS的常见问题解答。
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 2e9f8f59fd068e9e296c20e1d930fdbe2f5d30b1
+exl-id: d18c9dc3-fdcc-4558-b9b6-ecf1ce61048a
+source-git-commit: 3677c3921a7dd603afd251aebf4be67947fb1e02
 workflow-type: tm+mt
 source-wordcount: '257'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,7 +22,7 @@ Adobe始终致力于维护其提供的应用程序的安全性和稳定性。 AE
 
 ## 我是内部部署客户，如果不升级到AEM 6.5 LTS，会发生什么？
 
-AEM 6.5 LTS包括重要的安全和稳定性更新，包括对Oracle Java 17的支持。 虽然Adobe在至少未来3年中将继续支持AEM 6.5，但建议各组织开始计划升级到6.5 LTS。
+AEM 6.5 LTS包括重要的安全和稳定性更新，包括对Oracle Java 17的支持。 虽然Adobe在至少未来2年内将继续支持AEM 6.5，但建议各组织开始计划升级到6.5 LTS。
 
 ## 我现有的自定义项和集成是否会受到影响？
 
