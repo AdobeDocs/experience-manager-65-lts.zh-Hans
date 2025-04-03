@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: 3ef72c05-1301-402e-94ce-49fbaf26fb98
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: aff6c41e13293a1c83eca226354f5c16cff18d99
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2147'
 ht-degree: 8%
 
 ---
@@ -83,7 +83,7 @@ AEM会向符合以下条件的用户发送电子邮件通知：
 
 ## 配置工作流电子邮件通知服务 {#configuring-the-workflow-email-notification-service}
 
-当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀都会设置为默认值。 您可以通过在Web控制台中配置&#x200B;**Day CQ工作流电子邮件通知服务**&#x200B;来更改这些值。 如果这样做，建议将更改保留在存储库中。
+当您收到工作流电子邮件通知时，发件人电子邮件地址和主机URL前缀都会设置为默认值。 您可以通过在Web控制台中配置&#x200B;**Day CQ工作流电子邮件通知服务**&#x200B;来更改这些值。 如果这样做，您必须在存储库中保留更改。
 
 在Web控制台中，默认配置如下所示：
 
