@@ -10,10 +10,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
 exl-id: 22cfa2bc-04af-49e6-b9b1-51112c96ba23
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: c759cb6830810b0b822cd66f8a29cbcf4f2851eb
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 81%
+source-wordcount: '892'
+ht-degree: 73%
 
 ---
 
@@ -21,7 +21,9 @@ ht-degree: 81%
 
 使用启动项，您可以有效地开发内容的将来版本。
 
-创建启动项，以便为将来发布所做的更改做好准备（同时维护当前页面）。 编辑和更新启动页面后，需将其提升回源，然后激活源页面（顶层）。提升会将启动项内容复制回源页面，此操作可以手动或自动完成（具体取决于创建和编辑启动项时设置的字段）。
+创建&#x200B;*Launch*&#x200B;是为了允许您进行更改以准备将来发布，同时维护当前页面。 这意味着您要同时有效编辑两个版本：当前已发布的页面，以及将来要同时发布的这些页面的一个版本。 到达该时间后，您可以替换原始页面并发布新版本。
+
+您创建了一个&#x200B;*Launch*，然后在编辑和更新&#x200B;*Launch*&#x200B;页面后，您&#x200B;*将它们提升回* Source *。*&#x200B;然后，您可以激活这些&#x200B;*Source*&#x200B;页面（顶级）。 提升会将启动项内容复制回源页面，此操作可以手动或自动完成（具体取决于创建和编辑启动项时设置的字段）。
 
 例如，您的在线商店上的季节性产品页面会每季更新，这样就能保证特色产品符合当季需求。要准备下一季度的更新，您需要创建相应网页的启动项。在整个季度期间，启动副本中会累积以下更改：
 
