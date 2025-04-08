@@ -1,5 +1,5 @@
 ---
-title: 在AEM 6中配置节点存储和数据存储
+title: 在AEM 6.5 LTS中配置节点存储和数据存储
 description: 了解如何配置节点存储和数据存储，以及如何执行数据存储垃圾收集。
 content-type: reference
 topic-tags: deploying
@@ -10,14 +10,14 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 69d94737-41d0-47bb-b914-f7606becd038
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 0e60c406a9cf1e5fd13ddc09fd85d2a2f8a410f6
 workflow-type: tm+mt
-source-wordcount: '3461'
+source-wordcount: '3330'
 ht-degree: 1%
 
 ---
 
-# 在AEM 6中配置节点存储和数据存储{#configuring-node-stores-and-data-stores-in-aem}
+# 在AEM 6.5 LTS中配置节点存储和数据存储{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 简介 {#introduction}
 
@@ -46,19 +46,10 @@ ht-degree: 1%
 
 ## 节点存储配置 {#node-store-configurations}
 
->[!CAUTION]
->
->较新版本的Oak为OSGi配置文件采用新的命名方案和格式。 新的命名方案要求配置文件名为&#x200B;**.config**，而新格式要求键入值。 有关详细信息，请参阅[Apache Sling配置模型和Apache SlingStart — 默认配置格式](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format)。
->
->如果您从旧版Oak升级，请确保首先备份`crx-quickstart/install`文件夹。 升级后，将文件夹的内容还原到已升级的安装，并将配置文件的扩展名从&#x200B;**.cfg**&#x200B;修改为&#x200B;**.config**。
-
 ### 区段节点存储 {#segment-node-store}
 
-区段节点存储是Adobe在AEM6中实施TarMK的基础。 它使用`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` PID进行配置。
+区段节点存储是Adobe在AEM 6.5 LTS中实施TarMK的基础。 它使用`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService` PID进行配置。
 
->[!CAUTION]
->
->区段节点存储的PID已从AEM 6的`org.apache.jackrabbit.oak.plugins.segment.SegmentNodeStoreService in previous versions`更改为AEM 6.3中的`org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`。确保进行必要的配置调整以反映此更改。
 
 您可以配置以下选项：
 
@@ -86,7 +77,7 @@ customBlobStore=B"true"
 
 * `mongouri`：连接到Mongo数据库所需的[MongoURI](https://docs.mongodb.org/manual/reference/connection-string/)。 默认值为`mongodb://localhost:27017`
 
-* `db`： Mongo数据库的名称。 默认数据库名称为&#x200B;**Oak** ``. However, new AEM 6 installations use **aem-author** ``。
+* `db`： Mongo数据库的名称。 默认值为&#x200B;**aem-author**。
 
 * `cache`：缓存大小(MB)。 它分布在DocumentNodeStore中使用的各种缓存中。 默认值为`256`
 
@@ -143,9 +134,9 @@ customBlobStore=B"false"
 
 >[!NOTE]
 >
->AEM 6.5支持在Amazon的S3中存储数据，但是不支持在其他平台中存储数据，因为这些平台的供应商可能拥有自己实施的Amazon S3 API。
+>AEM 6.5 LTS支持在Amazon的S3中存储数据，但是不支持在其他平台中存储数据，因为这些平台的供应商可能拥有自己的Amazon S3 API实施。
 
-要启用S3数据存储功能，必须下载并安装包含S3数据存储连接器的功能包。 转到[Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)，并从功能包的1.10.x版本（例如，com.adobe.granite.oak.s3connector-1.10.0.zip）下载最新版本。 此外，还必须下载并安装[AEM 6.5发行说明](/help/release-notes/release-notes.md)页面上列出的最新AEM Service Pack。
+要启用S3数据存储功能，必须下载并安装包含S3数据存储连接器的功能包。 转到[Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)，并从功能包的1.60.x版本（例如，com.adobe.granite.oak.s3connector-1.60.2.zip）下载最新版本。 此外，还必须下载并安装[AEM 6.5 LTS发行说明](/help/release-notes/release-notes.md)页面上列出的最新AEM Service Pack。
 
 >[!NOTE]
 >
@@ -189,9 +180,9 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 1. 编辑文件并添加安装程序所需的配置选项。
 1. 启动AEM。
 
-## 升级到1.10.x S3连接器的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
+## 升级到1.60.x S3连接器的新版本 {#upgrading-to-a-new-version-of-the-s-connector}
 
-要升级到新版本的1.10.x S3连接器（例如，从1.10.0升级到1.10.4），请执行以下步骤：
+要升级到新版本的1.60.x S3连接器，请执行以下步骤：
 
 1. 停止AEM实例。
 
@@ -205,7 +196,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    >
    >上述文件名仅用于说明目的。
 
-1. 从[Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)下载1.10.x功能包的最新版本。
+1. 从[Software Distribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/s3-connector/6-5-lts/com.adobe.granite.oak.s3connector-1.60.2.zip)下载1.60.x功能包的最新版本。
 1. 将内容解压缩到单独的文件夹，然后导航到`jcr_root/libs/system/install/15`。
 1. 将jar文件复制到AEM安装文件夹中的&#x200B;**&lt;aem-install>**/crx-quickstart/install/15。
 1. 启动AEM并检查连接器功能。
@@ -413,7 +404,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 可以将AEM配置为将数据存储在Microsoft® Azure存储服务中。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID进行配置。
 
-要启用Azure数据存储功能，必须下载并安装包含Azure连接器的功能包。 转到[Adobe存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/)，并从功能包的1.6.x版本（例如，com.adobe.granite.oak.azureblobconnector-1.6.3.zip）下载最新版本。
+要启用Azure数据存储功能，必须下载并安装包含Azure连接器的功能包。 转到[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/azure-connector/6-5-lts/com.adobe.granite.oak.azureblobconnector-1.9.16.zip)并从1.9.x版的功能包下载最新版本（例如，com.adobe.granite.oak.azureblobconnector-1.9.16.zip）。
 
 >[!NOTE]
 >

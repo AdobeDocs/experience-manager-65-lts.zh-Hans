@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 9baa4111-831a-4b68-9ce5-82aeeb06e07f
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: d0e6fe09ddafabd5da06d53a69b85adad295e415
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -96,6 +96,10 @@ ht-degree: 0%
 * 故障转移
 
 ### 带有MongoMK故障转移功能的Oak群集，可在单个数据中心实现高可用性 {#oak-cluster-with-mongomk-failover-for-high-availability-in-a-single-datacenter}
+
+>[!NOTE]
+>
+>最低支持的Mongo版本为Mongo 6。
 
 此方法意味着多个Oak实例在单个数据中心内访问一个MongoDB副本集，实际上就是为AEM创作环境创建一个主动 — 主动群集。 MongoDB中的副本集用于在硬件或网络出现故障时提供高可用性和冗余。
 

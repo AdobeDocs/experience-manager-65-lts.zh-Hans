@@ -12,14 +12,18 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: af957cd7-ad3d-46f2-9ca5-e175538104f1
-source-git-commit: b87199e70b4fefc345c86eabbe89054d4b240e95
+source-git-commit: 0e60c406a9cf1e5fd13ddc09fd85d2a2f8a410f6
 workflow-type: tm+mt
-source-wordcount: '6217'
+source-wordcount: '5965'
 ht-degree: 0%
 
 ---
 
 # 带有MongoDB的Adobe Experience Manager{#aem-with-mongodb}
+
+>[!NOTE]
+>
+>最低支持的Mongo版本为Mongo 6。
 
 本文旨在帮助您更好地了解成功使用MongoDB部署AEM (Adobe Experience Manager)所需的任务和注意事项。
 
@@ -74,8 +78,6 @@ AEM作者已连接到`mongod`实例，每个AEM作者均连接到所有三个`mo
 
 ### RAM {#ram}
 
-使用MMAP存储引擎的MongoDB版本2.6和3.0要求数据库的工作集及其索引适应RAM。
-
 RAM不足会导致性能显着降低。 工作集和数据库的大小与应用程序高度相关。 虽然可以做出一些估计，但确定所需RAM量的最可靠方法是构建AEM应用程序并对其进行负载测试。
 
 为了帮助执行负载测试过程，可以假定工作集与数据库总大小的比率如下：
@@ -85,11 +87,9 @@ RAM不足会导致性能显着降低。 工作集和数据库的大小与应用�
 
 这些比率意味着对于SSD部署，2 TB的数据库需要200 GB的RAM。
 
-MongoDB 3.0中的WiredTiger存储引擎也存在同样的限制，但工作集、RAM和页面故障之间的相关性并不强。 WiredTiger使用的内存映射与MMAP存储引擎不同。
-
 >[!NOTE]
 >
->对于使用MongoDB 3.0的AEM 6.1部署，Adobe建议使用WiredTiger存储引擎。
+>对于使用MongoDB 6或更高版本的AEM 6.5 LTS部署，Adobe建议使用WiredTiger存储引擎。
 
 ### 数据存储 {#data-store}
 
@@ -235,8 +235,6 @@ cacheSizeInMB=128
 
 ### 操作系统支持 {#operating-system-support}
 
-MongoDB 2.6使用内存映射存储引擎，该引擎对RAM和磁盘之间操作系统级别管理的某些方面很敏感。 MongoDB实例的查询和读取性能依赖于避免或消除通常称为页面错误的慢速I/O操作。 这些问题尤其适用于`mongod`进程的页面错误。 请勿将此与操作系统级别的页面错误混为一谈。
-
 为了快速操作，MongoDB数据库应仅访问RAM中已存在的数据。 它必须访问的数据由索引和数据组成。 此索引和数据集合称为工作集。 当工作集大于可用RAM时，MongoDB必须从磁盘中分页该数据，从而产生I/O开销，并逐出内存中已有的其他数据。 如果逐出导致从磁盘重新加载数据，则页面故障会占主导地位，性能会降低。 如果工作集是动态的、可变的，则会产生更多的页面错误来支持操作。
 
 MongoDB运行在多种操作系统上，包括各种Linux®风格、Windows和macOS。 有关其他详细信息，请参阅[https://docs.mongodb.com/manual/installation/#supported-platforms](https://docs.mongodb.com/manual/installation/#supported-platforms)。 根据您选择的操作系统，MongoDB具有不同的操作系统级别建议。 在[https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration](https://docs.mongodb.com/manual/administration/production-checklist-operations/#operating-system-configuration)有文档记录，为方便起见，请单击此处进行总结。
@@ -246,7 +244,6 @@ MongoDB运行在多种操作系统上，包括各种Linux®风格、Windows和ma
 * 关闭透明的hugepages和碎片整理。 有关详细信息，请参阅[透明大页面设置](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/)。
 * [调整存储数据库文件的设备上的预读设置](https://docs.mongodb.com/manual/administration/production-notes/#readahead)，以适合您的使用案例。
 
-   * 对于MMAPv1存储引擎，如果您的工作集大于可用的RAM，并且文档访问模式是随机的，请考虑将预读数降低到32或16。 评估不同的设置，以便找到使驻留内存最大化并降低页面错误数的最佳值。
    * 对于WiredTiger存储引擎，无论存储介质类型（旋转、SSD等）如何，均将预读设置为0。 通常，使用推荐的预读设置，除非测试显示可在更高的预读值中获得可衡量、可重复和可靠的好处。 [MongoDB专业支持](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可以提供有关非零预读配置的建议和指导。
 
 * 如果在虚拟环境中运行RHEL 7 / CentOS 7，请禁用优化工具。
@@ -358,11 +355,13 @@ WiredTiger内部缓存中的数据与磁盘格式的数据使用不同的表示�
 
 ### NUMA {#numa}
 
-NUMA（非统一内存访问）允许内核管理如何将内存映射到处理器内核。 尽管此过程尝试使核心的内存访问速度更快，以确保它们能够访问所需数据，但NUMA会干扰MMAP，引入额外的延迟，因为无法预测读取次数。 因此，必须在所有支持的操作系统上为`mongod`进程禁用NUMA。
+NUMA（非统一内存访问）允许内核管理如何将内存映射到处理器内核。
 
 实质上，在NUMA体系结构中，存储器连接到CPU，CPU连接到总线。 在SMP或UMA体系结构中，内存连接到总线并由CPU共享。 当线程在NUMA CPU上分配内存时，它会根据策略进行分配。 默认分配附加到线程的本地CPU的内存，除非没有空闲内存，否则此时它会以更高的成本使用来自可用CPU的内存。 分配后，内存不会在CPU之间移动。 分配由从父线程（最终是启动进程的线程）继承的策略执行。
 
-在许多将计算机视为多核统一内存体系结构的数据库中，这种情况导致初始CPU先被填充，而次要CPU稍后被填充。 如果中心线程负责分配内存缓冲区，则尤其如此。 解决方法是通过运行以下命令来更改用于启动`mongod`进程的主线程的NUMA策略：
+在具有非统一内存访问(NUMA)的系统上运行MongoDB可能会导致许多操作问题，包括一段时间性能缓慢、无法使用所有可用的RAM以及系统进程利用率高。
+
+解决方法是通过运行以下命令来更改用于启动`mongod`进程的主线程的NUMA策略：
 
 ```shell
 numactl --interleaved=all <mongod> -f config
@@ -676,10 +675,6 @@ CSP允许微调策略。 但是，在复杂的应用程序中，开发CSP标头�
 虽然MongoMK支持在单个数据库上并发使用多个AEM实例，但不支持并发安装。
 
 要解决此问题，请确保先使用单个成员运行安装，然后在第一个成员完成安装后添加其他成员。
-
-### 页面名称长度 {#page-name-length}
-
-如果AEM在MongoMK持久性管理器部署上运行，[页面名称限制为150个字符。](/help/sites-authoring/managing-pages.md)
 
 >[!NOTE]
 >
