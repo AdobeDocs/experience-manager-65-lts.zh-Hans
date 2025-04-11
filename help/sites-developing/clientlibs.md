@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
 exl-id: cafc7120-114e-487a-8b81-9c695318731e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a061c19dcb883b94ee61be21459c46e21eaf696a
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 1%
@@ -91,17 +91,17 @@ ht-degree: 1%
 <ui:includeClientLib categories="cq.jquery"/>
 ```
 
-生成的HTML页面包含以下代码：
+生成的HTML页包含以下代码：
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 ```
 
-有关完整信息，包括筛选JS、CSS或主题库的属性，请参阅[ui：includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
+有关完整信息（包括用于筛选JS、CSS或主题库的属性），请参阅[ui：includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`过去通常用于包含客户端库，但自AEM 5.6之后已弃用。应改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
+>`<cq:includeClientLib>`以前常用于包含客户端库，但自AEM 5.6以来已弃用。应改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
 
 ## 创建客户端库文件夹 {#creating-client-library-folders}
 
@@ -139,13 +139,13 @@ Web客户端必须具有访问`cq:ClientLibraryFolder`节点的权限。 您还�
 >
 >为了更好地将代码与内容和配置隔离，建议在`/apps`下找到客户端库，并使用`allowProxy`属性通过`/etc.clientlibs`公开它们。
 
-为了能够访问`/apps`下的客户端库，使用了代理servelt。 仍在客户端库文件夹上强制执行ACL，但如果`allowProxy`属性设置为`true`，则servlet允许通过`/etc.clientlibs/`读取内容。
+为了能够访问`/apps`下的客户端库，使用了代理servlet。 仍在客户端库文件夹上强制执行ACL，但如果`allowProxy`属性设置为`true`，则servlet允许通过`/etc.clientlibs/`读取内容。
 
 如果静态资源位于客户端库文件夹下的资源下，则只能通过代理访问。
 
 例如：
 
-* 您在`/apps/myproject/clientlibs/foo`中有一个clientlib
+* 您在`/apps/myprojects/clientlibs/foo`中有一个clientlib
 * 您在`/apps/myprojects/clientlibs/foo/resources/icon.png`中有一个静态图像
 
 然后，将`foo`上的`allowProxy`属性设置为true。
@@ -328,16 +328,16 @@ AEM允许可插拔的预处理器，并随附对CSS和JavaScript的[YUI Compress
 
 * 定义可以处理脚本源的ScriptProcessors
 * 处理器可通过选项进行配置
-* 处理器可用于缩小，也可用于非缩小情况
-* clientlib可以定义要使用的处理器
+* 处理器可用于缩减，也可用于非缩小的情况
+* 客户端库可以定义要使用的处理器
 
 >[!NOTE]
 >
->默认情况下，AEM使用YUI压缩程序。 有关已知问题的列表，请参阅[YUI压缩程序GitHub文档](https://github.com/yui/yuicompressor/issues)。 为特定clientlibs切换到GCC压缩程序可以解决使用YUI时观察到的一些问题。
+>默认情况下，AEM使用YUI压缩器。 有关已知问题的列表，请参阅[YUI压缩器GitHub文档](https://github.com/yui/yuicompressor/issues)。 针对特定客户端库切换到GCC压缩程序可能会解决使用YUI时观察到的一些问题。
 
 >[!CAUTION]
 >
->请勿将缩小的库放置在客户端库中。 而是提供原始库，如果需要缩小，请使用预处理器的选项。
+>不要将缩小的库放入客户端库中。 而是应提供Raw库，如果需要缩减，请使用预处理器的选项。
 
 ### 用途 {#usage}
 
@@ -345,7 +345,7 @@ AEM允许可插拔的预处理器，并随附对CSS和JavaScript的[YUI Compress
 
 * 在clientlibrary节点上添加多值属性`cssProcessor`和`jsProcessor`
 
-* 或通过&#x200B;**HTML Library Manager** OSGi配置定义系统默认配置
+* 或通过&#x200B;**系统库管理器** OSGi配置定义HTML默认配置
 
 clientlib节点上的预处理器配置优先于OSGI配置。
 
@@ -400,7 +400,7 @@ compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advance
 
    如果用分号分隔，例如`min:gcc;obfuscate=true`，则可以传递选项。
 
-1. 点击&#x200B;**保存**&#x200B;即可保存更改。
+1. 单击&#x200B;**保存**&#x200B;即可保存更改。
 
 ## 调试工具 {#debugging-tools}
 
