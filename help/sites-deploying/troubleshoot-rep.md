@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 015def31-c7de-42b3-8218-1284afcb6921
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: fb94bea433b95462e61376fe10ed9defe4eab551
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -33,8 +33,7 @@ ht-degree: 0%
 
 **单击“激活”按钮时是否触发复制？ 如果NOT，则执行以下操作：**
 
-1. 前往/crx/explorer并以管理员身份登录。
-1. 打开“内容资源管理器”
+1. 前往/crx/de/index.jsp并以管理员身份登录。
 1. 查看节点/bin/replicate或/bin/replicate.json是否存在。 如果该节点存在，则将其删除并保存。
 
 **复制是否在复制代理队列中排队？**
@@ -76,12 +75,12 @@ ht-degree: 0%
 有时，将所有复制日志记录设置为在DEBUG级别添加到单独的日志文件中会很有帮助。 要执行此操作：
 
 1. 前往https://host:port/system/console/configMgr并以管理员身份登录。
-1. 找到Apache Sling日志记录器工厂，并单击工厂配置右侧的&#x200B;**+**&#x200B;按钮创建一个实例。 这将创建新的日志记录器。
+1. 查找Apache Sling日志记录器配置，并通过单击工厂配置右侧的&#x200B;**+**&#x200B;按钮创建实例。 这将创建新的日志记录器。
 1. 设置配置，如下所示：
 
    * 日志级别： DEBUG
-   * 日志文件路径： logs/replication.log
-   * 类别： com.day.cq.replication
+   * 日志文件：logs/replication.log
+   * 记录器：com.day.cq.replication
 
 1. 如果您怀疑该问题与任何方式的Sling事件/作业相关，则还可以将此Java™包添加到类别：org.apache.sling.event下
 

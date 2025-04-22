@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: b840d970-9365-4df3-8467-e34abd940074
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: fb94bea433b95462e61376fe10ed9defe4eab551
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3287'
 ht-degree: 1%
 
 ---
@@ -60,18 +60,26 @@ ht-degree: 1%
 
 ### 复制 — 开箱即用 {#replication-out-of-the-box}
 
-AEM的标准安装中包含的We-Retail网站可用于说明复制。
+按照[创建和组织页面](/help/sites-authoring/managing-pages.md)创建页面。
 
 要遵循此示例并使用默认复制代理，请[安装AEM](/help/sites-deploying/deploy.md)：
 
+
 * 端口`4502`上的创作环境
 * 端口`4503`上的发布环境
+
+此操作将从创作环境中进行，方法是：
+
+* **默认代理（发布）**
+此代理会将内容复制到默认发布实例。
+可从创作环境的“工具”控制台访问此的详细信息（配置和日志）；或：
+  `http://localhost:4502/etc/replication/agents.author/publish.html`。
 
 >[!NOTE]
 >
 >默认启用：
 >
->* 创作代理：默认代理（发布）
+>* 创作代理：如果为默认代理（发布），请确保先启用它，然后再继续。
 >
 >默认情况下有效禁用(自AEM 6.1起)：
 >
@@ -84,19 +92,13 @@ AEM的标准安装中包含的We-Retail网站可用于说明复制。
 #### 复制（创作到发布） {#replication-author-to-publish}
 
 1. 导航到创作环境上的支持页面。
-   **https://localhost:4502/content/we-retail/us/en/experience.html** `<pi>`
+   **https://localhost:4502/content/site1/test.html** `<pi>`
 1. 编辑页面，以便添加新文本。
 1. **激活页面**，以便发布更改。
 1. 在发布环境中打开支持页面：
-   **https://localhost:4503/content/we-retail/us/en/experience.html**
+   **https://localhost:4503/content/site1/test.html**
 1. 您现在可以看到您在“创作”中输入的更改。
 
-此操作将从创作环境中进行，方法是：
-
-* **默认代理（发布）**
-此代理会将内容复制到默认发布实例。
-可从创作环境的“工具”控制台访问此的详细信息（配置和日志）；或：
-  `https://localhost:4502/etc/replication/agents.author/publish.html`。
 
 #### 复制代理 — 现成可用 {#replication-agents-out-of-the-box}
 
@@ -108,7 +110,7 @@ AEM的标准安装中包含的We-Retail网站可用于说明复制。
 * Dispatcher Flush
 用于管理Dispatcher缓存。 有关详细信息，请参阅[使创作环境中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)和[使发布实例中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
 
-* [反向复制](#reverse-replication-publish-to-author)
+* [反向复制](#configuring-reverse-replication)
 用于从Publish复制到Author。 反向复制不用于Communities功能，例如论坛、博客和评论。 由于未启用发件箱，因此该功能实际上已被禁用。 使用反向复制需要自定义配置。
 
 * 静态代理
