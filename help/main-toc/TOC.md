@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: bec8386db59691ae2d0346afc0cbd48fbc4890de
+source-git-commit: 3f644c8df73281bc35bd91a552f8e86aaae2dd4a
 workflow-type: tm+mt
-source-wordcount: '6800'
+source-wordcount: '6797'
 ht-degree: 22%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 22%
          + [内容分析](/help/sites-authoring/content-insights.md)
          + [创建无障碍内容（WCAG 2.1 合规性）](/help/sites-authoring/creating-accessible-content.md)
          + [在设计模式下配置组件](/help/sites-authoring/default-components-designmode.md)
-         + [Foundation 组件 ](/help/sites-authoring/default-components-foundation.md)
+         + [Foundation 组件](/help/sites-authoring/default-components-foundation.md)
          + [查看页面分析数据](/help/sites-authoring/page-analytics-using.md)
       + 项目 {#projects}
          + [项目](/help/sites-authoring/projects.md)
@@ -125,7 +125,7 @@ ht-degree: 22%
          + [定位Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
          + [在AEM中创建Adobe Campaign Forms](/help/sites-authoring/adobe-campaign-forms.md)
          + [Adobe Campaign组件](/help/sites-authoring/adobe-campaign-components.md)
-   + 管理 {#administering}
+   + 管理  {#administering}
       + [管理用户指南概述](/help/sites-administering/home.md)
       + 站点功能 {#introduction}
          + [MSM 和翻译](/help/sites-administering/msm-and-translation.md)
@@ -238,7 +238,7 @@ ht-degree: 22%
          + [页面导出程序](/help/sites-administering/page-exporter.md)
          + [经典UI标记控制台](/help/sites-administering/classic-console.md)
          + [WebDAV访问](/help/sites-administering/webdav-access.md)
-+ 资源 {#assets}
++ 资产 {#assets}
    + [关于DAM](/help/assets/assets.md)
    + [资产最佳实践](/help/assets/best-practices-for-assets.md)
    + [ [!DNL Assets] 中的辅助功能](/help/assets/accessibility.md)
@@ -387,7 +387,7 @@ ht-degree: 22%
       + [准备要翻译的资产](/help/assets/preparing-assets-for-translation.md)
       + [从Experience Manager下载资源](/help/assets/download-assets-from-aem.md)
       + [灯箱](/help/assets/light-box.md)
-      + [Assets insights](/help/assets/asset-insights.md)
+      + [资产洞察](/help/assets/asset-insights.md)
       + [通过DTM启用资产分析](/help/assets/use-dtm-for-asset-insights.md)
       + [配置资产分析](/help/assets/configure-asset-insights.md)
       + [签入和签出资源](/help/assets/check-out-and-submit-assets.md)
@@ -782,7 +782,7 @@ ht-degree: 22%
       + [创建自定义工具栏布局](/help/forms/using/creating-custom-toolbar-layout.md)
       + [根据使用的模板显示组件](/help/forms/using/displaying-components-based-on-template.md)
       + [创建自定义自适应表单主题](/help/forms/using/creating-custom-adaptive-form-themes.md)
-   + 交易报告 {#transaction-reports}
+   + 交易报告  {#transaction-reports}
       + [交易报告概览](/help/forms/using/transaction-reports-overview-jee-osgi.md)
       + OSGi上AEM Forms的交易报表 {#transaction-reports-osgi}
          + [交易报表](/help/forms/using/transaction-reports-overview.md)
@@ -1092,14 +1092,14 @@ ht-degree: 22%
    + 集成 {#integrations}
       + [Adobe Commerce](/help/commerce/cif/integrating/magento.md)
       + [第三方商业解决方案](/help/commerce/cif/integrating/third-party.md)
-   + AEM店面 {#storefront}
+   + AEM 店面 {#storefront}
       + [快速入门](/help/commerce/cif/getting-started.md)
       + 创作 {#authoring}
          + [Commerce 体验](/help/commerce/cif/authoring/authoring-commerce-experiences.md)
          + [产品 Cockpit](/help/commerce/cif/authoring/product-cockpit.md)
          + [用关联内容扩充产品数据](/help/commerce/cif/authoring/enrich-product-associated-content.md)
          + [产品推荐](/help/commerce/cif/authoring/product-recommendations.md)
-      + 管理 {#administering}
+      + 管理  {#administering}
          + [多存储设置](/help/commerce/cif/configuring/multi-store-setup.md)
          + [多模板使用](/help/commerce/cif/configuring/multi-template-usage.md)
          + [配置 SEO 的 URL](/help/commerce/cif/configuring/advanced-url-configuration.md)
@@ -1122,7 +1122,7 @@ ht-degree: 22%
       + [AEM Headless 快速入门](/help/journey-headless/developer/getting-started.md)
       + [首次 AEM Headless 使用体验的路径](/help/journey-headless/developer/path-to-first-experience.md)
       + [如何将内容建模为 AEM 内容模型](/help/journey-headless/developer/model-your-content.md)
-      + [如何通过 AEM 交付 API 访问您的内容](/help/journey-headless/developer/access-your-content.md)
+      + [如何通过 AEM 传递 API 访问您的内容](/help/journey-headless/developer/access-your-content.md)
       + [如何通过 AEM Assets API 更新您的内容](/help/journey-headless/developer/update-your-content.md)
       + [如何融于一起](/help/journey-headless/developer/put-it-all-together.md)
       + [如何使用 Headless 应用程序上线](/help/journey-headless/developer/go-live.md)
@@ -1226,7 +1226,7 @@ ht-degree: 22%
       + [AEM 中的 Headful 和 Headless](/help/sites-developing/headful-headless.md)
       + Headless 体验管理 {#headless}
          + [Headless 和 AEM](/help/sites-developing/headless/introduction.md)
-         + Headless历程 {#journeys}
+         + Headless 历程  {#journeys}
             + Headless 开发人员历程 {#developer}
                + [了解AEM中的Headless](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/overview.html)
                + [了解 CMS Headless 开发](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/learn-about.html)
@@ -1238,7 +1238,7 @@ ht-degree: 22%
                + [如何将其整合在一起](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/put-it-all-together.html)
                + [如何使用 Headless 应用程序上线](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/go-live.html)
                + [可选 — 如何使用AEM创建单页应用程序](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/developer/create-spa.html)
-            + Headless内容架构师历程 {#architect}
+            + Headless 内容架构师历程  {#architect}
                + [AEM Headless内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/overview.html)
                + 使用AEM对Headless进行[内容建模 — 简介](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/introduction.html)
                + [了解使用AEM对Headless进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html)
@@ -1432,7 +1432,6 @@ ht-degree: 22%
          + [性能优化](/help/sites-deploying/configuring-performance.md)
          + [Assets Performance指南](/help/sites-deploying/assets-performance-sizing.md)
          + [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
-         + [配置Web控制台](/help/sites-deploying/configuring-web-console.md)
       + 升级到AEM 6.5 LTS {#upgrading}
          + [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
          + [规划升级](/help/sites-deploying/upgrade-planning.md)

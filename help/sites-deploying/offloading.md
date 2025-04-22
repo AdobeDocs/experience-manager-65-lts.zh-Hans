@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: c0b285b7-3b20-4412-88b8-04de4a703f42
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 3f644c8df73281bc35bd91a552f8e86aaae2dd4a
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2323'
 ht-degree: 1%
 
 ---
@@ -80,9 +80,9 @@ Sling JobManager和JobConsumer允许创建拓扑中处理的作业：
 * 为其注册了实例以进行卸载的作业主题。
 * 实例处理的作业主题。
 
-1. 使用Touch UI，单击“工具”选项卡。 ([http://localhost:4502/tools.html](http://localhost:4502/tools.html))
-1. 在“Granite操作”区域中，单击“卸载浏览器”。
-1. 在导航面板中，单击拓扑浏览器。
+1. 使用Touch UI，单击“工具”选项卡。 ([http://localhost:4502/aem/start.html](http://localhost:4502/aem/start.html))
+1. 要查看卸载，请单击“部署”部分中的卸载拼贴。
+1. 要查看拓扑，请单击“部署”部分中的拓扑拼贴。
 
    此时将显示参与拓扑的群集。
 
@@ -100,7 +100,7 @@ Sling JobManager和JobConsumer允许创建拓扑中处理的作业：
 请按下列步骤打开Web控制台的“拓扑管理”页：
 
 1. 在浏览器中打开Web控制台。 ([http://localhost:4502/system/console](http://localhost:4502/system/console))
-1. 单击“Main（主）”>“Topology Management（拓扑管理）”。
+1. 单击Sling >拓扑管理。
 
    ![chlimage_1-112](assets/chlimage_1-112.png)
 
@@ -263,13 +263,13 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 
 `offloading_<slingid>`，其中`<slingid>`是辅助进程实例的Sling ID。
 
-示例： `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
+示例：`offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **在创作实例上命名反向代理：**
 
 `offloading_reverse_<slingid>`，其中`<slingid>`是辅助进程实例的Sling ID。
 
-示例： `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
+示例：`offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 **为辅助进程实例上的发件箱命名：**
 
