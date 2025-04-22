@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: d3356f5f-f80f-4ce0-b4e2-3ee927208ab1
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: b76c11f28fab1be574142d73c13ea9555143bf9a
 workflow-type: tm+mt
-source-wordcount: '3360'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,6 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 >所需的配置因项目而异。
 >
 >有关使用的值以及有关参数的详细信息，请参阅Web控制台。
-
->[!NOTE]
->
->OSGi配置差异工具是[AEM Tools](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html)的一部分，可用于列出默认的OSGi配置。
 
 >[!NOTE]
 >
@@ -81,7 +77,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 
 请参阅[AEM日志](/help/sites-deploying/configure-logging.md)和[Sling日志](https://sling.apache.org/documentation/development/logging.html)。
 
-**Apache Sling事件线程池**&#x200B;配置：
+**Apache Sling线程池**&#x200B;配置：
 
 * **最小池大小**&#x200B;和&#x200B;**最大池大小**，用于保存事件线程的池大小。
 
@@ -102,7 +98,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 >
 >如果您在[生产就绪模式](/help/sites-administering/production-ready.md)下运行AEM，则会自动为生产实例配置此设置。
 
-**Apache Sling JavaScript处理程序**&#x200B;配置以脚本(servlet)形式编译.java文件的设置。
+**Apache Sling Java脚本处理程序**&#x200B;配置以脚本(servlet)形式编译.java文件的设置。
 
 某些设置可能会影响性能。 请尽可能禁用这些设置，尤其是对于生产实例。
 
@@ -118,9 +114,9 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 
 * **搜索路径**，jcrinstall搜索要安装的资源的路径列表，以及指示该路径的权重因子的数字。
 
-**Apache Sling作业事件处理程序**&#x200B;配置管理作业计划的参数：
+**Apache Sling队列配置**&#x200B;配置管理作业计划的参数：
 
-* **重试间隔**、**最大重试次数**、**最大并行作业**、**确认等待时间**&#x200B;等。
+* **重试间隔**、**最大重试次数**、**最大并行作业**&#x200B;等。
 
 * 更改这些设置可以在有大量作业的情况下提高性能；例如，大量使用AEM DAM和工作流。
 * 应使用测试建立特定于您的方案的值。
@@ -177,7 +173,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 
 * **每个请求的调用数**&#x200B;和&#x200B;**递归深度**，以保护您的系统免受无限递归和过多的脚本调用的影响。
 
-**Apache Sling MIME类型服务**&#x200B;配置：
+**Apache Sling Commons MIME类型服务**&#x200B;配置：
 
 * **MIME类型**，用于将项目所需的类型添加到系统中。 这样做允许对文件发出`GET`请求来设置用于链接文件类型和应用程序的正确内容类型标头。
 
@@ -239,23 +235,11 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 * **执行路径** — 列出搜索可执行脚本的路径。 通过配置特定路径，您可以限制可以运行的脚本。 如果未配置路径，则使用默认值( `/` = root)，允许运行所有脚本。
 如果配置的路径值以斜杠结尾，则搜索整个子树。 如果没有此类尾随斜杠，则只有在脚本完全匹配时才运行脚本。
 
-* **脚本用户** — 此可选属性可以指定用于读取脚本的存储库用户帐户。 如果未指定帐户，则默认使用`admin`用户。
-
 * **默认扩展** — 使用默认行为的扩展列表。 资源类型的最后一个路径段可用作脚本名称。
 
 **Apache HTTP组件代理配置** — 使用Apache HTTP客户端的所有代码的代理配置，在生成HTTP时使用。 例如，在复制时。
 
 创建配置时，请勿更改出厂配置。 请改用此处提供的配置管理器为此组件创建工厂配置： **https://localhost:4502/system/console/configMgr/**。 代理配置在&#x200B;**org.apache.http.proxyconfigurator.**&#x200B;中可用
-
->[!NOTE]
->
->在AEM 6.0及更早版本中，代理是在Day Commons HTTP客户端中配置的。 从AEM 6.1及更高版本开始，代理配置已移至“Apache HTTP组件代理配置”而不是“Day Commons HTTP Client”配置。
-
-**Day CQ Antispam**&#x200B;配置使用的反垃圾邮件服务(Akismet)。 此功能要求您注册以下内容：
-
-* **提供程序**
-* **API密钥**
-* **已注册的URL**
 
 **Adobe Granite HTML Library Manager**&#x200B;配置以控制对客户端库（css或js）的处理，包括如何查看基础结构。
 
@@ -281,7 +265,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 >
 >如果您在[生产就绪模式](/help/sites-administering/production-ready.md)下运行AEM，则会自动为生产实例配置此设置。
 
-**Day CQ HTTP标头身份验证处理程序** HTTP请求的基本身份验证方法的系统范围设置。
+**Adobe Granite HTTP标头身份验证处理程序** HTTP请求的基本身份验证方法的系统范围设置。
 
 使用[已关闭的用户组](/help/sites-administering/cug.md)时，您可以配置以下内容：
 
@@ -377,7 +361,7 @@ OSGi框架服务排名值用于指示调用此服务所用的顺序。 此值是
 >
 >如果您在[生产就绪模式](/help/sites-administering/production-ready.md)下运行AEM，则会自动为生产实例配置此设置。
 
-**Day CQ WCM链接检查器配置器**&#x200B;配置：
+**Day CQ WCM链接检查器**&#x200B;配置：
 
 * **重写配置列表**&#x200B;以指定基于内容的链接检查器配置的位置列表。 这些配置可以基于运行模式。 这一事实对于区分创作环境和发布环境非常重要，因为链接检查器设置可能有所不同。
 
@@ -427,7 +411,7 @@ OSGi框架服务排名值用于指示调用此服务所用的顺序。 此值是
 
 **Day CQ工作流电子邮件通知服务**&#x200B;为工作流发送的通知配置电子邮件设置。
 
-**CQ重写器HTML分析器工厂**
+**Adobe AEM重写器HTML分析器工厂**
 
 控制CQ重写器的HTML分析器。
 

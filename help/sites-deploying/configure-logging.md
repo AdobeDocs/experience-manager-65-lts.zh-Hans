@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 86613671-dacd-487e-b6ff-88365289e591
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: b76c11f28fab1be574142d73c13ea9555143bf9a
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,6 @@ ht-degree: 0%
 * 要保留的版本数
 * 版本轮换；最大大小或时间间隔
 * 写入日志消息时要使用的格式
-
->[!NOTE]
->
->此[知识库文章](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html)介绍如何轮换request.log和access.log文件。
 
 ## 适用于单个服务的记录器和写入程序 {#loggers-and-writers-for-individual-services}
 

@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 3bf3ba2e-f5f2-428a-a1fc-36f885350f6b
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: b76c11f28fab1be574142d73c13ea9555143bf9a
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1900'
 ht-degree: 0%
 
 ---
@@ -174,9 +174,6 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 * 根据服务名称过滤
 * 根据运行模式进行筛选
 
->[!NOTE]
->
->另请参阅[如何为特定实例定义基于存储库的配置](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html)。
 
 ### 向存储库添加新配置 {#adding-a-new-configuration-to-the-repository}
 
@@ -186,9 +183,9 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 1. 服务的&#x200B;**永久标识** (PID)。
 
-   引用Web控制台中的&#x200B;**配置**&#x200B;字段。 该名称显示在包名称后面的括号中（或显示在页面底部的&#x200B;**配置信息**&#x200B;中）。
+   在Web控制台中引用&#x200B;**配置**。 该名称显示在页面底部的&#x200B;**配置信息**&#x200B;中。
 
-   例如，创建节点`com.day.cq.wcm.core.impl.VersionManagerImpl.`以配置&#x200B;**AEM WCM版本管理器**。
+   例如，`com.day.cq.wcm.core.impl.VersionManagerImpl.`配置&#x200B;**AEM WCM版本管理器**。
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
@@ -237,13 +234,13 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
    >[!NOTE]
    >
-   >当进行工厂配置时，将`-<identifier>`附加到名称。
+   >当进行工厂配置时，将`~<identifier>`附加到名称。
    >
-   >作为： `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
+   >作为： `org.apache.sling.commons.log.LogManager.factory.config~<identifier>`
    >
    >其中`<identifier>`被替换成您（必须）输入以标识实例的自由文本（不能忽略此信息）；例如：
    >
-   >`org.apache.sling.commons.log.LogManager.factory.config-MINE`
+   >`org.apache.sling.commons.log.LogManager.factory.config~MINE`
 
 1. 对于要配置的每个参数，在此节点上创建一个属性：
 
@@ -310,23 +307,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 
 ### 标准配置 {#standard-configurations}
 
-以下列表显示了存储库中可用配置的一小部分（在标准安装中）：
-
-* 作者 — AEM WCM过滤器：
-
-  `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
-
-* 发布 — AEM WCM过滤器：
-
-  `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
-
-* 发布 — AEM WCM页面统计信息：
-
-  `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
-
->[!NOTE]
->
->由于这些配置位于`/libs`中，因此不能直接编辑它们，而是在自定义之前将其复制到您的应用程序区域(`/apps`)。
+如果有任何标准配置位于`/libs`中，则不得直接编辑该配置，但在自定义之前必须将其复制到您的应用程序区域(`/apps`)。
 
 要列出实例中的所有配置节点，请使用CRXDE Lite中的&#x200B;**查询**&#x200B;功能提交以下SQL查询：
 
