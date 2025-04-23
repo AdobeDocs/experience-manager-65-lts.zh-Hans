@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5磅
-source-git-commit: 3f644c8df73281bc35bd91a552f8e86aaae2dd4a
+source-git-commit: c3ae083fbdbc8507904fde3c9c34ca4396c9cfaf
 workflow-type: tm+mt
-source-wordcount: '6797'
+source-wordcount: '6795'
 ht-degree: 22%
 
 ---
@@ -1428,7 +1428,6 @@ ht-degree: 22%
          + [卸载作业](/help/sites-deploying/offloading.md)
          + [资产映射](/help/sites-deploying/resource-mapping.md)
          + [一致性和遍历检查](/help/sites-deploying/consistency-check.md)
-         + [性能准则](/help/sites-deploying/performance-guidelines.md)
          + [性能优化](/help/sites-deploying/configuring-performance.md)
          + [Assets Performance指南](/help/sites-deploying/assets-performance-sizing.md)
          + [配置操作方法文章](/help/sites-deploying/ht-deploy.md)

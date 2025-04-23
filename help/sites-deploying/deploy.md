@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: 6a94b2e2e1d387401bf11810c46d371c538407f9
+source-git-commit: c3ae083fbdbc8507904fde3c9c34ca4396c9cfaf
 workflow-type: tm+mt
 source-wordcount: '1221'
 ht-degree: 3%
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 * [快速入门](#getting-started)
 
-   * [前提条件](#prerequisites)
+   * [先决条件](#prerequisites)
    * [获取软件](#getting-the-software)
    * [默认本地安装](#default-local-install)
    * [创作和发布安装](#author-and-publish-installs)
@@ -51,8 +51,7 @@ ht-degree: 3%
 * [Web Console](/help/sites-deploying/web-console.md)
 * [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
 * [Best Practices](/help/sites-deploying/best-practices.md)
-* [Introduction to the AEM Platform](/help/sites-deploying/platform.md)
-* [Performance Guidelines](/help/sites-deploying/performance-guidelines.md) -->
+* [Introduction to the AEM Platform](/help/sites-deploying/platform.md) -->
 
 ## 基本概念 {#basic-concepts}
 
@@ -112,7 +111,7 @@ AEM服务器基于&#x200B;**Java**，并且在支持该平台的大多数操作�
 
 ## 快速入门 {#getting-started}
 
-### 前提条件 {#prerequisites}
+### 先决条件 {#prerequisites}
 
 虽然生产实例在运行官方支持的操作系统的专用计算机上运行（请参阅[技术要求](/help/sites-deploying/technical-requirements.md)），但Experience Manager服务器实际上将在支持&#x200B;[**Java™ Standard Edition 17**](https://www.oracle.com/java/technologies/downloads/#java17)的任何系统上运行。
 
@@ -290,4 +289,4 @@ The above section should give you a good understanding of the basics of AEM inst
 * [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
 * [Best Practices](/help/sites-deploying/best-practices.md)
 * [Introduction to the AEM Platform](/help/sites-deploying/platform.md)
-* [Performance Guidelines](/help/sites-deploying/performance-guidelines.md) -->
+ -->
