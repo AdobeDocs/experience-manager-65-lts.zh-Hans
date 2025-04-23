@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 6f92750a-4eaa-43cf-8f67-b1a65b1c6930
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 6b5e576debcd3351e15837727d2bc777b0e0c6f2
 workflow-type: tm+mt
-source-wordcount: '1387'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -52,10 +52,6 @@ AEM的内部重新索引过程会收集存储库数据并将其存储在Oak索�
 1. 请等待大约45分钟，以便AEM恢复正常的异步索引操作。
 
 ## 线程池过载 {#thread-pool-overloaded}
-
->[!NOTE]
->
->对于AEM 6.1，请确保已安装[AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 
 在特殊情况下，用于管理异步索引的线程池可能会变得过载。 为了隔离索引过程，可以配置线程池以防止其他AEM工作干扰Oak及时索引内容的能力。 在这种情况下，请执行以下操作：
 
