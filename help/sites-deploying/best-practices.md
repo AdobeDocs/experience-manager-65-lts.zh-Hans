@@ -11,10 +11,10 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 4f830ee9-e0e3-48df-b67d-709258cb1991
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 013c9155817811913963ca514f7a6369b338d487
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 4%
+source-wordcount: '374'
+ht-degree: 5%
 
 ---
 
@@ -71,10 +71,6 @@ ht-degree: 4%
 </table>
 
 ## UI {#ui}
-
-此处介绍了有关用户界面的最佳实践：
-
-[客户的用户界面推荐](/help/sites-deploying/ui-recommendations.md)
 
 AEM当前在同一版本中有两个UI：经典用户界面和触屏优化用户界面。 因此，客户必须在项目实施期间决定使用哪种。 本文档旨在帮助查找正确的选择。
 

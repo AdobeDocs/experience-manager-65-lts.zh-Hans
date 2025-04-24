@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: e9b26de3-6e14-4187-8f25-6e56ee3092a7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 013c9155817811913963ca514f7a6369b338d487
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '611'
 ht-degree: 3%
 
 ---
@@ -101,10 +101,6 @@ ht-degree: 3%
 
 换句话说，将UI的一部分从经典UI迁移到Touch UI意味着将&#x200B;*ExtJS小组件*&#x200B;移植到&#x200B;*Sling组件*。 为轻松实现此目标，触屏UI基于Granite UI框架，该框架已为UI提供了一些Sling组件（称为Granite UI组件）。
 
-在开始之前，请检查状态和相关建议：
-
-* [客户的用户界面推荐](/help/sites-deploying/ui-recommendations.md)
-
 触屏UI的开发基础提供了坚实的基础：
 
 * [AEM触屏优化UI的概念](/help/sites-developing/touch-ui-concepts.md)
@@ -149,7 +145,7 @@ ht-degree: 3%
 * [Developing用户指南](/help/sites-developing/getting-started.md)
 * [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites教程和视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
-* [AEM Site 开发入门 – WKND 教程](/help/sites-developing/getting-started.md)
+* [AEM Sites 开发入门——WKND 教程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
 * [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 

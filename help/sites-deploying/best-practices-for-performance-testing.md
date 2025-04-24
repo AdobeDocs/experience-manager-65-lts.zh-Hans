@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 29c20cf3-1694-4d06-ab7c-688018808c44
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 013c9155817811913963ca514f7a6369b338d487
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,6 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 
 * **Load Runner**&#x200B;是企业级负载测试产品。 提供了免费的评估版。 有关详细信息，请访问[https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
-* 也可以使用[Vercara](https://vercara.com/website-performance-management)等网站负载测试工具。
 * 测试移动或响应式网站时，必须使用一组单独的工具。 它们通过调节网络带宽来工作，模拟速度较慢的移动连接，如3G或EDGE。 使用范围更广的工具包括：
 
    * **[网络链接调节器](https://nshipster.com/network-link-conditioner/)** — 它提供了易于使用的UI，并且在网络栈栈上以相当低的级别工作。 它包括OS X和iOS的版本；
@@ -108,21 +107,18 @@ Google的PageSpeed工具提供了网站分析功能，用于确保对页面性�
 
 * **统一缓存统计信息** MBean。 可以通过以下位置直接访问它：
 
-`https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D6%2Cname%3D%22Consolidated+Cache+statistics%22%2Ctype%3D%22ConsolidatedCacheStats%22`
+`https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DConsolidated+Cache+statistics%2Ctype%3DConsolidatedCacheStats`
 
 对于名为&#x200B;**Document-Diff**&#x200B;的缓存，命中率应超过`.90`。 如果点击率低于90%，则可能必须编辑`DocumentNodeStoreService`配置。 Adobe产品支持可为您的环境推荐最佳设置。
 
 * **Oak存储库统计信息** Mbean。 可以通过以下位置直接访问它：
 
-`https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aid%3D16%2Cname%3D%22Oak+Repository+Statistics%22%2Ctype%3D%22RepositoryStats%22`
+`https://server:port/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DOak+Repository+Statistics%2Ctype%3DRepositoryStats`
 
 **ObservationQueueMaxLength**&#x200B;部分显示Oak的观察队列中过去小时、分钟、秒和周内的事件数。 在“每小时”部分中查找事件的最大数量。 将此数字与`oak.observation.queue-length`设置进行比较。 如果为观察队列显示的最大数量超过`queue-length`设置：
 
-1. 创建名为`com.adobe.granite.repository.impl.SlingRepositoryManager.cfg`的文件，该文件包含参数`oak.observation.queue‐length=50000`
+1. 创建名为`com.adobe.granite.repository.impl.SlingRepositoryManager.config`的文件，该文件包含参数`oak.observation.queue‐length=50000`
 1. 将其放在/crx-quickstart/install文件夹下。
-
->[!NOTE]
->请参阅[AEM 6.x | 性能调整提示](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/configuring-performance.html)
 
 默认设置为10,000，但大多数部署都必须将其增加到20,000或50,000。
 
@@ -150,10 +146,9 @@ Google的PageSpeed工具提供了网站分析功能，用于确保对页面性�
 * 观察错误日志中是否有错误或警告。 有关详细信息，请参阅[日志记录](/help/sites-deploying/configure-logging.md)。
 * 监视系统硬件资源，如内存和CPU利用率、磁盘I/O或网络I/O。这些资源通常是造成性能瓶颈的原因。
 * 优化页面的架构以及如何寻址页面，以最大限度地减少URL参数的使用，从而尽可能多地允许缓存。
-* 遵循[性能优化](/help/sites-deploying/configuring-performance.md)和[性能优化提示](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/configuring-performance.html)文档。
-
+* 请按照[性能优化](/help/sites-deploying/configuring-performance.md)文档操作。
 * 如果在创作实例上编辑某些页面或组件时出现问题，请使用TouchUI开发人员模式检查有问题的页面。 这样做可划分页面上的每个内容区域及其加载时间。
-* 缩小网站上的所有JS和CSS。 查看此[博客帖子](https://blogs.adobe.com/foxes/enable-js-and-css-minification/)。
+* 缩小网站上的所有JS和CSS..
 * 从组件中消除嵌入的CSS和JS。 它们应当包含在客户端库中并对其进行缩小，以最大限度地减少呈现页面所需的请求数。
 * 要检查服务器请求并查看哪些请求花费的时间最长，请使用Chrome的“网络”选项卡等浏览器工具。
 

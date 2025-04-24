@@ -11,9 +11,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: c83fcf96-cc45-40a0-9a50-c60406096de1
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 013c9155817811913963ca514f7a6369b338d487
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1075'
 ht-degree: 9%
 
 ---
@@ -154,7 +154,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤 19</strong></td>
    <td>100%CPU</td>
-   <td><a href="/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance">https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html</a></td>
+   <td>查看位于100%</a>的<a href="/help/sites-deploying/monitoring-and-maintaining.md#cpu-at">CPU</td>
   </tr>
   <tr>
    <td><strong>步骤 20</strong></td>
@@ -288,7 +288,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤45<br />和47</strong><br /> </td>
    <td>使用HTTP/2</td>
-   <td>有关步骤37、38和39，请参阅Gem会议。 此外，查看<a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">HTTP/2支持上的</a>论坛帖子。<br /> </td>
+   <td>有关步骤37、38和39，请参见Gem会议。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 49</strong></td>

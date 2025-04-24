@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 3265ad97-75c2-4dc1-8180-71b65cf73d31
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 013c9155817811913963ca514f7a6369b338d487
 workflow-type: tm+mt
-source-wordcount: '4843'
+source-wordcount: '4834'
 ht-degree: 0%
 
 ---
@@ -51,8 +51,6 @@ ht-degree: 0%
   [标准用户界面](/help/sites-developing/touch-ui-concepts.md)基于Adobe Experience Cloud的统一用户体验，使用[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)和[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui)的基础技术。
 * **经典UI**
 基于ExtJS技术的用户界面，AEM 6.4已弃用该技术。
-
-有关更多详细信息，请参阅[客户的UI界面建议](/help/sites-deploying/ui-recommendations.md)。
 
 可以实施组件来支持触屏UI和/或经典UI。 在查看标准实例时，您还会看到最初为经典UI或触屏UI或两者设计的现成组件。
 
