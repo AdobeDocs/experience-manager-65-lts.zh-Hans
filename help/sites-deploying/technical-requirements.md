@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
+source-git-commit: e337b682a0ee2b35940671991bd82b30d9d50128
 workflow-type: tm+mt
-source-wordcount: '3064'
+source-wordcount: '2961'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Adobe支持平台上的(AEM) Adobe Experience Manager，如本文档中的以下
 >
 >根据安装AEM的平台，可能会为用户管理提出不同的要求。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 安装Adobe Experience Manager的最低要求：
 
@@ -47,7 +47,7 @@ Adobe支持平台上的(AEM) Adobe Experience Manager，如本文档中的以下
 
 ### 支持级别 {#support-levels}
 
-本文档列出了Adobe Experience Manager支持的客户端和服务器平台。 Adobe为推荐配置和其他配置提供了多个级别的支持。
+本文档列出了Adobe Experience Manager支持的客户端和服务器平台。 Adobe 针对建议的配置和其他配置提供了多个级别的支持。
 
 ### 支持的配置 {#supported-configurations}
 
@@ -112,7 +112,7 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 | MongoDB Enterprise 6.0和7.0 | 存储库 | 答：支持 `[3, 4]` |
 | **Apache Lucene（内置快速入门）** | 搜索服务 | 答：支持 |
 
-1. “文件系统”包括符合POSIX的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
+1. “文件系统”包括符合 POSIX 的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
 1. AEM中不支持MongoDB分片。
 1. 仅支持MongoDB存储引擎WiredTiger。
 
@@ -153,13 +153,14 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 | **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[2]` |
 | Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` |
 | Linux®，基于SUSE®分发 | A：支持的`[1]` |
+| Microsoft® Windows Server 2022 | R：支持 |
 
 1. Linux®内核5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。
 1. Adobe Managed Services支持的Linux®分发。
 
    >[!NOTE]
    >
-   >对于基于Linux的服务器（OSGI和JEE栈栈），AEM Forms加载项需要运行时依赖关系，例如：
+   >对于基于Linux的服务器，AEM Forms加载项需要运行时依赖关系，例如：
    >* glibc.x86_64 (2.17-196)
    >* libX11.x86_64 (1.6.7-4)
    >* zlib.x86-64 (1.2.7-17)
@@ -180,9 +181,9 @@ Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe
 
 有关如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建议，Adobe建议直接与云提供商合作。 或者，与Adobe合作伙伴合作，为您选择的云环境中部署AEM提供支持。 选定的云提供商或合作伙伴负责体系结构的规模调整、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
 
-### Dispatcher平台（Web服务器） {#dispatcher-platforms-web-servers}
+### 调度程序平台（Web 服务器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
+调度程序是缓存和负载平衡组件。 [下载最新的调度程序版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
 
 支持以下 Web 服务器与调度程序版本 4.3.2 一起使用：
 
@@ -257,7 +258,7 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
   </tr>
   <tr>
    <td>iOS 12.x 版的 Apple Safari</td>
-   <td>答：支持 [2]</td>
+   <td>答：支持的[2]</td>
    <td>Z：不支持</td>
   </tr>
   <tr>
@@ -268,7 +269,7 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
  </tbody>
 </table>
 
-1. Firefox [的扩展支持版本了解有关mozilla.org的更多信息](https://www.mozilla.org/en-US/firefox/enterprise/)
+1. Firefox [的扩展支持版本 了解有关 mozilla.org 的更多信息](https://www.mozilla.org/en-US/firefox/enterprise/)
 1. 支持Apple iPad
 
 ### 支持的网站浏览器 {#supported-browsers-for-websites}
@@ -277,9 +278,9 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
 
 ## 其他平台说明 {#additional-platform-notes}
 
-本节提供了有关运行Adobe Experience Manager及其加载项的特殊说明和更多详细信息。
+本节提供有关运行 Adobe Experience Manager 及其加载项的特别说明和更多详细信息。
 
-### IPv4和IPv6 {#ipv-and-ipv}
+### IPv4 和 IPv6 {#ipv-and-ipv}
 
 Adobe Experience Manager 的所有元素（实例、调度程序）均可安装在 IPv4 和 IPv6 网络中。
 
@@ -287,7 +288,7 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 当必须指定 IP 地址时，可以（根据需要）从以下选项中进行选择：
 
-* IPv6 地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址。 例如，`https://123.1.1.4:4502`
 
@@ -339,36 +340,36 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 >
 >该多节点结构可导致一个或多个节点上的存储器耗尽，而其它节点则被耗尽。 当内存耗尽时，即使存在可用内存，内核也可以决定终止进程（例如，图像服务器或平台服务器）。
 >
->因此，Adobe建议，如果运行的系统导致使用&#x200B;**numa=off**&#x200B;引导选项关闭NUMA，以避免内核终止这些进程。
+>因此，Adobe 建议您，如果您运行的系统需要使用 numa=off **引导选项关闭** NUMA，以避免内核终止这些进程。
 
 >[!NOTE]
 >
->**服务器主机名必须解析：**&#x200B;请确保服务器的主机名可解析为IP地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
+>**服务器主机名必须解析：** 确保服务器的主机名可解析为 IP 地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
 >
 >`<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
 * ® Microsoft Windows Server 2016
-* 交换空间至少等于物理内存量 （RAM） 的两倍
+* 交换空间至少相当于物理内存(RAM)容量的两倍
 
-若要在 Windows 上使用动态媒体，请安装 Microsoft® Visual Studio 2010、2013 和 2015 可针对 x64 和 x86 再发行组件。
+要在Windows上使用Dynamic Media，请安装适用于x64和x86的Microsoft®Visual Studio 2010、2013和2015可再发行版本。
 
 对于Windows x64：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
 * 在 https://www.microsoft.com/en-us/download/details.aspx?id=40784 获取 [可再发行Microsoft® Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* 获取Microsoft® Visual Studio 2015 可再发行组件，请访问 [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* 在[https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)上获取Microsoft® Visual Studio 2015可再发行组件
 
-对于 Windows x86：
+对于Windows x86：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
 * 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)上获取Microsoft® Visual Studio 2013可再发行版本
-* 在 https://www.microsoft.com/en-us/download/details.aspx?id=52685 获取 [Microsoft® Visual Studio 2015 可再发行组件](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* 在[https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)上获取Microsoft® Visual Studio 2015可再发行组件
 
 #### macOS {#macos}
 
-* 10.9.x 及更高版本
+* 10.9.x及更高版本
 * 仅支持试用和演示
 
 ### AEM Forms PDF Generator的要求 {#requirements-for-aem-forms-pdf-generator}
@@ -379,52 +380,28 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
  <tbody>
   <tr>
    <th><p><strong>产品</strong></p> </th>
-   <th><p><strong>转换到PDF时支持的格式</strong></p> </th>
+   <th><p><strong>转换为 PDF 的支持格式</strong></p> </th>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic轨道</a>最新版本</td>
    <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 classic track</a>最新版本（已弃用）</td>
-   <td>XPS、图像格式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
-  </tr>
-  <tr>
    <td>® Microsoft Office 2019</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
   </tr>
   <tr>
-   <td>® Microsoft Office 2016（已弃用）</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
+   <td>完美字 2020<br /> </td>
+   <td>WP， WPD</td>
   </tr>
   <tr>
-   <td>WordPerfect 2020<br /> </td>
-   <td>WP 、 WPD</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Office Visio 2016（已弃用）<br /> </td>
-   <td>VSD、VSDX</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Publisher 2019<br /> </td>
-   <td>公共</td>
-  </tr>
-  <tr>
-   <td>Microsoft® Publisher 2016（已弃用）<br /> </td>
-   <td>公共</td>
-  </tr>
-  <tr>
-   <td>Microsoft®项目2016（已弃用）<br /> </td>
-   <td>MPP</td>
+   <td>® Microsoft出版社 2019<br /> </td>
+   <td>酒馆</td>
   </tr>
   <tr>
    <td>OpenOffice 4.1.10</td>
    <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
   </tr>
-  <tr>
-   <td>OpenOffice 4.1.2（已弃用）</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
-  </tr>  
  </tbody>
 </table>
 
@@ -448,35 +425,35 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 >* PDF Generator无法使用Microsoft® Project 2019转换文件。 您可以继续使用Microsoft® Project 2016转换`.VSD`和`.VSDX`文件。
 >
 
-### AEM 表单设计器的要求 {#requirements-for-aem-forms-designer}
+### AEM Forms Designer的要求 {#requirements-for-aem-forms-designer}
 
-* ® Microsoft Windows® 2016 服务器、Microsoft® Windows® 2019 服务器、Microsoft® Windows® 10 或 Windows® 11
-* 1 GHz 或速度更快的处理器，支持 PAE、NX 和 SSE2。
-* 32 位作系统为 1 GB RAM，64 位作系统为 2 GB RAM
-* 32 位作系统为 16 GB 磁盘空间，64 位作系统为 20 GB 磁盘空间
+* Microsoft® Windows® 2016 Server、Microsoft® Windows® 2019 Server、Microsoft® Windows® 10或Windows® 11
+* 1 GHz或更快的处理器，支持PAE、NX和SSE2。
+* 32位RAM为1 GB，64位操作系统为2 GB
+* 16 GB的磁盘空间，用于32位或20 GB的磁盘空间，用于64位操作系统
 * 图形内存 — 128 MB的GPU（建议使用256 MB）
 * 2.35 GB可用硬盘空间
 * 1024 X 768像素或更高的显示器分辨率
 * 视频硬件加速（可选）
-* Acrobat Pro DC、Acrobat Standard DC 或 Adobe Acrobat Reader DC
+* Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
 * 安装Designer的管理权限
 * Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 32 位 AEM 表单设计器的 32 位运行时
-* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 64 位 AEM Forms Designer 的 64 位运行时（适用于 OSGI 和 JEE 堆栈）
+* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 适用于 64 位 AEM 表单设计器的 64 位运行时
 
 [安装和配置 AEM 表单设计器](/help/forms/using/installing-configuring-designer.md)
 
 ### AEM Assets XMP 元数据写回的要求 {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-以下平台和文件格式支持并启用了XMP回写：
+以下平台和文件格式支持并启用了 XMP 回写：
 
 * **操作系统：**
 
    * Linux®（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
 
    * Windows Server
-   * macOS X（64位）
+   * macOS X（64 位）
 
-* **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
+* **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI 和 EPS。
 
 ### AEM Assets在Linux®上处理大量元数据的资产的要求 {#assetsonlinux}
 
