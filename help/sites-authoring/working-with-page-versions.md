@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: ba5cc5fb-934f-4144-8e28-7aa5fdd9b92a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 438d383aa7a08334d9977411fd37395f89133834
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 65%
+source-wordcount: '1567'
+ht-degree: 63%
 
 ---
 
@@ -21,6 +21,13 @@ ht-degree: 65%
    * 撤消对页面所做的更改。
 * 将页面的当前版本与先前版本进行比较：
    * 突出显示文本和图像中的差异。
+
+>[!NOTE]
+>
+>AEM存储库中只对内容进行版本控制。 代码、CSS和JavaScript等动态资源不会进行版本控制。
+>
+>* 查看版本时，内容会使用存储库的当前代码、CSS和JavaScript进行查看。
+>* 恢复版本时，将仅恢复内容，并对其应用存储库的当前代码、CSS和JavaScript。
 
 ## 创建新版本 {#creating-a-new-version}
 
