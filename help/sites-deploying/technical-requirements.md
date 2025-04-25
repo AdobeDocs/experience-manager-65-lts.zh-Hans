@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: e337b682a0ee2b35940671991bd82b30d9d50128
+source-git-commit: 45b0c2c3a2cf1e3d55ad9184878cb8ebc3add672
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '2955'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 | MongoDB Enterprise 6.0和7.0 | 存储库 | 答：支持 `[3, 4]` |
 | **Apache Lucene（内置快速入门）** | 搜索服务 | 答：支持 |
 
-1. “文件系统”包括符合 POSIX 的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
+1. “文件系统”包括符合POSIX的块存储。 包括网络存储技术。 请注意，文件系统性能可能会有所不同，并影响整体性能。 使用网络/远程文件系统对AEM进行负载测试。
 1. AEM中不支持MongoDB分片。
 1. 仅支持MongoDB存储引擎WiredTiger。
 
@@ -153,7 +153,8 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 | **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[2]` |
 | Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` |
 | Linux®，基于SUSE®分发 | A：支持的`[1]` |
-| Microsoft® Windows Server 2022 | R：支持 |
+
+<!--| Microsoft&reg; Windows Server 2022 |R: Supported|-->
 
 1. Linux®内核5。 x和6。 x包括来自Red Hat® Distribution的派生程序，包括Red Hat® Enterprise Linux®、CentOS、Oracle Linux®和Amazon Linux®。
 1. Adobe Managed Services支持的Linux®分发。
@@ -177,13 +178,13 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services的其他文档](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)。
 
-在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境必须按照本页中列出的技术规范运行。 任何与在任何这些云环境中运行的AEM相关的已报告问题，都必须可独立于任何特定于云计算环境的云服务进行重现。 也就是说，除非本页面上列出的技术要求(例如Azure Blob Storage或AWS S3)支持Cloud Service。
+在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境必须按照本页中列出的技术规范运行。 任何与在任何这些云环境中运行的AEM相关的已报告问题，都必须可独立于任何特定于云计算环境的云服务进行重现。 也就是说，除非云服务作为此页面上列出的技术要求的一部分受支持，例如 Azure Blob 存储或 AWS S3。
 
-有关如何在Adobe Managed Services之外的Azure或AWS上部署AEM的建议，Adobe建议直接与云提供商合作。 或者，与Adobe合作伙伴合作，为您选择的云环境中部署AEM提供支持。 选定的云提供商或合作伙伴负责体系结构的规模调整、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
+有关如何在 Adobe 托管服务之外的 Azure 或 AWS 上部署 AEM 的建议，Adobe 建议直接与云提供商合作。 或者，与Adobe合作伙伴合作，为您选择的云环境中部署AEM提供支持。 选定的云提供商或合作伙伴负责体系结构的规模调整、设计和实施，以满足您的特定性能、负载、可扩展性和安全要求。
 
-### 调度程序平台（Web 服务器） {#dispatcher-platforms-web-servers}
+### Dispatcher平台（Web服务器） {#dispatcher-platforms-web-servers}
 
-调度程序是缓存和负载平衡组件。 [下载最新的调度程序版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
+Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5 需要 Dispatcher 4.3.2 或更高版本。
 
 支持以下 Web 服务器与调度程序版本 4.3.2 一起使用：
 
@@ -257,8 +258,8 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
    <td>Z：不支持</td>
   </tr>
   <tr>
-   <td>iOS 12.x 版的 Apple Safari</td>
-   <td>答：支持的[2]</td>
+   <td>iOS 12.x上的Apple Safari</td>
+   <td>答：支持 [2]</td>
    <td>Z：不支持</td>
   </tr>
   <tr>
@@ -269,18 +270,18 @@ AEM用户界面已针对大屏幕（通常是笔记本电脑和台式计算机�
  </tbody>
 </table>
 
-1. Firefox [的扩展支持版本 了解有关 mozilla.org 的更多信息](https://www.mozilla.org/en-US/firefox/enterprise/)
+1. Firefox [的扩展支持版本了解有关mozilla.org的更多信息](https://www.mozilla.org/en-US/firefox/enterprise/)
 1. 支持Apple iPad
 
-### 支持的网站浏览器 {#supported-browsers-for-websites}
+### 网站支持的浏览器 {#supported-browsers-for-websites}
 
 通常，AEM Sites渲染的网站的浏览器支持取决于AEM页面模板的实施、设计和组件输出，因此受实施这些部分的方的控制。
 
 ## 其他平台说明 {#additional-platform-notes}
 
-本节提供有关运行 Adobe Experience Manager 及其加载项的特别说明和更多详细信息。
+本节提供了有关运行Adobe Experience Manager及其加载项的特殊说明和更多详细信息。
 
-### IPv4 和 IPv6 {#ipv-and-ipv}
+### IPv4和IPv6 {#ipv-and-ipv}
 
 Adobe Experience Manager 的所有元素（实例、调度程序）均可安装在 IPv4 和 IPv6 网络中。
 
@@ -288,7 +289,7 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 当必须指定 IP 地址时，可以（根据需要）从以下选项中进行选择：
 
-* IPv6地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
+* IPv6 地址。 例如，`https://[ab12::34c5:6d7:8e90:1234]:4502`
 
 * IPv4地址。 例如，`https://123.1.1.4:4502`
 
@@ -340,28 +341,28 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 >
 >该多节点结构可导致一个或多个节点上的存储器耗尽，而其它节点则被耗尽。 当内存耗尽时，即使存在可用内存，内核也可以决定终止进程（例如，图像服务器或平台服务器）。
 >
->因此，Adobe 建议您，如果您运行的系统需要使用 numa=off **引导选项关闭** NUMA，以避免内核终止这些进程。
+>因此，Adobe建议，如果运行的系统导致使用&#x200B;**numa=off**&#x200B;引导选项关闭NUMA，以避免内核终止这些进程。
 
 >[!NOTE]
 >
->**服务器主机名必须解析：** 确保服务器的主机名可解析为 IP 地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
+>**服务器主机名必须解析：**&#x200B;请确保服务器的主机名可解析为IP地址。 如果无法做到这一点，请将完全限定的主机名和 IP 地址 **添加到 /etc/hosts**：
 >
 >`<ip address> <fully qualified hostname>`
 
 #### Windows {#windows}
 
 * ® Microsoft Windows Server 2016
-* 交换空间至少相当于物理内存(RAM)容量的两倍
+* 交换空间至少等于物理内存量 （RAM） 的两倍
 
-要在Windows上使用Dynamic Media，请安装适用于x64和x86的Microsoft®Visual Studio 2010、2013和2015可再发行版本。
+若要在 Windows 上使用动态媒体，请安装 Microsoft® Visual Studio 2010、2013 和 2015 可针对 x64 和 x86 再发行组件。
 
 对于Windows x64：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
-* 在 https://www.microsoft.com/en-us/download/details.aspx?id=40784 获取 [可再发行Microsoft® Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* 在[https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)上获取Microsoft® Visual Studio 2013可再发行版本
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)上获取Microsoft® Visual Studio 2015可再发行组件
 
-对于Windows x86：
+对于 Windows x86：
 
 * 在[https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)上获取Microsoft® Visual Studio 2010可再发行组件
 * 在[https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)上获取Microsoft® Visual Studio 2013可再发行版本
@@ -380,15 +381,15 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
  <tbody>
   <tr>
    <th><p><strong>产品</strong></p> </th>
-   <th><p><strong>转换为 PDF 的支持格式</strong></p> </th>
+   <th><p><strong>转换到PDF时支持的格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic轨道</a>最新版本</td>
-   <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 经典曲目</a> 最新版本</td>
+   <td>XPS、图像格式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、DWG、DXF 和 DWF</td>
   </tr>
   <tr>
-   <td>® Microsoft Office 2019</td>
-   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF 和 TXT</td>
+   <td>Microsoft® Office 2019</td>
+   <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>完美字 2020<br /> </td>
@@ -400,7 +401,7 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
   </tr>
   <tr>
    <td>OpenOffice 4.1.10</td>
-   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT</td>
+   <td>ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式（BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC）、HTML、HTM、RTF 和 TXT</td>
   </tr>
  </tbody>
 </table>
@@ -437,8 +438,8 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 * 视频硬件加速（可选）
 * Acrobat Pro DC、Acrobat Standard DC或Adobe Acrobat Reader DC
 * 安装Designer的管理权限
-* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 用于 32 位 AEM 表单设计器的 32 位运行时
-* Microsoft Visual C++ 2019（VC 14.28 或更高版本） 适用于 64 位 AEM 表单设计器的 64 位运行时
+* Microsoft Visual C++ 2019（VC 14.28或更高版本）32位运行时，适用于32位AEM Forms Designer
+* Microsoft Visual C++ 2019（VC 14.28或更高版本）适用于64位AEM Forms Designer的64位运行时
 
 [安装和配置 AEM 表单设计器](/help/forms/using/installing-configuring-designer.md)
 
@@ -448,13 +449,13 @@ Adobe Experience Manager 的所有元素（实例、调度程序）均可安装�
 
 * **操作系统：**
 
-   * Linux®（在64位系统上支持32位和32位应用程序）。 有关安装32位客户端库的步骤，请参阅[如何在64位Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)上启用XMP提取和回写。
+   * Linux®（在 64 位系统上支持 32 位和 32 位应用程序）。 有关安装 32 位客户端库的步骤，请参阅 [如何在 64 位红帽® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html) 上启用 XMP 提取和写回。
 
    * Windows Server
-   * macOS X（64 位）
+   * macOS X（64位）
 
-* **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI 和 EPS。
+* **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 
-### AEM Assets在Linux®上处理大量元数据的资产的要求 {#assetsonlinux}
+### AEM Assets 在 Linux® 上处理元数据密集型资产的要求 {#assetsonlinux}
 
-XMPFilesProcessor进程需要库GLIBC_2.14才能工作。 使用包含GLIBC_2.14的Linux®内核，例如Linux®内核版本3.1.x。它提高了处理包含大量元数据的资源(如PSD文件)的性能。 使用以前版本的GLIBC会导致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`开头的日志中出现错误。
+XMPFilesProcessor 进程需要库 GLIBC_2.14 才能工作。 使用包含GLIBC_2.14的Linux®内核，例如Linux®内核版本3.1.x。它提高了处理包含大量元数据的资源(如PSD文件)的性能。 使用以前版本的GLIBC会导致以`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`开头的日志中出现错误。
