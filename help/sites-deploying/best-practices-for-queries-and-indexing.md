@@ -8,13 +8,11 @@ topic-tags: best-practices
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-hide: true
-hidefromtoc: true
 exl-id: 3ffa7c80-ce59-41cf-bb50-c6caf77d9baa
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 09f3d38e9f9c7f882d8b03dcf86db68cb8885a08
 workflow-type: tm+mt
-source-wordcount: '4520'
-ht-degree: 5%
+source-wordcount: '4196'
+ht-degree: 6%
 
 ---
 
@@ -145,7 +143,7 @@ Lucene注册一个JMX Bean，它将提供有关索引内容的详细信息，包
 * `-Doak.queryLimitInMemory=500000`
 * `-Doak.queryLimitReads=100000`
 
-在AEM 6.3中，上述两个参数是预配置的现成参数，可以通过OSGi QueryEngineSettings持久保留。
+从AEM 6.3开始，已预配置上述两个现成参数，可以通过OSGi QueryEngineSettings持久保留它们。
 
 有关详情，请访问：[https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Slow_Queries_and_Read_Limits)
 
@@ -168,20 +166,6 @@ Lucene索引是在Oak 1.0.9中引入的，对于在AEM 6初次发布时引入的
 * 由于是异步的，Lucene索引无法强制执行唯一性约束。 如果需要，则需要设置属性索引。
 
 通常，建议使用Lucene索引，除非迫切需要使用属性索引以便获得更高性能和灵活性的好处。
-
-### Solr索引 {#solr-indexing}
-
-默认情况下，AEM还支持Solr索引。 此项用于支持全文搜索，但也可以用于支持任何类型的JCR查询。 当AEM实例没有CPU容量处理搜索密集型部署（如具有大量并发用户的搜索驱动网站）中所需的查询数量时，应考虑使用Solr。 或者，Solr可以通过基于爬虫的方法实现，以使用平台的一些更高级的功能。
-
-可以将Solr索引配置为在用于开发环境的AEM服务器上运行，也可以将索引卸载到远程实例，以提高生产和暂存环境中的搜索可扩展性。 虽然卸载搜索提高了可扩展性，但它会导致延迟，因此，除非有必要，否则不建议这样做。 有关如何配置Solr集成以及如何创建Solr索引的更多信息，请参阅[Oak查询和索引文档](/help/sites-deploying/queries-and-indexing.md#the-solr-index)。
-
->[!NOTE]
->
->虽然采用集成的Solr搜索方法允许将索引卸载到Solr服务器。 如果通过基于爬网程序的方法使用Solr服务器的更高级功能，则需要执行额外的配置工作。
-
-使用此方法的缺点是，虽然默认情况下，AEM查询会遵循ACL，从而隐藏用户无权访问的结果，但将搜索外部化到Solr服务器将无法支持此功能。 如果要以这种方式将搜索外部化，则必须格外注意确保用户不会看到他们不应看到的结果。
-
-在可能需要汇总来自多个源的搜索数据的情况下，此方法可能适用的潜在用例。 例如，您可能将某个站点托管在AEM上，将另一个站点托管在第三方平台上。 可以将Solr配置为对两个站点的内容进行爬网并将其存储在聚合索引中。 这将允许跨站点搜索。
 
 ### 设计注意事项 {#design-considerations}
 
@@ -216,7 +200,7 @@ Lucene索引是在Oak 1.0.9中引入的，对于在AEM 6初次发布时引入的
 
 ### JCR查询备忘单 {#jcrquerycheatsheet}
 
-为了支持创建高效的JCR查询和索引定义，[JCR查询备忘表](assets/JCR_query_cheatsheet-v1.1.pdf)可供下载，并可在开发过程中用作参考。 它包含 QueryBuilder、XPath 和 SQL-2 的示例查询，并涵盖了在查询性能方面表现不同的多个场景。它还提供了关于如何构建或定制 Oak 索引的建议。本备忘单的内容适用于AEM 6.5和AEM as a Cloud Service。
+为了支持创建高效的JCR查询和索引定义，[JCR查询备忘表](assets/JCR_query_cheatsheet-v1.1.pdf)可供下载，并可在开发过程中用作参考。 它包含 QueryBuilder、XPath 和 SQL-2 的示例查询，并涵盖了在查询性能方面表现不同的多个场景。它还提供了关于如何构建或定制 Oak 索引的建议。本备忘单的内容适用于AEM 6.5、AEM 6.5 LTS和AEM as a Cloud Service。
 
 ## 重新索引 {#re-indexing}
 
@@ -380,7 +364,7 @@ Lucene索引是在Oak 1.0.9中引入的，对于在AEM 6初次发布时引入的
 
 >[!NOTE]
 >
->在AEM 6.5中，[oak-run.jar是唯一支持在MongoMK或RDBMK存储库上重新索引的方法](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree)。
+>在AEM 6.5 LTS中，[oak-run.jar是唯一支持在MongoMK或RDBMK存储库上重新索引的方法](/help/sites-deploying/indexing-via-the-oak-run-jar.md#reindexingapproachdecisiontree)。
 
 #### 重新索引属性索引 {#re-indexing-property-indexes}
 
