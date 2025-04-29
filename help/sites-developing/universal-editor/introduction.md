@@ -4,9 +4,9 @@ description: 了解通用编辑器的灵活性，以及它如何帮助您使用A
 feature: Developing
 role: Developer
 exl-id: 495df631-5bdd-456b-b115-ec8561f33488
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 3f6d0791968ad3017256dcd5ecea617bc7c8ed83
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1174'
 ht-degree: 1%
 
 ---
@@ -38,9 +38,9 @@ Universal Editor是一项与AEM配合使用的服务，用于无头创作内容�
 
 以下内容支持通用编辑器：
 
-* AEM 6.5磅
+* AEM 6.5 LTS GA
    * 支持内部部署和AMS托管。
-* [AEM 6.5](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)（Service Pack 21或22以及功能包）
+* [AEM 6.5](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)（Service Pack 21或22以及功能包或更高版本）
    * 支持内部部署和AMS托管。
 * [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)（版本`2023.8.13099`或更高版本）
 
@@ -50,29 +50,15 @@ Universal Editor是一项与AEM配合使用的服务，用于无头创作内容�
 
 要测试通用编辑器，您需要：
 
-1. [更新和配置您的AEM创作实例。](#update-configure-aem)
+1. [在AEM创作实例上配置服务。](#configure-aem)
 1. [设置本地通用编辑器服务。](#set-up-ue)
 1. [调整您的Dispatcher以允许Universal Editor服务。](#update-dispatcher)
 
 完成设置后，您可以[检测应用程序以使用通用编辑器。](#instrumentation)
 
-### 更新AEM {#update-aem}
+### 配置服务 {#configure-aem}
 
-要将通用编辑器与AEM 6.5结合使用，需要AEM的Service Pack 21或22以及功能包。
-
-#### 应用最新的Service Pack {#latest}
-
-确保您至少运行的是AEM 6.5的Service Pack 21或22。您可以从[Software Distribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)下载最新的Service Pack
-
-#### 安装通用编辑器功能包 {#feature-pack}
-
-安装Software Distribution上提供的适用于AEM 6.5 **[的**&#x200B;通用编辑器功能包。](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
-
-如果您已经在运行Service Pack 23或更高版本，则不需要使用该功能包。
-
-### 配置服务 {#configure-services}
-
-功能包会安装大量需要额外配置的新包。
+Universal Editor依赖于许多必须配置的服务。
 
 #### 为`login-token` Cookie设置SameSite属性。 {#samesite-attribute}
 
