@@ -5,10 +5,10 @@ sub-product: Adobe Experience Manager 6.5 LTS
 solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
-user-guide-title: AEM 6.5磅
-source-git-commit: 013c9155817811913963ca514f7a6369b338d487
+user-guide-title: AEM 6.5 LTS
+source-git-commit: 262b73813a0e1ccb9c45a4e099461d4dd8eccd00
 workflow-type: tm+mt
-source-wordcount: '6790'
+source-wordcount: '6786'
 ht-degree: 22%
 
 ---
@@ -1420,7 +1420,6 @@ ht-degree: 22%
          + [运行模式](/help/sites-deploying/configure-runmodes.md)
          + [Web 控制台](/help/sites-deploying/web-console.md)
          + [复制](/help/sites-deploying/replication.md)
-         + [使用双向SSL复制](/help/sites-deploying/mssl-replication.md)
          + [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
          + [静态对象过期](/help/sites-deploying/expiration-static-objects.md)
          + [版本清除](/help/sites-deploying/version-purging.md)

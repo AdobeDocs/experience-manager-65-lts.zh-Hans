@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: b840d970-9365-4df3-8467-e34abd940074
-source-git-commit: fb94bea433b95462e61376fe10ed9defe4eab551
+source-git-commit: 262b73813a0e1ccb9c45a4e099461d4dd8eccd00
 workflow-type: tm+mt
-source-wordcount: '3287'
+source-wordcount: '3270'
 ht-degree: 1%
 
 ---
@@ -347,8 +347,6 @@ ht-degree: 1%
   选中后，代理不会强制活动页面的版本控制。
 
 ## 配置复制代理 {#configuring-your-replication-agents}
-
-有关使用MSSL将复制代理连接到发布实例的信息，请参阅[使用双向SSL复制](/help/sites-deploying/mssl-replication.md)。
 
 ### 从创作环境配置复制代理 {#configuring-your-replication-agents-from-the-author-environment}
 

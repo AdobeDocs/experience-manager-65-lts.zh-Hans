@@ -12,9 +12,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 015def31-c7de-42b3-8218-1284afcb6921
-source-git-commit: fb94bea433b95462e61376fe10ed9defe4eab551
+source-git-commit: 262b73813a0e1ccb9c45a4e099461d4dd8eccd00
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -59,16 +59,6 @@ ht-degree: 0%
    1. 在“查询”框中，输入此查询/jcr：root/var/eventing/jobs//element(&#42;，slingevent：Job) order by @slingevent：created
    1. 单击“搜索”。
    1. 在结果中，排名最前的项目是最新的Sling事件作业。 单击每个，然后查找与队列顶部显示的内容匹配的停滞复制。
-
-1. sling事件框架作业队列可能出错。 尝试在/system/console中重新启动org.apache.sling.event捆绑包。
-1. 可能是作业处理已关闭。 您可以在Sling事件选项卡的Felix控制台下查看它。 检查是否显示 — Apache Sling事件（作业处理已禁用！）
-
-   * 如果是，请查看Felix控制台中“配置”选项卡下的Apache Sling作业事件处理程序。 可能未选中“作业处理已启用”复选框。 如果选中此复选框，并且仍显示“作业处理已禁用”，则检查/apps/system/config下是否存在正在禁用作业处理的覆盖。 尝试为jobmanager.enabled创建一个osgi：config节点，其布尔值为true，并重新检查激活是否开始以及队列中是否没有更多作业。
-
-1. DefaultJobManager配置也可能会进入不一致状态。 当有人通过OSGiconsole手动修改“Apache Sling作业事件处理程序”配置（例如，禁用并重新启用“作业处理已启用”属性并保存配置）时，可能会发生此情况。
-
-   * 此时，存储在crx-quickstart/launchpad/config/org/apache/sling/event/impl/jobs/DefaultJobManager.config中的DefaultJobManager配置进入不一致状态。 即使“Apache Sling作业事件处理程序”属性显示“作业处理已启用”处于选中状态，当导航到Sling事件选项卡时，它会显示消息 — JOB PROCESSING IS DISABLED并且复制不起作用。
-   * 要解决此问题，请导航到OSGi控制台的配置页面，并删除“Apache Sling作业事件处理程序”配置。 然后，重新启动群集的主节点以使配置返回到一致状态。 这应该可以修复问题，并且复制可以重新开始工作。
 
 **创建复制.log**
 
