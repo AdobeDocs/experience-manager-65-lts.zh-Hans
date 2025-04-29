@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: c3ae083fbdbc8507904fde3c9c34ca4396c9cfaf
+source-git-commit: 79551cfa77420fae965ecac8060fd2005beff558
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1376'
 ht-degree: 3%
 
 ---
@@ -38,20 +38,20 @@ ht-degree: 3%
    * [解压缩的安装目录](#unpacked-install-directory)
    * [启动和停止](#starting-and-stopping)
 
-<!-- Once you have familiarized yourself with these basics, you can find in more advanced and detailed information in the following subpages:
+熟悉这些基础知识后，您便可以在以下子页面中找到更高级和详细的信息：
 
-* [Technical Requirements](/help/sites-deploying/technical-requirements.md)
-* [Recommended Deployments](/help/sites-deploying/recommended-deploys.md)
-* [Custom Standalone Install](/help/sites-deploying/custom-standalone-install.md)
-* [Application Server Install](/help/sites-deploying/application-server-install.md)
-* [Command Line Start and Stop](/help/sites-deploying/command-line-start-and-stop.md)
-* [Configuring](/help/sites-deploying/configuring.md)
-* [Upgrading to AEM 6.5](/help/sites-deploying/upgrade.md)
-* [Configuration How-To Articles](/help/sites-deploying/ht-deploy.md)
-* [Web Console](/help/sites-deploying/web-console.md)
-* [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
-* [Best Practices](/help/sites-deploying/best-practices.md)
-* [Introduction to the AEM Platform](/help/sites-deploying/platform.md) -->
+* [技术要求](/help/sites-deploying/technical-requirements.md)
+* [建议的部署](/help/sites-deploying/recommended-deploys.md)
+* [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
+* [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
+* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
+* [配置](/help/sites-deploying/configuring.md)
+* [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
+* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
+* [Web 控制台](/help/sites-deploying/web-console.md)
+* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
+* [最佳实践](/help/sites-deploying/best-practices.md)
+* [AEM平台简介](/help/sites-deploying/platform.md)
 
 ## 基本概念 {#basic-concepts}
 
@@ -265,28 +265,28 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 
 ![登录屏幕](assets/screen_shot_2019-04-08at83533am.png)
 
-<!-- 
-After you are logged in, you have access to AEM. For more information, depending on your role, see the following:
 
-* [Authoring](/help/sites-authoring/first-steps.md)
-* [Administering](/help/sites-administering/home.md)
-* [Developing](/help/sites-developing/getting-started.md)
-* [Managing](/help/managing/best-practices.md)
+登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
 
-## Advanced Deployment {#advanced-deployment}
+* [创作](/help/sites-authoring/first-steps.md)
+* [管理 ](/help/sites-administering/home.md)
+* [开发](/help/sites-developing/getting-started.md)
+* [管理](/help/managing/best-practices.md)
 
-The above section should give you a good understanding of the basics of AEM installation. However, installing a full production system of AEM can involve considerably more complexity. For full coverage of advanced installation see the following subpages:
+## 高级部署 {#advanced-deployment}
 
-* [Technical Requirements](/help/sites-deploying/technical-requirements.md)
-* [Recommended Deployments](/help/sites-deploying/recommended-deploys.md)
-* [Custom Standalone Install](/help/sites-deploying/custom-standalone-install.md)
-* [Application Server Install](/help/sites-deploying/application-server-install.md)
-* [Command Line Start and Stop](/help/sites-deploying/command-line-start-and-stop.md)
-* [Configuring](/help/sites-deploying/configuring.md)
-* [Upgrading to AEM 6.5](/help/sites-deploying/upgrade.md)
-* [Configuration How-To Articles](/help/sites-deploying/ht-deploy.md)
-* [Web Console](/help/sites-deploying/web-console.md)
-* [Troubleshooting Replication](/help/sites-deploying/troubleshoot-rep.md)
-* [Best Practices](/help/sites-deploying/best-practices.md)
-* [Introduction to the AEM Platform](/help/sites-deploying/platform.md)
- -->
+通过上部分，您应该能够很好地了解AEM安装的基础知识。 但是，安装AEM的完整生产系统可能会涉及更大的复杂性。 有关高级安装的完整介绍，请参阅以下子页面：
+
+* [技术要求](/help/sites-deploying/technical-requirements.md)
+* [建议的部署](/help/sites-deploying/recommended-deploys.md)
+* [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
+* [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
+* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
+* [配置](/help/sites-deploying/configuring.md)
+* [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
+* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
+* [Web 控制台](/help/sites-deploying/web-console.md)
+* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
+* [最佳实践](/help/sites-deploying/best-practices.md)
+* [AEM平台简介](/help/sites-deploying/platform.md)
+
