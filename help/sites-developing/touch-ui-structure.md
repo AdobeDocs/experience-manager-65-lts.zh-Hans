@@ -9,10 +9,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 1fcf6de4-30b5-46cb-9c1d-109a160d5030
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -167,4 +167,4 @@ AEM附带几个已为页面创作实施的层；例如，编辑、预览、批�
 
 有关触控式UI相关概念的更多详细信息，请阅读[AEM触控式UI的概念](/help/sites-developing/touch-ui-concepts.md)。
 
-有关更多技术信息，请参阅启用触屏的页面编辑器的[JS文档集](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html)。
+有关更多技术信息，请参阅启用触屏的页面编辑器的[JS文档集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)。

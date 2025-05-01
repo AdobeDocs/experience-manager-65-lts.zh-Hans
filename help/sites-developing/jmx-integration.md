@@ -7,7 +7,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: ca929fe7-8393-42df-983d-e2005d8434ac
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 ## Felix和CQ5中的JMX框架 {#the-jmx-framework-in-felix-and-cq}
 
-在Apache Felix平台上，将MBean部署为OSGi服务。 在OSGi服务注册表中注册MBean服务后，Aries JMX白板模块会自动向MBean服务器注册MBean。 然后，JMX控制台可以使用MBean，该控制台会公开公共属性和操作。
+在Apache Felix平台上，将MBean部署为OSGi服务。 When an MBean service is registered in the OSGi Service Registry, the Aries JMX Whiteboard module automatically registers the MBean with the MBean Server. 然后，JMX控制台可以使用MBean，该控制台会公开公共属性和操作。
 
 ![jmxwhiteboard](assets/jmxwhiteboard.png)
 
-## 为CQ5和CRX创建MBean {#creating-mbeans-for-cq-and-crx}
+## Creating MBeans for CQ5 and CRX {#creating-mbeans-for-cq-and-crx}
 
-您为管理CQ5或CRX资源而创建的MBean基于javax.management.DynamicMBean接口。 要创建它们，请遵循JMX规范中概述的常规设计模式：
+MBeans that you create for managing CQ5 or CRX resources are based on the javax.management.DynamicMBean interface. To create them you follow the usual design patterns as outlined in the JMX specification:
 
 * 创建管理界面，包括get、set和is定义属性的方法以及其他定义操作的方法。
 * 创建实现类。 该类必须实现DynamicMBean，或扩展DynamicMBean的实现类。
@@ -38,11 +38,11 @@ ht-degree: 0%
 
 ### 使用注释提供MBean信息 {#using-annotations-to-provide-mbean-information}
 
-[com.adobe.granite.jmx.annotation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)包提供了几个注释和类，以便轻松地将MBean元数据提供给JMX控制台。 使用这些注释和类，而不是直接向MBean的MBeanInfo对象添加信息。
+[com.adobe.granite.jmx.annotation](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)包提供了几个注释和类，以便轻松地将MBean元数据提供给JMX控制台。 使用这些注释和类，而不是直接向MBean的MBeanInfo对象添加信息。
 
 **注释**
 
-将注释添加到管理界面以指定MBean元数据。 该信息显示在JMX控制台中，供每个已部署的实现类使用。 有以下批注可用（有关完整信息，请参阅[com.adobe.granite.jmx.annotation JavaDocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)）：
+Add annotations to the management interface to specify MBean metadata. The information appears in the JMX console for each implementation class that is deployed. The following annotations are available (for complete information, see the [com.adobe.granite.jmx.annotation JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)):
 
 * **描述：**&#x200B;提供MBean类或方法的描述。 在类声明上使用时，该说明将显示在MBean的“JMX控制台”页上。 在方法上使用时，说明显示为相应属性或操作的悬停文本。
 * **影响：**&#x200B;方法的影响。 有效参数值是由[javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html)定义的字段。
@@ -58,7 +58,7 @@ ht-degree: 0%
 * **AnnotatedStandardMBean：** javax.management.StandardMBean类的子类，自动向JMX控制台提供注释元数据。
 * **OpenAnnotatedStandardMBean：** AnnotatedStandardMBean类的子类，用于创建使用OpenTypeInfo注释的Open Mbean。
 
-### 开发MBean {#developing-mbeans}
+### Developing MBeans {#developing-mbeans}
 
 通常，您的MBean反映了要管理的OSGi服务。 在Felix平台上，您可以像在其他Java服务器平台上部署一样创建MBean。 主要区别在于，您可以使用注释来指定MBean信息：
 
@@ -135,11 +135,11 @@ public class ExampleMBeanImpl extends AnnotatedStandardMBean implements ExampleM
 
 除了与OSGi相关的元数据之外，您还必须提供在MBean服务器中注册MBean时Aries JMX白板模块所需的元数据：
 
-* **DynamicMBean接口的名称：**&#x200B;声明MBean服务实现`javax.management.DynamicMBea`n接口。 此声明通知Aries JMX白板模块该服务是MBean服务。
+* **The name of the DynamicMBean interface:** Declare that the MBean service implements the `javax.management.DynamicMBea`n interface. This declaration notifies the Aries JMX Whiteboard module that the service is an MBean service.
 
-* **MBean域和密钥属性：**&#x200B;在Felix上，您将此信息作为MBean的OSGi服务的属性提供。 这是您通常在`javax.management.ObjectName`对象中向MBean服务器提供的相同信息。
+* **The MBean domain and key properties:** On Felix, you provide this information as a property of the MBean&#39;s OSGi service. This is the same information that you ordinarily provide to the MBean Server in a `javax.management.ObjectName` object.
 
-当您的MBean反映为单个服务时，只需要一个MBean服务实例。 在这种情况下，如果您使用Felix SCR Maven插件，则可以使用MBean实现类上的Apache Felix服务组件运行时(SCR)注释来指定与JMX相关的元数据数据。 要实例化多个MBean实例，您可以创建另一个类来执行MBean的OSGi服务的注册。 在这种情况下，与JMX相关的元数据在运行时生成。
+When your MBean is a reflection of a singular service, only a single instance of the MBean service is required. In this case, if you use the Felix SCR Maven plugin, you can use the Apache Felix Service Component Runtime (SCR) annotations on the MBean implementation class to specify the JMX-related metatdata. To instantiate several MBean instances, you could create another class that performs that registration of the MBean&#39;s OSGi service. 在这种情况下，与JMX相关的元数据在运行时生成。
 
 **单MBean**
 
@@ -203,11 +203,11 @@ ServiceRegistration serviceregistration =
 
 下一部分中的示例MBean提供了更多详细信息。
 
-当服务配置存储在存储库中时，MBean服务管理器非常有用。 管理器可以检索服务信息，并使用它来配置和创建相应的MBean。 管理器类还可以侦听存储库更改事件并相应地更新MBean服务。
+An MBean service manager is useful when service configurations are stored in the repository. The manager can retrieve service information and use it to configure and create the corresponding MBean. The manager class can also listen for repository change events and update MBean services accordingly.
 
-## 示例：使用JMX监控工作流模型 {#example-monitoring-workflow-models-using-jmx}
+## Example: Monitoring Workflow Models Using JMX {#example-monitoring-workflow-models-using-jmx}
 
-此示例中的MBean提供了有关存储在存储库中的CQ5工作流模型的信息。 MBean管理器类基于存储在存储库中的工作流模型创建MBean，并在运行时注册其OSGi服务。 此示例由包含以下成员的单个包组成：
+The MBean in this example provides information about the CQ5 Workflow models that are stored in the repository. An MBean manager class creates MBeans based on Workflow models that are stored in the repository and registers their OSGi service at runtime. 此示例由包含以下成员的单个包组成：
 
 * WorkflowMBean：管理接口。
 * WorkflowMBeanImpl： MBean实现类。
@@ -218,10 +218,10 @@ ServiceRegistration serviceregistration =
 
 WorkflowMBeanManagerImpl包括组件激活方法。 激活组件后，方法会执行以下任务：
 
-* 获取包的BundleContext。
-* 查询存储库以获取现有工作流模型的路径。
-* 为每个工作流模型创建MBean。
-* 向OSGi服务注册表注册MBean。
+* Obtains a BundleContext for the bundle.
+* Queries the repository to obtain the paths of the existing Workflow models.
+* Creates MBeans for each Workflow model.
+* Registers the MBeans with the OSGi service registry.
 
 MBean元数据显示在JMX控制台中，其中包含com.adobe.example域、workflow_model类型，而“属性”是工作流模型配置节点的路径。
 
@@ -277,13 +277,13 @@ public class WorkflowMBeanImpl extends AnnotatedStandardMBean implements Workflo
 
 WorkflowMBeanManager服务包括创建WorkflowMBean服务的组件激活方法。 服务实施包括以下方法：
 
-* 激活：组件激活器。 创建用于读取WorkflowModel配置节点的JCR会话。 存储模型配置的根节点定义在静态字段中。 配置节点的名称还可在静态字段中定义。 此方法会调用其他方法，以获取节点模型路径并创建模型WorkflowMBean。
-* getModelIds：遍历根节点下的存储库，并检索每个模型节点的路径。
-* makeMBean：使用模型路径创建WorkflowModel对象，为其创建WorkflowMBean并注册其OSGi服务。
+* 激活：组件激活器。 创建用于读取WorkflowModel配置节点的JCR会话。 The root node where model configurations are stored is defined in a static field. The name of the configuration node is also defined in a static field. 此方法会调用其他方法，以获取节点模型路径并创建模型WorkflowMBean。
+* getModelIds: Traverses the repository below the root node and retrieves the path of each model node.
+* makeMBean: Uses the model path to create a WorkflowModel object, creates a WorkflowMBean for it, and registers its OSGi service.
 
 >[!NOTE]
 >
->WorkflowMBeanManager实施仅为激活组件时存在的模型配置创建MBean服务。 更强大的实施可侦听与新模型配置以及现有模型配置的更改或删除相关的存储库事件。 发生更改时，管理员可以创建、修改或删除相应的WorkflowMBean服务。
+>The WorkflowMBeanManager implementation only creates MBean services for model configurations that exist when the component is activated. A more robust implementation listens for repository events regarding new model configurations and changes or deletions of existing model configuration. When a change occurs, the manager can create, modify, or remove the corresponding WorkflowMBean service.
 >
 
 #### WorkflowMBeanManager接口 {#workflowmbeanmanager-interface}
@@ -544,9 +544,9 @@ public class WorkflowMBeanManagerImpl implements WorkflowMBeanManager {
 </project>
 ```
 
-将以下配置文件添加到您的maven设置文件以使用公共Adobe存储库。
+Add the following profile to your maven settings file to use the public Adobe repository.
 
-#### Maven配置文件 {#maven-profile}
+#### Maven Profile {#maven-profile}
 
 ```xml
 <profile>

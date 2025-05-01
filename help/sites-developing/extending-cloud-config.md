@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6b9b8d8c-8cd5-4c21-9b75-acd74d00354a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 3%
@@ -39,15 +39,15 @@ ht-degree: 3%
 
 `/etc/cloudservices`。
 
-对于每种类型的配置，都会提供模板和组件。 这使得在自定义之后拥有可满足大多数需求的配置模板成为可能。
+对于每种类型的配置，都提供了模板和组件。 这使得在定制后具有可以满足大多数需求的配置模板成为可能。
 
 要为新服务提供配置，请执行以下操作：
 
-* 在中创建服务页面
+* 创建服务页面
 
   `/etc/cloudservices`
 
-* 在此下：
+* 在此项下：
 
    * 配置模板
    * 配置组件
@@ -56,11 +56,11 @@ ht-degree: 3%
 
 `cq/cloudserviceconfigs/templates/configpage`
 
-或基本组件分别
+或基本组件
 
 `cq/cloudserviceconfigs/components/configpage`
 
-服务提供商还应提供以下服务页面：
+服务提供商还应提供服务页面：
 
 `/etc/cloudservices/<service-name>`
 
@@ -136,11 +136,11 @@ propertyname
 
 ### API {#api}
 
-有关API的参考文档，请参阅[com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
+有关API的参考文档，请参阅[com.day.cq.wcm.webservicesupport](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/webservicesupport/package-summary.html)。
 
 ### AEM集成 {#aem-integration}
 
-可用服务在&#x200B;**页面属性**&#x200B;对话框（继承自`foundation/components/page`或`wcm/mobile/components/page`的任何页面）的&#x200B;**云服务**&#x200B;选项卡中列出。
+可用服务列在&#x200B;**Cloud Service属性**&#x200B;对话框（继承自`foundation/components/page`或`wcm/mobile/components/page`的任何页面）的&#x200B;**页面**&#x200B;选项卡中。
 
 该选项卡还提供：
 
@@ -151,11 +151,11 @@ propertyname
 
 存储服务的用户凭据时，应对所有密码进行加密。
 
-您可以通过添加隐藏表单字段来实现这一点。 该字段的属性名称中应该有注释`@Encrypted`；也就是说，对于`password`字段，其名称将写成：
+您可以通过添加隐藏表单字段来实现此目的。 此字段的属性名称中应包含批注`@Encrypted`；即，对于`password`字段，名称将写为：
 
 `password@Encrypted`
 
-然后，`EncryptionPostProcessor`将自动对属性进行加密（使用`CryptoSupport`服务）。
+然后，`EncryptionPostProcessor`将自动加密该属性（使用`CryptoSupport`服务）。
 
 >[!NOTE]
 >
@@ -175,11 +175,11 @@ propertyname
   </tr>
   <tr>
    <td>componentreference</td>
-   <td>要自动包含在页面中的组件的引用路径。<br />这用于其他功能和JS包含。<br />这包括包含<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br />的页面上的组件（通常在<code>body</code>标记之前）。<br />对于Adobe Analytics和Adobe Target，我们使用此项来包含其他功能，例如用于跟踪访客行为的JavaScript调用。</td>
+   <td>要自动包含在页面中的组件的引用路径。<br />这用于附加功能和JS包含项。<br />这包括包含<br /> <code> cq/cloudserviceconfigs/components/servicecomponents</code><br />的页面上的组件（通常在<code>body</code>标记之前）。<br />在Adobe Analytics和Adobe Target中，我们使用此功能来包含附加功能，例如，用于跟踪访问者行为的JavaScript调用。</td>
   </tr>
   <tr>
    <td>说明</td>
-   <td>服务的简短说明。<br /> </td>
+   <td>服务的简短描述。<br /> </td>
   </tr>
   <tr>
    <td>descriptionExtended</td>
@@ -191,7 +191,7 @@ propertyname
   </tr>
   <tr>
    <td>selectableChildren</td>
-   <td>用于在页面属性对话框中显示配置的筛选器。</td>
+   <td>用于在页面属性对话框中显示配置的过滤器。</td>
   </tr>
   <tr>
    <td>serviceUrl</td>

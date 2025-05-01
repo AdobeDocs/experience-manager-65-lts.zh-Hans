@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6ca4f66d-993b-4cfb-9b09-84bb20a54d4c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '5177'
 ht-degree: 0%
@@ -91,14 +91,14 @@ Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administ
 * 保留提供基础结果数据集的[查询](#the-query-and-data-retrieval)的定义。
 
 * 它是一个经过调整的段落系统，包含添加到报告的所有列(`columnbase`)。
-* 定义哪些图表类型可用以及哪些图表类型当前处于活动状态。
+* 定义哪些图表类型可用，哪些当前处于活动状态。
 * 定义“编辑”对话框，该对话框允许用户配置报告的某些方面。
 
 ### 列基数 {#column-base}
 
 每列都是[`columnbase`组件](#column-base-component)的实例，该组件：
 
-* 是一个段落，由相应报告的parsys (`reportbase`)使用。
+* 是一个段落，由相应报表的parsys (`reportbase`)使用。
 * 定义指向[基础结果集](#the-query-and-data-retrieval)的链接。 即，它定义此结果集中引用的特定数据及其处理方式。
 * 保留其他定义；例如可用的聚合和筛选器以及任何默认值。
 
@@ -107,7 +107,7 @@ Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administ
 查询：
 
 * 定义为[`reportbase`](#report-base)组件的一部分。
-* 基于[CQ QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/search/QueryBuilder.html)。
+* 基于[CQ QueryBuilder](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/search/QueryBuilder.html)。
 * 检索用作报表基础的数据。 结果集（表）的每一行都绑定到查询返回的节点。 然后，将从此数据集中提取[单个列](#column-base-component)的特定信息。
 
 * 通常包括：
@@ -171,16 +171,16 @@ Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administ
 1. 数据是[分组和聚合的](#column-specific-definitions)。
 1. 数组数据通过将它转换为（基于字符串的）列表来解析。
 
-   这是一个隐式步骤，用于将多值结果转换为可以显示的列表；基于多值JCR属性的（未聚合）单元格值需要此步骤。
+   这是一个隐式步骤，可将多值结果转换为可以显示的列表；它是基于多值JCR属性的（未聚合）单元格值所必需的。
 
-1. 值再次为[已预处理](#processing-queue)；为&#x200B;*afterApply*&#x200B;阶段定义。
+1. 值再次是[已预处理](#processing-queue)；为&#x200B;*afterApply*&#x200B;阶段定义。
 
-1. 数据按顺序排序。
+1. 数据已排序。
 1. 处理过的数据被传输到客户端。
 
 >[!NOTE]
 >
->在`reportbase`组件上定义了返回基础数据结果集的初始查询。
+>返回基础数据结果集的初始查询是在`reportbase`组件上定义的。
 >
 >处理队列的其他元素在`columnbase`组件上定义。
 
@@ -189,15 +189,15 @@ Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administ
 构建和配置报告需要以下各项：
 
 * 报表组件定义的[位置](#location-of-report-components)
-* [`reportbase`组件](#report-base-component)
+* 一个[`reportbase`组件](#report-base-component)
 * 一个或多个[`columnbase`组件](#column-base-component)
 * [页面组件](#page-component)
-* [报告设计](#report-design)
+* [报表设计](#report-design)
 * [报告模板](#report-template)
 
 ### 报表组件的位置 {#location-of-report-components}
 
-默认报表组件保存在`/libs/cq/reporting/components`下。
+默认报告组件保存在`/libs/cq/reporting/components`下。
 
 但是，建议您不要更新这些节点，而是在`/apps/cq/reporting/components`下创建自己的组件节点，或者如果更合适，则创建`/apps/<yourProject>/reports/components`。
 
@@ -361,21 +361,21 @@ N:charting
 
          * `totals` ( `Boolean`)
 
-           如果应显示其他显示&#x200B;**总计**的行，则为True。
-默认： `false`
+           如果应显示显示&#x200B;**Total**的附加行，则为True。
+默认值： `false`
 
          * `series` ( `Long`)
 
            要显示的行数/系列数。
-默认值： `9` （这也是允许的最大值）
+默认值： `9`（这也是允许的最大值）
 
          * `hoverLimit` ( `Long`)
 
-           要显示弹出窗口的聚合快照（在每个水平线上显示的圆点，表示不同值）的最大数量。 也就是说，当用户在图表图例中将鼠标悬停在不同的值或对应的标签上时。
+           要显示弹出窗口的聚合快照（在每个水平线上显示的圆点，表示不同值）的最大数量。 也就是说，当用户将鼠标悬停在图表图例中的不同值或相应标签上时。
 
-           默认值： `35`（即，如果当前图表设置适用的不同值超过35个，则根本不会显示弹出窗口）。
+           默认值： `35` （即，如果当前图表设置适用的不同值超过35个，则根本不会显示弹出窗口）。
 
-           对于可以并行显示的弹出窗口，还有十个额外的限制（当在图例文本上悬停鼠标时，可以显示多个弹出窗口）。
+           可以并行显示的弹出窗口还有十个限制（当鼠标悬停在图例文本上时，可以显示多个弹出窗口）。
 
 ### 配置对话框 {#configuration-dialog}
 
@@ -422,7 +422,7 @@ N:charting
 </jcr:root>
 ```
 
-提供了多个预配置的组件；可以使用值为`cqinclude`的`xtype`属性在对话框中引用这些组件：
+提供了多个预配置的组件；可在对话框中使用值为`cqinclude`的`xtype`属性引用这些组件：
 
 * **`title`**
 
@@ -596,19 +596,19 @@ N:definitions
 
 * `resolver`
 
-  定义要使用的解析程序。 可以使用以下解析器：
+  定义要使用的解析器。 以下解析程序可用：
 
    * `const`
 
-     将值映射到其他值；例如，这用于将常量（如`en`）解析为其等效值`English`。
+     将值映射到其他值；例如，这用于将常量（如`en`）解析为等效值`English`。
 
    * `default`
 
-     默认解析程序。 这是一个虚拟解析器，实际上不会解析任何内容。
+     默认解析程序。 这是一个虚拟解析器，实际上无法解析任何内容。
 
    * `page`
 
-     将路径值解析为相应页面的路径；更准确地解析为相应的`jcr:content`节点。 例如，`/content/.../page/jcr:content/par/xyz`解析为`/content/.../page/jcr:content`。
+     将路径值解析为相应页面的路径；更准确地解析为相应的`jcr:content`节点。 例如，`/content/.../page/jcr:content/par/xyz`已解析为`/content/.../page/jcr:content`。
 
    * `path`
 
@@ -616,27 +616,27 @@ N:definitions
 
    * `pathextension`
 
-     通过在路径前面添加并从已解析路径上节点的属性中获取实际值来解析值。 例如，值`de`可能前面加有`/libs/wcm/core/resources/languages`之类的路径，该路径采用属性`language`中的值将国家/地区代码`de`解析为语言描述`German`。
+     通过预置路径并从已解析路径上节点的属性中获取实际值来解析值。 例如，值`de`可能之前有一个路径（如`/libs/wcm/core/resources/languages`），该路径采用属性`language`中的值，以将国家/地区代码`de`解析为语言说明`German`。
 
 * `resolverConfig`
 
-  提供解析程序的定义。 可用的选项取决于所选的`resolver`：
+  提供解析程序的定义。 可用选项取决于所选的`resolver`：
 
    * `const`
 
-     使用属性指定要解析的常量。 属性的名称定义要解析的常量；属性的值定义解析的值。
+     使用属性指定用于解析的常量。 属性的名称定义要解析的常量；属性的值定义解析的值。
 
      例如，具有&#x200B;**Name**= `1`和&#x200B;**Value** `=One`的属性将1解析为1。
 
    * `default`
 
-     无配置可用。
+     无可用配置。
 
    * `page`
 
       * `propertyName`（可选）
 
-        定义用于解析值的属性的名称。 如果未指定，则使用默认值&#x200B;*jcr：title*（页面标题）；对于`page`解析程序，这意味着首先路径解析为页面路径，然后进一步解析为页面标题。
+        定义用于解析值的属性的名称。 如果未指定，则使用默认值&#x200B;*jcr：title*（页面标题）；对于`page`解析器，这意味着首先路径解析为页面路径，然后进一步解析为页面标题。
 
    * `path`
 
@@ -780,14 +780,14 @@ N:definitions
 
   用作原始字符串的替换的字符串或字符串表示形式。 这通常表示由正则表达式`pattern`定位的字符串的子字符串。
 
-示例替换可划分为：
+替换示例可分解为：
 
 * 对于具有以下两个属性的节点`definitions/data/preprocessing/apply`：
 
    * `pattern`：`(.*)(/jcr:content)(/|$)(.*)`
    * `replace`：`$1`
 
-* 一个字符串以：
+* 字符串的到达方式为：
 
    * `/content/geometrixx/en/services/jcr:content/par/text`
 
@@ -798,7 +798,7 @@ N:definitions
    * `$3` - `(/|$)` - `/`
    * `$4` - `(.*)` - `par/text`
 
-* 并替换为由`$1`表示的字符串：
+* 并替换为`$1`表示的字符串：
 
    * `/content/geometrixx/en/services`
 
@@ -806,7 +806,7 @@ N:definitions
 
 这些格式化程序将数值转换为相对字符串。
 
-例如，这可用于允许`min`、`avg`和`max`聚合的时间列。 由于`min`/`avg`/`max`聚合显示为&#x200B;*时间差*（例如，`10 days ago`），因此它们需要数据格式器。 为此，将`datedelta`格式化程序应用于`min`/`avg`/`max`聚合值。 如果`count`聚合也可用，则不需要格式符，原始值也不需要。
+例如，这可用于允许`min`、`avg`和`max`聚合的时间列。 由于`min`/`avg`/`max`聚合显示为&#x200B;*时差*（例如，`10 days ago`），因此它们需要数据格式化程序。 为此，将`datedelta`格式化程序应用于`min`/ `avg`/ `max`聚合值。 如果`count`聚合也可用，则不需要格式器，原始值也不需要。
 
 目前可用的数据类型格式化程序包括：
 
@@ -975,7 +975,7 @@ N:definitions
 
       * `percentile95`
 
-        使用所有值的第95百分位数。
+        使用所有值的第95个百分点。
 
 ### 列默认值 {#column-default-values}
 
@@ -992,7 +992,7 @@ N:defaults
 
 ### 事件和操作 {#events-and-actions}
 
-编辑配置定义监听程序检测到的必要事件以及发生这些事件后要应用的操作。 有关背景信息，请参阅[组件开发简介](/help/sites-developing/components.md)。
+“编辑配置”定义监听程序要检测的事件，以及发生这些事件之后要应用的操作。 有关背景信息，请参阅[组件开发简介](/help/sites-developing/components.md)。
 
 必须定义以下值以确保满足所有必需操作：
 
@@ -1016,9 +1016,9 @@ N:cq:editConfig [cq:EditConfig]
 
 它们使用（标准）对话框，您可以为单个类属元件定制该对话框。 此对话框允许报告用户在报告页面上定义通用列的列属性（使用菜单选项&#x200B;**列属性……**）。
 
-例如，**用户报告**&#x200B;的&#x200B;**通用**&#x200B;列。 请参阅`/libs/cq/reporting/components/userreport/genericcol`。
+**用户报告**&#x200B;的&#x200B;**Generic**&#x200B;列就是一个示例。 请参阅`/libs/cq/reporting/components/userreport/genericcol`。
 
-要将列设为通用列，请执行以下操作：
+要将列设置为通用列，请执行以下操作：
 
 * 将列的`definition`节点的`type`属性设置为`generic`。
 
@@ -1068,7 +1068,7 @@ Adobe建议您为每个报表创建单独的设计。 这样做可确保完全�
 
 * 如果报告在`/apps/cq/reporting`之下，`/etc/designs/reports/<yourReport>`是合适的
 
-* 使用`/apps/<yourProject>/reports`模式的报告的`/etc/designs/<yourProject>/reports/<*yourReport*>`
+* 使用`/apps/<yourProject>/reports`模式的报告`/etc/designs/<yourProject>/reports/<*yourReport*>`
 
 在`jcr:content/reportpage/report/columns`上注册了必需的设计属性（例如，`/etc/designs/reports/<reportName>/jcr:content/reportpage/report/columns`）：
 
@@ -1123,7 +1123,7 @@ Adobe建议您为每个报表创建单独的设计。 这样做可确保完全�
 * 指示要使用的设计
 * 创建使用`sling:resourceType`属性引用容器(`reportbase`)组件的`report`子节点
 
-模板片段的示例（取自组件报表模板）为：
+模板片段示例（取自组件报告模板）为：
 
 ```xml
 <!-- ... -->
@@ -1138,7 +1138,7 @@ Adobe建议您为每个报表创建单独的设计。 这样做可确保完全�
 <!-- .. -->
 ```
 
-一个示例模板片段显示了根路径（取自用户报表模板）的定义，如下所示：
+显示根路径（取自用户报告模板）定义的模板片段示例包括：
 
 ```xml
 <!-- ... -->
@@ -1154,7 +1154,7 @@ Adobe建议您为每个报表创建单独的设计。 这样做可确保完全�
 <!-- .. -->
 ```
 
-默认报表模板保存在`/libs/cq/reporting/templates`下。
+默认报告模板保存在`/libs/cq/reporting/templates`下。
 
 但是，Adobe建议您不要更新这些节点。 请改为在`/apps/cq/reporting/templates`下创建您自己的组件节点，或者如果更适合`/apps/<yourProject>/reports/templates`，则创建自己的组件节点。
 
@@ -1187,14 +1187,14 @@ N:apps
 1. 报表基础组件。
 1. 一个或多个列基本组件。
 1. 报告设计。
-1. 报表模板的根。
-1. 报表模板。
+1. 报告模板的根。
+1. 报告模板。
 
-为了说明这些步骤，以下示例定义了一个报表，其中列出了存储库中的所有OSGi配置。 即`sling:OsgiConfig`节点的所有实例。
+为说明这些步骤，以下示例定义了一个列出存储库中所有OSGi配置的报告。 即`sling:OsgiConfig`节点的所有实例。
 
 >[!NOTE]
 >
->复制现有报表，然后自定义新版本是一种替代方法。
+>另一种方法是复制现有报告，然后自定义新版本。
 
 1. 为新报表创建根节点。
 
@@ -1385,12 +1385,12 @@ N:apps
 
 此部分介绍用于实施报表框架的OSGi服务的高级配置选项。
 
-可以使用Web控制台的“配置”菜单（例如`http://localhost:4502/system/console/configMgr`处提供）查看这些内容。 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+可以使用Web控制台的“配置”菜单（例如`http://localhost:4502/system/console/configMgr`处提供）查看这些内容。 使用AEM时，有多种方法可管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)，了解更多详细信息和推荐的实践。
 
 ### 基本服务（Day CQ报告配置） {#basic-service-day-cq-reporting-configuration}
 
-* **时区**&#x200B;定义为其创建时区历史数据的时区。 这是为了确保历史图表显示全球每个用户的相同数据。
-* **区域设置**&#x200B;定义要与&#x200B;**时区**&#x200B;一起用于历史数据的区域设置。 区域设置用于确定某些特定于区域设置的日历设置（例如，一周的第一天是星期日还是星期一）。
+* **时区**&#x200B;定义为其创建的时区历史数据。 这是为了确保历史图表显示全球范围内每个用户的相同数据。
+* **区域设置**&#x200B;定义了要与&#x200B;**时区**&#x200B;一起用于历史数据的区域设置。 区域设置用于确定某些区域设置特定的日历设置（例如，一周的第一天是星期日还是星期一）。
 
 * **快照路径**&#x200B;定义存储历史图表快照的根路径。
 * **报告路径**&#x200B;定义报告所在的路径。 快照服务使用此选项来确定要为其实际生成快照的报表。
@@ -1401,11 +1401,11 @@ N:apps
 
   由于数据是假的，因此它必须&#x200B;*仅*&#x200B;用于测试和调试目的。
 
-  使用`fakedata`选择器可隐式完成报表，因此所有现有数据都将丢失。 数据可以手动恢复，但这是一个非常耗时的过程。
+  使用`fakedata`选择器可隐式完成报表，因此所有现有数据都将丢失。 可以手动恢复数据，但此过程可能很耗时。
 
-* **快照用户**&#x200B;定义了可用于生成快照的可选用户。
+* **快照用户**&#x200B;定义了一个可用于拍摄快照的可选用户。
 
-  基本上，会为完成报告的用户拍摄快照。 在某些情况下（例如，在发布系统上，此用户不存在，因为其帐户尚未复制），您可能会需要指定替代使用的回退用户。
+  基本上，系统会为完成报告的用户拍摄快照。 某些情况下（例如，在发布系统上，由于尚未复制此用户的帐户，因此该用户并不存在）可能需要指定替代使用的回退用户。
 
   此外，指定用户可能会带来安全风险。
 

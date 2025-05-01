@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: a3595673-8d43-4ef2-a00e-ec8aa8d9cb55
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 6%
@@ -188,7 +188,7 @@ ht-degree: 6%
 
 ### 链接选择机制 {#link-selection-mechanism}
 
-在`/libs/cq/core/components/welcome/welcome.jsp`中，使用[ConsoleUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/commons/ConsoleUtil.html)，该程序对具有下列属性的节点执行查询：
+在`/libs/cq/core/components/welcome/welcome.jsp`中，使用[ConsoleUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/ConsoleUtil.html)，该程序对具有下列属性的节点执行查询：
 
 * 值为`cq:Console`的`jcr:mixinTypes`
 

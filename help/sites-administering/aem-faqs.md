@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: b2e73e28-fa34-436d-8a20-848d353e3b8c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) 6.4随SSL向导提供，并提供用于配置Jett
 
 请参阅[了解升级AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html)，其中介绍了考虑升级到最新版本Adobe Experience Manager的客户的关键功能的概要细目。
 
-## 资源 {#assets}
+## 资产 {#assets}
 
 ### 上传MP4文件（例如，使用拖放方法）时，为什么Assets工作流会重复其自身？ {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
 
@@ -105,9 +105,9 @@ AEM提供了各种机制，让您能够自定义创作实例的控制台和页�
 
 #### 基于CoralUI 2的组件与基于CoralUI 3的组件有何区别？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-为Coral3创建了一组新的Granite UI Foundation的Sling组件，这些组件位于[/libs/granite/ui/components/coral/foundation下。](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)对于基于CoralUI 2的组件有一个集合，对于基于CoralUI 3的组件有一个集合。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
+为Coral3创建了一组新的Granite UI Foundation的Sling组件，这些组件位于[/libs/granite/ui/components/coral/foundation下。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)对于基于CoralUI 2的组件有一个集合，对于基于CoralUI 3的组件有一个集合。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
 
-要了解详细信息，请参阅[基于CoralUI 3的迁移指南](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)。
+要了解详细信息，请参阅[基于CoralUI 3的迁移指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)。
 
 #### 如何在AEM Assets中自定义搜索组件？ {#how-to-customize-the-search-component-in-aem-assets}
 

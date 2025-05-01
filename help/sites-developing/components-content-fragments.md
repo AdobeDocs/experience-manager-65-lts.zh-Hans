@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Content Fragments
 role: Developer
 exl-id: 2196af09-8053-49c3-8a23-caf03bb9a39d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%
@@ -131,4 +131,4 @@ Adobe Experience Manager (AEM)内容片段是[作为独立于页面的资源创�
 * `transformer-cfm-parfilter` — 如果指定了段落范围，则过滤掉不需要的段落（对内容片段组件可以这样做）
 * `transformer-cfm-assetprocessor` — 在内部用于检索嵌入到片段中的资源列表
 
-呈现过程通过[`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)公开，如有必要，自定义组件可以使用（例如）。
+呈现过程通过[`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)公开，如有必要，自定义组件可以使用（例如）。

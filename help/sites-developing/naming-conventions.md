@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 36025dac-890e-45ba-adea-a230a5231a0b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 2%
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 ### JCR实用程序 {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html)是JCR实用程序的AEM实现。 验证名称特别感兴趣的是它控制的字符映射以及以下验证：
+[JcrUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html)是JCR实用程序的AEM实现。 验证名称特别感兴趣的是它控制的字符映射以及以下验证：
 
 * `isValidName`
 
@@ -47,7 +47,7 @@ ht-degree: 2%
 
 ### 页面管理器 {#page-manager}
 
-[PageManager](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)提供了基于[JCRUtil](#jcr-utilities)的页面级操作方法。
+[PageManager](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageManager.html)提供了基于[JCRUtil](#jcr-utilities)的页面级操作方法。
 
 ### 标准 UI {#standard-ui}
 

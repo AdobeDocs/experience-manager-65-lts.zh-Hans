@@ -9,7 +9,7 @@ feature: Developing,Tagging
 solution: Experience Manager, Experience Manager Sites
 role: Developer
 exl-id: c835a110-89cf-4857-9ee0-c0ad781a66ae
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 为了以编程方式使用自定义AEM应用程序中的标记或扩展标记，本页介绍了
 
-* [标记API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/tagging/package-summary.html)
+* [标记API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/tagging/package-summary.html)
 
 那个和
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## 标记API概述 {#overview-of-the-tagging-api}
 
-AEM中[标记框架](/help/sites-developing/framework.md)的实施允许使用JCR API管理标记和标记内容。 TagManager确保在`cq:tags`字符串数组属性上作为值输入的标记不会重复，它会删除指向不存在标记的TagID，并更新已移动或合并标记的标记ID。 TagManager使用JCR观察侦听器来还原任何不正确的更改。 主类位于[com.day.cq.tagging](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/package-summary.html)包中：
+AEM中[标记框架](/help/sites-developing/framework.md)的实施允许使用JCR API管理标记和标记内容。 TagManager确保在`cq:tags`字符串数组属性上作为值输入的标记不会重复，它会删除指向不存在标记的TagID，并更新已移动或合并标记的标记ID。 TagManager使用JCR观察侦听器来还原任何不正确的更改。 主类位于[com.day.cq.tagging](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html?com/day/cq/tagging/package-summary.html)包中：
 
 * JcrTagManagerFactory — 返回基于JCR的`TagManager`实现。 它是标记API的参考实施。
 * `TagManager` — 允许按路径和名称解析和创建标记。
@@ -156,7 +156,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
 
 服务器端API具有本地化的`title`相关方法：
 
-* [com.day.cq.tagging.Tag](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/Tag.html)
+* [com.day.cq.tagging.Tag](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html?com/day/cq/tagging/Tag.html)
 
    * getLocalizedTitle（区域设置）
    * getLocalizedTitlePaths()
@@ -164,7 +164,7 @@ http://localhost:4502/system/console/configMgr/com.day.cq.tagging.impl.TagGarbag
    * getTitle（区域设置）
    * getTitlePath（区域设置）
 
-* [com.day.cq.tagging.TagManager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/tagging/TagManager.html)
+* [com.day.cq.tagging.TagManager](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html?com/day/cq/tagging/TagManager.html)
 
    * canCreateTagByTitle(String tagTitlePath， Locale)
    * createTagByTitle(String tagTitlePath， Locale)

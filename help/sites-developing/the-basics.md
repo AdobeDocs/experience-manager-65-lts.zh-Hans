@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: fe3735ff-5c9b-4eb8-bf1d-f2189ec7e26f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '3251'
 ht-degree: 0%
@@ -52,11 +52,11 @@ Experience Server提供了AEM所基于的Experience Services（可用于构建�
 
 [Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html)是一个完全符合JCR API 2.0的开放源代码。
 
-## Sling请求处理 {#sling-request-processing}
+## 吊索请求处理 {#sling-request-processing}
 
-### Sling简介 {#introduction-to-sling}
+### 吊索简介 {#introduction-to-sling}
 
-AEM是使用[Sling](https://sling.apache.org/index.html)构建的，这是一个基于REST原则的Web应用程序框架，可轻松开发面向内容的应用程序。 Sling使用JCR存储库（如Apache Jackrabbit）或CRX内容存储库作为其数据存储(如果有AEM)。 Sling已加入到Apache Software Foundation — 有关详细信息，请访问Apache。
+AEM 是使用 Sling 构建 [的，Sling](https://sling.apache.org/index.html) 是一个基于 REST 原则的 Web 应用程序框架，可轻松开发面向内容的应用程序。 Sling使用JCR存储库（如Apache Jackrabbit）或CRX内容存储库（如果有AEM）作为其数据存储。 Sling已被贡献给Apache软件基金会 - 更多信息可以在Apache找到。
 
 使用Sling时，要呈现的内容类型不是第一个处理注意事项。 相反，主要考虑的问题是URL是否解析为内容对象，然后可以找到该内容对象的脚本来执行渲染。 这为Web内容作者提供了极佳的支持，使他们能够根据自己的需求轻松自定义页面。
 
@@ -74,14 +74,14 @@ AEM是使用[Sling](https://sling.apache.org/index.html)构建的，这是一个
 
 ### Sling以内容为中心 {#sling-is-content-centric}
 
-Sling以&#x200B;*内容为中心*。 这意味着处理侧重于内容，因为每个(HTTP)请求都映射到JCR资源（存储库节点）形式的内容：
+Sling以 *内容为中心*。 这意味着处理集中在内容上，因为每个 （HTTP） 请求都以 JCR 资源（存储库节点）的形式映射到内容上：
 
 * 第一个目标是保存内容的资源（JCR节点）
-* 第二，表示法或脚本从与请求的某些部分（例如，选择器和/或扩展）组合的资源属性中定位
+* 其次，表示或脚本位于与请求的某些部分（例如，选择器和/或扩展）组合的资源属性中
 
-### RESTful Sling {#restful-sling}
+### 休息吊带 {#restful-sling}
 
-由于以内容为中心的理念，Sling实施了面向REST的服务器，从而在Web应用程序框架中引入了新概念。 其优点是：
+由于以内容为中心的理念，Sling实现了面向REST的服务器，因此在Web应用程序框架中具有新的概念。 优点是：
 
 * RESTful，而不仅仅是在曲面上；资源和表示在服务器内正确建模
 * 删除一个或多个数据模型
@@ -101,7 +101,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 您可以将它分解为其复合部分：
 
-| 协议 | 主机 | 内容路径 | 选择器 | 扩展 |  | 后缀 |  | 参数 |
+| 协议 | 主机 | 内容路径 | 选择 | 外延 |  | 后缀 |  | 参数 |
 |---|---|---|---|---|---|---|---|---|
 | https:// | myhost | 工具/间谍 | .printable.a4. | html | / | a/b | ? | x=12 |
 
@@ -130,13 +130,13 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 ![chlimage_1-86](assets/chlimage_1-86a.png)
 
-使用Sling，您可以指定哪个脚本呈现特定实体（通过在JCR节点中设置`sling:resourceType`属性）。 此机制提供的自由度比脚本访问数据实体的自由度要多（PHP脚本中的SQL语句就是这样），因为资源可以具有多个格式副本。
+使用Sling，您可以指定哪个脚本呈现特定实体（通过在JCR节点中设置`sling:resourceType`属性）。 与脚本访问数据实体（就像 PHP 脚本中的 SQL 语句所做的那样）相比，此机制提供了更多的自由度，因为资源可以有多个演绎版。
 
 #### 将请求映射到资源 {#mapping-requests-to-resources}
 
-对请求进行细分，提取出必要的信息。 在存储库中搜索请求的资源（内容节点）：
+分解请求并提取必要的信息。 在存储库中搜索请求的资源（内容节点）：
 
-* 第一个Sling检查请求中指定的位置是否存在节点；例如，`../content/corporate/jobs/developer.html`
+* 首先，Sling 检查请求中指定的位置是否存在节点;例如 `../content/corporate/jobs/developer.html`
 * 如果未找到节点，则将丢弃该扩展并重复搜索；例如，`../content/corporate/jobs/developer`
 * 如果未找到节点，则Sling返回http代码404（未找到）。
 
@@ -155,14 +155,14 @@ Sling还允许将JCR节点以外的内容作为资源，但这是一项高级功
 
 所有Sling脚本都存储在`/apps`或`/libs`的子文件夹中，并按此顺序搜索（请参阅[自定义组件和其他元素](/help/sites-developing/dev-guidelines-bestpractices.md#customizing-components-and-other-elements)）。
 
-其他几点需要注意的是：
+其他一些需要注意的要点是：
 
-* 当需要方法(GET、POST)时，将根据HTTP规范（例如jobs.POST.esp，见下文）以大写形式指定
+* 当需要方法（GET，POST）时，根据HTTP规范以大写形式指定，例如作业。POST.esp（见下文）
 * 支持各种脚本引擎：
 
-   * HTL(HTML模板语言 — Adobe Experience Manager为HTML首选和推荐的服务器端模板系统)： `.html`
-   * ECMAScript (JavaScript)页面（服务器端执行）： `.esp, .ecma`
-   * Java™服务器页面（服务器端执行）： `.jsp`
+   * HTL（HTML 模板语言 - Adobe Experience Manager 首选和推荐的 HTML 服务器端模板系统）： `.html`
+   * ECMAScript （JavaScript） 页面（服务器端执行）： `.esp, .ecma`
+   * Java™ 服务器页面（服务器端执行）： `.jsp`
    * Java™ Servlet编译器（服务器端执行）： `.java`
    * JavaScript模板（客户端执行）： `.jst`
 
@@ -186,9 +186,9 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
   例如，`../content/corporate/jobs/developer.pdf`
 
-  脚本为`/apps/hr/jobs/jobs.pdf.esp`；后缀已添加到脚本名称中。
+  脚本是 `/apps/hr/jobs/jobs.pdf.esp`;后缀被添加到脚本名称中。
 
-* 带有选择器的URL
+* 带有选择器的网址
 
   选择器可用于以替代格式显示相同的内容。 例如，打印机友好版本、RSS馈送或摘要。
 
@@ -272,14 +272,14 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
 #### 无法直接调用Sling脚本 {#sling-scripts-cannot-be-called-directly}
 
-在Sling中，无法直接调用脚本，因为这会破坏REST服务器的严格概念；您将混合使用资源和表示法。
+在 Sling 中，不能直接调用脚本，因为这会破坏 REST 服务器的严格概念;您将混合资源和表示形式。
 
-如果直接调用表示形式（脚本），则会在脚本中隐藏资源，因此框架(Sling)不再知道该表示形式。 因此，您将失去某些特征：
+如果直接调用表示（脚本），则会将资源隐藏在脚本中，因此框架（Sling）不再知道它。 因此，您将失去某些功能：
 
-* 自动处理GET以外的http方法，包括：
+* 自动处理 GET 以外的 http 方法，包括：
 
-   * POST、PUT、通过sling默认实施处理的DELETE
-   * sling：resourceType位置中的`POST.jsp`脚本
+   * 发布、放置、删除，由吊索默认实现处理
+   * `POST.jsp`您的吊索：资源类型位置中的脚本
 
 * 您的代码架构不再像以前那样干净或结构清晰；这对于大规模开发至关重要
 
@@ -303,10 +303,10 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
 OSGi定义了一种用于开发和部署模块化应用程序和库的架构(也称为“适用于Java™的动态模块系统”)。 通过OSGi容器，您可以将应用程序划分为单独的模块（这些模块是包含其他元信息的jar文件，在OSGi术语中称为捆绑包），并通过以下方式管理它们之间的交叉依赖关系：
 
-* 在容器中实现的服务
-* 容器与您的应用程序之间的合同
+* 在容器内实现的服务
+* 容器和应用程序之间的协定
 
-这些服务和合同提供了一个体系结构，使各个元素能够动态地发现彼此进行协作。
+这些服务和合同提供了一个体系结构，使各个元素能够动态地发现彼此以进行协作。
 
 然后，OSGi框架为您提供这些捆绑包的动态加载/卸载、配置和控制 — 无需重新启动。
 
@@ -346,7 +346,7 @@ OSGi定义了一种用于开发和部署模块化应用程序和库的架构(也
 
 在Sling环境中，节点（一个JCR名称）也称为资源。
 
-例如，要获取当前节点的属性，您可以在脚本中使用以下代码：
+例如，要获取当前节点的属性，可以在脚本中使用以下代码：
 
 `PropertyIterator properties = currentNode.getProperties();`
 
@@ -375,15 +375,15 @@ AEM是使用ExtJS构件库开发的。
 * 用于呈现内容的代码
 * 用于用户输入和配置结果内容的对话框。
 
-**模板**&#x200B;模板是特定类型页面的基础。 在网站选项卡中创建页面时，用户必须选择模板。 然后，通过复制此模板创建新页面。
+**模板**&#x200B;模板是特定类型页面的基础。 在网站选项卡中创建页面时，用户必须选择模板。 然后通过复制此模板创建新页面。
 
-模板是一种节点层次结构，与要创建页面的结构相同，但没有任何实际内容。
+模板是节点的层次结构，其结构与要创建的页面相同，但没有任何实际内容。
 
-它定义用于呈现页面的页面组件和默认内容（主要顶级内容）。 内容定义其呈现方式，因为AEM以内容为中心。
+它定义用于呈现页面的页面组件和默认内容（主要顶级内容）。 内容定义其渲染方式，因为AEM以内容为中心。
 
-**页面组件（顶级组件）**&#x200B;要用于呈现页面的组件。
+**页面组件（顶级组件）** 用于呈现页面的组件。
 
-**页面**&#x200B;页面是模板的“实例”。
+**页面** 页面是模板的“实例”。
 
 页面具有类型为cq：Page的层次结构节点和类型为cq：PageContent的内容节点。 内容节点的属性sling：resourceType指向用于呈现页面的页面组件。
 
@@ -391,7 +391,7 @@ AEM是使用ExtJS构件库开发的。
 
 S`tring pageName = currentPage.getName();`
 
-TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/Page.html)。
+TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)。
 
 **页面管理器**&#x200B;页面管理器是一个提供页面级操作方法的界面。
 
@@ -399,7 +399,7 @@ TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，�
 
 页面myPage = pageManager.getContainingPage(myResource)；
 
-pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/PageManager.html)。
+pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageManager.html)。
 
 ## 存储库中的结构 {#structure-within-the-repository}
 
@@ -407,9 +407,9 @@ pageManager是页面管理器对象，myResource是资源对象。 有关页面�
 
 >[!CAUTION]
 >
->对此结构或其中的文件进行更改时应当谨慎。
+>应谨慎更改此结构或其中的文件。
 >
->在开发时需要更改，但是您应该注意要完全了解所做任何更改的影响。
+>开发时需要进行更改，但您应该注意完全了解所做的任何更改的含义。
 
 >[!CAUTION]
 >
@@ -417,7 +417,7 @@ pageManager是页面管理器对象，myResource是资源对象。 有关页面�
 
 * `/apps`
 
-  与应用程序相关；包括特定于您网站的组件定义。 您开发的组件可以基于`/libs/foundation/components`提供的现成组件。
+  应用相关;包括特定于您网站的组件定义。 您开发的组件可以基于 中 `/libs/foundation/components`提供的开箱即用组件。
 
 * `/content`
 
@@ -463,9 +463,9 @@ FileVault为JCR存储库提供文件系统映射和版本控制。 它可用于�
 
 ## 多站点管理 {#multi-site-management}
 
-多站点管理器(MSM)使您能够轻松管理共享公共内容的多个网站。 MSM允许您定义站点之间的关系，以便将一个站点中的内容更改自动复制到其他站点。
+多站点管理器(MSM)使您能够轻松管理共享公共内容的多个网站。 使用MSM可以定义站点之间的关系，以便在一个站点中更改的内容会自动复制到其他站点中。
 
-例如，通常以多种语言为国际受众提供网站。 当使用相同语言的网站数量较少（三到五）时，可以手动执行跨网站同步内容的过程。 但是，当站点的数量增加或涉及多种语言时，自动化该过程会变得更加高效。
+例如，经常以多种语言为国际受众提供网站。 当使用相同语言的站点数量较少（三到五个）时，可以手动执行跨站点同步内容的过程。 但是，当站点数量增加或涉及多种语言时，自动化该过程会变得更加有效。
 
 * 高效地管理网站的不同语言版本。
 * 根据源站点自动更新一个或多个站点：

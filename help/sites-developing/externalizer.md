@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 5beeae99-7ef4-49a0-aaad-3ab07429ebc2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 由于如果实例在Web层后面运行，则它无法知道自己的外部可见URL，并且有时必须在请求范围之外创建链接，因此，此服务提供了一个中心位置来配置这些外部URL并构建它们。
 
-本页介绍如何配置&#x200B;**Externalizer**&#x200B;服务及其使用方法。 有关详细信息，请参阅[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html)。
+本页介绍如何配置&#x200B;**Externalizer**&#x200B;服务及其使用方法。 有关详细信息，请参阅[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/Externalizer.html)。
 
 ## 配置Externalizer服务 {#configuring-the-externalizer-service}
 
@@ -128,4 +128,4 @@ ht-degree: 0%
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. 您可以在[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html)中找到更多示例。
+1. 您可以在[Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/Externalizer.html)中找到更多示例。

@@ -9,7 +9,7 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 8294cbbe-f37f-41d0-b8e8-298f9413462e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
 workflow-type: tm+mt
 source-wordcount: '1854'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 本文档中的方案说明如何在创建通信用户界面中创建按钮，以将信件共享为附加到电子邮件的审阅PDF。
 
-### 前提条件 {#prerequisites}
+### 先决条件 {#prerequisites}
 
 要完成此方案，您需要满足以下条件：
 
@@ -321,7 +321,7 @@ ACMExtensionsMessages.properties文件包含“创建通信”用户界面中各
       '</div>';
       ```
 
-### 添加LiveCycle进程以启用操作<span class="acrolinxCursorMarker"></code>处理 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
+### 添加LiveCycle进程以启用操作<span class="acrolinxCursorMarker"></code>正在处理 {#add-the-livecycle-process-to-enable-action-span-class-acrolinxcursormarker-span-handling}
 
 在此方案中，启用以下组件，这些组件是附加的components.zip文件的一部分：
 
@@ -424,11 +424,11 @@ LCA进程在LiveCycle服务器上运行，需要服务器地址和登录凭据�
    >
    >每次在服务器端进行更改时，请重新启动LiveCycle Server。
 
-   DSCSample.jar文件使用renderLetter API。 有关renderLetter API的详细信息，请参阅[接口LetterRenderService](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
+   DSCSample.jar文件使用renderLetter API。 有关renderLetter API的详细信息，请参阅[接口LetterRenderService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 #### 将DSC导入LiveCycle {#import-dsc-to-livecyle}
 
-DSCSample.jar文件使用renderLetter API根据DSC作为输入提供的XML数据将书信呈现为PDF字节。 有关renderLetter和其他API的详细信息，请参阅[书信渲染服务](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
+DSCSample.jar文件使用renderLetter API根据DSC作为输入提供的XML数据将书信呈现为PDF字节。 有关renderLetter和其他API的详细信息，请参阅[书信渲染服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 1. 启动Workbench并登录。
 1. 选择&#x200B;**窗口>显示视图>组件**。 “组件”视图将添加到Workbench ES2。

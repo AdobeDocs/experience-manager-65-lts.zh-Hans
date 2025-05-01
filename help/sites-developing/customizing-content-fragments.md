@@ -1,6 +1,6 @@
 ---
 title: 自定义和扩展内容片段
-description: 内容片段扩展了标准资产。 了解如何对其进行自定义。
+description: 内容片段扩展标准资源。 了解如何对其进行自定义。
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments
 role: Developer
 exl-id: 705bffea-ef70-40b5-81d8-b130d3908073
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
 workflow-type: tm+mt
 source-wordcount: '2687'
 ht-degree: 1%
@@ -17,27 +17,27 @@ ht-degree: 1%
 
 # 自定义和扩展内容片段{#customizing-and-extending-content-fragments}
 
-内容片段扩展了标准资产；请参阅：
+内容片段扩展标准资源；请参阅：
 
-* [创建和管理内容片段](/help/assets/content-fragments/content-fragments.md)和使用内容片段进行[页面创作](/help/sites-authoring/content-fragments.md)，以获取有关内容片段的更多信息。
+* 有关内容片段的更多信息，请[创建和管理内容片段](/help/assets/content-fragments/content-fragments.md)和[使用内容片段创作页面](/help/sites-authoring/content-fragments.md)。
 
-* [管理Assets](/help/assets/manage-assets.md)和[自定义和扩展Assets](/help/assets/extending-assets.md)，以了解有关标准资产的更多信息。
+* 有关标准资源的更多信息，请[管理资源](/help/assets/manage-assets.md)和[自定义和扩展资源](/help/assets/extending-assets.md)。
 
 ## 架构 {#architecture}
 
 内容片段的基本[组成部分](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)为：
 
 * *内容片段，*
-* 包含一个或多个&#x200B;*内容元素*，
-* 并且可以具有一个或多个&#x200B;*内容变量*&#x200B;的服务器。
+* 由一个或多个&#x200B;*内容元素*&#x200B;组成，
+* 并且可能有一个或多个&#x200B;*内容变化*。
 
-根据片段类型，还会使用模型或模板：
+根据片段的类型，还可使用模型或模板：
 
 >[!CAUTION]
 >
->建议使用[内容片段模型](/help/assets/content-fragments/content-fragments-models.md)创建所有新片段。
+>[建议使用内容片段模型](/help/assets/content-fragments/content-fragments-models.md) 来创建所有新片段。
 >
->内容片段模型用于WKND中的所有示例。
+>内容片段模型用于 WKND 中的所有示例。
 
 >[!NOTE]
 >
@@ -48,10 +48,10 @@ ht-degree: 1%
 * 内容片段模型：
 
    * 用于定义包含结构化内容的内容片段。
-   * 内容片段模型在创建内容片段时定义其结构。
-   * 片段引用模型；因此，对模型的更改可能/将影响任何依赖的片段。
-   * 模型由数据类型构建。
-   * 用于添加新变体的函数等，必须相应地更新片段。
+   * 内容片段模型定义内容片段在创建时的结构。
+   * 片段引用模型;因此，对模型的更改可能会/将影响任何依赖片段。
+   * 模型由数据类型组成。
+   * 添加新变体等的函数必须相应地更新片段。
 
   >[!CAUTION]
   >
@@ -131,41 +131,41 @@ ht-degree: 1%
 >
 >现在建议使用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。 有关详细信息，请参阅[开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)。
 
-可以从AEM页面引用内容片段，就像任何其他资源类型一样。 AEM提供了&#x200B;[**内容片段**&#x200B;核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) — 一个[组件，它允许您在页面上包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此&#x200B;**内容片段**&#x200B;核心组件。
+与任何其他资源类型一样，可以从AEM页面引用内容片段。 AEM提供了&#x200B;[**内容片段**&#x200B;核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) — 一个[组件，可让您在页面中包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此&#x200B;**内容片段**&#x200B;核心组件。
 
-* 组件使用`fragmentPath`属性引用实际内容片段。 `fragmentPath`属性的处理方式与其他资产类型的类似属性相同；例如，当内容片段移动到其他位置时。
+* 组件使用`fragmentPath`属性引用实际内容片段。 `fragmentPath`属性的处理方式与其他资源类型的类似属性相同；例如，在将内容片段移动到其他位置时。
 
-* 利用组件，可选择要显示的变体。
+* 元件允许您选取要显示的变化。
 * 此外，可以选择一定范围的段落以限制输出；例如，这可用于多列输出。
-* 该组件允许[中间内容](/help/sites-developing/components-content-fragments.md#in-between-content)：
+* 组件允许[在内容](/help/sites-developing/components-content-fragments.md#in-between-content)之间：
 
-   * 在这里，利用组件可以在引用片段的段落之间放置其他资产（图像等）。
-   * 对于中间内容，您需要：
+   * 在此组件中，您可以将其他资源（图像等）放在引用片段的段落之间。
+   * 对于介于两者之间的内容，您需要：
 
-      * 请注意，可能存在不稳定的引用；中间内容（在创作页面时添加）与其旁边的段落没有固定关系，在中间内容的位置可能丢失相对位置之前插入新段落（在内容片段编辑器中）
-      * 请考虑使用其他参数（如变体和段落过滤器）以避免搜索结果中出现误报
+      * 请注意引用可能不稳定；介于两者之间的内容（在创作页面时添加）与其旁边的段落没有固定的关系，在介于两者之间的内容位置之前插入新段落（在内容片段编辑器中）可能会失去相对位置
+      * 请考虑其他参数（如变体和段落过滤器），以避免搜索结果中出现误报
 
 >[!NOTE]
 >
 >**内容片段模型：**
 >
->使用基于页面上的内容片段模型的内容片段时，会引用模型。 这意味着，如果在您发布页面时模型尚未发布，则会标记该模型，并将模型添加到要与页面一起发布的资源。
+>使用基于页面上的内容片段模型的内容片段时，将引用该模型。 这意味着，如果在发布页面时模型尚未发布，则会标记该模型，并将模型添加到要随页面一起发布的资源中。
 >
 >**内容片段模板：**
 >
 >使用基于页面上的内容片段模板的内容片段时，没有引用，因为创建片段时复制了模板。
 
-#### 使用OSGi控制台进行配置 {#configuration-using-osgi-console}
+#### 使用 OSGi 控制台进行配置 {#configuration-using-osgi-console}
 
-例如，内容片段的后端实施负责使页面上使用的片段实例可搜索，或管理混合媒体内容。 此实施需要知道哪些组件用于呈现片段以及如何对呈现进行参数化。
+例如，内容片段的后端实现负责使页面上使用的片段实例可搜索，或管理混合媒体内容。 此实现需要知道哪些组件用于渲染片段以及如何参数化渲染。
 
-可以在[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中为OSGi捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此内容的参数。
+可以在 Web 控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中[为 OSGi 捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此参数。
 
 * **资源类型**
-可提供`sling:resourceTypes`列表以定义用于呈现内容片段的组件以及应应用后台处理的位置。
+可以提供 的列表 `sling:resourceTypes` ，以定义用于呈现内容片段的组件以及应将后台处理应用到的位置。
 
 * **引用属性**
-可以配置属性列表以指定在何处为各个组件存储对片段的引用。
+可以配置属性列表，以指定为相应组件存储对片段的引用的位置。
 
 >[!NOTE]
 >
@@ -190,11 +190,11 @@ ht-degree: 1%
 
    * `paragraphScope`定义是应呈现所有段落，还是仅呈现段落范围（值：`all`与`range`）
 
-   * 如果`paragraphScope`==`range`，则属性`paragraphRange`定义要呈现的段落范围
+   * 如果`paragraphScope`==`range`，则属性`paragraphRange`定义要渲染的段落范围
 
-### 与其他框架集成 {#integration-with-other-frameworks}
+### 与其他框架的集成 {#integration-with-other-frameworks}
 
-内容片段可以与集成：
+内容片段可以与以下内容集成：
 
 * **翻译**
 
@@ -243,7 +243,7 @@ ht-degree: 1%
 
 您可以使用服务器端API访问内容片段；请参阅：
 
-[com.adobe.cq.dam.cfm](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -253,7 +253,7 @@ ht-degree: 1%
 
 以下三个接口可用作入口点：
 
-* **片段模板** ([FragmentTemplate](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
+* **片段模板** ([FragmentTemplate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
   使用`FragmentTemplate.createFragment()`创建片段。
 
@@ -265,10 +265,10 @@ ht-degree: 1%
 
   此界面表示：
 
-   * 从中创建内容片段的内容片段模型或内容片段模板，
+   * 内容片段模型或内容片段模板，用于创建内容片段，
    * 以及（创建后）该片段的结构信息
 
-  此信息可以包括：
+  这些信息可能包括：
 
    * 访问基本数据（标题、描述）
    * 访问片段元素的模板/模型：
@@ -281,7 +281,7 @@ ht-degree: 1%
 
       * 列出变体模板
       * 获取给定变体的结构信息
-      * 访问变体模板（请参阅`VariationTemplate`）
+      * 访问变体模板（请参阅 `VariationTemplate`）
 
    * 获取初始关联内容
 
@@ -289,14 +289,14 @@ ht-degree: 1%
 
    * `ElementTemplate`
 
-      * 获取基本数据（名称、标题）
+      * 获取基本数据（名称、职务）
       * 获取初始元素内容
 
    * `VariationTemplate`
 
       * 获取基本数据（名称、标题、描述）
 
-* **内容片段** ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **内容片段** ([ContentFragment](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
   利用此界面，您可以以抽象方式处理内容片段。
 
@@ -328,7 +328,7 @@ ht-degree: 1%
 
   表示片段的主元素的接口包括：
 
-   * **Content元素** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **Content元素** ([ContentElement](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * 获取基本数据（名称、标题、描述）
       * 获取/设置内容
@@ -342,7 +342,7 @@ ht-degree: 1%
 
       * 解决变体的快捷方式（如果指定的变体不适用于元素，则应用一些其他特定于实施的回退逻辑）
 
-   * **内容变量** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **内容变量** ([ContentVariation](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * 获取基本数据（名称、标题、描述）
       * 获取/设置内容
@@ -362,19 +362,19 @@ ht-degree: 1%
 
    * `Resource` — 基础Sling资源；请注意，直接更新基础`Resource`需要重建`ContentFragment`对象。
 
-   * `Asset` — 表示内容片段的DAM `Asset`抽象；请注意，直接更新`Asset`需要重建`ContentFragment`对象。
+   * `Asset` — 表示内容片段的DAM `Asset`抽象；请注意，直接更新`Asset`需要重新生成`ContentFragment`对象。
 
-* `ContentElement`可以适应：
+* `ContentElement`可以调整为：
 
    * `ElementTemplate` — 用于访问元素的结构信息。
 
-* `FragmentTemplate`可以适应：
+* `FragmentTemplate`可以调整为：
 
    * `Resource` - `Resource`确定引用的模型或已复制的原始模板；
 
       * 通过`Resource`进行的更改不会自动反映到`FragmentTemplate`中。
 
-* `Resource`可以适应：
+* `Resource`可以调整为：
 
    * `ContentFragment`
    * `FragmentTemplate`
@@ -426,9 +426,9 @@ ht-degree: 1%
 
 * 启动会话
 
-   * 将创建内容片段的新版本。
+   * 内容片段的新版本已创建。
    * 自动保存已启动。
-   * 设置了Cookie；这些Cookie定义了当前编辑的片段，并打开了编辑会话。
+   * 设置Cookie；它们定义当前编辑的片段，并且有一个编辑会话打开。
 
 * 完成会话
 

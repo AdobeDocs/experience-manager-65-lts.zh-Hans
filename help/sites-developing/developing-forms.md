@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: d1475168-6625-4d27-9c3b-01e415c2f398
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '1930'
 ht-degree: 0%
@@ -315,7 +315,7 @@ ht-degree: 0%
 
 ### 开发脚本以用于Forms {#developing-scripts-for-use-with-forms}
 
-有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
+有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
 
 您可以将此用于操作，例如在提交表单之前调用服务，并在服务失败时取消服务：
 

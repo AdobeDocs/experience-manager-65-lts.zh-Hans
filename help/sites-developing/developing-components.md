@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: ff9c9e25-13a8-4ca7-a347-1da1352ef223
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '3200'
 ht-degree: 0%
@@ -110,13 +110,13 @@ AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/do
 
 ## 配置预览行为 {#configuring-the-preview-behavior}
 
-在切换到&#x200B;**预览**&#x200B;模式时，即使页面未刷新，也会设置[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie。
+在切换到&#x200B;**预览**&#x200B;模式时，即使页面未刷新，也会设置[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie。
 
 对于呈现时对WCM模式敏感的组件，需要定义它们以专门刷新自身，然后依赖Cookie的值。
 
 >[!NOTE]
 >
->在支持touch的UI中，[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie仅使用值`EDIT`和`PREVIEW`。
+>在支持touch的UI中，[WCM模式](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/WCMMode.html) Cookie仅使用值`EDIT`和`PREVIEW`。
 
 ## 创建和配置对话框 {#creating-and-configuring-a-dialog}
 
@@ -174,7 +174,7 @@ newComponent (cq:Component)
             description
 ```
 
-自定义对话框与开发组件类似，因为对话框本身是一个组件（即组件脚本渲染的标记以及客户端库提供的行为/样式）。
+自定义对话框类似于开发组件，因为该对话框本身是一个组件（即组件脚本与客户端库提供的行为/样式一起呈现的标记）。
 
 有关示例，请参阅：
 
@@ -183,7 +183,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->如果组件没有为触控式UI定义对话框，则经典UI对话框会用作兼容性层中的回退。 要自定义此类对话框，您需要自定义经典UI对话框。 请参阅经典UI的[AEM组件](/help/sites-developing/developing-components-classic.md)。
+>如果组件没有为支持触摸的UI定义对话框，则会将经典UI对话框用作兼容性图层内的回退面板。 要自定义此类对话框，您需要自定义经典的UI对话框。 请参阅[AEM组件以获取经典UI](/help/sites-developing/developing-components-classic.md)。
 
 ### 自定义对话框字段 {#customizing-dialog-fields}
 
@@ -312,9 +312,9 @@ Granite UI和Granite UI组件（等效于小组件）中的字段验证通过使
 
 ## 创建和配置设计对话框 {#creating-and-configuring-a-design-dialog}
 
-当组件具有可在[设计模式](/help/sites-authoring/default-components-designmode.md)中编辑的设计详细信息时，会提供“设计”对话框。
+当组件具有可以在[设计模式](/help/sites-authoring/default-components-designmode.md)中编辑的设计详细信息时，会提供“设计”对话框。
 
-该定义与用于编辑内容](#creating-a-new-dialog)的[对话框的定义非常相似，不同之处在于它被定义为节点：
+该定义与用于编辑内容的[对话框](#creating-a-new-dialog)的定义非常相似，不同之处在于将其定义为节点：
 
 * 节点名称： `cq:design_dialog`
 * 类型：`nt:unstructured`
@@ -371,7 +371,7 @@ AEM提供了在页面上配置段落系统的功能，以便当用户将某个�
    * 名称：`cq:authoring`
    * 类型：`nt:unstructured`
 
-1. 在此下，创建一个节点以保存所有资产到组件映射：
+1. 在此项下，创建一个节点以保存所有资源到组件映射：
 
    * 名称：`assetToComponentMapping`
    * 类型：`nt:unstructured`
@@ -414,25 +414,25 @@ AEM提供了在页面上配置段落系统的功能，以便当用户将某个�
 * `/etc/designs/geometrixx-outdoors/jcr:content/page/par/cq:authoring`
 * `/etc/designs/geometrixx-media/jcr:content/article/article-content-par/cq:authoring`
 
-GITHUB上的代码
+GITHUB代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-project-archetype项目](https://github.com/adobe/aem-project-archetype)
+* [在GitHub上打开aem-project-archetype项目](https://github.com/adobe/aem-project-archetype)
 * 将项目下载为[ZIP文件](https://github.com/adobe/aem-project-archetype/archive/master.zip)
 
 >[!NOTE]
 >
 >在使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)和可编辑模板时，现在可以在UI中轻松配置组件实例的自动创建。 有关定义哪些组件自动与给定媒体类型关联的更多信息，请参阅[创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)。
 
-## 使用AEM Brackets扩展 {#using-the-aem-brackets-extension}
+## 使用AEM括号扩展 {#using-the-aem-brackets-extension}
 
-[AEM Brackets扩展](/help/sites-developing/aem-brackets.md)为编辑AEM组件和客户端库提供了流畅的工作流。 它基于[Brackets](https://brackets.io/)代码编辑器。
+[AEM Brackets扩展](/help/sites-developing/aem-brackets.md)为编辑AEM组件和客户端库提供了流畅的工作流程。 它基于[Brackets](https://brackets.io/)代码编辑器。
 
-扩展：
+扩展名：
 
-* 简化同步（不需要Maven或File Vault）以帮助提高开发人员效率，并帮助对AEM知识有限的前端开发人员参与项目。
-* 提供一些[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支持，该模板语言旨在简化组件开发并提高安全性。
+* 简化同步（不需要Maven或File Vault）以帮助提高开发人员效率，并帮助掌握有限AEM知识的前端开发人员参与项目。
+* 提供一些[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支持，这是旨在简化组件开发并提高安全性的模板语言。
 
 >[!NOTE]
 >

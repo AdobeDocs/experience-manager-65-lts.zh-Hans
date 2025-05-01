@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: d44e6ea8-b4e5-4ed7-a6d0-de1da2709e18
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '2340'
 ht-degree: 0%
@@ -92,15 +92,15 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
 * 通过`global.jsp`中引入的`currentPage`对象：
 
-  `currentPage`对象是页面的实例(请参阅[AEM API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/Page.html))。 page类提供了一些访问内容的方法。
+  `currentPage`对象是页面的实例(请参阅[AEM API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html))。 page类提供了一些访问内容的方法。
 
-  示例： `String pageTitle = currentPage.getTitle();`
+  示例：`String pageTitle = currentPage.getTitle();`
 
 * 通过`global.jsp`中引入的`currentNode`对象：
 
   `currentNode`对象是节点的实例（请参阅[JCR API](https://jackrabbit.apache.org/api/2.16/org/apache/jackrabbit/standalone/cli/core/CurrentNode.html)）。 `getProperty()`方法可以访问节点的属性。
 
-  示例： `String pageTitle = currentNode.getProperty("jcr:title");`
+  示例：`String pageTitle = currentNode.getProperty("jcr:title");`
 
 ## JSP标记库 {#jsp-tag-libraries}
 

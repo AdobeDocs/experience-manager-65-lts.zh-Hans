@@ -6,7 +6,7 @@ role: Developer
 feature: Search
 solution: Experience Manager, Experience Manager Assets
 exl-id: 92efe52b-8fa5-4006-bd68-2472b4ba04f6
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 16%
@@ -52,7 +52,7 @@ ht-degree: 16%
 
 除了使用预先存在的谓词之外，[!DNL Experience Manager]开发人员还可以使用[查询生成器API](/help/sites-developing/querybuilder-api.md)创建自己的谓词。
 
-创建自定义谓词需要有关[Widget框架](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html)的基本知识。
+创建自定义谓词需要有关[Widget框架](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)的基本知识。
 
 最佳实践是复制并调整现有谓词。 示例谓词位于&#x200B;**/libs/cq/search/components/predicates**&#x200B;中。
 

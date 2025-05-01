@@ -6,7 +6,7 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: 88be03c6-2342-4441-836d-f13b8cdfd629
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 88%
@@ -67,7 +67,7 @@ CIF 旨在通过始终保持最新的加载项持续创新，使客户能够访�
 
 ### 集成
 
-使用 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)（一项基于微服务的无服务器 PaaS）和 [CIF 的引用实施](https://github.com/adobe/commerce-cif-graphql-integration-reference)，将生态系统（例如商务解决方案）与 Experience Cloud 互联。
+使用 [Adobe I/O Runtime](https://developer.adobe.com/apis/experienceplatform/runtime.html)（一项基于微服务的无服务器 PaaS）和 [CIF 的引用实施](https://github.com/adobe/commerce-cif-graphql-integration-reference)，将生态系统（例如商务解决方案）与 Experience Cloud 互联。
 
 ## 经过验证的模式和最佳实践
 

@@ -1,6 +1,6 @@
 ---
 title: 新增功能摘要 | AEM 6.5 Forms
-description: AEM表单和文档（全球最高级的数字体验管理解决方案）的最新功能和改进。
+description: AEM表单和文档的最新功能和改进，这是世界上最高级的数字体验管理解决方案。
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
@@ -10,7 +10,7 @@ role: Admin, User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 4db457d2-fefb-410d-8e74-58147f52bbd3
-source-git-commit: 9334414dd47f00eeb79b2d122b78952d2a9c3735
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 38%
@@ -25,15 +25,15 @@ ht-degree: 38%
 | 类型 | Service Pack版本 |
 | 日期 | 2023年12月08日星期五 |
 
-## Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)中包含的内容
+## Adobe Experience Manager 6.5 Forms Service Pack 19 (6.5.19.0)中包括的内容
 
-Experience Manager 6.5.19.0包括自2019年4月6.5首次发布以来发布的新功能、关键客户请求的增强功能、错误修复以及性能、稳定性和安全性改进。 在Experience Manager 6.5上[安装此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
+Experience Manager6.5.19.0包括自2019年4月首次提供6.5以来发布的新功能、客户请求的关键增强、错误修复以及性能、稳定性和安全改进。 [在Experience Manager6.5上安装此Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html)。
 
 ### 新增功能
 
-#### 新增自适应表单核心组件
+#### 新的自适应表单核心组件
 
-添加了垂直选项卡、条款和条件以及复选框，以增强表单的可伸缩性。
+添加了垂直选项卡、条款和条件以及复选框，以提高表单的可伸缩性。
 
 * **[复选框组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**：基于核心组件的自适应表单现在包含复选框组件。通过它，用户可二选一，即选择或取消选择特定选项。它一般显示为一个小框，单击或点按它即可在选中和取消选中两种状态之间切换。复选框是一个常见的表单元素，用于提供是/否或 true/false 选择。
 
@@ -43,13 +43,13 @@ Experience Manager 6.5.19.0包括自2019年4月6.5首次发布以来发布的新
 
 * **[垂直选项卡组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**：基于核心组件的自适应表单现在可将表单内容整理到选项卡垂直列表中，从而提供结构化的、可导航的布局。在表单中使用垂直选项卡可通过简化导航并改进表单内容的组织而增强整体用户体验，特别是在表单包含多个部分或复杂信息的情况下。
 
-#### AEM Forms Designer的64位版本
+#### 64位版本的AEM Forms Designer
 
-[64位版本的AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)可提供增强的性能、可扩展性和内存管理，以增强您的表单创建体验。 利用 64 位架构，您可以轻松处理更大、更复杂的项目，确保无缝的设计工作流程和优化的效率。利用此最新版本，提升您的表单设计能力并迎接 AEM Forms Designer 的未来。
+[64位版本的AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)增强了性能、可伸缩性和内存管理，可为您的表单创建体验注入活力。 利用 64 位架构，您可以轻松处理更大、更复杂的项目，确保无缝的设计工作流程和优化的效率。利用此最新版本，提升您的表单设计能力并迎接 AEM Forms Designer 的未来。
 
-#### 将自适应Forms连接到Microsoft® SharePoint列表
+#### 将自适应Forms与Microsoft® SharePoint List关联
 
-AEM Forms提供开箱即用的集成，允许您将表单数据直接提交到SharePoint列表](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)，从而您可以使用SharePoint的列表功能。 [您可以将Microsoft® SharePoint列表配置为表单数据模型的数据源，并使用使用表单数据模型提交操作将自适应表单与SharePoint列表连接起来。
+AEM Forms提供了开箱即用的集成，可[将表单数据直接提交到SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list))，让您能够使用SharePoint的List功能。 您可以将Microsoft® SharePoint List配置为表单数据模型的数据源，并使用“使用表单数据模型提交”提交操作将自适应表单与SharePoint List连接。
 
 #### 支持为自适应表单片段配置记录文档属性
 
@@ -57,18 +57,18 @@ AEM Forms提供开箱即用的集成，允许您将表单数据直接提交到Sh
 
 #### 包括64位版本的XMLFM
 
-XMLFM的64位迭代带来了更高的性能、可扩展性和更精细的内存管理。 它是第一个部署在服务器端的64位本机服务。 XMLFM 64位利用其固有的功能访问比32位对等项大得多的内存资源，从而能够无缝处理更大的渲染工作负载。 这一里程碑不仅实现了性能的飞跃，而且还对AEM Forms服务器中的本机服务框架引入了关键增强功能。 此更新使AEM Forms服务器能够无缝支持任何64位本机服务。
+XMLFM的64位迭代带来了更高的性能、可扩展性和更精细的内存管理。 它是第一个部署在服务器端的64位本机服务。 通过利用与32位同类产品相比可访问显着更大的内存资源的固有功能，64位XMLFM可实现更大渲染工作负荷的无缝处理。 此里程碑不仅表示性能飞跃，还引入了AEM Forms服务器中原生服务框架的关键增强功能。 此更新使AEM Forms Server能够无缝支持任何64位本机服务。
 
 
 
 ## 错误修复
 
-该版本还包括对20多个客户报告问题的修复。 有关Service Pack中包含的修复的详细列表，请参阅[发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/release-notes.html?lang=en#forms-6519)
+此版本还修复了20多个客户报告的问题。 有关Service Pack中包含的修复的详细列表，请参阅[发行说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/release-notes.html?lang=en#forms-6519)
 
 
-## 安装服务包
+## 安装Service Pack
 
-此Service Pack为JEE上的AEM Forms和OSGi上的AEM Forms带来了新功能和错误修复。 与以前的Service Pack相比，安装说明发生了更改。有关安装说明，请参阅[AEM Forms Service Pack安装说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)。
+Service Pack为JEE版上的AEM Forms和OSGi版上的AEM Forms带来了新功能和错误修复。 与以前的Service Pack相比，安装说明有所更改。有关安装说明，请参阅[AEM Forms Service Pack安装说明](https://experienceleague.adobe.com/docs/experience-manager-65-lts/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)。
 
 
 
@@ -158,7 +158,7 @@ You can now define rules to [add checkboxes to the Adaptive Form dynamically](..
 
 Variables enable workflow steps to hold and pass metadata across workflow steps at runtime. You can create different types of variables for storing different types of data. For example, integers, strings, documents, or form data model instances. Typically, you use a variable or a collection of variables when you need to make a decision based on the value that it holds or to store information that you need later in a process.
 
-Variables are an extension of [MetaDataMap](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) interface available in the previous version. It helps save time spent in developing custom ECMAScript code used to retrieve and update metadata values. You continue using MetaDataMap interface and ECMAScript code to manipulate metadata. Some benefits of using variables over MetaDataMap and ECMAScript are:
+Variables are an extension of [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) interface available in the previous version. It helps save time spent in developing custom ECMAScript code used to retrieve and update metadata values. You continue using MetaDataMap interface and ECMAScript code to manipulate metadata. Some benefits of using variables over MetaDataMap and ECMAScript are:
 
 * Dynamically store, update, and use values stored in a variable across the workflow without relying on custom code
 * Retrieve and update values directly to a form data model and data file (XML/JSON ) of a submitted form

@@ -1,6 +1,6 @@
 ---
 title: 获取JSON格式的页面信息
-description: 要获取页面信息，请向PageInfo servlet发送请求，以获取JSON格式的页面元数据
+description: To obtain the page information, send a request to the PageInfo servlet to obtain the page metadata in JSON format
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6c54197f-86da-41bd-93e6-ee78ece91013
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 1%
@@ -40,9 +40,9 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 页面组件可以与一个或多个生成页面元数据的`com.day.cq.wcm.api.PageInfoProvider`服务关联。 PageInfo servlet调用每个PageInfoProvider服务并聚合元数据：
 
-1. HTTP客户端向PageInfo servlet发送请求，其中包括页面的URL。
-1. PageInfo servlet将发现哪个组件渲染页面。
-1. PageInfo servlet调用与组件关联的每个PageInfoProvider。
+1. The HTTP client sends a request to the PageInfo servlet, which includes the URL of the page.
+1. The PageInfo servlet discovers which component renders the page.
+1. The PageInfo servlet calls each PageInfoProvider that is associated with the component.
 1. servlet聚合每个PageInfoProvider返回的元数据，并将元数据添加到JSON对象的HTTP响应中。
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
@@ -55,9 +55,9 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 `/libs/foundation/components/page`组件与以下PageInfoProvider服务关联：
 
-* **默认页面状态提供程序：**&#x200B;有关页面状态的信息，例如它是否已锁定、该页面是否为活动工作流的负载以及哪些工作流可用于该页面。
-* **Live关系信息提供程序：**&#x200B;有关多站点管理(MSM)的信息，例如页面是否为Blue Print的一部分，以及它是否为Live Copy。
-* **内容语言Servlet：**&#x200B;当前页面的语言以及有关页面可用的每种语言的信息。
+* **Default Page Status Provider:** Information about the page status, such as whether it is locked, whether the page is the payload of an active workflow, and which workflows are available for the page.
+* **Live Relationship Info Provider:** Information regarding Multi Site Management (MSM), such as whether the page is part of a Blue Print, and whether it is a Live Copy.
+* **Content Language Servlet:** The language of the current page, and information about each language in which the page is available.
 * **工作流状态提供程序：**&#x200B;有关将页面作为有效负荷的运行中工作流的状态信息。
 * **工作流包信息提供程序：**&#x200B;有关存储库中存储的每个工作流包的信息，以及每个包是否包含当前资源。
 * **模拟器信息提供程序：**&#x200B;有关此资源可用的移动设备模拟器的信息。 如果页面组件不呈现移动设备页面，则没有可用的模拟器。
@@ -477,7 +477,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >Sidekick的“工作流”选项卡使用PageInfo servlet获取工作流包的列表。 从列表中，可以选择要向其中添加当前页面的包。 您创建的过滤器会影响此列表。
 >
 
-服务的ID为`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`。 要创建筛选器，请为`workflowpackageinfoprovider.filter`属性指定一个值。
+The ID of the service is `com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`. To create a filter, specify a value for a `workflowpackageinfoprovider.filter` property.
 
 属性值的前缀为+或 — 字符，后跟包路径：
 
@@ -485,7 +485,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 * 要包含包，请使用+前缀。
 * 要排除包，请使用 — 前缀。
 
-此服务应用所有过滤器的累积结果。 例如，以下筛选器值排除所有工作流包，但Editions文件夹中的工作流包除外：
+此服务应用所有过滤器的累积结果。 For example, the following filter values exclude all workflow packages except for those in the Editions folder:
 
 ```
 -/etc/workflow/packages(/.*)?
@@ -494,11 +494,11 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->使用AEM时，可通过多种方法管理此类服务的配置设置。 有关完整详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。
+>When working with AEM, there are several methods of managing the configuration settings for such services. 有关完整详细信息，请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)。
 
-例如，要使用CRXDE Lite配置服务，请执行以下操作：
+For example, to configure the service using CRXDE Lite:
 
-1. 打开CRXDE Lite ([http://localhost:4502/crx/de](http://localhost:4502/crx/de))。
+1. Open CRXDE Lite ([http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
 1. 在应用程序的配置文件夹中，创建一个节点：
 
    * 名称：`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
@@ -508,11 +508,11 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
    * 名称：`workflowpackageinfoprovider.filter`
    * 类型：`String[]`
-   * 值：使用正确格式的工作流包的路径。
+   * Value: The path to the workflow package using the correct format.
 
-1. 单击“全部保存”。
+1. Click Save All.
 
-要在项目源中配置服务，请执行以下操作：
+To configure the service in your project source:
 
 1. 在项目源中找到或创建AEM应用程序的配置文件夹。
 
@@ -528,15 +528,15 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
     workflowpackageinfoprovider.filter="[]"/>
    ```
 
-1. 在围绕`workflowpackageinfoprovider.filter`属性的括号(`[]`)内，键入与以下示例类似的以逗号分隔的筛选器值列表：
+1. Inside the brackets (`[]`) that surround the `workflowpackageinfoprovider.filter` property, type a comma-separated list of filter values similar to the following example:
 
    `workflowpackageinfoprovider.filter="[-/etc/workflow/packages(/.*)?,+/etc/workflow/packages/Editions(/.*)?]"/>`
 
 1. 保存文件。
 
-## 创建页面信息提供程序 {#creating-a-page-information-provider}
+## Creating a Page Information Provider {#creating-a-page-information-provider}
 
-创建自定义页面信息提供程序服务，以添加应用程序可轻松获取的页面元数据。
+Create a custom Page Information Provider service to add page metadata that your application can easily obtain.
 
 1. 实施`com.day.cq.wcm.api.PageInfoProvider`接口。
 1. 将类捆绑为一个OSGi服务并进行部署。
@@ -552,9 +552,9 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 对于将应用程序页面组件用作`sling:resourceType`的资源，除了默认的PageInfoProvider元数据外，PageInfo servlet还返回自定义PageInfoProvider元数据。
 
-### 示例PageInfoProvider实现 {#example-pageinfoprovider-implementation}
+### Example PageInfoProvider implementation {#example-pageinfoprovider-implementation}
 
-以下Java类实现[PageInfoProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html)并返回当前页面资源的已发布URL。
+The following Java class implements [PageInfoProvider](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html) and returns the published URL of the current page resource.
 
 ```java
 package com.adobe.example;
@@ -601,7 +601,7 @@ public class PageUrlInfoProvider implements PageInfoProvider {
 }
 ```
 
-以下示例在CRXDE Lite中显示了配置为使用PageUrlInfoProvider服务的页面组件：
+The following example, in CRXDE Lite, shows the page component that is configured to use the PageUrlInfoProvider service:
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 

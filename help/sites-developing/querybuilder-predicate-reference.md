@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Search,Query Builder
 role: Developer
 exl-id: c044d541-24d6-4975-9b38-6a4317a16358
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '2313'
 ht-degree: 2%
@@ -124,19 +124,19 @@ ht-degree: 2%
 
 * **属性**
 
-  `DATE`属性的相对路径，例如`jcr:lastModified`。
+  `DATE`属性的相对路径，例如，`jcr:lastModified`。
 
-* **下限**
+* **下界**
 
   用于检查属性（例如，`2014-10-01`）的日期下限。
 
 * **lowerOperation**
 
-  “`>`”（较新）或“`>=`”（在或较新）适用于`lowerBound`。 默认值为“`>`”。
+  “`>`”（较新）或“`>=`”（大于或等于）适用于`lowerBound`。 默认值为“ `>`”。
 
-* **上限**
+* **上界**
 
-  检查属性的上限，例如`2014-10-01T12:15:00`。
+  上界以检查属性，例如，`2014-10-01T12:15:00`。
 
 * **upperOperation**
 
@@ -245,7 +245,7 @@ group.2_group.type=dam:Asset
 
 这是仅用于过滤的谓词，不能使用搜索索引。
 
-支持Facet提取。 为每个唯一的语言代码提供存储段。
+支持方面提取。 为每个唯一的语言代码提供存储桶。
 
 #### 属性 {#properties-8}
 
@@ -257,9 +257,9 @@ group.2_group.type=dam:Asset
 
 检查节点是否是DAM主资产而不是子资产。 这基本上是每个不在“子资产”节点中的节点。 这不会检查`dam:Asset`节点类型。 要使用此谓词，请设置“`mainasset=true`”或“`mainasset=false`”，没有其他属性。
 
-这是仅用于过滤的谓词，不能使用搜索索引。
+这是仅用于筛选的谓词，不能使用搜索索引。
 
-支持彩块化提取，并为主资源和子资源提供两个分段。
+支持方面提取，并为主资源和子资源提供两个存储桶。
 
 #### 属性 {#properties-9}
 
@@ -269,7 +269,7 @@ group.2_group.type=dam:Asset
 
 ### memberOf {#memberof}
 
-查找属于特定[sling资源集合](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)成员的项。
+查找属于特定[sling资源集合](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/sling/resource/collection/ResourceCollection.html)成员的项。
 
 这是仅用于过滤的谓词，不能使用搜索索引。 不支持Facet提取。
 
@@ -361,7 +361,7 @@ group.2_group.type=dam:Asset
 
 * **属性**
 
-  属性的相对路径，例如`jcr:title`。
+  属性的相对路径，例如，`jcr:title`。
 
 * **值**
 
@@ -369,7 +369,7 @@ group.2_group.type=dam:Asset
 
 * **N_value**
 
-  使用`1_value`、`2_value`、...检查多个值（默认情况下与`OR`以及`AND` if and=true组合）（从5.3开始）。
+  使用`1_value`、`2_value`、...检查多个值（默认情况下与`OR`合并，使用`AND` if和=true）（从5.3开始）。
 
 * **和**
 

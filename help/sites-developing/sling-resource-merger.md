@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6fb6e522-fb81-4ba2-90b2-aad68f8bfa9e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '1247'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 用途 {#purpose}
 
-Sling资源合并器提供访问和合并资源的服务。 它提供了以下两种情况的差异（差异）机制：
+Sling资源合并提供访问和合并资源的服务。 它提供了以下两种情况的差异（差异）机制：
 
 * 使用[配置的搜索路径](/help/sites-developing/overlays.md#configuring-the-search-paths)进行的&#x200B;**[资源叠加](/help/sites-developing/overlays.md)**。
 
@@ -34,7 +34,7 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 
 >[!CAUTION]
 >
->Sling资源合并器和相关方法只能与[Granite](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/index.html)一起使用。 这也意味着它仅适用于标准的触屏优化UI；尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
+>Sling资源合并器和相关方法只能与[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/index.html)一起使用。 这也意味着它仅适用于标准的触屏优化UI；尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
 >
 >其他区域（包括触屏组件或经典UI的其他方面）的覆盖/覆盖涉及将相应节点和结构从原始复制到将定义自定义的位置。
 
@@ -80,13 +80,13 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 
   指示是否应完全隐藏资源，包括其子资源。
 
-* `sling:hideChildren` （`String`或`String[]`）
+* `sling:hideChildren``String`（ 或 `String[]`）
 
-  包含要隐藏的子节点或子节点列表。 将维护节点的属性。
+  包含要隐藏的子节点或子节点列表。 将保留节点的属性。
 
-  通配符`*`会隐藏所有。
+  通配符 `*` 隐藏所有内容。
 
-* `sling:orderBefore` ( `String`)
+* `sling:orderBefore``String`（ ）
 
   包含当前节点应位于其前面的同级节点的名称。
 
@@ -114,13 +114,13 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 
      `/libs/foundation/components/text/cq:dialog`
 
-   * 要覆盖此节点，请创建以下节点 — 例如：
+   * 要覆盖此设置，请创建以下节点 - 例如：
 
      `/apps/the-project/components/text/cq:dialog`
 
-要创建其中任何一个，您只需重新创建骨架结构。 为了简化结构的重新创建，所有中间节点都可以是`nt:unstructured`类型（它们不必反映原始节点类型；例如，在`/libs`中）。
+要创建其中任何一个，您只需重新创建骨架结构。 为了简化结构的重新创建，所有中间节点都可以是类型 `nt:unstructured` （它们不必反映原始节点类型;例如，在 中 `/libs`）。
 
-因此，在上述覆盖示例中，需要以下节点：
+因此，在上面的覆盖示例中，需要以下节点：
 
 ```shell
 /apps
@@ -133,7 +133,7 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
 
 >[!NOTE]
 >
->在使用Sling资源合并器（即，处理标准的触屏UI时）时，不建议从`/libs`中复制整个结构，因为这会导致在`/apps`中保存过多信息。 以任何方式升级系统时，这都可能导致问题。
+>使用 Sling 资源合并时（即，在处理标准的触屏优化 UI 时），不建议从中 `/libs` 复制整个结构，因为这会导致 中 `/apps`保存太多信息。 当系统以任何方式升级时，这可能会导致问题。
 
 ### 用例 {#use-cases}
 
@@ -156,7 +156,7 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
       * 该资产的优先级将基于Sling资源解析程序配置。
       * 支持更改属性类型。
 
-        如果您使用的属性类型与`/libs`中使用的属性类型不同，则会使用您定义的属性类型。
+        如果使用的属性类型与 中使用的 `/libs`属性类型不同，则将使用您定义的属性类型。
 
   >[!NOTE]
   >
@@ -210,11 +210,11 @@ Sling资源合并器提供访问和合并资源的服务。 它提供了以下�
    1. 创建属性`sling:hideChildren`：
 
       * 类型： `String[]`
-      * 值：要隐藏/忽略的子节点的列表（如`/libs`中的定义）
+      * 值：要隐藏/忽略的子节点（如 中的 `/libs`定义）的列表
 
-      通配符&amp;amp；ast；可用于隐藏/忽略所有子节点。
+      通配符 &amp;ast;可用于隐藏/忽略所有子节点。
 
-* **重新排序节点**
+* **对节点重新排序**
 
   节点及其同级在`/libs`中定义。 需要新位置，以便在`/apps`覆盖/覆盖中重新创建节点，其中新位置是引用`/libs`中的相应同级节点定义的。
 
@@ -236,14 +236,14 @@ Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠�
 >
 >在访问资源时，建议使用适当的挂载点。
 >
->这可确保调用Sling资源合并器并返回完全合并的资源（减少需要从`/libs`复制的结构）。
+>这可确保调用 Sling 资源合并并返回完全合并的资源（减少需要从中 `/libs`复制的结构）。
 
-* 叠加：
+* 覆盖：
 
-   * 用途：根据资源的搜索路径合并资源
-   * 装入点： `/mnt/overlay`
+   * 目的：根据搜索路径合并资源
+   * 挂载点： `/mnt/overlay`
    * 用法： `mount point + relative path`
-   * 示例：
+   * 例：
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 

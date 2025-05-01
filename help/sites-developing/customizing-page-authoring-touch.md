@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 8d53072b-826d-4ff4-843b-09204fb5a455
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 38%
@@ -109,7 +109,7 @@ GITHUB上的代码
 
 为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。例如，如果使用[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)组件允许用户选择特定资源的路径，则可以通过以下方式筛选显示的路径：
 
-* 通过实施 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面来实施自定义谓词。
+* 通过实施 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面来实施自定义谓词。
 * 指定谓词的名称，并在使用 `pathbrowser` 时引用该名称。
 
 有关创建自定义谓词的详细信息，请参阅[为查询生成器实施自定义谓词计算器](/help/sites-developing/implementing-custom-predicate-evaluator.md)。

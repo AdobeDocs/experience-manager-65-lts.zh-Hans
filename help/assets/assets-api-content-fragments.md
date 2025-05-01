@@ -6,7 +6,7 @@ role: Developer
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: c1f80437-275a-48b6-99b9-bec070577da0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '1902'
 ht-degree: 23%
@@ -56,7 +56,7 @@ Assets REST API：
 
 * 实施[SIREN格式](https://github.com/kevinswiber/siren)
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 Assets REST API适用于安装最新AEM版本的每个现成版本。
 
@@ -211,7 +211,7 @@ Assets REST API公开对文件夹属性的访问权限；例如，文件夹的�
 >
 >根据子资源和文件夹的资源类型，子实体列表可能已经包含定义相应子实体的完整属性集。 或者，对于该子实体列表中的实体，只能公开缩减的属性集。
 
-### 资源 {#assets}
+### 资产 {#assets}
 
 如果请求资产，则响应将返回其元数据；例如标题、名称以及各个资产架构定义的其他信息。
 
@@ -261,7 +261,7 @@ Assets可以具有多个演绎版。 这些通常作为子实体显示，一个�
 
 >[!NOTE]
 >
->有关详细信息，请参阅[API引用](/help/assets/assets-api-content-fragments.md#api-reference)。 具体而言，[Adobe Experience Manager Assets API – 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)。
+>有关详细信息，请参阅[API引用](/help/assets/assets-api-content-fragments.md#api-reference)。 具体而言，[Adobe Experience Manager Assets API – 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
 
 ### 读取/交付 {#read-delivery}
 
@@ -385,7 +385,7 @@ Assets可以具有多个演绎版。 这些通常作为子实体显示，一个�
 
 有关详细的API参考，请参阅此处：
 
-* [Adobe Experience Manager Assets API – 内容片段](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API – 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
    * [可用功能](/help/assets/mac-api-assets.md#assets)

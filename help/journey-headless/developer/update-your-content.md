@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
 exl-id: 322f08c7-f13a-473f-8c59-1050b2e6c2f5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 87%
@@ -18,7 +18,7 @@ ht-degree: 87%
 
 ## 迄今为止的故事 {#story-so-far}
 
-在 AEM Headless 历程的上一个文档[如何通过 AEM 交付 API 访问您的内容](access-your-content.md)中，您已了解如何通过 AEM GraphQL API 访问 AEM 中的 Headless 内容，现在应：
+在 AEM Headless 历程的上一个文档[如何通过 AEM 传递 API 访问您的内容](access-your-content.md)中，您已了解如何通过 AEM GraphQL API 访问 AEM 中的 Headless 内容，现在应：
 
 * 深入了解 GraphQL。
 * 了解 AEM GraphQL API 的工作原理。
@@ -257,7 +257,7 @@ API 引用文档中将定义受支持请求的准确格式。
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅 API 引用。具体而言，[Adobe Experience Manager Assets API – 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
+>有关更多详细信息，请参阅 API 引用。具体而言，[Adobe Experience Manager Assets API – 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
 
 ### 读取/交付 {#read-delivery}
 
@@ -327,7 +327,7 @@ API 引用文档中将定义受支持请求的准确格式。
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 * [内容片段 REST API](/help/assets/assets-api-content-fragments.md)
    * [API 引用](/help/assets/assets-api-content-fragments.md#api-reference)
-* [Adobe Experience Manager Assets API – 内容片段](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API – 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
 * [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
 * [已说明 CORS/AEM](https://helpx.adobe.com/cn/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)

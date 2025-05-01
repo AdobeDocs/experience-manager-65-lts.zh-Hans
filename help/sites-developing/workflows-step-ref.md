@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: e82d97c2-c26a-48df-9210-47dc017c68c8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
 source-wordcount: '3227'
 ht-degree: 2%
@@ -19,11 +19,11 @@ ht-degree: 2%
 
 # 工作流步骤参考 {#workflow-step-reference}
 
-工作流模型由一系列各种类型的步骤组成。 根据类型，可以使用参数和脚本配置并扩展这些步骤，以提供所需的功能和控制。
+工作流模型由各种类型的一系列步骤组成。 根据类型，可以使用参数和脚本配置并扩展这些步骤，以提供您需要的功能和控制。
 
 >[!NOTE]
 >
->本节介绍标准工作流步骤。
+>本节介绍标准工作流程步骤。
 >
 >有关特定于模块的步骤，请参阅以下内容：
 >
@@ -74,8 +74,8 @@ ht-degree: 2%
 * **用户/组**
 
    * 下拉选择框允许您导航到用户或组并选择它们。
-   * 如果将步骤分配给特定用户，则只有此用户才能执行该步骤。
-   * 如果将步骤分配给整个组，则当工作流达到此步骤时，该组中的所有用户都会在其&#x200B;**工作流收件箱**&#x200B;中执行该操作。
+   * 如果将步骤分配给特定用户，则只有该用户才能执行该步骤。
+   * 如果将步骤分配给整个组，则当工作流程到达此步骤时，此组中的所有用户都将在其&#x200B;**工作流程收件箱**&#x200B;中执行操作。
    * 有关详细信息，请参阅[参与工作流](/help/sites-authoring/workflows-participating.md)。
 
 ## AND 拆分 {#and-split}
@@ -130,7 +130,7 @@ ht-degree: 2%
 * [通用](#step-properties-common-tab)
 * **进程**
 
-   * **目标步骤**：选择评估路由表达式的条件后要执行的步骤。
+   * **目标步骤**：选择评估路由选择表达式的条件后要执行的步骤。
    * **路由表达式**：选择规则定义、外部脚本或确定是否执行&#x200B;**目标步骤**&#x200B;的ECMA脚本。
 
       * **规则定义：**&#x200B;使用[表达式编辑器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor)定义规则。
@@ -198,7 +198,7 @@ function check(){
 
 * 编辑&#x200B;**OR拆分属性**：
 
-   * **公共**
+   * **常用**
 
       * 指定拆分名称。
 
@@ -255,9 +255,9 @@ function check(){
 
 ### 对话框参与者步骤 {#dialog-participant-step}
 
-使用&#x200B;**对话框参与者步骤**&#x200B;从分配工作项的用户那里收集信息。 此步骤可用于收集稍后在工作流中使用的少量数据。
+使用&#x200B;**对话框参与者步骤**&#x200B;从分配了该工作项的用户的那里收集信息。 此步骤可用于收集稍后在工作流中使用的少量数据。
 
-完成步骤后，**完成工作项**&#x200B;对话框包含您在对话框中定义的字段。 在字段中收集的数据存储在工作流有效负荷的节点中。 然后，后续工作流步骤可以从存储库中读取值。
+完成步骤后，**完成工作项**&#x200B;对话框将包含您在对话框中定义的字段。 在字段中收集的数据存储在工作流有效负载的节点中。 随后的工作流步骤可以从存储库中读取该值。
 
 要配置该步骤，请指定要为其分配工作项的组或用户，以及对话框的路径。
 
@@ -409,12 +409,12 @@ function check(){
 
   >[!CAUTION]
   >
-  >请勿更改`/libs`路径中的任何内容。
+  >不要更改`/libs`路径中的任何内容。
   >
   >
-  >原因是下次升级实例时`/libs`的内容会被覆盖（在应用修补程序或功能包时可能会被覆盖）。
+  >原因是在下次升级实例时覆盖`/libs`的内容（并且在应用修补程序或功能包时可能会覆盖）。
 
-  此脚本选择工作流发起者作为参与者：
+  此脚本选择工作流发起人作为参与者：
 
   ```
   function getParticipant() {
@@ -424,11 +424,11 @@ function check(){
 
   >[!NOTE]
   >
-  >**工作流发起者参与者选择器**&#x200B;组件扩展&#x200B;**动态参与者步骤**&#x200B;并将此脚本用作步骤实现。
+  >**工作流发起程序参与者选择器**&#x200B;组件扩展了&#x200B;**动态参与者步骤**，并将此脚本用作步骤实现。
 
 * **OSGi服务**
 
-  服务必须实现[com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)接口。 该界面定义了以下成员：
+  服务必须实现[com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)接口。 该界面定义了以下成员：
 
    * `SERVICE_PROPERTY_LABEL`字段：使用此字段指定参与者选择器的名称。 该名称出现在&#x200B;**动态参与者步骤**&#x200B;属性的可用参与者选择器列表中。
 
@@ -567,11 +567,11 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 ## 进程步骤 {#process-step}
 
-**进程步骤**&#x200B;执行ECMAScript或调用OSGi服务以执行自动处理。
+**处理步骤**&#x200B;执行ECMAScript或调用OSGi服务以执行自动处理。
 
 ![wf-32](assets/wf-32.png)
 
-### 流程步骤 — 配置 {#process-step-configuration}
+### 处理步骤 — 配置 {#process-step-configuration}
 
 要配置该步骤，请编辑并使用以下选项卡：
 
