@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ## 第2天是多么艰难 {#what-is-tough-day}
 
-“第2天很艰难”是一个应用程序，可用于对AEM实例的限制进行压力测试。 它可以直接与默认测试套件一起运行，也可以根据测试需要进行配置。 您可以观看[此录制](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html)以演示应用程序。
+“第2天很艰难”是一个应用程序，可用于对AEM实例的限制进行压力测试。 它可以直接与默认测试套件一起运行，也可以根据测试需要进行配置。 您可以观看[此录制](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html?lang=zh-Hans)以演示应用程序。
 
 >[!CAUTION]
 >

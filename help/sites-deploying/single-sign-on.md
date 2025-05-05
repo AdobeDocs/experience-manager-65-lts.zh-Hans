@@ -86,7 +86,7 @@ SSO身份验证处理程序服务(`com.adobe.granite.auth.sso.impl.SsoAuthentica
 >* IIS
 >
 >在`disp_iis.ini`集合中：
->(有关完整详细信息，请参阅[将Dispatcher与Microsoft® Internet Information Server一起安装](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server))
+>(有关完整详细信息，请参阅[将Dispatcher与Microsoft® Internet Information Server一起安装](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hans#microsoft-internet-information-server))
 >
 >* `servervariables=1` （将IIS服务器变量作为请求标头转发到远程实例）
 >* `replaceauthorization=1` （将除“Basic”以外的任何名为“Authorization”的标头替换为其“Basic”等效标头）

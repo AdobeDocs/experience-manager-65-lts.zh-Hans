@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 使用[!DNL Adobe Launch]的Analytics {#analyticsusingadobelaunch}
 
-AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/overview)集成，允许您捕获和跟踪已发布表单的性能指标。 分析这些量度背后的目标是使商业用户能够洞察最终用户行为并优化数据捕获体验。 您可以通过Adobe Analytics for Adaptive Forms捕获和跟踪已登录和未登录（匿名）用户的行为。
+AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/analytics-learn/tutorials/overview)集成，允许您捕获和跟踪已发布表单的性能指标。 分析这些量度背后的目标是使商业用户能够洞察最终用户行为并优化数据捕获体验。 您可以通过Adobe Analytics for Adaptive Forms捕获和跟踪已登录和未登录（匿名）用户的行为。
 
 您还可以使用Cloud Service Framework执行分析。 有关如何将AEM Forms与Cloud Service Framework集成的详细信息，请参阅[使用Cloud Service Framework的Analytics](/help/forms/using/configure-analytics-forms-documents.md)。 与使用Cloud Service Framework的Analytics相比，使用Adobe Launch的主要优势在于，除了这些现成事件之外，您还可以定义自定义事件。 自定义事件是使用规则编辑器或客户clientlibs定义的，并映射到[!DNL Adobe Analytics]中的事件。
 
@@ -49,12 +49,12 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analyti
 在配置[!DNL Adobe Analytics]之前，创建：
 
 * 用于登录到[Adobe Experience Cloud](https://experience.adobe.com/#/home)的Adobe ID。
-* [报告包](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite)。
+* [报告包](https://experienceleague.adobe.com/zh-hans/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite)。
 
 
 ### 安装AEM Forms和[!DNL Adobe Analytics]扩展 {#install-extensions}
 
-执行以下步骤以配置AEM Forms和[Adobe Analytics](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview)扩展：
+执行以下步骤以配置AEM Forms和[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/experience-platform/tags/extensions/client/analytics/overview)扩展：
 
 1. 登录到Adobe Experience Cloud，然后为公司选择适当的名称。
 
@@ -198,7 +198,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analyti
 
 ## 2.配置AEM Forms {#configure-aem-forms}
 
-在创建Adobe Launch配置之前，请使用Adobe Launch作为云解决方案创建[Adobe IMS配置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
+在创建Adobe Launch配置之前，请使用Adobe Launch作为云解决方案创建[Adobe IMS配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
 
 ### 创建 Adobe Launch 配置 {#create-adobe-launch-configuration}
 
@@ -210,7 +210,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analyti
 
 1. 在&#x200B;**[!UICONTROL 标题]**&#x200B;字段中指定配置的标题。
 
-1. 选择[关联的Adobe IMS配置](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
+1. 选择[关联的Adobe IMS配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
 
 1. 选择在[配置Adobe Analytics](#Configure-adobe-analytics)时使用的公司名称。
 
@@ -235,7 +235,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analyti
 1. 选择&#x200B;**[!UICONTROL 保存并关闭]**。 已为[!DNL Adobe Analytics]启用自适应表单。
 1. 发布表单。
 
-为自适应表单启用[!DNL Adobe Analytics]后，如果AEM Forms和[!DNL Adobe Analytics]之间存在适当的数据事件流，则可以[验证](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/implement-solutions/analytics#validate-the-page-view-beacon)。 AEM Forms与Adobe Analytics的集成已完成。 您现在可以[在Adobe Analytics](#view-reports-adobe-analytics)中配置和查看报告。
+为自适应表单启用[!DNL Adobe Analytics]后，如果AEM Forms和[!DNL Adobe Analytics]之间存在适当的数据事件流，则可以[验证](https://experienceleague.adobe.com/zh-hans/docs/platform-learn/implement-in-websites/implement-solutions/analytics#validate-the-page-view-beacon)。 AEM Forms与Adobe Analytics的集成已完成。 您现在可以[在Adobe Analytics](#view-reports-adobe-analytics)中配置和查看报告。
 
 >[!NOTE]
 >如果同时启用使用Cloud Service Framework的[Analytics](/help/forms/using/configure-analytics-forms-documents.md)和使用Adobe Launch的&#x200B;**Analytics**&#x200B;功能，则将优先使用使用Adobe Launch的&#x200B;**Analytics**。

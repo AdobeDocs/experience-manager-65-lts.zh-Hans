@@ -97,7 +97,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该软件包包含A
 1. 打开[程序包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html)并单击“上传程序包&#x200B;**”**&#x200B;以上传程序包。
 1. 选择程序包，然后单击“安装&#x200B;**”。**
 
-   您还可以通过AEM [Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) 文章中列出的直接链接下载包。
+   您还可以通过AEM [Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) 文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动 AEM 实例。 **不要立即重新启动服务器。** 在停止 AEM Forms Server 之前，请等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止显示在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log 文件中，并且日志稳定。
 

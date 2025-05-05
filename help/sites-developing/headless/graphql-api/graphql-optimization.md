@@ -84,7 +84,7 @@ ht-degree: 88%
 
 请参阅：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn)
 
 #### 设置 HTTP 缓存控制标头 {#set-http-cache-control-headers}
 

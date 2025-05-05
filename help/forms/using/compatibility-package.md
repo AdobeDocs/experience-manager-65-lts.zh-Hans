@@ -16,7 +16,7 @@ ht-degree: 3%
 
 ## 概述 {#overview}
 
-在AEM Forms 6.5 LTS中，交互式通信是创建客户通信的默认和推荐方法。 若要继续使用AEM Forms 6.5 LTS中的字母，您需要安装最新的[AEMFD兼容包](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
+在AEM Forms 6.5 LTS中，交互式通信是创建客户通信的默认和推荐方法。 若要继续使用AEM Forms 6.5 LTS中的字母，您需要安装最新的[AEMFD兼容包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
 
 AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4、6.3和6.2中的以下资源](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
 
@@ -31,9 +31,9 @@ AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4
 
 执行升级后，请执行以下操作以安装AEMFD兼容包，并使您的资产与6.5兼容：
 
-确保您已预安装[AEM兼容包](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
+确保您已预安装[AEM兼容包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
 
-1. 安装最新的AEM 6.5 LTS [兼容包](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
+1. 安装最新的AEM 6.5 LTS [兼容包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
 
    有关上载和安装包的详细信息，请参阅[如何使用包](/help/sites-administering/package-manager.md)。
 
