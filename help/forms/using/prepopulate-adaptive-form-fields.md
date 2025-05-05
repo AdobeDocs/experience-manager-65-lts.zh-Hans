@@ -203,7 +203,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->不建议在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板)中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
+>不建议在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板)中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**&#x200B;** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
 
 ### 无表单模型的自适应表单 {#adaptive-form-with-no-form-model}
 
@@ -391,9 +391,11 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
    1. 启用Configuration.af.clientside.datamerge.enabled.name选项
 * 要从命令行启用或禁用：
    * 要启用，请运行以下cURL命令：
+
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * 要禁用，请运行以下cURL命令：
+
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
   要充分利用客户端预填充数据选项，请更新预填充服务以返回[FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)和[CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

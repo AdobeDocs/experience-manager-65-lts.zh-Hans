@@ -77,7 +77,7 @@ ht-degree: 31%
    + [Adobe Campaign组件](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
    + [定位Adobe Campaign](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
    + [在AEM中创建Adobe Campaign Forms](/help/sites-classic-ui-authoring/classic-personalization-ac-forms.md)
-+ 在经典UI {#assets}中创作Assets
++ 在经典UI中创作Assets {#assets}
    + [正在处理资产](/help/sites-classic-ui-authoring/classicui-assets.md)
    + [传送Dynamic Media Assets](/help/sites-classic-ui-authoring/dynamic-media-assets-delivering.md)
    + [将Dynamic Media Assets添加到页面](/help/sites-classic-ui-authoring/dynamic-media-assets-adding-to-page.md)

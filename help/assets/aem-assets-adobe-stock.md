@@ -113,9 +113,9 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 1. 单击&#x200B;**[!UICONTROL 添加到项目]**，然后选择&#x200B;**[!UICONTROL API]**。
 1. 选择“**[!UICONTROL Adobe Stock]**”，然后单击“**[!UICONTROL 下一步]**”。
 1. 指定&#x200B;**[!UICONTROL 凭据名称]**，验证是否选择了&#x200B;**[!UICONTROL OAuth服务器到服务器]**，然后单击&#x200B;**[!UICONTROL 下一步]**。
-1. 选择&#x200B;**[!UICONTROL AEM Assets]****[!UICONTROL 产品配置文件]**，然后单击&#x200B;**[!UICONTROL 保存配置的API]**。 将显示一条成功消息，确认您已在[!DNL Developer Console]中创建项目。 您的项目仪表板将打开，其中顶部显示项目名称，在&#x200B;**[!UICONTROL 已连接的凭据]**&#x200B;下显示&#x200B;**[!UICONTROL API]**&#x200B;下的&#x200B;**[!UICONTROL Adobe Stock]**&#x200B;和&#x200B;**[!UICONTROL 产品配置文件]**&#x200B;下的&#x200B;**[!UICONTROL AEM Assets]**&#x200B;以及&#x200B;**[!UICONTROL OAuth Server-to-Server]**凭据卡。
+1. 选择&#x200B;**[!UICONTROL AEM Assets]**&#x200B;**[!UICONTROL 产品配置文件]**，然后单击&#x200B;**[!UICONTROL 保存配置的API]**。 将显示一条成功消息，确认您已在[!DNL Developer Console]中创建项目。 您的项目仪表板将打开，其中顶部显示项目名称，在&#x200B;**[!UICONTROL 已连接的凭据]**&#x200B;下显示&#x200B;**[!UICONTROL API]**&#x200B;下的&#x200B;**[!UICONTROL Adobe Stock]**&#x200B;和&#x200B;**[!UICONTROL 产品配置文件]**&#x200B;下的&#x200B;**[!UICONTROL AEM Assets]**&#x200B;以及&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;凭据卡。
    ![集成aem assets和adobe stock](/help/assets/assets/adc-project-name.png)
-1. 选择&#x200B;**[!UICONTROL OAuth服务器到服务器]**&#x200B;凭据卡片，此时将显示&#x200B;**[!UICONTROL 凭据详细信息]**。 使用项目的这些[!DNL OAuth Server-to-Server]凭据详细信息（如&#x200B;**[!UICONTROL 客户端ID]**、**[!UICONTROL 客户端密钥]**、**[!UICONTROL 作用域]**、**[!UICONTROL 凭据名称]**、**[!UICONTROL 技术帐户ID]**、**[!UICONTROL 组织ID]**）在AEM创作实例](#add-configuration-in-the-aem-author-instance)中向[添加配置。
+1. 选择&#x200B;**[!UICONTROL OAuth服务器到服务器]**&#x200B;凭据卡片，此时将显示&#x200B;**[!UICONTROL 凭据详细信息]**。 使用项目的这些[!DNL OAuth Server-to-Server]凭据详细信息（如&#x200B;**[!UICONTROL 客户端ID]**、**[!UICONTROL 客户端密钥]**、**[!UICONTROL 作用域]**、**[!UICONTROL 凭据名称]**、**[!UICONTROL 技术帐户ID]**、**[!UICONTROL 组织ID]**）在AEM创作实例[&#128279;](#add-configuration-in-the-aem-author-instance)中向添加配置。
    ![aem assets和adobe stock](/help/assets/assets/oauth-server-server-credentials-details-page.png)
 
 ### 在[!DNL AEM]创作实例中添加配置 {#add-configuration-in-the-aem-author-instance}
@@ -138,9 +138,10 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
    * **[!UICONTROL 客户端密码]**：导航到项目仪表板，单击 **[!UICONTROL 左窗格中可用的 OAuth 服务器到服务器]** 选项，选择凭据 **[!UICONTROL 详细信息]**，单击检索 **[!UICONTROL 客户端密码]**，复制 **[!UICONTROL 客户端密码]** 并将其粘贴到此处（请参阅 [步骤 7](#set-up-a-program-in-developer-console)）。
 
-   * **[!UICONTROL 范围]**：导航到项目仪表板，单击&#x200B;**[!UICONTROL 左窗格中可用的 OAuth 服务器到服务器]**&#x200B;选项，选择凭据&#x200B;**[!UICONTROL 详细信息]**，复制范围&#x200B;]****[!UICONTROL &#x200B;并将其粘贴到此处（请参阅[步骤 7](#set-up-a-program-in-developer-console)）。
+   * **[!UICONTROL 范围]**：导航到项目仪表板，单击&#x200B;**[!UICONTROL 左窗格中可用的 OAuth 服务器到服务器]**&#x200B;选项，选择凭据&#x200B;**[!UICONTROL 详细信息]**，复制范围&#x200B;**&#x200B;**&#x200B;并将其粘贴到此处（请参阅[步骤 7](#set-up-a-program-in-developer-console)）。
 
    * **[!UICONTROL 组织ID]**：导航到您的项目仪表板，单击左窗格中可用的&#x200B;**[!UICONTROL OAuth服务器到服务器]**&#x200B;选项，选择&#x200B;**[!UICONTROL 凭据详细信息]**，复制&#x200B;**[!UICONTROL 组织ID]**&#x200B;并将其粘贴到此处（请参阅[步骤7](#set-up-a-program-in-developer-console)）。
+
      ![aem assets和adobe stock](/help/assets/assets/adobe-ims-technical-account-configuration.png)
 1. 单击&#x200B;**[!UICONTROL 创建]**，将打开&#x200B;**[!UICONTROL Adobe IMS配置]**&#x200B;页面并显示您创建的[!DNL Adobe Stock]集成。
 
@@ -312,7 +313,7 @@ To configure the [!DNL Adobe Stock] cloud service:
 >
 >管理员可以进一步将用户或组添加到云服务， [!DNL Adobe Stock] 并授予这些非管理员用户 [!DNL Experience Manager] 访问 Stock 配置的权限。
 
-1. 要添加用户或组，请选择[!DNL Adobe Stock]云配置，然后单击属性&#x200B;****。
+1. 要添加用户或组，请选择[!DNL Adobe Stock]云配置，然后单击属性&#x200B;**&#x200B;**。
 
 1. 搜索以添加您已为其分配访问 Adobe Stock 配置权限的用户或组。 请参见 [向用户](#assign-permissions-to-group)组分配权限。
 

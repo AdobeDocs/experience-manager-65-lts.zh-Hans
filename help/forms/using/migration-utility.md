@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 迁移方法 {#approach-to-migration}
 
-您可以从AEM Forms 6.5.22.0](/help/forms/using/upgrade-forms-osgi.md)将[升级](../../forms/using/upgrade.md)到[AEM Forms 6.5 LTS。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
+您可以从AEM Forms 6.5.22.0[&#128279;](/help/forms/using/upgrade-forms-osgi.md)将[升级](../../forms/using/upgrade.md)到AEM Forms 6.5 LTS。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
 
 **如果有就地升级**
 
@@ -88,7 +88,7 @@ ht-degree: 1%
 
 1. 执行以下操作以执行迁移：
 
-   * 要迁移&#x200B;**资源**，请选择“AEM Forms Assets迁移”，然后在下一个屏幕中选择“开始迁移”****。 将迁移以下项：
+   * 要迁移&#x200B;**资源**，请选择“AEM Forms Assets迁移”，然后在下一个屏幕中选择“开始迁移”**&#x200B;**。 将迁移以下项：
 
       * 自适应表单
       * 文档片段

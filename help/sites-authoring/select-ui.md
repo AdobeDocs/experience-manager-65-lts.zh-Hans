@@ -39,7 +39,7 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 >
 >从以前的版本升级的实例会保留用于页面创作的经典UI。
 >
->升级后，页面创作不会自动切换到触控式UI，但您可以使用&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)配置此设置。 查看编辑器](#ui-overrides-for-the-editor)的[UI覆盖。
+>升级后，页面创作不会自动切换到触控式UI，但您可以使用&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)配置此设置。 查看编辑器[&#128279;](#ui-overrides-for-the-editor)的UI覆盖。
 
 ## 为实例配置默认UI {#configuring-the-default-ui-for-your-instance}
 
@@ -104,9 +104,11 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 * 创作页面时：
 
    * 在URL中使用`cf#`访问页面时，强制使用经典编辑器。 例如：
+
      `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
    * 在URL中使用`/editor.html`或使用触控设备时，会强制使用已启用触控功能的编辑器。 例如：
+
      `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何强制都是临时的，并且仅对浏览器会话有效

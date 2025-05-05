@@ -63,7 +63,7 @@ ht-degree: 0%
 
 安装或配置发生重大更改后，请创建软件安装的备份。
 
-要完成此任务，请备份整个存储库](#backing-up-your-repository)，[然后：
+要完成此任务，请备份整个存储库[&#128279;](#backing-up-your-repository)，然后：
 
 1. 停止 AEM。
 1. 从您的文件系统备份整个`<cq-installation-dir>`。
@@ -249,7 +249,7 @@ AEM WCM会记录详细的日志。 打开包装并启动“快速入门”后，
 
 >[!NOTE]
 >
->从**system/console/status-Bundlelist**页面生成的**Download Full**包中不包含图像服务器和s7访问日志。 出于支持目的，如果您有[!DNL Dynamic Media]个问题，请在联系客户支持时附加ImageServer和s7access日志。
+>从&#x200B;**system/console/status-Bundlelist**&#x200B;页面生成的&#x200B;**Download Full**&#x200B;包中不包含图像服务器和s7访问日志。 出于支持目的，如果您有[!DNL Dynamic Media]个问题，请在联系客户支持时附加ImageServer和s7access日志。
 
 ### 激活DEBUG日志级别 {#activating-the-debug-log-level}
 
@@ -536,7 +536,7 @@ OSGi事件还会生成审核记录，可在AEM Web Console的&#x200B;**配置状
 
 >[!NOTE]
 >
->还可以检查可用于提高性能](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定[配置。
+>还可以检查可用于提高性能[&#128279;](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定配置。
 
 下面列出了发生的常见性能问题，以及有关如何发现和解决这些问题的建议。
 

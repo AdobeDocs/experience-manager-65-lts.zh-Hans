@@ -21,7 +21,7 @@ ht-degree: 79%
 
 创建页面时，必须选择一个模板，该模板用作创建新页面的基础。 模板可定义生成页面的结构、任何初始内容以及可使用的组件。
 
-使用模 **板编辑器**，创建和维护模板不再只是开发人员的任务。高级用户(称为模板作者 **)也可能**。开发人员仍需要设置环境、创建客户端库和创建要使用的组件，但是，在这些基础知识到位后，模板作者就可以灵活地创建和配置模板，而无需开发项目。****
+使用模 **板编辑器**，创建和维护模板不再只是开发人员的任务。高级用户(称为模板作者 **)也可能**。开发人员仍需要设置环境、创建客户端库和创建要使用的组件，但是，在这些基础知识到位后，模板作者就可以灵活地创建和配置模板，而无需开发项目。**&#x200B;**
 
 在&#x200B;**“模板”控制台**&#x200B;中，模板作者可以执行以下操作：
 
@@ -40,7 +40,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->模板 **** 编辑器不支持直接在模板级别进行定位。可以定位基于可编辑模板创建的页面，但不能定位模板本身。
+>模板 **&#x200B;**&#x200B;编辑器不支持直接在模板级别进行定位。可以定位基于可编辑模板创建的页面，但不能定位模板本身。
 
 >[!CAUTION]
 >
@@ -130,7 +130,7 @@ ht-degree: 79%
 
 >[!CAUTION]
 >
->切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。 出于内部化的目的，建议使用核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的[本地化功能。
+>切勿在模板中输入任何需要[国际化](/help/sites-developing/i18n.md)的信息。 出于内部化的目的，建议使用核心组件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)的本地化功能。
 
 ### 创建模板文件夹 – 管理员 {#creating-a-template-folder-admin}
 
@@ -456,7 +456,7 @@ ht-degree: 79%
 
   要删除配置，请单击位于配置右侧的&#x200B;**删除**&#x200B;按钮。
 
-  要删除配置，请单击**删除**按钮。
+  要删除配置，请单击&#x200B;**删除**&#x200B;按钮。
 
   ![chlimage_1-142](assets/chlimage_1-142.png)
 
@@ -474,7 +474,7 @@ ht-degree: 79%
 
   >[!NOTE]
   >
-  >[只能为RTE通过其UI设置提供的选项定义用于实施富文本编辑器的组件的内容策略](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)。[](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+  >[只能为RTE通过其UI设置提供的选项定义用于实施富文本编辑器的组件的内容策略](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638)。[&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **策略和属性（布局容器）**
 

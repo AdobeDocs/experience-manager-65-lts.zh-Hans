@@ -80,13 +80,13 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
   指示是否应完全隐藏资源，包括其子资源。
 
-* `sling:hideChildren``String`（ 或 `String[]`）
+* `sling:hideChildren` `String`（ 或 `String[]`）
 
   包含要隐藏的子节点或子节点列表。 将保留节点的属性。
 
   通配符 `*` 隐藏所有内容。
 
-* `sling:orderBefore``String`（ ）
+* `sling:orderBefore` `String`（ ）
 
   包含当前节点应位于其前面的同级节点的名称。
 
@@ -212,7 +212,7 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
       * 类型： `String[]`
       * 值：要隐藏/忽略的子节点（如 中的 `/libs`定义）的列表
 
-      通配符 &amp;ast;可用于隐藏/忽略所有子节点。
+      通配符 &ast;可用于隐藏/忽略所有子节点。
 
 * **对节点重新排序**
 

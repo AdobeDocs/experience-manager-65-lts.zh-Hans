@@ -82,6 +82,7 @@ ht-degree: 1%
 * 所有内容都存储在资源的`jcr:content/data`节点下：
 
    * 元素数据存储在主子节点下：
+
      `jcr:content/data/master`
 
    * 变体存储在子节点下，该子节点带有变体的名称：
@@ -159,7 +160,7 @@ ht-degree: 1%
 
 例如，内容片段的后端实现负责使页面上使用的片段实例可搜索，或管理混合媒体内容。 此实现需要知道哪些组件用于渲染片段以及如何参数化渲染。
 
-可以在 Web 控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中[为 OSGi 捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此参数。
+可以在 Web 控制台[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中为 OSGi 捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此参数。
 
 * **资源类型**
 可以提供 的列表 `sling:resourceTypes` ，以定义用于呈现内容片段的组件以及应将后台处理应用到的位置。

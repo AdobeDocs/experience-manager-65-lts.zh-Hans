@@ -138,7 +138,7 @@ ht-degree: 2%
    * 名称：`cq:formParameters`
    * 类型：`nt:unstructured`
 
-1. 将以下名称的属性添加到`String``cq:formParameters`节点：
+1. 将以下名称的属性添加到`String` `cq:formParameters`节点：
 
    * `jcr:title`：该值用于&#x200B;**填充“**&#x200B;常用&#x200B;**”选项卡的“标题**”字段。
    * `jcr:description`：该值将&#x200B;**填充“**&#x200B;常用&#x200B;**”选项卡的“描述**”字段。
@@ -325,7 +325,7 @@ while (iterator.hasNext()){
 
 #### Java {#java-1}
 
-以下 Java 代码是 `execute` 实现的方法 `WorkflowProcess` 。 该方法将值记录在与`PROCESS_ARGS`键关联的值`args``MetaDataMap`中。
+以下 Java 代码是 `execute` 实现的方法 `WorkflowProcess` 。 该方法将值记录在与`PROCESS_ARGS`键关联的值`args` `MetaDataMap`中。
 
 ```java
 public void execute(WorkItem item, WorkflowSession session, MetaDataMap args) throws WorkflowException {

@@ -417,7 +417,7 @@ AEM与网格视图一起，提供了选定用户/组在给定路径下的权限�
 | 成员 | 仅适用于组。 列出特定组的成员。 查看[成员](#members-adding-users-or-groups-to-a-group)。 |
 | 权限 | 您可以将权限分配给用户或组。 允许您控制以下内容：<ul><li>与特定页面/节点相关的权限。 请参阅[设置权限](#setting-permissions)。 </li><li>与创建和删除页面以及层次结构修改相关的权限。???允许您[分配权限](#settingprivileges)，例如层次结构修改，从而允许您创建和删除页面。</li><li>根据路径与[复制权限](#setting-replication-privileges)相关的权限（通常从作者到发布）。</li></ul> |
 | 模拟者 | 允许其他用户模拟帐户。 当您需要用户代表其他用户进行操作时非常有用。 请参阅[模拟用户](#impersonating-another-user)。 |
-| 首选项 | 设置组或用户](#setting-user-and-group-preferences)的[首选项。 例如，语言首选项。 |
+| 首选项 | 设置组或用户[&#128279;](#setting-user-and-group-preferences)的首选项。 例如，语言首选项。 |
 
 ### 筛选用户和组 {#filtering-users-and-groups}
 

@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## 升级代码库 {#upgrade-code-base}
 
-### 在版本控制{#create-a-dedicated-branch-for-6.5-lts-code-in-version-control}中为6.5 LTS代码创建专用分支
+### 在版本控制中为6.5 LTS代码创建专用分支{#create-a-dedicated-branch-for-6.5-lts-code-in-version-control}
 
 应使用某种形式的版本控制来管理实施AEM所需的所有代码和配置。 应创建版本控制中的专用分支，以管理目标版本AEM中的代码库所需的任何更改。 此分支管理针对AEM的目标版本迭代测试代码库以及后续错误修复。
 

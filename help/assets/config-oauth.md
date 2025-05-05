@@ -52,6 +52,7 @@ OAuth配置需要以下先决条件：
    * `auth.token.provider.orgId="<OrgID>"`
    * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
    * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
+
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * 使用新OAuth配置的客户端ID更新`auth.token.provider.client.id`。
    * 将`auth.access.token.request`更新至`"https://ims-na1.adobelogin.com/ims/token/v3"`
