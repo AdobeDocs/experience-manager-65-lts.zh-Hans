@@ -5,9 +5,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 2a5d9026-49bc-4766-bcbe-38d834c14f72
-source-git-commit: 82af7ee5b3665dcc33b47e05c8580e9981728888
+source-git-commit: e5acea11254a6c4dbd24ff2a6d8ae3578b6690da
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS[&#128279;](/help/sites-deploying/technical-requirements.md)的要求。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS](/help/sites-deploying/technical-requirements.md)的[要求。
 
 查看[计划升级](/help/sites-deploying/upgrade-planning.md)以及[AEM Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估算升级AEM的复杂性。
 
 ### 迁移先决条件 {#migration-prerequisites}
 
-* **最低必需的Java版本**：确保已在WLP服务器上安装了IBM® Sumeru JRE 17。
+* **所需的最低Java版本**：确保已在WLP服务器上安装了IBM® Sumeru JRE 17/21。
 
 ### 执行升级 {#performing-the-upgrade}
 
@@ -76,13 +76,13 @@ ht-degree: 0%
 
 1. 备份`sling.properties`文件（通常出现在`crx-quickstart/conf/`中）并将其删除
 1. 在`server.xml`文件中将servlet的版本更改为&#x200B;**6.0**
-1. 安装Java 17，并通过运行以下各项确保正确安装了该版本：
+1. 安装Java 17/Java 21，并通过运行以下命令确保正确安装它：
 
    ```shell
    java -version
    ```
 
-1. 查看AEM服务器的启动参数，并确保根据您的要求更新参数。 有关详细信息，请参阅[Java 17注意事项](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
+1. 查看AEM服务器的启动参数，并确保根据您的要求更新参数。 有关详细信息，请参阅[Java 17/Java 21注意事项](/help/sites-deploying/custom-standalone-install.md#java-considerations)。
 1. 下载新的6.5 LTS WAR并将其复制到以下位置的放置文件夹： `/<path-to-aem-server>/dropins/`
 1. 启动AEM实例：通常可以通过以下命令完成：
 

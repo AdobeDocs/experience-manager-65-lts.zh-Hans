@@ -5,9 +5,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 7f8de16f-9e9a-4d37-9978-d26c496b911c
-source-git-commit: b835dbf6fd7f40a2a1e1ca26c8a6870b69a19cbe
+source-git-commit: e5acea11254a6c4dbd24ff2a6d8ae3578b6690da
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 0%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [&#128279;](/help/sites-deploying/technical-requirements.md)的要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估计复杂性。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS ](/help/sites-deploying/technical-requirements.md)的[要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估计复杂性。
 
 
 ### 迁移先决条件 {#migration-prerequisites}
 
-* **最低必需的Java版本**：确保已在Tomcat服务器上安装了Oracle® JRE 17。
+* **所需的最低Java版本**：确保已在Tomcat服务器上安装了Oracle® JRE 17/21。
 * **Tomcat服务器**： 6.5 LTS所需的Tomcat服务器的版本是&#x200B;**11.0.x**。
 
 ### 执行升级 {#performing-the-upgrade}
@@ -35,15 +35,15 @@ ht-degree: 0%
 1. 如果已部署AEM 6.5，请通过访问&#x200B;*`https://<serveraddress:port>/system/console/bundles`*&#x200B;检查捆绑包是否正常运行
 1. 接下来，停止AEM 6.5。可以通过Tomcat App Manager完成此操作，其地址为： *`https://<serveraddress:port>/manager/html`*
 1. 在执行任何升级活动之前，请确保您已完成[预升级](#pre-upgrade-steps)活动，如备份AEM 6.5服务器
-1. 安装Java 17，并通过运行以下命令确保其正确安装：
+1. 安装Java 17/Java 21 ，并通过运行以下命令确保正确安装它：
 
    ```
    java –version
    ```
 
 1. 设置与AEM 6.5 LTS兼容的Tomcat服务器
-1. 查看AEM服务器的启动参数，并确保根据系统要求更新参数。 有关详细信息，请参阅[Java 17注意事项](/help/sites-deploying/custom-standalone-install.md#java-considerations)
-1. 使用Java 17在Tomcat服务器上部署新下载的6.5 LTS战争，并通过运行以下命令启动AEM 6.5 LTS Tomcat服务器：
+1. 查看AEM服务器的启动参数，并确保根据系统要求更新参数。 有关详细信息，请参阅[Java 17/Java 21注意事项](/help/sites-deploying/custom-standalone-install.md#java-considerations)
+1. 使用Java 17/Java 21在Tomcat服务器上部署新下载的6.5 LTS战争，并通过运行以下命令启动AEM 6.5 LTS Tomcat服务器：
 
    ```
    $CATALINA_HOME/bin/catalina.sh start

@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 0afd255ec5c9d3db37f2f059782b35052761b1cf
+source-git-commit: e5acea11254a6c4dbd24ff2a6d8ae3578b6690da
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 23%
+source-wordcount: '805'
+ht-degree: 28%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 23%
 
 ## 新增功能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5 LTS是[!DNL Adobe Experience Manager] 6.5代码库的升级版本。 它提供新功能和增强功能、关键客户修复、高优先级客户增强功能以及面向产品稳定性的常规错误修复。它还包含最多SP22的[!DNL Adobe Experience Manager] 6.5 Service Pack版本。
+[!DNL Adobe Experience Manager] 6.5 LTS是[!DNL Adobe Experience Manager] 6.5代码库的升级版本。 它提供了关键客户修复、高优先级的客户增强功能，以及针对产品稳定性的一般错误修复。 它还包含最多SP22的[!DNL Adobe Experience Manager] 6.5 Service Pack版本。
 
 下面的列表提供了概述，而后续页面列出了完整的详细信息。
 
@@ -36,9 +36,9 @@ ht-degree: 23%
 
 #### Java™支持  {#java-support}
 
-* 支持Java™ 17。
+* 支持Java™ 17和Java™ 21。
 * 为获得最佳性能，请用其他值覆盖默认的GC值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* Java™ 17维护更新由Adobe分发，以供客户在AEM相关项目中使用(如果未从Oracle公开提供)。
+* Java™ 17和Java™ 21维护更新由Adobe分发，以供客户在AEM相关项目中使用(如果未从Oracle公开提供)。
 
 #### Uberjar包装 {#uber-jar-packaging}
 
@@ -60,7 +60,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->推荐将Java™ 17与AEM 6.5 LTS一起使用。
+>推荐将Java™ 17/Java™ 21与AEM 6.5 LTS一起使用。
 
 ## 已弃用和已删除的功能 {#deprecated-and-removed-features}
 
@@ -92,8 +92,8 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 | 商务 | 不支持AEM CIF Classic。 | 您应该迁移到[AEM CIF](/help/commerce/cif/migration.md)。 | 6.5 LTS GA |
 | 解决方案 | 不支持社交/社区。 | 没有可用的替换。 | 6.5 LTS GA |
 | Screens | 不支持Screens。 | 没有可用的替换。 | 6.5 LTS GA |
-| 资源 | 不支持`dam-pim`和`dam-rating`，因为捆绑包依赖于social。 | 没有可用的替换。 | 6.5 LTS GA |
-| 资源 | `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettings()`已删除。 | 使用已添加的替代API `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettingsList()`。 | 6.5 LTS GA |
+| 资产 | 不支持`dam-pim`和`dam-rating`，因为捆绑包依赖于social。 | 没有可用的替换。 | 6.5 LTS GA |
+| 资产 | `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettings()`已删除。 | 使用已添加的替代API `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettingsList()`。 | 6.5 LTS GA |
 | 门户 | 不支持AEM Portal Director。 | 没有可用的替换。 | 6.5 LTS GA |
 | Granite | 已删除包`com.adobe.granite.socketio`。 | 没有可用的替换。 | 6.5 LTS GA |
 | Granite | 不支持`com.adobe.granite.crx-explorer`。 | 没有可用的替换。 | 6.5 LTS GA |
@@ -113,5 +113,5 @@ Adobe 不断评估产品功能，以便随着时间的推移，使用更现代�
 这些网站仅供客户使用。 如果您是客户并且需要访问权限，请联系您的Adobe客户经理。
 
 * [产品下载位于licensing.adobe.com](https://licensing.adobe.com/)
-* [联系Adobe客户支持](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。
+* [联系Adobe客户支持](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
