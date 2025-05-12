@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS](/help/sites-deploying/technical-requirements.md)的[要求。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS[&#128279;](/help/sites-deploying/technical-requirements.md)的要求。
 
 查看[计划升级](/help/sites-deploying/upgrade-planning.md)以及[AEM Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估算升级AEM的复杂性。
 
