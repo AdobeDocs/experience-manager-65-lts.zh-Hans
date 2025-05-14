@@ -6,9 +6,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c7351625-b29e-45a7-b966-e7c0f56d4f22
-source-git-commit: e5acea11254a6c4dbd24ff2a6d8ae3578b6690da
+source-git-commit: 9e58e4c993929f792bd71bf70b3e64719e761b7f
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [&#128279;](/help/sites-deploying/technical-requirements.md)的要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS ](/help/sites-deploying/technical-requirements.md)的[要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
 
 <!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 
@@ -47,7 +47,7 @@ ht-degree: 0%
    java -Xmx4096m -jar aem-quickstart.jar -unpack
    ```
 
-1. 解包命令将在`crx-quickstart/conf/`文件夹下生成新的`sling.properties`文件。 您现在可以将自定义更改应用到新生成的`sling.properties`文件。
+1. 如果需要应用自定义sling.properties，请创建新的本地AEM实例，并从其crx-quickstart/conf目录中检索sling.properties文件。 将所需的自定义更改应用于此文件，然后将其复制到要升级的AEM实例的crx-quickstart/conf目录。 如果没有自定义属性，则可以跳过此步骤。
 
 <!-- Alexandru: drafting temporarily
 
