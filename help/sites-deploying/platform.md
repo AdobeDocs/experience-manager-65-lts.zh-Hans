@@ -1,6 +1,6 @@
 ---
 title: AEM平台简介
-description: 了解 AEM 平台及其最重要的组件，包括安装和部署 Adobe Experience Manager 6.5 LTS 及其架构，其中包括 Adobe Managed Services 云部署。
+description: 了解 AEM Platform 及其最重要的组件，包括安装和部署 Adobe Experience Manager 6.5 LTS 及其架构，其中包括 Adobe Managed Services 云部署。
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Architect
