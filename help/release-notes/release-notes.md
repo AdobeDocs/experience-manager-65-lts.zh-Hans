@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: abba652bb5d7eb9b5f902ce99c07f2186e313173
+source-git-commit: 02b9f90dc9ef504f04a9b1f692358089d4626094
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 18%
@@ -111,7 +111,7 @@ Adobe会不断检查产品功能，以便通过使旧功能现代化或替换旧
 
 ## 已知问题 {#known-issues}
 
-### AEM 6.5.21-6.5.23和AEM 6.5 LTS GA**中的JSP脚本包问题
+### AEM 6.5.21-6.5.23和AEM 6.5 LTS GA中的JSP脚本包问题
 
 AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA随`org.apache.sling.scripting.jsp:2.6.0`捆绑包一起提供，其中包含已知问题。 当AEM实例处理许多并发请求时，高负载下通常会出现问题。
 
@@ -149,5 +149,5 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA随`org.apache.sling.scripting.jsp:
 这些网站仅供客户使用。 如果您是客户并且需要访问权限，请联系您的Adobe客户经理。
 
 * [产品下载位于licensing.adobe.com](https://licensing.adobe.com/)
-* [联系Adobe客户支持](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。
+* [联系Adobe客户支持](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
