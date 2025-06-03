@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 93dc74b3-dfe3-442f-9dec-1b7af41cd4a1
-source-git-commit: 4c3402aa813c115625d624f3b33ca73d31bed850
+source-git-commit: dc92f670e7025f9490abbcecff4b485af331bd6d
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1525'
 ht-degree: 0%
 
 ---
@@ -73,10 +73,6 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，Quicks
 * 在开发过程中，将某些内容放入文件系统中可能会更容易。
 * 如果出现问题，将无法访问Web控制台和存储库。 这样，您可以将其他捆绑包放入此目录中，并且应该安装这些捆绑包。
 * 可以在快速入门开始之前创建`crx-quickstart/install`文件夹，还可以将其他包放在该文件夹中。
-
->[!NOTE]
->
->有关示例，另请参阅[如何在服务器启动时自动安装CRX包](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html)。
 
 ## 安装和启动Adobe Experience Manager as a Windows Service {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
