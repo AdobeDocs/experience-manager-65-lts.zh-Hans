@@ -10,9 +10,9 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 432fc767-a6b8-48f8-b124-b13baca51fe8
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 7584fa1c544f9dd499b4007a9158e25b783f620c
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2594'
 ht-degree: 0%
 
 ---
@@ -211,6 +211,10 @@ Lucene在两个列表（或循环`n`列表，在搜索`n`个单词时）之间�
 | --- | --- | --- |
 
 找到多个条目后，将按分数排序。
+
+>[!NOTE]
+>
+>本节中介绍的搜索机制使用Lucene索引，而不是像Linux `grep`命令那样的部分匹配。
 
 ### Lucene属性索引 {#the-lucene-property-index}
 
