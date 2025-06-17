@@ -5,12 +5,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: cb5495f9-bc54-4515-ae15-55a5397500aa
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '2387'
 ht-degree: 0%
 
 ---
+
 
 # 在Adobe Experience Manager中编辑外部SPA {#editing-external-spa-within-aem}
 
@@ -22,14 +24,14 @@ ht-degree: 0%
 
 {{ue-over-spa}}
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 先决条件很简单。
 
 * 确保AEM的实例正在本地运行。
-* 使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans&#available-properties)创建基本AEM SPA项目。
+* 使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)创建基本AEM SPA项目。
    * 这构成了AEM项目的基础，该项目将进行更新以包含外部SPA。
-   * 本文档中的示例使用[WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hans#spa-editor)的起点。
+   * 本文档中的示例使用[WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)的起点。
 * 准备好您想要集成的工作中的外部React SPA。
 
 ## 将SPA上传到AEM项目 {#upload-spa-to-aem-project}
@@ -279,13 +281,13 @@ mvn clean install -PautoInstallSinglePackage
 
 ![容器占位符](assets/container-placeholder.png)
 
-JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
+JCR](assets/container-jcr-structure.png)中的![容器位置
 
 作者向容器添加子组件后，将使用JCR结构中的相应名称创建新容器节点。
 
 包含内容的![容器](assets/container-with-content.png)
 
-包含JCR![&#128279;](assets/container-with-content-jcr.png)内容的容器
+包含JCR](assets/container-with-content-jcr.png)内容的![容器
 
 现在，可以根据作者的需要向容器中添加更多组件和内容，并且所做的更改将会保留。
 
@@ -311,7 +313,7 @@ JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
 
 1. 在React应用程序的`index.js`中（或调用`ReactDOM.render()`的位置）
 
-   index.js文件![&#128279;](assets/external-spa-root-index.png)中的ReactDOM.render()
+   index.js文件](assets/external-spa-root-index.png)中的![ReactDOM.render()
 
 1. 在React应用程序的`index.html`
 
@@ -365,13 +367,13 @@ JCR![&#128279;](assets/container-jcr-structure.png)中的容器位置
 
 ## 框架限制 {#framework-limitations}
 
-RemotePage组件希望该实施提供资产清单，如GitHub[&#128279;](https://github.com/shellscape/webpack-manifest-plugin)上的webpack-manifest-plugin。 但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架(如Angular)远程加载应用程序。
+RemotePage组件希望该实施提供资产清单，如GitHub](https://github.com/shellscape/webpack-manifest-plugin)上的[webpack-manifest-plugin。 但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架(如Angular)远程加载应用程序。
 
 ## 其他资源 {#additional-resources}
 
 以下参考资料可能有助于了解AEM上下文中的SPA。
 
-* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 * [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-hans)
 * [在AEM中使用React快速入门SPA](spa-getting-started-react.md)
 * [SPA参考资料（API参考）](spa-reference-materials.md)

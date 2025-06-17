@@ -9,12 +9,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: 798b9ad8-47fa-432d-8887-9de63c20cfca
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '2023'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
+
 
 # SPA Blueprint{#spa-blueprint}
 
@@ -248,7 +250,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 * 响应式网格元素带有以`aem-Grid--`为前缀的类名称
 * 响应列元素具有以`aem-GridColumn--`为前缀的类名
 * 响应式网格（也是父网格的列）被包住，例如前两个前缀未出现在同一元素上
-* 与可编辑资源对应的元素带有`data-cq-data-path`属性。 请参阅本文档中与页面编辑器[&#128279;](#contract-wtih-the-page-editor)的Contract部分。
+* 与可编辑资源对应的元素带有`data-cq-data-path`属性。 请参阅本文档中与页面编辑器](#contract-wtih-the-page-editor)的[Contract部分。
 
 ```
 <div data-cq-data-path="/content/page">

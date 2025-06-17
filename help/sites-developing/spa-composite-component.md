@@ -5,12 +5,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: 95cc8c29-7494-4326-934d-6def59875d71
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
 
 ---
+
 
 # SPA 中的复合组件 {#composite-components-in-spas}
 
@@ -26,7 +28,7 @@ ht-degree: 1%
 
 本文将以典型卡组件作为示例用例。 信息卡是许多数字体验的公用UI元素，通常由图像和相关文本或标题组成。 作者希望能够拖放整个卡片，但能够单独编辑卡片的图像并自定义关联的文本。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 以下支持复合组件用例的模型需要以下先决条件。
 
@@ -131,7 +133,7 @@ function Home() {
 
 在这种情况下，卡组件已在包含标题和图像节点的AEM项目中创建了。 子节点（文本和图像）具有相应的资源类型。
 
-卡组件![&#128279;](assets/composite-node-structure.png)的节点结构
+卡组件](assets/composite-node-structure.png)的![节点结构
 
 然后，您可以将其添加到SPA并检索其内容。
 

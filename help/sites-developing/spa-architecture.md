@@ -10,12 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: 8670d700-6ccd-4809-b719-8580d6fb2cf8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '2018'
 ht-degree: 5%
 
 ---
+
 
 # 为 AEM 开发 SPA{#developing-spas-for-aem}
 
@@ -64,11 +66,11 @@ SPA应仅依赖内容的动态渲染。 这是默认预期，AEM会获取并呈�
 
 ## AEM 项目原型 {#aem-project-archetype}
 
-任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
+任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
 
 ## SPA设计模型 {#spa-design-models}
 
-如果遵循AEM[&#128279;](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中开发SPA的原则，则您的SPA将可以使用所有受支持的AEM内容创作功能。
+如果遵循AEM](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中开发SPA的[原则，则您的SPA将可以使用所有受支持的AEM内容创作功能。
 
 但是，在某些情况下，这并非完全必要。 下表概述了各种设计模型及其优点和缺点。
 

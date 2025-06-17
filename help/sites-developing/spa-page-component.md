@@ -10,12 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: 470636ce-3934-4aac-80ff-1fe6bd84455e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 6%
 
 ---
+
 
 # SPA 页面组件{#spa-page-component}
 
@@ -90,7 +92,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 >
 >本文档仅将We.Retail日志应用程序用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
 
 ## 页面编辑器叠加同步 {#page-editor-overlay-synchronization}
 

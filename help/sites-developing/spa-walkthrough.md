@@ -7,12 +7,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 exl-id: aceec3ac-abdf-4ae2-b197-f58cb7faea5f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
 workflow-type: tm+mt
 source-wordcount: '1925'
 ht-degree: 65%
 
 ---
+
 
 # SPA 简介和演练 {#spa-introduction-and-walkthrough}
 
@@ -46,7 +48,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 >
 >本文档仅将[WKND Spa项目应用程序](https://github.com/adobe/aem-guides-wknd-spa)用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
 
 ### 什么是 SPA？ {#what-is-a-spa}
 
