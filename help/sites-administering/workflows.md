@@ -1,5 +1,5 @@
 ---
-title: 管理工作流程
+title: 管理工作流
 description: 了解如何使用工作流自动化Adobe Experience Manager活动。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 exl-id: 330f5cc5-1af4-4777-b386-b0755e6781df
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d37df3dc09122909adbb62ede6634939af105e06
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '782'
 ht-degree: 2%
 
 ---
 
-# 管理工作流程{#administering-workflows}
+# 管理工作流{#administering-workflows}
 
 借助工作流，您可以自动化Adobe Experience Manager (AEM)活动。 工作流程：
 
@@ -55,7 +55,7 @@ AEM中的[工作流模型](/help/sites-developing/workflows.md#model)是业务�
 
 >[!CAUTION]
 >
->执行的步骤是在生成实例时由工作流模型&#x200B;*定义的步骤*。 有关详细信息，请参阅[开发工作流](/help/sites-developing/workflows.md#model)。
+>执行的步骤是在生成实例时由工作流模型&#x200B;*定义的步骤*。 有关详细信息，请参阅[开发和扩展工作流 — 模型](/help/sites-developing/workflows.md#model)。
 
 工作流实例在以下生命周期中进度：
 
