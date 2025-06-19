@@ -1,28 +1,24 @@
 ---
 title: 将Adobe Sign与AEM Forms集成
 description: 了解如何为AEM自适应Forms配置Adobe Sign。 Adobe Sign改进了法律、销售、工资单、人力资源管理以及其他许多领域的工作流程和处理文档。
-contentOwner: sashanka
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: develop
-docset: aem65
 feature: Adaptive Forms,Foundation Components,Acrobat Sign
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: fdf95738-3075-43d6-9d51-64c83cf0f0b7
-source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2069'
 ht-degree: 16%
 
 ---
 
 # 将[!DNL Adobe Sign]与AEM [!DNL Forms]集成{#integrate-adobe-sign-with-aem-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=zh-Hans#adobe-acrobat-sign-for-government) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms.html?lang=en#adobe-acrobat-sign-for-government) |
 | AEM 6.5 | 本文 |
 
 [!DNL Adobe Sign]为自适应表单启用电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
@@ -40,9 +36,9 @@ ht-degree: 16%
 
 您需要以下各项才能将[!DNL Adobe Sign]与AEM [!DNL Forms]集成：
 
-* 有效的[Adobe Sign开发人员帐户。](https://acrobat.adobe.com/us/en/why-adobe/developer-form.html)
+* 有效的[Adobe Sign开发人员帐户。](https://www.adobe.com/acrobat/business/developer-form.html)
 * 已启用[SSL](/help/sites-administering/ssl-by-default.md) AEM [!DNL Forms]服务器。
-* [Adobe Sign API 应用程序](https://developer.adobe.com/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
+* [Adobe Sign API 应用程序](https://opensource.adobe.com/acrobat-sign/developer_guide/index.html#!adobedocs/adobe-sign/master/gstarted/create_app.md)。
 * [!DNL Adobe Sign] API 应用程序的凭据（客户端 ID 和客户端密码）。
 * 重新配置时，从创作实例和发布实例中删除现有[!DNL Adobe Sign]配置。
 * 针对创作实例和发布实例，使用[相同的加密密钥](/help/sites-administering/security-checklist.md#make-sure-you-properly-replicate-encryption-keys-when-needed)。
@@ -91,12 +87,12 @@ ht-degree: 16%
 
    其中：
 
-   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL &#x200B; Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/cn/sign/using/identify-account-shard.html)。
+   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL  Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
    >* 保持&#x200B;**创建Adobe Acrobat Sign配置**&#x200B;页面打开。 不要关闭它。 在为[!DNL Adobe Acrobat Sign]应用程序配置OAuth设置后，您可以检索&#x200B;**客户端ID**&#x200B;和&#x200B;**客户端密钥**，如即将执行的步骤中所述。
-   >* 在登录到Adobe Sign帐户后，导航到&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API信息]** > **[!UICONTROL REST API方法文档]** > **[!UICONTROL OAuth访问令牌]**，以访问与Adobe Sign OAuth URL和访问令牌URL相关的信息。
+   > * 登录Adobe Sign帐户后，导航至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API信息]** > **[!UICONTROL REST API方法文档]** > **[!UICONTROL OAuth访问令牌]**，以访问与Adobe Sign OAuth URL和访问令牌URL相关的信息。
 
 1. 配置 [!DNL Adobe Sign] 应用程序的 OAuth 设置：
 
@@ -134,7 +130,7 @@ ht-degree: 16%
    >
    >Ensure that your author and publish instance configurations point to the same shard. If you create multiple Adobe Sign configurations for an organization, ensure all the configurations utilize the same shard. -->
 
-1. 返回&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面。 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，指定&#x200B;**客户端ID**（也称为应用程序ID）和&#x200B;**客户端密钥**。 使用为AEM Forms创建的Adobe Sign应用程序[&#128279;](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的客户端ID和客户端密钥。
+1. 返回&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面。 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，指定&#x200B;**客户端ID**（也称为应用程序ID）和&#x200B;**客户端密钥**。 使用为AEM Forms创建的Adobe Sign应用程序](https://opensource.adobe.com/acrobat-sign/developer_guide/helloworld.html#get-the-app-id-and-secret)的[客户端ID和客户端密钥。
 
 1. 选择&#x200B;**[!UICONTROL 同时为附件启用Adobe Sign]**&#x200B;选项，以将附加到自适应表单的文件追加到已发送以供签名的相应[!DNL Adobe Sign]文档。
 
@@ -147,13 +143,13 @@ ht-degree: 16%
 1. 打开&#x200B;**[!UICONTROL Forms Common Configuration Service].**
 1. 在&#x200B;**[!UICONTROL 允许]**&#x200B;字段中，**选择**&#x200B;所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击&#x200B;**[!UICONTROL 保存]。**&#x200B;创作实例配置为使用[!DNL Adobe Sign]。
 1. 发布配置。
-1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
+1. 使用[复制](/help/sites-deploying/replication.md)在相应的发布实例上创建相同的配置。
 
-现在，[!DNL Adobe Sign]已与AEM [!DNL Forms]集成并准备好在自适应表单中使用。 要在自适应表单[&#128279;](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)中使用Adobe Sign服务，请在自适应表单属性中指定上面创建的配置容器。
+现在，[!DNL Adobe Sign]已与AEM [!DNL Forms]集成并准备好在自适应表单中使用。 要在自适应表单](../../forms/using/working-with-adobe-sign.md#configure-adobe-sign-for-an-adaptive-form)中[使用Adobe Sign服务，请在自适应表单属性中指定上面创建的配置容器。
 
 >[!NOTE]
 >
->要配置Adobe Sign沙盒，您可以按照[Adobe Sign](#adobe-sign)中所述的相同配置步骤操作。
+> 要配置Adobe Sign沙盒，您可以按照[Adobe Sign](#adobe-sign)中所述的相同配置步骤操作。
 
 ## 将AEM Forms与适用于政府的Adobe Acrobat Sign Solutions连接 {#adobe-acrobat-sign-for-government}
 
@@ -189,8 +185,8 @@ ht-degree: 16%
 >[!NOTE]
 >
 >
->* `re-direct URL`应包含[顶级](https://en.wikipedia.org/wiki/Top-level_domain)域。 例如，`https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
->* 请勿将本地URL用作`re-direct URL`。 例如 `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
+> * `re-direct URL`应包含[顶级](https://en.wikipedia.org/wiki/Top-level_domain)域。 例如，`https://adobe.com/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`
+> * 请勿将本地URL用作`re-direct URL`。 例如 `https://localhost:4502/libs/adobesign/cloudservices/adobesign/createcloudconfigwizard/cloudservices.html/conf/global`。
 
 
 #### 与Adobe Sign团队共享重定向URL和范围并接收凭据
@@ -209,13 +205,13 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 * [!DNL workflow_read]
 * [!DNL offline_access]
 
-该代表会生成凭据并与您共享。 在下一部分中，您将使用凭据（客户端ID和客户端密钥）将AEM Forms与Adobe Acrobat Sign Solutions政府版连接。
+该代表会生成凭据并与您共享。 在下一部分中，您使用凭据（客户端ID和客户端密钥）将AEM Forms与用于政府的Adobe Acrobat Sign Solutions连接。
 
-#### 使用收到的凭据将AEM Forms与Adobe Acrobat Sign Solutions政府版连接
+#### 使用收到的凭据将AEM Forms与适用于政府的Adobe Acrobat Sign Solutions连接
 
-1. 在您的浏览器中打开`re-direct URL`。 您在[在AEM实例](#create-redirect-url)部分上创建重定向URL的最后一步中创建并记下了`re-direct URL`。
+1. 在浏览器中打开`re-direct URL`。 您在[在AEM实例](#create-redirect-url)部分中创建重定向URL的最后一步中创建并记下了`re-direct URL`。
 
-1. 在&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面的&#x200B;**[!UICONTROL 常规]**&#x200B;选项卡中，为配置指定&#x200B;**[!UICONTROL 名称]**，然后选择&#x200B;**[!UICONTROL 下一步]**。 您可以选择指定&#x200B;**[!UICONTROL 标题]**&#x200B;并浏览以选择配置的&#x200B;**[!UICONTROL 缩略图]**。 单击&#x200B;**[!UICONTROL 下一步]**。
+1. 在&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面的&#x200B;**[!UICONTROL 常规]**&#x200B;选项卡中，为该配置指定一个&#x200B;**[!UICONTROL 名称]**，然后选择&#x200B;**[!UICONTROL 下一步]**。 您可以选择指定&#x200B;**[!UICONTROL 标题]**&#x200B;并浏览以选择配置的&#x200B;**[!UICONTROL 缩略图]**。 单击&#x200B;**[!UICONTROL 下一步]**。
 
 1. 在&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，对于&#x200B;**[!UICONTROL 选择解决方案]**&#x200B;选项，选择[!DNL Adobe Acrobat Sign Solutions for Government]。
 
@@ -224,7 +220,7 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 1. 在&#x200B;**[!UICONTROL 电子邮件]**&#x200B;字段中，为政府帐户指定与您的Adobe Acrobat Sign Solutions关联的电子邮件地址。
 
 1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，
-   * **[!UICONTROL OAuth URL]**&#x200B;字段包含包含Adobe Sign数据库分区的默认URL。 URL 的格式为：
+   * **[!UICONTROL OAuth URL]**&#x200B;字段包含默认URL，其中包含Adobe Sign数据库分片。 URL 的格式为：
 
      `https://<shard>/api/gateway/adobesignauthservice/api/v1/authorize`
 
@@ -240,29 +236,29 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 
    其中：
 
-   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL &#x200B; Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/cn/sign/using/identify-account-shard.html)。
+   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL  Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
-   >* 登录Adobe Sign帐户后，导航至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API信息]** > **[!UICONTROL REST API方法文档]** > **[!UICONTROL OAuth访问令牌]**，以访问与Adobe Sign oAuth URL和访问令牌URL相关的信息。
+   > * 登录Adobe Sign帐户后，导航至&#x200B;**[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API信息]** > **[!UICONTROL REST API方法文档]** > **[!UICONTROL OAuth访问令牌]**，以访问与Adobe Sign oAuth URL和访问令牌URL相关的信息。
 
-1. 在上一部分中，将Adobe Acrobat Sign政府解决方案代表共享的凭据([Adobe Professional Services团队成员])用作[**[!UICONTROL 客户端ID]**&#x200B;和&#x200B;**[!UICONTROL 客户端密钥]**]。
+1. 将Adobe Acrobat Sign在上一节中为政府解决方案代表([Adobe Professional Services团队成员])共享的凭据用作[**[!UICONTROL 客户端ID]**&#x200B;和&#x200B;**[!UICONTROL 客户端密钥]**]。
 
-1. 选择&#x200B;**[!UICONTROL 启用Adobe Acrobat Sign附件]**&#x200B;选项，以便将附加到自适应表单的文件附加到相应的发送以供签名的[!DNL Adobe Acrobat Sign]文档。
+1. 选择&#x200B;**[!UICONTROL 为附件启用Adobe Acrobat Sign]**&#x200B;选项以将附加到自适应表单的文件附加到已发送以供签名的相应[!DNL Adobe Acrobat Sign]文档。
 
-1. 选择&#x200B;**[!UICONTROL 连接到Adobe Sign]**。 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求确认`Adobe Acrobat Sign for Government Solutions`和的访问权限时，单击&#x200B;**[!UICONTROL 允许访问]**。 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
+1. 选择&#x200B;**[!UICONTROL 连接到Adobe Sign]**。 在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。在系统要求您确认`Adobe Acrobat Sign for Government Solutions`和的访问时，请单击&#x200B;**[!UICONTROL 允许访问]**。 如果凭据正确，并且您允许 [!DNL AEM Forms] 访问您的 [!DNL Adobe Acrobat Sign] 开发人员帐户，系统会显示一条与以下内容类似的成功消息。
 
    ![Adobe Acrobat Sign云配置成功](/help/forms/using/assets/adobe-sign-cloud-configuration-success.png)
 
    在系统提示输入凭据时，提供在创建 [!DNL Adobe Acrobat Sign] 应用程序时所用帐户的用户名和密码。当要求您确认`your account`的访问权限时，请单击&#x200B;**[!UICONTROL 允许访问]**。
 
 1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;以创建配置。
-1. 打开AEM Web控制台。 URL为`https://'[server]:[port]'/system/console/configMgr`
+1. 打开AEM Web控制台。 URL是`https://'[server]:[port]'/system/console/configMgr`
 1. 打开&#x200B;**[!UICONTROL Forms Common Configuration Service].**
 1. 在&#x200B;**[!UICONTROL 允许]**&#x200B;字段中，**选择**&#x200B;所有用户 — 所有用户（匿名或已登录）都可以预览附件、验证和签署表单，然后单击&#x200B;**[!UICONTROL 保存]。**&#x200B;创作实例配置为使用[!DNL Adobe Sign]。
 
 1. 发布配置。
-1. 使用[复制](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/replication.html)在相应的发布实例上创建相同的配置。
+1. 使用[复制](/help/sites-deploying/replication.md)在相应的发布实例上创建相同的配置。
 
 现在，您可以[在自适应表单](working-with-adobe-sign.md)或[Adobe Acrobat Sign Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)中添加AEM字段。 确保将用于Cloud Service配置的配置容器添加到为[!DNL Adobe Acrobat Sign]启用的所有自适应Forms。 您可以从自适应表单的属性中指定配置容器。
 

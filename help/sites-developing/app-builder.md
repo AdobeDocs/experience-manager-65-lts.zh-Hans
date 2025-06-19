@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: f9b3df58-c94b-4143-aeec-85ff031bac2e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ App Builder为客户提供了一种方法，可轻松地在各种用例中扩展
 * 核心服务可扩展性 — 通过使用自定义功能和业务逻辑扩展默认行为，扩展核心应用程序功能。
 * 用户体验可扩展性 — 扩展核心体验以支持业务要求或构建特定于客户的数字资产、店面和后台应用程序。
 
-App Builder自2020年夏季起通过Adobe的Developer Preview向企业客户和合作伙伴提供。 App Builder正式发布版(GA)计划于2021年12月发布。 Adobe欢迎开发人员通过Adobe的[试用计划](https://developer.adobe.com/app-builder/trial/)来试用App Builder。
+App Builder自2020年夏季起通过Adobe的Developer Preview向企业客户和合作伙伴提供。 App Builder正式发布版(GA)计划于2021年12月发布。 Adobe欢迎开发人员通过Adobe的[试用计划](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/set-up#access-and-credentials)来试用App Builder。
 
 >[!NOTE]
 >
->对于希望使用App Builder的AEM as a Cloud Service客户，请参阅[使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/extending-aem/app-builder.html)。
+>对于希望使用App Builder的AEM as a Cloud Service客户，请参阅[使用Adobe Developer App Builder扩展Adobe Experience Manager as a Cloud Service](/help/sites-developing/app-builder.md)。
 
 ## 架构 {#architecture}
 
@@ -45,13 +45,13 @@ Adobe Developer App Builder提供了一个通用、一致、标准化的开发�
 
 ![架构](assets/appbuilder-architecture.jpg)
 
-有关App Builder架构的更多详细信息，请参阅[架构概述](https://developer.adobe.com/app-builder/docs/guides/)。
+有关App Builder架构的更多详细信息，请参阅[架构概述](https://developer.adobe.com/app-builder/docs/guides/app_builder_guides/architecture_overview/architecture-overview)。
 
 ## App Builder入门 {#additional-resources}
 
 为了帮助您开始使用App Builder，创建了一系列文档来帮助您开始：
 
-* [App Builder快速入门](https://developer.adobe.com/app-builder/docs/getting_started/)
+* [App Builder快速入门](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app)
 
 ## 通过文档继续学习 {#appbuilder-documentation}
 

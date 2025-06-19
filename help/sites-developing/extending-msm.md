@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 46300f72-730e-444c-8677-352a890e9910
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '2444'
 ht-degree: 53%
@@ -43,8 +43,8 @@ ht-degree: 53%
 
 多站点管理由以下软件包组成：
 
-* [com.day.cq.wcm.msm.api](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/msm/api/package-frame.html)
-* [com.day.cq.wcm.msm.commons](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/msm/commons/package-frame.html)
+* [com.day.cq.wcm.msm.api](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/msm/api/package-summary.html)
+* [com.day.cq.wcm.msm.commons](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/msm/commons/package-summary.html)
 
 主MSM API对象按以下方式交互（另请参阅[使用的术语](/help/sites-administering/msm.md#terms-used)）：
 
@@ -208,15 +208,12 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 向该节点添加以下属性：
    * **名称**：`jcr:title`
-
      **类型**：`String`
      **值**：将显示在UI中的标识标题。
    * **名称**：`jcr:description`
-
      **类型**：`String`
      **值**：可选描述。
    * **名称**：`cq:trigger`
-
      **类型**：`String`
      **值**：要使用的[转出触发器](/help/sites-administering/msm-sync.md#rollout-triggers)。 选择自：
       * `rollout`
@@ -551,7 +548,7 @@ GITHUB上的代码
 
 使用您创建的 `LiveActionFactory` 创建 MSM 转出配置：
 
-1. 使用标准过程[&#128279;](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)创建和配置转出配置 — 并使用属性：
+1. 使用标准过程](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)创建和配置[转出配置 — 并使用属性：
 
    * **标题**：转出配置示例
    * **名称**：examplerolloutconfig
@@ -689,7 +686,6 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
       * **类型**：`String`
 
       * **值**：包含正在考虑的属性的名称(可与属性`name`的值比较；例如，请参阅
-
         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 当定义了 `cq-msm-lockable` 时，断开/闭合链的操作会通过以下方式与 MSM 相互作用：

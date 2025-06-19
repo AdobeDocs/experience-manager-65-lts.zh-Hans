@@ -8,7 +8,7 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 69d94737-41d0-47bb-b914-f7606becd038
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 1%
@@ -156,7 +156,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    将以上位置的所有内容复制到`<aem-install>/crx-quickstart/install.`
 
-1. 如果已将AEM配置为使用Tar或MongoDB存储，请先从&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;文件夹中删除所有现有的配置文件，然后再继续。 必须删除的文件包括：
+1. 如果已将AEM配置为使用Tar或MongoDB存储，请先从***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;文件夹中删除所有现有的配置文件，然后再继续。 必须删除的文件包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
@@ -436,7 +436,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 * azureSas=”：在连接器的1.6.3版本中，添加了Azure共享访问签名(SAS)支持。 **如果配置文件中同时存在SAS和存储凭据，则SAS具有优先级。**&#x200B;有关SAS的详细信息，请参阅[官方文档](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview)。 确保“=”字符像“\=”一样转义。
 
 * azureBlobEndpoint=&quot;&quot;： Azure Blob端点。 例如，https://&lt;storage-account>.blob.core.windows.net。
-* accessKey=&quot;&quot;：存储帐户名称。 有关Microsoft® Azure身份验证凭据的更多详细信息，请参阅[官方文档](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account)。
+* accessKey=&quot;&quot;：存储帐户名称。 有关Microsoft® Azure身份验证凭据的更多详细信息，请参阅[官方文档](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create)。
 
 * secretKey=&quot;&quot;：存储访问密钥。 确保“=”字符像“\=”一样转义。
 * container=&quot;&quot;： Microsoft® Azure Blob存储容器名称。 容器是一组Blob。 有关其他详细信息，请阅读[官方文档](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN)。

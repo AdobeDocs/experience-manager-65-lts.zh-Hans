@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 802130c3-9cb8-46b7-98c2-fd9e83d18ec3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '475'
 ht-degree: 2%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 2%
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-有关详细信息，请参阅[如何从JVM进行线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=zh-Hans)文档
+有关详细信息，请参阅[如何从JVM进行线程转储](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)文档
 
 ### 检查未关闭的JCR会话 {#checking-for-unclosed-jcr-sessions}
 
@@ -104,7 +104,7 @@ ht-degree: 2%
 * 您可以看到许多CacheManager： resizeAll条目（在日志文件中）；以下数字(size=&lt;x>)显示高速缓存数，每个会话打开多个高速缓存。
 * 系统有时内存不足（在数小时、数天或数周后，具体取决于严重程度）。
 
-要分析未关闭的会话并找出哪些代码未关闭会话，请参阅知识库文章[分析未关闭的会话](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)。
+要开始分析未关闭的会话，请参阅知识库文章[未关闭的资源解析程序](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)。
 
 ### 使用Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 

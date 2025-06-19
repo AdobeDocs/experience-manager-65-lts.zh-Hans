@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 1ea2f849-ef36-47bf-ac3a-49d1984efca5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 7d1ab7984bc890aa4f079357061f44784a3bd1fe
 workflow-type: tm+mt
-source-wordcount: '9070'
+source-wordcount: '9057'
 ht-degree: 56%
 
 ---
@@ -312,7 +312,7 @@ WCAG 2.0包含一系列独立于技术的准则和成功标准，旨在确保残
 
 * [了解成功标准 1.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html)：
 * [如何达到成功标准 1.2.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-media-equiv-audio-desc)
-* [Adobe Encore CS5](https://helpx.adobe.com/cn/premiere-pro/using/whats-new.html)
+* [Adobe Encore CS5](https://helpx.adobe.com/premiere-pro/using/whats-new.html)
 
 ### 字幕（实时）(1.2.4)  {#captions-live}
 
@@ -328,10 +328,9 @@ WCAG 2.0包含一系列独立于技术的准则和成功标准，旨在确保残
 
 按照上面[字幕（预先录制）](#captions-pre-recorded)所提供的指导进行操作。但是，由于媒体的实时性质，必须尽快提供字幕并对正在发生的情况做出回应。 因此，应当考虑使用实时字幕工具或语音转文本工具。
 
-与此相关的详细说明不在本指南的范围之内，但是以下资源提供了有用的信息：
+详细说明超出了本文档的范围，但以下资源提供了有用的信息：
 
 * [WebAIM：实时字幕](https://webaim.org/techniques/captions/realtime)
-* [AccessIT（华盛顿大学）：能否使用语音识别自动生成字幕？](https://www.washington.edu/doit/programs/accessit?1209)
 
 #### 更多信息 – 字幕（实时）(1.2.4) {#more-information-captions-live}
 
@@ -455,7 +454,7 @@ AEM 允许轻松地使用相应的 HTML 元素构建网页。在RTE（文本组�
   添加&#x200B;**表**&#x200B;时，可以使用对话框配置&#x200B;**表属性**。
 
    * 适当的&#x200B;**标题**。
-   * 理想情况下，请删除 **Width**、 **Height**、Border **、** Border Border Sell PaddingSpacing **、**&#x200B;**&#x200B;** Cell Spacing的默认值。 因为这些属性可以在全局样式表中设置。
+   * 理想情况下，请删除 **Width**、 **Height**、Border **、** Border Border Sell PaddingSpacing **、****** Cell Spacing的默认值。 因为这些属性可以在全局样式表中设置。
 
   ![表属性对话框。](assets/chlimage_1-20a.png)
 

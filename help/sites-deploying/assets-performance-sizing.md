@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: 49225f9f-d09e-4ab6-9e29-b47ba41e8889
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,3 @@ NAS中延迟和吞吐量较差的原因在于网络拓扑或其他服务对NAS�
 
 * 选择性生成演绎版：仅通过向资源处理工作流添加条件来生成所需的演绎版，因此仅为选定资源生成成本更高的演绎版。
 * 实例之间共享的数据存储：当磁盘空间不足时，这可能会显着减少所需的磁盘空间量，但代价是配置工作增加并失去数据存储的自动清理。
-
-## 深入阅读 {#further-reading}
-
-* [正在分析慢速进程和受阻进程](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)

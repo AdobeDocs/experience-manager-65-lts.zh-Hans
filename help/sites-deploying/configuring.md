@@ -1,17 +1,13 @@
 ---
 title: 基本配置概念
 description: 了解如何根据您自己的特定要求配置Adobe Experience Manager。
-contentOwner: msm-service
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: configuring
-content-type: reference
 feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 338ea82e-c248-4118-9d42-e268d6396e65
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '2093'
+source-wordcount: '2085'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 AEM有许多方面可以进行配置：
 
-* 某些组件通常针对每个项目安装[&#128279;](#primary-configuration-considerations)进行配置，必须对其进行查看以确认它们是否适用于您的项目。
+* 某些组件通常针对每个项目安装](#primary-configuration-considerations)进行[配置，必须对其进行查看以确认它们是否适用于您的项目。
 * [其他配置](#further-configuration-considerations)可能是通用的，但不是必需的；与功能或系统性能和稳定性相关。
 * 只有AEM的某些可选功能才需要其他功能（这些功能与相应的功能一起进行记录）。
 
@@ -180,11 +176,11 @@ LDAP身份验证在存储库级别进行，因此它直接由存储库处理。 
 
 Dispatcher是Adobe Experience Manager用于缓存和/或负载平衡的工具。 它可以与企业级Web服务器一起使用。
 
-有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)以了解更多配置详细信息。
+有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)以了解更多配置详细信息。
 
 ### 配置AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
-随着AEM Doc Services和AEM Doc Security的发布，AEM现在能够调用LiveCycle文档服务来渲染XFA表单、将文档转换为PDF以及策略保护文档。 有关更多详细信息，请参阅[AEM LiveCycle Connector](https://helpx.adobe.com/livecycle/help/aem/aem-livecycle-connector.html)。
+随着AEM Doc Services和AEM Doc Security的发布，AEM现在能够调用LiveCycle文档服务来渲染XFA表单、将文档转换为PDF以及策略保护文档。
 
 ### 作业卸载和拓扑管理 {#job-offloading-and-topology-administration}
 

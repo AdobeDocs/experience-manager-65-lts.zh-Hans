@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: af957cd7-ad3d-46f2-9ca5-e175538104f1
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '5965'
 ht-degree: 0%
@@ -656,7 +656,7 @@ CSP允许微调策略。 但是，在复杂的应用程序中，开发CSP标头�
 
 >[!NOTE]
 >
->有关此工作方式的更多信息，请参阅内容安全策略上的[OWASP页面](https://owasp.deteact.com/cheat/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)。
+>有关此工作方式的更多信息，请参阅内容安全策略上的[OWASP页面](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html)。
 
 ### 大小调整 {#sizing}
 

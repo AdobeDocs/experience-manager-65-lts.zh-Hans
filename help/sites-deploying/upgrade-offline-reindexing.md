@@ -9,9 +9,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 0001c874-7468-4750-a377-03156674f4b9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 如果存在MongoMK，则如果在更靠近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
 
-有关索引[&#128279;](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)的Oak-run文档中可找到其他技术详细信息。
+有关索引](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)的[Oak-run文档中可找到其他技术详细信息。
 
 ### 导入索引 {#importing-indexes}
 
@@ -180,7 +180,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 ### 准备Runbook并试运行 {#prepare-a-runbook-and-trial-run}
 
-建议先准备[runbook](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook)并执行一些试验，然后再在生产环境中运行升级。
+建议先准备[runbook](/help/sites-deploying/upgrade-planning.md#building-the-upgrade-and-rollback-runbook)并执行一些试验，然后再在生产环境中运行升级。
 
 ### 带脱机索引的文档遍历模式 {#doc-traversal-mode-with-offline-indexing}
 

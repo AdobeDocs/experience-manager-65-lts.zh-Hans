@@ -10,10 +10,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: 79551cfa77420fae965ecac8060fd2005beff558
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '1376'
-ht-degree: 3%
+source-wordcount: '1363'
+ht-degree: 4%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 3%
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置](/help/sites-deploying/configuring.md)
+* [配置 ](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 控制台](/help/sites-deploying/web-console.md)
@@ -234,10 +234,6 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 
 ![启动屏幕](assets/screen_shot_.png)
 
->[!NOTE]
->
->如果您正在使用符号链接，请查看[符号链接问题](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html)。
-
 ### 启动和停止 {#starting-and-stopping}
 
 当AEM自行解压缩并首次启动后，双击安装目录中的jar文件即可启动实例，它不会重新安装。
@@ -282,7 +278,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置](/help/sites-deploying/configuring.md)
+* [配置 ](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 控制台](/help/sites-deploying/web-console.md)

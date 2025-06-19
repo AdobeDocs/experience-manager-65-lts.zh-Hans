@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 9f879ab6-6806-4e94-836c-0a7813940914
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '5425'
+source-wordcount: '5405'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Experience Manager Dynamic Media是直接在Experience Manager平台中统一的
 1. （可选；请参阅用例表） — 如果选择启用从Assets到Dynamic Media Classic的自动上传，则必须添加以下内容：
 
    1. 设置自动上传至Dynamic Media Classic。
-   1. 在&#x200B;***Dam更新资产**&#x200B;工作流(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)末尾的所有Dynamic Media工作流步骤*&#x200B;之后添加&#x200B;**Dynamic Media Classic上传**&#x200B;步骤
+   1. 在&#x200B;***Dam更新资产**工作流(`https://<server>:<host>/cf#/etc/workflow/models/dam/update_asset.html)`)末尾的所有Dynamic Media工作流步骤*&#x200B;之后添加&#x200B;**Dynamic Media Classic上传**&#x200B;步骤
    1. （可选）在[https://&lt;服务器>：&lt;端口>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl](http://localhost:4502/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7AssetMimeTypeServiceImpl)中按MIME类型限制Dynamic Media Classic资源上传。 此列表中未包含的资源MIME类型不会上传到Dynamic Media Classic服务器。
    1. （可选）在Dynamic Media Classic配置中设置视频。 您可以同时为Dynamic Media和/或Dynamic Media Classic启用视频编码。 在Experience Manager实例中，动态演绎版用于本地预览和播放，而Dynamic Media Classic视频演绎版则生成并存储在Dynamic Media Classic服务器上。 为Dynamic Media和Dynamic Media Classic设置视频编码服务时，请将[视频处理配置文件](/help/assets/video-profiles.md)应用于Dynamic Media Classic资源文件夹。
    1. （可选） [在Dynamic Media Classic中配置安全预览](/help/sites-administering/scene7.md#configuring-the-state-published-unpublished-of-assets-pushed-to-scene)。
@@ -421,13 +421,9 @@ Dynamic Media Classic资源仍可通过安全预览使用。 只有在Experience
 在将资源推送到Dynamic Media Classic而不发布它们之前，您必须设置以下设置：
 
 1. [使用Admin Console创建支持案例](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html)。 在您的支持案例中，请求为您的Dynamic Media Classic帐户启用安全预览。
-1. [为您的Dynamic Media Classic帐户设置安全预览](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=zh-Hans)。
+1. [为您的Dynamic Media Classic帐户设置安全预览](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html)。
 
 这些步骤与在Dynamic Media Classic中创建任何安全测试设置时所遵循的步骤相同。
-
->[!NOTE]
->
->如果您的安装环境是UNIX® 64位操作系统，请参阅[https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)以了解有关必须设置的其他配置选项。
 
 #### 推送处于未发布状态的资产的已知限制  {#known-limitations-for-pushing-assets-in-unpublished-state}
 
@@ -454,7 +450,7 @@ Dynamic Media Classic资源仍可通过安全预览使用。 只有在Experience
 1. 选择&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡。
 1. 在&#x200B;**[!UICONTROL 启用安全视图]**&#x200B;下拉菜单中，选择&#x200B;**[!UICONTROL 在AEM发布激活时]**&#x200B;以将资产推送到Dynamic Media Classic而不发布。 (默认情况下，此值设置为&#x200B;**[!UICONTROL 立即]**，其中立即发布Dynamic Media Classic资源。)
 
-   有关在公开资源之前测试资源的更多信息，请参阅[Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=zh-Hans)。
+   有关在公开资源之前测试资源的更多信息，请参阅[Dynamic Media Classic文档](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html)。
 
    ![chlimage_1-302](assets/chlimage_1-302.png)
 
@@ -569,7 +565,7 @@ Dynamic Media Classic资源仍可通过安全预览使用。 只有在Experience
 
    例如，`psprocess="rasterize"&psresolution=120` 。
 
-   有关您可以使用的更多上载作业参数，请参阅[Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html?lang=zh-Hans)。
+   有关您可以使用的更多上载作业参数，请参阅[Adobe Dynamic Media Classic Image Production System API](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/c-overview.html)。
 
    >[!NOTE]
    >

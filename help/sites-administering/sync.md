@@ -10,7 +10,7 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: b7b1bce6-9cea-4f13-955f-f9e361f298bf
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 1%
@@ -31,27 +31,27 @@ ht-degree: 1%
 
 从AEM 6.1开始，当用户同步启用时，服务器场中的发布实例之间会自动同步用户数据，而不会在创作实例上创建用户数据。
 
-## Sling分布 {#sling-distribution}
+## Sling分发 {#sling-distribution}
 
-用户数据及其[ACL](/help/sites-administering/security.md)存储在Oak JCR下面的图层[Oak Core](/help/sites-deploying/platform.md)中，可使用[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/jackrabbit/oak/api/package-tree.html)访问。 对于不经常更新的情况，使用[Sling Content Distribution](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)（Sling分发）将用户数据与其他Publish实例同步是合理的。
+用户数据及其[ACL](/help/sites-administering/security.md)存储在Oak JCR下层的[Oak Core](/help/sites-deploying/platform.md)中，并使用[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/jackrabbit/oak/api/package-summary.html)访问。 由于更新不频繁，因此可以使用[Sling Content Distribution](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)&#x200B;(Sling Distribution)将用户数据与其他发布实例同步。
 
-与传统的复制相比，使用Sling分发的用户同步的优势包括：
+与传统复制相比，使用Sling分发的用户同步具有以下优势：
 
 * 在发布中创建的&#x200B;*用户*、*用户配置文件*&#x200B;和&#x200B;*用户组*&#x200B;未创建于作者
 
 * Sling分发可设置jcr事件中的属性，从而能够在发布端事件侦听器内执行操作，而无需考虑无限复制循环
-* Sling分发仅将用户数据发送到非来源Publish实例，从而消除不必要的通信
-* 在用户节点中设置的[ACL](/help/sites-administering/security.md)包含在同步中
+* Sling Distribution仅将用户数据发送到非源发布实例，从而消除不必要的流量
+* 同步中包括用户节点中设置的[ACL](/help/sites-administering/security.md)
 
 >[!NOTE]
 >
->如果需要会话，建议使用SSO解决方案或使用粘滞会话，并且如果客户切换到其他Publish实例，请让客户登录。
+>如果需要会话，建议使用SSO解决方案或使用粘性会话，并且在客户切换到另一个发布实例时让他们登录。
 
 >[!CAUTION]
 >
->不支持&#x200B;**管理员**&#x200B;组的同步，即使启用了用户同步也是如此。 相反，“导入差异”失败会记录在错误日志中。
+>不支持同步&#x200B;**管理员**&#x200B;组，即使启用了用户同步也是如此。 相反，错误日志中会记录“导入差异”失败。
 >
->因此，当部署是发布场时，如果在&#x200B;**administrators**&#x200B;组中添加或删除了用户，则必须在每个Publish实例上手动进行修改。
+>因此，当部署是发布场时，如果将用户添加到&#x200B;**管理员**&#x200B;组或从中删除，则必须对每个发布实例手动进行修改。
 
 ## 启用用户同步 {#enable-user-sync}
 
@@ -75,9 +75,9 @@ ht-degree: 1%
 
 1. 确保安装了最新的代码：
 
-* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)
+* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)
 
-### 1. Apache Sling分发代理 — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory}
+### &#x200B;1. Apache Sling分发代理 — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory}
 
 **启用用户同步**
 
@@ -104,7 +104,7 @@ ht-degree: 1%
 
 在步骤3中使用授权用户在Author上配置Sling分发。
 
-* 每个发布实例上的&#x200B;**&#x200B;**
+* 每个发布实例上的&#x200B;****
 
    * 使用管理员权限登录
    * 访问[安全控制台](/help/sites-administering/security.md)
@@ -152,7 +152,7 @@ ht-degree: 1%
 * [访问权限管理](/help/sites-administering/user-group-ac-admin.md#access-right-management)
 * 疑难解答部分[在响应处理期间修改操作异常](#modify-operation-exception-during-response-processing)。
 
-### 3.Adobe花岗岩分发 — 加密密码传输密钥提供程序 {#adobegraniteencpasswrd}
+### &#x200B;3. Adobe Granite分发 — 加密的密码传输密钥提供程序 {#adobegraniteencpasswrd}
 
 **配置权限**
 
@@ -160,12 +160,12 @@ ht-degree: 1%
 
 * 作者&#x200B;**上的**
 
-   * 以管理员权限登录
+   * 使用管理员权限登录
    * 访问[Web控制台](/help/sites-deploying/configuring-osgi.md)
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * 查找`com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
+   * 找到`com.adobe.granite.distribution.core.impl.CryptoDistributionTransportSecretProvider.name`
    * 要打开进行编辑，请选择现有配置（铅笔图标）
 验证`property name`： **`socialpubsync-publishUser`**
 
@@ -175,7 +175,7 @@ ht-degree: 1%
 
 ![加密密码传输密钥提供程序](assets/chlimage_1-22.png)
 
-### 4. Apache Sling分发代理 — 队列代理工厂 {#apache-sling-distribution-agent-queue-agents-factory}
+### &#x200B;4. Apache Sling分发代理 — 队列代理工厂 {#apache-sling-distribution-agent-queue-agents-factory}
 
 **启用用户同步**
 
@@ -198,7 +198,7 @@ ht-degree: 1%
 
 ![队列代理工厂](assets/chlimage_1-23.png)
 
-### 5. Adobe Social Sync — 差异观察者工厂 {#diffobserver}
+### &#x200B;5. Adobe Social Sync — 差异观察者工厂 {#diffobserver}
 
 **启用组同步**
 
@@ -220,7 +220,7 @@ ht-degree: 1%
 
 ![比较观察者工厂](assets/screen-shot_2019-05-24at090809.png)
 
-### 6. Apache Sling Distribution Trigger — 计划触发器工厂 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
+### &#x200B;6. Apache Sling Distribution Trigger — 计划触发器工厂 {#apache-sling-distribution-trigger-scheduled-triggers-factory}
 
 **（可选）修改轮询间隔**
 
@@ -248,7 +248,7 @@ ht-degree: 1%
 
 默认配置是适用于单个发布实例。 由于启用用户同步的原因是同步多个发布实例，例如对于发布场，必须将其他发布实例添加到同步代理工厂。
 
-### 7. Apache Sling分发代理 — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory-1}
+### &#x200B;7. Apache Sling分发代理 — 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory-1}
 
 **添加发布实例：**
 
@@ -259,21 +259,21 @@ ht-degree: 1%
 
       * 例如，[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-   * 查找`Apache Sling Distribution Agent - Sync Agents Factory`
+   * 找到`Apache Sling Distribution Agent - Sync Agents Factory`
 
-      * 要打开以进行编辑，请选择现有配置（铅笔图标）
+      * 要打开进行编辑，请选择现有配置（铅笔图标）
 验证`Name`： `socialpubsync`
 
 ![同步代理工厂](assets/chlimage_1-25.png)
 
 * **导出程序终结点**
-每个发布实例都应该有一个导出器端点。 例如，如果存在2个Publish实例localhost：4503和4504，则应该有两个条目：
+每个发布实例都应该有一个导出器端点。 例如，如果有2个Publish实例localhost：4503和4504，则应该有两个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **导入程序端点**
-每个发布实例都应该有一个导入程序端点。 例如，如果存在2个Publish实例localhost：4503和4504，则应该有两个条目：
+每个发布实例都应该有一个导入程序端点。 例如，如果有2个Publish实例localhost：4503和4504，则应该有两个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
@@ -303,11 +303,9 @@ ht-degree: 1%
    * 搜索并删除名为&#x200B;*sling.id.file*&#x200B;的文件
 
       * 例如，在Linux®系统上：
-
         `rm -i $(find . -type f -name sling.id.file)`
 
       * 例如，在Windows系统上：
-
         `use windows explorer and search for *sling.id.file*`
 
 1. 启动发布实例

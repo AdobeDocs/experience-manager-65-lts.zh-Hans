@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 2a94ea8d-2919-4f30-be31-ce559493805d
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 22%
@@ -64,7 +64,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 >[!NOTE]
 >
->有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)。
+>有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)。
 
 ## 自定义控制台的默认视图 {#customizing-the-default-view-for-a-console}
 
@@ -151,7 +151,6 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 1. 可选：
 
    * 如果要插入其他数据，您需要使用编写[PageInforProvider](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
-
      `pageInfoProviderType`属性。
 
    例如，请参阅下面的附加类/捆绑包（来自GitHub）。

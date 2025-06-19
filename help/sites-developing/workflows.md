@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 625affd0-0e1a-4db8-812f-b6ce70cfe035
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1453'
 ht-degree: 3%
 
 ---
@@ -39,10 +39,9 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 >
 >* 参与工作流，请参阅[使用工作流](/help/sites-authoring/workflows.md)。
 >* 管理工作流和工作流实例，请参阅[管理工作流](/help/sites-administering/workflows.md)。
->* 有关端到端社区文章，请参阅[使用Adobe Experience Manager工作流修改数字Assets。](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/assets-workflow.html)
+>* 有关端到端社区文章，请参阅[使用Adobe Experience Manager工作流修改数字Assets。](/help/assets/assets-workflow.md)
 >* 查看[关于工作流的“向AEM专家提问”网络研讨会](https://communities.adobeconnect.com/p5s33iburd54/)。
 >* 对信息位置的更改，请参阅[工作流最佳实践 — 位置](/help/sites-developing/workflows-best-practices.md#locations)。
->
 
 ## 模型 {#model}
 
@@ -52,7 +51,7 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 
 工作流模型的版本已更新。 运行工作流实例时，它会使用和保留工作流的运行时模型（在工作流启动时可用）。
 
-在工作流模型编辑器[&#128279;](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中触发&#x200B;**同步**&#x200B;时，将生成运行时模型。
+在工作流模型编辑器](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中触发&#x200B;**同步**&#x200B;时，将生成[运行时模型。
 
 对发生的工作流模型或生成的运行时模型（或两者）*之后*&#x200B;启动特定实例进行的编辑不应用于该实例。
 
@@ -196,16 +195,16 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
    |---|---|
    | 步骤 1 | 创建 |
    | 步骤 2 | 创建 |
-   | 步骤 3 | 审查 |
+   | 步骤 3 | 审阅 |
    | 步骤 4 | 批准 |
    | 步骤 5 | 完成 |
    | 步骤 6 | 完成 |
 
-1. 运行工作流时，用户可以根据舞台名称（而不是步骤名称）查看进度。 工作流进度显示在[收件箱](/help/sites-authoring/inbox.md)中列出的工作流项目[&#128279;](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任务详细信息窗口的工作流信息”选项卡中。
+1. 运行工作流时，用户可以根据舞台名称（而不是步骤名称）查看进度。 工作流进度显示在[收件箱](/help/sites-authoring/inbox.md)中列出的工作流项目](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任务详细信息窗口的[工作流信息”选项卡中。
 
 ### 工作流和Forms {#workflows-and-forms}
 
-通常，工作流用于处理AEM中的表单提交。 它可以是标准AEM实例中提供的[核心组件表单组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hans)，也可以是[AEM Forms解决方案](/help/forms/using/aem-forms-workflow.md)。
+通常，工作流用于处理AEM中的表单提交。 它可以是标准AEM实例中提供的[核心组件表单组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html)，也可以是[AEM Forms解决方案](/help/forms/using/aem-forms-workflow.md)。
 
 创建表单时，可以轻松将表单提交与工作流模型相关联。 例如，将内容存储在存储库的特定位置，或者通知用户表单提交及其内容。
 

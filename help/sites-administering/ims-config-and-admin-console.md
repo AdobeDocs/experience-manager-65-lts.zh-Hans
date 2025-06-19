@@ -9,7 +9,7 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 63f42a35-fbd5-4b1b-bba1-1bdcfd23dd33
-source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 6%
@@ -104,7 +104,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，客
 
 该工具允许系统管理员将客户目录中的用户组与[!DNL Admin Console]中的产品配置和用户组进行映射，新的UST版本还允许在[!DNL Admin Console]中动态创建用户组。
 
-要设置用户同步，组织需要创建一组凭证，其方式与使用[[!DNL User Management] API](https://developer.adobe.com/apis/cloudplatform/usermanagement/docs/setup.html)的方式相同。
+要设置用户同步，组织需要创建一组凭证，其方式与使用[[!DNL User Management] API](https://adobe-apiplatform.github.io/user-sync.py/en/success-guide/identify_server.html)的方式相同。
 
 ![image2018-9-23_13-36-56](assets/image2018-9-23_13-36-56.png)
 

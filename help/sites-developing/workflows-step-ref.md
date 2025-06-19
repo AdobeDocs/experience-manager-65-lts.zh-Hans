@@ -10,20 +10,20 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: e82d97c2-c26a-48df-9210-47dc017c68c8
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '3227'
+source-wordcount: '3226'
 ht-degree: 2%
 
 ---
 
 # 工作流步骤参考 {#workflow-step-reference}
 
-工作流模型由各种类型的一系列步骤组成。 根据类型，可以使用参数和脚本配置并扩展这些步骤，以提供您需要的功能和控制。
+工作流模型由一系列各种类型的步骤组成。 根据类型，可以使用参数和脚本配置并扩展这些步骤，以提供所需的功能和控制。
 
 >[!NOTE]
 >
->本节介绍标准工作流程步骤。
+>本节介绍标准工作流步骤。
 >
 >有关特定于模块的步骤，请参阅以下内容：
 >
@@ -74,8 +74,8 @@ ht-degree: 2%
 * **用户/组**
 
    * 下拉选择框允许您导航到用户或组并选择它们。
-   * 如果将步骤分配给特定用户，则只有该用户才能执行该步骤。
-   * 如果将步骤分配给整个组，则当工作流程到达此步骤时，此组中的所有用户都将在其&#x200B;**工作流程收件箱**&#x200B;中执行操作。
+   * 如果将步骤分配给特定用户，则只有此用户才能执行该步骤。
+   * 如果将步骤分配给整个组，则当工作流达到此步骤时，该组中的所有用户都会在其&#x200B;**工作流收件箱**&#x200B;中执行该操作。
    * 有关详细信息，请参阅[参与工作流](/help/sites-authoring/workflows-participating.md)。
 
 ## AND 拆分 {#and-split}
@@ -130,7 +130,7 @@ ht-degree: 2%
 * [通用](#step-properties-common-tab)
 * **进程**
 
-   * **目标步骤**：选择评估路由选择表达式的条件后要执行的步骤。
+   * **目标步骤**：选择评估路由表达式的条件后要执行的步骤。
    * **路由表达式**：选择规则定义、外部脚本或确定是否执行&#x200B;**目标步骤**&#x200B;的ECMA脚本。
 
       * **规则定义：**&#x200B;使用[表达式编辑器](/help/forms/using/variable-in-aem-workflows.md#use-expression-editor)定义规则。
@@ -188,7 +188,7 @@ function check(){
 
 >[!NOTE]
 >
->请参阅[OR拆分步骤](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
+>请参阅[OR拆分步骤](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable)
 
 使用OR拆分进行![分支](assets/variables_orsplit_new.png)
 
@@ -198,7 +198,7 @@ function check(){
 
 * 编辑&#x200B;**OR拆分属性**：
 
-   * **常用**
+   * **公共**
 
       * 指定拆分名称。
 
@@ -255,9 +255,9 @@ function check(){
 
 ### 对话框参与者步骤 {#dialog-participant-step}
 
-使用&#x200B;**对话框参与者步骤**&#x200B;从分配了该工作项的用户的那里收集信息。 此步骤可用于收集稍后在工作流中使用的少量数据。
+使用&#x200B;**对话框参与者步骤**&#x200B;从分配工作项的用户那里收集信息。 此步骤可用于收集稍后在工作流中使用的少量数据。
 
-完成步骤后，**完成工作项**&#x200B;对话框将包含您在对话框中定义的字段。 在字段中收集的数据存储在工作流有效负载的节点中。 随后的工作流步骤可以从存储库中读取该值。
+完成步骤后，**完成工作项**&#x200B;对话框包含您在对话框中定义的字段。 在字段中收集的数据存储在工作流有效负荷的节点中。 然后，后续工作流步骤可以从存储库中读取值。
 
 要配置该步骤，请指定要为其分配工作项的组或用户，以及对话框的路径。
 
@@ -275,7 +275,7 @@ function check(){
 
 要创建对话框，必须创建对话框：
 
-* 确定所得数据在有效负载[&#128279;](#dialog-participant-step-storing-data-in-the-payload)中的存储位置。
+* 确定所得数据在有效负载](#dialog-participant-step-storing-data-in-the-payload)中的[存储位置。
 * [定义对话框；包括定义用于收集和保存数据的字段](#dialog-participant-step-dialog-definition)。
 
 #### 对话框参与者步骤 — 在有效负荷中存储数据 {#dialog-participant-step-storing-data-in-the-payload}
@@ -285,7 +285,6 @@ function check(){
 * **使用有效负载**&#x200B;存储数据
 
    * 要将构件数据存储为工作流有效负荷的属性，请为构件节点的name属性的值使用以下格式：
-
      `./jcr:content/nodename`
 
    * 该数据存储在有效负荷节点的`nodename`属性中。 如果节点不包含该属性，则会创建属性。
@@ -294,7 +293,6 @@ function check(){
 * **与工作项一起存储数据**
 
    * 要将小部件数据存储为工作项元数据的属性，请为name属性的值使用以下格式：
-
      `nodename`
 
    * 该数据存储在工作项`metadata`的`nodename`属性中。 如果之后对同一有效负载使用该对话框，则数据将保留。
@@ -411,12 +409,12 @@ function check(){
 
   >[!CAUTION]
   >
-  >不要更改`/libs`路径中的任何内容。
+  >请勿更改`/libs`路径中的任何内容。
   >
   >
-  >原因是在下次升级实例时覆盖`/libs`的内容（并且在应用修补程序或功能包时可能会覆盖）。
+  >原因是下次升级实例时`/libs`的内容会被覆盖（在应用修补程序或功能包时可能会被覆盖）。
 
-  此脚本选择工作流发起人作为参与者：
+  此脚本选择工作流发起者作为参与者：
 
   ```
   function getParticipant() {
@@ -426,7 +424,7 @@ function check(){
 
   >[!NOTE]
   >
-  >**工作流发起程序参与者选择器**&#x200B;组件扩展了&#x200B;**动态参与者步骤**，并将此脚本用作步骤实现。
+  >**工作流发起者参与者选择器**&#x200B;组件扩展&#x200B;**动态参与者步骤**&#x200B;并将此脚本用作步骤实现。
 
 * **OSGi服务**
 
@@ -506,7 +504,7 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 >[!CAUTION]
 >
->本节介绍用于页面创作[&#128279;](/help/sites-authoring/default-components-foundation.md#form)的基础组件的Forms部分。
+>本节介绍用于页面创作](/help/sites-authoring/default-components-foundation.md#form)的基础组件的[Forms部分。
 
 #### 表单参与者步骤 — 配置 {#form-participant-step-configuration}
 
@@ -569,11 +567,11 @@ public class InitiatorParticipantChooser implements ParticipantStepChooser {
 
 ## 进程步骤 {#process-step}
 
-**处理步骤**&#x200B;执行ECMAScript或调用OSGi服务以执行自动处理。
+**进程步骤**&#x200B;执行ECMAScript或调用OSGi服务以执行自动处理。
 
 ![wf-32](assets/wf-32.png)
 
-### 处理步骤 — 配置 {#process-step-configuration}
+### 流程步骤 — 配置 {#process-step-configuration}
 
 要配置该步骤，请编辑并使用以下选项卡：
 
