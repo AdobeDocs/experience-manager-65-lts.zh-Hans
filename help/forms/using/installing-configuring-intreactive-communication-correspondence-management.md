@@ -1,15 +1,15 @@
 ---
 title: 安装和配置交互式通信
-description: 安装和配置AEM Forms交互式通信以创建业务信函、文档、报表、福利通知、营销邮件、账单和欢迎工具包。
+description: 安装和配置AEM Forms Interactive Communications以创建业务往来函、文档、声明、福利通知、营销邮件、账单和欢迎套件。
 topic-tags: installing
 docset: aem65
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Correspondence Management
 exl-id: d03965e1-4fa3-414c-80b6-c9fca281bee4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---
@@ -48,9 +48,9 @@ AEM Forms Interactive Communications在AEM Forms的创作实例上运行管理�
 
    * **发布**：通过Internet或内部网络向公众提供已发布内容的AEM实例。
 
-* 满足内存要求。 AEM Forms插件包需要：
+* 满足内存要求。 AEM Forms附加组件包需要：
 
-   * 15 GB 临时空间，用于基于 Windows Microsoft®安装。
+   * 用于基于Microsoft® Windows的安装的15 GB临时空间。
    * 用于基于UNIX的安装的6 GB临时空间。
 
 * 基于UNIX的系统的额外要求：如果您使用的是基于UNIX的操作系统，请从相应操作系统的安装媒体安装以下软件包。
@@ -65,7 +65,7 @@ AEM Forms Interactive Communications在AEM Forms的创作实例上运行管理�
   </tr>
   <tr>
    <td>libSM</td>
-   <td>兹利布</td>
+   <td>zlib</td>
    <td>libICE</td>
    <td>libuuid</td>
   </tr>
@@ -89,17 +89,17 @@ AEM Forms Interactive Communications在AEM Forms的创作实例上运行管理�
 AEM Forms附加组件包是部署在AEM上的应用程序。 该软件包包含AEM Forms交互式通信、通信管理和其他功能。 执行以下步骤以安装附加组件包：
 
 1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
-1. 选择 **[!UICONTROL 标题菜单中的 Adobe Experience Manager]** 。
-1. **[!UICONTROL 在“筛选器]**”部分中：
-   1. 从“解决方案&#x200B;**”下拉列表中选择**&#x200B;[!UICONTROL “表单&#x200B;]&#x200B;**”。**
-   2. 选择包的版本和类型。 您还可以使用“ **[!UICONTROL 搜索下载]** ”选项来筛选结果。
+1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
+1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
+   1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
+   2. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
 1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
-1. 打开[程序包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html)并单击“上传程序包&#x200B;**”**&#x200B;以上传程序包。
-1. 选择程序包，然后单击“安装&#x200B;**”。**
+1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
+1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过AEM [Forms版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans) 文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)文章中列出的直接链接下载包。
 
-1. 安装包后，系统会提示您重新启动 AEM 实例。 **不要立即重新启动服务器。** 在停止 AEM Forms Server 之前，请等待 ServiceEvent REGISTERED 和 ServiceEvent UNREGISTERED 消息停止显示在 [AEM-Installation-Directory]/crx-quickstart/logs/error.log 文件中，并且日志稳定。
+1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
 
    >[!NOTE]
    >
@@ -183,10 +183,10 @@ AEM forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 
 ## 后续步骤 {#next-steps}
 
-您已将环境配置为使用交互式通信和通信管理功能。 现在，使用该功能的步骤如下：
+您已将环境配置为使用交互式通信和通信管理功能。 现在，使用该功能的步骤包括：
 
 * [通信管理概述](/help/forms/using/interactive-communications-overview.md)
 
 * [创建交互式通信](../../forms/using/create-interactive-communication.md)
 
-* [创建通信管理信函](../../forms/using/create-letter.md)
+* [创建通信管理信件](../../forms/using/create-letter.md)

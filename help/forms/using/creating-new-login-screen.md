@@ -1,17 +1,13 @@
 ---
 title: 创建登录屏幕
 description: 如何修改LiveCycle模块的登录页面，例如AEM Forms工作区或Forms Manager。
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: forms-workspace
-docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 3e20857b-05bb-4f44-8011-550bdaf857c5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 3%
 
 ---
@@ -293,7 +289,7 @@ css.newLoginContentArea {
 1. 在`/apps/livecycle/core/content/login`中添加新图像。 要添加图像，请执行以下操作：
 
    1. 安装WebDAV客户端。
-   1. 使用webDAV客户端导航到`/apps/livecycle/core/content/login`文件夹。 有关详细信息，请参阅[WebDAV访问](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/webdav-access.html?lang=en)。
+   1. 使用webDAV客户端导航到`/apps/livecycle/core/content/login`文件夹。 有关详细信息，请参阅[WebDAV访问](/help/sites-administering/webdav-access.md)。
 
    1. 添加新图像。
 
@@ -316,7 +312,6 @@ css.newLoginContentArea {
 
 在/apps/livecycle/core/components/login.jsp.
 中修改    *以下内容
-
 ```jsp
 <div class="loginContainerBkg">
 ```

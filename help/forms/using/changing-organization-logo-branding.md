@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 3aa4aca3-3c94-4936-ba9c-484bbb196256
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >有关详细信息，请参阅[WebDAV访问](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/webdav-access.html?lang=en)。
-
-   [WebDAV访问](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/webdav-access.html?lang=en)
+   >有关详细信息，请参阅[WebDAV访问](/help/sites-administering/webdav-access.md)。
 
 1. 通过添加以下样式，在/apps/ws/css/newStyle.css的样式表中引用新的徽标图像。
 

@@ -5,18 +5,18 @@ solution: Experience Manager, Experience Manager Forms
 feature: Form Data Model
 role: Admin, User, Developer
 exl-id: 56b4a767-1210-47f3-b022-766b0dda9943
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '401'
 ht-degree: 68%
 
 ---
 
-# 使用OAuth 2.0客户端凭据流集成Salesforce{#configure-salesforce-with-ouath-2.0-client-credential}
+# 使用OAuth 2.0客户端凭据流集成Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/oauth2-client-credentials-flow-for-server-to-server-integration.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/aem-forms-salesforce-integration) |
 | AEM 6.5 | 本文 |
 
 您可以使用 OAuth 2.0 客户端凭据将 AEM Forms 与 Salesforce 应用程序集成。OAuth 2.0 客户端凭据是一种标准且安全的直接通信方法，无需用户参与。
@@ -34,9 +34,9 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 
 在设置 Salesforce 应用程序和 AEM 环境之间的通信之前：
 
-* 为您的组织创建[采用 OAuth 2.0 客户端凭据流的 Salesforce 连接的应用程序](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5)和仅 API 用户，并获取应用程序的消费方密钥和消费方密码。
+* 为您的组织创建[采用 OAuth 2.0 客户端凭据流的 Salesforce 连接的应用程序](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)和仅 API 用户，并获取应用程序的消费方密钥和消费方密码。
 
-* 确保已适当配置 Swagger 文件以匹配您组织的 API。或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=zh-Hans)，该文件专门用于您的 AEM 环境。
+* 确保已适当配置 Swagger 文件以匹配您组织的 API。或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api)，该文件专门用于您的 AEM 环境。
 >[!NOTE]
 >
 > AEM 6.5仅支持Swagger 2.0文件规范。
@@ -70,4 +70,4 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 1. 单击&#x200B;**[!UICONTROL 测试连接]**。
 1. 如果连接成功，请单击&#x200B;**[!UICONTROL 创建]**&#x200B;按钮。
 
-现在，您可以[创建表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/form-data-model/create-form-data-models.html?lang=en)以将配置的数据源与您的自适应Forms集成。
+现在，您可以[创建表单数据模型](/help/forms/using/create-form-data-model.md)以将配置的数据源与您的自适应Forms集成。

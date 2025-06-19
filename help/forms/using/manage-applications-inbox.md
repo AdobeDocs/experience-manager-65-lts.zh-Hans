@@ -1,17 +1,13 @@
 ---
 title: 在 AEM Inbox 中管理 Forms 应用程序和任务
 description: AEM收件箱允许您通过提交应用程序和管理任务来启动以Forms为中心的工作流。
-contentOwner: vishgupt
-topic-tags: document_services, publish
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: 5454ee3d-45fb-4ed2-b2f2-1fa9e2460759
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1066'
 ht-degree: 3%
 
 ---
@@ -140,7 +136,7 @@ AEM收件箱仅显示活动任务。 已完成的任务未出现在列表中。 
      | allowExplicitSharing | allowExplicitSharing | Boolean |
 
 
-   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=zh-Hans)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
+   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -150,8 +146,6 @@ AEM收件箱仅显示活动任务。 已完成的任务未出现在列表中。 
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [创建属性索引并将其设置为true](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/queries-and-indexing.html#the-property-index)。
+1. [创建属性索引并将其设置为true](/help/sites-deploying/queries-and-indexing.md#the-property-index)。
 
-1. 在CRX DE中配置索引或通过包进行部署后，[重新索引存储库](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex)。
-
-https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/queries-and-indexing.html
+1. 在CRX DE中配置索引或通过包进行部署后，重新索引存储库。

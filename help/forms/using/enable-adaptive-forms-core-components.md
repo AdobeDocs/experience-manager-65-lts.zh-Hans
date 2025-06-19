@@ -6,9 +6,9 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: a163598d-0a6e-45a8-b3b2-1f260007952b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '966'
 ht-degree: 13%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 13%
 
 <!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
-启用自适应Forms核心组件允许您从AEM 6.5 Forms环境开始创建、发布和交付基于[核心组件的自适应Forms](create-an-adaptive-form-core-components.md)和[Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=zh-Hans)。
+启用自适应Forms核心组件允许您从AEM 6.5 Forms环境开始创建、发布和交付基于[核心组件的自适应Forms](create-an-adaptive-form-core-components.md)和[Headless自适应Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)。
 
-要在AEM 6.5 Forms环境中启用自适应Forms核心组件，请在所有创作和发布实例上设置并部署基于[AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)的项目（启用表单选项）。
+要在AEM 6.5 Forms环境中启用自适应Forms核心组件，请在所有创作和发布实例上设置并部署基于[AEM Archetype 41或更高版本](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)的项目（启用表单选项）。
 
 本文介绍了如何在您的AEM 6.5 Forms环境中设置和部署基于AEM原型的Archetype 41或更高版本以启用自适应Forms核心组件。 您可以参阅下面的列表，了解有关启用Forms核心组件的&#x200B;**AEM 6.5**&#x200B;兼容版本：
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在AEM 6.5 Forms环境中启用自适应Forms核心组件之前：
 
@@ -103,11 +103,11 @@ ht-degree: 13%
 1. 更新项目以包含最新版本的Forms核心组件：
 
    1. 打开[AEM原型项目文件夹]/pom.xml进行编辑。
-   1. 将`core.forms.components.version`和`core.forms.components.af.version`的版本设置为[最新的Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hans#aem-as-form-version-history)版本，并确保两者具有与表中提到的&#x200B;**Forms核心组件**&#x200B;相同的版本，并设置`core.wcm.components.version`的版本，如[WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html?lang=zh-Hans)中所提供。
+   1. 将`core.forms.components.version`和`core.forms.components.af.version`的版本设置为[最新的Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)版本，并确保两者具有与表中提到的&#x200B;**Forms核心组件**&#x200B;相同的版本，并设置`core.wcm.components.version`的版本，如[WCM核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html)中所提供。
 
       >[!WARNING]
       >
-      >* 使用版本45创建Archetype项目时，`[AEM Archetype Project Folder]/pom.xml`最初将forms核心组件版本设置为1.1.28。在构建或部署原型项目之前，请将Forms核心组件版本更新为1.1.26。您可以在[AEM 6.5 Forms版本历史记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hans#aem-as-form-version-history)中找到最新版本。
+      >* 使用版本45创建Archetype项目时，`[AEM Archetype Project Folder]/pom.xml`最初将forms核心组件版本设置为1.1.28。在构建或部署原型项目之前，请将Forms核心组件版本更新为1.1.26。您可以在[AEM 6.5 Forms版本历史记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)中找到最新版本。
 
       >[!NOTE]
       >
@@ -131,7 +131,7 @@ ht-degree: 13%
 
    成功构建AEM原型项目后，将生成一个AEM包。 您可以在[AEM原型项目文件夹]\all\target\[appid].all-[version].zip中找到该包
 
-1. 使用[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/administering/contentmanagement/package-manager.html?lang=en)在所有创作实例和发布实例上部署[AEM原型项目文件夹]\all\target\[appid].all-[version].zip包。
+1. 使用[包管理器](/help/sites-administering/package-manager.md)在所有创作实例和发布实例上部署[AEM原型项目文件夹]\all\target\[appid].all-[version].zip包。
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ ht-degree: 13%
 
 ### 什么是核心组件？
 
-[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)是一组用于 AEM 的标准化 Web 内容管理 (WCM) 组件，以缩短您网站的开发时间并降低维护成本。
+[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)是一组用于 AEM 的标准化 Web 内容管理 (WCM) 组件，以缩短您网站的开发时间并降低维护成本。
 
 ### 在启用核心组件上添加了哪些功能？
 
