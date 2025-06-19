@@ -136,7 +136,7 @@ AEM收件箱仅显示活动任务。 已完成的任务未出现在列表中。 
      | allowExplicitSharing | allowExplicitSharing | Boolean |
 
 
-   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
+   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/archetype/using)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()

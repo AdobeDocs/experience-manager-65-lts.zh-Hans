@@ -16,7 +16,7 @@ ht-degree: 68%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/aem-forms-salesforce-integration) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/aem-forms-salesforce-integration) |
 | AEM 6.5 | 本文 |
 
 您可以使用 OAuth 2.0 客户端凭据将 AEM Forms 与 Salesforce 应用程序集成。OAuth 2.0 客户端凭据是一种标准且安全的直接通信方法，无需用户参与。
@@ -36,7 +36,7 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 
 * 为您的组织创建[采用 OAuth 2.0 客户端凭据流的 Salesforce 连接的应用程序](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)和仅 API 用户，并获取应用程序的消费方密钥和消费方密码。
 
-* 确保已适当配置 Swagger 文件以匹配您组织的 API。或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api)，该文件专门用于您的 AEM 环境。
+* 确保已适当配置 Swagger 文件以匹配您组织的 API。或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api)，该文件专门用于您的 AEM 环境。
 >[!NOTE]
 >
 > AEM 6.5仅支持Swagger 2.0文件规范。
