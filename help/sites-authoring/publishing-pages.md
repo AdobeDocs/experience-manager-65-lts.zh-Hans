@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 89bab7e3-f688-4c95-8571-08477e737bc8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 4817296c00e094a65744a896d798e429d3ab6c7d
 workflow-type: tm+mt
-source-wordcount: '1669'
-ht-degree: 65%
+source-wordcount: '1701'
+ht-degree: 64%
 
 ---
+
 
 # 发布页面 {#publishing-pages}
 
@@ -25,13 +26,13 @@ ht-degree: 65%
 >与发布相关的某些术语可能会混淆：
 >
 >* **发布/取消发布**
->  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
+>  >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
 >
 >* **激活／取消激活**
->  这两个术语与发布/取消发布同义。
+>  >  这两个术语与发布/取消发布同义。
 >
 >* **复制**
->  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户注释）从一个环境移动到另一个环境，例如发布或反向复制用户注释时。
+>  >  这些是技术术语，用于描述数据（例如页面内容、文件、代码、用户注释）从一个环境移动到另一个环境，例如发布或反向复制用户注释时。
 
 ## 权限不足 {#insufficient-privileges}
 
@@ -196,6 +197,10 @@ Sites 控制台中有两个用于发布的选项：
    单击&#x200B;**发布**&#x200B;或&#x200B;**稍后发布**&#x200B;以完成发布。
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
+
+>[!TIP]
+>
+>计划发布的内容会复制内容并遵循发布工作流程。 如果要临时隐藏已发布的内容而不取消发布，请考虑在页面属性中提供&#x200B;[**开始时间**&#x200B;和&#x200B;**结束时间**。](/help/sites-authoring/editing-page-properties.md#on-time)
 
 ## 取消发布页面 {#unpublishing-pages}
 
