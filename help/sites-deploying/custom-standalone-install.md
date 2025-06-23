@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 93dc74b3-dfe3-442f-9dec-1b7af41cd4a1
-source-git-commit: dc92f670e7025f9490abbcecff4b485af331bd6d
+source-git-commit: d353cde4e9cc2af738e600d5a9b74928d98496cb
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -314,6 +314,10 @@ Web控制台。
 
 * 有关确保系统安全所需的任务，请参阅[安全核对清单](/help/sites-administering/security-checklist.md)。
 * 查看随AEM WCM一起安装的默认用户和组的列表。 检查您是否想对任何其他帐户执行操作 — 有关更多详细信息，请参阅[安全和用户管理](/help/sites-administering/security.md)。
+
+>[!NOTE]
+>
+> 对于全新的AEM 6.5 LTS安装，必须单独安装索引定义。 有关详细信息，请参阅[此](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#index-definitions)。
 
 ## 访问CRXDE Lite和Web控制台 {#accessing-crxde-lite-and-the-web-console}
 
