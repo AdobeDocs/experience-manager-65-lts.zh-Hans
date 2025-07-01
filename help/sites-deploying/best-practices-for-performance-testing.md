@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 29c20cf3-1694-4d06-ab7c-688018808c44
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: 4087a6f44bd87e3f841feb09220a9ea34ec1dc1c
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1765'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 * AEM提供了开箱即用的工具，用于快速查看有问题的查询、请求和错误消息。 有关详细信息，请参阅操作仪表板文档的[诊断工具](/help/sites-administering/operations-dashboard.md#diagnosis-tools)部分。
 * Apache提供了一个名为&#x200B;**JMeter**&#x200B;的产品，该产品可用于性能和负载测试以及功能行为。 它是一款开源软件，可以免费使用，但功能集比企业产品更小，学习曲线也更陡峭。 可在Apache网站上找到JMeter，网址为[https://jmeter.apache.org/](https://jmeter.apache.org/)
 
-* **Load Runner**&#x200B;是企业级负载测试产品。 提供了免费的评估版。 有关详细信息，请访问[https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
+* **Load Runner**&#x200B;是企业级负载测试产品。 提供了免费的评估版。 可在[OpenText Professional Performance Engineering](https://www.opentext.com/products/professional-performance-engineering)找到详细信息。
 
 * 测试移动或响应式网站时，必须使用一组单独的工具。 它们通过调节网络带宽来工作，模拟速度较慢的移动连接，如3G或EDGE。 使用范围更广的工具包括：
 
@@ -74,7 +74,7 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 
 触屏UI中的&#x200B;**开发人员模式**
 
-AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hans)。
+AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar读取请求日志**
 

@@ -6,9 +6,9 @@ role: Admin
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 110b7175-d398-40ff-886e-5817a1df0ec9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: ce0da5056e0821c94eb06a05c663a3939b37f940
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3056'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 1. 根据需要安装包。 详细信息位于[先决条件](#prerequisites)中。
 
-1. 手动配置Experience Manager [&#128279;](#manual-configuration)1&rbrace;或使用[包](#configure-using-package)。
+1. 手动配置Experience Manager [1}或使用[包](#configure-using-package)。](#manual-configuration)
 
 1. 要将Creative Cloud许可的用户映射到Experience Manager用户，请管理[用户访问控制](#user-access)。
 
-1. 创建[自定义查询索引](#create-custom-index)，为InDesign配置[FPO呈现版本](/help/assets/configure-fpo-renditions.md)，配置[Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md)，并配置[视觉或相似性搜索](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/search-assets.html#configvisualsearch)。
+1. 创建[自定义查询索引](#create-custom-index)，为InDesign配置[FPO呈现版本](/help/assets/configure-fpo-renditions.md)，配置[Adobe Stock集成](/help/assets/aem-assets-adobe-stock.md)，并配置[视觉或相似性搜索](/help/assets/search-assets.md#configvisualsearch)。
 
 ## 各种功能的先决条件和支持 {#prerequisites}
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 | Assets功能 | Experience Manager版本和支持要求 |
 |--- |--- |
-| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。 </br> Experience Manager 6.4.4和6.4.6或更高版本。 </br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)。 |
+| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。 </br> Experience Manager 6.4.4和6.4.6或更高版本。 </br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。 |
 | Asset Link在安装包后工作 | 对于Experience Manager 6.4.0 - 6.4.3，请安装[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support)包。 |
 | Adobe Stock集成 | Experience Manager 6.4.2或更高版本 |
 | 视觉或相似性搜索 | Experience Manager 6.5.0或更高版本 |
@@ -54,7 +54,7 @@ Adobe建议您安装[adobe-asset-link-config](https://experience.adobe.com/#/dow
    设置以下属性并保存更改。
 
    * [!UICONTROL 组映射]：除非需要，否则留空。 有关详细信息，请参阅[组映射](#group-mapping)。
-   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/cn/enterprise/using/create-aal-user-group.html)。
+   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/enterprise/using/create-aal-user-group.html)。
 
 1. 找到&#x200B;**[!UICONTROL Adobe Granite Bearer Authentication Handler]**&#x200B;配置，然后单击以进行编辑。
 
@@ -126,7 +126,7 @@ Adobe Asset Link用户能够连接到Experience Manager，以允许从主Creativ
 >* 如果您将相同的Adobe IMS组织与Experience Manager和CCE一起使用，则现有配置将继续有效。
 
 
-**前提条件**
+**先决条件**
 
 1. 为AAL配置了持有者身份验证且正在运行的Experience Manager实例。
 1. 在Experience Manager 6.5实例上安装以下包(Service Pack 11)。
@@ -243,8 +243,7 @@ Adobe Asset Link用户登录其Creative Cloud应用程序后，可以连接到Ex
 
 配置对于业务线用户和营销人员非常有用，例如在几个特定文件夹上创建自定义工作流。 假设某个机构照片拍摄的所有资产都可以添加水印，或者自由职业者上传的所有资产都可以经过处理以创建特定演绎版。
 
-有关Experience Manager配置的详细信息，请参阅[对资产自动执行工作流](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets)。
-
+有关Experience Manager配置的详细信息，请参阅[对资产自动执行工作流](/help/assets/assets-workflow.md#auto-execute-workflow-on-some-assets)。
 
 ## 在Experience Manager 6.4.x版本中创建自定义索引 {#create-custom-index}
 
@@ -261,7 +260,7 @@ Experience Manager包含用于查询的索引。 为指定版本创建以下自�
 
 ## 配置视觉或相似性搜索 {#configure-visual-similarity-search}
 
-通过可视化搜索功能，您可以使用Adobe Asset Link面板在AEM Assets存储库中搜索视觉上类似的资源。 该功能在6.5.0或更高版本中可用，并且只搜索索引资产。 有关详细信息，请参阅[如何配置可视化搜索](https://experienceleague.adobe.com/docs/experience-manager-65-lts/assets/using/search-assets.html#configvisualsearch)。
+通过可视化搜索功能，您可以使用Adobe Asset Link面板在AEM Assets存储库中搜索视觉上类似的资源。 该功能在6.5.0或更高版本中可用，并且只搜索索引资产。 有关详细信息，请参阅[如何配置可视化搜索](/help/assets/search-assets.md#configvisualsearch)。
 
 ## 为Adobe InDesign生成“仅用于置入”演绎版 {#fpo-renditions}
 
@@ -270,7 +269,7 @@ Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版�
 
 ## 与Adobe Stock集成 {#adobe-stock-integration}
 
-组织将其Adobe Stock帐户与Experience Manager Assets集成。 它可帮助营销人员为其创意和营销项目提供授权的高质量、免版税的照片、矢量、插图、视频、模板和3D资产。 创意专业人士可以使用Asset Link面板来使用这些资源。
+组织将其Adobe Stock帐户与Experience Manager Assets集成。 它可帮助营销人员为其创意和营销项目提供授权的高质量、免版税的照片、矢量、插图、视频、模板和3D资产。 Creative专业人员可以使用Asset Link面板来使用这些资源。
 
 要与Adobe Stock集成，请参阅Experience Manager Assets中的[Adobe Stock资源](/help/assets/aem-assets-adobe-stock.md)。 要与Adobe Stock集成，需要Experience Manager 6.4.2或更高版本。
 
@@ -283,11 +282,11 @@ Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版�
 * 确保您的部署满足先决条件。 具体来说，请确保安装了相应的功能包或软件包。
 * 联系贵组织的合作伙伴或系统集成商。
 * 如果您的Creative Cloud用户无法在已签出的资产中进行验证，请检查电子邮件ID中域名的大小写。 若要修复，请参阅[手动配置](#manual-configuration)。
-* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/cn/enterprise/kb/asset-link-troubleshooting.html)。
+* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html)。
 
 
 >[!MORELIKETHIS]
 >
 >* [关于 Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
->* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [配置Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/cn/enterprise/using/configure-aem-assets-for-asset-link.html)。

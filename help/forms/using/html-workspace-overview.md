@@ -1,17 +1,13 @@
 ---
 title: 使用AEM Forms工作区
 description: 通过流程工作流的此快速概述开始使用AEM Forms工作区。
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: forms-workspace
-docset: aem65
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
 exl-id: 7374797f-4154-402b-bb59-075134763c58
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 823923ab074bae1705cc1991e4079897e4c5cac8
 workflow-type: tm+mt
-source-wordcount: '1019'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -133,8 +129,4 @@ AEM Forms工作区交付项包括部署在CRX上的CRX包、包含完整源代�
 
 默认情况下，对于新流程，XDP表单在桌面上以PDF格式呈现，在平板电脑上以HTML格式呈现。 可以始终以HTML格式呈现XDP表单。 有关详细信息，请参阅[新渲染和提交服务](/help/forms/using/new-render-submit-service.md)。
 
-[移动Forms](https://helpx.adobe.com/livecycle/help/mobile-forms/introduction.html)功能与[配置文件](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html)配合使用，可支持HTML的XDP表单演绎版。 默认情况下，“渲染新的HTML表单”使用`default.html`配置文件，您可以更改该配置文件。 您还可以添加在以HTML格式呈现XDP表单之前发生的自定义更改。
-
-## AEM Forms工作区应用程序 {#aem-forms-workspace-app}
-
-要在移动设备上处理您的业务流程，您可以使用AEM Forms的AEM Forms工作区应用程序产品。 有关详细信息，请参阅[AEM Forms工作区应用程序概述](https://helpx.adobe.com/livecycle/help/mobile-workspace/mobile-workspace-overview.html)。
+[移动Forms](/help/forms/using/introduction.md)功能与[配置文件](/help/forms/using/custom-profile.md)配合使用，可支持HTML的XDP表单演绎版。 默认情况下，“渲染新的HTML表单”使用`default.html`配置文件，您可以更改该配置文件。 您还可以添加在以HTML格式呈现XDP表单之前发生的自定义更改。

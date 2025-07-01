@@ -9,9 +9,9 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c46d9569-23e7-44e2-a072-034450f14ca2
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 2fcdc5df5a4b901c177d8e4158663c6b09793146
 workflow-type: tm+mt
-source-wordcount: '5052'
+source-wordcount: '5054'
 ht-degree: 16%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 16%
 >
 >有关故障排除和修复性能问题的详细信息，另请参阅[性能树](/help/sites-deploying/performance-tree.md)。
 >
->此外，您还可以查看有关[性能优化提示](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-17466)的知识库文章。
+>此外，您还可以查看有关[性能优化提示](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)的知识库文章。
 
 关键问题是网站响应访客请求所用的时间。 尽管该值因每个请求而异，但可以定义平均目标值。 一旦证实该值既可实现，又可维护，就可使用它来监控网站的性能，并指示潜在问题的发展。
 
@@ -39,16 +39,16 @@ ht-degree: 16%
 >[!NOTE]
 >
 >* 在配置性能优化后，请按照[Touch Day](/help/sites-developing/tough-day.md)中的过程测试重负载下的环境。
->* 另请参阅[性能优化提示。](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-17466)
+>* 另请参阅[性能优化提示。](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)
 
 ## 性能优化方法 {#performance-optimization-methodology}
 
 AEM项目的性能优化方法可归纳为五个简单的规则，您可以遵循这些规则以从一开始就避免性能问题：
 
-1. [规划优化](#planning-for-optimization)
+1. [优化计划](#planning-for-optimization)
 1. [模拟现实](#simulate-reality)
 1. [建立坚实的目标](#establish-solid-goals)
-1. [保持相关性](#stay-relevant)
+1. [保持相关](#stay-relevant)
 1. [敏捷迭代周期](#agile-iteration-cycles)
 
 这些规则通常适用于Web项目，并与项目经理和系统管理员相关，以确保他们的项目在启动时不会面临性能挑战。
@@ -91,9 +91,9 @@ AEM项目的性能优化方法可归纳为五个简单的规则，您可以遵�
 
 ![chlimage_1-7](assets/chlimage_1-7.jpeg)
 
-性能调整是一个迭代过程，涉及测量、分析、优化和验证，直到达到目标。 考虑到这一点，在优化阶段实施灵活的验证过程，而不是每次迭代后执行更重的测试过程。
+性能调整是一个迭代过程，包括测量、分析、优化和验证，直到达到目标。 考虑到这一点，在优化阶段实施敏捷验证过程，而不是在每次迭代后实施更沉重的测试过程。
 
-此焦点意味着实现优化的开发人员应该能够快速判断优化是否已达到目标。 此信息很有价值，因为当达到目标时，优化即告结束。
+此焦点意味着实施优化的开发人员应该能够快速判断优化是否已实现目标。 此信息很有价值，因为当达到目标时，优化即告结束。
 
 ## 基本性能准则 {#basic-performance-guidelines}
 
@@ -139,12 +139,12 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 要提高性能，请考虑以下事项：
 
-* 每天要上传多少个资产？ 一个好的估计可以基于：
+* 每天将上传多少资产？ 一个好的估计可以基于：
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
-* 进行编辑的时间范围（通常是工作日的长度，对于国际作则更长）。
-* 上载图像的平均大小（以及每个图像生成的演绎版大小）（以 MB 为单位）。
+* 进行编辑的时间范围（通常为工作日的长度，对国际业务更适用）。
+* 已上传图像的平均大小（以及每个图像生成的演绎版的大小）（以MB为单位）。
 * 确定平均数据速率：
 
 ![chlimage_1-78](assets/chlimage_1-78.png)
@@ -180,13 +180,13 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 * 应用程序（您的项目）代码
 * 搜索功能
 
-### 关于履约的基本规则 {#basic-rules-regarding-performance}
+### 有关性能的基本规则 {#basic-rules-regarding-performance}
 
-在优化性能时，应牢记某些规则：
+在优化性能时，应牢记以下某些规则：
 
-* 性能调整&#x200B;*必须*&#x200B;是每个项目的一部分。
-* 请勿在开发周期早期进行优化。
-* 性能只与最弱链接一样好。
+* 性能优化&#x200B;*必须*&#x200B;是每个项目的一部分。
+* 不要在开发周期的早期进行优化。
+* 性能只取决于最弱的链接。
 * 始终考虑容量与容量。
 * 首先优化重要内容。
 * 如果没有&#x200B;*现实的*&#x200B;目标，永远不要进行优化。
@@ -228,13 +228,13 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 #### 存储库中的配置 {#configuration-in-the-repo}
 
-如果您使用sling：OsgiConfig节点[&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)配置服务，则必须找到现有服务的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台发现PID。
+如果您使用sling：OsgiConfig节点](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)配置服务[，则必须找到现有服务的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台发现PID。
 
 配置名为`queue.maxparallel`的属性。
 
 #### Web控制台中的配置 {#configuration-in-the-web-console}
 
-要使用Web控制台[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)配置这些服务，请在Apache Sling作业队列配置服务工厂下找到现有配置项。
+要使用Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)配置这些服务[，请在Apache Sling作业队列配置服务工厂下找到现有配置项。
 
 配置名为Maximum Parallel Jobs的属性。
 
@@ -285,13 +285,13 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 * 将作者的“进行中的工作”与发布上的“最终工作”分隔开
 * 将内部作者用户与外部访客/发布用户分隔开（例如，代理、新闻代表、客户和学生）。
 
-## 质量保证最佳实践 {#best-practices-for-quality-assurance}
+## Assurance质量最佳实践 {#best-practices-for-quality-assurance}
 
-性能对于您的发布环境至关重要。 因此，在实施项目时，您必须仔细规划和分析对发布环境进行的性能测试。
+性能对于您的发布环境至关重要。 因此，在实施项目时，您必须仔细规划和分析为发布环境进行的性能测试。
 
-本节旨在以标准化方式概述在&#x200B;*发布*&#x200B;环境中定义专门用于性能测试的测试概念所涉及的问题。 QA工程师、项目经理和系统管理员主要关注这些信息。
+本节旨在对定义测试概念时遇到的一些问题进行标准化概述，这些测试概念专门用于&#x200B;*publish*&#x200B;环境中的性能测试。 此信息主要与QA工程师、项目经理和系统管理员有关。
 
-下面介绍在&#x200B;*Publish*&#x200B;环境中对AEM应用程序进行性能测试的标准化方法。 该性能测试包括以下五个阶段：
+下面介绍在&#x200B;*Publish*&#x200B;环境中对AEM应用程序进行性能测试的一种标准化方法。 该性能测试包括以下五个阶段：
 
 * [知识验证](#verification-of-knowledge)
 * [范围的定义](#scope-definition)
@@ -376,12 +376,12 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 必须在平均和峰值条件下测试关键组件。
 
-在这两种情况下，当预定义数量的用户使用系统时，您都可以定义每秒的预期事务数量。
+在这两种情况下，当预定义数量的用户使用系统时，您都可以定义每秒的预期事务处理数。
 
 | 组件 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
-| 主页 单用户 | 平均 | 1 | 1 |  |  |
-|   | 峰 | 1 | 3 |  |  |
+| 主页单个用户 | 平均 | 1 | 1 |  |  |
+|   | 峰值 | 1 | 3 |  |  |
 | 主页100个用户 | 平均 | 100 | 3 |  |  |
 |   | 峰值 | 100 | 3 |  |
 
@@ -406,7 +406,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 在您网站推出后的前几天，您可能会更加感兴趣。 此方案甚至大于您正在测试的峰值。 Adobe建议您测试上线场景，确保系统能够适应这种情况。
 
-| 场景 | 测试类型 | 不行。用户数量 | 发射/秒（预期） | 发射/秒（测试） | 描述 |
+| 场景 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 启用峰值 | 主页 | 200 | 20 |  |  |
 |   | 搜索 | 100 | 10 |  |  |
@@ -434,7 +434,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 只有在系统连续运行（小时或天）后，才会遇到某些问题。 持久性测试用于测试所需时间段内的恒定平均负载。 然后可以分析任何性能降级。
 
-| 场景 | 测试类型 | 不行。用户 | 发射/秒（预期） | 发射/秒（测试） | 描述 |
+| 场景 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 耐力测试（72小时） | 主页 | 10 | 1 |  |  |
 |   | 搜索 | 10 | 1 |  |  |
@@ -454,16 +454,16 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 我们提供了一系列工具，帮助您进行负载生成、性能监控和结果分析。 其中一些工具包括：
 
 * [JMeter](https://jmeter.apache.org/)
-* [加载运行程序](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
+* [OpenText Professional性能工程](https://www.opentext.com/products/professional-performance-engineering)。
 * [Java™交互式配置文件](https://jiprof.sourceforge.net/)
 
 优化后，再次测试以确认影响。
 
 ### 报告 {#reporting}
 
-持续的报告可使每个人都及时了解状态。 如前面提到的颜色编码，体系结构图可用于此状态。
+持续报告使每个人都了解该状态。 如前面在颜色编码中提到的，体系结构图可用于该状态。
 
-完成所有测试后，请报告以下内容：
+完成所有测试后，报告以下内容：
 
 * 遇到任何严重错误
 * 仍需进一步调查的非关键性问题
@@ -472,7 +472,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 ## 使用Dispatcher时优化性能 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)是Adobe的缓存和/或负载平衡工具。 使用Dispatcher时，请考虑优化网站缓存性能。
+[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)是Adobe的缓存和/或负载平衡工具。 使用Dispatcher时，请考虑优化网站缓存性能。
 
 >[!NOTE]
 >
@@ -488,7 +488,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 >
 >通常，许多缓存策略涉及选择完好的URL，并且不依赖此类额外数据。
 >
->使用Dispatcher版本4.1.11，您还可以缓存响应标头，请参阅[缓存HTTP响应标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)。
+>使用Dispatcher版本4.1.11，您还可以缓存响应标头，请参阅[缓存HTTP响应标头](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)。
 >
 
 ### 计算Dispatcher缓存比率 {#calculating-the-dispatcher-cache-ratio}
@@ -513,7 +513,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 
 #### 使用一致的页面编码 {#using-consistent-page-encoding}
 
-使用 Dispatcher 版本 4.1.11，您可以缓存响应标头。 如果未在调度程序上缓存响应标头，则在标头中存储页面编码信息时可能会出现问题。 在此情况下，当 Dispatcher 从缓存中提供一个页面时，Web 服务器的默认编码将用于该页面。可通过两种方式避免此问题：
+使用Dispatcher版本4.1.11，您可以缓存响应标头。 如果不在Dispatcher上缓存响应标头，则在标头中存储页面编码信息时，可能会出现问题。 在此情况下，当 Dispatcher 从缓存中提供一个页面时，Web 服务器的默认编码将用于该页面。可通过两种方式避免此问题：
 
 * 如果您只使用一种编码，请确保 Web 服务器上使用的编码与 AEM 网站的默认编码相同。
 * 要设置编码，使用 HTML `head` 部分中的 `<META>` 标记，如以下示例所示：
@@ -524,7 +524,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 
 #### 消除 URL 参数 {#avoid-url-parameters}
 
-如果可能，请消除要缓存的页面的 URL 参数。例如，如果您有一个图片库，则绝不会缓存以下 URL（除非对 Dispatcher 进行[相应配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)）：
+如果可能，请消除要缓存的页面的 URL 参数。例如，如果您有一个图片库，则绝不会缓存以下 URL（除非对 Dispatcher 进行[相应配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)）：
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -597,7 +597,7 @@ www.myCompany.com/news/main.large.html
 * 相反，如果您有十个不同的开始页面可供选择，则可以缓存其中的每个页面，从而提高性能。
 
 >[!TIP]
->有关配置Dispatcher缓存的更多详细信息，请参阅[AEM Dispatcher缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=zh-Hans)及其有关[缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html?lang=zh-Hans#dispatcher-tips-and-tricks)的部分。
+>有关配置Dispatcher缓存的更多详细信息，请参阅[AEM Dispatcher缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html)及其有关[缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)的部分。
 
 例如，如果将用户名放入标题栏中对每个页面进行个性化，则会影响性能。
 
@@ -608,11 +608,11 @@ www.myCompany.com/news/main.large.html
 
 >[!TIP]
 >
->有关处理混合的公开和受限内容，请参阅[设置Sling动态包含。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html?lang=zh-Hans)
+>有关处理混合的公开和受限内容，请参阅[设置Sling动态包含。](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
 
 #### 粘性连接 {#sticky-connections}
 
-[粘性连接](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#the-benefits-of-load-balancing)可确保同一个用户的文档全部在同一服务器上撰写。如果用户在退出此文件夹不久后返回，则此连接仍保持粘性。要保存所有需要网站的粘性连接的文档，请定义一个文件夹。 尽量不要在该文件夹中放入其他文件。如果您使用个性化的页面和会话数据，此方案将影响负载平衡。
+[粘性连接](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing)可确保同一个用户的文档全部在同一服务器上撰写。如果用户在退出此文件夹不久后返回，则此连接仍保持粘性。要保存所有需要网站的粘性连接的文档，请定义一个文件夹。 尽量不要在该文件夹中放入其他文件。如果您使用个性化的页面和会话数据，此方案将影响负载平衡。
 
 #### MIME 类型 {#mime-types}
 
@@ -633,4 +633,4 @@ www.myCompany.com/news/main.large.html
 要确保正确缓存文件，请遵循以下准则：
 
 * 确保文件始终具有正确的扩展名。
-* 避免使用具有 URL 之类的 `download.jsp?file=2214`通用文件服务脚本。 要使用包含文件规范的 URL，请重写脚本。 对于前面的示例，此重写为 `download.2214.pdf`。
+* 避免使用通用文件服务脚本，这些脚本具有`download.jsp?file=2214`等URL。 要使用包含文件规范的URL，请重写脚本。 对于上一个示例，此重写为`download.2214.pdf`。

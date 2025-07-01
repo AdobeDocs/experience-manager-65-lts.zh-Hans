@@ -1,17 +1,13 @@
 ---
 title: 编写自适应表单的自定义提交操作
 description: AEM Forms允许您为自适应表单创建自定义提交操作。 本文介绍了为自适应表单添加自定义提交操作的过程。
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: customization
-docset: aem65
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components,Form Data Model
 exl-id: dc3bd697-5b1a-4efe-9554-c6aa1575c1c0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 98097c29b1b9cfb436f9431e8b7dca6e6a58634a
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 1%
 
 ---
@@ -20,7 +16,7 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/custom-submit-action-form.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/custom-submit-action-form.html) |
 | AEM 6.5 | 本文 |
 
 自适应表单需要提交操作来处理用户指定的数据。 提交操作确定使用自适应表单提交的数据上执行的任务。 Adobe Experience Manager (AEM)包括[现成的提交操作](../../forms/using/configuring-submit-actions.md)，用于演示您可以使用用户提交的数据执行的自定义任务。 例如，您可以执行各种任务，如发送电子邮件或存储数据。
@@ -106,7 +102,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 ## 创建自定义提交操作 {#creating-a-custom-submit-action}
 
-执行以下步骤可创建自定义提交操作，将数据保存在CRX存储库中，并向您发送电子邮件。 自适应表单包含现成的提交操作存储内容（已弃用），可将数据保存在CRX存储库中。 此外，CQ还提供可用于发送电子邮件的[Mail](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) API。 在使用邮件API之前，请通过系统控制台[配置](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans&amp;wcmmode=disabled)天CQ邮件服务。 您可以重用“存储内容（已弃用）”操作将数据存储在存储库中。 在CRX存储库中的/libs/fd/af/components/guidesubmittype/store位置提供了“存储内容（已弃用）”操作。
+执行以下步骤可创建自定义提交操作，将数据保存在CRX存储库中，并向您发送电子邮件。 自适应表单包含现成的提交操作存储内容（已弃用），可将数据保存在CRX存储库中。 此外，CQ还提供可用于发送电子邮件的[Mail](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans) API。 在使用邮件API之前，请通过系统控制台[配置](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en&wcmmode=disabled)天CQ邮件服务。 您可以重用“存储内容（已弃用）”操作将数据存储在存储库中。 在CRX存储库中的/libs/fd/af/components/guidesubmittype/store位置提供了“存储内容（已弃用）”操作。
 
 1. 通过URL https://&lt;server>：&lt;port>/crx/de/index.jsp登录CRXDE Lite。 在/apps/custom_submit_action文件夹中创建具有属性sling：Folder并命名为store_and_mail的节点。 创建custom_submit_action文件夹（如果尚不存在）。
 
@@ -142,7 +138,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    将post.POST.jsp脚本添加到操作中。 (/apps/custom_submit_action/store_and_mail/)。
 
-   运行现成的“存储”操作（post.POST.jsp脚本）。 使用CQ在您的代码中提供的[FormsHelper.runAction](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)&#x200B;(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) API来运行存储操作。 在JSP文件中添加以下代码：
+   运行现成的“存储”操作（post.POST.jsp脚本）。 使用CQ在您的代码中提供的[FormsHelper.runAction](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String,java.lang.String,org.apache.sling.api.resource.Resource,org.apache.sling.api.SlingHttpServletRequest,org.apache.sling.api.SlingHttpServletResponse))&#x200B;(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) API来运行存储操作。 在JSP文件中添加以下代码：
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 
@@ -152,7 +148,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    `String mailTo = properties.get("mailTo");`
 
-   最后，使用CQ Mail API发送电子邮件。 使用[SimpleEmail](https://commons.apache.org/proper/commons-email/apidocs/org/apache/commons/mail/SimpleEmail.html)类创建电子邮件对象，如下所述：
+   最后，使用CQ Mail API发送电子邮件。 使用[SimpleEmail](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/commons/mail/SimpleEmail.html)类创建电子邮件对象，如下所述：
 
    >[!NOTE]
    >

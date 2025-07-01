@@ -8,9 +8,9 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: cb6528fd-6761-412d-8413-c72049acf91d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d9eb2edf01200b575c6f99a47e5c010e3b3ca28a
 workflow-type: tm+mt
-source-wordcount: '3832'
+source-wordcount: '3805'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在“创建通信”用户界面中创建通信 {#create-correspondence-in-the-create-correspondence-user-interface}
 
-在Correspondence Management[&#128279;](../../forms/using/create-letter.md)中创建信件模板后，最终用户/代理/索赔理算员可以在“创建信件”用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建信件。 最后，理赔人或代理可以在预览模式下管理内容并提交信件。
+在Correspondence Management](/help/forms/using/create-letter.md)中创建[信件模板后，最终用户/代理/索赔理算员可以在“创建信件”用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建信件。 最后，理赔人或代理可以在预览模式下管理内容并提交信件。
 
 ### 预览通信 {#preview-a-correspondence}
 
@@ -51,13 +51,13 @@ ht-degree: 0%
 
 1. 默认情况下，书信HTML预览（移动设备表单预览）会打开，其中的“数据”选项卡处于焦点。
 
-   有关移动表单及其支持的功能的详细信息，请参阅[移动Forms与PDF forms之间的功能区别](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html)。
+   有关移动表单及其支持的功能的详细信息，请参阅[移动Forms与PDF forms之间的功能区别](/help/forms/using/feature-differentiation-html5-forms-pdf-forms.md)。
 
    有三个选项卡：数据、内容和附件。 如果没有数据元素（占位符变量和布局字段），则信件会直接在中打开，并显示“内容”选项卡。 仅当存在附件或启用了库访问权限时，“附件”选项卡才可用。
 
    >[!NOTE]
    >
-   >有关在预览信件的HTML或PDF呈现模式之间切换的更多信息，请参阅[更改信件的呈现模式](#changerenditionmode)。 有关PDF在通信管理和AEM中支持的详细信息，请参阅[停止NPAPI浏览器插件及其影响](https://helpx.adobe.com/cn/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。<!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+   >有关在预览信件的HTML或PDF呈现模式之间切换的更多信息，请参阅[更改信件的呈现模式](#changerenditionmode)。 有关PDF在通信管理和AEM中支持的详细信息，请参阅[停止NPAPI浏览器插件及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
 
 ### 输入数据 {#enterdata}
 
@@ -111,17 +111,13 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >但是，粘贴文本的格式具有一些[限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html)。
+   >但是，粘贴文本的格式存在一些限制。
 
    可以使用Tab键缩进信件中的文本和数字。 例如，可以使用Tab键将列表中的多个文本列对齐为表格格式。
 
    ![表空间](assets/tabspaces.png)
 
    示例：使用Tab键将多列文本对齐为表格格式
-
-   >[!NOTE]
-   >
-   >有关为文本模块和字母设置制表符间距的更多信息，请参阅[有关使用制表符间距排列文本的更多信息](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html)。
 
 1. 如有必要，请在通信中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
 
@@ -375,7 +371,7 @@ AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通�
 
 默认情况下，创建通信UI使用HTML或移动表单呈现信件预览。 移动设备表单预览在任何浏览器中呈现时不会出现任何问题，因为它使用浏览器的本机插件，并且无需其他插件。 您可以将信件预览模式更改为PDF。 但是，浏览器限制可能会为信件的交互式PDF预览的不同功能带来问题。
 
-有关浏览器与信件预览兼容性的详细信息，请参阅[NPAPI浏览器插件停止使用及其影响](https://helpx.adobe.com/cn/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
+有关浏览器与信件预览兼容性的详细信息，请参阅[NPAPI浏览器插件停止使用及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
 
 要更改信件的预览模式，请完成以下步骤：
 

@@ -2,16 +2,13 @@
 title: 如何创建或自定义自适应表单主题？
 description: 了解如何使用BEM规范创建或自定义自适应Forms核心组件的主题
 keywords: 创建自适应表单核心组件主题，创建新主题，自定义主题，上传新主题，在表单中使用主题，删除主题，在AEM 6.5表单中创建主题
-contentOwner: Khushwant Singh
-topic-tags: Adaptive Forms
-docset: aem65
 role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: 59b54622-55c4-4526-b584-c08bbd1d08bb
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 7eddd03e7b1256f2f2b54bdd92672d5a1e4440d1
 workflow-type: tm+mt
-source-wordcount: '1939'
+source-wordcount: '1938'
 ht-degree: 6%
 
 ---
@@ -81,7 +78,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 * 安装[Apache Maven的最新版本。](https://maven.apache.org/download.cgi) Apache Maven是常用于Java™项目的生成自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖项。
 
-* 了解如何在Adobe Experience Manager[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/introduction/clientlibs.html)中创建客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
+* 了解如何在Adobe Experience Manager](/help/sites-developing/clientlibs.md)中创建[客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
 
 * 安装纯文本编辑器。 例如，Microsoft® Visual Studio Code。 使用Microsoft等纯文本编辑器®Visual Studio Code为编辑和修改主题文件提供了用户友好的环境。
 
@@ -129,7 +126,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
       git clone [Path of Git Repository of the theme]
    ```
 
-   将主题&rbrack;的Git存储库的&lbrack;路径替换为主题的相应Git存储库的实际URL
+   将主题]的Git存储库的[路径替换为主题的相应Git存储库的实际URL
 
    例如，要克隆画布主题，请执行以下命令：
 
@@ -143,7 +140,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 #### 2.自定义主题 {#customize-the-theme}
 
-您可以灵活地自定义各个组件，或使用主题的全局变量进行主题级别的更改。 修改全局变量会对所有单个组件产生级联效果。 例如，您可以使用全局变量更改自适应表单中所有组件的边框颜色，或为行动号召(CTA)按钮应用生动的填充颜色。 您可以：
+您可以灵活地自定义各个组件，或使用主题的全局变量进行主题级别的更改。 修改全局变量会对所有单个组件产生级联效果。 例如，您可以使用全局变量更改自适应表单中所有组件的边框颜色，或对Call to action (CTA)按钮应用生动的填充颜色。 您可以：
 
 * [设置主题级别样式](#theme-customization-global-level)
 
@@ -291,7 +288,7 @@ The selected theme is applied to the Adaptive Form.
 将主题应用于自适应表单的步骤如下：
 
 1. 登录到本地AEM创作实例。
-1. 在 Experience Manager 登录页面上输入您的凭据。选择&#x200B;**Adobe Experience Manager** > **Forms** > **Forms和文档**。
+1. 在 Experience Manager 登录页面上输入您的凭据。选择&#x200B;**Adobe Experience Manager** > **表单** > **表单和文档**。
 1. 单击&#x200B;**创建** > **自适应Forms**。
 1. 选择自适应Forms核心组件模板，然后单击&#x200B;**下一步**。 出现&#x200B;**添加属性**
 1. 为自适应表单指定&#x200B;**Name**。
@@ -344,4 +341,4 @@ The selected theme is applied to the Adaptive Form.
 * [创建或自定义基于核心组件的自适应Forms的主题](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [为基于核心组件的自适应Forms创建模板](template-editor.md)
 * [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [示例主题模板和表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=zh-Hans)
+* [示例主题模板和表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)

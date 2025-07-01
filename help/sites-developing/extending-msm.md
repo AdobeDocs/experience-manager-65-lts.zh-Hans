@@ -10,10 +10,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 46300f72-730e-444c-8677-352a890e9910
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+source-git-commit: c033a676eb746befd43803d1ae00c564890cb945
 workflow-type: tm+mt
-source-wordcount: '2444'
-ht-degree: 53%
+source-wordcount: '2422'
+ht-degree: 54%
 
 ---
 
@@ -30,10 +30,6 @@ ht-degree: 53%
 >[!NOTE]
 >
 >此页面应与[重用内容：多站点管理器](/help/sites-administering/msm.md)一起阅读。
->
->以下网站存储库重组部分也可能对您有帮助：
->* [多站点管理器Blueprint配置](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-blueprint-configurations)
->* [多站点管理器转出配置](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/restructuring/sites-repository-restructuring-in-aem-6-5.html#multi-site-manager-rollout-configurations)
 
 >[!CAUTION]
 >
@@ -208,15 +204,12 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 
 1. 向该节点添加以下属性：
    * **名称**：`jcr:title`
-
      **类型**：`String`
      **值**：将显示在UI中的标识标题。
    * **名称**：`jcr:description`
-
      **类型**：`String`
      **值**：可选描述。
    * **名称**：`cq:trigger`
-
      **类型**：`String`
      **值**：要使用的[转出触发器](/help/sites-administering/msm-sync.md#rollout-triggers)。 选择自：
       * `rollout`
@@ -551,7 +544,7 @@ GITHUB上的代码
 
 使用您创建的 `LiveActionFactory` 创建 MSM 转出配置：
 
-1. 使用标准过程[&#128279;](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)创建和配置转出配置 — 并使用属性：
+1. 使用标准过程](/help/sites-administering/msm-sync.md#creating-a-rollout-configuration)创建和配置[转出配置 — 并使用属性：
 
    * **标题**：转出配置示例
    * **名称**：examplerolloutconfig
@@ -689,7 +682,6 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
       * **类型**：`String`
 
       * **值**：包含正在考虑的属性的名称(可与属性`name`的值比较；例如，请参阅
-
         `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 当定义了 `cq-msm-lockable` 时，断开/闭合链的操作会通过以下方式与 MSM 相互作用：

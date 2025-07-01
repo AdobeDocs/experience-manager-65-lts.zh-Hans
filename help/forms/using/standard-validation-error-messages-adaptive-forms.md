@@ -10,20 +10,20 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 17d1976e-96bd-4f8a-8be5-ea208c5ba93f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 0588e3590da69cdf49c61abc0a422093d04f5c41
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 86%
+source-wordcount: '2352'
+ht-degree: 84%
 
 ---
 
 # 自适应Forms中的错误处理程序 {#error-handlers-in-adaptive-form}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html) |
 | AEM 6.5 | 本文 |
 
 
@@ -177,17 +177,17 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 +++
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在自适应Forms中使用自定义错误处理程序之前：
 
-* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=zh-Hans#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
+* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
 * 安装[Apache Maven](https://maven.apache.org/download.cgi)的最新版本。
 
 
 ## 使用规则编辑器添加错误处理程序 {#add-error-handler-using-rule-editor}
 
-通过使用[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作，可以根据用于自适应表单的数据源来定义验证标准。如果您使用 RESTful Web 服务作为数据源，则可以在 Swagger 定义文件中定义验证标准。通过在自适应表单中使用错误处理函数和规则编辑器，可以有效地管理和自定义错误处理。可以使用规则编辑器定义条件，并配置在触发规则时要执行的所需操作。自适应表单根据预设验证标准验证您在字段中输入的信息。如果输入值未达到验证标准，则将在自适应表单的字段级别显示错误消息。
+通过使用[规则编辑器的调用服务](/help/forms/using/rule-editor.md#invoke)操作，可以根据用于自适应表单的数据源来定义验证标准。如果您使用 RESTful Web 服务作为数据源，则可以在 Swagger 定义文件中定义验证标准。通过在自适应表单中使用错误处理函数和规则编辑器，可以有效地管理和自定义错误处理。可以使用规则编辑器定义条件，并配置在触发规则时要执行的所需操作。自适应表单根据预设验证标准验证您在字段中输入的信息。如果输入值未达到验证标准，则将在自适应表单的字段级别显示错误消息。
 
 >[!NOTE]
 >
@@ -203,13 +203,13 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 ### 添加默认错误处理程序函数 {#add-default-errror-handler}
 
 如果错误响应处于标准架构或服务器端验证失败，则支持默认错误处理程序以在字段上显示错误消息。
-为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来使用默认错误处理程序，以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用默认错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用规则编辑器的调用服务操作添加默认错误处理程序，请执行以下步骤：
+为了了解如何通过[规则编辑器的调用服务](/help/forms/using/rule-editor.md#invoke)操作来使用默认错误处理程序，以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用默认错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。要使用规则编辑器的调用服务操作添加默认错误处理程序，请执行以下步骤：
 
 1. 在创作模式下打开自适应表单，选择一个表单组件，然后选择&#x200B;**[!UICONTROL 规则编辑器]**&#x200B;以打开规则编辑器。
 1. 选择&#x200B;**[!UICONTROL 创建]**。
 1. 在规则的 **When** 部分中创建条件。例如，**在更改[宠物名称 ID 字段]**&#x200B;时，会从&#x200B;**选择状态**&#x200B;下拉列表中更改选择。
 1. 在 **Then** 部分中，从&#x200B;**选择操作**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL 调用服务]**。
-1. 从&#x200B;**输入**&#x200B;部分中选择&#x200B;**发布服务**&#x200B;及其相应的数据绑定。例如，要验证&#x200B;**宠物 ID**，选择&#x200B;**发布服务**&#x200B;作为 **GET /pet/{petId}**，并在&#x200B;**输入**&#x200B;部分中选择&#x200B;**宠物 ID**。
+1. 从&#x200B;**输入**&#x200B;部分中选择&#x200B;**发布服务**&#x200B;及其相应的数据绑定。例如，要验证&#x200B;**宠物ID**，请选择&#x200B;**帖子服务**&#x200B;作为&#x200B;**GET /pet/{petId}**，并在&#x200B;**输入**&#x200B;部分中选择&#x200B;**宠物ID**。
 1. 从&#x200B;**输出**&#x200B;部分中选择数据绑定。在&#x200B;**输出**&#x200B;部分中选择&#x200B;**宠物名称**。
 1. 从&#x200B;**错误处理程序**&#x200B;部分中选择&#x200B;**[!UICONTROL 默认错误处理程序]**。
 1. 单击&#x200B;**[!UICONTROL 完成]**。
@@ -232,14 +232,14 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 自定义错误处理程序是一个函数（客户端库），旨在响应由外部服务返回的错误并向最终用户提供自定义响应。任何带注释 `@errorHandler` 的客户端库均被视为自定义错误处理程序函数。此注释有助于识别`.js`文件中指定的错误处理程序函数。
 
-为了了解如何通过[规则编辑器的调用服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke)操作来创建和使用自定义错误处理程序，我们以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用自定义错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
+为了了解如何通过[规则编辑器的调用服务](/help/forms/using/rule-editor.md#invoke)操作来创建和使用自定义错误处理程序，我们以具有&#x200B;**宠物 ID** 和&#x200B;**宠物名称**&#x200B;这两个字段的简单自适应表单为例，并在&#x200B;**宠物 ID** 字段上使用自定义错误处理程序，以检查为调用外部服务而配置的 REST 端点所返回的各种错误，例如 `200 - OK`、`404 - Not Found`、`400 - Bad Request`。
 
 要在自适应表单中添加和使用自定义错误处理程序，请执行以下步骤：
 
 1. [创建自定义错误处理程序](#create-custom-error-message)
 1. [使用规则编辑器配置自定义错误处理程序](#use-custom-error-handler)
 
-#### 1. 创建自定义错误处理程序 {#create-custom-error-message}
+#### &#x200B;1. 创建自定义错误处理程序 {#create-custom-error-message}
 
 要创建自定义错误函数，请执行以下步骤：
 
@@ -299,7 +299,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 现在，让我们了解如何使用 AEM Forms 中规则编辑器的调用服务来配置和使用自定义错误处理程序。
 
-#### 2. 使用规则编辑器配置自定义错误处理程序 {#use-custom-error-handler}
+#### &#x200B;2. 使用规则编辑器配置自定义错误处理程序 {#use-custom-error-handler}
 
 在自适应表单中实施自定义错误处理程序之前，请确保&#x200B;**[!UICONTROL 客户端库类别]**&#x200B;中的客户端库名称与 `.content.xml` 文件的类别选项中指定的名称一致。
 
@@ -313,7 +313,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 1. 选择&#x200B;**[!UICONTROL 创建]**。
 1. 在规则的 **When** 部分中创建条件。例如，在更改&#x200B;**[宠物名称 ID 字段]**&#x200B;时，会从&#x200B;**选择状态**&#x200B;下拉列表&#x200B;**更改**&#x200B;选择。
 1. 在 **Then** 部分中，从&#x200B;**选择操作**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL 调用服务]**。
-1. 从&#x200B;**输入**&#x200B;部分中选择&#x200B;**发布服务**&#x200B;及其相应的数据绑定。例如，要验证&#x200B;**宠物 ID**，选择&#x200B;**发布服务**&#x200B;作为 **GET /pet/{petId}**，并在&#x200B;**输入**&#x200B;部分中选择&#x200B;**宠物 ID**。
+1. 从&#x200B;**输入**&#x200B;部分中选择&#x200B;**发布服务**&#x200B;及其相应的数据绑定。例如，要验证&#x200B;**宠物ID**，请选择&#x200B;**帖子服务**&#x200B;作为&#x200B;**GET /pet/{petId}**，并在&#x200B;**输入**&#x200B;部分中选择&#x200B;**宠物ID**。
 1. 从&#x200B;**输出**&#x200B;部分中选择数据绑定。例如，在&#x200B;**输出**&#x200B;部分中选择&#x200B;**宠物名称**。
 1. 从&#x200B;**[!UICONTROL 错误处理程序]**&#x200B;部分中选择&#x200B;**[!UICONTROL 自定义错误处理程序]**。
 1. 单击&#x200B;**[!UICONTROL 完成]**。

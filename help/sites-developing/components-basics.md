@@ -1,18 +1,13 @@
 ---
 title: Adobe Experience Manager组件 — 基础知识
 description: 开始开发新组件时，您需要了解其结构和配置的基础知识。
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: components
-content-type: reference
-legacypath: /content/docs/en/aem/6-0/develop/components/components-develop
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 3265ad97-75c2-4dc1-8180-71b65cf73d31
-source-git-commit: 013c9155817811913963ca514f7a6369b338d487
+source-git-commit: a0fe5bbfe93719641118521c6861bcb2cca76d60
 workflow-type: tm+mt
-source-wordcount: '4834'
+source-wordcount: '4819'
 ht-degree: 0%
 
 ---
@@ -64,13 +59,13 @@ ht-degree: 0%
 
 Adobe建议将负责标记和呈现的代码与控制用于选择组件内容的逻辑的代码分开。
 
-[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)支持此理念，这是一种模板化语言，旨在确保使用真正的编程语言来定义基础业务逻辑。 此（可选）逻辑可通过特定命令从HTL调用。 此机制会突出显示为给定视图调用的代码，如有必要，还允许为同一组件的不同视图使用特定逻辑。
+[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支持此理念，这是一种模板化语言，旨在确保使用真正的编程语言来定义基础业务逻辑。 此（可选）逻辑可通过特定命令从HTL调用。 此机制会突出显示为给定视图调用的代码，如有必要，还允许为同一组件的不同视图使用特定逻辑。
 
 ### HTL与JSP {#htl-vs-jsp}
 
 HTL是随AEM 6.0引入的HTML模板语言。
 
-由于在开发您自己的组件时应该使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)还是JSP (Java™ Server Pages)，因此对于HTL的讨论应该非常直接，因为HTL现在是AEM推荐的脚本语言。
+由于在开发您自己的组件时应该使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)还是JSP (Java™ Server Pages)，因此对于HTL的讨论应该非常直接，因为HTL现在是AEM推荐的脚本语言。
 
 HTL和JSP都可用于为经典用户界面和触屏优化UI开发组件。 尽管可能会倾向于认为HTL仅适用于经典UI的触屏UI和JSP，但这是一个误解，并且更多是由于时间的原因。 大约在同一时期，触屏优化UI和HTL合并到了AEM中。 由于HTL现在是推荐语言，因此它被用于新组件，这些组件倾向于用于触屏优化UI。
 
@@ -312,7 +307,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>如果设置，此属性将被视为单元格ID。 有关详细信息，请参阅知识库文章<a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">如何生成设计单元ID</a>。<br /> </td>
+   <td>如果设置，此属性将被视为单元格ID。<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>
@@ -597,7 +592,7 @@ AEM中的组件遵循三个不同的层次结构：
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* 例如，要查找`cq:editConfig`的子节点，可以搜索`cq:DropTargetConfig`类型的`cq:dropTargets`；可以在CRXDE Lite&#x200B;**中使用查询工具**&#x200B;并使用以下XPath查询字符串进行搜索：
+* 例如，要查找`cq:editConfig`的子节点，可以搜索`cq:DropTargetConfig`类型的`cq:dropTargets`；可以在CRXDE Lite**中使用查询工具**并使用以下XPath查询字符串进行搜索：
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 

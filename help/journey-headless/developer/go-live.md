@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
 exl-id: 8837e7cd-c949-46cc-9c39-3c7a82cc1daf
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 84ef35149332330e040b8d94cae151708e3c6829
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1801'
 ht-degree: 53%
 
 ---
@@ -97,7 +97,7 @@ Node.js是用于处理JavaScript项目`ui.frontend`子项目的前端资源的AE
 
 设置本地开发环境后，您可以通过本地部署静态节点服务器来模拟向React应用程序提供内容服务。
 
-要更深入地了解设置本地开发环境和内容预览所需的所有依赖项，请参阅[生产部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html?lang=zh-Hans)。
+要更深入地了解设置本地开发环境和内容预览所需的所有依赖项，请参阅[生产部署文档](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html)。
 
 ## 准备AEM Headless应用程序以供上线 {#prepare-your-aem-headless-application-for-golive}
 
@@ -144,13 +144,13 @@ Node.js是用于处理JavaScript项目`ui.frontend`子项目的前端资源的AE
 
 ## 使用Maven部署到生产环境 {#deploy-to-production-maven}
 
-对于使用Maven的&#x200B;*传统*&#x200B;部署（非AMS），请参阅[WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=zh-Hans#build)以了解概述。
+对于使用Maven的&#x200B;*传统*&#x200B;部署（非AMS），请参阅[WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build)以了解概述。
 
 ## 使用Cloud Manager部署到生产 {#deploy-to-production-cloud-manager}
 
-如果您是使用Cloud Manager的AMS客户，在确保一切都已测试并正常工作后，可以将代码更新推送到Cloud Manager中的[集中式Git存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html?lang=zh-Hans)。
+如果您是使用Cloud Manager的AMS客户，在确保一切都已测试并正常工作后，可以将代码更新推送到Cloud Manager中的[集中式Git存储库](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html)。
 
-将更新上传到Cloud Manager后，使用[Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=zh-Hans)将它们部署到AEM。
+将更新上传到Cloud Manager后，使用[Cloud Manager的CI/CD管道](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html)将它们部署到AEM。
 
 <!-- Cannot find a parallel link -->
 <!--
@@ -211,23 +211,23 @@ You can start deploying your code by using the Cloud Manager CI/CD pipeline, whi
 
 ### 探究单页应用程序 {#explore-spa}
 
-不过，没有必要停止AEM的Headless商店。 在历程[&#128279;](getting-started.md#integration-levels)的快速入门部分中，讨论了AEM如何支持Headless交付和传统的全栈模型，以及如何支持将两者的优势结合起来的混合模型。
+不过，没有必要停止AEM的Headless商店。 在历程](getting-started.md#integration-levels)的[快速入门部分中，讨论了AEM如何支持Headless交付和传统的全栈模型，以及如何支持将两者的优势结合起来的混合模型。
 
 如果项目需要这种灵活性，请继续此历程的其他可选部分，[如何使用AEM创建单页应用程序(SPA)。](create-spa.md)
 
 ## 其他资源 {#additional-resources}
 
-* [AEM开发指南](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/introduction/the-basics.html)
+* [AEM Developing指南](/help/sites-developing/the-basics.md)
 
-* [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
+* [WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-* 适用于AEM的[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=zh-Hans)
+* 适用于AEM的[Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
 * CDN缓存
 
-   * [控制CDN缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#controlling-a-cdn-cache)
+   * [控制CDN缓存](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
-   * 正在配置[CDN重写器](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/configuring/osgi-configuration-settings.html) （*搜索CDN重写器*）
+   * 正在配置[CDN重写器](/help/sites-deploying/osgi-configuration-settings.md) （*搜索CDN重写器*）
 
 * [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)
 * [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans)
