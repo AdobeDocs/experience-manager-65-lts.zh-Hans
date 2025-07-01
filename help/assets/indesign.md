@@ -20,11 +20,11 @@ ht-degree: 2%
 * 用于定义和管理特定任务的代理工作程序。
 这些任务可以涵盖多种任务；例如，使用[!DNL InDesign Server]处理文件。
 
-要将文件完全上载到您使用[!DNL Adobe InDesign]创建的[!DNL Experience Manager Assets]，将使用代理。 这使用代理工作进程与[!DNL Adobe InDesign Server]进行通信，其中运行[脚本](https://helpx.adobe.com/indesign/using/scripting.html)以提取元数据并为[!DNL Experience Manager Assets]生成各种演绎版。 代理工作进程在云配置中启用[!DNL InDesign Server]和[!DNL Experience Manager]实例之间的双向通信。
+要将文件完全上载到您使用[!DNL Adobe InDesign]创建的[!DNL Experience Manager Assets]，将使用代理。 这使用代理工作进程与[!DNL Adobe InDesign Server]进行通信，其中运行[脚本](https://helpx.adobe.com/cn/indesign/using/scripting.html)以提取元数据并为[!DNL Experience Manager Assets]生成各种演绎版。 代理工作进程在云配置中启用[!DNL InDesign Server]和[!DNL Experience Manager]实例之间的双向通信。
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign]作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)桌面应用程序，用于为打印和数字分发设计页面布局。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)使您能够根据使用[!DNL InDesign]创建的内容，以编程方式创建自动文档。 它作为服务运行，为其[ExtendScript](https://helpx.adobe.com/indesign/using/scripting.html)引擎提供接口。脚本使用[!DNL ExtendScript]编写，类似于[!DNL JavaScript]。
+>[!DNL Adobe InDesign]作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)桌面应用程序，用于为打印和数字分发设计页面布局。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)使您能够根据使用[!DNL InDesign]创建的内容，以编程方式创建自动文档。 它作为服务运行，为其[ExtendScript](https://helpx.adobe.com/cn/indesign/using/scripting.html)引擎提供接口。脚本使用[!DNL ExtendScript]编写，类似于[!DNL JavaScript]。
 
 ## 提取的工作原理 {#how-the-extraction-works}
 

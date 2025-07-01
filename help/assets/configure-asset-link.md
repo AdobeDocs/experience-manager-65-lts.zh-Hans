@@ -33,7 +33,7 @@ ht-degree: 0%
 
 | Assets功能 | Experience Manager版本和支持要求 |
 |--- |--- |
-| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。 </br> Experience Manager 6.4.4和6.4.6或更高版本。 </br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。 |
+| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。 </br> Experience Manager 6.4.4和6.4.6或更高版本。 </br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)。 |
 | Asset Link在安装包后工作 | 对于Experience Manager 6.4.0 - 6.4.3，请安装[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support)包。 |
 | Adobe Stock集成 | Experience Manager 6.4.2或更高版本 |
 | 视觉或相似性搜索 | Experience Manager 6.5.0或更高版本 |
@@ -54,7 +54,7 @@ Adobe建议您安装[adobe-asset-link-config](https://experience.adobe.com/#/dow
    设置以下属性并保存更改。
 
    * [!UICONTROL 组映射]：除非需要，否则留空。 有关详细信息，请参阅[组映射](#group-mapping)。
-   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/enterprise/using/create-aal-user-group.html)。
+   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/cn/enterprise/using/create-aal-user-group.html)。
 
 1. 找到&#x200B;**[!UICONTROL Adobe Granite Bearer Authentication Handler]**&#x200B;配置，然后单击以进行编辑。
 
@@ -282,11 +282,11 @@ Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版�
 * 确保您的部署满足先决条件。 具体来说，请确保安装了相应的功能包或软件包。
 * 联系贵组织的合作伙伴或系统集成商。
 * 如果您的Creative Cloud用户无法在已签出的资产中进行验证，请检查电子邮件ID中域名的大小写。 若要修复，请参阅[手动配置](#manual-configuration)。
-* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html)。
+* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/cn/enterprise/kb/asset-link-troubleshooting.html)。
 
 
 >[!MORELIKETHIS]
 >
 >* [关于 Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
->* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [配置Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/cn/enterprise/using/configure-aem-assets-for-asset-link.html)。
