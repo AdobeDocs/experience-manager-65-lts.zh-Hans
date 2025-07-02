@@ -1,16 +1,14 @@
 ---
 title: 安装和配置交互式通信
 description: 安装和配置AEM Forms Interactive Communications以创建业务往来函、文档、声明、福利通知、营销邮件、账单和欢迎套件。
-topic-tags: installing
-docset: aem65
 role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Correspondence Management
 exl-id: d03965e1-4fa3-414c-80b6-c9fca281bee4
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: bd33420307a7be6664b6bbb52677af66edaa9c0e
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +95,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该软件包包含A
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
 
@@ -144,7 +142,7 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 #### 安装兼容包 {#install-compatibility-package}
 
-在AEM 6.5 Forms中创建客户通信的默认和推荐方法是交互式通信。 如果您已从以前的版本升级或迁移，并计划继续使用字母（通信管理），请安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en)。
+在AEM 6.5 Forms中创建客户通信的默认和推荐方法是交互式通信。 如果您已从以前的版本升级或迁移，并计划继续使用字母（通信管理），请安装[AEMFD兼容包](/help/forms/using/compatibility-package.md)。
 
 通过AEMFD兼容包，您可以使用AEM 6.5 Forms上的AEM 6.4 Forms、AEM 6.3 Forms和AEM 6.2 Forms中的以下资源：
 

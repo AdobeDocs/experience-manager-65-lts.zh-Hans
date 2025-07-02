@@ -5,10 +5,10 @@ feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: e9549ac9-0ada-4661-969a-709f0ed3b133
-source-git-commit: 3b83225e1150f1e623997c9ece6329de995148be
+source-git-commit: d9f6415aabcbc55af23824d9e0ab33c418f6761f
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 15%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 15%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
 | AEM 6.5 | 本文 |
 
 有关AEM Forms中最新功能和增强功能的信息，请参阅[AEM Forms中的新增功能](../../forms/using/whats-new.md)。
@@ -33,7 +33,7 @@ AEM Forms提供了表单管理工具，不仅允许您管理自适应表单，�
 
 >[!NOTE]
 >
->在 [AEM 6.5 快速入门](https://experienceleague.adobe.com/docs/experience-manager-65-lts/deploying/deploying/deploy.html)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
+>在 [AEM 6.5 快速入门](/help/sites-deploying/deploy.md)中谈及的自适应表单功能旨在仅作探索和评估用途。由于自适应表单功能需要适当的许可，因此必须获得 AEM Forms 的有效许可证才能作生产用途。
 
 ![AEM表单功能](do-not-localize/4th-draft-updated.gif)
 
@@ -96,7 +96,7 @@ AEM Forms提供了Forms Workspace，它是一种移动应用程序，可将您�
 * 企业内容管理连接器(ECM)
 * 开放式标准支持，包括用于连接表单数据与企业系统的XML和SOAP
 * 现成的HTML报告可监控积压、工作队列和关键绩效指标(KPI)
-* 可自定义的仪表板，用于实时洞察业务运营
+* 可自定义的仪表板，用于实时insight进入业务运营
 * 用于连接第三方报告工具的API
 
 ![第三份草稿](do-not-localize/3rd-draft.gif)

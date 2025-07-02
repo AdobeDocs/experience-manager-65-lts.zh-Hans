@@ -1,16 +1,13 @@
 ---
 title: 交互式通信中的文本
 description: 创建和编辑要在交互式通信中使用的文本文档片段 — 文本是用于构建交互式通信的四种文档片段类型之一。 其他三个是条件、列表和布局片段。
-topic-tags: interactive-communications
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
 feature: Interactive Communication
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: ca18b9f4-9d06-4b15-81dd-68a6821e2e3e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 6db207b08535c063e41b333054561036481e8db9
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2464'
 ht-degree: 1%
 
 ---
@@ -26,7 +23,7 @@ ht-degree: 1%
 * **数据模型对象**：数据属性使用后端数据源。
 * **基于规则的内容**：文本中根据规则显示或隐藏的部分内容。 规则也可以基于表单数据模型的属性和变量。
 * **变量**：在文本文档片段中，变量未绑定到后端数据源。 在准备交互式通信以将其提交到后处理时，代理会填充/选择变量中的值或将变量绑定到数据源。
-* **重复**：您的交互式通信中可能有动态信息，如信用卡对帐单中的交易，其发生次数会随着每次生成的交互式通信而不断变化。 使用重复，可以格式化并构建此类动态信息。 有关详细信息，请参阅[内联条件和重复](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/cm-inline-condition.html)。
+* **重复**：您的交互式通信中可能有动态信息，如信用卡对帐单中的交易，其发生次数会随着每次生成的交互式通信而不断变化。 使用重复，可以格式化并构建此类动态信息。 有关详细信息，请参阅[内联条件和重复](https://helpx.adobe.com/experience-manager/6-3/forms/using/cm-inline-condition.html)。
 
 ## 创建文本 {#createtext}
 
@@ -221,7 +218,7 @@ ht-degree: 1%
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块`**[B]**`选择相应的颜色阴影后选择&#x200B;**选择**。
+您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块&#x200B;**选择相应的颜色阴影后选择**&#x200B;选择`**[B]**`。
 
 或者，您也可以转到“高级”选项卡选择适当的色相、亮度和饱和度`**[C]**`以创建精确的颜色，然后选择“选择`**[D]**`”以应用颜色突出显示文本。
 
@@ -238,10 +235,6 @@ ht-degree: 1%
 您可以直接将文本从Microsoft® Word文档复制并粘贴到可编辑的文本文档片段中。 项目符号列表、字体和文本颜色等格式将保留在文本文档片段中。
 
 ![pastetexteditablemodule-1](assets/pastetexteditablemodule-1.png)
-
->[!NOTE]
->
->但是，粘贴文本的格式具有一些[限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html)。
 
 ## 在文本中插入特殊字符 {#special}
 

@@ -1,25 +1,25 @@
 ---
 title: 什么是自适应表单片段？
-description: 自适应Forms提供了一种机制，可创建在任何自适应表单中使用的表单区段，例如面板或一组字段。 您也可以将现有面板另存为片段。
+description: 自适应Forms提供了一种机制，可创建在任何自适应表单中使用的表单区段，例如面板或一组字段。 您还可以将现有面板另存为片段。
 topic-tags: author
-keywords: 添加自适应表单片段， 自适应表单片段， 创建表单片段， 将片段添加到自适应表单， 管理片段
+keywords: 添加自适应表单片段、自适应表单片段、创建表单片段、将片段添加到自适应表单、管理片段
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, Developer
 exl-id: 708a4ab2-ca66-445d-8d69-bcf12fd5158a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 3239416a53382a9f683f90dacd91b40ac20e9f50
 workflow-type: tm+mt
-source-wordcount: '1840'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# 在基于核心组件的自适应表单中创建和使用自适应表单片段 {#adaptive-form-fragments}
+# 在基于核心组件的自适应表单中创建和使用自适应Forms片段 {#adaptive-form-fragments}
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM 6.5 | 本文 |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/adaptive-form-fragments-core-components.html) |
 
 虽然每个表单都针对特定目的而设计，但大多数表单中都存在一些通用区段，例如提供个人详细信息，如姓名和地址、家庭详细信息、收入详细信息。 每次创建新表单时，表单开发人员都需要创建这些常用区段。
 
@@ -31,7 +31,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-> 您可以使用表单片段组件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-fragment.html)的配置对话框和设计对话框轻松自定义用户的片段体验。
+> 您可以使用表单片段组件[的](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment)配置对话框和设计对话框轻松自定义用户的片段体验。
 
 
 ## 创建表单片段 {#create-a-fragment}
@@ -39,8 +39,8 @@ ht-degree: 5%
 您可以从头开始创建自适应表单片段，或将现有自适应表单中的面板另存为片段。 要创建表单片段，请执行以下操作：
 
 1. 登录您的AEM Forms实例，网址为https://[*主机名*]：[*端口*]/aem/forms.html。
-1. 单击&#x200B;**创建>自适应表单片段**。
-1. 指定片段的标题、名称、描述和标记。 请确保为片段指定唯一的名称。 如果存在具有相同名称的其他片段，则无法创建该片段。
+1. 单击&#x200B;**创建 > 自适应表单片段**。
+1. 指定片段的标题、名称、描述和标记。 确保为片段指定唯一的名称。如果存在另一个同名的片段，该片段创建就会失败。
 1. 选择表单模板。 您可以为基于核心组件的自适应Forms或基于基础组件的自适应Forms创建表单片段。
    * 要为基于核心组件的表单创建表单片段，请选择一个基于核心组件的模板。
    * 要为基于基础组件的表单创建表单片段，请选择一个基础组件模板。 例如，/libs/fd/af/templateForFragment/defaultFragmentTemplate。
@@ -49,24 +49,24 @@ ht-degree: 5%
 
 1. 单击以打开&#x200B;**表单模型**&#x200B;选项卡，从&#x200B;**选择自**&#x200B;下拉菜单中，为片段选择以下模型之一：
 
-   ![在表单模型选项卡中显示模型类型](assets/create-af-1-1.png)
+   ![显示“表单模型”选项卡中的模型类型](assets/create-af-1-1.png)
 
-   * **无**：指定从头开始创建片段，而不使用任何表单模型。
+   * **无**：指定从头开始创建片段，不使用任何表单模型。
 
      >[!NOTE]
      >
      > 在自适应Forms中，您可以多次使用单个表单片段（基于核心组件）。 它支持基于无和基于架构的表单片段。
 
-   * **架构**：指定使用上传到 AEM 表单的 XML 或 JSON 架构创建片段。 您可以上传或从可用的XML或JSON架构中选择作为片段的表单模型。 选择XML架构时，您还可以通过从&#x200B;**[!UICONTROL XML架构复杂类型]**&#x200B;下拉框中选择所选架构中存在的complexType来创建自适应表单片段。 选择JSON架构时，您还可以通过从&#x200B;**[!UICONTROL JSON架构定义]**&#x200B;下拉框中选择所选架构中存在的架构定义来创建自适应表单片段。
+   * **架构**：指定使用上载到AEM Forms的XML或JSON架构创建片段。 您可以上传或从可用的XML或JSON架构中选择作为片段的表单模型。 选择XML架构时，您还可以通过从&#x200B;**[!UICONTROL XML架构复杂类型]**&#x200B;下拉框中选择所选架构中存在的complexType来创建自适应表单片段。 选择JSON架构时，您还可以通过从&#x200B;**[!UICONTROL JSON架构定义]**&#x200B;下拉框中选择所选架构中存在的架构定义来创建自适应表单片段。
    * **表单数据模型**：指定使用表单数据模型创建片段。 您可以仅基于表单数据模型中的一个数据模型对象创建自适应表单片段。 展开表单数据模型定义下拉列表。 它列出了指定表单数据模型中的所有数据模型对象。 从列表中选择数据模型对象。
 
    ![表单数据模型](assets/create-af-3.png)
 
 
 
-1. 单击“创建&#x200B;**”，然后单击“打开**”**&#x200B;**，以在编辑模式下使用默认模板打开片段。在编辑模式下，您可以将任何自适应表单组件添加到片段。
+1. 单击“**创建**”，然后单击“**打开**”以使用默认模板在编辑模式下打开片段。 在编辑模式下，您可以将任何自适应表单组件添加到片段。
 
-<!-- For information about Adaptive Form components, see [Introduction to authoring Adaptive Forms](../../forms/using/introduction-forms-authoring.md). --> 此外，如果您选择了 XML 架构或 XDP 表单模板作为片段的表单模型，则内容查找器中将显示一个显示表单模型层次结构的新选项卡。 它可让您将表单模型元素拖放到片段上。 添加的表单模型元素被转换为表单组件，同时保留关联XDP或XSD的原始属性。
+<!-- For information about Adaptive Form components, see [Introduction to authoring Adaptive Forms](../../forms/using/introduction-forms-authoring.md). --> 此外，如果您选择了XML架构或XDP表单模板作为片段的表单模型，则内容查找器中会显示一个显示表单模型层次结构的新选项卡。 它可让您将表单模型元素拖放到片段上。 添加的表单模型元素被转换为表单组件，同时保留关联XDP或XSD的原始属性。
 
 创建基于架构或表单数据模型的自适应表单片段后，表单数据模型或架构元素会显示在自适应表单编辑器的内容浏览器的数据源选项卡中。 您可以将表单模型元素拖放到片段上。 添加的表单模型元素转换为表单组件，同时保留关联架构中的原始属性。
 
@@ -91,9 +91,9 @@ ht-degree: 5%
 
 ### 在自适应表单中嵌入片段 {#embed-a-fragment-in-adaptive-form}
 
-您可以选择将自适应表单片段嵌入到自适应表单中，方法是单击 ![“嵌入](assets/Smock_Import_18_N.svg) ”图标（所添加片段的面板工具栏）
+您可以选择在自适应表单中嵌入自适应表单片段，方法是单击所添加片段的面板工具栏上的![嵌入](assets/Smock_Import_18_N.svg)图标
 
-嵌入的片段不再与独立片段链接。 您可以在自适应表单中编辑嵌入片段中的组件。
+嵌入的片段不再与独立片段链接。 您可以在自适应表单内编辑嵌入片段中的组件。
 
 <!-- 
 ## Configure fragment appearance {#configure-fragment-appearance}
@@ -115,13 +115,13 @@ Perform the following steps to show complete fragments in forms:
 
 ### 在自适应表单中多次使用表单片段 {#using-form-fragment-mutiple-times-in-af}
 
-您可以在自适应表单中多次使用无基于和基于架构的表单片段，以便为每个表单片段字段唯一保存数据。 例如，您可以使用地址表单片段在贷款申请表中收集永久地址、通信地址和当前居住地址的详细信息。
+您可以在自适应表单中多次使用基于无和基于架构的表单片段，以唯一地保存每个表单片段字段的数据。 例如，您可以使用地址表片段收集地址详细信息，以便在贷款申请表中永久性、通信和显示生活地址。
 
-![在自适应形式中使用多个片段](assets/using-multiple-fragment-af.gif)
+![在自适应表单中使用多个片段](assets/using-multiple-fragment-af.gif)
 
-## 自动映射用于数据绑定的片段 {#auto-mapping-of-fragments-for-data-binding}
+## 数据绑定的片段自动映射 {#auto-mapping-of-fragments-for-data-binding}
 
-当您使用 XFA 表单模板或 XSD 复杂类型创建自适应表单片段并将该片段拖放到自适应表单时，XFA 片段或 XSD 复杂类型将自动替换为相应的自适应表单片段，其片段模型根映射到 XFA 片段或 XSD 复杂类型。
+当您使用XFA表单模板或XSD复杂类型创建自适应表单片段并将片段拖放到自适应表单时，XFA片段或XSD复杂类型会自动替换为相应的自适应表单片段，其片段模型根映射到XFA片段或XSD复杂类型。
 
 您可以通过编辑组件对话框更改片段资源及其绑定。
 
@@ -155,14 +155,14 @@ Perform the following steps to show complete fragments in forms:
   </tr>
   <tr>
    <td><p>下载</p> </td>
-   <td><p>下载所选片段。<br /> <br /> </p> </td>
+   <td><p>下载选定的片段。<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>预览</p> </td>
    <td><p>提供以HTML的形式预览片段的选项，或通过将XML文件中的数据与片段合并而预览自定义片段的选项。 有关详细信息，请参阅<a>预览表单</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>开始审核/管理审核</p> </td>
+   <td><p>开始审阅/管理审阅</p> </td>
    <td><p>允许启动和管理对所选片段的审核。 有关详细信息，请参阅<a>创建和管理审核</a>。<br /> <br /> </p> </td>
   </tr>
   <tr>
@@ -175,14 +175,14 @@ Perform the following steps to show complete fragments in forms:
   </tr>
   <tr>
    <td><p>删除</p> </td>
-   <td><p>删除所选片段。<br /> <br /> </p> </td>
+   <td><p>删除选定的片段。<br /> <br /> </p> </td>
   </tr>
  </tbody>
 </table>
 
 ## 使用片段时要记住的要点 {#key-points-to-remember-when-working-with-fragments}
 
-* 确保片段名称是唯一的。 如果存在具有相同名称的现有片段，则创建片段失败。
+* 确保片段名称是唯一的。如果已经存在一个同名的片段，该片段创建就会失败。
 * 在基于XDP的自适应表单中，如果您将面板另存为包含其他XDP片段的片段，则生成的片段将自动绑定到子XDP片段。 如果基于XSD的自适应表单，则生成的片段将绑定到架构根。
 * 创建自适应表单片段时，会创建一个片段节点，该节点与CRXDE Lite中自适应表单的guideContainer节点类似。
 * 不支持自适应表单中使用其他表单数据模型的片段。 例如，基于XDP的片段在基于XSD的自适应表单中不受支持，反之亦然。
@@ -192,7 +192,7 @@ Perform the following steps to show complete fragments in forms:
 * 发布自适应表单时，您需要发布在自适应表单中通过引用插入的独立自适应表单片段。
 * 当您重新发布更新的自适应表单片段时，更改会反映在使用片段的自适应表单的已发布实例中。
 * 包含Verify组件的自适应表单不支持匿名用户。 此外，不建议在自适应表单片段中使用验证组件。
-* （**仅限** Mac）为确保表单片段功能在所有场景中都能完美运行，请将以下条目添加到 /private/etc/hosts 文件中：
+* (**仅限Mac**)要确保表单片段功能在所有情况下都正常工作，请将以下条目添加到/private/etc/hosts文件：
   `127.0.0.1 <Host machine>` **主机**：部署AEM Forms的Apple Mac计算机。
 
 ## 引用片段 {#reference-fragments}
@@ -204,7 +204,7 @@ Perform the following steps to show complete fragments in forms:
 
 * [创建基于核心组件的自适应表单](create-an-adaptive-form-core-components.md)
 * [使用规则编辑器向表单添加动态行为](rule-editor.md)
-* [为基于核心组件的自适应表单创建或自定义主题](create-or-customize-themes-for-adaptive-forms-core-components.md)
-* [为基于核心组件的自适应表单创建模板](template-editor.md)
-* [创建自适应表单或将自适应表单添加到 AEM 站点页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [示例主题模板和表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=zh-Hans)
+* [创建或自定义基于核心组件的自适应Forms的主题](create-or-customize-themes-for-adaptive-forms-core-components.md)
+* [为基于核心组件的自适应Forms创建模板](template-editor.md)
+* [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [示例主题模板和表单数据模型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)

@@ -1,18 +1,13 @@
 ---
 title: 启用AEM以搜索受Document Security保护的PDF文档
 description: 了解如何启用本机AEM搜索，以对受DRM保护的PDF文档执行全文搜索。
-contentOwner: khsingh
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-geptopics: SG_AEMFORMS/categories/working_with_document_security
-docset: aem65
 feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: ad86398d-0dc9-4168-b409-4d231b8d586b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 757c26274b39f5fb37a090f320493abd1af44c42
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -24,11 +19,11 @@ AEM search能够搜索和定位AEM资源，并对各种常用的文档格式(如
 1. 建立安全连接
 1. 为受策略保护的PDF示例文档编制索引
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 * 如果您在OSGi上使用AEM Forms：
 
-   * 在AEM Forms服务器上安装[AEM Forms Document Security Indexer包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+   * 在AEM Forms服务器上安装[AEM Forms Document Security Indexer包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
    * 确保JEE服务器上的AEM Forms已启动并正在运行，并且JEE服务器上的相应AEM Forms上安装了Document Security。 需要JEE服务器上的AEM表单才能对受保护文档编制索引。
 
@@ -66,7 +61,7 @@ AEM search能够搜索和定位AEM资源，并对各种常用的文档格式(如
 
 #### 使用相互身份验证配置Adobe LiveCycle Client SDK捆绑包 {#configure-adobe-livecycle-client-sdk-bundle-using-mutual-authentication}
 
-1. 为JEE上的AEM Forms启用双向身份验证。 有关详细信息，请参阅[CAC和相互身份验证](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html)。
+1. 为JEE上的AEM Forms启用双向身份验证。
 1. 打开AEM Web控制台。 URL是https://&#39;[服务器]：[端口]&#39;/system/console/configMgr。
 1. 找到并打开&#x200B;**Adobe LiveCycle Client SDK**&#x200B;捆绑包。 指定以下属性的值：
 

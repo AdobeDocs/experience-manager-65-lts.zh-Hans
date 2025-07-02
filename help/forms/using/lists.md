@@ -1,16 +1,13 @@
 ---
 title: AEM中的文档片段
 description: 通信管理中的文档片段（如文本、列表、条件和布局片段）允许您形成客户通信的静态、动态和可重复的组件。
-topic-tags: correspondence-management
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
 feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: ece49f03-e711-439f-9c2d-6308fe2998ae
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 4f2374a48687d39f7d365e09d9055edf583e2c20
 workflow-type: tm+mt
-source-wordcount: '6905'
+source-wordcount: '6895'
 ht-degree: 0%
 
 ---
@@ -92,10 +89,6 @@ ht-degree: 0%
 
    ![pastetexttextmodule](assets/pastetexttextmodule.png)
 
-   >[!NOTE]
-   >
-   >但是，粘贴文本的格式具有一些[限制](https://helpx.adobe.com/aem-forms/kb/cm-copy-paste-text-limitations.html)。
-
 1. 如有必要，请在文档片段中插入特殊字符。 例如，可以使用“特殊字符”面板插入：
 
    * 货币符号，如€、@和£
@@ -110,7 +103,7 @@ ht-degree: 0%
 
    ![textbackgroundcolorapplied](assets/textbackgroundcolorapplied.png)
 
-   您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块`**[B]**`选择相应的颜色阴影后选择&#x200B;**选择**。
+   您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块&#x200B;**选择相应的颜色阴影后选择**&#x200B;选择`**[B]**`。
 
    或者，您也可以转到“高级”选项卡选择适当的色相、亮度和饱和度`**[C]**`以创建精确的颜色，然后选择“选择`**[D]**`”以应用颜色突出显示文本。
 
@@ -127,7 +120,7 @@ ht-degree: 0%
 
    数据字典的示例数据文件中指定的占位符元素
 
-   书信![&#128279;](assets/placeholder_elements_in_text.png)中的占位符元素
+   书信![中的](assets/placeholder_elements_in_text.png)占位符元素
 
    CCR视图中的占位符元素值通过数据字典变量填充，如示例数据文件中所指定
 
