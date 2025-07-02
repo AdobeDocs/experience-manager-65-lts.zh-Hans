@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 使用自适应表单的最佳实践 {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 概述 {#overview}
 
@@ -96,9 +96,9 @@ Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简�
 
 ### 创建表单模板
 
-您可以使用&#x200B;**配置浏览器**&#x200B;中启用的表单模板创建自适应表单。 要启用表单模板，请参阅[创建自适应表单模板](https://experienceleague.adobe.com/en/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template)。
+您可以使用&#x200B;**配置浏览器**&#x200B;中启用的表单模板创建自适应表单。 要启用表单模板，请参阅[创建自适应表单模板](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template)。
 
-表单模板也可以从在另一台作者计算机上创建的自适应表单包上传。 通过安装[aemforms-references-*包](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)，可以使用表单模板。 建议的一些最佳实践包括：
+表单模板也可以从在另一台作者计算机上创建的自适应表单包上传。 通过安装[aemforms-references-*包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)，可以使用表单模板。 建议的一些最佳实践包括：
 
 * 仅作者建议使用&#x200B;**nosamplecontent**&#x200B;运行模式，而不建议发布节点使用。
 * 仅通过创作节点创作自适应表单、主题、模板或云配置等资产，这些节点可在配置的发布节点发布。
@@ -320,7 +320,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 以下是配置AEM以提高整体性能的一些最佳实践：
 
 * 从Felix控制台为JavaScript和CSS启用HTML客户端库压缩。
-* 在AEM Dispatcher上缓存`/etc.clientlibs/fd`中的所有客户端库和任何其他自定义客户端库，以提高已发布表单的响应速度和安全性。 有关详细信息，请参阅[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
+* 在AEM Dispatcher上缓存`/etc.clientlibs/fd`中的所有客户端库和任何其他自定义客户端库，以提高已发布表单的响应速度和安全性。 有关详细信息，请参阅[Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html)。
 
 * 不缓存`/content/forms/af/`和`/content/dam/formsanddocuments/*`路径。 有关配置自适应表单缓存的详细信息，请参阅[缓存自适应表单](/help/forms/using/configure-adaptive-forms-cache.md)。
 

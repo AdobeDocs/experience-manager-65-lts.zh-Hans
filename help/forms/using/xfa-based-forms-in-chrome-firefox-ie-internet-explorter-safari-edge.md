@@ -23,5 +23,5 @@ ht-degree: 0%
 * (对于Forms开发人员) Adobe Experience Manager Forms还支持执行以下操作：
 
    * [将基于XFA的表单渲染到HTML5 Forms](/help/forms/using/introduction.md#key-capabilities-of-html-forms-br)，以便这些表单可以在支持HTML5的浏览器中打开，包括那些在iPad等移动设备上运行的浏览器。 表单的HTML5演绎版维护表单设计的布局，并支持嵌入到XFA表单模板中的大多数表单逻辑(如JavaScript、表单计算和表单验证)。
-   * [将基于XFA的表单转换为移动响应式自适应Forms](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)。 这些表单提供响应式布局、个性化功能，并根据需要添加或删除字段或部分以动态适应用户响应。 此外，它们还为各种数据源提供现成的连接器、记录文档功能，并轻松连接到Adobe Analytics以进行性能评估。 有关详细信息，请参阅[主要特性和功能](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=en)
-这样，您在XFA表单中的技术投资就能得到保护，并继续为最终用户提供最佳体验。 有关详细信息，请参阅[Adobe Experience Manager Forms产品文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html)。
+   * [将基于XFA的表单转换为移动响应式自适应Forms](/help/forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)。 这些表单提供响应式布局、个性化功能，并根据需要添加或删除字段或部分以动态适应用户响应。 此外，它们还为各种数据源提供现成的连接器、记录文档功能，并轻松连接到Adobe Analytics以进行性能评估。 有关详细信息，请参阅[主要特性和功能](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hans)
+这样，您在XFA表单中的技术投资就能得到保护，并继续为最终用户提供最佳体验。 有关详细信息，请参阅[Adobe Experience Manager Forms产品文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hans)。
