@@ -123,7 +123,7 @@ ht-degree: 0%
    >
    >要使[!DNL Experience Manager]能够解析图像，请执行以下操作：
    >
-   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
+   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/cn/indesign/using/graphics-links.html)）。
    >* 将[!DNL Experience Manager]装载到本地文件系统，然后将缺少的图标与[!DNL Experience Manager]中的现有资源进行映射。
 
 1. 要为宣传册生成PDF演绎版，请选择对话框中的Acrobat选项，然后单击&#x200B;**[!UICONTROL 继续]**。
