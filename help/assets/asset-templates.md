@@ -1,14 +1,13 @@
 ---
 title: 资产模板
 description: 了解 [!DNL Adobe Experience Manager Assets] 中的资产模板以及如何使用资产模板创建营销宣传品。
-contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 solution: Experience Manager, Experience Manager Assets
 exl-id: 8584d5ea-6ef2-4e81-8b18-5aa2d4226ea6
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 9ed889c74a886e1b41c379dac77bb570ef5c2c39
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -124,10 +123,8 @@ ht-degree: 0%
    >
    >要使[!DNL Experience Manager]能够解析图像，请执行以下操作：
    >
-   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/cn/indesign/using/graphics-links.html)）。
+   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
    >* 将[!DNL Experience Manager]装载到本地文件系统，然后将缺少的图标与[!DNL Experience Manager]中的现有资源进行映射。
-   >
-   >有关使用[!DNL InDesign]文档的更多信息，请参阅[在Experience Manager中使用InDesign文档的最佳实践](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html)。
 
 1. 要为宣传册生成PDF演绎版，请选择对话框中的Acrobat选项，然后单击&#x200B;**[!UICONTROL 继续]**。
 1. 宣传品部分是在您开始使用的文件夹中创建的。 要查看格式副本，请打开宣传品，然后从GlobalNav列表中选择&#x200B;**[!UICONTROL 格式副本]**。
@@ -177,4 +174,4 @@ ht-degree: 0%
 
 ## 最佳实践和限制 {#best-practices-limitations-tips}
 
-* [!DNL Experience Manager]中的[!DNL InDesign]编辑器在标记级别工作，单个标记下的所有文本被视为单个实体。 要在编辑时保留文本格式和样式，请单独标记每个段落（或使用不同样式的文本）。
+* [!DNL InDesign]中的[!DNL Experience Manager]编辑器在标记级别工作，单个标记下的所有文本被视为单个实体。 要在编辑时保留文本格式和样式，请单独标记每个段落（或使用不同样式的文本）。

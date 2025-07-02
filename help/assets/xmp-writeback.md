@@ -1,15 +1,14 @@
 ---
 title: XMP写回到演绎版
 description: 了解XMP写回功能如何将资源的元数据更改传播到该资源的所有或特定演绎版。
-contentOwner: AG
 role: User, Admin
 feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: e3972784-9ded-4da8-b90c-ec2da9c3297a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 863ec2b6d8a6e22705c2f48a4f7bbb76fa34f7c7
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '780'
 ht-degree: 6%
 
 ---
@@ -18,18 +17,18 @@ ht-degree: 6%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata.html?lang=en) |
+| AEM 6.5 LTS | 本文 |
 
 [!DNL Adobe Experience Manager Assets]中的此XMP写回功能将元数据更改复制到原始资源的演绎版。 当您从Assets中更改资源的元数据或上传资源时，所做的更改最初存储在资源层次结构的元数据节点中。
 
 通过XMP写回功能，可将元数据更改传播到资源的所有或特定演绎版。 该功能仅写回那些使用已注册命名空间的元数据属性，即写回名为`dc:title`的属性，但不写回名为`mytitle`的属性。
 
-考虑将标题为`Classic Leather`的资源的[!UICONTROL Title]属性修改为`Nylon`的方案。
+考虑将标题为[!UICONTROL 的资源的]Title`Classic Leather`属性修改为`Nylon`的方案。
 
 ![元数据](assets/metadata.png)
 
-在本例中，[!DNL Experience Manager Assets]将更改保存到资源层次结构中存储的资源元数据的`dc:title`参数中的&#x200B;**[!UICONTROL Title]**&#x200B;属性。
+在本例中，[!DNL Experience Manager Assets]将更改保存到资源层次结构中存储的资源元数据的&#x200B;**[!UICONTROL 参数中的]** Title`dc:title`属性。
 
 ![元数据已存储](assets/metadata_stored.png)
 
@@ -69,8 +68,6 @@ ht-degree: 6%
 元数据更改将传播到资源的演绎版thumbnail.140.100.png和thumbnail.319.319.png ，而不是其他内容。
 
 >[!NOTE]
->
->有关64位Linux中的XMP回写问题，请参阅[如何在64位RedHat Linux上启用XMP回写](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html)。
 >
 >有关支持的平台，请参阅[XMP元数据回写先决条件](/help/sites-deploying/technical-requirements.md#requirements-for-aem-assets-xmp-metadata-write-back)。
 

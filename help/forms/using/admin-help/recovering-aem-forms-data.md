@@ -2,16 +2,13 @@
 title: 恢复AEM表单数据
 description: 本文档介绍恢复AEM表单数据所需的步骤。
 contentOwner: admin
-content-type: reference
-geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 6345edda-cdc6-4e13-ade6-2dd6de9d9616
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f7adcbe7700d0ea9cbd18eb0b59bcd76f56e8cc5
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -98,7 +95,7 @@ AEM forms应该能够从以下故障中可靠恢复：
 
    * **独立**
 
-     *还原作者和发布实例*：如果发生灾难，可以通过执行[备份和还原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)中描述的步骤将存储库还原到上次备份的状态。
+     *还原作者和发布实例*：如果发生灾难，可以通过执行[备份和还原](/help/sites-administering/backup-and-restore.md)中描述的步骤将存储库还原到上次备份的状态。
 
      “创作”节点的完全恢复也确定了Forms Manager和AEM Forms Workspace数据的恢复。
 

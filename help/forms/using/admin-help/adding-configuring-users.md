@@ -1,17 +1,15 @@
 ---
 title: 添加和配置用户
 description: 通过管理控制台中的“用户管理”设置，您可以创建或删除用户并配置其他用户设置。
-contentOwner: admin
-geptopics: SG_AEMFORMS/categories/setting_up_and_organizing_users
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: b3f8e1d6-3e6e-4b2c-8528-3346bbda3396
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 9dcdf84b70a3b0ea6fb332cd2cf8ccf1d4476489
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -41,10 +39,6 @@ ht-degree: 0%
 
 1. （可选）要向用户分配角色，请单击&#x200B;**[!UICONTROL 查找角色]**，选中要分配的角色的复选框，然后单击&#x200B;**[!UICONTROL 确定]**。
 1. 单击&#x200B;**[!UICONTROL 完成]**。
-
-   >[!NOTE]
-   >
-   >如果您遇到用户的任何登录问题，请参阅[JEE上的AEM Forms用户无法在OSGi端登录AEM Forms](https://helpx.adobe.com/aem-forms/kb/AEM-users-fails-to-login.html)。
 
 ## 用户设置 {#user-settings}
 
@@ -178,4 +172,4 @@ AEM表单无法区分用户ID和密码相同但属于不同域的用户帐户。
 
 CQ提供了一种机制来覆盖默认的404处理程序jsp。
 
-有关如何自定义错误处理页面的详细信息，请参阅Adobe Experience Manager文档中的[自定义错误处理程序显示的页面](https://experienceleague.adobe.com/docs/experience-manager-65-lts/developing/platform/customizing-errorhandler-pages.html?lang=en)。
+有关如何自定义错误处理页面的详细信息，请参阅Adobe Experience Manager文档中的[自定义错误处理程序显示的页面](/help/sites-developing/customizing-errorhandler-pages.md)。

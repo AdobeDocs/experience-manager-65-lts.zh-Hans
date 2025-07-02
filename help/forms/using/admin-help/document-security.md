@@ -1,20 +1,15 @@
 ---
 title: 什么是Document Security？
 description: 了解如何创建、存储和应用预定义的机密性设置，以及如何使用Document Security安全地分发信息。
-contentOwner: admin
-content-type: reference
-geptopics: SG_AEMFORMS/categories/working_with_document_security
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
 feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5e7fe85e-3c7f-4a37-8f65-5c0ad4bbd66c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 32da9c3f13cb1eba130e96e03ab97617d18e1486
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3218'
 ht-degree: 0%
 
 ---
@@ -26,7 +21,7 @@ Document Security确保只有授权用户才能使用您的文档。 使用Docum
 * Adobe PDF文件
 * Microsoft®Word、Excel和PowerPoint文件
 
-有关策略如何保护支持的文件类型的详细信息，请参阅[更多Document Security信息](https://experienceleague.adobe.com/docs/experience-manager-65-lts/forms/use-document-security/document-security-offerings.html?lang=en)。
+有关策略如何保护支持的文件类型的详细信息，请参阅[更多Document Security信息](/help/forms/using/document-security-offerings.md)。
 
 使用Document Security，您可以轻松创建、存储预定义机密性设置并将其应用于文档。 为了防止信息超出您的覆盖范围，您还可以监控和控制在您分发文档后收件人如何使用您的文档。
 

@@ -9,9 +9,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 9f95a54d-6c5e-44c1-965e-631ec7487308
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: dc405bec510b0f72e916df343790572b3cd51526
 workflow-type: tm+mt
-source-wordcount: '3322'
+source-wordcount: '3307'
 ht-degree: 0%
 
 ---
@@ -48,10 +48,10 @@ ht-degree: 0%
 
 | 图像(URL) | 缩略图 | 大小(JPEG) | 使用智能成像调整大小(WebP) | 使用智能成像调整大小(AVIF) | 使用WebP减少% | AVIF降低% |
 |---|---|---|---|---|---|---|
-| [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![图片1](/help/assets/assets-dm/picture1.png) | 145 KB | 106 KB | 90.2 KB | 26.89% | 37.79% |
-| [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![图片2](/help/assets/assets-dm/picture2.png) | 412 KB | 346 KB | 113 KB | 16.01% | 72.57% |
-| [图像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![图片3](/help/assets/assets-dm/picture3.png) | 221 KB | 189 KB | 87.1 KB | 14.47% | 60.58% |
-| [图像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![图片4](/help/assets/assets-dm/picture4.png) | 594 KB | 545 KB | 286 KB | 8.25% | 51.85% |
+| [图像1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![图片1](/help/assets/assets-dm/picture1.png) | 145 KB | 106 KB | 90.2 KB | 26.89% | 37.79% |
+| [图像2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![图片2](/help/assets/assets-dm/picture2.png) | 412 KB | 346 KB | 113 KB | 16.01% | 72.57% |
+| [图像3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![图片3](/help/assets/assets-dm/picture3.png) | 221 KB | 189 KB | 87.1 KB | 14.47% | 60.58% |
+| [图像4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![图片4](/help/assets/assets-dm/picture4.png) | 594 KB | 545 KB | 286 KB | 8.25% | 51.85% |
 
 与上述内容类似，Adobe还使用较大的样本集运行了测试。 与WebP相比，AVIF格式提供了20%的额外尺寸缩减，比JPEG提供了27%的缩减。 视觉质量都一样。 与JPEG相比，AVIF的平均大小缩减率高达41%。
 
@@ -88,7 +88,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 您可以通过将`bfc=off`附加到图像的URL来关闭智能成像。
 
-另请参阅Dynamic Media图像服务和渲染API中的[bfc](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
+另请参阅Dynamic Media图像服务和渲染API中的[bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
 
 ### 关于设备像素比(dpr)优化 {#dpr}
 
@@ -134,7 +134,7 @@ DPR和网络带宽值基于捆绑的CDN所检测到的客户端值。 这些值�
 * 使用Adobe Sensei技术根据图像请求中指定的质量(`qlt`)进行转换。
 * TTL（生存时间）独立。 以前，智能成像工作必须至少12小时的TTL。
 * 以前，原始图像和派生图像都被缓存，缓存失效需要两步过程。 在最新的智能成像中，仅缓存派生项，从而允许执行单步缓存失效过程。
-* 在规则集中使用自定义标头的客户受益于最新的智能成像，因为与以前的智能成像版本不同，这些标头不会受到阻止。 例如，如[向图像响应添加自定义标头值|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html)中建议的“计时允许来源”和“X-Robot”。
+* 在规则集中使用自定义标头的客户受益于最新的智能成像，因为与以前的智能成像版本不同，这些标头不会受到阻止。 例如，“Timing Allow Origin”和“X-Robot”。
 
 ## 常见问题解答
 
@@ -255,7 +255,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
       * 列出所有相关域，如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
       * 智能成像支持通用域和自定义域。
-      * 要识别您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)，然后登录到您的公司帐户。
+      * 要识别您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)，然后登录到您的公司帐户。
 
          1. 导航到&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
          1. 查找&#x200B;**[!UICONTROL 发布的服务器名称]**&#x200B;字段以确认您的域。
@@ -336,9 +336,9 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >**X-Adobe-Smart-Imaging = -1，正在传递WebP**
 >
 >如果`X-Adobe-Smart-Imaging`的值为–1且仍在传递WebP，则智能成像处于活动状态。 但是，由于缓存已过时，未计算大小优势。 您可以在图像的URL中使用`cache=update`（仅限一次）来解决此问题。
->使用修饰符的示例：
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
->要使整个缓存失效，必须创建支持案例。
+>>使用修饰符的示例：
+>>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>>要使整个缓存失效，必须创建支持案例。
 
 +++
 

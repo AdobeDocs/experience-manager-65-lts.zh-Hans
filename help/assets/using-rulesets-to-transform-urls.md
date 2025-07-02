@@ -9,9 +9,9 @@ role: User, Admin,Developer
 feature: Configuration,Rulesets
 solution: Experience Manager, Experience Manager Assets
 exl-id: 8f005ada-275a-444f-9883-64d847fd9959
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: ce717f045221a65f88766d1d5f62d0fa33a3ffcd
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -34,8 +34,6 @@ ht-degree: 0%
 
 * 请求对某些字符（如`$`、`{`和`}`）进行编码，并对某些字符进行解码以连接到ImageServer。 例如，Facebook无法很好地处理包含特殊字符的URL。
 
-  请参阅[从URL](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html)中删除特殊字符。
-
 在Dynamic Media的上下文中，使用基于XML的系统管理资产信息的网站可以将XML文件上传到Dynamic Media。 您可以将其中一个文件指定为用于提供Dynamic Media资产的预处理规则集文件。 此文件将重新构建标准URL协议格式，以满足与Dynamic Media集成系统的业务逻辑。 指定一个XML文件作为规则集定义文件路径。
 
 >[!CAUTION]
@@ -43,25 +41,22 @@ ht-degree: 0%
 >使用规则集时请务必小心；规则集可能会阻止在您的网站上显示Dynamic Media内容。
 
 提供了一些示例规则集，可帮助您创建自己的规则集。
-请参阅[规则集引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html?lang=zh-Hans)。
+请参阅[规则集引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html)。
 
 与创建所有规则集时一样，在使用XML验证器程序（如xmlvalid）上传XML文件之前，请确保该文件有效。
-另请参阅[规则集疑难解答](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html)。
 
 此外，请确保首先在不影响实时生产环境的暂存环境中测试规则集。
 生产环境和暂存环境通常需要不同的登录。
 
-有关登录信息，请参阅[Adobe Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#sign-in-dmc-app)。
+有关登录信息，请参阅[Adobe Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-另请参阅[在规则集中使用“asset”而不是“is”图像](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html)。
-
 **要部署XML规则集：**
 
-1. 登录到您的[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#sign-in-dmc-app)。
+1. 登录到您的[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app)。
 
    配置时，Adobe已提供您的凭据和登录详细信息。 如果您没有此信息，请联系Adobe客户支持。
 

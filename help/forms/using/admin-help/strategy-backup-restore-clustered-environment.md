@@ -1,19 +1,15 @@
 ---
 title: 群集环境中的备份和恢复策略
 description: 如果您的AEM表单实施将其他自定义数据存储在其他数据库中，则必须实施策略来备份此数据，确保它与AEM表单数据保持同步。
-contentOwner: admin
-content-type: reference
-geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 0fe9b02a-96b4-462f-a940-a2d6084ed0a4
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 1b7e0c532ab46346059de01cee4a1adecf3a0a13
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -53,7 +49,7 @@ ht-degree: 0%
    1. 备份任何辅助群集节点的所有文件，包括子目录。
    1. 分别备份每个群集节点的存储库/系统ID。
 
-   有关详细步骤，请参阅[备份和还原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)。
+   有关详细步骤，请参阅[备份和还原](/help/sites-administering/backup-and-restore.md)。
 
 1. 备份任何其他数据，如客户字体。
 1. 再次启动群集。
@@ -72,7 +68,7 @@ ht-degree: 0%
    1. 备份任何辅助群集节点的所有文件，包括子目录。
    1. 分别备份每个群集节点的repository/system.id。
 
-   有关详细步骤，请参阅[备份和还原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)。
+   有关详细步骤，请参阅[备份和还原](/help/sites-administering/backup-and-restore.md)。
 
 1. 备份任何其他数据，如客户字体。
 1. 再次启动群集。
@@ -178,15 +174,15 @@ ht-degree: 0%
 
 ## 备份和恢复Correspondence Management Solution发布节点 {#back-up-and-restore-correspondence-management-solution-publish-node}
 
-发布服务器节点在群集环境中没有任何主 — 辅关系。 您可以执行[备份和还原](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)来备份任何发布服务器节点。
+发布服务器节点在群集环境中没有任何主 — 辅关系。 您可以执行[备份和还原](/help/sites-administering/backup-and-restore.md)来备份任何发布服务器节点。
 
 ### 恢复单个发布者节点 {#recover-a-single-publisher-node}
 
 1. 关闭必须恢复的节点，并在节点再次启动之前不执行任何发布活动。
-1. 使用[还原备份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)还原发布节点。
+1. 使用[还原备份](/help/sites-administering/backup-and-restore.md)还原发布节点。
 
 ### 恢复群集 {#recover-a-cluster}
 
 1. 关闭群集。
-1. 使用[还原备份](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)还原发布节点。
+1. 使用[还原备份](/help/sites-administering/backup-and-restore.md)还原发布节点。
 1. 启动主节点，然后启动创作群集的辅助节点。

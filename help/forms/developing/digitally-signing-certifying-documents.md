@@ -1,19 +1,15 @@
 ---
 title: 数字签名和认证文档
 description: 使用签名服务向PDF文档添加和删除数字签名字段，检索PDF文档中的签名字段名称，修改签名字段，对PDF文档进行数字签名，验证PDF文档中的数字签名，验证PDFPDF文档中的所有数字签名，以及从签名字段删除数字签名。
-contentOwner: admin
-content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-topic-tags: operations
 role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 30ed51ad-4f69-41eb-9fca-d29d644aa4ba
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 9a11887b6bb8446772e5a41246da1023f40ce507
 workflow-type: tm+mt
-source-wordcount: '16917'
+source-wordcount: '16909'
 ht-degree: 0%
 
 ---
@@ -150,7 +146,7 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp`。 `Document`对象的`copyToFile`方法，用于将`Document`对象的内容复制到文件中。 确保您使用`com.adobe.idp`。 `addSignatureField`方法返回的`Document`对象。
+   * 调用`com.adobe.idp`。 `Document`对象的`copyToFile`方法，用于将`Document`对象的内容复制到文件中。 确保您使用`com.adobe.idp`。 `Document`方法返回的`addSignatureField`对象。
 
 **另请参阅**
 
@@ -171,8 +167,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -187,7 +183,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递表示PDF文档文件位置和文件打开模式的字符串值，创建`System.IO.FileStream`对象。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
+   * 使用字节数组的内容指定其`BLOB`属性以填充`MTOM`对象。
 
 1. 添加签名字段
 
@@ -205,8 +201,8 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示将包含签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`addSignatureField`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`addSignatureField`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -318,8 +314,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -334,7 +330,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递表示PDF文档文件位置和文件打开模式的字符串值，创建`System.IO.FileStream`对象。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将`MTOM`字段分配给字节数组内容来填充`BLOB`对象。
+   * 通过将`BLOB`字段分配给字节数组内容来填充`MTOM`对象。
 
 1. 检索签名字段名称
 
@@ -403,9 +399,9 @@ ht-degree: 0%
 可以设置以下种子值字典值：
 
 * **修订检查**：指定在将签名应用于签名字段时是否执行吊销检查。
-* **证书选项**：将值分配给证书种子值字典。 在指定证书选项之前，建议您熟悉证书种子值词典。 (请参阅[PDF引用](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
+* **证书选项**：将值分配给证书种子值字典。 在指定证书选项之前，建议您熟悉证书种子值词典。
 * **摘要选项**：分配用于签名的摘要算法。 有效值为SHA1、SHA256、SHA384、SHA512和RIPEMD160。
-* **筛选器**：指定与签名字段一起使用的筛选器。 例如，您可以使用Adobe.PPKLite过滤器。 (请参阅[PDF引用](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)。)
+* **筛选器**：指定与签名字段一起使用的筛选器。 例如，您可以使用Adobe.PPKLite过滤器。
 * **标记选项**：指定与此签名字段关联的标记值。 值为1表示签名者必须仅使用指定的条目值。 值为0表示允许使用其他值。 以下是Bit位置：
 
    * **1（筛选器）：**&#x200B;用于对签名字段签名的签名处理程序
@@ -483,7 +479,7 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`modifySignatureField`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`modifySignatureField`对象。
 
 ### 使用Web服务API修改签名字段 {#modify-signature-fields-using-the-web-service-api}
 
@@ -500,8 +496,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -545,8 +541,8 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示将包含签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`addSignatureField`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`addSignatureField`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -725,7 +721,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要签名的PDF文档的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示将包含数字签名的签名字段的名称。
-   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`getInstance`方法并传递指定与安全凭据对应的别名值的字符串值，创建`Credential`对象。
+   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`Credential`方法并传递指定与安全凭据对应的别名值的字符串值，创建`getInstance`对象。
    * 一个`HashAlgorithm`对象，它指定一个静态数据成员，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，它表示PDF文档进行数字签名的原因。
    * 表示签名者联系信息的字符串值。
@@ -740,7 +736,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`sign`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`sign`对象。
 
 **另请参阅**
 
@@ -767,8 +763,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -808,8 +804,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 通过调用其构造函数创建`System.IO.FileStream`对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -945,7 +941,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要签名的PDF文档的`com.adobe.idp.Document`对象。 确保此对象是从Forms服务获得的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示已签名的签名字段的名称。
-   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`getInstance`方法创建`Credential`对象。 传递一个字符串值，该值指定与安全凭据对应的别名值。
+   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`Credential`方法创建`getInstance`对象。 传递一个字符串值，该值指定与安全凭据对应的别名值。
    * 一个`HashAlgorithm`对象，它指定一个静态数据成员，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，它表示PDF文档进行数字签名的原因。
    * 表示签名者联系信息的字符串值。
@@ -960,7 +956,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`sign`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`sign`对象。
 
 **另请参阅**
 
@@ -991,8 +987,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建Forms和签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1055,8 +1051,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 通过调用其构造函数创建`System.IO.FileStream`对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -1186,7 +1182,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要认证的PDF文档的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示将包含该签名的签名字段的名称。
-   * `Credential`对象，表示用于认证PDF文档的凭据。 通过调用`Credential`对象的静态`getInstance`方法并传递指定与安全凭据对应的别名值的字符串值，创建`Credential`对象。
+   * `Credential`对象，表示用于认证PDF文档的凭据。 通过调用`Credential`对象的静态`Credential`方法并传递指定与安全凭据对应的别名值的字符串值，创建`getInstance`对象。
    * 一个`HashAlgorithm`对象，它指定代表用于摘要PDF文档的哈希算法的静态数据成员。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，表示对PDF文档进行认证的原因。
    * 表示签名者联系信息的字符串值。
@@ -1231,8 +1227,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1277,8 +1273,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 将认证的PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示PDF文档(将包含已认证的PDF文档)的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`certify`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`certify`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -1345,9 +1341,9 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * 吊销检查
 * 时间戳值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`VerificationTime`枚举值。
+在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅`VerificationTime`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`RevocationCheckStyle`枚举值。
+您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅`RevocationCheckStyle`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
 
 要对证书执行吊销检查，请使用`CRLOptionSpec`对象指定指向证书吊销列表(CRL)服务器的URL。 但是，如果您没有指定CRL服务器的URL，则签名服务会从证书中获取该URL。
 
@@ -1468,8 +1464,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1569,9 +1565,9 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 * 吊销检查
 * 时间戳值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`VerificationTime`枚举值。
+在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅`VerificationTime`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`RevocationCheckStyle`枚举值。
+您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅`RevocationCheckStyle`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
 
 要对证书执行吊销检查，请使用`CRLOptionSpec`对象指定指向证书吊销列表(CRL)服务器的URL。 但是，如果您没有指定CRL服务器的URL，则签名服务会从证书中获取该URL。
 
@@ -1683,8 +1679,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1820,7 +1816,7 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法。 传递`java.io.File`对象以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`clearSignatureField`方法返回的`Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法。 传递`java.io.File`对象以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`Document`方法返回的`clearSignatureField`对象。
 
 **另请参阅**
 
@@ -1847,8 +1843,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1863,7 +1859,7 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已签名PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法，使用流数据填充字节数组。 传递字节数组、起始位置和要读取的流长度。
-   * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
+   * 使用字节数组的内容指定其`BLOB`属性以填充`MTOM`对象。
 
 1. 从签名字段中移除数字签名
 
@@ -1877,8 +1873,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示包含空签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**

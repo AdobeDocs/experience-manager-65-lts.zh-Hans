@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: be7c294c-149b-4825-8376-573f9e2987e2
-source-git-commit: 995bad770ba026ee918233f4bf28e6ba3cf003a6
+source-git-commit: 1cedead501597fb655c2c7b87336b29cbf048294
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 19%
@@ -19,7 +19,7 @@ ht-degree: 19%
 
 * [与Adobe Developer Console集成](#integrate-adobe-io)。
 * [训练智能内容服务](#training-the-smart-content-service)。
-* 安装最新的[[!DNL Experience Manager] 服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)。
+* 安装最新的[[!DNL Experience Manager] 服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ ht-degree: 19%
 
 ### 创建Adobe Developer Console集成 {#create-adobe-io-integration}
 
-要使用Smart Content Service API，请在Adobe Developer Console中创建集成，以获取[!DNL Experience Manager]中云配置的[!UICONTROL Assets智能标记服务设置]的[!UICONTROL API密钥]&#x200B;(在Adobe Developer Console集成的[!UICONTROL 客户端ID]字段中生成)、[!UICONTROL 组织ID]和[!UICONTROL 客户端密钥]。
+要使用Smart Content Service API，请在Adobe Developer Console中创建集成，以获取[!UICONTROL 中云配置的]Assets智能标记服务设置[!UICONTROL 的]API密钥[!UICONTROL (在Adobe Developer Console集成的]客户端ID[!UICONTROL 字段中生成)、]组织ID[!UICONTROL 和]客户端密钥[!DNL Experience Manager]。
 
 1. 在浏览器中访问[https://developer.adobe.com](https://developer.adobe.com/)。 选择适当的帐户，并确认关联的组织角色是系统&#x200B;**管理员**。
 
@@ -64,15 +64,15 @@ ht-degree: 19%
       * [服务器到服务器身份验证](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
 
    * 创建新的 OAuth 凭据：
-      * [OAuth 服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+      * [OAuth 服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 
    * 将现有的 JWT 凭据迁移到 OAuth 凭据：
-      * [从服务帐户 (JWT) 凭据迁移到 OAuth 服务器到服务器凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+      * [从服务帐户 (JWT) 凭据迁移到 OAuth 服务器到服务器凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
 
 
 1. 在&#x200B;**[!UICONTROL 选择产品配置文件]**&#x200B;页面中，选择&#x200B;**[!UICONTROL 智能内容服务]**。 单击&#x200B;**[!UICONTROL 保存配置的API]**。
 
-   页面会显示有关配置的更多信息。保持此页面处于打开状态，以复制这些值，并将其添加到[!DNL Experience Manager]中云配置的[!UICONTROL Assets智能标记服务设置]中，从而配置智能标记。
+   页面会显示有关配置的更多信息。保持此页面处于打开状态，以复制这些值，并将其添加到[!UICONTROL 中云配置的]Assets智能标记服务设置[!DNL Experience Manager]中，从而配置智能标记。
 
    ![Developer Console 中的 OAuth 凭据](assets/ims-configuration-developer-console.png)
 
@@ -131,7 +131,7 @@ ht-degree: 19%
 
 完成配置后，可以使用JMX MBean来验证配置。 要进行验证，请执行以下步骤。
 
-1. 访问位于`https://[aem_server]:[port]`的[!DNL Experience Manager]服务器。
+1. 访问位于[!DNL Experience Manager]的`https://[aem_server]:[port]`服务器。
 
 1. 转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**&#x200B;以打开OSGi控制台。 单击&#x200B;**[!UICONTROL 主] > [!UICONTROL JMX]**。
 
@@ -270,4 +270,4 @@ ht-degree: 19%
 >
 >* [概述以及如何培训智能标记](enhanced-smart-tags.md)
 >* [OAuth凭据的智能标记疑难解答](config-oauth.md)
->* [有关智能标记的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hans)
+>* [有关智能标记的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
