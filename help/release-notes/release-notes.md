@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: d353cde4e9cc2af738e600d5a9b74928d98496cb
+source-git-commit: 2c2e8defbaab13a31beeb7c6978af5da19535e70
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 19%
+source-wordcount: '1074'
+ht-degree: 18%
 
 ---
 
@@ -108,9 +108,9 @@ Adobe会不断检查产品功能，以便通过使旧功能现代化或替换旧
 | We.Retail | 不支持We-Retail示例站点。 | 没有可用的替换。 | 6.5 LTS GA |
 | 开源 | 不支持`oak-solr-osgi`包。 | 没有可用的替换。 | 6.5 LTS GA |
 | 开源 | 不支持`org.apache.servicemix.bundles.abdera-parser`、`org.apache.servicemix.bundles.jdom`和`org.apache.sling.atom.taglib`。 | 没有可用的替换。 | 6.5 LTS GA |
-| 开源 | 现在从`org.apache.commons.commons-io`导出`org.apache.commons.io`个包。 | 无需更改。 | 6.5 LTS GA |
-| 开源 | 正在从`com.sun.javax.mail`包中导出`javax.mail`个包。 | 无需更改。 | 6.5 LTS GA |
-| 开源 | 现在从`org.apache.jackrabbit.oak-jackrabbit-api`包中导出`org.apache.jackrabbit.api`个包。 | 无需更改。 | 6.5 LTS GA |
+| 开源 | 现在从`org.apache.commons.io`导出`org.apache.commons.commons-io`个包。 | 无需更改。 | 6.5 LTS GA |
+| 开源 | 正在从`javax.mail`包中导出`com.sun.javax.mail`个包。 | 无需更改。 | 6.5 LTS GA |
+| 开源 | 现在从`org.apache.jackrabbit.api`包中导出`org.apache.jackrabbit.oak-jackrabbit-api`个包。 | 无需更改。 | 6.5 LTS GA |
 | 开源 | 不支持`com.github.jknack.handlebars` | 选择相关的[版本](https://mvnrepository.com/artifact/com.github.jknack/handlebars) | 6.5 LTS GA |
 
 ## 已知问题 {#known-issues}
@@ -130,18 +130,21 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA随`org.apache.sling.scripting.jsp:
 
 ### Dispatcher连接失败及仅SSL功能 {#ssl-only-feature}
 
-在AEM部署中启用仅SSL功能时，有一个已知问题会影响Dispatcher和AEM实例之间的连接。 启用此功能后，运行状况检查可能会失败，Dispatcher实例与AEM实例之间的通信可能会中断。
+在AEM部署中启用仅SSL功能时，有一个已知问题会影响Dispatcher和AEM实例之间的连接。 启用此功能后，运行状况检查可能会失败，Dispatcher实例与AEM实例之间的通信可能会中断。 当客户尝试通过`https + IP`从Dispatcher连接到AEM实例时，此问题尤其会出现，并且与SNI（服务器名称指示）验证问题相关。
 
 **影响：**
 
-* HTTP 500响应代码的运行状况检查失败
+* HTTP 400响应代码的运行状况检查失败
 * Dispatcher和AEM实例之间的流量中断
 * 无法通过Dispatcher正确提供内容
+* 在Dispatcher配置中将HTTPS与IP地址一起使用时连接失败
+* 通过HTTPS + IP连接时，出现HTTP 400“SNI无效”错误
 
 **受影响的环境：**
 
 * AEM部署和Dispatcher配置
 * 启用了仅SSL功能的系统
+* 使用`https + IP`连接方法连接到AEM实例的Dispatcher配置
 
 **解决方案：**
 如果您遇到此问题，请联系Adobe客户支持。 有修补程序[cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip)可用于解决此问题。 在应用必要的修补程序之前，请勿尝试启用仅SSL功能。
@@ -151,5 +154,5 @@ AEM 6.5.21、6.5.22、6.5.23和AEM 6.5 LTS GA随`org.apache.sling.scripting.jsp:
 这些网站仅供客户使用。 如果您是客户并且需要访问权限，请联系您的Adobe客户经理。
 
 * [产品下载位于licensing.adobe.com](https://licensing.adobe.com/)
-* [联系Adobe客户支持](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。
+* [联系Adobe客户支持](https://experienceleague.adobe.com/en/docs/customer-one/using/home)。
 
