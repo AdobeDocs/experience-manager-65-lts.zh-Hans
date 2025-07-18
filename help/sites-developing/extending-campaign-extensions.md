@@ -1,5 +1,5 @@
 ---
-title: 创建自定义扩展
+title: 自定义Adobe Campaign扩展
 description: 您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,18 +9,20 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 7cdce721-ca00-43ac-a543-85bfad382821
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
 
-# 创建自定义扩展{#creating-custom-extensions}
+
+# 自定义Adobe Campaign扩展 {#creating-custom-extensions}
 
 通常，在实施项目时，您在AEM和Adobe Campaign中都拥有自定义代码。 使用现有API，您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码。 本文档介绍如何执行此操作。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 您必须安装以下软件：
 
@@ -35,17 +37,13 @@ AEM与Campaign之间的标准集成基于JSON和JSSP (JavaScript Server Page)。
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
->[!NOTE]
->
->[对于此示例，请参阅包共享中提供的Geometrixx](/help/sites-developing/we-retail.md)。
-
 在此示例中，创建了新的自定义JSSP文件，并从AEM端调用该文件以检索结果。 例如，它可用于从Adobe Campaign中检索数据，或将数据保存到Adobe Campaign中。
 
 1. 在Adobe Campaign中，要创建JSSP文件，请单击&#x200B;**新建**&#x200B;图标。
 
    ![左上角附近带有星号的页面所指示的“新建”图标。](do-not-localize/chlimage_1-4a.png)
 
-1. 输入此JSSP文件的名称。 在此示例中，使用了&#x200B;**cus：custom.jssp**（这意味着它位于&#x200B;**cus**&#x200B;命名空间中）。
+1. 输入此JSSP文件的名称。 在此示例中，使用了&#x200B;**cus:custom.jssp**（这意味着它位于&#x200B;**cus**&#x200B;命名空间中）。
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -167,17 +165,13 @@ AEM提供了开箱即用的API，用于检索可在站点管理员资源管理�
 
 ![chlimage_1-17](assets/chlimage_1-17a.png)
 
->[!NOTE]
->
->[对于此示例，请参阅包共享中提供的Geometrixx](/help/sites-developing/we-retail.md)。
-
 对于资源管理器中的每个节点，都有一个API链接到该节点。 例如，对于节点：
 
-* [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
+* [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommended](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
 API是：
 
-* [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
+* [http://localhost:4502/content/campaigns/geometrixx/scott-recommended.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 URL **.1.json**&#x200B;的末尾可以替换为&#x200B;**.2.json**、**.3.json**（根据您感兴趣的子级别数）。 若要获取所有关键字，可以使用&#x200B;**infinity**：
 

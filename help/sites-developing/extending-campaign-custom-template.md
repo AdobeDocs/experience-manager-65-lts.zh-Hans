@@ -9,20 +9,18 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 59a79455-c108-4f4b-93c1-d8c6f23aec88
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+index: false
+source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
 
+
 # 使用Adobe Campaign表单组件创建自定义AEM页面模板{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-本页说明如何通过检查Geometrixx-outdoors模板(`/apps/geometrixx-outdoors/components/page_campaign_profile`)的实施方式，生成使用[Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md)组件的自定义页面模板，并指出创建自己的自定义模板时可能需要的重要信息。
-
->[!NOTE]
->
->[电子邮件和表单示例仅在Geometrixx](/help/sites-developing/we-retail.md)中可用。 从包共享下载示例Geometrixx内容。
+本页说明如何通过检查Geometrixx-outdoors模板([)的实施方式，生成使用](/help/sites-authoring/adobe-campaign-components.md)Adobe Campaign Form`/apps/geometrixx-outdoors/components/page_campaign_profile`组件的自定义页面模板，并指出创建自己的自定义模板时可能需要的重要信息。
 
 >[!CAUTION]
 >

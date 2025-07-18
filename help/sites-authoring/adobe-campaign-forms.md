@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
 exl-id: 6a72ba56-8222-4853-adc6-ee8f3d395d9d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->当使用Adobe Campaign Classic或Adobe Campaign Standard时，请确保将页面&#x200B;**jcr：content**&#x200B;节点上的&#x200B;**acMapping**&#x200B;属性分别设置为&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
+>当使用Adobe Campaign Classic或Adobe Campaign Standard时，请确保将页面&#x200B;**jcr**&#x200B;节点上的&#x200B;**acMapping:content**&#x200B;属性分别设置为&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
 >
 
 1. 在AEM的站点中，导航到要创建页面的位置。
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果所需的模板不可用，请参阅[使模板可用](/help/sites-authoring/adobe-campaign.md)。
+>如果所需的模板不可用，请参阅[使模板可用。](/help/sites-authoring/campaign.md)
 
 此部分仅详细介绍指向Adobe Campaign的特定链接。 有关如何在Adobe Experience Manager中使用表单的更多常规概述的信息，请参阅[编辑模式组件](/help/sites-authoring/default-components-foundation.md)。
 
