@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: c4ac3f14-f45a-44f6-a232-69cae483a776
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: dc46c3e2689df1069eea6980ef615f639db42e92
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '931'
 ht-degree: 5%
 
 ---
@@ -23,7 +23,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 ## 站点管理 {#site-administration}
 
-通过&#x200B;**网站**&#x200B;控制台，您可以管理和浏览您的网站。 使用这两个窗格，可以扩展网站的结构并对所需元素采取操作：
+通过&#x200B;**网站**&#x200B;控制台，您可以管理和导航您的网站。 使用这两个窗格，可以展开网站的结构并对所需元素执行操作：
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
@@ -39,7 +39,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 可从AEM中直接访问各种&#x200B;**帮助**&#x200B;资源：
 
-除了从控制台工具栏[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)访问帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
+除了从控制台工具栏[访问](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
 
 ![Sidekick已折叠](do-not-localize/sidekick-collapsed-2.png)
 
@@ -53,7 +53,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 ## 内容查找器 {#the-content-finder}
 
-内容查找器在编辑页面时可快速轻松地查找存储库中的资源和/或内容。
+内容查找器是一种在编辑页面时在存储库中查找资产和/或内容的快速轻松的方法。
 
 您可以使用内容查找器查找一系列资源。 在适当的情况下，您可以将某个项目拖放到页面上的某个段落中：
 
@@ -87,7 +87,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 ### 查找电影 {#finding-movies}
 
-此选项卡列出存储库中的所有影片(例如Flash项目)。
+此选项卡列出了存储库中的所有电影（例如，Flash项目）。
 
 在页面上创建了相应的段落（例如Flash）后，可以将某个项目拖放到段落中。
 
@@ -117,7 +117,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
-### 通过内容浏览器使用搜索 {#using-search-with-the-content-browser}
+### 在内容浏览器中使用搜索 {#using-search-with-the-content-browser}
 
 在所有选项上，您可以搜索特定项目。 将列出与搜索模式匹配的任何标记和资源：
 
@@ -126,24 +126,24 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 您还可以使用通配符进行搜索。 支持的通配符包括：
 
 * `*`
-匹配零个或多个字符的序列。
+匹配零个或更多字符的序列。
 
 * `?`
 匹配单个字符。
 
 >[!NOTE]
 >
->必须有一个伪属性“name”用于执行通配符搜索。
+>有一个伪属性“name”，必须使用该属性执行通配符搜索。
 
-例如，如果存在具有以下名称的图像：
+例如，如果存在名称为的可用图像：
 
 `ad-nmvtis.jpg`
 
-以下搜索模式将找到它（以及与模式匹配的任何其他图像）：
+以下搜索模式将找到它（以及与该模式匹配的任何其他图像）：
 
 * `name:*nmv*`
 * `name:AD*`
-字符匹配*不*&#x200B;区分大小写。
+字符匹配是*不区分*&#x200B;大小写。
 
 * `name:ad?nm??is.*`
 您可以在查询中使用任意数量的通配符。
@@ -156,7 +156,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 通过AEM，您可以查看哪些页面已链接到您当前处理的页面。
 
-要显示直接页面引用，请执行以下操作：
+要显示页面引用，请执行以下操作：
 
 1. 在sidekick中，选择&#x200B;**Page**&#x200B;选项卡图标。
 
@@ -166,6 +166,10 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
+AEM会显示直接引用所选页面以及任何间接引用的所有页面。 这有助于了解需要移动或删除页面时将更新的所有链接。
+
+## 其他Sidekick操作 {#additional-actions}
+
 在某些情况下，可以从Sidekick执行进一步操作，包括：
 
 * [启动项](/help/sites-classic-ui-authoring/classic-launches.md)
@@ -173,7 +177,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
 
-在网站控制台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他页面间关系。
+在网站控制台[中可以看到其他](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)页面间关系。
 
 ## 审核日志 {#audit-log}
 
@@ -183,11 +187,11 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 ## 页面信息 {#page-information}
 
-网站控制台还[提供有关页面](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)当前状态的信息，如发布、修改、锁定、实时复制等。
+网站控制台还[提供有关页面](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)当前状态的信息，如发布、修改、锁定、活动复制等。
 
 ## 页面模式 {#page-modes}
 
-使用经典UI编辑页面时，可以使用Sidekick底部的图标访问多种模式：
+使用经典UI编辑页面时，可以使用Sidekick底部的图标访问各种模式：
 
 ![页面模式](do-not-localize/chlimage_1-12.png)
 

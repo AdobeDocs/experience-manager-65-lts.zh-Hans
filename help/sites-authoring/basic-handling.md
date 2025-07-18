@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 281c96e2-24f8-4568-add2-67972148b406
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: ebef0312d73597e28e5a1635a0e98f833d491d19
 workflow-type: tm+mt
-source-wordcount: '2918'
+source-wordcount: '2919'
 ht-degree: 43%
 
 ---
@@ -445,7 +445,7 @@ ht-degree: 43%
 ![列表视图](assets/bh-19.png)
 
 * 列表视图列出各项资源在当前级别的信息。
-* 您可以通过点按/单击资源名称来向下导航树，并使用标题[&#128279;](/help/sites-authoring/basic-handling.md#the-header)中的痕迹导航进行备份。
+* 您可以通过点按/单击资源名称来向下导航树，并使用标题[中的](/help/sites-authoring/basic-handling.md#the-header)痕迹导航进行备份。
 
 * 要轻松选择列表中的所有项目，请使用列表左上角的复选框。
 
@@ -556,15 +556,16 @@ ht-degree: 43%
 
 ### 引用 {#references}
 
-**引用**&#x200B;显示与选定资源的所有连接。 例如，在 **Sites** 控制台中，页面的[引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences)会显示以下项目：
+**引用**&#x200B;显示与选定资源的连接。 例如，在 **Sites** 控制台中，页面的[引用](/help/sites-authoring/author-environment-tools.md#showingpagereferences)会显示以下项目：
 
+* [Blueprint](/help/sites-administering/msm.md)
 * [启动项](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [Live Copy](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [语言副本](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * 内容引用：
 
-   * 从其他页面链接到选定页面
-   * 引用组件在选定页面中借用的内容、借出的内容或同时借出的内容
+   * 从其他页面到所选页面的直接链接
+   * 引用组件在选定页面中借用的内容、借出的内容或两者同时借用的内容
 
 ![bh-28](assets/bh-28.png)
 
