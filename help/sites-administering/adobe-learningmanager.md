@@ -20,4 +20,4 @@ ht-degree: 66%
 
 Adobe Learning Manager (ALM) 与 Adobe Experience Manager (AEM) 站点集成。这使您能够以最小的编码工作量为 Adobe Learning Manager 创建自己的网站和响应式移动界面。通过这种集成，您可以为用户创建定制的学习体验。
 
-有关详细信息，请参阅AEM Sites[的](https://experienceleague.adobe.com/en/docs/learning-manager/using/integration/aem-sites/adobe-learning-manager-integration-aem)Adobe Learning Manager引用站点（ALM引用站点）包。
+有关详细信息，请参阅AEM Sites[的](https://experienceleague.adobe.com/zh-hans/docs/learning-manager/using/integration/aem-sites/adobe-learning-manager-integration-aem)Adobe Learning Manager引用站点（ALM引用站点）包。
