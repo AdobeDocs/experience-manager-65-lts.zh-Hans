@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 93dc74b3-dfe3-442f-9dec-1b7af41cd4a1
-source-git-commit: d353cde4e9cc2af738e600d5a9b74928d98496cb
+source-git-commit: 90e63ad3be32b7ce551c5e3579c722ef75d97f95
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
@@ -48,10 +48,16 @@ AEM的默认端口为4502。 如果该端口不可用或已在使用中，Quicks
 
 如果您正在运行Oracle Java 17或Java 21，则在启动AEM时，必须在命令行中添加其他开关。
 
-下面是在Java 17/Java 21上启动AEM时其他JVM参数的外观示例：
+* 下面是在Java 17/Java 21上启动AEM时其他JVM参数的外观示例：
 
 ```shell
 -XX:+UseG1GC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.lang=org.apache.sling.commons.threads -Djdk.util.zip.disableZip64ExtraFieldValidation=true
+```
+
+* [仅限Forms]以下是一个示例，用于确保AEM Forms与Java 17/Java21一起正常工作，并包含以下其他JVM参数：
+
+```shell
+--add-opens=java.base/java.util=ALL-UNNAMED -add-exports=java.xml/com.sun.org.apache.xml.internal.serialize=ALL-UNNAMED
 ```
 
 ## 运行模式 {#run-modes}
