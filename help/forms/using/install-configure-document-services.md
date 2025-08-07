@@ -6,9 +6,9 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 exl-id: dd22ea1b-33e9-407d-b7b6-645bdba00b4e
-source-git-commit: 2534fb5af913603b69597e7be713156b427a1094
+source-git-commit: 29b6cd70a59e3a90cd081ba09c98bd015a7426fc
 workflow-type: tm+mt
-source-wordcount: '10213'
+source-wordcount: '10247'
 ht-degree: 1%
 
 ---
@@ -199,7 +199,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 >* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint仅适用于Microsoft®Windows。 如果您使用的是基于UNIX的操作系统，请安装OpenOffice以将RTF文件和支持的Microsoft® Office文件转换为PDF文档。
 >* 关闭在安装Adobe Acrobat和第三方软件后显示的所有对话框，这些对话框适用于配置为使用PDF Generator服务的所有用户。
 >* 至少启动一次所有已安装的软件。 关闭配置为使用PDF Generator服务的所有用户的所有对话框。
->* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/cn/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
+>* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
 
 安装Acrobat后，打开Microsoft® Word。 在&#x200B;**Acrobat**&#x200B;选项卡上，单击&#x200B;**创建PDF**，并将计算机上可用的.doc或.docx文件转换为PDF文档。 如果转换成功，AEM Forms可以将Acrobat与PDF Generator服务结合使用。
 
@@ -242,6 +242,12 @@ Adobe Acrobat Pro DC for Microsoft Office的安装过程会因您的许可证类
 
 * **许可证类型**：零售或批量许可证
 * **部署类型**：单个用户或多个用户
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469669)
+
+>[!NOTE]
+>
+>此视频演示了“零售许可证 — 单用户”配置的安装过程。 对于其他部署方案（零售 — 多个用户、批量许可 — 单个用户或批量许可 — 多个用户），请参阅以下相应选项卡中的具体步骤9说明，以确保针对您的部署类型正确启动服务器和激活许可证。
 
 每个选项卡都包含针对特定设置而优化的定制说明，帮助您避免配置问题并确保适当的许可合规性。
 
@@ -692,7 +698,7 @@ Adobe Acrobat Pro DC for Microsoft Office的安装过程会因您的许可证类
 完成所有流程后，请执行快速操作测试以确认安装有效：
 
 1. 使用远程桌面(RDP)登录到服务器并使用服务启动AEM Forms服务器。
-2. 使用远程桌面(RDP)登录到服务器，并使用Windows服务启动AEM Forms服务器。 服务器运行后，不要简单地关闭RDP窗口。 相反，通过注销用户来正常注销 — 这可以确保会话完全结束，同时服务继续在后台运行。
+2. 服务器运行后，不要简单地关闭RDP窗口。 相反，通过注销用户来正常注销 — 这可以确保会话完全结束，同时服务继续在后台运行。
 
 ###### 步骤10：测试PDF Generator服务
 
@@ -1050,7 +1056,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不立即停止服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在`[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件中并且日志稳定。
 
@@ -1445,18 +1451,18 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
    * 使用以下命令生成prov.xml，并使用prov.xml文件重新存储现有安装，而不使用[迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)编号文章中提供的命令。
 
-         &grave;&grave;
+         ``
          
          adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>格式的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
          
-         &grave;
+         `
      
    * 卷序列化包（使用prov.xml文件和新序列重新序列化现有安装）：以管理员身份从PRTK安装文件夹运行以下命令，以在客户端计算机上序列化和激活已部署的包：
 
-         &grave;&grave;
+         ``
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
-         &grave;&grave;
+         ``
      
 * 对于大规模安装，请使用[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html)删除Reader和Acrobat的早期版本。 自定义安装程序并将其部署到组织中的所有计算机。
 
