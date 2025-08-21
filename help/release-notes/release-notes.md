@@ -5,16 +5,16 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 8c726951cbd99660d2cfd23abef8857a6f4fcf36
+source-git-commit: b6a5e6bacfee72e162ce3bc035f909c02fbbf6db
 workflow-type: tm+mt
-source-wordcount: '4939'
+source-wordcount: '4935'
 ht-degree: 14%
 
 ---
 
 # Adobe Experience Manager 6.5 LTS SP1的最新发行说明 {#release-notes}
 
-## 版本信息 {#release-information}
+## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 LTS |
 |---|---|
@@ -31,7 +31,7 @@ ht-degree: 14%
 
 [!DNL Experience Manager] 6.5 LTS，SP1包括新增功能、客户请求的关键增强功能和错误修复。 此外，还包括自2025年3月推出6.5 LTS以来发布的性能、稳定性和安全性改进。 在6.5 LTS上[安装此Service Pack](#install-update)。
 
-## 主要功能和增强功能
+<!-- ## Key features and enhancements -->
 
 <!-- 6.5 LTS REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
