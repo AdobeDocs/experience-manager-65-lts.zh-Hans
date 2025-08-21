@@ -26,13 +26,13 @@ ht-degree: 94%
 
 [!DNL Adobe Experience Manager] 6.5 LTS 是 [!DNL Adobe Experience Manager] 6.5 代码库的升级发行版本。它提供关键客户修复、高优先级客户增强功能以及增强产品稳定性的一般错误修复。它还包括达到 SP22 的 [!DNL Adobe Experience Manager] 6.5 Service Pack 发行版本。
 
-下表提供了概述，接下来的页面列出了完整的详细信息。
+下表提供了一个概述，接下来几页列出了完整的详细信息。
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
 [!DNL Adobe Experience Manager] 6.5 LTS 的平台的构建基础是更新版本的基于 OSGi 的框架（Apache Sling 和 Apache Felix）和 Java™ 内容存储库：Apache Jackrabbit Oak 1.68.x。
 
-Eclipse Jetty 11.0.x 被用作 Quickstart 的 servlet 引擎。
+Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 #### Java™支持  {#java-support}
 
@@ -60,7 +60,7 @@ Eclipse Jetty 11.0.x 被用作 Quickstart 的 servlet 引擎。
 
 ## 支持的平台 {#supported-platforms}
 
-查找受支持平台的完整表格，包括 [AEM 6.5 LTS 技术要求](/help/sites-deploying/technical-requirements.md)的支持等级。
+查找受支持平台的完整表格，包括对 [AEM 6.5 LTS 技术要求](/help/sites-deploying/technical-requirements.md)的支持等级。
 
 >[!NOTE]
 >
@@ -75,20 +75,20 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 1. 首先宣布弃用。已弃用的功能仍然可供使用，但不再继续改进。
 1. 最早会在下一个主要版本中移除已弃用的功能。移除的实际目标日期会计划稍后公布。
 
-在实际移除之前，此过程将为客户提供至少一个发布周期时间，使其实施适应已弃用功能的新版本或后续版本。
+在实际移除之前，此过程将为客户提供至少一个发布周期时间，使客户的实施能够适应功能弃用后的新版本或后续版本。
 
 ### 已弃用的功能  {#deprecated-features}
 
 本节列出了 Adobe 在 AEM 6.5 LTS 中已弃用的功能。通常情况下，Adobe 在未来版本中移除某些功能之前，会先弃用这些功能并提供替代方案。
 
 
-建议客户检查其当前部署中是否使用了此类特性/功能，然后制定相应的计划，将其实施更改为使用提供的备选方案。
+建议客户检查其当前部署中是否使用了此类特性/功能，然后制定相应的计划，使用所提供的替代功能更改自己的实施。
 
 | 区域 | 专题 | 替换 | 版本 (SP) |
 |---|---|---|---|
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
 
-### 已移除功能 {#removed-features}
+### 已移除的功能 {#removed-features}
 
 此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
 
