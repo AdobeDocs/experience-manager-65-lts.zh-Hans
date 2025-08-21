@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 70436606-d95c-4208-94f6-e33f3eefdf66
-source-git-commit: e9c09eebb372fc36ae161959e0465c07ad755130
+source-git-commit: 7f9f24f173604640b454449b389da9fcdcf7017d
 workflow-type: tm+mt
 source-wordcount: '1068'
-ht-degree: 95%
+ht-degree: 94%
 
 ---
 
@@ -34,13 +34,13 @@ ht-degree: 95%
 
 Eclipse Jetty 11.0.x 被用作 Quickstart 的 servlet 引擎。
 
-#### Java™ 支持  {#java-support}
+#### Java™支持  {#java-support}
 
 * 支持 Java™ 17 和 Java™ 21。
 * 为了获得最佳性能，请用其他值覆盖默认 GC 值。有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
 * 如果 Oracle 未公开提供，Adobe 会分配 Java™ 17 和 Java™ 21 维护更新，以便客户在 AEM 相关项目中使用。
 
-#### Uberjar 包装 {#uber-jar-packaging}
+#### 乌贝拉包装 {#uber-jar-packaging}
 
 * AEM 6.5 LTS 的 Uberjar 包装略有不同。有关详细信息，请参阅[更新 AEM Uber Jar 版本](/help/sites-deploying/upgrading-code-and-customizations.md#update-the-aem-uber-jar-version)。
 
