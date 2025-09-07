@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 6dbc943b-3bca-4926-896d-f1471a49a70f
-source-git-commit: 66f0240a32830ba629b656e7f9aef84af2efc91c
+source-git-commit: 713dc1615ef1751c2fdbf67b5f97690ce6eed676
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ Experience Hub引入了一个集中化的起点，以便在Adobe Experience Mana
 
 观看重新构建的AEM Experience Hub工作区的快速导览（4分钟、9秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3471451?learn=on&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -50,11 +50,11 @@ Adobe Experience Manager页面已更新，导航和交互式构件已得到增�
 >
 >显示的构件、工具和工件取决于用户角色、权限和AEM部署类型(AEM as a Cloud Service或Managed Services 6.5/6.5 LTS)。
 
-这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航。 此外，通过新的导航元素，还可以快速访问特定于已启用解决方案(如Assets、Sites、Forms、内容片段、启动项等)的关键Adobe Experience Manager功能。
+这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航。 此外，通过新的导航元素，可快速访问特定于已启用解决方案的主要Adobe Experience Manager功能。 此类解决方案包括Assets、Sites、Forms、内容片段、启动项等。
 
 ![Experience Hub环境](/help/assets/assets-experience-hub/experience-hub-author-environments-ams.png)
 
-这些功能可用于您有权访问的主要生产环境，或者，如果您有权访问多个AEM实例，则可以选择要定位的特定环境。
+这些功能可用于您有权访问的主要生产环境。 或者，您也可以选择要定位的特定环境，以防您有权访问多个AEM实例。
 
 ![生产和暂存环境](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
@@ -66,7 +66,7 @@ Adobe Experience Manager页面已更新，导航和交互式构件已得到增�
 
 ![Experience Hub小组件](/help/assets/assets-experience-hub/experience-hub-custom-widgets-ams.png)
 
-**创作环境**&#x200B;部分显示了您有权访问的所有AEM环境，其中提供了解决方案和可供它们使用的页面的特定快捷方式，还允许您在列表顶部固定要显示的特定环境。
+**创作环境**&#x200B;部分显示您可以访问的所有AEM环境。 这些解决方案和页面提供了特定的快捷方式，还允许您在列表顶部固定要显示的特定环境。
 
 下图中的&#x200B;**最近访问**&#x200B;部分列出了您最近在AEM中访问的页面。 根据租户的许可，构件可能包括“项目”、“管道执行”、“Assets”、“页面编辑器”和“表单编辑器”等项目。
 
