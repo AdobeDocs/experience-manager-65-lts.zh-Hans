@@ -4,14 +4,15 @@ description: 查找 Adobe Experience Manager 6.5 LTS 的当前版本信息。
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 922b2391b45ac1a08987f286cdbd736fe9a383c8
-workflow-type: tm+mt
+exl-id: dfda31ac-765b-401d-98d0-c19f0de22aab
+source-git-commit: eda8fc347ee8c68c1022495cbe8d48175c819be3
+workflow-type: ht
 source-wordcount: '1068'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager 6.5 LTS的最新发行说明 {#release-notes}
+# Adobe Experience Manager 6.5 LTS 的最新发行说明 {#release-notes}
 
 ## 发行版信息 {#release-information}
 
@@ -87,7 +88,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 |---|---|---|---|
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
 
-### 已移除的功能 {#removed-features}
+### 已移除的功能  {#removed-features}
 
 此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
 
@@ -127,7 +128,7 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 
 有一个热修复 [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-NPR-42640-1.2.zip) 可以解决这个问题。
 
-### 使用仅SSL功能的Dispatcher连接失败 {#ssl-only-feature}
+### 使用仅 SSL 功能的情况下，Dispatcher 连接失败 {#ssl-only-feature}
 
 在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。启用此功能后，健康检查可能会失败，并且 Dispatcher 和 AEM 实例之间的通信可能会中断。尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。它与 SNI（服务器名称指示）验证问题有关。
 
@@ -148,7 +149,7 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 **解决方法：**
 如果您遇到此问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
 
-## 受限制的网站{#restricted-sites}
+## 受限网站{#restricted-sites}
 
 这些网站只提供给客户。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
