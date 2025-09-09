@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 50f63016e5769939309d5013309043ad476e8b71
+source-git-commit: 12e2966754fe317c2a20951ee29b401425de486b
 workflow-type: tm+mt
-source-wordcount: '7219'
+source-wordcount: '7223'
 ht-degree: 71%
 
 ---
@@ -18,10 +18,14 @@ ht-degree: 71%
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 LTS |
 |---|---|
-| 版本 | 服务包 1 (SP1) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | Service Pack 1 (SP1)，适用于GRANITE-61551 <!-- UPDATE FOR EACH NEW RELEASE -->的修补程序 |
 | 类型 | 服务包发行 |
-| 日期 | 2025 年 8 月 28 日 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.1.jar) |
+| 日期 | 2025年9月9日<!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fcq-6.5.lts.1-hotfix-GRANITE-61551-1.2.zip) |
+
+<!-- OLD URL TO JAR
+(https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.1.jar) | -->
+
 
 <!-- UPDATE ABOVE FOR EACH NEW RELEASE -->
 
@@ -459,7 +463,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 ## 安装和更新AEM Forms加载项 {#install-update-aem-forms-add-on}
 
-有关详细说明，请参阅[执行就地升级](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/aem-forms-current-service-pack-installation-instructions)。
+有关详细说明，请参阅[执行就地升级](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-current-service-pack-installation-instructions)。
 
 
 
