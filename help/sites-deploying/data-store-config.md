@@ -8,9 +8,9 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 69d94737-41d0-47bb-b914-f7606becd038
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+source-git-commit: 826074f588c60c77c9ec32b3f94b47ab9aa0c12d
 workflow-type: tm+mt
-source-wordcount: '3330'
+source-wordcount: '3345'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ customBlobStore=B"false"
 
 >[!NOTE]
 >
->要启用自定义数据存储，您必须确保在相应的节点存储配置文件（[区段节点存储](/help/sites-deploying/data-store-config.md#segment-node-store)或[文档节点存储](/help/sites-deploying/data-store-config.md#document-node-store)）中将`customBlobStore`设置为`true`。
+>要启用自定义数据存储，您必须确保在相应的节点存储配置文件（`customBlobStore`区段节点存储`true`或[文档节点存储](/help/sites-deploying/data-store-config.md#segment-node-store)）中将[设置为](/help/sites-deploying/data-store-config.md#document-node-store)。
 
 ### 文件数据存储 {#file-data-store}
 
@@ -156,7 +156,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    将以上位置的所有内容复制到`<aem-install>/crx-quickstart/install.`
 
-1. 如果已将AEM配置为使用Tar或MongoDB存储，请先从&#x200B;***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;文件夹中删除所有现有的配置文件，然后再继续。 必须删除的文件包括：
+1. 如果已将AEM配置为使用Tar或MongoDB存储，请先从***&lt;aem-install>***/*crx-quickstart*/*install*&#x200B;文件夹中删除所有现有的配置文件，然后再继续。 必须删除的文件包括：
 
    * `For MongoMK: org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`
    * `For TarMK: org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`
@@ -184,19 +184,19 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 停止AEM实例。
 
-1. 导航到AEM安装文件夹中的`<aem-install>/crx-quickstart/install/15`，并备份其内容。
-1. 备份后，通过删除`<aem-install>/crx-quickstart/install/15`文件夹中的所有jar文件来删除S3 Connector的旧版本及其依赖项，例如：
+1. 导航到AEM安装文件夹中的`<aem-install>/crx-quickstart/install`，并备份其所有子文件夹。
+1. 备份后，删除S3 Connector的旧版本及其依赖项，方法是删除`<aem-install>/crx-quickstart/install/`文件夹下所有文件夹中的所有jar文件，例如：
 
-   * **oak-blob-cloud-1.6.1.jar**
-   * **aws-java-sdk-osgi-1.10.76.jar**
+   * **15/oak-blob-cloud-1.78.XXX.jar**
+   * **15/aws-java-sdk-osgi-1.12.XXX.jar**
 
    >[!NOTE]
    >
    >上述文件名仅用于说明目的。
 
-1. 从[Software Distribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/s3-connector/6-5-lts/com.adobe.granite.oak.s3connector-1.60.2.zip)下载1.60.x功能包的最新版本。
-1. 将内容解压缩到单独的文件夹，然后导航到`jcr_root/libs/system/install/15`。
-1. 将jar文件复制到AEM安装文件夹中的&#x200B;**&lt;aem-install>**/crx-quickstart/install/15。
+1. 从[Maven存储库](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/)下载1.60.x功能包的最新版本。
+1. 将内容解压缩到单独的文件夹，然后导航到`jcr_root/libs/system/install/`。
+1. 将所有子文件夹复制到AEM安装文件夹中的&#x200B;**&lt;aem-install>**/crx-quickstart/install/。
 1. 启动AEM并检查连接器功能。
 
 您可以使用配置文件以及下面详述的选项。
@@ -223,7 +223,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 >
 >S3连接器同时支持IAM用户身份验证和IAM角色身份验证。 要使用IAM角色身份验证，请忽略配置文件中的`accessKey`和`secretKey`值。 然后，S3连接器将默认使用分配给实例的[IAM角色](https://docs.aws.amazon.com/sdk-for-java/v1/developer-guide/java-dg-roles.html)。
 
-| 键 | 描述 | 默认 | 必填 |
+| 键 | 描述 | 默认 | 必需 |
 | --- | --- | --- | --- |
 | 访问密钥 | 有权访问存储桶的IAM用户的访问密钥ID。 | | 是，当不使用IAM角色时。 |
 | 密钥 | 有权访问存储桶的IAM用户的访问密钥。 | | 是，当不使用IAM角色时。 |
@@ -324,7 +324,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 在传输URI中添加参数“ `binaryless`= `true`”。 进行更改后，URI应当类似于以下内容：
 
-   *https://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
+   *https://localhost:4503/bin/receive？sling:authRequestLogin=1&amp;binaryless=true*
 
 1. 重新启动所有创作和发布实例，以使更改生效。
 
@@ -359,7 +359,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
    * 如果您使用的是`FileDataStore`，请创建一个名为`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore.config`的文件并将其放在`<aem-install>/crx-quickstart/install`文件夹中。
 
-   * 如果使用S3作为数据存储，则在`<aem-install>/crx-quickstart/install`文件夹中创建名为`rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`的文件，如上所述。
+   * 如果使用S3作为数据存储，则在`rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config`文件夹中创建名为`<aem-install>/crx-quickstart/install`的文件，如上所述。
 
 1. 修改每个实例上的数据存储配置文件，使其指向相同的数据存储。 有关详细信息，请参阅[数据存储配置](/help/sites-deploying/data-store-config.md#data-store-configurations)。
 1. 如果实例是从现有服务器克隆的，则必须在存储库脱机时使用最新的oak-run工具删除新实例的`clusterId`。 必须运行的命令是：
@@ -471,10 +471,10 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
 您可以通过以下方式运行数据存储垃圾收集：
 
-1. 转到位于&#x200B;*https://&lt;serveraddress：port>/system/console/jmx*&#x200B;的JMX控制台
+1. 转到位于&#x200B;*https://&lt;serveraddress:port>/system/console/jmx*&#x200B;的JMX控制台
 1. 正在搜索&#x200B;**RepositoryManagement。**&#x200B;找到存储库管理器MBean后，单击它可显示可用选项。
 1. 滚动到页面末尾，然后单击&#x200B;**startDataStoreGC(boolean markOnly)**&#x200B;链接。
-1. 在以下对话框中，输入`markOnly`参数的`false`，然后单击&#x200B;**调用**：
+1. 在以下对话框中，输入`false`参数的`markOnly`，然后单击&#x200B;**调用**：
 
    ![chlimage_1-9](assets/chlimage_1-9.png)
 
@@ -493,13 +493,13 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 >如果您使用共享数据存储设置并且数据存储垃圾收集被禁用，则运行Lucene二进制清理任务可能会突然增加使用的磁盘空间。 考虑通过执行以下操作在所有创作实例和发布实例上禁用BlobTracker：
 >
 >1. 停止AEM实例。
->2. 在`crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`文件中添加`blobTrackSnapshotIntervalInSecs=L"0"`参数。 此参数需要Oak 1.12.0、1.10.2或更高版本。
+>2. 在`blobTrackSnapshotIntervalInSecs=L"0"`文件中添加`crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`参数。 此参数需要Oak 1.12.0、1.10.2或更高版本。
 >3. 重新启动AEM实例。
 
 使用较新版本的AEM，数据存储垃圾收集还可以在多个存储库共享的数据存储上运行。 要在共享数据存储上运行数据存储垃圾收集，请执行以下步骤：
 
 1. 确保在共享数据存储的所有存储库实例上禁用为数据存储垃圾收集配置的任何维护任务。
-1. 对共享数据存储的&#x200B;**所有**&#x200B;存储库实例分别运行[二进制垃圾回收](/help/sites-deploying/data-store-config.md#data-store-garbage-collection)中提到的步骤。 但是，请确保在单击“调用”按钮之前为`markOnly`参数输入`true`：
+1. 对共享数据存储的[所有](/help/sites-deploying/data-store-config.md#data-store-garbage-collection)存储库实例分别运行&#x200B;**二进制垃圾回收**&#x200B;中提到的步骤。 但是，请确保在单击“调用”按钮之前为`true`参数输入`markOnly`：
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 
@@ -507,6 +507,6 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 
    1. 转到JMX控制台，然后选择Repository Manager Mbean。
    1. 单击&#x200B;**Click startDataStoreGC(boolean markOnly)**&#x200B;链接。
-   1. 在下面的对话框中，再次输入`markOnly`参数的`false`。
+   1. 在下面的对话框中，再次输入`false`参数的`markOnly`。
 
    使用之前使用的标记阶段整理找到的所有文件，并从数据存储中删除未使用的其余文件。
