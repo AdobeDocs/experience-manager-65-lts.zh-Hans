@@ -61,8 +61,8 @@ AEM Forms 6.5包括JavaScript函数，这些函数允许您使用规则编辑器
 
 >[!NOTE]
 >`[functionName]`是函数的名称。 不允许使用空格。
->>`<Function Name>` 是自适应Forms的规则编辑器中函数的显示名称。
->>如果函数名称与函数本身的名称相同，则可以在语法中省略`[functionName]`。
+>&#x200B;>`<Function Name>` 是自适应Forms的规则编辑器中函数的显示名称。
+>&#x200B;>如果函数名称与函数本身的名称相同，则可以在语法中省略`[functionName]`。
 
 #### 参数
 

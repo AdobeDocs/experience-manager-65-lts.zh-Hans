@@ -54,7 +54,7 @@ ht-degree: 48%
 >[!NOTE]
 >
 >确保[AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM文件夹
->>已存在。 临时存储附件需要目录。 如果该目录不存在，请创建它。
+>&#x200B;>已存在。 临时存储附件需要目录。 如果该目录不存在，请创建它。
 
 >[!CAUTION]
 >

@@ -56,7 +56,7 @@ ht-degree: 16%
 
    >[!NOTE]
    >
-   >您可以执行步骤1-4以创建配置容器并在该容器中创建[!DNL Adobe Sign]配置，或使用`global`工具&#x200B;****&#x200B;锤子![ > ](assets/hammer.png)Cloud Services **[!UICONTROL >]** Adobe Sign **[!UICONTROL 中的现有]**&#x200B;文件夹。 如果您在新配置容器中创建配置，请确保在创建自适应表单时在&#x200B;**[!UICONTROL 配置容器]**&#x200B;字段中指定容器名称。
+   >您可以执行步骤1-4以创建配置容器并在该容器中创建[!DNL Adobe Sign]配置，或使用`global`工具&#x200B;**&#x200B;**&#x200B;锤子![ > ](assets/hammer.png)Cloud Services **[!UICONTROL >]** Adobe Sign **[!UICONTROL 中的现有]**&#x200B;文件夹。 如果您在新配置容器中创建配置，请确保在创建自适应表单时在&#x200B;**[!UICONTROL 配置容器]**&#x200B;字段中指定容器名称。
 
    >[!NOTE]
    >
@@ -88,7 +88,7 @@ ht-degree: 16%
 
    其中：
 
-   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL  Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL &#x200B; Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
@@ -237,7 +237,7 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 
    其中：
 
-   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL  Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
+   **na1** 指默认数据库分片。您可以修改数据库分片的值。确保 [!DNL &#x200B; Adobe Acrobat Sign] 云配置指向[正确分片](https://helpx.adobe.com/sign/using/identify-account-shard.html)。
 
    >[!NOTE]
    >
