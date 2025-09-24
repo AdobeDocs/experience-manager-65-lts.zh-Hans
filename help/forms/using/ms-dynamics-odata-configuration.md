@@ -21,7 +21,7 @@ ht-degree: 1%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html?lang=zh-Hans)。
 
 ![数据集成](assets/data-integeration.png)
 

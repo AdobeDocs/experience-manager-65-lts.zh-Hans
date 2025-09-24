@@ -18,7 +18,7 @@ ht-degree: 0%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference)。
 
 您可以使用工作流模型将业务逻辑转换为自动重复流程。 模型可帮助您定义和执行一系列步骤。 您还可以定义模型属性，例如工作流是临时工作流还是使用多个资源。 您可以[在模型中包含各种AEM工作流步骤以实现业务逻辑](/help/sites-developing/workflows-models.md#extending-aem)。
 
