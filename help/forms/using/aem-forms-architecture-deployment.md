@@ -1,5 +1,5 @@
 ---
-title: AEM Forms的架构和部署拓扑
+title: AEM Forms 的架构与部署拓扑
 description: AEM Forms的架构详细信息，以及面向新客户和现有AEM客户以及从LiveCycle ES4升级到AEM Forms的客户推荐的拓扑。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,19 +9,20 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 exl-id: 23ffbaa6-1bd9-48c3-afa3-19737bb15de0
-source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1480'
 ht-degree: 1%
 
 ---
 
-# AEM Forms的架构和部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
+# AEM Forms 的架构与部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html)。
 
 ## 架构 {#architecture}
 

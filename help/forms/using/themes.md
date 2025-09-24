@@ -9,21 +9,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 6f68090f-4ded-42c3-a074-3a18b27e754d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6095'
 ht-degree: 2%
 
 ---
 
 # 创建和使用主题 {#creating-and-using-themes}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/themes.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/themes.html)。
 
 ## 简介 {#introduction}
 
@@ -121,7 +122,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>4.</td>
-   <td>已创建</td>
+   <td>创建时间</td>
    <td>否</td>
    <td>主题创建日期</td>
   </tr>
@@ -145,7 +146,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>8.</td>
-   <td>准时发布</td>
+   <td>发布开启时间</td>
    <td>是</td>
    <td>自动发布主题的时间。</td>
   </tr>
@@ -180,7 +181,7 @@ ht-degree: 2%
      <li>“/etc”中存储与此主题对应的clientlibs的用户定义存储库路径。</li>
      <li>默认值 — “/etc/clientlibs/fd/themes”+主题资源的相对路径。</li>
      <li>如果该位置不存在，则会自动生成文件夹层次结构。</li>
-     <li>更改此值后，clientlib节点结构将移至输入的新位置。<br /> <em><strong>注意：</strong>如果您更改默认clientlib位置，请在CRXDE存储库中将<code>crx:replicate</code>、<code>rep:write</code>、<code>rep:glob:*</code>、<code>rep:itemNames::</code>、<code>js.txt</code>、<code>jcr:read</code>分配给<code>forms-users</code>，并将<code>crx:replicate</code>、<code>jcr:read</code>分配给<code>fd-service</code>的新位置。 同时通过为<code>forms-user</code></em>添加<code>deny jcr:addChildNodes</code>附加另一个ACL</li>
+     <li>更改此值后，clientlib节点结构将移至输入的新位置。<br /> <em><strong>注意：</strong>如果您更改默认clientlib位置，请在CRXDE存储库中将<code>crx:replicate</code>、<code>rep:write</code>、<code>rep:glob:*</code>、<code>rep:itemNames::</code>、<code>js.txt</code>、<code>jcr:read</code>分配给<code>forms-users</code>，并将<code>crx:replicate</code>、<code>jcr:read</code>分配给<code>fd-service</code>的新位置。 同时通过为<code>deny jcr:addChildNodes</code>添加<code>forms-user</code></em>附加另一个ACL</li>
     </ul> </td>
   </tr>
   <tr>
@@ -460,7 +461,7 @@ Canvas中数字框上的组件工具栏
 
 1. 选择&#x200B;**数字框小组件**。
 1. 侧栏标题将更改为数值框小组件，并显示用于自定义其外观的选项。
-使用侧边栏中的&#x200B;**Dimension和位置**&#x200B;选项自定义组件的大小。 确保状态为&#x200B;**默认值**。
+使用侧边栏中的**Dimension和位置**&#x200B;选项自定义组件的大小。 确保状态为&#x200B;**默认值**。
 
 不要选择&#x200B;**数值框小组件**，请在组件工具栏中选择&#x200B;**字段小组件**，然后执行上述步骤。 为&#x200B;**字段小组件**&#x200B;选项选择维度时，除数字框之外的所有文本框都具有相同的大小。
 

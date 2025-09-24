@@ -9,19 +9,20 @@ feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: a1791374-d05c-4f60-b178-152a7bc06c45
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '3142'
-ht-degree: 55%
+source-wordcount: '3151'
+ht-degree: 54%
 
 ---
 
 # 自适应表单创作简介 {#introduction-to-authoring-adaptive-forms}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/introduction-forms-authoring.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/introduction-forms-authoring.html)。
 
 
 ## 概述 {#overview}
@@ -152,11 +153,11 @@ XML 和 JSON 架构代表组织中的后端系统在其中生成或使用数据�
   </tr>
   <tr>
    <td>电子邮件</td>
-   <td><p>添加字段以捕获电子邮件地址。默认情况下，电子邮件组件使用以下正则表达式来验证电子邮件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_&grave;{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>添加字段以捕获电子邮件地址。默认情况下，电子邮件组件使用以下正则表达式来验证电子邮件地址。</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>文件附件</td>
-   <td><p>添加按钮以允许用户浏览支持文档并将其附加到表单。 可以将多个文件附加到“文件”附件组件。 您还可以在组件的属性浏览器中为附件指定&#x200B;**[!UICONTROL 最大文件大小]**&#x200B;和&#x200B;**[!UICONTROL 支持的文件类型]**。 </p> <p><strong> 注意: </strong><ul> <li> 组件不支持附加文件名以字符(.)开头，包含字符\ / ： * ？ “ &lt; &gt; | ； % $，或包含为Windows操作系统保留的特殊文件名，如nul、prn、con、lpt或com。 </li> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请选择并逐一附加文件。 不能同时选择和附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关更多信息，请参阅<a href="https://helpx.adobe.com/cn/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支持的文件格式</a>。 </li></ul></p> </td>
+   <td><p>添加按钮以允许用户浏览支持文档并将其附加到表单。 可以将多个文件附加到“文件”附件组件。 您还可以在组件的属性浏览器中为附件指定**[！UICONTROL最大文件大小]**和**[！UICONTROL支持的文件类型]**。 </p> <p><strong> 注意: </strong><ul> <li> 组件不支持附加文件名以字符(.)开头，包含字符\ / ： * ？ “ &lt; &gt; | ； % $，或包含为Windows操作系统保留的特殊文件名，如nul、prn、con、lpt或com。 </li> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请选择并逐一附加文件。 不能同时选择和附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关更多信息，请参阅<a href="https://helpx.adobe.com/cn/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支持的文件格式</a>。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>文件附件列表</td>

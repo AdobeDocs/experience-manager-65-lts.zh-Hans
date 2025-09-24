@@ -9,19 +9,20 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 1a0d00f9-45f7-45af-ab34-d1c164980abb
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2055'
-ht-degree: 1%
+source-wordcount: '2064'
+ht-degree: 0%
 
 ---
 
 # AEM Forms工作流中的变量{#variables-in-aem-forms-workflows}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html)。
 
 工作流模型中的变量是一种根据其数据类型存储值的方法。 然后，可以在任何工作流步骤中使用变量的名称来检索存储在变量中的值。 您还可以使用变量名称来定义用于制定路由决策的表达式。
 
@@ -38,13 +39,13 @@ ht-degree: 1%
 您可以使用工作流模型Sidekick中提供的“变量”部分创建变量。 AEM工作流变量支持以下数据类型：
 
 * **原始数据类型**： Long、Double、Boolean、Date和String
-* **复杂数据类型**： [文档](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
+* **复杂数据类型**：[文档](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
 
 >[!NOTE]
 >
->工作流仅支持使用ISO8601格式作为日期类型变量。
+>工作流仅支持日期类型变量使用ISO8601格式。
 
-文档和表单数据模型数据类型需要[AEM Forms加载项包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有基元和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
+文档和表单数据模型数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有原始和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
 
 执行以下步骤可创建变量：
 
@@ -66,8 +67,8 @@ ht-degree: 1%
 
 创建变量时，请考虑以下实践：
 
-* 根据工作流程的要求创建任意数量的变量。 但是，要节约数据库资源，请使用所需的最少变量数，并在可能的情况下重复使用变量。
-* 变量区分大小写。 确保在工作流程中使用相同的大小写引用变量。
+* 创建工作流所需的任意数量的变量。 但是，为了节约数据库资源，应使用所需的最小变量数，并尽可能重用变量。
+* 变量区分大小写。 确保在工作流中使用相同的大小写引用变量。
 * 避免在变量的名称中使用特殊字符
 
 ## 设置变量 {#set-a-variable}
@@ -129,7 +130,7 @@ ht-degree: 1%
 它基于自适应表单规则编辑器，具有下列更改。 变量中的规则编辑器：
 
 * 不支持函数。
-* 不提供查看规则摘要的UI
+* 不提供用于查看规则摘要的UI
 * 没有代码编辑器。
 * 不支持启用和禁用对象的值。
 * 不支持设置对象的属性。
@@ -150,13 +151,13 @@ ht-degree: 1%
 
 #### OR拆分步骤 {#or-split-step}
 
-OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态。 此步骤允许您将条件处理路径引入工作流。 您可以根据需要将工作流步骤添加到每个分支。
+OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态。 此步骤允许您将条件处理路径引入工作流。 您可以根据需要向每个分支添加工作流步骤。
 
-您可以使用规则定义、ECMA脚本或外部脚本为分支定义路由选择表达式。
+您可以使用规则定义、ECMA脚本或外部脚本为分支定义路由表达式。
 
-可以使用变量来定义使用表达式编辑器的路由选择表达式。 有关对“或拆分”步骤使用路由选择表达式的详细信息，请参阅[或拆分步骤](/help/sites-developing/workflows-step-ref.md#or-split)。
+您可以使用变量来定义使用表达式编辑器的路由表达式。 有关对OR拆分步骤使用路由表达式的详细信息，请参阅[OR拆分步骤](/help/sites-developing/workflows-step-ref.md#or-split)。
 
-在此示例中，在定义路由选择表达式之前，使用[示例2](../../forms/using/variable-in-aem-workflows.md#example2)设置&#x200B;**totalvalue**&#x200B;变量的值。 如果&#x200B;**totalvalue**&#x200B;变量的值大于50000，则分支1处于活动状态。 同样，如果&#x200B;**totalvalue**&#x200B;变量的值小于50000，可以定义规则使Branch 2处于活动状态。
+在此示例中，在定义路由表达式之前，请使用[example 2](../../forms/using/variable-in-aem-workflows.md#example2)设置&#x200B;**totalvalue**&#x200B;变量的值。 如果&#x200B;**totalvalue**&#x200B;变量的值大于50000，则分支1处于活动状态。 同样，您可以定义一个规则，以使Branch 2在&#x200B;**totalvalue**&#x200B;变量的值小于50000时有效。
 
 同样，选择外部脚本路径或指定路由表达式的ECMA脚本以计算活动分支。 选择&#x200B;**[!UICONTROL 重命名分支]**&#x200B;以指定分支的替代名称。
 
@@ -196,7 +197,7 @@ OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态
 | 表单数据模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
 **示例**
 
@@ -280,10 +281,10 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 执行以下步骤可删除变量：
 
-1. 在编辑工作流页面上，选择工作流模型Sidekick中可用的“变量”图标。 左侧窗格中的“变量”部分显示所有现有变量。
-1. 选择要删除的变量名称旁边的“删除”图标。
+1. 在编辑工作流页面上，选择工作流模型Sidekick中可用的“变量”图标。 左窗格中的变量部分显示所有现有变量。
+1. 选择要删除的变量名称旁边的删除图标。
 1. 选择![done_icon](assets/done_icon.png)以确认并删除该变量。
 
 ## 引用 {#references}
 
-有关在AEM Forms工作流程步骤中使用变量的更多示例，请参阅[AEM工作流程中的变量](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html)。
+有关在AEM Forms工作流步骤中使用变量的更多示例，请参阅[AEM工作流中的变量](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html)。

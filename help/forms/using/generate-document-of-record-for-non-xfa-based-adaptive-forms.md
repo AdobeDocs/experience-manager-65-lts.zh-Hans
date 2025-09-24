@@ -5,21 +5,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 2d9ec8c4-330e-4474-97f4-1f434025683f
-source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '4283'
+source-wordcount: '4292'
 ht-degree: 3%
 
 ---
 
 # 为自适应表单或自适应表单片段生成记录文档 {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
 
 ## 概述 {#overview}
@@ -207,7 +208,7 @@ ht-degree: 3%
 >
 >在经典UI中，您获得不同的选项卡用于编辑字段属性。
 
-### 表 {#tables}
+### 表格 {#tables}
 
 自适应表单表组件（如页眉、页脚和行）映射到相应的XFA组件。 您可以将可重复面板映射到记录文档中的表格。
 
@@ -231,7 +232,7 @@ ht-degree: 3%
 
 **字段的样式约定**
 
-* 要对记录文档中的字段应用样式，基础模板在`AF_METATEMPLATE`根子表单下的`AF_FIELDSSUBFORM`子表单中提供字段。
+* 要对记录文档中的字段应用样式，基础模板在`AF_FIELDSSUBFORM`根子表单下的`AF_METATEMPLATE`子表单中提供字段。
 
 * 这些字段的属性应用于记录文档中的字段。 这些字段应遵循`AF_<name of field in all caps>_XFO`命名约定。 例如，复选框的字段名称应为`AF_CHECKBOX_XFO`。
 
@@ -411,13 +412,12 @@ ht-degree: 3%
 **表单级别设置**
 
 * **[!UICONTROL 基本]**
-   * **模板：**&#x200B;您可以选择“默认”或“自定义”模板。
-
+   * **模板：**您可以选择“默认”或“自定义”模板。
      ![替换文本](image.png)
    * **个性色：**&#x200B;您可以预定义[!UICONTROL 记录文档]的模板颜色。
    * **字体系列：**&#x200B;为[!UICONTROL 记录文档]文本选择字体类型。
    * **包括DoR中未绑定的字段：**&#x200B;设置属性包括来自[!UICONTROL 记录文档]中基于架构的自适应表单的未绑定字段。 默认情况下，它为true。
-   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上启用重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
+   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器[上启用](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
 * **[!UICONTROL 表单字段属性]**
    * 如果勾选选项&#x200B;**对于复选框和单选按钮组件，则仅显示选定的值**，它将生成仅具有选定值的DoR输出。
    * 可以为多个选定值选择分隔符，也可以选择任何其他分隔符类型。
@@ -425,7 +425,6 @@ ht-degree: 3%
       * 垂直
       * 水平
       * 与自适应表单相同
-
      >[!NOTE]
      > 垂直对齐和水平对齐仅适用于以下情况     单选按钮和复选框
 * **[!UICONTROL 母版页属性]**&#x200B;有关[母版页属性](#master-page-properties-master-page-properties)的详细信息，请单击
@@ -439,7 +438,7 @@ ht-degree: 3%
 1. 选择面板并选择![配置](/help/forms/using/assets/configure.png)
 1. 展开&#x200B;**[!UICONTROL 记录文档]**&#x200B;以查看属性。
 
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL 放置]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![放置](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
 1. 选择&#x200B;**[!UICONTROL 下一页顶部]**&#x200B;并选择&#x200B;**[!UICONTROL 选择]**。 您还可以选择&#x200B;**[!UICONTROL 页面顶部]**，选择母版页，然后选择&#x200B;**[!UICONTROL 选择]**&#x200B;以应用分页符。
 1. 选择![保存](/help/forms/using/assets/save_icon.png)以保存属性。
 
@@ -457,10 +456,10 @@ ht-degree: 3%
 要将第二个母版页属性应用于面板，而将第三个母版页属性应用于后续面板，请执行以下步骤：
 
 1. 选择要应用第二个母版页的面板，然后选择![配置](assets/cmppr.png)。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL 放置]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![放置](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
 1. 选择&#x200B;**[!UICONTROL 在页面]**&#x200B;上，选择第二个母版页并选择&#x200B;**[!UICONTROL 选择]**。
 AEM Forms将第二个母版页应用于自适应表单中的面板和所有后续面板。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL After]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![After](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
 1. 选择&#x200B;**[!UICONTROL 转到页面]**，选择第三个母版页，然后选择&#x200B;**[!UICONTROL 选择]**。
 1. 选择![保存](/help/forms/using/assets/save_icon.png)以保存属性。
 AEM Forms将第三个母版页应用于自适应表单中的面板和所有后续面板。

@@ -1,5 +1,5 @@
 ---
-title: 使用表单数据模型
+title: 处理表单数据模型
 description: 数据集成提供了表单数据模型编辑器，以配置和使用表单数据模型。
 topic-tags: integration
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,19 +8,20 @@ feature: Form Data Model
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: e95c4cc4-1800-4bd8-a3c4-c6c868a1276d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '4159'
+source-wordcount: '4168'
 ht-degree: 0%
 
 ---
 
-# 使用表单数据模型{#work-with-form-data-model}
+# 处理表单数据模型{#work-with-form-data-model}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html)。
 
 ![数据集成](do-not-localize/data-integeration.png)
 
@@ -165,7 +166,7 @@ ht-degree: 0%
 
    为员工数据源配置的读写服务
 
-1. 为读取服务参数选择![aem_6_3_edit](assets/aem_6_3_edit.png)以将参数绑定到用户配置文件属性、请求属性或文本值[&#128279;](#bindargument)，并指定绑定值。
+1. 为读取服务参数选择![aem_6_3_edit](assets/aem_6_3_edit.png)以将参数绑定到用户配置文件属性、请求属性或文本值[，并指定绑定值。](#bindargument)
 1. 选择&#x200B;**[!UICONTROL 完成]**&#x200B;以保存参数，选择&#x200B;**[!UICONTROL 完成]**&#x200B;以保存属性，选择&#x200B;**[!UICONTROL 保存]**&#x200B;以保存表单数据模型。
 
 ### 绑定读取服务参数 {#bindargument}
@@ -188,9 +189,9 @@ ht-degree: 0%
 
 `https://[server-name]:[port]/crx/de/index.jsp#/home/users/`
 
-![用户配置文件](assets/binding_crxde_user_profile_new.png)
+![用户轮廓](assets/binding_crxde_user_profile_new.png)
 
-在此示例中，在`grios`用户的&#x200B;**[!UICONTROL 绑定值]**&#x200B;字段中指定`profile.empid`。
+在此示例中，在`profile.empid`用户的&#x200B;**[!UICONTROL 绑定值]**&#x200B;字段中指定`grios`。
 
 ![编辑参数](assets/edit_argument_user_profile_new.png)
 

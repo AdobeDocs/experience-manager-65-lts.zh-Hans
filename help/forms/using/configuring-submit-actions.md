@@ -8,21 +8,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: a5aff5dd-912d-49ee-94e8-38cdbc396e5b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2592'
+source-wordcount: '2602'
 ht-degree: 48%
 
 ---
 
 # 配置提交操作 {#configuring-the-submit-action}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html)。
 
 
 ## 提交操作简介 {#introduction-to-submit-actions}
@@ -53,7 +54,7 @@ ht-degree: 48%
 >[!NOTE]
 >
 >确保[AEM_Installation_Directory]\crx-quickstart\temp\datamanager\ASM文件夹
->已存在。 临时存储附件需要目录。 如果该目录不存在，请创建它。
+>>已存在。 临时存储附件需要目录。 如果该目录不存在，请创建它。
 
 >[!CAUTION]
 >
@@ -173,7 +174,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->AEM 6.5 Forms Service Pack 19 (6.5.19.0)引入了提交到Microsoft® SharePoint列表功能。
+> AEM 6.5 Forms Service Pack 19 (6.5.19.0)引入了提交到Microsoft® SharePoint列表功能。
 
 **[!UICONTROL 提交到SharePoint]**&#x200B;提交操作将自适应表单与Microsoft® SharePoint存储相关联。 您可以将表单数据文件、附件或记录文档提交到连接的Microsoft® Sharepoint存储。
 
@@ -194,12 +195,12 @@ ht-degree: 48%
 1. 指定&#x200B;**[!UICONTROL 标题]**、**[!UICONTROL 客户端 ID]**、**[!UICONTROL 客户端密码]**&#x200B;和 **[!UICONTROL OAuth URL]**。有关如何检索 OAuth URL 的客户端 ID、客户端密码、租户 ID 的信息，请参阅 [Microsoft® 文档](https://learn.microsoft.com/en-us/graph/auth-register-app-v2)。
    * 您可以从 Microsoft® Azure 门户检索应用程序的`Client ID` 和`Client Secret`。
    * 在 Microsoft® Azure 门户中，将重定向 URI 添加为 `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`。将 `[author-instance]` 替换为创作实例 URL。
-   * 在&#x200B;**Microsoft® Graph**&#x200B;选项卡中添加API权限`offline_access`和`Sites.Manage.All`以提供读/写权限。 在&#x200B;**Sharepoint**&#x200B;选项卡中添加`AllSites.Manage`权限以与SharePoint数据进行远程交互。
+   * 在`offline_access`Microsoft® Graph`Sites.Manage.All`选项卡中添加API权限&#x200B;**和**&#x200B;以提供读/写权限。 在`AllSites.Manage`Sharepoint **选项卡中添加**&#x200B;权限以与SharePoint数据进行远程交互。
    * 使用 OAuth URL：`https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`。将 `<tenant-id>` 替换为 Microsoft® Azure 门户中应用程序的 `tenant-id`。
 
      >[!NOTE]
      >
-     >**客户端密码**&#x200B;字段是必填还是可选字段取决于 Azure Active Directory 应用程序配置。如果应用程序配置为使用客户端密码，则必须提供客户端密码。
+     > **客户端密码**&#x200B;字段是必填还是可选字段取决于 Azure Active Directory 应用程序配置。如果应用程序配置为使用客户端密码，则必须提供客户端密码。
 
 1. 单击&#x200B;**[!UICONTROL 连接]**。连接成功后，将显示`Connection Successful`消息。
 1. 从下拉列表中选择&#x200B;**[!UICONTROL SharePoint站点]**&#x200B;和&#x200B;**[!UICONTROL SharePoint列表]**。
@@ -218,16 +219,16 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->在Microsoft® SharePoint List中，不支持以下列类型：
->* 图像列
->* 元数据列
->* 人员列
->* 外部数据列
+> 在Microsoft® SharePoint List中，不支持以下列类型：
+> * 图像列
+> * 元数据列
+> * 人员列
+> * 外部数据列
 
 
 >[!NOTE]
 >
->要设置配置的值，请[使用 AEM SDK 生成 OSGi 配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#generating-osgi-configurations-using-the-aem-sdk-quickstart)，并向 Cloud Service 实例[部署配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=zh-Hans#deployment-process)。
+> 要设置配置的值，请[使用 AEM SDK 生成 OSGi 配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=zh-Hans#generating-osgi-configurations-using-the-aem-sdk-quickstart)，并向 Cloud Service 实例[部署配置](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=zh-Hans#deployment-process)。
 
 ## 自适应表单中的服务器端重新验证 {#server-side-revalidation-in-adaptive-form}
 

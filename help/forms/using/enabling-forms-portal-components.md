@@ -1,5 +1,5 @@
 ---
-title: 启用Forms Portal组件
+title: 启用表单门户组件
 description: 现成Forms Portal组件已禁用。 启用Document Services和Document Services谓词组以启用Forms Portal组件。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,19 +8,20 @@ feature: Forms Portal
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: a537fc63-b894-4e47-a71f-98ea07747baa
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 5%
+source-wordcount: '341'
+ht-degree: 9%
 
 ---
 
-# 启用Forms Portal组件 {#enabling-forms-portal-components}
+# 启用表单门户组件 {#enabling-forms-portal-components}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans)。
 
 表单门户组件现成不可用。 要使组件显示在AEM sidekick的可用组件列表中，请执行以下步骤：
 
@@ -52,5 +53,5 @@ ht-degree: 5%
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)
+* [自定义表单门户组件模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)

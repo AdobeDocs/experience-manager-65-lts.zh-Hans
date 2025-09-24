@@ -1,25 +1,24 @@
 ---
-title: AEM Forms简介
+title: AEM Forms 简介
 description: 使用此 AEM 6.5 LTS 指南创建、管理、发布和更新数字表单。查找有关安装、升级和配置数字表单的帮助，并了解如何创作自适应表单。
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: e9549ac9-0ada-4661-969a-709f0ed3b133
-source-git-commit: d9f6415aabcbc55af23824d9e0ab33c418f6761f
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '943'
+ht-degree: 15%
 
 ---
 
-# AEM Forms简介{#introduction-to-aem-forms}
+# AEM Forms 简介 {#introduction-to-aem-forms}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
 
-有关AEM Forms中最新功能和增强功能的信息，请参阅[AEM Forms中的新增功能](../../forms/using/whats-new.md)。
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html)。
 
 ## 关于AEM Forms {#about-aem-forms}
 

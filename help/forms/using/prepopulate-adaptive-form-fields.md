@@ -1,5 +1,5 @@
 ---
-title: 预填自适应表单字段
+title: 预填充自适应表单字段
 description: 使用现有数据预填自适应表单的字段。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
@@ -9,21 +9,22 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 69734a2b-7f9d-4661-a1e9-3bf6e362c272
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2203'
-ht-degree: 3%
+source-wordcount: '2213'
+ht-degree: 2%
 
 ---
 
-# 预填自适应表单字段{#prefill-adaptive-form-fields}
+# 预填充自适应表单字段{#prefill-adaptive-form-fields}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html)。
 
 ## 简介 {#introduction}
 
@@ -203,11 +204,11 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->不建议在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板)中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**&#x200B;** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
+>不建议在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板)中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
 
 ### 无表单模型的自适应表单 {#adaptive-form-with-no-form-model}
 
-对于没有表单模型的自适应表单，所有字段的数据都在`<afUnboundData> tag`的`<data>`标记下。
+对于没有表单模型的自适应表单，所有字段的数据都在`<data>`的`<afUnboundData> tag`标记下。
 
 此外，请注意以下事项：
 
@@ -313,7 +314,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 ### 在slingRequest中设置数据属性 {#setting-data-attribute-in-slingrequest}
 
-您还可以在`slingRequest`中设置`data`属性，其中`data`属性是包含XML或JSON的字符串，如下面的示例代码所示（示例为XML）：
+您还可以在`data`中设置`slingRequest`属性，其中`data`属性是包含XML或JSON的字符串，如下面的示例代码所示（示例为XML）：
 
 ```javascript
 <%
@@ -350,7 +351,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 预填充服务是一种OSGi服务，通过OSGi捆绑包进行打包。 您可以创建OSGi捆绑包，将其上传并安装到AEM Forms捆绑包。 开始创建捆绑包之前：
 
-* [下载AEM Forms客户端SDK](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)
+* [下载AEM Forms客户端SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
 * 下载样板包
 
 * 将数据（预填充数据）文件放入crx存储库中。 可以将文件放置在crx-repository的\contents文件夹中的任意位置。
@@ -391,11 +392,9 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
    1. 启用Configuration.af.clientside.datamerge.enabled.name选项
 * 要从命令行启用或禁用：
    * 要启用，请运行以下cURL命令：
-
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
    * 要禁用，请运行以下cURL命令：
-
      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
-  要充分利用客户端预填充数据选项，请更新预填充服务以返回[FileAttachmentMap](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)和[CustomContext](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+  要充分利用客户端预填充数据选项，请更新预填充服务以返回[FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)和[CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)

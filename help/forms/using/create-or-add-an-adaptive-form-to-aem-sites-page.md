@@ -6,21 +6,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 6e69ca67-883f-4079-96e2-5b7a9c843ada
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2884'
-ht-degree: 24%
+source-wordcount: '2893'
+ht-degree: 23%
 
 ---
 
 # 创建自适应表单或将自适应表单添加到 AEM Sites 页面 {#create-or-add-an-adaptive-form-to-aem-sites-page}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM 6.5 | 本文 |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html?lang=zh-Hans) |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html?lang=zh-Hans)。
 
 借助 AEM Forms，您可以将自适应表单无缝整合到您的网页中。这使得您的访问者无需离开其所在的页面，即可方便地填写和提交表格。这样，他们即可在主动与表单交互的同时轻松地与网站的其他元素保持互动。
 
@@ -70,11 +71,11 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 
 +++  为您的环境启用自适应表单核心组件
 
-确保为您的环境启用了[自适应Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=zh-Hans)。
+确保为您的环境启用了[自适应Forms核心组件](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)。
 
-+++
++++ 
 
-+++  将自适应Forms客户端库添加到AEM Sites页面和体验片段页面组件
++++  将自适应Forms客户端库添加到AEM Sites页面和体验片段页面组件 
 
 要启用自适应表单容器组件的完整功能，请使用部署管道将 Customheaderlibs 和 Customfooterlibs 客户端库添加到 AEM Sites 页面。要添加库：
 
@@ -118,7 +119,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 
 1. 重复以上步骤，以在您的环境中创建所有创作实例和发布实例。
 
-+++
++++ 
 
 +++ 启用自适应Forms容器
 
@@ -231,7 +232,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。您可�
 
 ### 使用表单数据模型预填充服务 {#fdm-prefill-service}
 
-您可以使用表单数据模型预填充服务使用配置的表单数据模型预填充表单的字段。 表单数据模型预填充服务使用配置的表单数据模型[&#128279;](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)的Get服务检索数据。 要对自适应表单使用表单数据模型预填充服务，请执行以下操作：
+您可以使用表单数据模型预填充服务使用配置的表单数据模型预填充表单的字段。 表单数据模型预填充服务使用配置的表单数据模型[的](work-with-form-data-model.md#add-data-model-objects-and-services-add-data-model-objects-and-services)Get服务检索数据。 要对自适应表单使用表单数据模型预填充服务，请执行以下操作：
 
 1. 打开包含自适应表单的AEM页面编辑器或体验片段。
 1. 打开内容树，然后选择承载您的自适应表单的&#x200B;**[!UICONTROL 自适应Forms容器]**。 一个AEM Sites页面可以托管多个自适应Forms。 因此，请仔细选择正确的自适应Forms容器。

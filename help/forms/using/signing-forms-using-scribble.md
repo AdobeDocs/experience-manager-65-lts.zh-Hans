@@ -1,5 +1,5 @@
 ---
-title: 使用涂鸦签名将电子签名应用于表单
+title: 使用手写签名为表单应用电子签名
 description: 了解如何使用涂写签名签署AEM自适应Forms。 您可以使用涂写签名和签名步骤在表单上绘制签名。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -8,22 +8,23 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 9d1a22da-2eb3-4c79-8c4d-4d0a3ed7fe3b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 9%
+source-wordcount: '727'
+ht-degree: 18%
 
 ---
 
-# 使用涂鸦签名将电子签名应用于表单{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
+# 使用手写签名为表单应用电子签名{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/signing-forms-using-scribble.html)。
 
 
 您可以使用&#x200B;**涂写签名**&#x200B;组件和&#x200B;**签名步骤**&#x200B;组件在自适应表单上绘制（涂写）签名。 签名步骤组件显示自适应表单的PDF版本。 您需要启用记录文档选项或基于表单模板的自适应表单才能使用签名步骤组件。
@@ -33,11 +34,11 @@ ht-degree: 9%
 ## 签名窗口中可用的各种选项
 
 * **A：**&#x200B;单击&#x200B;**画笔**&#x200B;图标在画布上绘制您的签名。
-* **B：**&#x200B;单击&#x200B;**清除**&#x200B;图标以清除画布上的签名。
-* **C：**&#x200B;单击&#x200B;**地理位置**&#x200B;图标可添加地理位置以及签名。
-* **D：**&#x200B;单击&#x200B;**键盘**&#x200B;图标在画布上键入您的姓名。
+* **B：**&#x200B;点击&#x200B;**清除**&#x200B;图标可清除画布上的签名。
+* **C：**&#x200B;点击&#x200B;**地理位置**&#x200B;图标可一起添加地理位置和签名。
+* **D：**&#x200B;点击&#x200B;**键盘**&#x200B;图标可在画布上输入您的名字。
 
-在涂鸦签名窗口中选择完成![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)图标后，便无法编辑该签名。 如果想要编辑签名，则必须忽略当前签名并使用上面的“画笔/键盘”选项重新签名。
+在涂鸦签名窗口中选择完成![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)图标后，便无法编辑该签名。 如果您想编辑签名，必须忽略当前签名，使用上面的画笔/键盘选项重新签名。
 
 您可以选择&#x200B;**配置** ![配置](assets/configure.png)图标来设置涂写签名画布的长宽比。
 * 当Scribble签名画布的长宽比小于1时，地理位置信息将添加到Scribble签名画布的底部。
@@ -49,7 +50,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->签名始终以PNG格式保存。
+>签名始终以 PNG 格式保存。
 >
 
 ## 配置自适应表单以使用涂鸦签名 {#configure-an-adaptive-form-to-use-scribble-signature}

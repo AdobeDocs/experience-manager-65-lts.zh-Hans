@@ -1,5 +1,5 @@
 ---
-title: AEM文档服务概述
+title: AEM 文档服务概述
 description: AEM Document Services是一组OSGi服务，用于创建、汇编和保护PDF文档。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,19 +9,20 @@ feature: Document Services,Reader Extensions, Forms Service,PDF Generator
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 03e87c5a-c106-4b4c-9b42-8ce7a04d9c0c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
 
-# AEM文档服务概述{#overview-of-aem-document-services}
+# AEM 文档服务概述{#overview-of-aem-document-services}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)。
 
 
 AEM Document Services是一组OSGi服务，用于创建、汇编和保护PDF文档。 Document Services包含以下服务：

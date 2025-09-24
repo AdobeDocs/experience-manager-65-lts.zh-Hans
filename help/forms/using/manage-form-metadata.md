@@ -9,19 +9,20 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 712590c6-2348-4c0d-93b9-686e6478ca03
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1973'
 ht-degree: 2%
 
 ---
 
 # 管理表单元数据{#manage-form-metadata}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html)。
 
 ## 概述  {#overview-nbsp}
 
@@ -80,7 +81,7 @@ AEM Forms支持以下资源类型：
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>已创建</td> 
+   <td>创建时间</td> 
    <td>所有</td> 
    <td>指定资源创建时间的只读值。</td> 
   </tr> 
@@ -295,11 +296,11 @@ AEM Forms在此工具中公开受支持表单类型的元数据架构。 通过�
 1. 单击刚刚拖动的组件。 在右侧面板中打开的设置选项卡中，填写以下字段的信息：
 
    1. 指定字段标签，该标签用作位于架构中的字段上方的显示名称（例如：Department）
-   1. 在映射到属性字段下，您可以看到预填充的值&#x200B;**。/jcr：content/metadata/default“**”。 将“**default**”更改为所需的属性名称，该属性名称用于存储crx存储库中的属性(例如：“”。/jcr：content/metadata/department&#39;)
+   1. 在映射到属性字段下，您可以看到预填充的值&#x200B;**。/jcr:content/metadata/default“**”。 将“**default**”更改为所需的属性名称，该属性名称用于存储crx存储库中的属性(例如：“”。/jcr:content/metadata/department&#39;)
 
       >[!NOTE]
       >
-      >请勿更改前缀&#39;。/jcr：content/metadata/&#39; ，它定义存储属性的路径。
+      >请勿更改前缀&#39;。/jcr:content/metadata/&#39;，因为它定义了存储属性的路径。
       >
       >此外，属性名称必须是唯一的，以避免在存储库中的同一位置写入两个或更多属性的值。 因此，建议您更改“default”值。
 

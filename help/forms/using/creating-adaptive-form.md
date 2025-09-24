@@ -6,31 +6,32 @@ level: Beginner
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: 5d81781b-bb79-4b85-bba6-2ac67829bfcf
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1984'
-ht-degree: 8%
+source-wordcount: '1993'
+ht-degree: 9%
 
 ---
 
-# 创建自适应表单 {#creating-an-adaptive-form}
+# 创建自适应表单  {#creating-an-adaptive-form}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html)。
 
 ## 创建自适应表单 {#strong-create-an-adaptive-form-strong}
 
 按照以下步骤创建自适应表单。
 
-1. 访问`https://'[server]:[port]'/<custom-context-if-any>.`上的[!DNL Experience Manager Forms]创作实例
+1. 访问[!DNL Experience Manager Forms]上的`https://'[server]:[port]'/<custom-context-if-any>.`创作实例
 
 1. 在 Experience Manager 登录页面上输入您的凭据。
 
-   登录后，在左上角选择&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms和文档]**。
+   登录后，在左上角选择&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 表单]** > **[!UICONTROL 表单和文档]**。
 
    >[!NOTE]
    >
@@ -201,7 +202,7 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
 
 1. （仅限基于事件的自动保存）执行以下步骤来配置用于基于事件的自动保存的选项。
 
-   1. 在此事件&#x200B;**之后的**&#x200B;自动保存框中，指定一个[GuideBridge](https://helpx.adobe.com/cn/aem-forms/6/javascript-api/GuideBridge.html)事件。 每当表达式的计算结果为TRUE时，将保存表单。
+   1. 在此事件&#x200B;**[!UICONTROL 之后的]**&#x200B;自动保存框中，指定一个[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)事件。 每当表达式的计算结果为TRUE时，将保存表单。
 
 1. （可选）要自动保存匿名用户的内容，请选择&#x200B;**[!UICONTROL 为匿名用户启用自动保存]**&#x200B;选项，然后单击&#x200B;**[!UICONTROL 确定]**。
 
@@ -222,6 +223,6 @@ XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 
    ![属性](/help/forms/using/assets/rename-form-properties.png)
 
 1. 在&#x200B;**标题**&#x200B;选项卡中更改表单的名称，如下图所示。
-1. 单击&#x200B;**保存并关闭**。
+1. 选择&#x200B;**保存并关闭**。
 
    ![重命名AEM自适应表单](/help/forms/using/assets/rename-form-title.png)

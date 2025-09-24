@@ -9,21 +9,22 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 2c0a5185-7759-447a-b4c6-36feaa4a23d3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '6607'
+source-wordcount: '6615'
 ht-degree: 2%
 
 ---
 
 # 自适应表单规则编辑器{#adaptive-forms-rule-editor}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html)。
 
 ## 概述 {#overview}
 
@@ -72,13 +73,13 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 * 创建规则时，一个典型的经验法则是考虑您所编写规则的对象的上下文。 假定您要根据用户在字段A中指定的值隐藏或显示字段B。在这种情况下，您要评估字段A的条件，并根据它返回的值，触发字段B的操作。
 
-  因此，如果您在字段B（评估条件的对象）上编写规则，请使用condition-action结构或When规则类型。 同样，对字段 A 使用作条件构造或显示或隐藏规则类型。
+  因此，如果您在字段B（评估条件的对象）上编写规则，请使用condition-action结构或When规则类型。 同样，在字段A上使用操作条件结构或显示或隐藏规则类型。
 
 * 有时，您需要根据一个条件执行多个操作。 在这种情况下，建议使用条件 — 操作构造。 在此构造中，您可以计算一次条件并指定多个操作语句。
 
   例如，要根据检查用户在字段A中指定的值的条件隐藏字段B、C和D，请编写一条规则，其中在字段A上使用condition-action结构或When规则类型，并指定操作以控制字段B、C和D的可见性。否则，您需要在字段B、C和D上分别使用三个规则，其中每个规则都会检查条件，并显示或隐藏各自的字段。 在此示例中，在一个对象上编写When规则类型比在三个对象上编写Show或Hide规则类型更有效。
 
-* 要根据多个条件触发操作，建议使用action-condition构造。 例如，若要通过评估字段 B、C 和 D 的条件来显示和隐藏字段 A，请在字段 A 上使用“显示”或“隐藏规则类型”。
+* 要根据多个条件触发操作，建议使用action-condition构造。 例如，要通过评估字段B、C和D的条件来显示和隐藏字段A，请在字段A上使用显示或隐藏规则类型。
 * 如果规则包含一个条件的一个操作，则使用condition-action或action condition结构。
 * 如果规则检查条件，并在字段中提供值或退出字段时立即执行操作，则建议在评估条件的字段中编写具有condition-action结构或When规则类型的规则。
 * 当用户更改应用When规则的对象的值时，将评估When规则中的条件。 但是，如果您希望操作在服务器端更改时触发（例如在预填充值中），则建议编写一个When规则以在字段初始化时触发操作。
@@ -105,11 +106,11 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 ### 时间 {#whenruletype}
 
-**When**&#x200B;规则类型遵循&#x200B;**condition-action-alternate action**&#x200B;规则结构，有时只遵循&#x200B;**condition-action**&#x200B;结构。 在此规则类型中，您首先指定评估条件，然后在满足条件时触发作 （ `True`）。 使用 When 规则类型时，您可以使用多个 AND 和 OR 运算符来创建 [嵌套表达式](#nestedexpressions)。
+**When**&#x200B;规则类型遵循&#x200B;**condition-action-alternate action**&#x200B;规则结构，有时只遵循&#x200B;**condition-action**&#x200B;结构。 在此规则类型中，首先指定评估条件，然后指定满足该条件时要触发的操作(`True`)。 在使用When规则类型时，您可以使用多个AND和OR运算符来创建[嵌套表达式](#nestedexpressions)。
 
-使用 When 规则类型，您可以评估表单对象的条件并对一个或多个对象执行作。
+使用When规则类型，您可以评估表单对象的条件，并对一个或多个对象执行操作。
 
-简单来说，典型的 When 规则结构如下：
+简单地说，典型的When规则的结构如下所示：
 
 `When on Object A:`
 
@@ -117,9 +118,9 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 
 `Then, do the following:`
 
-关于对象B的行动2;
+对对象B采取行动2；
 和
-关于对象C的行动3;
+关于对象C的行动3；
 
 _
 
@@ -200,27 +201,27 @@ _
 
 ### 设置值 {#set-value-of}
 
-**规则类型的**&#x200B;设置值允许您根据是否满足指定的条件来设置表单对象的值。 该值可以设置为另一个对象的值、文本字符串、从数学表达式或函数派生的值、另一个对象的属性的值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
+**[!UICONTROL 规则类型的]**&#x200B;设置值允许您根据是否满足指定的条件来设置表单对象的值。 该值可以设置为另一个对象的值、文本字符串、从数学表达式或函数派生的值、另一个对象的属性的值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
 
-“设置值”规则类型不适用于所有表单对象，例如面板和工具栏按钮。 标准“设置值”规则具有以下结构：
-
-
-
-将对象 A 的值设置为：
-
-（字符串 ABC）或
-（对象 C 的对象属性 X）或
-（来自函数的值）或
-（来自数学表达式的值）或
-（数据模型服务或 Web 服务的输出值）;
-
-当（可选）时：
-
-（条件 1 和条件 2 和条件 3）为 TRUE;
+“设置值”规则类型不适用于所有表单对象，例如面板和工具栏按钮。 标准的“设置值”规则具有以下结构：
 
 
 
-以下示例将字段中的值`dependentid`作为输入，并将字段的值`Relation`设置为表单数据模型服务的参数`getDependent`的`Relation`输出。
+将对象A的值设置为：
+
+（字符串ABC）或
+（对象C的对象属性X）或
+（函数中的值）或
+（数学表达式中的值）或
+（数据模型服务或Web服务的输出值）；
+
+时间（可选）：
+
+（条件1和条件2和条件3）为TRUE；
+
+
+
+以下示例将`dependentid`字段中的值作为输入，并将`Relation`字段的值设置为`Relation`表单数据模型服务的`getDependent`参数的输出。
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -372,13 +373,13 @@ _
 
 规则编辑器用户界面左侧的窗格包含两个选项卡 — **[!UICONTROL Forms对象]**&#x200B;和&#x200B;**[!UICONTROL 函数]**。
 
-“表单对象”选项卡显示自适应表单中包含的所有对象的分层视图。 它显示对象的标题和类型。 在编写规则时，可以将表单对象拖放到规则编辑器中。 在创建或编辑规则时，将对象或函数拖放到占位符中时，占位符会自动采用适当的值类型。
+“表单对象”选项卡显示自适应表单中包含的所有对象的分层视图。 它显示对象的标题和类型。 在编写规则时，可以将表单对象拖放到规则编辑器中。 在将对象或函数拖放到占位符中时，在创建或编辑规则时，占位符会自动采用相应的值类型。
 
-应用了一个或多个有效规则的表单对象用绿点标记。 如果应用于表单对象的任何规则无效，则该表单对象将标有黄点。
+应用了一个或多个有效规则的表单对象将标有绿点。 如果应用于表单对象的任意规则无效，则表单对象将标有黄点。
 
-“函数”选项卡包括一组内置函数，例如“总和”、“最小值”、“最大值”、“平均值”、“数目”和“验证表单”。 您可以使用这些函数计算可重复面板和表格行中的值，并在编写规则时在作和条件语句中使用它们。 不过，您也可以创建自定义 [函数](#custom-functions) 。
+“函数”选项卡包含一组内置函数，例如“总和”、“最小值”、“最大值”、“平均值”、“数目”和“验证表单”。 您可以使用这些函数计算可重复面板和表格行中的值，并在编写规则时在操作和条件语句中使用它们。 但是，您也可以创建[自定义函数](#custom-functions)。
 
-![“功能”选项卡](assets/functions.png)
+![函数选项卡](assets/functions.png)
 
 >[!NOTE]
 >
@@ -549,7 +550,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
 添加到表单超级用户组的用户可以使用代码编辑器。 规则编辑器会自动为您使用可视编辑器创建的任何规则生成JavaScript代码。 您可以从可视编辑器切换到代码编辑器以查看生成的代码。 但是，如果在代码编辑器中修改规则代码，则无法切换回可视编辑器。 如果更愿意在代码编辑器而不是可视编辑器中编写规则，则可以在代码编辑器中重新编写规则。 可视代码编辑器切换器可帮助您在这两种模式之间切换。
 
-代码编辑器JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，都使用自适应表单脚本模型API。 这些表达式返回某些类型的值。 有关自适应表单类、事件、对象和公共API的完整列表，请参阅自适应表单的[JavaScript库API参考](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javascript-api/index.html)。
+代码编辑器JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，都使用自适应表单脚本模型API。 这些表达式返回某些类型的值。 有关自适应表单类、事件、对象和公共API的完整列表，请参阅自适应表单的[JavaScript库API参考](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html)。
 
 有关在代码编辑器中编写规则的准则的更多信息，请参阅[自适应表单表达式](/help/forms/using/adaptive-form-expressions.md)。
 
@@ -608,7 +609,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 语法： `@return {type}`
 或者，您可以使用`@returns {type}`。
 添加有关函数的信息，例如其目标。
-{type}表示函数的返回类型。 允许的返回类型包括：
+  {type}表示函数的返回类型。 允许的返回类型包括：
 
    1. 字符串
    1. 数字
@@ -621,7 +622,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
   使用@this引用编写了规则的自适应表单组件。
 
-  以下示例基于字段值。 在以下示例中，规则隐藏了表单中的字段。 `this.value`的`this`部分引用了写入规则的基础自适应表单组件。
+  以下示例基于字段值。 在以下示例中，规则隐藏了表单中的字段。 `this`的`this.value`部分引用了写入规则的基础自适应表单组件。
 
   ```
      /**
@@ -890,9 +891,9 @@ var c = {
 
 ![example-validate](assets/example-validate.png)
 
-可视化编辑器中的规则
+可视编辑器中的规则
 
-该规则在代码编辑器中显示如下。
+该规则在代码编辑器中如下所示。
 
 ![example-validate-code](assets/example-validate-code.png)
 

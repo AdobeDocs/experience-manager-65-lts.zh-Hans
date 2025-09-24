@@ -8,19 +8,20 @@ feature: Form Data Model
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: b27fceaf-38f8-433e-96c6-4f98bafa31af
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
 
 # 创建表单数据模型{#create-form-data-model}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models.html)。
 
 
 ![主页图像](do-not-localize/data-integration.png)
@@ -79,7 +80,7 @@ AEM Forms数据集成提供了一个直观的用户界面，用于创建和使�
 
    在更新Source选项卡中：
 
-   * 在&#x200B;**[!UICONTROL 上下文感知配置]**&#x200B;字段中选择浏览图标，然后选择要添加的数据源的云配置驻留的配置节点。 如果不选择节点，则在选择&#x200B;**[!UICONTROL 添加源]**&#x200B;时，将列出仅驻留在`global`节点中的云配置。
+   * 在&#x200B;**[!UICONTROL 上下文感知配置]**&#x200B;字段中选择浏览图标，然后选择要添加的数据源的云配置驻留的配置节点。 如果不选择节点，则在选择`global`添加源&#x200B;**[!UICONTROL 时，将列出仅驻留在]**&#x200B;节点中的云配置。
 
    * 要添加新数据源，请选择&#x200B;**[!UICONTROL 添加源]**，然后选择要添加到表单数据模型的数据源。 将显示在`global`中配置的所有数据源和选定的配置节点（如果有）。
 

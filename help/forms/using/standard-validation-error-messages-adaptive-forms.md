@@ -10,21 +10,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 17d1976e-96bd-4f8a-8be5-ea208c5ba93f
-source-git-commit: 0588e3590da69cdf49c61abc0a422093d04f5c41
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2352'
-ht-degree: 84%
+source-wordcount: '2361'
+ht-degree: 83%
 
 ---
 
 # 自适应Forms中的错误处理程序 {#error-handlers-in-adaptive-form}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/add-custom-error-handler-adaptive-forms.html)。
 
 
 AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提供用于自定义错误处理函数的功能。例如，可在后端为特定的错误代码调用自定义工作流或通知客户服务已停止。处理程序是根据服务器响应执行的客户端函数。在使用 API 调用外部服务时，数据会传输到服务器以进行验证，这会向客户端返回响应，其中包含有关提交的成功或错误事件的信息。该信息作为参数传递给相关处理程序以执行该函数。错误处理程序可帮助管理和显示遇到的错误或验证问题。
@@ -181,7 +182,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 在自适应Forms中使用自定义错误处理程序之前：
 
-* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=zh-Hans#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
+* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
 * 安装[Apache Maven](https://maven.apache.org/download.cgi)的最新版本。
 
 
@@ -257,9 +258,9 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 1. 保存更改。
 
-1. 在`clientlibs`文件夹下创建名为`js`的文件夹。
-1. 在`js`文件夹下创建名为`functions.js`的JavaScript文件
-1. 在`clientlibs`文件夹下创建名为`js.txt`的文件。
+1. 在`js`文件夹下创建名为`clientlibs`的文件夹。
+1. 在`functions.js`文件夹下创建名为`js`的JavaScript文件
+1. 在`js.txt`文件夹下创建名为`clientlibs`的文件。
 1. 保存更改。
 创建的文件夹结构如下所示：
 
@@ -305,7 +306,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。它还提�
 
 ![在自适应表单容器配置中添加客户端库的名称](/help/forms/using/assets/client-library-category-name.png)
 
-在这种情况下，客户端库名称在`.content.xml`文件中提供为`customfunctionsdemo`。
+在这种情况下，客户端库名称在`customfunctionsdemo`文件中提供为`.content.xml`。
 
 要通过&#x200B;**[!UICONTROL 规则编辑器的调用服务]**&#x200B;操作使用自定义错误处理程序，请执行以下操作：
 

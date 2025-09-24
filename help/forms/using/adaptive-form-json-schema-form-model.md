@@ -6,28 +6,29 @@ level: Beginner, Intermediate
 feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: 8d2781e7-732e-42e4-b18b-e6d9ceaa7abe
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1851'
 ht-degree: 7%
 
 ---
 
-# 使用JSON架构创建自适应表单 {#creating-adaptive-forms-using-json-schema}
+# 使用 JSON 架构创建自适应表单 {#creating-adaptive-forms-using-json-schema}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html)。
 
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 使用JSON架构作为自适应表单的表单模型创作时，需要基本了解JSON架构。 建议在阅读本文之前通读以下内容。
 
-* [创建自适应表单](creating-adaptive-form.md)
+* [创建自适应表单 ](creating-adaptive-form.md)
 * [JSON架构](https://json-schema.org/)
 
 ## 使用JSON架构作为表单模型  {#using-a-json-schema-as-form-model}
@@ -343,7 +344,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 ## 在JSON架构定义中预配置字段 {#pre-configuring-fields-in-json-schema-definition}
 
-您可以使用&#x200B;**aem：afProperties**&#x200B;属性预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
+您可以使用&#x200B;**aem:afProperties**&#x200B;属性预配置JSON架构字段以映射到自定义自适应表单组件。 下面列出了一个示例：
 
 ```json
 {
@@ -367,7 +368,7 @@ JSON元素与自适应表单组件的映射如下所示：
 
 JavaScript是自适应表单的表达式语言。 所有表达式都是有效的JavaScript表达式，都使用自适应表单脚本模型API。 您可以预先配置表单对象，以便[评估表单事件上的表达式](adaptive-form-expressions.md)。
 
-使用aem：afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，触发初始化事件时，以下代码设置telephone字段的值并将值打印到日志：
+使用aem:afproperties属性为自适应表单组件预配置自适应表单表达式或脚本。 例如，触发初始化事件时，以下代码设置telephone字段的值并将值打印到日志：
 
 ```json
 "telephone": {

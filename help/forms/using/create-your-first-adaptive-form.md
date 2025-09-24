@@ -1,23 +1,24 @@
 ---
-title: 教程：创建您的第一个自适应表单
+title: 教程：创建第一个自适应表单
 description: 了解如何创建企业级、交互式和响应式表单。
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: caa79def-4a29-4746-9a35-c362ea1c3c0c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 5%
+source-wordcount: '917'
+ht-degree: 6%
 
 ---
 
-# 教程：创建您的第一个自适应表单 {#tutorial-create-your-first-adaptive-form}
+# 教程：创建第一个自适应表单 {#tutorial-create-your-first-adaptive-form}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html)。
 
 
 ![01-create-first-adaptive-form-hero-image](assets/01-create-first-adaptive-form-hero-image.png)
@@ -43,7 +44,7 @@ ht-degree: 5%
 
 ### 先决条件 {#prerequisite}
 
-* 设置[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/deploying/deploying/deploy.html?lang=zh-Hans#author-and-publish-installs)
+* 设置[AEM创作实例](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/implementing/deploying/deploying/deploy.html#author-and-publish-installs)
 * 在创作实例上安装[AEM Forms加载项](../../forms/using/installing-configuring-aem-forms-osgi.md)。
 * 从数据库提供程序获取JDBC数据库驱动程序（JAR文件）。 本教程中的示例基于[!DNL MySQL]数据库并使用[!DNL Oracle's] [MySQL JDBC数据库驱动程序](https://dev.mysql.com/downloads/connector/j/5.1.html)。
 
@@ -66,7 +67,7 @@ ht-degree: 5%
 
 [![请参阅指南](assets/see-the-guide-sm.png)](create-adaptive-form.md)
 
-## 步骤2：创建表单数据模型 {#step-create-form-data-model}
+## 步骤 2：创建表单数据模型 {#step-create-form-data-model}
 
 ![05-create-form-data-model-main_small](assets/05-create-form-data-model-main_small.png)
 
@@ -113,7 +114,7 @@ ht-degree: 5%
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[Forms门户](../../forms/using/introduction-publishing-forms.md)在AEM [!DNL Site]上列出。
+您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[!DNL Site]Forms门户[在AEM ](../../forms/using/introduction-publishing-forms.md)上列出。
 
 目标：
 

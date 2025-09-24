@@ -1,5 +1,5 @@
 ---
-title: 在门户上发布表单的简介
+title: 在门户上发布表单简介
 description: Adobe Experience Manager Forms提供了可用于构建Forms Portal的组件。 向您介绍可用的Forms Portal组件。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,19 +9,20 @@ solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
 exl-id: 606cd19d-b244-4c4d-ab25-7709351dcfe0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 1%
+source-wordcount: '1052'
+ht-degree: 3%
 
 ---
 
-# 在门户上发布表单的简介{#introduction-to-publishing-forms-on-a-portal}
+# 在门户上发布表单简介{#introduction-to-publishing-forms-on-a-portal}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans)。
 
 
 ## AEM Forms portal组件概述 {#aem-forms-portal-components-overview}
@@ -92,4 +93,4 @@ Forms门户允许您将表单从表单存储库列出到门户页面上。 它�
 * [自定义草稿和已提交表单的存储](../../forms/using/draft-submission-component.md#customizing-the-storage)
 * [将草稿和提交组件与数据库集成的示例](integrate-draft-submission-database.md)
 * [自定义Forms Portal组件的模板](../../forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](../../forms/using/introduction-publishing-forms.md)
+* [在门户上发布表单简介](../../forms/using/introduction-publishing-forms.md)

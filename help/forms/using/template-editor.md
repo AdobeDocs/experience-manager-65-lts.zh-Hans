@@ -9,21 +9,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 6e909f87-4233-4158-a4e1-f0ee2ada366a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2039'
 ht-degree: 3%
 
 ---
 
 # 自适应表单模板{#adaptive-form-templates}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/template-editor.html)。
 
 
 
@@ -63,8 +64,8 @@ ht-degree: 3%
    * **切换侧面板**：用于显示或隐藏侧栏。
    * **页面信息**：用于指定发布/取消发布时间、缩略图、客户端库、页面策略和页面设计客户端库等信息。
    * **模拟器**：用于模拟和自定义不同设备的外观。
-   * **图层选择器：**&#x200B;允许您更改图层。
-您可以选择&#x200B;**结构**&#x200B;层或&#x200B;**初始内容**&#x200B;层。 利用结构层，可添加和自定义页眉和页脚。 通过初始内容层，可自定义表单内容。
+   * **图层选择器：**允许您更改图层。
+您可以选择**结构**&#x200B;层或&#x200B;**初始内容**&#x200B;层。 利用结构层，可添加和自定义页眉和页脚。 通过初始内容层，可自定义表单内容。
 
    * **预览：**&#x200B;允许您预览发布模板时的外观。 您可以使用“图层选择器”和“预览”来切换编辑和预览模式。
 
@@ -172,7 +173,7 @@ ht-degree: 3%
 
 ## 导入或导出模板 {#importing-or-exporting-a-template}
 
-表单可与其模板配合使用。 下载使用自定义模板创建的自适应表单时，不会下载该模板。 在其他AEM Forms实例上导入表单时，不会导入任何表单模板。 如果表单已导入，但其模板不可用，则不会呈现表单。 您可以从`https://<server>:<port>/crx/packmgr`中的`/conf`节点打包自定义模板，并将其移植到要上载表单的AEM Forms实例中。
+表单可与其模板配合使用。 下载使用自定义模板创建的自适应表单时，不会下载该模板。 在其他AEM Forms实例上导入表单时，不会导入任何表单模板。 如果表单已导入，但其模板不可用，则不会呈现表单。 您可以从`/conf`中的`https://<server>:<port>/crx/packmgr`节点打包自定义模板，并将其移植到要上载表单的AEM Forms实例中。
 
 ## 使用模板创建自适应表单 {#creating-an-adaptive-form-using-the-template}
 

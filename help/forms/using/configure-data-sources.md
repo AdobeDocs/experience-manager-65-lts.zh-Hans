@@ -8,19 +8,20 @@ feature: Form Data Model
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 30b7b311-574d-4b01-8b48-0342c160d4d4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2073'
-ht-degree: 2%
+source-wordcount: '2085'
+ht-degree: 1%
 
 ---
 
 # 配置数据源{#configure-data-sources}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html)。
 
 
 ![数据集成](do-not-localize/data-integeration.png)
@@ -87,7 +88,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >上例中的&#x200B;**&#42;**&#x200B;表示CRXDE结构中AEM用户配置文件中`profile/empLocation/`节点下的所有节点。 这意味着表单数据模型可以访问`profile/empLocation/`节点下的任何节点中存在的类型为`string`的`city`属性。 但是，包含指定属性的节点必须遵循一致结构。
+   >上例中的&#x200B;**&#42;**&#x200B;表示CRXDE结构中AEM用户配置文件中`profile/empLocation/`节点下的所有节点。 这意味着表单数据模型可以访问`city`节点下的任何节点中存在的类型为`string`的`profile/empLocation/`属性。 但是，包含指定属性的节点必须遵循一致结构。
 
 1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以保存配置。
 
@@ -151,7 +152,7 @@ AEM中的所有云服务配置都已合并到AEM存储库的`/conf`文件夹中�
 
 1. 以管理员身份登录到[!DNL Experience Manager Forms]创作实例并转到[!DNL Experience Manager] Web控制台包。 默认URL为[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 
-1. 为REST数据源&#x200B;**选择**&#x200B;表单数据模型Http客户端配置。
+1. 为REST数据源&#x200B;**[!UICONTROL 选择]**&#x200B;表单数据模型Http客户端配置。
 
 1. 在[!UICONTROL REST数据源]的表单数据模型HTTP客户端配置对话框中：
 
@@ -161,7 +162,7 @@ AEM中的所有云服务配置都已合并到AEM存储库的`/conf`文件夹中�
 
    * 在&#x200B;**[!UICONTROL 保持活动]**&#x200B;字段中指定持续HTTP连接保持活动状态的持续时间。 默认值为15秒。
 
-   * 在&#x200B;**[!UICONTROL 连接超时]**&#x200B;字段中指定[!DNL Experience Manager Forms]服务器等待连接建立的持续时间。 默认值为10秒。
+   * 在[!DNL Experience Manager Forms]连接超时&#x200B;**[!UICONTROL 字段中指定]**&#x200B;服务器等待连接建立的持续时间。 默认值为10秒。
 
    * 在&#x200B;**[!UICONTROL 套接字超时]**&#x200B;字段中指定两个数据包之间的最长不活动时间段。 默认值为30秒。
 
@@ -181,7 +182,7 @@ AEM中的所有云服务配置都已合并到AEM存储库的`/conf`文件夹中�
    * 选择身份验证类型 — None、OAuth2.0（[授权代码](https://oauth.net/2/grant-types/authorization-code/)、[客户端凭据](https://oauth.net/2/grant-types/client-credentials/)）、Basic Authentication、Custom Authentication、X509 Token或Mutual Authentication — 以访问SOAP服务，并相应地提供身份验证的详细信息。
 
      如果选择&#x200B;**[!UICONTROL X509 Token]**&#x200B;作为身份验证类型，请配置X509证书。 有关详细信息，请参阅[设置证书](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)。
-在&#x200B;**[!UICONTROL 密钥别名]**&#x200B;字段中指定X509证书的KeyStore别名。 在&#x200B;**[!UICONTROL 生存时间]**&#x200B;字段中指定身份验证请求保持有效的时间（秒）。 （可选）选择对消息正文或时间戳标头签名或同时选择两者。
+在**[!UICONTROL 密钥别名]**&#x200B;字段中指定X509证书的KeyStore别名。 在&#x200B;**[!UICONTROL 生存时间]**&#x200B;字段中指定身份验证请求保持有效的时间（秒）。 （可选）选择对消息正文或时间戳标头签名或同时选择两者。
 
      如果选择&#x200B;**[!UICONTROL 相互身份验证]**&#x200B;作为身份验证类型，请参阅[RESTful和SOAP Web服务的基于证书的相互身份验证](#mutual-authentication)。
 
@@ -194,7 +195,7 @@ OData服务由其服务根URL标识。 要在AEM云服务中配置OData服务，
 >[!NOTE]
 >
 >表单数据模型支持[OData版本4](https://www.odata.org/documentation/)。
->有关配置Microsoft Dynamics 365（在线或本地）的分步指南，请参阅[Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md)。
+>>有关配置Microsoft Dynamics 365（在线或本地）的分步指南，请参阅[Microsoft Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md)。
 
 1. 转到&#x200B;**[!UICONTROL 工具>云服务>数据源]**。 选择以选择要创建云配置的文件夹。
 

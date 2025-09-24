@@ -8,19 +8,20 @@ feature: Form Data Model
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 6c3c4d7f-fc4c-44ad-886f-f76d0532d91a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1216'
 ht-degree: 1%
 
 ---
 
 # Microsoft Dynamics OData配置{#microsoft-dynamics-odata-configuration}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/ms-dynamics-odata-configuration.html)。
 
 ![数据集成](assets/data-integeration.png)
 
@@ -39,7 +40,7 @@ AEM Forms附加组件包还包括引用OData配置，可使用该配置快速将
 
 仅当Microsoft Dynamics实例的运行模式设置为`samplecontent`（默认值）时，表单数据模型中预配置的AEM实体和服务才在您的AEM Forms实例上可用。 MS Dynamics OData Cloud Service （OData服务）也可用于其他运行模式。 有关为AEM实例配置运行模式的详细信息，请参阅[运行模式](/help/sites-deploying/configure-runmodes.md)。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在开始设置和配置Microsoft Dynamics之前，请确保您具有：
 
@@ -103,7 +104,6 @@ Microsoft Dynamics使用基于声明的身份验证向外部用户提供对Micro
 
    * `Client-ID`是使用任何GUID生成器生成的客户端ID。
    * `redirect-uri`是AEM Forms上Microsoft Dynamics OData云服务的URL。 与AEM Forms包一起安装的默认Cloud Service部署在以下URL中：
-
      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. 运行以下命令以授予AD FS计算机上的访问权限：

@@ -9,23 +9,24 @@ feature: Forms Portal
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 03430815-6459-469c-b3dd-4cd83b9eec5f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1666'
-ht-degree: 2%
+source-wordcount: '1675'
+ht-degree: 3%
 
 ---
 
 # 创建表单门户页面{#creating-a-forms-portal-page}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-forms-portal.html?lang=zh-Hans)。
 
 Forms门户组件为Web开发人员提供了组件，以便在使用Adobe Experience Manager (AEM)创作的网站上创建和自定义表单门户。 有关表单门户的快速概述，请参阅[在门户上发布表单的简介](../../forms/using/introduction-publishing-forms.md)。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 默认情况下，Forms门户组件不可用。 请确保按照[启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)中的说明启用以下表单门户组件类别。
 
@@ -114,7 +115,7 @@ Forms portal组件类别
   <tr>
    <td> </td>
    <td>Of 文本</td>
-   <td><p>将</strong>的<strong>一词替换为指定的文本（第1 <strong>页，共</strong>51页）。 默认值为<strong>个，共</strong>个。</p> <p>例如，如果在此字段中指定<strong>/</strong>，则文本将更改为第1页<strong>/</strong>51。</p> </td>
+   <td><p>将<strong>的</strong>一词替换为指定的文本（第1 <strong>页，共</strong>51页）。 默认值为<strong>个，共</strong>个。</p> <p>例如，如果在此字段中指定<strong>/</strong>，则文本将更改为第1页<strong>/</strong>51。</p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>表单链接</strong></code></td>
@@ -261,5 +262,5 @@ forms portal开箱即用地提供渲染操作。 您可以自定义表单门户�
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)
+* [自定义表单门户组件模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)

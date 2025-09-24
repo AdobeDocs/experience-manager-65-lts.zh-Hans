@@ -1,5 +1,5 @@
 ---
-title: 支持自适应表单本地化的新区域设置
+title: 为自适应表单本地化新增区域设置提供支持
 description: AEM Forms允许您添加新的区域设置来本地化自适应表单。 默认情况下，支持的语言环境为英语、法语、德语和日语。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,19 +9,20 @@ feature: Adaptive Forms,Foundation Components
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 exl-id: 9c516c90-1b1d-406a-b42d-909aae8bb634
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 2%
+source-wordcount: '841'
+ht-degree: 7%
 
 ---
 
-# 支持自适应表单本地化的新区域设置{#supporting-new-locales-for-adaptive-forms-localization}
+# 为自适应表单本地化新增区域设置提供支持{#supporting-new-locales-for-adaptive-forms-localization}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html)。
 
 ## 关于区域设置词典 {#about-locale-dictionaries}
 
@@ -82,9 +83,9 @@ AEM Forms当前支持英语(en)、西班牙语(es)、法语(fr)、意大利语(i
 
 ### 为区域设置添加XFA客户端库 {#add-xfa-client-library-for-a-locale-br}
 
-在`etc/<folderHierarchy>`下创建类别为`xfaforms.I18N.<locale>`的`cq:ClientLibraryFolder`类型的节点，并将以下文件添加到客户端库：
+在`cq:ClientLibraryFolder`下创建类别为`etc/<folderHierarchy>`的`xfaforms.I18N.<locale>`类型的节点，并将以下文件添加到客户端库：
 
-* **I18N.js**&#x200B;定义了`/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`中定义的`<locale>`的`xfalib.locale.Strings`。
+* **I18N.js**&#x200B;定义了`xfalib.locale.Strings`中定义的`<locale>`的`/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`。
 
 * **js.txt**&#x200B;包含以下内容：
 
@@ -96,12 +97,12 @@ I18N.js
 
 ### 为区域设置添加自适应表单客户端库 {#add-adaptive-form-client-library-for-a-locale-br}
 
-在`etc/<folderHierarchy>`下创建类型为`cq:ClientLibraryFolder`的节点，类别为`guides.I18N.<locale>`，依赖项为`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 ”
+在`cq:ClientLibraryFolder`下创建类型为`etc/<folderHierarchy>`的节点，类别为`guides.I18N.<locale>`，依赖项为`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 ”
 
 将以下文件添加到客户端库：
 
-* **i18n.js**&#x200B;定义`guidelib.i18n`，根据[区域设置集规范](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)中描述的XFA规范，其模式为`<locale>`的“calendarSymbols”、`datePatterns`、`timePatterns`、`dateTimeSymbols`、`numberPatterns`、`numberSymbols`、`currencySymbols`和`typefaces`。 您还可以看到如何为`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`中其他支持的区域设置定义它。
-* **LogMessages.js**&#x200B;定义了`/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`中定义的`<locale>`的`guidelib.i18n.strings`和`guidelib.i18n.LogMessages`。
+* **i18n.js**&#x200B;定义`guidelib.i18n`，根据`datePatterns`区域设置集规范`timePatterns`中描述的XFA规范，其模式为`dateTimeSymbols`的“calendarSymbols”、`numberPatterns`、`numberSymbols`、`currencySymbols`、`typefaces`、`<locale>`、[和](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)。 您还可以看到如何为`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`中其他支持的区域设置定义它。
+* **LogMessages.js**&#x200B;定义了`guidelib.i18n.strings`中定义的`guidelib.i18n.LogMessages`的`<locale>`和`/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`。
 * **js.txt**&#x200B;包含以下内容：
 
 ```text
@@ -113,12 +114,12 @@ LogMessages.js
 
 仅当要添加的`<locale>`不属于`en`、`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`时才执行此步骤。
 
-1. 在`etc`下创建一个`nt:unstructured`节点`languages`（如果尚未存在）。
+1. 在`nt:unstructured`下创建一个`languages`节点`etc`（如果尚未存在）。
 
 1. 将多值字符串属性`languages`添加到节点（如果尚不存在）。
 1. 添加`<locale>`默认区域设置值`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`（如果尚未存在）。
 
-1. 将`<locale>`添加到`/etc/languages`的`languages`属性的值。
+1. 将`<locale>`添加到`languages`的`/etc/languages`属性的值。
 
 `<locale>`将显示在`https://'[server]:[port]'/libs/cq/i18n/translator.html`。
 
@@ -128,7 +129,7 @@ LogMessages.js
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。如果使用其他方式（例如直接停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ## 用于添加西班牙语支持的示例库 {#sample-libraries-for-adding-support-for-spanish}
 

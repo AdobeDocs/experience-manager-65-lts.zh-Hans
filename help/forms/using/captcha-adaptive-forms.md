@@ -1,5 +1,5 @@
 ---
-title: 在自适应表单中使用CAPTCHA
+title: 在自适应表单中使用 CAPTCHA
 description: 了解如何在自适应表单中配置AEM验证码或Google reCAPTCHA服务。
 contentOwner: vishgupt
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,22 +9,23 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 300fcbdc-d884-409b-9011-89cdf2706535
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1841'
 ht-degree: 9%
 
 ---
 
-# 在自适应表单中使用CAPTCHA{#using-captcha-in-adaptive-forms}
+# 在自适应表单中使用 CAPTCHA{#using-captcha-in-adaptive-forms}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/captcha-adaptive-forms.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-components-to-an-adaptive-form/captcha-adaptive-forms.html?lang=zh-Hans)。
 
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 CAPTCHA（区分计算机和人类的完全自动化公共图灵测试）是一种在线交易中常用的程序，用于区分人类和自动化程序或机器人。它提出了一个挑战，并评估用户响应以确定是人还是机器人与网站交互。如果测试失败，它会阻止用户继续操作，并通过阻止机器人发布垃圾邮件或恶意目的来帮助确保在线交易的安全。
 
@@ -46,9 +47,9 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
 ### 配置 reCAPTCHA Enterprise  {#steps-to-implement-reCAPTCHA-enterprise-in-forms}
 
-1. 创建已启用[reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api)的[reCAPTCHA Enterprise项目](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin)。
+1. 创建已启用[reCAPTCHA Enterprise API](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#before-you-begin)的[reCAPTCHA Enterprise项目](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#enable-the-recaptcha-enterprise-api)。
 1. [获取](https://support.google.com/googleapi/answer/7014113?hl=en#:~:text=To%20locate%20your%20project%20ID,a%20member%20of%20are%20displayed)项目ID。
-1. 为网站[&#128279;](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key)创建[API密钥](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key)和站点密钥。
+1. 为网站[创建](https://cloud.google.com/recaptcha-enterprise/docs/set-up-non-google-cloud-environments-api-keys#create_an_api_key)API密钥[和](https://cloud.google.com/recaptcha-enterprise/docs/create-key#create-key)站点密钥。
 1. 为云服务创建配置容器。
 
    1. 转到&#x200B;**[!UICONTROL 工具>常规>配置浏览器]**。 有关详细信息，请参阅[配置浏览器](/help/sites-administering/configurations.md)文档。
@@ -76,7 +77,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
    1. 在“编辑组件”对话框中，指定名称、项目ID、站点密钥、API密钥（在步骤2和3中获得），选择密钥类型，然后输入阈值分数。 选择&#x200B;**[!UICONTROL 保存设置]**，然后选择&#x200B;**[!UICONTROL 确定]**&#x200B;以完成配置。
 
-reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参阅在自适应表单[&#128279;](#using-reCAPTCHA)中使用CAPTCHA 。
+reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参阅在自适应表单[中使用CAPTCHA ](#using-reCAPTCHA)。
 
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 
@@ -257,7 +258,7 @@ reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参�
 要根据条件和用户操作验证验证码，请执行以下操作：
 
 1. 选择CAPTCHA组件并选择![cmppr](assets/configure-icon.svg)以查看组件属性。
-1. 在&#x200B;**[!UICONTROL 验证CAPTCHA]**&#x200B;部分中，针对用户操作&#x200B;**选择**&#x200B;验证CAPTCHA。
+1. 在&#x200B;**[!UICONTROL 验证CAPTCHA]**&#x200B;部分中，针对用户操作&#x200B;**[!UICONTROL 选择]**&#x200B;验证CAPTCHA。
 1. 选择![完成](assets/save_icon.svg)以保存组件属性。
 
    >[!NOTE]
@@ -291,7 +292,7 @@ if (slingRequest.getParameter("numericbox1614079614831").length() >= 5) {
 1. 从自适应表单的&#x200B;**[!UICONTROL 提交]**&#x200B;属性中的&#x200B;**[!UICONTROL 提交操作]**&#x200B;下拉列表中选择自定义提交操作的名称。
 1. 选择&#x200B;**[!UICONTROL 提交]**。 根据自定义提交操作的`ValidateCAPTCHA` API中定义的条件验证验证码。
 
-**选项2：在提交表单**&#x200B;之前，使用[!DNL Experience Manager Forms] ValidateCAPTCHA API在用户操作中验证验证码
+**选项2：在提交表单[!DNL Experience Manager Forms]之前，使用** ValidateCAPTCHA API在用户操作中验证验证码
 
 您还可以通过对自适应表单中的组件应用规则来调用`ValidateCAPTCHA` API。
 

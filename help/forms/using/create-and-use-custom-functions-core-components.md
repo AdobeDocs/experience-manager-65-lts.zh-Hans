@@ -6,10 +6,10 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 role: Admin, User, Developer
 exl-id: 5f6106a9-64a6-45aa-a31d-2075d1e911bf
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 2%
+source-wordcount: '3394'
+ht-degree: 1%
 
 ---
 
@@ -24,10 +24,11 @@ ht-degree: 2%
 请确保在AEM Forms核心组件环境中设置[最新表单版本](https://github.com/adobe/aem-core-forms-components/tree/release/650)以使用自定义函数中的最新功能。</span>
 
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM 6.5 | 本文 |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions)。
 
 ## 简介
 
@@ -60,8 +61,8 @@ AEM Forms 6.5包括JavaScript函数，这些函数允许您使用规则编辑器
 
 >[!NOTE]
 >`[functionName]`是函数的名称。 不允许使用空格。
->`<Function Name>` 是自适应Forms的规则编辑器中函数的显示名称。
->如果函数名称与函数本身的名称相同，则可以在语法中省略`[functionName]`。
+>>`<Function Name>` 是自适应Forms的规则编辑器中函数的显示名称。
+>>如果函数名称与函数本身的名称相同，则可以在语法中省略`[functionName]`。
 
 #### 参数
 
@@ -355,7 +356,7 @@ var c = {
 
 ### 使用AEM项目原型创建客户端库{#create-client-library-archetype}
 
-您可以向使用AEM项目原型[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)创建的项目中添加客户端库，从而添加自定义函数。
+您可以向使用AEM项目原型[创建的项目](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)中添加客户端库，从而添加自定义函数。
 如果您现有项目<!--and have already the project structure as shown in the image below,-->，则可以直接将[自定义函数](#create-add-custom-function)添加到本地项目。
 
 <!--![custom fuction folder structure](assets/custom-library-folder-structure.png)-->
@@ -437,7 +438,7 @@ var c = {
 
 **在filter.xml中包含新文件夹**：
 
-1. 导航到[AEMaaCS项目目录]中的`/ui.apps/src/main/content/META-INF/vault/filter.xml`文件。
+1. 导航到`/ui.apps/src/main/content/META-INF/vault/filter.xml`AEMaaCS项目目录[中的]文件。
 
 1. 打开文件，并在末尾添加以下行：
 
@@ -469,9 +470,9 @@ var c = {
 
 1. 保存更改。
 
-1. 在`clientlibs`文件夹下创建名为`js`的文件夹。
-1. 在`js`文件夹下创建名为`functions.js`的JavaScript文件。
-1. 在`clientlibs`文件夹下创建名为`js.txt`的文件。
+1. 在`js`文件夹下创建名为`clientlibs`的文件夹。
+1. 在`functions.js`文件夹下创建名为`js`的JavaScript文件。
+1. 在`js.txt`文件夹下创建名为`clientlibs`的文件。
 1. 保存更改。
 创建的文件夹结构如下所示：
 
@@ -532,11 +533,11 @@ var c = {
 
 ![正在添加自定义函数客户端库](/help/forms/using//assets/calculateage-customfunction.png)
 
-现在，让我们了解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用规则编辑器的调用服务来配置和使用自定义函数
+现在，让我们了解如何在AEM Forms 6.5[中使用](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)规则编辑器的调用服务来配置和使用自定义函数
 
 ## 在自适应表单中使用自定义函数 {#use-custom-functions}
 
-在自适应表单中，您可以在规则编辑器[&#128279;](/help/forms/using/rule-editor-core-components.md)中使用自定义函数。
+在自适应表单中，您可以在规则编辑器[中使用](/help/forms/using/rule-editor-core-components.md)自定义函数。
 让我们将以下代码添加到JavaScript文件（`Function.js`文件）中，以根据出生日期(YYYY-MM-DD)计算年龄。 创建自定义函数作为`calculateAge()`，它将出生日期作为输入并返回年龄：
 
 ```javascript
@@ -572,7 +573,7 @@ var c = {
 
 >[!NOTE]
 >
-> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
+> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
 
 ### 在自定义函数中支持异步函数 {#support-of-async-functions}
 
@@ -609,7 +610,7 @@ var c = {
 }
 ```
 
-在上述示例中，asyncFunction函数是`asynchronous function`。 它通过向`https://petstore.swagger.io/v2/store/inventory`发出`GET`请求来执行异步操作。 它使用`await`等待响应，使用`response.json()`将响应正文解析为JSON，然后返回数据。 `callAsyncFunction`函数是一个同步自定义函数，它调用`asyncFunction`函数并在控制台中显示响应数据。 虽然`callAsyncFunction`函数是同步的，但它调用异步asyncFunction函数并使用`then`和`catch`语句处理其结果。
+在上述示例中，asyncFunction函数是`asynchronous function`。 它通过向`GET`发出`https://petstore.swagger.io/v2/store/inventory`请求来执行异步操作。 它使用`await`等待响应，使用`response.json()`将响应正文解析为JSON，然后返回数据。 `callAsyncFunction`函数是一个同步自定义函数，它调用`asyncFunction`函数并在控制台中显示响应数据。 虽然`callAsyncFunction`函数是同步的，但它调用异步asyncFunction函数并使用`then`和`catch`语句处理其结果。
 
 要查看其是否有效，让我们添加一个按钮，并为按钮创建一个规则，该规则会在单击按钮时调用异步函数。
 
@@ -689,11 +690,11 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 在此示例中，`personaldetails`面板的验证是在单击按钮时进行的。 如果在面板中未检测到错误，则单击按钮后，另一个面板（`feedback`面板）将变为可见。
 
-让我们为`Next`按钮创建一个规则，该规则将验证`personaldetails`面板，并在用户单击`Next`按钮时使`feedback`面板可见。
+让我们为`Next`按钮创建一个规则，该规则将验证`personaldetails`面板，并在用户单击`feedback`按钮时使`Next`面板可见。
 
 ![设置属性](/help/forms/using/assets/custom-function-set-property.png)
 
-请参阅下图以演示单击`Next`按钮时验证`personaldetails`面板的位置。 如果`personaldetails`中的所有字段都已验证，`feedback`面板将变为可见。
+请参阅下图以演示单击`personaldetails`按钮时验证`Next`面板的位置。 如果`personaldetails`中的所有字段都已验证，`feedback`面板将变为可见。
 
 ![设置属性表单预览](/help/forms/using/assets/set-property-form-preview.png)
 
@@ -972,7 +973,7 @@ In case, the custom submit action fails to perform as expected in existing AEM p
 
 ## 对自定义函数的缓存支持
 
-自适应Forms在规则编辑器中检索自定义函数列表时，为自定义函数实施缓存以增强响应时间。 `error.log`文件中显示一条消息，名称为`Fetched following custom functions list from cache`。
+自适应Forms在规则编辑器中检索自定义函数列表时，为自定义函数实施缓存以增强响应时间。 `Fetched following custom functions list from cache`文件中显示一条消息，名称为`error.log`。
 
 支持缓存的![自定义函数](/help/forms/using/assets/custom-function-cache-error.png)
 
@@ -982,16 +983,16 @@ In case, the custom submit action fails to perform as expected in existing AEM p
 
 * 用户需要确保[核心组件和规范版本设置为最新版本](https://github.com/adobe/aem-core-forms-components/tree/release/650)。 但是，对于现有AEM项目和表单，还需要执行其他步骤：
 
-   * 对于AEM项目，用户应使用`submitForm()`替换`submitForm('custom:submitSuccess', 'custom:submitError')`的所有实例并部署该项目。
+   * 对于AEM项目，用户应使用`submitForm('custom:submitSuccess', 'custom:submitError')`替换`submitForm()`的所有实例并部署该项目。
 
-   * 对于现有表单，如果自定义提交处理程序无法正常运行，用户需要使用规则编辑器在&#x200B;**提交**&#x200B;按钮上打开并保存`submitForm`规则。 此操作将`submitForm('custom:submitSuccess', 'custom:submitError')`中的现有规则替换为表单中的`submitForm()`。
+   * 对于现有表单，如果自定义提交处理程序无法正常运行，用户需要使用规则编辑器在`submitForm`提交&#x200B;**按钮上打开并保存**&#x200B;规则。 此操作将`submitForm('custom:submitSuccess', 'custom:submitError')`中的现有规则替换为表单中的`submitForm()`。
 
 
 * 如果包含自定义函数代码的JavaScript文件出错，则自定义函数不会列在自适应表单的规则编辑器中。 要检查自定义函数列表，您可以导航到`error.log`文件以查找错误。 如果出现错误，自定义函数列表显示为空：
 
   ![错误日志文件](/help/forms/using/assets/custom-function-list-error-file.png)
 
-  如果没有错误，则会获取自定义函数并显示在`error.log`文件中。 `error.log`文件中显示一条消息，名称为`Fetched following custom functions list`：
+  如果没有错误，则会获取自定义函数并显示在`error.log`文件中。 `Fetched following custom functions list`文件中显示一条消息，名称为`error.log`：
 
   使用正确的自定义函数![错误日志文件](/help/forms/using/assets/custom-function-list-fetched-in-error.png)
 

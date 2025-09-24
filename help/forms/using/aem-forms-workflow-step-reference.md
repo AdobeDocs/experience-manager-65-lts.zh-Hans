@@ -1,23 +1,24 @@
 ---
-title: OSGi上以Forms为中心的工作流 — 步骤参考
+title: OSGi 上基于 Forms 的工作流——步骤参考
 description: 通过OSGi步骤的以Forms为中心的工作流，您可以快速构建基于自适应表单的工作流。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
 exl-id: 13d84b04-dab6-453f-bc0d-62a5f557c4f2
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '7604'
+source-wordcount: '7613'
 ht-degree: 0%
 
 ---
 
-# OSGi上以Forms为中心的工作流 — 步骤参考 {#forms-centric-workflow-on-osgi-step-reference}
+# OSGi 上基于 Forms 的工作流——步骤参考 {#forms-centric-workflow-on-osgi-step-reference}
 
-| 版本 | 文章链接 |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference) |
-| AEM 6.5 | 本文 |
+## 应用到 {#applies-to}
+
+该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
+
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference)。
 
 您可以使用工作流模型将业务逻辑转换为自动重复流程。 模型可帮助您定义和执行一系列步骤。 您还可以定义模型属性，例如工作流是临时工作流还是使用多个资源。 您可以[在模型中包含各种AEM工作流步骤以实现业务逻辑](/help/sites-developing/workflows-models.md#extending-aem)。
 
@@ -72,7 +73,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
       * **选择输入JSON：**&#x200B;使用相对于有效负荷或存储在Document、JSON或表单数据模型数据类型的变量中的路径选择输入JSON文件。 如果从“类型”下拉列表中选择“交互式通信代理UI”或“交互式通信Web渠道文档”，则此选项可用。
       * **选择自定义预填充服务：**&#x200B;选择预填充服务以检索数据并预填充交互式通信Web渠道文档或代理UI。
       * **使用上面选择的交互式通信的预填充服务：**&#x200B;使用此选项可使用使用交互式通信下拉列表中定义的交互式通信的预填充服务。
-      * **请求属性映射：**&#x200B;使用“请求属性映射”部分定义请求属性[&#128279;](../../forms/using/work-with-form-data-model.md#bindargument)的名称和值。 根据请求中指定的属性名称和值从数据源检索详细信息。 您可以使用文本值或String数据类型的变量来定义请求属性值。\
+      * **请求属性映射：**&#x200B;使用“请求属性映射”部分定义请求属性[的](../../forms/using/work-with-form-data-model.md#bindargument)名称和值。 根据请求中指定的属性名称和值从数据源检索详细信息。 您可以使用文本值或String数据类型的变量来定义请求属性值。\
         仅当从“类型”下拉列表中选择“交互式通信代理UI”或“交互式通信Web渠道文档”时，预填充服务和请求属性映射选项才可用。
 
 * **提交的信息：**&#x200B;下面列出的以下字段用作任务的输出位置：
@@ -88,9 +89,9 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
 * **代理人>分配选项：**&#x200B;指定将任务分配给用户的方法。 您可以使用“参与者选择器”脚本将任务动态分配给用户或组，或者将任务分配给特定的AEM用户或组。
 * **参与者选择器：**&#x200B;在“分配选项”字段中选择了&#x200B;**动态到用户或组**&#x200B;选项时，该选项可用。 您可以使用ECMAScript或服务来动态选择用户或组。
 
-* **参与者：**&#x200B;在&#x200B;**参与者选择器**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]**&#x200B;选项时，该字段可用。 利用字段，可为RandomParticipantChooser选项选择用户或组。
+* **参与者：**&#x200B;在&#x200B;**[!UICONTROL 参与者选择器]**&#x200B;字段中选择&#x200B;**com.adobe.granite.workflow.core.process.RandomParticipantChooser**&#x200B;选项时，该字段可用。 利用字段，可为RandomParticipantChooser选项选择用户或组。
 
-* **代理人：**&#x200B;在&#x200B;**参与者选择器**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.fd.workspace.step.service.VariableParticipantChooser]**&#x200B;时，该字段可用。 利用字段，可选择String数据类型的变量来定义被分派人。
+* **代理人：**&#x200B;在&#x200B;**[!UICONTROL 参与者选择器]**&#x200B;字段中选择&#x200B;**com.adobe.fd.workspace.step.service.VariableParticipantChooser**&#x200B;时，该字段可用。 利用字段，可选择String数据类型的变量来定义被分派人。
 
 * **参数：**&#x200B;在“参与者选择器”字段中选择了RandomParticipantChoose脚本以外的脚本时，该字段可用。 利用字段，可为“参与者选择器”字段中选择的脚本提供以逗号分隔的参数列表。
 
@@ -260,7 +261,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
    * **从工作流元数据中检索：**&#x200B;当要使用的值保存在工作流元数据属性中时，请使用选项。 例如，emailAddress。
    * **[!UICONTROL 相对于有效负载]**：使用选项检索在有效负载的相对路径中保存的文件附件。 选择选项并指定包含文件附件的文件夹名称，或在文本框中指定文件附件名称。
 
-     例如，如果CRX存储库中的“相对于有效负荷”文件夹在`attachment\attachment-folder`位置包含文件附件，则在选择&#x200B;**[!UICONTROL 相对于有效负荷]**&#x200B;选项后，在文本框中指定`attachment\attachment-folder`。
+     例如，如果CRX存储库中的“相对于有效负荷”文件夹在`attachment\attachment-folder`位置包含文件附件，则在选择`attachment\attachment-folder`相对于有效负荷&#x200B;**[!UICONTROL 选项后，在文本框中指定]**。
    * **JSON点表示法：**&#x200B;当要使用的值位于JSON文件中时，请使用选项。 例如，insurance.customerDetails.emailAddress。 “JSON点表示法”选项仅在选择了“映射来自输入JSON的输入字段”选项时可用。
    * **映射来自输入JSON的输入字段：**&#x200B;指定JSON文件的路径，以从JSON文件中获取某些服务参数的输入值。 JSON文件的路径可以是相对于有效负载的相对路径，也可以是绝对路径，您也可以使用JSON或表单数据模型类型的变量选择输入JSON文档。
 
@@ -458,7 +459,7 @@ AEM Document Services是一组用于创建、汇编和保护PDF文档的服务�
 
 * **[!UICONTROL 区域设置]**：指定用于生成PDF文档的语言。 如果提供文本值，请从列表中选择一种语言或选择以下值之一：
    * **要使用服务器默认值**：
-（默认）使用AEM Forms服务器上配置的区域设置。 “区域设置”设置是使用“管理控制台”配置的。 (请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_65_cn)。)
+（默认）使用AEM Forms服务器上配置的区域设置。 “区域设置”设置是使用“管理控制台”配置的。 (请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_65)。)
 
    * **要使用自定义值**：
 在文本框中键入区域设置代码，或选择包含区域设置代码的字符串变量。 有关支持的区域设置代码的完整列表，请参阅https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html。
