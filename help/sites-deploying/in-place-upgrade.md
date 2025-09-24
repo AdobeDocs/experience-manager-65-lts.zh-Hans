@@ -6,10 +6,10 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c7351625-b29e-45a7-b966-e7c0f56d4f22
-source-git-commit: 9e58e4c993929f792bd71bf70b3e64719e761b7f
+source-git-commit: 57bf39aa914bddca05d526b46b581579965069d6
 workflow-type: tm+mt
 source-wordcount: '578'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -21,9 +21,7 @@ ht-degree: 0%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [&#128279;](/help/sites-deploying/technical-requirements.md)的要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
-
-<!--Finally, the downtime during the upgrade can be significally reduced by indexing the repository **before** performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [的](/help/sites-deploying/technical-requirements.md)要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
 
 ## 迁移先决条件 {#migration-prerequisites}
 
@@ -171,8 +169,8 @@ Where `/path/to/datastore` represents the path to your File Datastore.
 
 1. 提取S3连接器（版本1.60.2）并复制`crx-quickstart/install`下的以下文件夹的内容，如下所示：
 
-   1. 复制`crx-quickstart/install/1`下的`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/1`
-   1. 复制`crx-quickstart/install/15`下的`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/15`
+   1. 复制`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/1`下的`crx-quickstart/install/1`
+   1. 复制`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/15`下的`crx-quickstart/install/15`
 
 现在，使用通过[确定正确的升级启动命令](#determining-the-correct-upgrade-start-command)部分下的信息确定的新命令启动AEM实例。
 

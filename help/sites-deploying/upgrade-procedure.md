@@ -1,5 +1,5 @@
 ---
-title: 升级过程
+title: 升级流程
 description: 了解升级Adobe Experience Manager (AEM)的过程。
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -11,26 +11,20 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 255ef365-0da5-4bc9-b099-2e3bc67dd25a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 57bf39aa914bddca05d526b46b581579965069d6
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
 
 ---
 
-# 升级过程 {#upgrade-procedure}
+# 升级流程 {#upgrade-procedure}
 
 >[!NOTE]
 >
 >由于大多数Adobe Experience Manager (AEM)升级都是在适当位置执行的，因此升级需要停机的创作层。 通过遵循这些最佳实践，您可以最大限度地减少或消除发布层停机时间。
 
 在升级AEM环境时，必须考虑升级创作环境或发布环境之间方法上的差异，以最大程度地减少创作和最终用户的停机时间。 此页概述了升级AEM 6.x版本上当前运行的AEM拓扑的高级过程。由于该过程在创作层和发布层以及基于Mongo和TarMK的部署中有所不同，因此每个层和微内核都列在单独的部分中。 在执行部署时，Adobe建议首先升级创作环境，确定是否成功，然后继续发布环境。
-
-<!--
->[!IMPORTANT]
->
->The downtime during the upgrade can be significally reduced by indexing the repository before performing the upgrade. For more information, see [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)
--->
 
 ## TarMK创作层 {#tarmk-author-tier}
 

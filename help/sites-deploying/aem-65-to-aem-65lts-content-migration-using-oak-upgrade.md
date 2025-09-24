@@ -5,7 +5,7 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 8c4ffb0e-b4dc-4a81-ac43-723754cbc0de
-source-git-commit: 9bf502146a309cd0d91f2aaa1778d5b550d424a8
+source-git-commit: 69033442fda82d9efdd1ba2f55a45173c8ffc6ec
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 本文档提供了将Adobe Experience Manager从&#x200B;**6.5**&#x200B;版本升级到&#x200B;**6.5 LTS**&#x200B;的全面指南，重点介绍如何使用oak-upgrade工具迁移内容存储库，该工具是一个功能强大的实用程序，可以精确和控制地在不同存储库之间传输内容。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在开始迁移之前，请确保满足以下要求：
 
 1. Java兼容性：必须安装并配置AEM 6.5 LTS才能与Java™ 17一起运行。 设置后，启动AEM实例，并验证所有捆绑包是否处于活动状态且运行正常，没有出现问题
 1. 系统资源：确保在迁移过程中有足够的磁盘空间和内存来处理两个存储库
-1. Oak-upgrade工具：从[官方Maven存储库](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade)下载`oak-upgrade` jar。 确保版本与AEM 6.5 LTS中使用的oak-core版本匹配。 Oak升级工具在Oracle® Java™ 11或更高版本上运行
+1. Oak-upgrade工具：从`oak-upgrade`官方Maven存储库[下载](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade) jar。 确保版本与AEM 6.5 LTS中使用的oak-core版本匹配。 Oak升级工具在Oracle® Java™ 11或更高版本上运行
 
 ## 逐步迁移过程 {#step-by-step-migration-process}
 
@@ -86,6 +86,6 @@ Checkpoints won't be copied, because no external datastore has been specified. T
 
 也可以忽略警告，但在这种情况下，存储库将在第一次启动时完全重新索引。 这可能是一个漫长的过程，尤其是对于大型企业。 在重新索引过程完成之前，存储库将不可用。 使用`--skip-checkpoints`选项禁止显示警告。
 
-您也可以在启动AEM之前使用[脱机重新索引](/help/sites-deploying/upgrade-offline-reindexing.md)脱机重新索引存储库，避免在首次启动时完全重新索引。
+您也可以在启动AEM之前使用[脱机重新索引](/help/sites-deploying/offline-reindexing.md)脱机重新索引存储库，避免在首次启动时完全重新索引。
 
 有关oak-upgrade工具和高级用法的详细信息，请参阅[官方文档](https://jackrabbit.apache.org/oak/docs/migration.html)。
