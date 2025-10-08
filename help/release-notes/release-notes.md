@@ -6,9 +6,9 @@ feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
 source-git-commit: 08f9b6697e298689a91a9b31038f382a908acd5b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '7319'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -449,42 +449,42 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
 
-#### AEM 6.5 LTS Service Pack升级的最佳实践
+#### AEM 6.5 LTS 服务包升级最佳做法
 
 <!-- THE INFORMATION UNDER THIS HEADING CAME FROM CQDOC-23078 -->
 
 **环境**
-适用于：安装Service Pack 1 (SP1)的AEM 6.5 LTS（内部部署）客户。 SP1作为快速入门JAR提供。
+适用对象：安装服务包 1 (SP1) 的 AEM 6.5 LTS（内部部署）客户。SP1 以 Quickstart JAR 形式交付。
 
 **为什么这很重要**
-适用于AEM 6.5 LTS的SP1作为快速入门JAR发货，而不是作为要通过包管理器安装的ZIP。 内部部署客户通过更换Quickstart JAR、解压缩并重新启动来进行升级。 此方法与Adobe的就地升级过程一致。
+AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器安装的 ZIP 文件。内部部署客户可通过替换 Quickstart JAR、解压并重新启动的方式进行升级。此方法与 Adobe 的就地升级流程保持一致。
 
-**推荐的升级流程（创作或发布）**
+**推荐的升级流程（创作或发布实例）**
 
-1. 验证您的AEM 6.5 LTS实例是否正常且可访问。
-1. 从Software Distribution下载SP1快速入门JAR（例如`cq-quickstart-6.6.x.jar`）。
+1. 确认您的 AEM 6.5 LTS 实例运行正常且可访问。
+1. 从软件分发下载 SP1 Quickstart JAR（例如 `cq-quickstart-6.6.x.jar`）。
 1. 停止正在运行的实例。
-1. 在AEM安装目录（`crx-quickstart/`外部）中，将以前的快速入门JAR替换为SP1 JAR。
-1. 解压缩JAR：
+1. 在 AEM 安装目录中（`crx-quickstart/` 目录之外），将原有的 Quickstart JAR 替换为 SP1 JAR。
+1. 解压该 JAR 文件：
 
    ```java
    java -jar cq-quickstart-6.6.x.jar -unpack
    ```
 
-   （根据需要调整栈标志。）
+   （根据需要调整堆标志。）
 
-1. 重命名解压缩的JAR以匹配角色和端口，例如`cq-author-4502.jar`或`cq-publish-4503.jar`。
-1. 启动AEM，并在UI（“帮助”>“关于”）和日志中确认升级。
+1. 将解压后的 JAR 重命名以匹配对应角色和端口，例如 `cq-author-4502.jar` 或 `cq-publish-4503.jar`。
+1. 启动 AEM，并在用户界面（“帮助”>“关于”）及日志中确认升级是否成功。
 
-**卫生状况良好**
+**良好维护规范**
 
-* 在生产之前，在较低版本/测试环境中运行升级。
-* 在开始之前，请执行完整、可恢复的备份（存储库以及任何外部数据存储）。
-* 查看Adobe的就地升级指导和技术要求（为LTS推荐的Java 17/21）。
+* 在生产环境升级前，先在较低环境或测试环境中执行升级操作。
+* 在开始前，请对存储库及所有外部数据存储库执行完整且可恢复的备份。
+* 查看 Adobe 的就地升级指南及技术要求（LTS 建议使用 Java 17 或 21）。
 
 >[!NOTE]
 >
->上面显示的文件名（例如，`cq-quickstart-6.6.x.jar`）反映了为此LTS发行版观察到的SP1快速入门工件命名；始终使用您从Software Distribution下载的精确文件名。
+>上述文件名（例如 `cq-quickstart-6.6.x.jar`）反映了此 LTS 版本中 SP1 Quickstart 工件的命名方式；请务必使用从软件分发实际下载的文件名称。
 
 ## 安装和更新 {#install-update}
 
