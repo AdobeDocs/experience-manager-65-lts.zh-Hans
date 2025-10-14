@@ -114,7 +114,7 @@ ht-degree: 6%
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[!DNL Site]Forms门户[在AEM ](../../forms/using/introduction-publishing-forms.md)上列出。
+您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[!DNL Site]Forms门户[在AEM &#x200B;](../../forms/using/introduction-publishing-forms.md)上列出。
 
 目标：
 

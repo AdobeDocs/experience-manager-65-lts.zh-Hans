@@ -77,7 +77,7 @@ AEM Forms用户可以使用Google的reCAPTCHA服务在自适应表单中实施CA
 
    1. 在“编辑组件”对话框中，指定名称、项目ID、站点密钥、API密钥（在步骤2和3中获得），选择密钥类型，然后输入阈值分数。 选择&#x200B;**[!UICONTROL 保存设置]**，然后选择&#x200B;**[!UICONTROL 确定]**&#x200B;以完成配置。
 
-reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参阅在自适应表单[中使用CAPTCHA ](#using-reCAPTCHA)。
+reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参阅在自适应表单[中使用CAPTCHA &#x200B;](#using-reCAPTCHA)。
 
 ![reCAPTCHA Enterprise](/help/forms/using/assets/recaptcha1-enterprise.png)
 

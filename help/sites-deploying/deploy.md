@@ -45,7 +45,7 @@ ht-degree: 4%
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 ](/help/sites-deploying/configuring.md)
+* [配置 &#x200B;](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 控制台](/help/sites-deploying/web-console.md)
@@ -265,7 +265,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
 
 * [创作](/help/sites-authoring/first-steps.md)
-* [管理 ](/help/sites-administering/home.md)
+* [管理 &#x200B;](/help/sites-administering/home.md)
 * [开发](/help/sites-developing/getting-started.md)
 * [管理](/help/managing/best-practices.md)
 
@@ -278,7 +278,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 ](/help/sites-deploying/configuring.md)
+* [配置 &#x200B;](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
 * [Web 控制台](/help/sites-deploying/web-console.md)

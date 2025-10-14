@@ -56,11 +56,11 @@ ht-degree: 16%
 
    >[!NOTE]
    >
-   >您可以执行步骤1-4以创建配置容器并在该容器中创建[!DNL Adobe Sign]配置，或使用`global`工具&#x200B;**&#x200B;**&#x200B;锤子![ > ](assets/hammer.png)Cloud Services **[!UICONTROL >]** Adobe Sign **[!UICONTROL 中的现有]**&#x200B;文件夹。 如果您在新配置容器中创建配置，请确保在创建自适应表单时在&#x200B;**[!UICONTROL 配置容器]**&#x200B;字段中指定容器名称。
+   >您可以执行步骤1-4以创建配置容器并在该容器中创建[!DNL Adobe Sign]配置，或使用`global`工具&#x200B;**&#x200B;**&#x200B;锤子![&#x200B; > &#x200B;](assets/hammer.png)Cloud Services **[!UICONTROL >]** Adobe Sign **[!UICONTROL 中的现有]**&#x200B;文件夹。 如果您在新配置容器中创建配置，请确保在创建自适应表单时在&#x200B;**[!UICONTROL 配置容器]**&#x200B;字段中指定容器名称。
 
    >[!NOTE]
    >
-   >确保Cloud Services配置页面的URL以&#x200B;**HTTPS**&#x200B;开头。 如果没有，则[为AEM ](/help/sites-administering/ssl-by-default.md)服务器启用SSL[!DNL Forms]。
+   >确保Cloud Services配置页面的URL以&#x200B;**HTTPS**&#x200B;开头。 如果没有，则[为AEM &#x200B;](/help/sites-administering/ssl-by-default.md)服务器启用SSL[!DNL Forms]。
 
 
 1. 在配置页面上，点按&#x200B;**[!UICONTROL 创建]**&#x200B;以在AEM [!DNL Adobe Sign]中创建[!DNL Forms]配置。

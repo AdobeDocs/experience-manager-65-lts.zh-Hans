@@ -239,7 +239,7 @@ ht-degree: 0%
 
   在开发之前，应设置部署、发布、测试和报告问题所需的所有支持流程。
 
-  另请参阅[Adobe支持门户](https://experienceleague.adobe.com/zh-hans?support-solution=General&amp;support-tab=home#support)。
+  另请参阅[Adobe支持门户](https://experienceleague.adobe.com/zh-hans?support-solution=General&support-tab=home#support)。
 
 ### 运营规划和运营 {#operations-planning-and-operations}
 

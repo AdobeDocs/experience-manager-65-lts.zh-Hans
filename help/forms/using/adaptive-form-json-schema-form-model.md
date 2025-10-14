@@ -28,7 +28,7 @@ ht-degree: 7%
 
 使用JSON架构作为自适应表单的表单模型创作时，需要基本了解JSON架构。 建议在阅读本文之前通读以下内容。
 
-* [创建自适应表单 ](creating-adaptive-form.md)
+* [创建自适应表单 &#x200B;](creating-adaptive-form.md)
 * [JSON架构](https://json-schema.org/)
 
 ## 使用JSON架构作为表单模型  {#using-a-json-schema-as-form-model}
