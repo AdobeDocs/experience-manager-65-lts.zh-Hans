@@ -7,7 +7,7 @@ feature: Renditions
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 7f66bc81-c4f7-4267-93b8-b78097ebbb16
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d4772c8844861ee82263e16d9c8608662e2e4870
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 1%
@@ -18,10 +18,10 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=en) |
 | AEM 6.5 | 本文 |
 
-将大型资源从Experience Manager置入Adobe InDesign文档时，创意专业人士在[置入资源](https://helpx.adobe.com/cn/indesign/using/placing-graphics.html)后必须等待相当长的时间。 同时，用户被阻止使用InDesign。 这会中断创作流并对用户体验产生负面影响。 Adobe允许首先在InDesign文档中临时放置小型演绎版。 在需要最终输出时（例如，对于打印和发布工作流），原始的全分辨率资产会在后台替换临时演绎版。 这种后台异步更新可加快设计流程以提高工作效率，且不会阻碍创作过程。
+将大型资源从Experience Manager置入Adobe InDesign文档时，创意专业人士在[置入资源](https://helpx.adobe.com/indesign/using/placing-graphics.html)后必须等待相当长的时间。 同时，用户被阻止使用InDesign。 这会中断创作流并对用户体验产生负面影响。 Adobe允许首先在InDesign文档中临时放置小型演绎版。 在需要最终输出时（例如，对于打印和发布工作流），原始的全分辨率资产会在后台替换临时演绎版。 这种后台异步更新可加快设计流程以提高工作效率，且不会阻碍创作过程。
 
 Adobe Experience Manager (AEM)提供仅用于置入(FPO)的演绎版。 这些FPO呈现版本的文件大小较小，但纵横比相同。 如果FPO演绎版不可用于某个资源，Adobe InDesign将改用原始资源。 此回退机制可确保创意工作流不间断地进行。
 
@@ -92,7 +92,7 @@ Experience Manager允许使用多种方法来处理可用于生成FPO呈现形�
 
 1. 要激活这些更改，请单击&#x200B;**[!UICONTROL 同步]**。
 
-有关ImageMagick命令行功能的详细信息，请参阅[https://imagemagick.org](https://imagemagick.org)。
+有关ImageMagick命令行功能的详细信息，请参阅`https://imagemagick.org`网站。
 
 ## 使用Experience Manager工作流生成现有资源的演绎版 {#generate-renditions-of-existing-assets-using-aem-workflow}
 
@@ -138,4 +138,4 @@ Experience Manager允许使用多种方法来处理可用于生成FPO呈现形�
 * 要使用基于ImageMagick的配置，请将ImageMagick安装在与Experience Manager相同的计算机上。
 * 要生成许多资产或整个存储库的FPO演绎版，请在低流量持续期间规划和执行工作流。 为大量资源生成FPO呈现是一项资源密集型活动，Experience Manager服务器必须具有足够的处理能力和可用内存。
 * 有关性能和可扩展性，请参阅[微调ImageMagick](performance-tuning-guidelines.md)。
-* 有关资产的通用命令行处理，请参阅用于处理资产的命令行处理程序[&#128279;](media-handlers.md)。
+* 有关资产的通用命令行处理，请参阅用于处理资产的命令行处理程序[](media-handlers.md)。

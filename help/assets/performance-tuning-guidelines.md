@@ -7,16 +7,16 @@ role: Architect, Admin
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 43079a69-cd12-4853-9fff-96f9d177987a
-source-git-commit: e432b4e74f453ed222b2a295f1a6ef9e7b409223
+source-git-commit: d4772c8844861ee82263e16d9c8608662e2e4870
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
 
 <!-- TBD: Get reviewed by engineering. -->
 
-# [!DNL Adobe Experience Manager Assets]性能优化指南 {#assets-performance-tuning-guide}
+# [!DNL Adobe Experience Manager Assets] 性能优化指南 {#assets-performance-tuning-guide}
 
 [!DNL Experience Manager Assets]安装程序包含多个硬件、软件和网络组件。 根据您的部署方案，可能需要对硬件、软件和网络组件进行特定的配置更改以消除性能瓶颈。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 下面是一些关键重点领域，在这些领域中，您可以发现并修复性能问题，以免它们对用户造成影响。
 
-## Platform {#platform}
+## 平台 {#platform}
 
 虽然Experience Manager在多种平台上均受支持，但Adobe发现它最大程度地支持了Linux和Windows上的本机工具，这有助于优化性能和简化实施。 理想情况下，您应该部署64位操作系统以满足[!DNL Experience Manager Assets]部署的高内存要求。 与任何Experience Manager部署一样，您应尽可能实施TarMK。 虽然TarMK不能扩展至超过单个创作实例，但发现其性能优于MongoMK。 您可以添加TarMK卸载实例以提高[!DNL Experience Manager Assets]部署的工作流处理能力。
 
@@ -211,7 +211,7 @@ Adobe建议启用HTTPS，因为许多公司都有会侦听HTTP流量的防火墙
 
 >[!NOTE]
 >
->ImageMagick `policy.xml`和`configure.xml`文件在`/usr/lib64/ImageMagick-&#42;/config/`而不是`/etc/ImageMagick/`上可用。有关配置文件的位置，请参阅[ImageMagick文档](https://www.imagemagick.org/script/resources.php)。
+>ImageMagick `policy.xml`和`configure.xml`文件在`/usr/lib64/ImageMagick-&#42;/config/`中可用，而不是`/etc/ImageMagick/`。 有关配置文件的位置，请参阅ImageMagick文档（`https://www.imagemagick.org/script/resources.php`网站）。
 
 如果您在Adobe Managed Services (AMS)上使用[!DNL Experience Manager]，如果您计划处理大量大型PSD或PSB文件，请联系Adobe客户支持。 与Adobe客户支持代表合作，为您的AMS部署实施这些最佳实践，并为Adobe的专有格式选择最佳工具和模型。 [!DNL Experience Manager]不能处理超过30000 x 23000像素的超高分辨率PSB文件。
 
