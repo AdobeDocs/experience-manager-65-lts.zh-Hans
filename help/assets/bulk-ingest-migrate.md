@@ -21,13 +21,13 @@ ht-degree: 0%
 
 功能包18912的安装是&#x200B;*可选*。
 
-功能包18912允许您通过FTP将资源直接批量摄取到Adobe Experience Manager上的Dynamic Media - Scene7模式。 它还允许您将资源从Dynamic Media Classic迁移到Experience Manager上的Dynamic Media - Scene7模式。 此功能包可从[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)获得。
+功能包18912允许您通过FTP将资源直接批量摄取到Adobe Experience Manager上的Dynamic Media - Scene7模式。 它还允许您将资源从Dynamic Media Classic迁移到Experience Manager上的Dynamic Media - Scene7模式。 此功能包可从[Adobe Professional Services](https://business.adobe.com/cn/customers/consulting-services/main.html)获得。
 
 >[!IMPORTANT]
 >
 >您可以使用功能包在Experience Manager中自行将资产从Dynamic Media Classic批量迁移到Dynamic Media - Scene7模式。 您也可以使用Dynamic Media Classic中的FTP功能批量迁移资源。 但是，由于涉及的复杂性，Adobe并&#x200B;*不*&#x200B;建议您使用这两种方法中的任何一种。
 >
->因此，在通过[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)完成迁移项目时，此迁移功能包仅&#x200B;*支持*。
+>因此，在通过[Adobe Professional Services](https://business.adobe.com/cn/customers/consulting-services/main.html)完成迁移项目时，此迁移功能包仅&#x200B;*支持*。
 
 在安装功能包之前，请创建服务用户并将该信息提供给Adobe支持。
 

@@ -43,7 +43,7 @@ ht-degree: 3%
 
 ## 在Scene7模式下启用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
-默认情况下已禁用[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须启用它。
+默认情况下已禁用[Dynamic Media](https://business.adobe.com/cn/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须启用它。
 
 >[!WARNING]
 >
@@ -75,7 +75,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 功能包18912的安装是&#x200B;*可选*。
 
-功能包18912允许您通过FTP批量引入资源，或在Experience Manager上将资源从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 它可从[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)获得。
+功能包18912允许您通过FTP批量引入资源，或在Experience Manager上将资源从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 它可从[Adobe Professional Services](https://business.adobe.com/cn/customers/consulting-services/main.html)获得。
 
 有关详细信息，请参阅[安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 
@@ -247,7 +247,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 如果您打算使用此功能，请注意以下先决条件和要点：
 
 * 您必须以Dynamic Media - Scene7模式运行Experience Manager 6.5 LTS。
-* 仅&#x200B;[*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)客户支持此大型上传功能。
+* 仅&#x200B;[*Managed Services*](https://business.adobe.com/cn/products/experience-manager/managed-services.html)客户支持此大型上传功能。
 * 确保您的Experience Manager实例配置了Amazon S3或Microsoft® Azure Blob Storage。
 
   >[!NOTE]
