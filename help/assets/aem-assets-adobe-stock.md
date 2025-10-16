@@ -55,7 +55,7 @@ Organizations can integrate their [!DNL Adobe Stock] enterprise plan with [!DNL 
 * 购买的积分计入 [!DNL Adobe Admin Console] 股票权利。
 * 支持从 内部 [!DNL Adobe Admin Console]管理积分和许可。
 
-在该授权中，存在 的默认[!DNL Adobe Stock][!DNL Admin Console]产品配置。可以创建多个配置，这些配置决定了谁可以许可 Stock 资源。 直接访问产品配置的用户可以访问 [https://stock.adobe.com/](https://stock.adobe.com/) 并许可 Stock 资源。 而还有另一种使用开发人员访问权限创建集成 （API） 的方法。 此集成可验证 和 [!DNL Adobe Stock]之间的[!DNL Experience Manager Assets]通信。
+在该授权中，存在 的默认[!DNL Adobe Stock]&#x200B;[!DNL Admin Console]产品配置。可以创建多个配置，这些配置决定了谁可以许可 Stock 资源。 直接访问产品配置的用户可以访问 [https://stock.adobe.com/](https://stock.adobe.com/) 并许可 Stock 资源。 而还有另一种使用开发人员访问权限创建集成 （API） 的方法。 此集成可验证 和 [!DNL Adobe Stock]之间的[!DNL Experience Manager Assets]通信。
 
 <!-- Old content
 ## Prerequisites {#prerequisites}
