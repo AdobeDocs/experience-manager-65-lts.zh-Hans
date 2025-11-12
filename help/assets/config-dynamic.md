@@ -605,7 +605,7 @@ Dynamic Media Cloud Service支持图像和视频、视频分析和视频编码�
      ```
 
    * **通过Experience Manager中的视频报表工具检查Video Analytics预设**
-导航到**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频报告]**
+导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频报告]**
 
      `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -1225,28 +1225,28 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
   </tr>
   <tr>
    <td>复制查看器URL</td>
-   <td><p>“复制URL”对话框显示类似于以下内容的URL（URL仅用于演示目的）：</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&amp;config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&amp;serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&amp;contentRoot=%2F</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
+   <td><p>“复制URL”对话框显示类似于以下内容的URL（URL仅用于演示目的）：</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&contentRoot=%2F</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
   </tr>
   <tr>
    <td>复制查看器的嵌入代码</td>
    <td><p>复制嵌入代码对话框会显示类似于以下内容的代码片段（代码示例仅用于演示目的）：</p> <p><code class="code">&lt;style type="text/css"&gt;
-       #s7basiczoom_div.s7basiczoomviewer{
+       &#x200B;#s7basiczoom_div.s7basiczoomviewer&lbrace;
        width:100%;
        height:auto;
-       }
+       &rbrace;
        &lt;/style&gt;
        &lt;script
        type="text/javascript" src="https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/js/BasicZoomViewer.js"&gt;&lt;/script&gt;
        &lt;div id="s7basiczoom_div"&gt;&lt;/div&gt;
        &lt;script type="text/javascript"&gt;
-       var s7basiczoomviewer = new s7viewers.BasicZoomViewer({
+       var s7basiczoomviewer = new s7viewers.BasicZoomViewer(&lbrace;
        "containerId" : "s7basiczoom_div",
-       "params" : {
+       "params" : &lbrace;
        "serverurl" : "https://IMAGESERVICEPUBLISHNODE/is/image/",
        "contenturl" : "https://PUBLISHNODE/",
        "config" : "/conf/global/settings/dam/dm/presets/viewer/Zoom_dark",
-       "asset" : "/content/dam/path/to/Image.jpg" }
-       }).init();
+       "asset" : "/content/dam/path/to/Image.jpg" &rbrace;
+       &rbrace;).init();
        &lt;/script&gt;</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
   </tr>
  </tbody>

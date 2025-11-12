@@ -110,7 +110,7 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
 
 1. 从&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面，在编辑模式下打开&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流模型。
 
-1. 打开&#x200B;**[!UICONTROL 进程缩略图]**&#x200B;工作流进程步骤。 在&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过MIME类型]**列表中添加要跳过其默认缩略图生成过程的MIME类型。
+1. 打开&#x200B;**[!UICONTROL 进程缩略图]**&#x200B;工作流进程步骤。 在&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过MIME类型]**&#x200B;列表中添加要跳过其默认缩略图生成过程的MIME类型。
 例如，如果要使用图像转码库为TIFF图像创建缩略图，请在`image/tiff`跳过MIME类型&#x200B;**[!UICONTROL 字段中指定]**。
 
 1. 在&#x200B;**[!UICONTROL 启用Web的图像]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过列表]**&#x200B;中添加要跳过默认Web呈现生成过程的MIME类型。 例如，如果您在上一步中跳过了MIME类型`image/tiff`，请将`image/tiff`添加到跳过列表。
