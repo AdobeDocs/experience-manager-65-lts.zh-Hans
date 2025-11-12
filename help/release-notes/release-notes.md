@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 08f9b6697e298689a91a9b31038f382a908acd5b
-workflow-type: ht
-source-wordcount: '7319'
-ht-degree: 100%
+source-git-commit: 6023c211220bb500814ecd511b8787d107c3c6cd
+workflow-type: tm+mt
+source-wordcount: '7381'
+ht-degree: 99%
 
 ---
 
@@ -608,6 +608,18 @@ A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/download
 
 **解决方法：**
 如果您遇到此问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
+
+### AEM 6.5 LTS SP1上的安全UI上的“权限为空”页面
+
+>[!NOTE]
+>
+> 此问题仅在AEM 6.5 LTS SP1版本中出现。
+
+当访问AEM 6.5 LTS SP1中“工具” — >“安全”下的“权限”页面时，它会提供空白页面，而不是显示用户或组的权限。
+
+**解决方案：**
+有修补程序[cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip)可用于解决此问题。
+
 
 ## 包含的 OSGi 捆绑包和内容包{#osgi-bundles-and-content-packages-included}
 
