@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 66bbd6d8-d07c-48ad-b58e-819bf032851a
-source-git-commit: ebef0312d73597e28e5a1635a0e98f833d491d19
+source-git-commit: c99c7b2616e652ae372e98349d5de3b658a0beb1
 workflow-type: tm+mt
-source-wordcount: '2476'
-ht-degree: 64%
+source-wordcount: '2468'
+ht-degree: 65%
 
 ---
 
@@ -390,15 +390,11 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
   ![异步页面移动](assets/asynchronous-page-move.png)
 
-可在&#x200B;[**全局导航** > &#x200B;](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;操作&#x200B;**>**&#x200B;作业&#x200B;**的**&#x200B;异步作业状态&#x200B;**仪表板**&#x200B;中检查异步作业的状态
+可在&#x200B;[**全局导航** > ](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;操作&#x200B;**>**&#x200B;作业&#x200B;**的**&#x200B;异步作业状态&#x200B;**仪表板**&#x200B;中检查异步作业的状态
 
 >[!NOTE]
 >
 >有关异步作业处理以及如何配置页面移动/重命名操作限制的更多信息，请参阅“管理”用户指南中的[异步作业](/help/sites-administering/asynchronous-jobs.md)文档。
-
->[!NOTE]
->
->异步页面移动处理需要AEM 6.5.3.0或更高版本。
 
 ### 删除页面 {#deleting-a-page}
 

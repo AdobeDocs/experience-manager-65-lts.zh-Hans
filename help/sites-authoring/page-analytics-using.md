@@ -1,24 +1,18 @@
 ---
 title: 查看页面分析数据以衡量页面内容的有效性
 description: 使用页面分析数据衡量其页面内容的有效性
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: site-features
-docset: aem65
-legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-using.html
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: b47591ac-10ff-4b87-b75d-68ed635ceca8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 87f0e0530b14c8cb7d25ee139ec89d75551fb16e
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '437'
+ht-degree: 5%
 
 ---
 
-# 查看页面分析数据{#seeing-page-analytics-data}
+# 请参阅页面分析数据{#seeing-page-analytics-data}
 
 使用页面分析数据来衡量页面内容的有效性。
 
@@ -77,7 +71,7 @@ analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-从站点控制台打开[内容分析](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
+从站点控制台打开[内容Insight](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
 
 1. 在站点控制台中，选择要查看其内容分析的页面。
 1. 在工具栏上，单击Analytics和“推荐”图标。
@@ -90,4 +84,4 @@ analytics-administrators用户组的成员可以配置Sites控制台，以便作
 >
 >由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
 >
->现在应使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)提供的ActivityMap插件。
+>现在应使用Adobe Analytics[提供的](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)ActivityMap插件。

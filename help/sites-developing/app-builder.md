@@ -1,13 +1,13 @@
 ---
-title: 使用Adobe Developer App Builder扩展 [!DNL Adobe Experience Manager] 6.5。
-description: 使用Adobe Developer App Builder扩展 [!DNL Adobe Experience Manager] 6.5。
+title: 使用Adobe Developer App Builder扩展 [!DNL Adobe Experience Manager] 6.5 LTS。
+description: 使用Adobe Developer App Builder扩展 [!DNL Adobe Experience Manager] 6.5 LTS。
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: f9b3df58-c94b-4143-aeec-85ff031bac2e
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+source-git-commit: 248e8aacff2d4971cdf485e892963d79f5b35fd7
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---

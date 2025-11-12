@@ -1,15 +1,14 @@
 ---
 title: 图像转码库
 description: 了解如何配置和使用Adobe的图像转码库，这是一个可以执行核心图像处理功能（包括编码、转码、图像重新取样和图像大小调整）的图像处理解决方案。
-contentOwner: AG
 role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 solution: Experience Manager, Experience Manager Assets
 exl-id: fb24c331-55c3-4166-bd4f-c26cece902fc
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 1dd093acdfa571dad9659270ddc6912ab3d5dba5
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 0%
+source-wordcount: '978'
+ht-degree: 1%
 
 ---
 
@@ -76,11 +75,11 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
 
 要配置库，请使用以下步骤创建一个CONF文件以指示库。 您需要管理员或root权限。
 
-1. 从Software Distribution[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg)下载映像转码库包并使用包管理器安装它。 此包与[!DNL Experience Manager] 6.5兼容。
+1. 从Software Distribution[下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg)映像转码库包并使用包管理器安装它。 此包与[!DNL Experience Manager] 6.5 LTS兼容。
 
 1. 要知道`com.day.cq.dam.cq-dam-switchengine`的捆绑包ID，请登录到Web控制台，然后单击&#x200B;**[!UICONTROL OSGi]** > **[!UICONTROL 捆绑包]**。 或者，要打开捆绑包控制台，请访问`https://[aem_server:[port]/system/console/bundles/` URL。 找到`com.day.cq.dam.cq-dam-switchengine`包及其标识。
 
-1. 通过使用命令`ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`检查文件夹，确保提取了所有必需的库，其中文件夹名称是使用捆绑ID构建的。 例如，如果捆绑ID为`588`，则命令为`ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/`。
+1. 通过使用命令`ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`检查文件夹，确保提取了所有必需的库，其中文件夹名称是使用捆绑ID构建的。 例如，如果捆绑ID为`ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/`，则命令为`588`。
 
 1. 创建`SWitchEngineLibs.conf`文件以链接到库。
 
@@ -90,7 +89,7 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
    vi SWitchEngineLibs.conf
    ```
 
-1. 使用`cat SWitchEngineLibs.conf`命令将`/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`路径添加到conf文件。
+1. 使用`/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`命令将`cat SWitchEngineLibs.conf`路径添加到conf文件。
 
 1. 执行`ldconfig`命令以创建必要的链接和缓存。
 
@@ -111,8 +110,8 @@ Adobe的图像转码库是一种专用的图像处理解决方案，可以执行
 
 1. 从&#x200B;**[!UICONTROL 工作流模型]**&#x200B;页面，在编辑模式下打开&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流模型。
 
-1. 打开&#x200B;**[!UICONTROL 进程缩略图]**&#x200B;工作流进程步骤。 在&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过MIME类型]**&#x200B;列表中添加要跳过其默认缩略图生成过程的MIME类型。
-例如，如果要使用图像转码库为TIFF图像创建缩略图，请在&#x200B;**[!UICONTROL 跳过MIME类型]**&#x200B;字段中指定`image/tiff`。
+1. 打开&#x200B;**[!UICONTROL 进程缩略图]**&#x200B;工作流进程步骤。 在&#x200B;**[!UICONTROL 缩略图]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过MIME类型]**列表中添加要跳过其默认缩略图生成过程的MIME类型。
+例如，如果要使用图像转码库为TIFF图像创建缩略图，请在`image/tiff`跳过MIME类型&#x200B;**[!UICONTROL 字段中指定]**。
 
 1. 在&#x200B;**[!UICONTROL 启用Web的图像]**&#x200B;选项卡中，在&#x200B;**[!UICONTROL 跳过列表]**&#x200B;中添加要跳过默认Web呈现生成过程的MIME类型。 例如，如果您在上一步中跳过了MIME类型`image/tiff`，请将`image/tiff`添加到跳过列表。
 

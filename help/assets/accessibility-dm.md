@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media 中的辅助功能
+title: Dynamic Media 中的无障碍功能
 description: 了解Dynamic Media和Dynamic Media查看器中的无障碍支持。
 contentOwner: Rick Brough
 topic-tags: introduction
@@ -8,7 +8,7 @@ feature: Accessibility
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 0aebf16a-4115-4656-b583-1a293478c9a1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 33f9dccea41417e84d8fdd0aac25a7e1e6327aac
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## [!DNL Dynamic Media]中的键盘辅助功能支持
 
-由于[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的一个插件，因此大多数键盘控件行为与[!DNL Experience Manager Assets]中的相同。 例如，[!DNL Dynamic Media]中的`Cancel`按钮与[!DNL Experience Manager Assets]中的焦点高亮相同，并且与[!DNL Experience Manager Assets]中的`Spacebar`键有反应。 查看Assets中的[键盘快捷键](/help/assets/accessibility.md#keyboard-shortcuts)。
+由于[!DNL Dynamic Media]是[!DNL Adobe Experience Manager Assets]的一个插件，因此大多数键盘控件行为与[!DNL Experience Manager Assets]中的相同。 例如，`Cancel`中的[!DNL Dynamic Media]按钮与[!DNL Experience Manager Assets]中的焦点高亮相同，并且与`Spacebar`中的[!DNL Experience Manager Assets]键有反应。 查看Assets中的[键盘快捷键](/help/assets/accessibility.md#keyboard-shortcuts)。
 
 [!DNL Dynamic Media]中各个用户界面元素所支持的击键清晰易懂。 [!DNL Dynamic Media]中的键盘控件与以下内容有关：
 
@@ -38,8 +38,6 @@ ht-degree: 0%
    * 接下来的四个`Tab`句点是该帧的四个角。 将焦点置于框架角上时，该角将突出显示。 同样，您可以使用键盘上的箭头键移动焦点角。
 请参阅[编辑单个图像的智能裁剪或智能色板](/help/assets/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
-<!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (AEM 6.5) or Coral Spectrum (in Skyline)) as entire AEM Assets.  -->
-
 <!-- In the Hotspot editor, Dynamic Media lets you use arrow keys to control the position of a hot spot. See [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner) or [Interactive Images](/help/assets/dynamic-media/interactive-images.md#adding-hotspots-to-an-image-banner)  -->
 
 <!-- I think we should definitely mention this in the DM-specific area of documentation for keyboard support. -->
@@ -54,12 +52,12 @@ ht-degree: 0%
 
 所有开箱即用的[!DNL Dynamic Media]查看器组件都支持客户的键盘辅助功能。
 
-请参阅Dynamic Media查看器参考指南中的[键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=zh-Hans)。
+请参阅Dynamic Media查看器参考指南中的[键盘辅助功能和导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html)。
 
 ## [!DNL Dynamic Media]个查看者中的辅助技术支持 {#assistive-technology-support-for-dm-viewers}
 
 所有[!DNL Dynamic Media]查看器组件都支持ARIA（可访问的富互联网应用程序）角色和属性，以改进与屏幕阅读器等辅助技术的集成。
-请参阅Dynamic Media查看器参考指南中的任何自定义查看器主题中的&#x200B;**辅助技术支持**&#x200B;帮助主题。 例如，对于视频查看器，请参阅[辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=zh-Hans)；对于交互式图像查看器，请参阅[辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=zh-Hans#viewers-for-aem-assets-only)。
+请参阅Dynamic Media查看器参考指南中的任何自定义查看器主题中的**辅助技术支持**&#x200B;帮助主题。 例如，对于视频查看器，请参阅[辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html)；对于交互式图像查看器，请参阅[辅助技术支持](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only)。
 
 ## Dynamic Media中的隐藏式字幕支持 {#closed-caption-support}
 
@@ -70,4 +68,4 @@ Dynamic Media支持传送带隐藏式字幕的视频和自适应视频集。 字
 >[!MORELIKETHIS]
 >
 >* Adobe解决方案的[辅助功能](https://www.adobe.com/accessibility.html)
->*  [!DNL Experience Manager Assets][&#128279;](/help/assets/accessibility.md)中的辅助功能
+>* [中的 [!DNL Experience Manager Assets]](/help/assets/accessibility.md)辅助功能

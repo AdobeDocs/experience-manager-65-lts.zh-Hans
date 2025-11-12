@@ -1,15 +1,14 @@
 ---
 title: ' [!DNL Experience Manager Assets]的可访问功能和接口'
-description: 了解 [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] 中的辅助功能如何帮助残障用户。
-contentOwner: AG
+description: 了解 [!DNL Adobe Experience Manager] 6.5 LTS [!DNL Assets] 中的辅助功能如何帮助残障用户。
 feature: Asset Management
 role: User, Architect, Leader
 solution: Experience Manager, Experience Manager Assets
 exl-id: f9540bfb-1c4f-41f0-9caa-ef9265225648
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 61a1bb55f4b8da8c421f51ee203ca8e433a73a64
 workflow-type: tm+mt
-source-wordcount: '1898'
-ht-degree: 0%
+source-wordcount: '1899'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +43,7 @@ Possible topics to cover in this article are below.
 
 要读取包含合规性级别详细信息的报表，请参阅[无障碍合规性报表](https://www.adobe.com/cn/accessibility/compliance.html) (ACR)页面。
 
-要了解[!DNL Dynamic Media]如何访问，请参阅 [!DNL Dynamic Media][&#128279;](/help/assets/accessibility-dm.md)中的辅助功能。
+要了解[!DNL Dynamic Media]如何访问，请参阅[中的 [!DNL Dynamic Media]](/help/assets/accessibility-dm.md)辅助功能。
 
 ## 辅助技术 {#at-support}
 
@@ -79,7 +78,7 @@ Possible topics to cover in this article are below.
 
 ### [!DNL Assets]中的键盘快捷键 {#keyboard-shortcuts}
 
-[!DNL Assets]中的以下操作可使用列出的键盘快捷键。 大多数应用于[!DNL Experience Manager]控制台的键盘快捷键也适用于[!DNL Assets]。 请参阅控制台[&#128279;](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)的键盘快捷键。 了解如何[启用或禁用键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
+[!DNL Assets]中的以下操作可使用列出的键盘快捷键。 大多数应用于[!DNL Experience Manager]控制台的键盘快捷键也适用于[!DNL Assets]。 请参阅控制台[的](/help/sites-authoring/keyboard-shortcuts.md#keyboard-shortcuts)键盘快捷键。 了解如何[启用或禁用键盘快捷键](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts)。
 
 | 用户界面或方案 | 键盘快捷键 | 操作 |
 |---|---|---|
@@ -147,7 +146,7 @@ Review CQ-4282133 before adding - Close option in a coral-dialog was not accessi
 * 使用`Esc`键从缩略图视图中删除快速操作图标不会从最后一个聚焦项中删除键盘焦点。
 * 选择资产后，选择`Alt + 4`键盘快捷键将在左边栏中打开[!UICONTROL 引用]列表。 使用`Tab`键，用户可以浏览非零引用条目。 仅浏览非零参照条目也可以节省工作量和按键操作。
 * 资产时间轴中提供了有关资产的注释。 如果使用键盘或键盘快捷键访问左边栏，则可以访问该设置。
-* [!DNL Experience Manager]中的[!UICONTROL 视图设置]可使用键盘访问。 用户可以使用箭头键浏览可用的信息卡大小，选择并Tab键浏览现有视图设置视图中的浏览和设置其他元素。
+* [!UICONTROL 中的]视图设置[!DNL Experience Manager]可使用键盘访问。 用户可以使用箭头键浏览可用的信息卡大小，选择并Tab键浏览现有视图设置视图中的浏览和设置其他元素。
 
 <!-- TBD: Gradually, as more enhancements are done in these categories, add more content.
 

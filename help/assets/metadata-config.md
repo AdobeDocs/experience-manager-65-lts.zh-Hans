@@ -7,9 +7,9 @@ feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 43fb8af8-9750-44c1-8e02-34b25b92fd65
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 194937f0678ea27a04319197f391dd7cc358ec51
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1980'
 ht-degree: 4%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 4%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=en) |
+| AEM 6.5 LTS | 本文 |
 
 <!-- Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 要更改限制，请访问&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 操作]** > **[!UICONTROL Web控制台]**，更改&#x200B;**[!UICONTROL Apache Sling请求参数处理]** OSGi配置中的&#x200B;**[!UICONTROL 最大POST参数]**&#x200B;的值。
 
-## 元数据配置文件 {#metadata-profiles}
+## 元数据轮廓 {#metadata-profiles}
 
 元数据配置文件允许您将默认元数据应用到文件夹中的资源。 创建元数据配置文件并将其应用到文件夹。 您以后上传到文件夹的任何资源都会继承您在元数据配置文件中配置的默认元数据。
 
@@ -118,7 +118,7 @@ ht-degree: 4%
 1. 在对话框中，单击&#x200B;**[!UICONTROL 删除]**&#x200B;以确认删除操作。 元数据配置文件将从列表中删除。
 
 <!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/cn/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -230,7 +230,7 @@ To apply a metadata profile globally, follow these steps:
 
 您可以从文件夹元数据架构Forms页面或在创建文件夹时，将文件夹元数据架构分配给文件夹。
 
-如果为文件夹配置元数据架构，则架构表单的路径将存储在`./jcr:content`下的文件夹节点的`folderMetadataSchema`属性中。
+如果为文件夹配置元数据架构，则架构表单的路径将存储在`folderMetadataSchema`下的文件夹节点的`./jcr:content`属性中。
 
 #### 从“文件夹元数据架构”页分配给架构 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
@@ -272,13 +272,13 @@ To apply a metadata profile globally, follow these steps:
 
 * 要在自定义命名空间上导入元数据，请先注册命名空间。
 * 属性选取器显示架构编辑器和搜索表单中使用的属性。 属性选取器不从资产中选取元数据属性。
-* 在升级到[!DNL Experience Manager] 6.5之前，您可能已经存在元数据配置文件。升级后，如果在[!UICONTROL 元数据配置文件]选项卡的文件夹[!UICONTROL 属性]中应用此类配置文件，则不会显示元数据表单字段。 但是，如果应用新创建的元数据配置文件，则表单字段会显示，但会按预期不可用。 不会丢失任何功能，但如果您希望查看（不可用）表单字段，请编辑并保存现有的元数据配置文件。
+* 在升级到[!DNL Experience Manager] 6.5 LTS之前，您可能已经存在元数据配置文件。 升级后，如果在[!UICONTROL 元数据配置文件]选项卡的文件夹[!UICONTROL 属性]中应用此类配置文件，则不会显示元数据表单字段。 但是，如果应用新创建的元数据配置文件，则表单字段会显示，但会按预期不可用。 不会丢失任何功能，但如果您希望查看（不可用）表单字段，请编辑并保存现有的元数据配置文件。
 
 >[!MORELIKETHIS]
 >
 >* [元数据概念和了解](metadata-concepts.md)。
 >* [编辑多个收藏集的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)。
->* 在Experience Manager Assets中[元数据导入和导出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html?lang=zh-Hans)。
+>* 在Experience Manager Assets中[元数据导入和导出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html)。
 >* [用于处理元数据、图像和视频的配置文件](processing-profiles.md)。
 >* [组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md)。
 >* [XMP写回](/help/assets/xmp-writeback.md)。

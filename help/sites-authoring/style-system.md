@@ -1,16 +1,13 @@
 ---
 title: 样式系统
 description: 样式系统允许模板作者在组件的内容策略中定义样式类，以便内容作者在页面上编辑组件时能够选择这些类。这些样式可以作为组件的替代可视化变量，从而使组件变得更加灵活。
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: site-features
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: a3d42a73-e1b2-4f76-b98a-89cd98eea2c9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 1b01d338c8400f38e4f062cb3ee592062f560a67
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1292'
 ht-degree: 83%
 
 ---
@@ -129,7 +126,7 @@ ht-degree: 83%
 
 ### 在“编辑”对话框中启用“样式”选项卡 {#enable-styles-tab-edit}
 
-自AEM版本6.5.3.0起，“编辑”对话框中的可选“样式”选项卡现已可用。 与“设计”对话框选项卡不同，“编辑”对话框中的选项卡对于样式系统的正常运行来说并不是必需的，但它是内容作者设置样式的可选替代界面。
+“编辑”对话框中的可选“样式”选项卡现已可用。 与“设计”对话框选项卡不同，“编辑”对话框中的选项卡对于样式系统的正常运行来说并不是必需的，但它是内容作者设置样式的可选替代界面。
 
 可以采用与“设计”对话框选项卡类似的方式包括“编辑”对话框选项卡：
 

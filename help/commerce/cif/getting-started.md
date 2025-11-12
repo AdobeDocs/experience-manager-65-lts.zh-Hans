@@ -6,9 +6,9 @@ feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 15face30-3039-49a0-bfee-56bff21e5c27
-source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
+source-git-commit: 0b337740dffb9e6421e6d2c44a1ae222dfa37711
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '676'
 ht-degree: 3%
 
 ---
@@ -18,19 +18,19 @@ ht-degree: 3%
 要开始使用AEM Content和Commerce，您需要安装适用于AEM 6.5的AEM Content和Commerce加载项。
 
 
-## 入门培训 {#onboarding}
+## 加入 {#onboarding}
 
 AEM Content和Commerce的入门培训分为两步：
 
-1. 安装适用于AEM 6.5的AEM Content和Commerce加载项
+1. 安装适用于AEM 6.5 LTS的AEM Content和Commerce加载项
 
 2. 将AEM与您的Commerce解决方案连接
 
-### 安装适用于AEM 6.5的AEM Content和Commerce加载项 {#install-add-on}
+### 安装适用于AEM 6.5 LTS的AEM Content和Commerce加载项 {#install-add-on}
 
-从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装适用于AEM 6.5的AEM Commerce加载项。
+从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装适用于AEM 6.5 LTS的AEM Commerce加载项。
 
-启动并安装所需的AEM 6.5 Service Pack。 我们建议安装最后一个可用的Service Pack。
+启动并安装所需的AEM 6.5 LTS Service Pack。 我们建议安装最后一个可用的Service Pack。
 
 >[!NOTE]
 >
@@ -42,9 +42,9 @@ AEM可以连接到任何具有AEM的GraphQL端点可访问的commerce system。 
 
 或者，可以提供身份验证标头以使用需要身份验证的其他CIF功能。
 
-必须调整由[AEM项目原型](https://github.com/adobe/aem-project-archetype)和已包含在[默认配置](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)中的[AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)生成的项目。
+必须调整由[AEM项目原型](https://github.com/adobe/aem-project-archetype)和已包含在[默认配置](https://github.com/adobe/aem-cif-guides-venia)中的[AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)生成的项目。
 
-将`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`中`url`的值替换为商务系统的GraphQL端点。 此配置可通过OSGI控制台或通过项目部署OSGI配置来完成。 使用不同的AEM运行模式支持用于暂存和生产系统的不同配置。
+将`url`中`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`的值替换为商务系统的GraphQL端点。 此配置可通过OSGI控制台或通过项目部署OSGI配置来完成。 使用不同的AEM运行模式支持用于暂存和生产系统的不同配置。
 
 AEM Content和Commerce附加组件以及CIF核心组件同时使用AEM服务器端连接和客户端连接。 客户端CIF核心组件和CIF附加创作工具默认连接到`/api/graphql`。 如果需要，可以通过CIF Cloud Service配置对此进行调整（请参阅下文）。
 

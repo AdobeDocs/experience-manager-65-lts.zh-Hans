@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: ba5cc5fb-934f-4144-8e28-7aa5fdd9b92a
-source-git-commit: 438d383aa7a08334d9977411fd37395f89133834
+source-git-commit: d286db53c2f9605794bdadcc876b5069037edde3
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 63%
+source-wordcount: '1562'
+ht-degree: 64%
 
 ---
 
@@ -203,7 +203,7 @@ ht-degree: 63%
 
 >[!TIP]
 >
->运行AEM 6.5.10.0或更高版本时，[时间扭曲也可以与启动项一起使用来预览将来的](/help/sites-authoring/launches.md)。
+>[时间扭曲也可以与启动项一起使用来预览未来情况](/help/sites-authoring/launches.md)。
 
 内容创建是一个持续的协作过程。 时间扭曲旨在允许作者跟踪已发布的网站随时间的变化，以帮助他们了解内容发生了什么变化。 此功能使用页面版本确定发布环境的状态：
 

@@ -1,13 +1,13 @@
 ---
 title: 个性化和内容定位
-description: 了解Adobe Experience Manager 6.5如何创建个性化内容。
+description: 了解Adobe Experience Manager 6.5 LTS如何创建个性化内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Architect,Developer
 exl-id: da8a1341-55a9-46bb-b78d-ced79e22e87e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 8a4f8ce12a67985f659d0e565f2950c97179bc01
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '527'
 ht-degree: 36%
 
 ---

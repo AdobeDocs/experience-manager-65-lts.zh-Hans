@@ -1,13 +1,13 @@
 ---
 title: 创作
-description: Adobe Experience Manager 6.5中的创作和发布概念。
+description: Adobe Experience Manager 6.5 LTS中的创作和发布概念。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 314a6c65-9b90-4f4c-9e4a-d551dbb646e9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 71ea867e240d76a2a881f6e7d65b83979b558f46
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '479'
 ht-degree: 32%
 
 ---
@@ -81,4 +81,4 @@ AEM为您提供两种环境：
 
 #### Dispatcher {#dispatcher}
 
-为了优化网站访问性能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)**&#x200B;实施了负载平衡和缓存。
+为了优化网站访问性能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;实施了负载平衡和缓存。

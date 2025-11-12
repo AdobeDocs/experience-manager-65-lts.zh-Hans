@@ -1,18 +1,14 @@
 ---
 title: 配置Dynamic Media常规设置
 description: 了解如何在Dynamic Media中管理常规设置。 您可以在此处设置发布服务器名称和原始服务器名称，并设置图像覆盖选项。 此外，还有用于图像钝化蒙版的默认上传选项，以及用于了解如何处理PostScript、Adobe Photoshop、PDF和Adobe Illustrator文件的上传选项。
-contentOwner: Rick Brough
-products: SG_EXPERIENCEMANAGER/6.5/ASSETS
-topic-tags: administering
-content-type: reference
 feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 solution: Experience Manager, Experience Manager Assets
 exl-id: 99cd5f46-f1aa-46f5-b112-311724e00490
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 298d0505a6c0561202e77008b3c352066d4e72b7
 workflow-type: tm+mt
-source-wordcount: '2506'
+source-wordcount: '2498'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 0%
 配置&#x200B;**[!UICONTROL Dynamic Media常规设置]**&#x200B;仅适用于以下情况：
 
 * 您正在以Scene7模式运行Dynamic Media。 请参阅[在Scene7模式下启用Dynamic Media](/help/assets/config-dms7.md#enabling-dynamic-media-in-scene-mode)。
-* 您在Adobe Experience Manager 6.5.11或更高版本中具有&#x200B;*现有* **[!UICONTROL Dynamic Media配置]** （位于&#x200B;**[!UICONTROL Cloud Services]**）。 请参阅[在云服务中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
+* 您有&#x200B;*现有* **[!UICONTROL Dynamic Media配置]** （在&#x200B;**[!UICONTROL 云服务]**&#x200B;中）。 请参阅[在云服务中创建Dynamic Media配置](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)。
 * 您是具有管理员权限的Experience Manager系统管理员。
 
 Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员使用。 Adobe Dynamic Media建议更改这些发布设置的用户熟悉Adobe Experience Manager上的Dynamic Media以及基础图像技术。
@@ -52,7 +48,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
    * [Illustrator](#illustrator-tab)选项卡
 
    ![Dynamic Media常规设置页面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media常规设置页面，已选择&#x200B;**[!UICONTROL 图像编辑]**&#x200B;选项卡。*<br><br>
+   *Dynamic Media常规设置页面，已选择&#x200B;**[!UICONTROL 图像编辑]**选项卡。*<br><br>
 
 1. 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 保存]**。
 
@@ -86,7 +82,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 
   控制任何现有手动裁切定义的保留。
 
-  另请参阅Dynamic Media查看器参考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=zh-Hans)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=zh-Hans)中的`preserveCrop`。
+  另请参阅Dynamic Media查看器参考指南中的`preserveCrop`UploadPostJob[和](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html)ReprocessAssetsJob[中的](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)。
 
 ## 默认上载选项 {#default-upload-options}
 
@@ -130,7 +126,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 创建模板]** | 从PSD文件中的图层创建模板。 |
 | **[!UICONTROL 提取文本]** | 提取文本，以便用户能够在查看器中搜索文本。 |
 | **[!UICONTROL 将图层扩展至背景大小]** | 将已翻录图像图层的大小扩展到背景图层的大小。 |
-| **[!UICONTROL 图层命名]** | 将已翻录图像图层的大小扩展到背景图层的大小。<br>· **[!UICONTROL 图层名称]** — 将图像命名为PSD文件中的图层名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、第1层、第2层等），则图像将根据PSD文件中的图层编号进行命名。 <br>· **[!UICONTROL Photoshop和图层编号]** — 将图像命名为PSD文件中的图层编号，忽略原始图层名称。 使用Photoshop文件名和附加的图层编号来命名图像。 例如，名为`Spring Ad.psd`的文件的第二层名为`Spring Ad_2`，即使它在Photoshop中具有非默认名称。<br>· **[!UICONTROL Photoshop和图层名称]** — 将图像命名为PSD文件后跟图层名称或图层编号。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，名为`SpringAd`的PSD文件中名为`Price Tag`的图层名为`Spring Ad_Price Tag`。 默认名称为Layer 2的层称为`Spring Ad_2`。 |
+| **[!UICONTROL 图层命名]** | 将已翻录图像图层的大小扩展到背景图层的大小。<br>· **[!UICONTROL 图层名称]** — 将图像命名为PSD文件中的图层名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、第1层、第2层等），则图像将根据PSD文件中的图层编号进行命名。 <br>· **[!UICONTROL Photoshop和图层编号]** — 将图像命名为PSD文件中的图层编号，忽略原始图层名称。 使用Photoshop文件名和附加的图层编号来命名图像。 例如，名为`Spring Ad.psd`的文件的第二层名为`Spring Ad_2`，即使它在Photoshop中具有非默认名称。<br>· **[!UICONTROL Photoshop和图层名称]** — 将图像命名为PSD文件后跟图层名称或图层编号。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，名为`Price Tag`的PSD文件中名为`SpringAd`的图层名为`Spring Ad_Price Tag`。 默认名称为Layer 2的层称为`Spring Ad_2`。 |
 | **[!UICONTROL 锚点]** | 指定如何在模板中定位图像，这些模板是从PSD文件生成的分层组合生成的。 默认情况下，锚点是中心。 中心锚点允许替换图像以最佳方式填充相同的空间，而不管替换图像的长宽比如何。 当引用模板并使用参数替换时，替换此图像的不同方面的图像有效地占用了相同的空间。 如果您的应用程序要求替换图像填充模板中分配的空间，请更改为其他设置。 |
 
 ### PDF选项卡 {#pdf-tab}

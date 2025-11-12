@@ -1,18 +1,18 @@
 ---
 title: 在AEM中选择用户界面
-description: 配置在Adobe Experience Manager 6.5中使用的界面。
+description: 配置要在Adobe Experience Manager 6.5 LTS中工作的接口。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 508f9dfb-1a4e-45bd-acdd-48cc910bdd0f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d8057cf9ee86c2ec9c1f556fa7c18f98797fe982
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
 
-# 选择您的UI{#selecting-your-ui}
+# 选择您的 UI{#selecting-your-ui}
 
 Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户可能会想要切换到[经典UI](/help/sites-classic-ui-authoring/classicui.md)。 执行此操作有多种选项。
 
@@ -39,7 +39,7 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 >
 >从以前的版本升级的实例会保留用于页面创作的经典UI。
 >
->升级后，页面创作不会自动切换到触控式UI，但您可以使用&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)配置此设置。 查看编辑器[&#128279;](#ui-overrides-for-the-editor)的UI覆盖。
+>升级后，页面创作不会自动切换到触控式UI，但您可以使用[WCM创作UI模式服务](/help/sites-deploying/configuring-osgi.md) （**服务）的** OSGi配置`AuthoringUIMode`配置此设置。 查看编辑器[的](#ui-overrides-for-the-editor)UI覆盖。
 
 ## 为实例配置默认UI {#configuring-the-default-ui-for-your-instance}
 
@@ -104,11 +104,9 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 * 创作页面时：
 
    * 在URL中使用`cf#`访问页面时，强制使用经典编辑器。 例如：
-
      `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
    * 在URL中使用`/editor.html`或使用触控设备时，会强制使用已启用触控功能的编辑器。 例如：
-
      `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何强制都是临时的，并且仅对浏览器会话有效
@@ -119,7 +117,7 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 
    * Cookie
    * 用户首选项
-   * 如果两者都不存在，则默认为&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)中设置的定义。
+   * 如果两者都不存在，则默认为[WCM创作UI模式服务](/help/sites-deploying/configuring-osgi.md) （**服务）的** OSGi配置`AuthoringUIMode`中设置的定义。
 
 >[!NOTE]
 >

@@ -1,15 +1,11 @@
 ---
 title: 内容页面的响应式布局
 description: 通过Adobe Experience Manager，您可以使用布局容器组件为页面实现响应式布局。
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: page-authoring
-content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 06c1c7bc-aecb-4c35-bf30-dcc852540d6c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e4d365adbfc08ddd51af692237779ed4e11c532d
 workflow-type: tm+mt
 source-wordcount: '1810'
 ht-degree: 71%
@@ -136,7 +132,7 @@ AEM 让您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
-   * 蓝色虚线表示选定设备(此处为&#x200B;**iPhone 6**)的&#x200B;*折*。
+   * 蓝色虚线表示选定设备(此处为&#x200B;*iPhone 6*)的&#x200B;**折**。
 
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
@@ -154,7 +150,7 @@ AEM 让您根据设备的宽度定义布局：
 
 >[!NOTE]
 >
->如果尚未可用，则必须为段落系统/页面[&#128279;](/help/sites-administering/configuring-responsive-layout.md)明确激活&#x200B;**布局容器**（例如，通过使用&#x200B;[**设计**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
+>如果尚未可用，则必须为段落系统/页面&#x200B;**明确**&#x200B;激活[布局容器](/help/sites-administering/configuring-responsive-layout.md)（例如，通过使用&#x200B;[**设计**&#x200B;模式](/help/sites-authoring/default-components-designmode.md)）。
 
 1. 布局 **容器在组件浏览器中** ，可作为标准 [组件使用](/help/sites-authoring/author-environment-tools.md#components-browser)。从此处，您可以将其拖动到页面上的所需位置，随后您将看到将组件拖动到 **此处占位符** 。
 1. 接下来，您可以向布局容器中添加组件。这些组件将存放实际的内容：
@@ -266,7 +262,7 @@ AEM 让您根据设备的宽度定义布局：
      >在以上示例中，浮动和隐藏操作之所以可用，是因为此布局容器嵌套在一个父布局容器内。
 
    * **取消隐藏组件**
-选择父组件会显示包含&#x200B;**显示隐藏的组件**&#x200B;选项的操作工具栏。在此示例中，隐藏了两个组件。
+选择父组件会显示包含**显示隐藏的组件**&#x200B;选项的操作工具栏。在此示例中，隐藏了两个组件。
 
      ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 

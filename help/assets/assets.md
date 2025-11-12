@@ -6,9 +6,9 @@ feature: Asset Management
 role: Leader, Architect, User
 solution: Experience Manager, Experience Manager Assets
 exl-id: 2f2eb576-4924-4314-b348-c4b290a57fe3
-source-git-commit: aafd340d9ef03f9bf12ed23aad5eb03dc055af38
+source-git-commit: 6944befc6ca7367e229b3eb7b41fef9cc177a1df
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '903'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/overview) |
-| AEM 6.5 | 本文 |
+| AEM 6.5 LTS | 本文 |
 
 AEM [!DNL Assets]是一种数字资源管理(DAM)工具，它是[!DNL Experience Manager]平台的一部分，使您的企业能够管理和分发数字资源。 组织内的用户可以管理、存储和访问多种类型的数字资产，如图像、视频、文档、音频剪辑、3D文件和富媒体，以便在Web上、在印刷品中和使用数字分发功能。
 
@@ -26,7 +26,7 @@ AEM [!DNL Assets]是一种数字资源管理(DAM)工具，它是[!DNL Experience
 
 [!DNL Assets]提供组织关键数字资产的企业范围共享和分发。 组织内的用户可以通过Web界面（或CIFS或WebDAV文件夹）存储、管理和访问数字资产，如图像、图形、音频、视频和文档。
 
-[!DNL Experience Manager]的[!DNL Assets]功能允许您执行以下操作：
+[!DNL Assets]的[!DNL Experience Manager]功能允许您执行以下操作：
 
 * 添加和共享各种文件格式的图像、文档、音频文件和视频文件。
 * 通过按标记、灯箱或星星（您的收藏夹）对资源进行分组来管理资源。 向资产添加注释。
@@ -74,7 +74,7 @@ AEM [!DNL Assets]是一种数字资源管理(DAM)工具，它是[!DNL Experience
 
 * **演绎版**：演绎版是资产的二进制表示形式。 [!DNL Assets]始终具有主要表示形式 — 已上传文件的表示形式。 它们可以具有任意数量的其他表示法，这些表示法是例如通过自定义工作流步骤在上传资产时创建的。 演绎版可以具有不同的尺寸、不同的分辨率、添加的水印或某些其他变化的特征。
 
-* **版本**：版本控制功能在特定时间点创建数字资源的快照。 您可以将资源还原到以前的版本。 查看 [!DNL Assets][&#128279;](manage-assets.md#asset-versioning)中的版本控制。
+* **版本**：版本控制功能在特定时间点创建数字资源的快照。 您可以将资源还原到以前的版本。 查看[中的 [!DNL Assets]](manage-assets.md#asset-versioning)版本控制。
 
 * **子资产**：子资产是构成资产的资产，例如[!DNL Adobe Photoshop]文件中的图层或PDF文件中的页面。 在[!DNL Assets]中，您可以像管理资产一样管理子资产。
 

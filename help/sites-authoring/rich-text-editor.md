@@ -1,25 +1,25 @@
 ---
 title: 使用富文本编辑器创作内容
-description: 使用富文本编辑器在Adobe Experience Manager 6.5中创作内容。
+description: 使用富文本编辑器在Adobe Experience Manager 6.5 LTS中创作内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 01c2a67a-7168-4362-ad7d-f4990ea43ed8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 7fcb784124027df87bf41cc6169815d755cea6d7
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 32%
+source-wordcount: '265'
+ht-degree: 35%
 
 ---
 
 # 使用富文本编辑器创作内容 {#use-rich-text-editor-to-author-content}
 
-富文本编辑器 (RTE) 是将文本内容插入到 AEM 中的基本构建块。它构成了各种组件的基础，包括：
+富文本编辑器 (RTE) 是将文本内容插入到 AEM 中的基本构建块。它是多个组件的基础，包括：
 
-* [文本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/wcm-components/text)
-* [表格](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/wcm-components/text#table)
+* [文本](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
+* [表格](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text#table)
 
-## 就地编辑 {#in-place-editing}
+## 就地编辑  {#in-place-editing}
 
 通过单击选择基于文本的组件，将像任何其他组件一样显示[组件工具栏](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)。
 

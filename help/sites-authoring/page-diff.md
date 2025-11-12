@@ -1,16 +1,11 @@
 ---
 title: 页面差异
 description: 通过页面差异功能，可以方便地将两个页面并排比较，并突出显示它们的差异。
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: site-features
-docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
 exl-id: 228c1ffb-91af-4f2e-82f8-1e570034f7ec
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: db1c30db0a61e852484a25909c60ad5940b2b33a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 81%
@@ -51,7 +46,7 @@ ht-degree: 81%
 
 两个页面的源会清楚地显示在浏览器窗口顶部的标题栏中。
 
-标头![&#128279;](assets/chlimage_1-109.png)中显示Source
+标头![中显示](assets/chlimage_1-109.png)Source
 
 差异比较会检测在组件和 HTML 级别发生的更改。发生更改的项目会以不同的颜色突出显示。
 

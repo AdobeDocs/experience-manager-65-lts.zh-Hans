@@ -1,19 +1,18 @@
 ---
-title: 创建和配置资产编辑器页面
+title: 创建并配置资产编辑器页面
 description: 了解如何创建自定义资产编辑器页面并同时编辑多个资产。
-contentOwner: AG
 role: User, Admin
 feature: Developer Tools,Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 39e1b20b-27d5-4869-b7e1-0dd2d087df7b
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 7b62f47a0ce75ad5676ea41c86b299160e8b505c
 workflow-type: tm+mt
 source-wordcount: '2088'
 ht-degree: 1%
 
 ---
 
-# 创建和配置资产编辑器页面 {#creating-and-configuring-asset-editor-pages}
+# 创建并配置资产编辑器页面 {#creating-and-configuring-asset-editor-pages}
 
 本文档将介绍以下内容：
 
@@ -21,7 +20,7 @@ ht-degree: 1%
 * 如何创建和自定义资产编辑器页面，这些页面是WCM页面，允许您查看和编辑元数据并对资产执行操作。
 * 如何同时编辑多个资源。
 
-<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to 6.5 default samples. -->
+<!-- TBD: Add UICONTROL tags. Need PM review. Flatten the structure a bit. Re-write to remove Geometrixx mentions and to adhere to default samples. -->
 
 >[!NOTE]
 >
@@ -197,7 +196,7 @@ For more information, see the [predicate Javadocs](https://developer.adobe.com/e
 
 >[!NOTE]
 >
->如果要将自定义字段添加到DAM资产编辑器，请向`/apps/dam/content/asseteditors.`添加新的`cq:Widget`节点
+>如果要将自定义字段添加到DAM资产编辑器，请向`cq:Widget`添加新的`/apps/dam/content/asseteditors.`节点
 
 ### 创建资产编辑器页面 {#creating-the-asset-editor-page}
 
@@ -393,7 +392,7 @@ For more information, see the [predicate Javadocs](https://developer.adobe.com/e
 
 要使用“资产编辑器”页面多重编辑资产，请执行以下操作：
 
-1. 打开Geometrixx **新闻中心**&#x200B;页面：
+1. 打开Geometrixx **新闻中心**页面：
    `https://localhost:4502/content/geometrixx/en/company/press.html`
 
 1. 选择资源：

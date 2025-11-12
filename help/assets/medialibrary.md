@@ -1,15 +1,14 @@
 ---
 title: 使用Media Library进行基本数字资产管理
 description: 用于资产管理的[!DNL Experience Manager Assets]和媒体库。
-contentOwner: AG
 role: Architect, Leader
 feature: Asset Management
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 50a980e5-3b35-4485-9a5b-44d1a42a837c
-source-git-commit: 51f6da4da0bb3f79aa6fa17371b8084b72de7546
+source-git-commit: 92c9dd0043b644e258b75a999ad1d556689907a7
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '541'
 ht-degree: 2%
 
 ---
@@ -18,8 +17,8 @@ ht-degree: 2%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/medialibrary.html?lang=zh-Hans) |
-| AEM 6.5 | 本文 |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/medialibrary.html?lang=en) |
+| AEM 6.5 LTS | 本文 |
 
 [!DNL Adobe Experience Manager]平台提供了不同的功能来管理资源。 媒体库允许用户将少量资产上传到存储库、搜索并使用网页中的资产，以及完成资产上的简单资产管理任务。
 
@@ -90,9 +89,3 @@ As per PM, we must avoid stating such a list, as we do not have a list that make
 请注意，在没有[!DNL Asset]许可证的情况下，您无法使用智能标记、[!DNL Asset]链接、[!DNL Adobe Experience Manager]选择器、批量标记、修改资产工作流或标准[!DNL Assets]用户界面来访问媒体库。
 
 <!-- TBD: Add a CTA - how to contact Adobe for queries. -->
-
->[!MORELIKETHIS]
->
->* [&#x200B; [!DNL Experience Manager Assets]中的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/assets/assets)DAM功能
->* [[!DNL Experience Manager] 6.5 Managed Services产品说明](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-managed-services.html)
->* [[!DNL Experience Manager] 6.5内部部署产品说明](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-on-premise.html)
