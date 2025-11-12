@@ -163,7 +163,7 @@ Experience Manager发布节点将继续提供其他内容，例如Dynamic Media�
 
 ## 启用Dynamic Media {#enabling-dynamic-media}
 
-默认情况下已禁用[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须使用`dynamicmedia`运行模式启用Dynamic Media，就像使用`publish`运行模式一样。 在启用之前，请确保查看[技术要求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
+默认情况下已禁用[Dynamic Media](https://business.adobe.com/cn/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须使用`dynamicmedia`运行模式启用Dynamic Media，就像使用`publish`运行模式一样。 在启用之前，请确保查看[技术要求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
 
 >[!NOTE]
 >
@@ -889,14 +889,14 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
 | 属性 | 默认值 | 描述 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 默认背景颜色。 RGB值，用于填充不包含实际图像数据的回复图像的任意区域。 另请参阅图像服务API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
-| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api)。<br>但是，您通常使用查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
-| `defaultthumbpix` | `100,100` | 默认缩略图大小。 用于缩略图请求(`req=tmb`)，而不是attribute：：DefaultPix。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`明确指定视图大小，则此操作为true。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api)。 |
-| `expiration` | `36000000` | 默认客户端缓存生存时间。 提供特定目录记录中不包含有效catalog：：Expiration值时的默认过期时间间隔。<br>实数，0或更大。 自生成回复数据以来到到期为止的毫秒数。 设置为0将始终使回复图像立即过期，这样可以有效禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要提前清除缓存，请联系客户支持。<br>另请参阅图像服务API中的[过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html)。 |
-| `jpegquality` | `80` | 默认的JPEG编码属性。 指定JPEG回复图像的默认属性。<br>用逗号分隔的整数和标志。 第一个值在1至100的范围内，用于定义质量。 第二个值可以为0，表示正常行为；也可以为1，表示禁用JPEG编码器采用的RGB色度缩减像素采样。<br>另请参阅图像服务API中的[JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api)。 |
-| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，服务器将返回错误。<br>另请参阅图像服务API中的[MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api)。 |
-| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样和插值属性。<br>在请求中未指定`resMode=`时使用。<br>允许的值包括`BILIN`、`BICUB`或`SHARP2`。<br>枚举。 对于`bilin`，设置为2，`bicub`设置为3，或者`sharp2`插值模式设置为4。 使用`sharp2`以获得最佳结果。<br>另请参阅图像服务API中的[ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api)。 |
-| `resolution` | `72` | 默认对象分辨率。 提供特定目录记录中不包含有效catalog：：Resolution值时的默认对象分辨率。<br>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，例如每米像素数。<br>另请参阅图像服务API中的[分辨率](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api)。 |
+| `bkgcolor` | `FFFFFF` | 默认背景颜色。 RGB值，用于填充不包含实际图像数据的回复图像的任意区域。 另请参阅图像服务API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html?lang=zh-Hans#image-serving-api)。 |
+| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html?lang=zh-Hans#image-serving-api)。<br>但是，您通常使用查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
+| `defaultthumbpix` | `100,100` | 默认缩略图大小。 用于缩略图请求(`req=tmb`)，而不是attribute：：DefaultPix。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`明确指定视图大小，则此操作为true。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html?lang=zh-Hans#image-serving-api)。 |
+| `expiration` | `36000000` | 默认客户端缓存生存时间。 提供特定目录记录中不包含有效catalog：：Expiration值时的默认过期时间间隔。<br>实数，0或更大。 自生成回复数据以来到到期为止的毫秒数。 设置为0将始终使回复图像立即过期，这样可以有效禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要提前清除缓存，请联系客户支持。<br>另请参阅图像服务API中的[过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html?lang=zh-Hans)。 |
+| `jpegquality` | `80` | 默认的JPEG编码属性。 指定JPEG回复图像的默认属性。<br>用逗号分隔的整数和标志。 第一个值在1至100的范围内，用于定义质量。 第二个值可以为0，表示正常行为；也可以为1，表示禁用JPEG编码器采用的RGB色度缩减像素采样。<br>另请参阅图像服务API中的[JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html?lang=zh-Hans#image-serving-api)。 |
+| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，服务器将返回错误。<br>另请参阅图像服务API中的[MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=zh-Hans#image-serving-api)。 |
+| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样和插值属性。<br>在请求中未指定`resMode=`时使用。<br>允许的值包括`BILIN`、`BICUB`或`SHARP2`。<br>枚举。 对于`bilin`，设置为2，`bicub`设置为3，或者`sharp2`插值模式设置为4。 使用`sharp2`以获得最佳结果。<br>另请参阅图像服务API中的[ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=zh-Hans#image-serving-api)。 |
+| `resolution` | `72` | 默认对象分辨率。 提供特定目录记录中不包含有效catalog：：Resolution值时的默认对象分辨率。<br>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，例如每米像素数。<br>另请参阅图像服务API中的[分辨率](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html?lang=zh-Hans#image-serving-api)。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 这些值表示视频播放时间的快照，并传递给[encoding.com](https://www.encoding.com/)。 有关详细信息，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)。 |
 
 ## 配置Dynamic Media颜色管理 {#configuring-dynamic-media-color-management}
@@ -911,9 +911,9 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
 
 高级用例可以使用手动配置`icc=`修饰符来显式选择输出颜色配置文件：
 
-* `icc` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
+* `icc` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html?lang=zh-Hans)
 
-* `iccEmbed` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
+* `iccEmbed` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html?lang=zh-Hans)
 
 >[!NOTE]
 >
@@ -961,55 +961,55 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html">iccprofilergb</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=zh-Hans">iccprofilergb</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认RGB颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html">iccprofilecmyk</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=zh-Hans">iccprofilecmyk</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认CMYK颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html">iccprofilegray</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=zh-Hans">iccprofilegray</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认灰色颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">iccprofilesrcrgb</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html?lang=zh-Hans">iccprofilesrcrgb</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的RGB图像的默认RGB颜色配置文件的名称</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">iccprofilesrccmyk</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html?lang=zh-Hans">iccprofilesrccmyk</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的CMYK图像的默认CMYK颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html">iccprofilesrcgray</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html?lang=zh-Hans">iccprofilesrcgray</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的CMYK图像的默认灰度颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccblackpointcompensation</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=zh-Hans">iccblackpointcompensation</a></td>
    <td>布尔值</td>
    <td>真</td>
    <td>指定在颜色校正期间是否进行黑点补偿。 Adobe建议启用此设置。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html">iccdither</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=zh-Hans">iccdither</a></td>
    <td>布尔值</td>
    <td>假</td>
    <td>指定在颜色校正期间是否执行仿色。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html">iccrenderintent</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html?lang=zh-Hans">iccrenderintent</a></td>
    <td>字符串</td>
    <td>相对</td>
    <td><p>指定渲染方法。 可接受的值为：<strong>可感知、相对、饱和度、绝对。 </strong><i></i>Adobe建议使用<strong>相对</strong><i></i>作为默认值。</p> </td>
