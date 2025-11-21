@@ -8,11 +8,11 @@ exl-id: 8fc30cfe-cb10-47ba-911c-e4fdfaa970b5
 source-git-commit: 31370571843508acfb5d1e5cc491fdb043153a8f
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
-# 作者的首要步骤{#first-steps-for-authors}
+# 作者入门指南{#first-steps-for-authors}
 
 本节概述了在[开始使用Adobe Experience Manager (AEM)创作内容](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)时将使用的主要任务。
 
