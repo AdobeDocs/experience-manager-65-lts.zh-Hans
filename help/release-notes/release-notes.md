@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 6023c211220bb500814ecd511b8787d107c3c6cd
+source-git-commit: 5dfcc115fd2e1991a8a4701597b0fb25b374e3ee
 workflow-type: tm+mt
-source-wordcount: '7381'
-ht-degree: 99%
+source-wordcount: '7405'
+ht-degree: 98%
 
 ---
 
@@ -410,8 +410,9 @@ XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资
 * 用户无法在 AEM Forms 中使用 PDF 文件的时间线功能。该问题影响了用户有效跟踪文档更改和修订的能力。在 AEM Forms 区域的“表单和文档”部分上传任何 PDF 时，时间线视图功能失效。（FORMS-19408）
 * 用户在与 OData 交互时遇到空指针异常。这会导致数据检索流程中断。（FORMS-20348）
 * 在移除开源 Java 库 Guava 后，google.common.collect 也会随之一同移除。此更新可确保使用自适应表单的企业客户获得更好的兼容性和性能。（FORMS-17031）
+* 启用服务器端验证(SSV)后，表单提交可能会失败。 如果您遇到此问题，请联系[Adobe支持](https://business.adobe.com/in/support/main.html)寻求帮助。 （FORMS-21966）
 
-### Forms Captcha
+### 表单验证码
 
 * 为基于基础组件的自适应表单新增了对 `Hcaptcha` 和 `Turnstile` 的支持。（FORMS-16562）
 * 用户在 `Create hCaptcha Configuration` 对话框中遇到了图标重叠问题。填写必填字段时，信息图标与错误图标重叠，导致配置设置过程出现混淆。（FORMS-16916）
