@@ -1,5 +1,5 @@
 ---
-title: 缓解AEM中的序列化问题
+title: 缓解 AEM 中的序列化问题
 description: 了解如何在AEM中缓解序列化问题。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 exl-id: eef69d02-2e88-4f44-98bb-d98fa297e3a2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: ffb467630ee061bce5a9cab4e8a311e70b2aeb38
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '914'
+ht-degree: 1%
 
 ---
 
-# 缓解AEM中的序列化问题{#mitigating-serialization-issues-in-aem}
+# 缓解 AEM 中的序列化问题{#mitigating-serialization-issues-in-aem}
 
 ## 概述 {#overview}
 
@@ -33,6 +33,10 @@ NotSoSerial是解决Java™级别问题的Java™级别解决方案，并非特�
 该代理旨在帮助缓解最新已知的易受攻击的类别。 如果您的项目正在反序列化不受信任的数据，则它仍可能容易受到拒绝服务攻击、内存不足攻击和未知的未来反序列化攻击。
 
 Adobe正式支持Java™ 6、7和8。 但是，Adobe的理解是NotSoSerial也支持Java™ 5。
+
+>[!WARNING]
+>
+>NotSoSerial不应与Java™ 17或更高版本一起使用。
 
 ## 安装代理 {#installing-the-agent}
 
