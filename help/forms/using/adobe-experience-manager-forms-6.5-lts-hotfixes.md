@@ -5,13 +5,12 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: bb270a983d9d3f7d116a179886daf763e7e2341e
+source-git-commit: fbe90ee89a2c20496800b545ec5637e829e7c7d7
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 45%
 
 ---
-
 
 # Adobe Experience Manager Forms 6.5 LTS修补程序{#aem-form-hotfix}
 
@@ -37,7 +36,7 @@ ht-degree: 45%
     <ul>
     <li>Windows — 适用于Windows上的AEM Service Pack 6.5 LTS的<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]1-hotfix-on-add-on/adobe-aemfd-win-pkg-6.1.176-RHF-002.zip">修补程序2</a></li>
     <li>Linux — 适用于Linux上的AEM Service Pack 6.5 LTS的<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]hotfix-on-add-on/adobe-aemfd-linux-pkg-6.1.176-RHF-002.zip">修补程序2</a></li>
-     <li>OSX- OSX<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]1-hotfix-on-add-on/adobe-aemfd-osx-pkg-6.1.176-RHF-002.zip">上适用于AEM Service Pack 6.5 LTS的</a>修补程序2</li>
+     <li>macOS- MacOS上适用于AEM Service Pack 6.5 LTS的<a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?pack[...]1-hotfix-on-add-on/adobe-aemfd-osx-pkg-6.1.176-RHF-002.zip">修补程序2</a></li>
     <td>
     <ul>
     <li>通过解决在启用服务器端验证(SSV)时提交可能失败的问题来增强表单提交的可靠性如果您遇到任何问题，请联系[Adobe Experience Manager Forms支持](https://business.adobe.com/in/support/main.html)
