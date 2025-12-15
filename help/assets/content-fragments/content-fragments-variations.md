@@ -5,10 +5,10 @@ feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
 exl-id: a4101e70-85cd-471c-9bf9-fd09bf5fc8e8
-source-git-commit: e0fb43e63eb876049447d12ab379fd92aa1ee4b6
+source-git-commit: d5a7542f1404db662b53c19f2c956f4971a90e78
 workflow-type: tm+mt
-source-wordcount: '2350'
-ht-degree: 59%
+source-wordcount: '2309'
+ht-degree: 60%
 
 ---
 
@@ -407,12 +407,6 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 要创建变体，请执行以下操作：
 
->[!NOTE]
->
->变体在创作环境中和投放时都会向内容片段添加处理时间。 建议将变体的数量保持在可管理的最小值。
->
->最佳实践为每个内容片段不超过10个变量。
-
 1. 打开片段并确保侧面板可见。
 1. 从侧边面板的图标栏中选择&#x200B;**“变体”**。
 1. 选择&#x200B;**“创建变体”**。
@@ -474,7 +468,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步仅可将更改&#x200B;*从&#x200B;**母版**&#x200B;复制到变体*。
+>同步仅可将更改&#x200B;*从&#x200B;**母版**复制到变体*。
 >
 >仅会同步变体的当前元素。
 >
