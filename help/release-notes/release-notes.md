@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 6ca845ce5f4b97bfc5a360b3426f7284fb9cd401
+source-git-commit: 0a050ebdc32e127a093270be91f1eed59f8f4654
 workflow-type: tm+mt
-source-wordcount: '7476'
+source-wordcount: '7478'
 ht-degree: 98%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 98%
 
 ### Forms
 
-JEE上的AEM 6.5 Forms LTS现已推出。 有关受支持环境的详细信息，请参阅受支持的平台组合文档。 安装程序链接位于AEM Forms版本页面上。
+JEE上的AEM 6.5 Forms LTS现已推出。 有关支持的环境的详细信息，请参阅[支持的平台](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms)组合文档。 安装程序链接在[AEM Forms版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)页面上可用。
 
 <!-- 6.5 LTS REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
