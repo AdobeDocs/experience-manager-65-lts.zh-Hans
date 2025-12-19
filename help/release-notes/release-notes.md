@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 0d68ed7cb5fe2bf942ffc62f99da9b005ce00410
+source-git-commit: 6ca845ce5f4b97bfc5a360b3426f7284fb9cd401
 workflow-type: tm+mt
-source-wordcount: '7405'
+source-wordcount: '7476'
 ht-degree: 98%
 
 ---
@@ -35,7 +35,11 @@ ht-degree: 98%
 
 [!DNL Experience Manager] 6.5 LTS SP1 包含新功能、客户要求的重要增强功能以及错误修复。还包括自 2025 年 3 月 6.5 LTS 首次发布以来推出的在性能、稳定性和安全性方面的改进。在 6.5 LTS 上[安装此服务包](#install-update)。
 
-<!-- ## Key features and enhancements -->
+## 主要功能和增强功能
+
+### Forms
+
+JEE上的AEM 6.5 Forms LTS现已推出。 有关受支持环境的详细信息，请参阅受支持的平台组合文档。 安装程序链接位于AEM Forms版本页面上。
 
 <!-- 6.5 LTS REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
@@ -213,10 +217,7 @@ XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资
 
 #### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp1}
 
-
-
 ### [!DNL Forms]{#forms-65-lts-sp1}
-
 
 #### Forms Designer 
 
@@ -231,8 +232,6 @@ XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资
 #### [!DNL Adaptive Forms] {#adaptive-forms-65-lts-sp1}
 
 #### [!DNL Forms Designer] {#forms-designer-65-lts-sp1} -->
-
-
 
 ### 基础 {#foundation-65-lts-sp1}
 
@@ -605,6 +604,9 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 **解决方案：**
 有修补程序[cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip)可用于解决此问题。
 
+### Forms JEE
+
+* Linux环境上的用户可能会由于Windows样式的行结尾而遇到安装程序或Configuration Manager (LCM)脚本故障。 在运行安装程序或LCM之前使用dos2unix转换所有.sh文件以防止执行错误。
 
 ## 包含的 OSGi 捆绑包和内容包{#osgi-bundles-and-content-packages-included}
 
