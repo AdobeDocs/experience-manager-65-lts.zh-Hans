@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 6fdc7449673bede6a35151d4e7b97c6aa1605d4e
+source-git-commit: c9a7faf5810e78f8e80b38a87446794488efdd35
 workflow-type: tm+mt
-source-wordcount: '7477'
-ht-degree: 98%
+source-wordcount: '7355'
+ht-degree: 99%
 
 ---
 
@@ -319,6 +319,10 @@ XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资
 * 修复了 `org.apache.sling.scripting.jsp 2.6.0` 中的意外 JSP 编译错误。（NPR-42640）
 
 <!--
+* Backported the fix for Sling Scripting issue that caused `DataTimeParseException` and `String.length()` null pointer exceptions during package installation. Updated Sling Scripting to version 2.8.3-1.0.10.6 to reduce installation errors and improve stability. (NPR-42640) -->
+
+<!--
+
 #### Translation{#foundation-translation-65-lts-sp1} -->
 
 #### 用户界面{#foundation-ui-65-lts-sp1}
@@ -406,9 +410,8 @@ XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资
 * 用户无法在 AEM Forms 中使用 PDF 文件的时间线功能。该问题影响了用户有效跟踪文档更改和修订的能力。在 AEM Forms 区域的“表单和文档”部分上传任何 PDF 时，时间线视图功能失效。（FORMS-19408）
 * 用户在与 OData 交互时遇到空指针异常。这会导致数据检索流程中断。（FORMS-20348）
 * 在移除开源 Java 库 Guava 后，google.common.collect 也会随之一同移除。此更新可确保使用自适应表单的企业客户获得更好的兼容性和性能。（FORMS-17031）
-* 启用服务器端验证(SSV)后，表单提交可能会失败。 如果您遇到此问题，请联系[Adobe支持](https://business.adobe.com/in/support/main.html)寻求帮助。 （FORMS-21966）
 
-### 表单验证码
+### Forms Captcha
 
 * 为基于基础组件的自适应表单新增了对 `Hcaptcha` 和 `Turnstile` 的支持。（FORMS-16562）
 * 用户在 `Create hCaptcha Configuration` 对话框中遇到了图标重叠问题。填写必填字段时，信息图标与错误图标重叠，导致配置设置过程出现混淆。（FORMS-16916）
@@ -567,6 +570,19 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 <!-- DO THESE KNOWN ISSUES CARRY OVER EACH RELEASE? THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
+<!-- REMOVED THIS SECTION AS PER CQDOC-23046
+### Issue with JSP scripting bundle in AEM 6.5.21-6.5.23 and AEM 6.5 LTS GA
+
+AEM 6.5.21, 6.5.22, 6.5.23, and AEM 6.5 LTS GA ship with the `org.apache.sling.scripting.jsp:2.6.0` bundle, which contains a known issue. The issue typically occurs under high load when the AEM instance handles many concurrent requests.
+
+When this issue occurs, one of the following exceptions may appear in the error logs alongside references to `org.apache.sling.scripting.jsp:2.6.0`:
+
+* `java.io.IOException: classFile.delete() failed`
+* `java.io.IOException: tmpFile.renameTo(classFile) failed`
+* `java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0`
+* `java.io.FileNotFoundException`
+
+A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-NPR-42640-1.2.zip) is available to resolve this problem. -->
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
@@ -592,21 +608,6 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 **解决方法：**
 如果您遇到此问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
-
-### AEM 6.5 LTS SP1上的安全UI上的“权限为空”页面
-
->[!NOTE]
->
-> 此问题仅在AEM 6.5 LTS SP1版本中出现。
-
-当访问AEM 6.5 LTS SP1中“工具” — >“安全”下的“权限”页面时，它会提供空白页面，而不是显示用户或组的权限。
-
-**解决方案：**
-有修补程序[cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.1-hotfix-GRANITE-62993-1.0.zip)可用于解决此问题。
-
-### Forms JEE
-
-* Linux环境上的用户可能会由于Windows样式的行结尾而遇到安装程序或Configuration Manager (LCM)脚本故障。 在运行安装程序或LCM之前使用dos2unix转换所有.sh文件以防止执行错误。
 
 ## 包含的 OSGi 捆绑包和内容包{#osgi-bundles-and-content-packages-included}
 
