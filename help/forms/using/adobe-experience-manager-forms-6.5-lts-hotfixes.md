@@ -1,16 +1,16 @@
 ---
 title: Adobe Experience Manager Forms 6.5 LTS SP1修补程序
 description: 提供了有关如何下载和安装AEM Forms 6.5 LTS的修补程序的信息。
-exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 6ca845ce5f4b97bfc5a360b3426f7284fb9cd401
+source-git-commit: 504240bdad9e964460a9fcdc555228c7cb02e314
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 45%
 
 ---
+
 
 # Adobe Experience Manager Forms 6.5 LTS修补程序{#aem-form-hotfix}
 
