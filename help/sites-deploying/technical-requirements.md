@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: 075f671d878f9bd9be33a059223800fa9acddf40
+source-git-commit: d55edd443081ba21be7f119a77fcd01f68f47d4e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3232'
+ht-degree: 5%
 
 ---
 
@@ -138,9 +138,9 @@ Adobe Experience Manager与以下版本的Java™虚拟机一起运行：
 
 Adobe Experience Manager可以作为独立服务器（快速入门JAR文件）运行，也可以作为第三方应用程序服务器中的Web应用程序（WAR文件）运行。
 
-需要的最低Servlet API版本是Servlet 3.1。此外，AEM支持Jakarta servlet 5 for jar，WAR可以在实施Jakarta servlet API 5/6的应用程序服务器中部署。
+需要的最低Servlet API版本是Servlet 3.1。此外，AEM Forms支持Jakarta servlet 5 for jar，WAR可以在实施Jakarta servlet API 5/6的应用程序服务器中部署。
 
-| Platform | 支持级别 |
+| 平台 | 支持级别 |
 |---|---|
 | **快速入门内置Servlet引擎(Jetty 11.0.x)** | A：受到支持 |
 | 带有Web配置文件24.0.0.7和IBM的IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile)® Sumeru打开JRE® 17/21 | R：对新合同的支持受限`[1]` |
@@ -179,9 +179,9 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 
 支持在云计算环境中的虚拟机中运行Adobe Experience Manager。 这些环境包括Microsoft®Azure和Amazon Web Services (AWS)，其运行符合本页列出的技术要求并符合Adobe的标准支持条款。
 
-对于云原生环境，请查看AEM产品线中的最新产品：Adobe Experience Manager as a Cloud Service 。 有关详细信息，请参阅[Adobe Experience Manager as a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=zh-Hans)。
+对于云原生环境，请查看AEM产品线中的最新产品：Adobe Experience Manager as a Cloud Service 。 有关详细信息，请参阅[Adobe Experience Manager as a Cloud Service文档](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)。
 
-Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services的其他文档](https://business.adobe.com/cn/products/experience-manager/managed-services.html?aemClk=t)。
+Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe Managed Services为专家提供了在这些云计算环境中部署和操作AEM的经验和技能。 请参阅[有关Adobe Managed Services的其他文档](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)。
 
 在Azure或AWS或任何其他云计算环境中部署AEM的所有其他情况下，虚拟计算环境会包含Adobe的支持。 该虚拟环境必须按照本页中列出的技术规范运行。 任何与在任何这些云环境中运行的AEM相关的已报告问题，都必须可独立于任何特定于云计算环境的云服务进行重现。 也就是说，除非本页面上列出的技术要求(例如Azure Blob Storage或AWS S3)支持Cloud Service。
 
@@ -189,11 +189,11 @@ Adobe还提供Adobe Managed Services，以便在Azure或AWS上部署AEM。 Adobe
 
 ### Dispatcher平台（Web服务器） {#dispatcher-platforms-web-servers}
 
-Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hans)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更高版本。
+Dispatcher是缓存和负载平衡组件。 [下载最新的Dispatcher版本](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)。 Experience Manager 6.5需要Dispatcher版本4.3.2或更高版本。
 
 以下Web服务器支持与Dispatcher版本4.3.2一起使用：
 
-| Platform | 支持级别 |
+| 平台 | 支持级别 |
 |---|---|
 | **Apache httpd 2.4.x** `[1,2]` | A：受到支持 |
 | Microsoft® IIS 10 (Internet Information Server) | A：受到支持 |
@@ -387,7 +387,7 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
    <th><p><strong>转换到PDF时支持的格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/cn/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a>最新版本</td>
    <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML和HTM</td>
   </tr>
 
@@ -413,9 +413,8 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
 >* PDF Generator仅支持32位版本的Microsoft® Office Professional Plus以及转换所需的其他软件。
 >* 如果Microsoft® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >* PDF Generator不支持Microsoft® Office 365。
->* 仅在Windows和Linux®上支持OpenOffice的PDF Generator转换。
+>* Windows和Linux®均支持OpenOffice的PDF Generator转换。
 >* 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
->* Acrobat的一个版本与AEM Forms捆绑在一起，用于启用PDF Generator功能。 在AEM Forms许可证有效期内，捆绑的版本应当只能通过AEM Forms以编程方式访问，仅用于AEM Forms PDF Generator。 有关详细信息，请参阅根据您的部署([内部部署](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms产品说明。
 >* PDF Generator服务不支持Microsoft® Windows 11。
 
 
@@ -426,7 +425,7 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
    <th><p><strong>转换到PDF时支持的格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/cn/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic轨道</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 classic轨道</a>最新版本</td>
    <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、DWG、DXF和DWF</td>
   </tr>
   <tr>
@@ -454,7 +453,7 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
 >
 >另外，
 >
->* PDF Generator需要32位版本的[Acrobat 2020 classic track版本20.004.30006](https://helpx.adobe.com/cn/acrobat/release-note/release-notes-acrobat-reader.html)或Acrobat 2017版本17.011.30078来执行转换。
+>* PDF Generator需要32位版本的[Acrobat 2020 classic track版本20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html)或Acrobat 2017版本17.011.30078来执行转换。
 >* PDF Generator仅支持32位零售版Microsoft®Office Professional Plus以及转换所需的其他软件。
 >* Microsoft® Office Professional Plus安装可以使用零售或基于MAK/KMS/AD的批量许可。
 >* 如果Microsoft® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
@@ -462,7 +461,7 @@ Adobe Experience Manager(实例、Dispatcher)的所有元素都可以安装在IP
 >* PDF Generator不支持Microsoft® Office 365。
 >* 仅在Windows和Linux®上支持OpenOffice的PDF Generator转换。
 >* 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
->* Acrobat的一个版本与AEM Forms捆绑在一起，用于启用PDF Generator功能。 在AEM Forms许可证有效期内，只能以编程方式访问AEM Forms捆绑的版本，以便与AEM Forms PDF Generator结合使用。 有关详细信息，请参阅根据您的部署([内部部署](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/cn/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms产品说明
+>* Acrobat的一个版本与AEM Forms捆绑在一起，用于启用PDF Generator功能。 在AEM Forms许可证有效期内，只能以编程方式访问AEM Forms捆绑的版本，以便与AEM Forms PDF Generator结合使用。 有关详细信息，请参阅根据您的部署([内部部署](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html)或[Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))提供的AEM Forms产品说明
 >* PDF Generator服务不支持Microsoft® Windows 10。
 >* PDF Generator无法使用Microsoft® Visio 2019转换文件。 您可以继续使用Microsoft® Visio 2016转换`.VSD`和`.VSDX`文件。
 >* PDF Generator无法使用Microsoft® Project 2019转换文件。 您可以继续使用Microsoft® Project 2016转换`.VSD`和`.VSDX`文件。
