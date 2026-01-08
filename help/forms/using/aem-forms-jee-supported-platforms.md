@@ -8,9 +8,9 @@ docset: aem65
 role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 4097adf1dd533bbf21c8635a1948f9ef4c294896
+source-git-commit: 40060eb6c42269bd2cad13a89f7cd5db3a03de5e
 workflow-type: tm+mt
-source-wordcount: '2982'
+source-wordcount: '2997'
 ht-degree: 4%
 
 ---
@@ -371,7 +371,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
    <th><p><strong>转换到PDF时支持的格式</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/cn/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a>最新版本</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a>最新版本</td>
    <td>XPS、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML和HTM</td>
   </tr>
 
@@ -448,8 +448,8 @@ AEM Forms的以下子系统与[508](https://www.section508.gov/)不兼容：
 
 有关其他要求，请参阅：
 
-- [JEE部署中单服务器AEM Forms的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65_cn)
-- JEE部署上群集AEM Forms的[系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65_cn)
+- [JEE部署中单服务器AEM Forms的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65)
+- JEE部署上群集AEM Forms的[系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65)
 
 ### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
@@ -616,7 +616,7 @@ JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支�
 
 ## 第三方修补程序支持政策 {#third-party-patch-support-policy}
 
-JEE上AEM Forms的第三方软件要求记录在其各自产品文档的“系统要求”部分。 从[https://adobe.com/go/learn_aemforms_documentation_65_cn](https://adobe.com/go/learn_aemforms_documentation_65_cn)访问所有文档。
+JEE上AEM Forms的第三方软件要求记录在其各自产品文档的“系统要求”部分。 从[https://adobe.com/go/learn_aemforms_documentation_65](https://adobe.com/go/learn_aemforms_documentation_65)访问所有文档。
 
 AEM Forms on JEE的第三方参考平台说明了开发和发布AEM Forms on JEE期间第三方基础架构的特定修补程序级别，以及该AEM Forms on JEE版本支持的基础架构的最低修补程序/Service Pack级别。
 
@@ -629,6 +629,8 @@ Adobe支持第三方供应商在发布后发布的紧急或推荐修补程序，
 Adobe保留在任意给定时刻更改AEM Forms on JEE版本支持的第三方参考平台及其支持的修补程序定义的权利。
 
 通过搜索Adobe企业支持网站以获取与您的产品相关的知识库文章，还可以找到第三方修补程序的其它信息。
+
+有关与支持的格式或平台版本相关的任何查询，请联系[AEM Forms支持](https://business.adobe.com/in/support/main.html)
 
 <!--
 
@@ -644,7 +646,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit) 
 - Microsoft&reg; Office 2016
@@ -727,7 +729,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
     - Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4.
   - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
-    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/cn/support/programs/eol-matrix.html).
+    - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
     - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
     - Microsoft&reg; Windows Server 2016 (64-bit) 
     - Microsoft&reg; Office 2016
@@ -796,7 +798,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | Added Support | Removed Support | Deprecated Support |
 | -------------- | --------------- | ------------------- |
-| Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4. | | [Adobe Acrobat 2017 - Core support for Adobe Acrobat 2017 ends on June 6, 2022.](https://helpx.adobe.com/cn/support/programs/eol-matrix.html)|
+| Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4. | | [Adobe Acrobat 2017 - Core support for Adobe Acrobat 2017 ends on June 6, 2022.](https://helpx.adobe.com/support/programs/eol-matrix.html)|
 |  | Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)| |
 |  | | Microsoft&reg; Windows Server 2016 (64-bit)|
 |  | | Microsoft&reg; Office 2016 |
