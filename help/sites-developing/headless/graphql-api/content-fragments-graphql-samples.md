@@ -5,10 +5,10 @@ feature: Content Fragments,GraphQL API
 solution: Experience Manager, Experience Manager Sites
 role: Developer
 exl-id: 9a953caa-47d3-4e06-a27d-2a0c3fc72597
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: c2947923fb83b57bc0e1c068af52558dd0a04867
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 84%
+source-wordcount: '1577'
+ht-degree: 83%
 
 ---
 
@@ -225,11 +225,11 @@ ht-degree: 84%
 
 ### 示例查询 – 所有城市的名称 {#sample-names-all-cities}
 
-此示例查询是一个直接的查询，返回`city`架构中所有条目的`name`。
+此示例查询是一个直接的查询，返回`name`架构中所有条目的`city`。
 
 **示例查询**
 
-```xmgraphqll
+```graphql
 query {
   cityList {
     items {
@@ -539,7 +539,7 @@ query {
 
 ### 示例查询 – 所有名为“Jobs”或“Smith”的人 {#sample-all-persons-jobs-smith}
 
-此示例查询筛选名为`Jobs`或`Smith`的任何的所有`persons`。
+此示例查询筛选名为`persons`或`Jobs`的任何的所有`Smith`。
 
 **示例查询**
 
@@ -593,7 +593,7 @@ query {
 
 ### 示例查询 – 所有名字不是“Jobs”的人 {#sample-all-persons-not-jobs}
 
-此示例查询筛选名为`Jobs`或`Smith`的任何的所有`persons`。
+此示例查询筛选名为`persons`或`Jobs`的任何的所有`Smith`。
 
 **示例查询**
 
@@ -1738,10 +1738,10 @@ query {
 
 | 名称 | 国家/地区 | 人口 | 类别 |
 |--- |--- |--- |--- |
-| 巴塞尔 | 瑞士 | 172258 | city:emea |
-| 柏林 | 德国 | 3669491 | city:capital<br>city:emea |
-| 布加勒斯特 | 罗马尼亚 | 1821000 |  city:capital<br>city:emea |
-| 圣弗朗西斯科 | 美国 |  883306 |  city:beach<br>city:na |
-| 圣何塞 | 美国 |  102635 | city:na |
-| 斯图加特 | 德国 | 634830 | city:emea |
-| 苏黎世 | 瑞士 | 415367 |  city:capital<br>city:emea |
+| 巴塞尔 | 瑞士 | 172258 | 城市:emea |
+| 柏林 | 德国 | 3669491 | 城市:capital<br>城市:emea |
+| 布加勒斯特 | 罗马尼亚 | 1821000 |  城市:capital<br>城市:emea |
+| 圣弗朗西斯科 | 美国 |  883306 |  城市:beach<br>城市:na |
+| 圣何塞 | 美国 |  102635 |  城市:na |
+| 斯图加特 | 德国 | 634830 |  城市:emea |
+| 苏黎世 | 瑞士 | 415367 |  城市:capital<br>城市:emea |
