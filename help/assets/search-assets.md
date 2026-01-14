@@ -7,9 +7,9 @@ role: User
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 3511e07b-f6d0-435a-aa80-55357d3dccf5
-source-git-commit: df4b8b9c80734917569c40d01ea5789e16bfb4e3
+source-git-commit: ad4c80af0d9aa88837164ba1a8d6be2042b2c0d4
 workflow-type: tm+mt
-source-wordcount: '5645'
+source-wordcount: '5633'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=en) |
 | AEM 6.5 LTS | 本文 |
 
 [!DNL Adobe Experience Manager Assets]提供了强大的资源发现方法，可帮助您实现更高的内容速度。 您的团队可以使用开箱即用的功能和自定义方法，通过无缝、智能的搜索体验缩短上市时间。 搜索资产是使用数字资产管理系统的核心，无论它是供创意人员进一步使用、供商业用户和营销人员稳健管理资产，还是DAM管理员进行管理。 您可以通过[!DNL Assets]用户界面或其他应用和表面执行的简单、高级和自定义搜索有助于完成这些用例。
@@ -123,9 +123,9 @@ ht-degree: 5%
 1. 在&#x200B;**[!UICONTROL 搜索提升]**&#x200B;框中，指定要提升图像搜索的关键字，然后单击&#x200B;**[!UICONTROL 添加]**。 您可以按相同方式指定多个关键字。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。 您针对此关键字提升的资产将显示在排名最前的搜索结果中。
 
-利用这种方法，您可以提升目标关键词搜索结果中某些资产的排名。 请观看下面的示例视频。 有关详细信息，请参阅[搜索 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=zh-Hans)。
+利用这种方法，您可以提升目标关键词搜索结果中某些资产的排名。 请观看下面的示例视频。 有关详细信息，请参阅[搜索 [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)。
 
->[!VIDEO](https://video.tv.adobe.com/v/3410334/?quality=6&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
 *视频：了解搜索结果的排名方式以及排名会受到何种影响。*
 
@@ -143,7 +143,7 @@ ht-degree: 5%
 
 ### 查找相似图像 {#visualsearch}
 
-要查找与用户选择的图像视觉上相似的图像，请从图像的卡片视图或工具栏中单击&#x200B;**[!UICONTROL 查找类似]**&#x200B;选项。[!DNL Experience Manager]显示DAM存储库中与用户选择的图像类似的智能标记图像。 请参阅[如何配置相似性搜索](#configvisualsearch)。
+要查找与用户选择的图像视觉上相似的图像，请从图像的卡片视图或工具栏中单击&#x200B;**[!UICONTROL 查找类似]**&#x200B;选项。[!DNL Experience Manager] 会从 DAM 存储库中显示与用户所选图像相似的智能标记图像。请参阅[如何配置相似性搜索](#configvisualsearch)。
 
 ![使用卡片视图中的选项查找类似图像](assets/search_find_similar.png)
 
@@ -163,27 +163,27 @@ ht-degree: 5%
 
 | 元数据字段 | Facet值和使用情况 |
 |---|---|
-| 标题 | title：John |
-| 创建者 | 创建者：John |
-| 位置 | 位置：NA |
+| 标题 | 标题:John |
+| 创建者 | 创建者:John |
+| 位置 | 位置:NA |
 | 描述 | description：&quot;Sample Image&quot; |
 | 创建者工具 | creatortool：&quot;Adobe Photoshop&quot; |
 | 版权所有者 | 版权所有：“Adobe Systems” |
-| 参与者 | 投稿人：John |
+| 参与者 | 参与者:John |
 | 使用条款 | 使用条款：“保留复制权利” |
-| 创建时间 | created：YYYY-MM-DDTHH |
-| 过期日期 | expires：YYYY-MM-DDTHH |
-| 准时 | ontime：YYYY-MM-DDTHH |
-| 关闭时间 | offtime：YYYY-MM-DDTHH |
+| 创建 | 已创建:YYYY-MM-DDTHH |
+| 过期日期 | 过期:YYYY-MM-DDTHH |
+| 准时 | ontime:YYYY-MM-DDTHH |
+| 关闭时间 | offtime:YYYY-MM-DDTHH |
 | 时间范围(expires dateontime，offtime) | Facet字段：下限……上行 |
 | 路径 | /content/dam/&lt;文件夹名称> |
 | PDF 标题 | pdftitle：&quot;Adobe文档&quot; |
 | 主题 | 主题：“培训” |
 | 标记 | 标记：“位置和旅游” |
 | 类型 | 类型：&quot;image\png&quot; |
-| 图像宽度 | 宽度：下限……上行 |
-| 图像高度 | 高度：下限……上行 |
-| 人员 | 人员：John |
+| 图像宽度 | 宽度:lowerbound..上行 |
+| 图像高度 | 高度:lowerbound..上行 |
+| 人员 | 人员:John |
 
 属性`path`、`limit`、`size`和`orderby`不能将`OR`运算符与任何其他属性一起使用。
 
@@ -208,15 +208,15 @@ ht-degree: 5%
 
 ### 从Adobe Asset Link面板搜索数字资源 {#aal}
 
-使用Adobe Asset Link，创意专业人士现在无需离开受支持的Adobe Creative Cloud应用程序即可访问[!DNL Experience Manager Assets]中存储的内容。 创意人员可以使用[!DNL Adobe Creative Cloud]应用[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]中的应用内面板无缝浏览、搜索、签出和签入资源。 Asset Link还允许用户搜索视觉上类似的结果。 可视化搜索显示结果由Adobe Sensei的机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参阅[使用Adobe Asset Link搜索和浏览资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。
+使用Adobe Asset Link，创意专业人士现在无需离开受支持的Adobe Creative Cloud应用程序即可访问[!DNL Experience Manager Assets]中存储的内容。 创意人员可以使用[!DNL Adobe Creative Cloud]应用[!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]和[!DNL Adobe InDesign]中的应用内面板无缝浏览、搜索、签出和签入资源。 Asset Link还允许用户搜索视觉上类似的结果。 可视化搜索显示结果由Adobe AI机器学习算法提供支持，并帮助用户查找美学上相似的图像。 请参阅[使用Adobe Asset Link搜索和浏览资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink)。
 
 ### 在[!DNL Experience Manager]桌面应用程序中搜索数字资产 {#desktop-app}
 
-Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]易于搜索并在其本地桌面(Win或Mac)上可用。 创意人员可以轻松地在Mac Finder或Windows资源管理器中显示所需的资源，这些资源在桌面应用程序中打开，并在本地进行更改 — 这些更改将在存储库中创建新版本后保存回[!DNL Experience Manager]。 应用程序支持使用一个或多个关键字、`*`和`?`通配符以及`AND`运算符进行基本搜索。 请参阅桌面应用程序中的[浏览、搜索和预览资源](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hans#browse-search-preview-assets)。
+Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]易于搜索并在其本地桌面(Win或Mac)上可用。 创意人员可以轻松地在Mac Finder或Windows资源管理器中显示所需的资源，这些资源在桌面应用程序中打开，并在本地进行更改 — 这些更改将在存储库中创建新版本后保存回[!DNL Experience Manager]。 应用程序支持使用一个或多个关键字、`*`和`?`通配符以及`AND`运算符进行基本搜索。 请参阅桌面应用程序中的[浏览、搜索和预览资源](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)。
 
 ### 在[!DNL Brand Portal]中搜索数字资源 {#brand-portal}
 
-业务线用户和营销人员使用Brand Portal与其扩展的内部团队、合作伙伴和经销商高效、安全地共享获得批准的数字资源。 请参阅[在Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html?lang=zh-Hans)中搜索资源。
+业务线用户和营销人员使用Brand Portal与其扩展的内部团队、合作伙伴和经销商高效、安全地共享获得批准的数字资源。 请参阅[在Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html)中搜索资源。
 
 ### 搜索[!DNL Adobe Stock]图像 {#adobe-stock1}
 
@@ -238,7 +238,7 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
 
 >[!NOTE]
 >
->在早期版本的[中，资产选择器称为](https://helpx.adobe.com/cn/experience-manager/6-2/assets/using/asset-picker.html)资产选取器[!DNL Adobe Experience Manager]。
+>在早期版本的[中，资产选择器称为](https://helpx.adobe.com/experience-manager/6-2/assets/using/asset-picker.html)资产选取器[!DNL Adobe Experience Manager]。
 
 资产选择器允许您以特殊方式搜索、过滤和浏览DAM资产。 资源选择器位于`https://[aem_server]:[port]/aem/assetpicker.html`。 您可以获取使用资源选择器选择的资源的元数据。 您可以通过受支持的请求参数启动它，例如资产类型（图像、视频、文本）和选择模式（单选或多选）。 这些参数为特定搜索实例设置资产选择器的上下文，并在整个选择过程中保持不变。
 
@@ -250,7 +250,7 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
 |---|---|---|---|
 | 资源后缀(B) | 文件夹路径作为URL中的资源后缀： [https://localhost:4502/aem/assetpicker.html/&lt;folder_path>](https://localhost:4502/aem/assetpicker.html) | 要在选定特定文件夹（例如选定文件夹`/content/dam/we-retail/en/activities`）的情况下启动资产选择器，URL应采用以下形式： `https://localhost:4502/aem/assetpicker.html/content/dam/we-retail/en/activities?assettype=images` | 如果在启动资产选择器时要求选择特定文件夹，请将其作为资源后缀传递。 |
 | `mode` | 单个，多个 | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | 在多个模式下，您可以使用资产选择器同时选择多个资产。 |
-| `dialog` | true， false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框形式打开资产选择器。 仅当通过Granite路径字段启动资产选择器，并将其配置为pickerSrc URL时，此选项才适用。 |
+| `dialog` | true， false | [https://localhost:4502/aem/assetpicker.html？dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | 使用这些参数以Granite对话框形式打开资产选择器。 仅当通过Granite路径字段启动资产选择器，并将其配置为pickerSrc URL时，此选项才适用。 |
 | `root` | &lt;文件夹路径> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | 使用此选项可指定资源选择器的根文件夹。 在这种情况下，资产选择器允许您仅选择根文件夹下的子资产（直接/间接）。 |
 | `viewmode` | 搜索 | | 要在搜索模式下启动资产选择器，请使用`assettype`和`mimetype`参数。 |
 | `assettype` | 图像、文档、多媒体、存档。 | <ul><li>`https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives` </li></ul> | 使用选项可根据提供的值筛选资源类型。 |
@@ -291,7 +291,7 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
 * 全文搜索支持`-`和`^`等运算符。 要将这些字母搜索为字符串文字，请用双引号将搜索表达式括起来。 例如，使用`"Notebook - Beauty"`而不是`Notebook - Beauty`。
 * 如果搜索结果太多，请将所需资源的搜索[范围](#scope)限制为零。 当您知道如何更好地查找所需资源（例如，特定文件类型、特定位置、特定元数据等）时，这种方法最有效。
 
-* **标记**：标记可帮助您对可以更高效地浏览和搜索的资源进行分类。 标记有助于将相应的分类传播给其他用户和工作流。 [!DNL Experience Manager]提供了使用Adobe Sensei的人工智能服务自动标记资源的方法，以便通过使用和培训来更好地标记资源。 搜索资产时，如果帐户中启用了智能标记功能，则会将智能标记考虑在内。 它与内置搜索功能配合使用。 请参阅[搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以[提升几个选定资产的搜索排名](#searchrank)。
+* **标记**：标记可帮助您对可以更高效地浏览和搜索的资源进行分类。 标记有助于将相应的分类传播给其他用户和工作流。 [!DNL Experience Manager]提供了使用Adobe AI服务自动标记资源的方法，这些方法有助于更好地通过使用和培训标记资源。 搜索资产时，如果帐户中启用了智能标记功能，则会将智能标记考虑在内。 它与内置搜索功能配合使用。 请参阅[搜索行为](#searchbehavior)。 要优化搜索结果的显示顺序，您可以[提升几个选定资产的搜索排名](#searchrank)。
 
 * **索引**：搜索结果中只返回已编制索引的元数据和资源。 为了获得更好的覆盖率和性能，请确保正确编制索引并遵循最佳实践。 请参阅[索引](#searchindex)。
 
@@ -364,11 +364,11 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
    保存更改。
 
 1. 访问`/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags`并添加值为`similarityTags`的`Boolean`类型的`true`属性。
-1. 将智能标记应用于[!DNL Experience Manager]存储库中的资源。 请参阅[如何配置智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=zh-Hans#configuring)。
+1. 将智能标记应用于[!DNL Experience Manager]存储库中的资源。 请参阅[如何配置智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring)。
 1. 在CRXDE的`/oak-index/damAssetLucene`节点中，将`reindex`属性设置为`true`。 保存更改。
 1. （可选）如果已自定义搜索表单，请将`/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch`节点复制到`/conf/global/settings/dam/search/facets/assets/jcr:content/items`。 保存更改。
 
-有关相关信息，请参阅[了解Experience Manager中的智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hans)和[如何管理智能标记](/help/assets/enhanced-smart-tags.md)。
+有关相关信息，请参阅[了解Experience Manager中的智能标记](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)和[如何管理智能标记](/help/assets/enhanced-smart-tags.md)。
 
 >[!CAUTION]
 >
@@ -397,7 +397,7 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
 | 搜索字段 | 搜索属性值 |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | MIME 类型 | 图像、文档、多媒体、存档或其他。 |
-| 上次修改时间 | Hour、Day、Week、Month或Year。 |
+| 上次修改 | Hour、Day、Week、Month或Year。 |
 | 文件大小 | 小、Medium或大。 |
 | 发布状态 | 已发布或已取消发布。 |
 | 批准状态 | 已批准或已拒绝。 |
@@ -491,5 +491,5 @@ Creative专业人员使用桌面应用程序让[!DNL Experience Manager Assets]�
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] 搜索实施指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html?lang=zh-Hans)
->* [高级配置以提升搜索结果](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/assets/search-and-discovery/search-boost)
+>* [[!DNL Experience Manager] 搜索实施指南](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [高级配置以提升搜索结果](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/search-and-discovery/search-boost)

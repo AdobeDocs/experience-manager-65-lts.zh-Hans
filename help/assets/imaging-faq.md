@@ -1,5 +1,5 @@
 ---
-title: 智能成像
+title: 智能图像处理
 description: 智能成像应用每个用户的独特查看特性，自动为用户提供针对其体验而优化的正确图像，从而提高性能和参与度。
 contentOwner: Rick Brough
 topic-tags: dynamic-media
@@ -9,20 +9,20 @@ feature: Asset Management,Renditions
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 9f95a54d-6c5e-44c1-965e-631ec7487308
-source-git-commit: dc405bec510b0f72e916df343790572b3cd51526
+source-git-commit: ad4c80af0d9aa88837164ba1a8d6be2042b2c0d4
 workflow-type: tm+mt
-source-wordcount: '3307'
+source-wordcount: '3306'
 ht-degree: 0%
 
 ---
 
-# 智能成像 {#smart-imaging}
+# 智能图像处理 {#smart-imaging}
 
 智能成像应用每个用户的独特查看特性，自动为用户提供针对其体验而优化的正确图像，从而提高性能和参与度。
 
 ## 关于智能成像 {#what-is-smart-imaging}
 
-智能成像技术可应用Adobe Sensei AI功能，并与现有“图像预设”配合使用。 它致力于通过基于客户端浏览器功能自动优化图像格式、大小和质量来增强图像投放性能。
+智能成像技术可应用Adobe AI功能，并与现有“图像预设”配合使用。 它致力于通过基于客户端浏览器功能自动优化图像格式、大小和质量来增强图像投放性能。
 
 现在，通过改进的智能成像（现在同时具有AVIF和WebP支持），获得更好的Google Core Web Vital LCP（最大内容绘制）分数。
 
@@ -88,7 +88,7 @@ In terms of images, the goal is to serve the best quality images as efficiently 
 
 您可以通过将`bfc=off`附加到图像的URL来关闭智能成像。
 
-另请参阅Dynamic Media图像服务和渲染API中的[bfc](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
+另请参阅Dynamic Media图像服务和渲染API中的[bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc)。
 
 ### 关于设备像素比(dpr)优化 {#dpr}
 
@@ -131,7 +131,7 @@ DPR和网络带宽值基于捆绑的CDN所检测到的客户端值。 这些值�
 
 * 改进了使用最新智能成像的网页的Google SEO排名。
 * 立即提供优化的内容（在运行时）。
-* 使用Adobe Sensei技术根据图像请求中指定的质量(`qlt`)进行转换。
+* 使用Adobe AI技术根据图像请求中指定的质量(`qlt`)进行转换。
 * TTL（生存时间）独立。 以前，智能成像工作必须至少12小时的TTL。
 * 以前，原始图像和派生图像都被缓存，缓存失效需要两步过程。 在最新的智能成像中，仅缓存派生项，从而允许执行单步缓存失效过程。
 * 在规则集中使用自定义标头的客户受益于最新的智能成像，因为与以前的智能成像版本不同，这些标头不会受到阻止。 例如，“Timing Allow Origin”和“X-Robot”。
@@ -221,7 +221,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++为帐户启用智能成像的流程是什么？
++++为帐户启用智能成像的流程是什么？ 
 
 要开始使用智能成像，请将`bfc=on`、`dpr=on,dprValue`、`network=on`或全部三个参数设置附加到现有URL或预设。 如果您不想手动进行这些更改，则可以通过创建支持案例来默认启用“智能成像”。
 
@@ -255,7 +255,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
       * 列出所有相关域，如&#x200B;*`company.com`*&#x200B;或&#x200B;*`mycompany.scene7.com`*
       * 智能成像支持通用域和自定义域。
-      * 要识别您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)，然后登录到您的公司帐户。
+      * 要识别您的域，请打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)，然后登录到您的公司帐户。
 
          1. 导航到&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]** > **[!UICONTROL 常规设置]**。
          1. 查找&#x200B;**[!UICONTROL 发布的服务器名称]**&#x200B;字段以确认您的域。
@@ -278,7 +278,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++我何时可以预期帐户启用智能成像？
++++我何时可以允许帐户启用智能成像？
 
 客户支持按照请求接收顺序处理请求，并遵循等待列表。
 
@@ -288,7 +288,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++切换到“智能成像”有何风险？
++++切换使用智能成像会有什么风险？
 
 客户网页没有风险。 但是，过渡到智能成像确实会清除CDN缓存。 此操作涉及在Experience Manager上迁移到Dynamic Media Classic或Dynamic Media的新配置。
 
@@ -317,7 +317,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如何知道性能提升？ 是否有办法了解智能成像的好处？
++++我如何知道性能提升？ 是否有办法了解智能成像的好处？
 
 智能成像页眉决定了智能成像的优势。 启用智能成像后，在&#x200B;**[!UICONTROL 响应标头]**&#x200B;标题下请求图像后，您可以看到`-X-Adobe-Smart-Imaging`，如以下高亮显示的示例中所示：
 
@@ -336,9 +336,9 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >**X-Adobe-Smart-Imaging = -1，正在传递WebP**
 >
 >如果`X-Adobe-Smart-Imaging`的值为–1且仍在传递WebP，则智能成像处于活动状态。 但是，由于缓存已过时，未计算大小优势。 您可以在图像的URL中使用`cache=update`（仅限一次）来解决此问题。
->&#x200B;>使用修饰符的示例：
->&#x200B;>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
->&#x200B;>要使整个缓存失效，必须创建支持案例。
+>使用修饰符的示例：
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>要使整个缓存失效，必须创建支持案例。
 
 +++
 
@@ -348,7 +348,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++智能成像是否可以因任何请求而关闭？
++++是否可以为任何请求关闭智能成像？
 
 是。您可以通过添加以下任何修饰符来关闭智能成像：
 
@@ -358,7 +358,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++有哪些“调整”可用？ 是否可以定义任何设置或行为？
++++提供了哪些“调整”功能？ 是否可以定义任何设置或行为？
 
 “智能成像”有三个选项，您可以启用或禁用。
 
@@ -398,7 +398,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++智能成像是自动调整百分比质量输出设置，还是手动调整且适用于所有图像的设置？ 在什么范围内？
++++智能成像是自动调整百分比质量输出设置，还是手动调整并应用于所有图像的设置？ 在什么范围内？
 
 智能成像可自动调整质量百分比。 此质量使用Adobe开发的机器学习算法来确定。 此百分比不特定于范围。
 
@@ -438,7 +438,7 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
 +++
 
-+++如何在智能成像中继续使用PNG无损转换？
++++如何继续使用PNG在智能成像中进行无损转换？
 
 智能成像现在支持基于质量级别的有损转换。 您可以通过公司的设置将质量设置为100，或者通过将`qlt=100`添加到图像的URL路径来继续使用无损转换。
 

@@ -5,21 +5,21 @@ role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: be7c294c-149b-4825-8376-573f9e2987e2
-source-git-commit: 1cedead501597fb655c2c7b87336b29cbf048294
+source-git-commit: ad4c80af0d9aa88837164ba1a8d6be2042b2c0d4
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1896'
 ht-degree: 19%
 
 ---
 
 # 准备[!DNL Assets]以进行智能标记 {#configure-asset-tagging-using-the-smart-content-service}
 
-在使用Smart Content Services开始标记资源之前，请将[!DNL Experience Manager Assets]与Adobe Developer Console集成以使用[!DNL Adobe Sensei]的智能服务。 配置完毕后，请使用一些图像和标记来训练服务。
+在使用Smart Content Services开始标记资源之前，请将[!DNL Experience Manager Assets]与Adobe Developer Console集成以使用[!DNL Adobe AI]的智能服务。 配置完毕后，请使用一些图像和标记来训练服务。
 在使用智能内容服务之前，请确保：
 
 * [与Adobe Developer Console集成](#integrate-adobe-io)。
 * [训练智能内容服务](#training-the-smart-content-service)。
-* 安装最新的[[!DNL Experience Manager] 服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)。
+* 安装最新的[[!DNL Experience Manager] 服务包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。
 
 >[!IMPORTANT]
 >
@@ -94,7 +94,7 @@ ht-degree: 19%
    | 标题 | 添加配置IMS帐户的标题。 |
    | 授权服务器 | 添加`https://ims-na1.adobelogin.com` |
    | 客户端 ID | 将通过[Adobe Developer控制台](https://developer.adobe.com/console/)提供。 |
-   | 客户端密钥 | 将通过[Adobe Developer控制台](https://developer.adobe.com/console/)提供。 |
+   | 客户端密码 | 将通过[Adobe Developer控制台](https://developer.adobe.com/console/)提供。 |
    | 范围 | 将通过[Adobe Developer控制台](https://developer.adobe.com/console/)提供。 |
    | 组织 ID | 将通过[Adobe Developer控制台](https://developer.adobe.com/console/)提供。 |
 
@@ -270,4 +270,4 @@ ht-degree: 19%
 >
 >* [概述以及如何培训智能标记](enhanced-smart-tags.md)
 >* [OAuth凭据的智能标记疑难解答](config-oauth.md)
->* [有关智能标记的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=zh-Hans)
+>* [有关智能标记的视频教程](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
