@@ -1,5 +1,5 @@
 ---
-title: 规划升级
+title: 升级规划
 description: 本文有助于在规划AEM升级时制定明确的目标、阶段和可交付成果。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 3fe5421e-e97e-43c4-b34b-b84bf189a779
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 425b3fae2658d78b0885f5034ff4c61da625d9d4
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
 
 ---
 
-# 规划升级 {#planning-your-upgrade}
+# 升级规划 {#planning-your-upgrade}
 
 ## AEM升级概述 {#aem-upgrade-overview}
 
@@ -29,7 +29,7 @@ AEM升级过程需要仔细处理规划、分析和执行阶段，并为每个�
 
 >[!NOTE]
 >
->最后6个Service Pack支持升级到AEM 6.5 LTS
+>所有受支持的6.5 Service Pack均可升级到AEM 6.5 LTS。
 
 务必确保您运行的是受支持的操作系统、Java™运行时、httpd和Dispatcher版本。 有关详细信息，请参阅AEM 6.5 LTS的[技术要求](/help/sites-deploying/technical-requirements.md)。 您必须在升级计划中考虑升级这些组件，并且应在升级AEM之前进行升级。
 
