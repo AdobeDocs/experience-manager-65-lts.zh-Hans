@@ -1,5 +1,5 @@
 ---
-title: 部署和维护
+title: 部署与维护
 description: 了解如何开始安装AEM。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+source-git-commit: add91325feaa96338526edcdde977d1f619e09d4
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# 部署和维护{#deploying-and-maintaining}
+# 部署与维护{#deploying-and-maintaining}
 
 在此页中，您可以找到：
 
@@ -41,17 +41,17 @@ ht-degree: 4%
 熟悉这些基础知识后，您便可以在以下子页面中找到更高级和详细的信息：
 
 * [技术要求](/help/sites-deploying/technical-requirements.md)
-* [建议的部署](/help/sites-deploying/recommended-deploys.md)
+* [推荐的部署](/help/sites-deploying/recommended-deploys.md)
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
-* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 &#x200B;](/help/sites-deploying/configuring.md)
+* [命令行启动与停止](/help/sites-deploying/command-line-start-and-stop.md)
+* [配置 ](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
-* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 控制台](/help/sites-deploying/web-console.md)
-* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳实践](/help/sites-deploying/best-practices.md)
-* [AEM平台简介](/help/sites-deploying/platform.md)
+* [配置操作指南文章](/help/sites-deploying/ht-deploy.md)
+* [网页控制台](/help/sites-deploying/web-console.md)
+* [复制疑难解答](/help/sites-deploying/troubleshoot-rep.md)
+* [最佳做法](/help/sites-deploying/best-practices.md)
+* [AEM 平台简介](/help/sites-deploying/platform.md)
 
 ## 基本概念 {#basic-concepts}
 
@@ -137,7 +137,7 @@ AEM软件包有两种形式：
 
    UNIX®安装位置： **/opt/aem**
 
-   Windows安装位置： **`C:\Program Files\aem`**
+   Windows安装位置： **`C:\aem`**
 
    同样，将示例实例直接安装在桌面上的文件夹中也很常见。 无论如何，Adobe通常将此位置称为：
 
@@ -173,11 +173,11 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 
 **`https://localhost:4502`**
 
-创作实例中的结果将自动配置为连接到&#x200B;**`localhost:4503`**&#x200B;上的&#x200B;**发布实例**。
+创作实例中的结果将自动配置为连接到&#x200B;**上的**&#x200B;发布实例&#x200B;**`localhost:4503`**。
 
 ### 创作和发布安装 {#author-and-publish-installs}
 
-只需在首次启动`jar`文件之前重命名该文件，即可更改默认安装（**`localhost:4502`**&#x200B;上的&#x200B;**作者**&#x200B;实例）。 命名模式为：
+只需在首次启动&#x200B;**文件之前重命名该文件，即可更改默认安装（**&#x200B;上的&#x200B;**`localhost:4502`**&#x200B;作者`jar`实例）。 命名模式为：
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -253,7 +253,7 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 
 还有等效的&#x200B;**`bat`**&#x200B;个用于Windows的文件。 有关更多详细信息，请参阅：
 
-* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
+* [命令行启动与停止](/help/sites-deploying/command-line-start-and-stop.md)
 
 AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登录页面）；例如：
 
@@ -265,7 +265,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
 
 * [创作](/help/sites-authoring/first-steps.md)
-* [管理 &#x200B;](/help/sites-administering/home.md)
+* [管理 ](/help/sites-administering/home.md)
 * [开发](/help/sites-developing/getting-started.md)
 * [管理](/help/managing/best-practices.md)
 
@@ -274,15 +274,15 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 通过上部分，您应该能够很好地了解AEM安装的基础知识。 但是，安装AEM的完整生产系统可能会涉及更大的复杂性。 有关高级安装的完整介绍，请参阅以下子页面：
 
 * [技术要求](/help/sites-deploying/technical-requirements.md)
-* [建议的部署](/help/sites-deploying/recommended-deploys.md)
+* [推荐的部署](/help/sites-deploying/recommended-deploys.md)
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
-* [命令行启动和停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 &#x200B;](/help/sites-deploying/configuring.md)
+* [命令行启动与停止](/help/sites-deploying/command-line-start-and-stop.md)
+* [配置 ](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
-* [配置操作方法文章](/help/sites-deploying/ht-deploy.md)
-* [Web 控制台](/help/sites-deploying/web-console.md)
-* [排查复制问题](/help/sites-deploying/troubleshoot-rep.md)
-* [最佳实践](/help/sites-deploying/best-practices.md)
-* [AEM平台简介](/help/sites-deploying/platform.md)
+* [配置操作指南文章](/help/sites-deploying/ht-deploy.md)
+* [网页控制台](/help/sites-deploying/web-console.md)
+* [复制疑难解答](/help/sites-deploying/troubleshoot-rep.md)
+* [最佳做法](/help/sites-deploying/best-practices.md)
+* [AEM 平台简介](/help/sites-deploying/platform.md)
 
