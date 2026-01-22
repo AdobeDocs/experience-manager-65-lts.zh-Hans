@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## 问题
 
-在使用&#x200B;**JBoss EAP 8**&#x200B;的&#x200B;**AEM Forms 6.5.1 LTS**群集部署中，配置文件
+在使用&#x200B;**JBoss EAP 8**&#x200B;的&#x200B;**AEM Forms 6.5.1 LTS**&#x200B;群集部署中，配置文件
 `<JBOSS_HOME>/domain/configuration/domain_oracle.xml` （以及特定于数据库的变体）可能包含一个&#x200B;**重复的、打开的`<security>`标记**。
 
 这会导致&#x200B;**无效的XML配置**，从而导致&#x200B;**JBoss域控制器启动失败**&#x200B;并阻止群集初始化成功。
