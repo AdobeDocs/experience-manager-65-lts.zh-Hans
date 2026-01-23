@@ -1,5 +1,5 @@
 ---
-title: 使用JMX控制台监控服务器资源
+title: 使用 JMX 控制台监控服务器资源
 description: 了解如何使用JMX控制台监控服务器资源。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Operations
 role: Admin
 exl-id: c5907a0b-031f-4e3a-8a5c-5daf31eb71fc
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '4830'
-ht-degree: 0%
+source-wordcount: '4829'
+ht-degree: 1%
 
 ---
 
-# 使用JMX控制台监控服务器资源{#monitoring-server-resources-using-the-jmx-console}
+# 使用 JMX 控制台监控服务器资源{#monitoring-server-resources-using-the-jmx-console}
 
 通过JMX控制台，您可以监视和管理CRX服务器上的服务。 后面的部分总结了通过JMX框架公开的属性和操作。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 >
 >有关其他工作流管理工具和可能的工作流实例状态的说明，请参阅[工作流控制台](/help/sites-administering/workflows-administering.md)。
 
-### 运营 {#operations}
+### 运维 {#operations}
 
 **listRunningWorkflowsPerModel**&#x200B;列出每个工作流模型正在运行的工作流实例数。
 
@@ -107,7 +107,7 @@ ht-degree: 0%
    * 发起者
    * 实例ID
    * 模型ID
-   * 有效负荷
+   * 负载
    * 开始注释
    * 工作流标题
 
@@ -125,7 +125,7 @@ ht-degree: 0%
    * 发起者
    * 实例ID
    * 模型ID
-   * 有效负荷
+   * 负载
    * 开始注释
    * 工作流标题
 
@@ -144,7 +144,7 @@ ht-degree: 0%
    * 发起者
    * 实例ID
    * 模型ID
-   * 有效负荷
+   * 负载
    * 开始注释
    * 工作流标题
 
@@ -209,7 +209,7 @@ ht-degree: 0%
    * 发起者
    * 实例ID
    * 模型ID
-   * 有效负荷
+   * 负载
    * 开始注释
    * 工作流标题
 
@@ -244,7 +244,7 @@ ht-degree: 0%
  <tbody>
   <tr>
    <th>键</th>
-   <th>价值</th>
+   <th>值</th>
   </tr>
   <tr>
    <td>option.node.and.property.with.same.name.supported</td>
@@ -526,7 +526,7 @@ ht-degree: 0%
 
 **ClusterNodeId**&#x200B;存储库群集的此节点的标识符。 只读。
 
-### 运营 {#operations-1}
+### 运维 {#operations-1}
 
 **createWorkspace**&#x200B;在此存储库中创建工作区。
 
@@ -672,7 +672,7 @@ ht-degree: 0%
 
 **PopularQueriesQueueSize** PopularQueries列表中的最大查询数。 读写。
 
-### 运营 {#operations-2}
+### 运维 {#operations-2}
 
 **clearSlowQueriesQueue**&#x200B;从SlowQueries列表中删除所有查询。
 
@@ -691,7 +691,7 @@ ht-degree: 0%
 * **域：** com.adobe.granite.replication
 * **类型：**&#x200B;代理
 * **名称：**&#x200B;没有值
-* **属性：** {id=&quot;*名称*&quot;}，其中&#x200B;*名称*&#x200B;是代理Name属性的值。
+* **属性：** {id="*Name*"}，其中&#x200B;*Name*&#x200B;是代理Name属性的值。
 
 ### 属性 {#attributes-3}
 
@@ -733,7 +733,7 @@ ht-degree: 0%
 
 **QueueLastProcessTime**&#x200B;指示上一个作业何时完成的日期值。 只读。
 
-### 运营 {#operations-3}
+### 运维 {#operations-3}
 
 **queueForceRetry**&#x200B;对于被阻止的队列，向队列发出重试命令。
 
@@ -751,7 +751,7 @@ ht-degree: 0%
 
 * 域： org.apache.sling
 * 类型：引擎
-* 属性：{service=RequestProcessor}
+* 属性： {service=RequestProcessor}
 
 ### 属性 {#attributes-4}
 
@@ -765,7 +765,7 @@ ht-degree: 0%
 
 **MeanRequestDurationMsec**&#x200B;处理请求所需的平均时间。 使用自上次重置统计信息以来的所有请求计算平均值
 
-### 运营 {#operations-4}
+### 运维 {#operations-4}
 
 **resetStatistics**&#x200B;将所有统计信息设置为零。 当您需要分析特定时间范围内的请求处理性能时，请重置统计信息。
 
@@ -793,7 +793,7 @@ ht-degree: 0%
 * 域： com.adobe.granite.quickstart
 * 类型：启动器
 
-### 运营 {#operations-5}
+### 运维 {#operations-5}
 
 **log**
 

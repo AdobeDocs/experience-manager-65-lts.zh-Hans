@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: cb00bc09-580a-4c73-b202-d4110fa2f645
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1120'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本教程是[创建您的第一个自适应表单](/help/forms/using/create-your-first-adaptive-form.md)系列中的步骤。 Adobe建议按时间顺序跟踪系列，以了解、执行和演示完整的教程用例。
 
-## 关于教程 {#about-the-tutorial}
+## 关于本教程 {#about-the-tutorial}
 
 您可以使用规则将交互性、业务逻辑和智能验证添加到自适应表单。 自适应表单具有内置规则编辑器。 规则编辑器提供了与引导式导览类似的拖放功能。 拖放方法是创建规则的最快、最简单的方法。 规则编辑器还为有兴趣测试其编码技能或将规则提升到更高层次的用户提供了一个代码窗口。
 
@@ -55,11 +55,11 @@ ht-degree: 0%
 
 1. 在&#x200B;**[!UICONTROL THEN]**&#x200B;语句中，从&#x200B;**[!UICONTROL 选择操作]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL 调用服务]**。
 1. 从&#x200B;**[!UICONTROL 选择]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL 检索送货地址]**&#x200B;服务。
-1. 将&#x200B;**[!UICONTROL 客户ID]**&#x200B;字段从“表单对象”选项卡拖放到&#x200B;**[!UICONTROL 放置对象，或在**&#x200B;[!UICONTROL &#x200B;输入&#x200B;]&#x200B;**框中选择此处]**&#x200B;字段。
+1. 将&#x200B;**[!UICONTROL 客户ID]**&#x200B;字段从“表单对象”选项卡拖放到&#x200B;**[!UICONTROL 放置对象，或在]**&#x200B;输入&#x200B;**[!UICONTROL 框中选择此处]**&#x200B;字段。
 
    ![dropobjectstoinputfield-retrievedata](assets/dropobjectstoinputfield-retrievedata.png)
 
-1. 从“表单对象”选项卡中将&#x200B;**[!UICONTROL 客户ID、名称、送货地址、状态和邮政编码]**&#x200B;字段拖放到&#x200B;**[!UICONTROL 放置对象或在**&#x200B;[!UICONTROL &#x200B;输出&#x200B;]&#x200B;**框中选择]**&#x200B;字段。
+1. 从“表单对象”选项卡中将&#x200B;**[!UICONTROL 客户ID、名称、送货地址、状态和邮政编码]**&#x200B;字段拖放到&#x200B;**[!UICONTROL 放置对象或在]**&#x200B;输出&#x200B;**[!UICONTROL 框中选择]**&#x200B;字段。
 
    ![dropobjectstooutputfield-retrievedata](assets/dropobjectstooutputfield-retrievedata.png)
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    ![dropobjectstoinputfield-updatedata](assets/dropobjectstoinputfield-updatedata.png)
 
-1. 从[!UICONTROL 表单对象]选项卡中将&#x200B;**[!UICONTROL 送货地址、状态和邮政编码]**&#x200B;字段拖放到&#x200B;**[!UICONTROL 放置对象的相应tablename .property（例如，customerdetails .shippingAddress）或在**&#x200B;[!UICONTROL &#x200B; INPUT &#x200B;]&#x200B;**框中选择此处]**&#x200B;字段。 以tablename为前缀的所有字段（例如，此用例中的customerdetails）用作更新服务的输入数据。 这些字段中提供的所有内容都会在数据源中进行更新。
+1. 从&#x200B;**[!UICONTROL 表单对象]**&#x200B;选项卡中将[!UICONTROL 送货地址、状态和邮政编码]字段拖放到&#x200B;**[!UICONTROL 放置对象的相应tablename .property（例如，customerdetails .shippingAddress）或在]** INPUT **[!UICONTROL 框中选择此处]**&#x200B;字段。 以tablename为前缀的所有字段（例如，此用例中的customerdetails）用作更新服务的输入数据。 这些字段中提供的所有内容都会在数据源中进行更新。
 
    >[!NOTE]
    >

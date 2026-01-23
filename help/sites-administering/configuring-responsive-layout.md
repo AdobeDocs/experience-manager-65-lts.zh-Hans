@@ -7,10 +7,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 exl-id: 413f15c9-5b51-4d8d-8cf0-3e98608b9d9e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 4%
+source-wordcount: '1388'
+ht-degree: 5%
 
 ---
 
@@ -47,7 +47,7 @@ AEM 使用一组机制为页面实现响应式布局：
         您可以将布局容器作为页面的标准，同时允许用户在此中添加更多布局容器；例如，实现列控件。
 
 * **[布局模式](/help/sites-authoring/responsive-layout.md#defining-layouts-layout-mode)**
-将布局容器放置到页面上后，即可使用&#x200B;**布局**&#x200B;模式在响应式网格内放置内容。
+将布局容器放置到页面上后，即可使用**布局**&#x200B;模式在响应式网格内放置内容。
 
 * [**模拟器**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 这让您创建和编辑响应式网站，通过以交互的方式调整组件大小，根据设备/窗口大小重新排列布局。然后，用户可以使用模拟器查看内容的呈现方式。
@@ -135,7 +135,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 #### 使用XML配置断点 {#configuring-breakpoints-using-xml}
 
-断点位于`.context.html`的`<jcr:content>`部分中，位于相应的模板（或内容）文件夹下。
+断点位于`<jcr:content>`的`.context.html`部分中，位于相应的模板（或内容）文件夹下。
 
 示例定义：
 
@@ -193,7 +193,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目中。
 
-您还必须创建一个[客户端库](https://experienceleague.adobe.com/docs/?lang=zh-Hans)以提供额外的配置和函数调用。 以下LESS提取是您必须添加到项目的最小值示例：
+您还必须创建一个[客户端库](https://experienceleague.adobe.com/docs/)以提供额外的配置和函数调用。 以下LESS提取是您必须添加到项目的最小值示例：
 
 ```css
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
@@ -249,7 +249,7 @@ AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目�
 
 * `afterchildedit`
 
-要正确调整响应式网格中包含的自适应图像的大小并更新其内容，您需要将设置为`REFRESH_PAGE`的`afterEdit`侦听器添加到每个包含组件的`EditConfig`文件中。
+要正确调整响应式网格中包含的自适应图像的大小并更新其内容，您需要将设置为`afterEdit`的`REFRESH_PAGE`侦听器添加到每个包含组件的`EditConfig`文件中。
 
 例如：
 
@@ -307,7 +307,7 @@ AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目�
 
 在某些情况下，您可能会发现有必要嵌套响应式网格来支持项目的需求。 但是，请记住，Adobe推荐的最佳做法是保持结构尽可能平坦。
 
-当您无法避免使用嵌套的响应式网格时，请确保：
+如果无法避免使用嵌套的响应式网格，请确保：
 
 * 所有容器（容器、选项卡、折叠等）都具有属性`layout = responsiveGrid`。
 * 不要在容器层次结构中混合使用属性`layout = simple`。

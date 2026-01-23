@@ -7,7 +7,7 @@ feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: bf5c2dff-db68-4e82-8217-ff35069dcb81
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
 source-wordcount: '3607'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 组织可以提供一个元数据模型，用于增强资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流程和流程至关重要。 要遵循组织范围的元数据策略和标准，您可以使用帮助DAM用户一致的元数据架构。 [!DNL Adobe Experience Manager]允许使用简单灵活的方法创建、维护和应用元数据架构。
@@ -161,7 +161,7 @@ ht-degree: 7%
 
 ![使用元数据架构编辑器添加或删除选项卡](assets/metadata-schema-form-new-tab.png)
 
-## 层叠元数据 {#cascading-metadata}
+## 级联元数据 {#cascading-metadata}
 
 在捕获资源的元数据信息时，用户在各种可用字段中提供信息。 您可以根据在其他字段中选择的选项，显示特定的元数据字段或字段值。 此类元数据的条件显示称为层叠元数据。 换言之，您可以在特定元数据字段/值与一个或多个字段和/或其值之间创建依赖关系。
 
@@ -232,7 +232,7 @@ ht-degree: 7%
 
    ![select_dependentfield](assets/select_dependentfield.png)
 
-1. 在&#x200B;**[!UICONTROL 要求]**&#x200B;下，根据新规则&#x200B;**选项选择**&#x200B;必需。
+1. 在&#x200B;**[!UICONTROL 要求]**&#x200B;下，根据新规则&#x200B;**[!UICONTROL 选项选择]**&#x200B;必需。
 1. 单击&#x200B;**[!UICONTROL 添加规则]**&#x200B;并选择&#x200B;**[!UICONTROL 资产类型]**&#x200B;字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 单击&#x200B;**[!UICONTROL 完成]**&#x200B;以保存更改。
 
    ![define_rule](assets/define_rule.png)
@@ -290,7 +290,7 @@ ht-degree: 7%
 
 #### 为各种MIME类型使用现有架构模板 {#use-an-existing-schema-template-for-various-mime-types}
 
-您可以为其他MIME类型使用现有模板。 例如，对MIME类型`image/png`的资源使用`image/jpeg`表单。
+您可以为其他MIME类型使用现有模板。 例如，对MIME类型`image/jpeg`的资源使用`image/png`表单。
 
 在这种情况下，请在CRX存储库中的`/etc/dam/metadataeditor/mimetypemappings`处创建一个节点。 指定节点的名称并定义以下属性：
 
@@ -301,7 +301,7 @@ ht-degree: 7%
 
 [!DNL Assets]映射以下MIME类型和架构表单：
 
-| 架构表单 | MIME类型 |
+| 架构表单 | MIME 类型 |
 |---|---|
 | image/jpeg | image/pjpeg |
 | image/tiff | image/x-tiff |
@@ -374,7 +374,7 @@ ht-degree: 7%
 
    上传文件夹中的资产时，资产信息卡视图中缺少必需的元数据的![消息](assets/metadata-missing-info-card-view.png)
 
-1. （可选）访问`https://[aem_server]:[port]/system/console/components/`。 配置并启用默认禁用的`com.day.cq.dam.core.impl.MissingMetadataNotificationJob`组件。 设置[!DNL Experience Manager]检查资源上元数据有效性的频率。 此配置将属性`hasValidMetadata`添加到资源的`jcr:content`。 [!DNL Experience Manager]使用此属性筛选搜索结果中的无效资源。 如果在检查后添加资产，则在下次计划检查之前，该资产不会使用`hasValidMetadata`进行标记。 因此，直到下一次计划检查之后，资产才会出现在无效元数据的搜索筛选器中。
+1. （可选）访问`https://[aem_server]:[port]/system/console/components/`。 配置并启用默认禁用的`com.day.cq.dam.core.impl.MissingMetadataNotificationJob`组件。 设置[!DNL Experience Manager]检查资源上元数据有效性的频率。 此配置将属性`hasValidMetadata`添加到资源的`jcr:content`。 [!DNL Experience Manager]使用此属性筛选搜索结果中的无效资源。 如果在检查后添加资产，则在下次计划检查之前，该资产不会使用`hasValidMetadata`进行标记。 因此，在下一次计划检查之前，资产不会出现在无效元数据的搜索筛选器中。
 
    >[!CAUTION]
    >

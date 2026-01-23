@@ -1,5 +1,5 @@
 ---
-title: 加密和解密PDF文档
+title: 对 PDF 文档进行加密和解密
 description: 使用加密服务加密和解密文档。 加密服务任务包括使用密码加密PDF文档，使用证书加密PDF文档，从PDF文档中删除基于密码的加密，从PDF文档中删除基于证书的加密，解锁PDF文档以便可以执行其他服务操作，以及确定安全PDF文档的加密类型。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 9f694358-e502-4fc0-8352-4c5119573756
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
 source-wordcount: '8133'
 ht-degree: 0%
 
 ---
 
-# 加密和解密PDF文档 {#encrypting-and-decrypting-pdf-documents}
+# 对 PDF 文档进行加密和解密 {#encrypting-and-decrypting-pdf-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -141,7 +141,7 @@ ht-degree: 0%
 
    * 通过调用其构造函数创建`PasswordEncryptionOptionSpec`对象。
    * 通过调用`PasswordEncryptionOptionSpec`对象的`setEncryptOption`方法并传递指定要加密的文档资源的`PasswordEncryptionOption`枚举值，指定要加密的PDF文档资源。 例如，要加密整个PDF文档，包括其元数据和附件，请指定`PasswordEncryptionOption.ALL`。
-   * 使用`ArrayList`构造函数创建存储加密权限的`java.util.List`对象。
+   * 使用`java.util.List`构造函数创建存储加密权限的`ArrayList`对象。
    * 通过调用`java.util.List`对象的`add`方法并传递与要设置的权限对应的枚举值来指定权限。 例如，要设置允许用户在PDF文档中复制数据的权限，请指定`PasswordEncryptionPermission.PASSWORD_EDIT_COPY`。 （对每个要设置的权限重复此步骤）。
    * 通过调用`PasswordEncryptionOptionSpec`对象的`setCompatability`方法并传递指定Acrobat兼容性级别的枚举值来指定Acrobat兼容性选项。 例如，您可以指定`PasswordEncryptionCompatability.ACRO_7`。
    * 指定密码值，以允许用户通过调用`PasswordEncryptionOptionSpec`对象的`setDocumentOpenPassword`方法并传递表示打开密码的字符串值来打开加密的PDF文档。
@@ -159,7 +159,7 @@ ht-degree: 0%
 1. 将加密的PDF文档另存为PDF文件。
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`encryptPDFUsingPassword`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`encryptPDFUsingPassword`对象。
 
 **另请参阅**
 
@@ -187,8 +187,8 @@ ht-degree: 0%
 1. 创建加密客户端API对象。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -203,13 +203,13 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示要加密的PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
 
 1. 设置加密运行时选项。
 
    * 使用构造函数创建`PasswordEncryptionOptionSpec`对象。
    * 通过将`PasswordEncryptionOption`枚举值分配给`PasswordEncryptionOptionSpec`对象的`encryptOption`数据成员，指定要加密的PDF文档资源。 要加密整个PDF（包括其元数据和附件），请将`PasswordEncryptionOption.ALL`分配给此数据成员。
-   * 通过将`PasswordEncryptionCompatability`枚举值分配给`PasswordEncryptionOptionSpec`对象的`compatability`数据成员来指定Acrobat兼容性选项。 例如，将`PasswordEncryptionCompatability.ACRO_7`分配给此数据成员。
+   * 通过将`PasswordEncryptionCompatibility`枚举值分配给`PasswordEncryptionOptionSpec`对象的`compatibility`数据成员来指定Acrobat兼容性选项。 例如，将`PasswordEncryptionCompatibility.ACRO_7`分配给此数据成员。
    * 通过为`PasswordEncryptionOptionSpec`对象的`documentOpenPassword`数据成员分配代表打开密码的字符串值，指定允许用户打开加密的PDF文档的密码值。
    * 指定密码值，通过为`PasswordEncryptionOptionSpec`对象的`permissionPassword`数据成员分配代表主密码的字符串值，该密码值允许用户从PDF文档中删除加密。
 
@@ -225,8 +225,8 @@ ht-degree: 0%
 1. 将加密的PDF文档另存为PDF文件。
 
    * 通过调用其构造函数并传递表示受保护PDF文档的文件位置的字符串值来创建`System.IO.FileStream`对象。
-   * 创建一个字节数组，用于存储`encryptPDFUsingPassword`方法返回的`BLOB`对象的数据内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`encryptPDFUsingPassword`对象的数据内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -375,7 +375,7 @@ ht-degree: 0%
 1. 将加密的PDF文档另存为PDF文件。
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`encryptPDFUsingCertificates`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`encryptPDFUsingCertificates`对象。
 
 **另请参阅**
 
@@ -402,8 +402,8 @@ ht-degree: 0%
 1. 创建加密客户端API对象。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -418,7 +418,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示要加密的PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
+   * 使用字节数组的内容指定其`BLOB`属性以填充`MTOM`对象。
 
 1. 引用证书。
 
@@ -427,7 +427,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个表示证书文件位置和文件打开模式的字符串值，创建`System.IO.FileStream`对象。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
    * 将存储证书的`BLOB`对象分配给`Recipient`对象的`x509Cert`数据成员。
    * 使用构造函数创建存储证书信息的`CertificateEncryptionIdentity`对象。
    * 将存储证书的`Recipient`对象分配给`CertificateEncryptionIdentity`对象的收件人数据成员。
@@ -452,8 +452,8 @@ ht-degree: 0%
 1. 将加密的PDF文档另存为PDF文件。
 
    * 通过调用其构造函数并传递表示受保护PDF文档的文件位置的字符串值来创建`System.IO.FileStream`对象。
-   * 创建一个字节数组，用于存储`encryptPDFUsingCertificates`方法返回的`BLOB`对象的数据内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`encryptPDFUsingCertificates`对象的数据内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -556,7 +556,7 @@ ht-degree: 0%
 1. 保存PDF文档。
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`Document`对象的内容复制到文件中。 确保使用`removePDFCredentialSecurity`方法返回的`com.adobe.idp.Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`removePDFCredentialSecurity`对象。
 
 **另请参阅**
 
@@ -583,8 +583,8 @@ ht-degree: 0%
 1. 创建加密服务客户端。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -599,7 +599,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已加密PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
 
 1. 删除加密。
 
@@ -613,8 +613,8 @@ ht-degree: 0%
 1. 保存PDF文档。
 
    * 通过调用其构造函数并传递表示不安全PDF文档的文件位置的字符串值来创建`System.IO.FileStream`对象。
-   * 创建一个字节数组，用于存储`removePDFPasswordSecurity`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`removePDFPasswordSecurity`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -711,7 +711,7 @@ ht-degree: 0%
 1. 保存PDF文档。
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`Document`对象的内容复制到文件中。 确保使用`removePDFPasswordSecurity`方法返回的`Document`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`Document`对象的内容复制到文件中。 确保使用`Document`方法返回的`removePDFPasswordSecurity`对象。
 
 **另请参阅**
 
@@ -732,8 +732,8 @@ ht-degree: 0%
 1. 创建加密服务客户端。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -748,7 +748,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已加密PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
 
 1. 删除密码。
 
@@ -762,8 +762,8 @@ ht-degree: 0%
 1. 保存PDF文档。
 
    * 通过调用其构造函数并传递表示不安全PDF文档的文件位置的字符串值来创建`System.IO.FileStream`对象。
-   * 创建一个字节数组，用于存储`removePDFPasswordSecurity`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
+   * 创建一个字节数组，用于存储`BLOB`方法返回的`removePDFPasswordSecurity`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -868,7 +868,7 @@ ht-degree: 0%
 
 1. 执行AEM Forms操作。
 
-   对解锁的PDF文档执行AEM Forms操作，以满足您的业务要求。 例如，假设您要将使用权限应用到已解锁的PDF文档，请将`unlockPDFUsingPassword`或`unlockPDFUsingCredential`方法返回的`com.adobe.idp.Document`对象传递到`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法。
+   对解锁的PDF文档执行AEM Forms操作，以满足您的业务要求。 例如，假设您要将使用权限应用到已解锁的PDF文档，请将`com.adobe.idp.Document`或`unlockPDFUsingPassword`方法返回的`unlockPDFUsingCredential`对象传递到`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法。
 
 **另请参阅**
 
@@ -897,8 +897,8 @@ ht-degree: 0%
 1. 创建加密服务客户端。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -913,7 +913,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已加密PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
 
 1. 解锁文档。
 
@@ -933,7 +933,7 @@ ht-degree: 0%
 
 1. 执行AEM Forms操作。
 
-   对解锁的PDF文档执行AEM Forms操作，以满足您的业务要求。 例如，假设您要对已解锁的PDF文档应用使用权限，请将`unlockPDFUsingPassword`或`unlockPDFUsingCredential`方法返回的`BLOB`对象传递到`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法。
+   对解锁的PDF文档执行AEM Forms操作，以满足您的业务要求。 例如，假设您要对已解锁的PDF文档应用使用权限，请将`BLOB`或`unlockPDFUsingPassword`方法返回的`unlockPDFUsingCredential`对象传递到`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法。
 
 **另请参阅**
 
@@ -1053,8 +1053,8 @@ PDF文档可通过以下加密类型进行保护：
 1. 创建服务客户端。
 
    * 使用默认构造函数创建`EncryptionServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`EncryptionServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`EncryptionServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`EncryptionServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/EncryptionService?WSDL`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`EncryptionServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1069,7 +1069,7 @@ PDF文档可通过以下加密类型进行保护：
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已加密PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将字节数组的内容分配给`BLOB`对象的`MTOM`数据成员来填充`BLOB`对象。
+   * 通过将字节数组的内容分配给`BLOB`对象的`BLOB`数据成员来填充`MTOM`对象。
 
 1. 确定加密类型。
 

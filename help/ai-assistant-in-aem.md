@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 391d46e3-05c9-4af1-8882-ffd39b04a701
-source-git-commit: d2ca5c53e1a12d196586b0ab89f32fd13251ea66
+source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 4%
@@ -35,11 +35,11 @@ AI Assistant支持AEM as a Cloud Service，包括以下解决方案：
 
 以下时长3分钟、时长25秒的视频分步介绍了AEM中的AI助手。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475368/?learn=on&enablevpops&captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## 访问AEM中的AI助手{#get-access}
 
-要访问AEM中的AI助手，客户必须拥有以下权限：
+要访问AEM中的AI助手，客户必须具备以下功能：
 
 * 在AEM中使用AI助手获取产品知识的权限。 此权限允许您在AI Assistant聊天中询问产品相关问题。 必须启用此权限。
 * 打开支持票证的权限，该权限需要&#x200B;**支持管理员**&#x200B;角色。
@@ -128,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
