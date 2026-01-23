@@ -174,7 +174,7 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 
 1. 从&#x200B;**站点**&#x200B;控制台中，选择要使用跟踪设置的页面。
 1. 直接从控制台或页面编辑器打开&#x200B;**[页面属性](/help/sites-authoring/editing-page-properties.md)**。
-1. 打开** Cloud Services**选项卡。
+1. 打开 **&#x200B; Cloud Services**&#x200B;选项卡。
 
 1. 使用&#x200B;**添加配置**&#x200B;下拉菜单从可用选项中选择&#x200B;**Adobe Analytics**。 如果存在继承，请在选择器可用之前禁用继承。
 
