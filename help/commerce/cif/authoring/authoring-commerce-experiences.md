@@ -5,9 +5,9 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: b749ec33-9a78-41d5-889f-73dbdb33ceed
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 093d38dbb1d3e2a2f63c1b7a88d9f31c9950e955
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-CIF加载项通过特定于Commerce的功能扩展了AEM创作。 这允许作者在不离开上下文的情况下访问产品数据和内容，从而高效地构建和管理商业相关的体验。
+CIF加载项通过特定于Commerce的功能扩展了AEM创作。 这使得作者无需离开上下文即可访问产品数据和内容，从而高效地构建和管理商业相关体验。
 
 ## 选取器 {#pickers}
 
@@ -64,7 +64,7 @@ CIF加载项通过特定于Commerce的功能扩展了AEM创作。 这允许作�
 
 ![产品数据侧面板](/help/commerce/cif/assets/authoring/products-side-panel.png)
 
-与资产类似，产品可以在页面上添加（默认创建产品Teaser组件）或组件（当前支持产品Teaser和产品轮播）。
+与资产类似，产品可以拖放到页面上（默认创建产品Teaser组件）或组件上（当前支持产品Teaser和产品轮播）。
 
 ### 使用RTE在文本字段中添加链接 {#rte}
 
@@ -80,7 +80,7 @@ CIF产品目录页面是动态渲染的虚拟页面。 因此，嵌入超链接(
 
 ### 访问关联的产品内容 {#associated-content}
 
-如果通用编辑器识别页面上的1：n产品，则侧面板将自动显示“关联的Commerce内容”选项卡。 此选项卡允许作者快速访问使用产品标记的AEM内容(有关更多信息，请参阅[扩充具有关联AEM内容的产品数据](./enrich-product-associated-content.md))。 此选项卡提供下拉列表，用于在页面上具有多个产品时根据内容类型和特定产品进行过滤。 使用内容的工作方式与使用“Assets”选项卡中的内容的工作方式完全相同。
+如果通用编辑器识别页面上的1:n个产品，侧面板将自动显示“关联的Commerce内容”选项卡。 此选项卡允许作者快速访问使用产品标记的AEM内容(有关更多信息，请参阅[扩充具有关联AEM内容的产品数据](./enrich-product-associated-content.md))。 此选项卡提供下拉列表，用于在页面上具有多个产品时根据内容类型和特定产品进行过滤。 使用内容的工作方式与使用“Assets”选项卡中的内容的工作方式完全相同。
 
 ![产品数据侧面板](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 
@@ -94,7 +94,7 @@ CIF产品目录页面是动态渲染的虚拟页面。 因此，嵌入超链接(
 
 ![暂存指示器](/help/commerce/cif/assets/authoring/staged-indicator.png)
 
-## 全能搜索 {#omnisearch}
+## 全方位搜索 {#omnisearch}
 
 使用Omnisearch是一种让从业人员通过全文搜索查找AEM内容和产品目录数据的简单方法。 Omnisearch将在AEM和commerce后端中运行全文搜索，以在commerce后端和AEM内容中查找产品目录对象。 AEM结果还包括使用产品/类别数据标记的内容。
 

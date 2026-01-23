@@ -1,5 +1,5 @@
 ---
-title: 将组件数据映射到Adobe Analytics属性
+title: 建立组件数据与 Adobe Analytics 属性的映射
 description: 了解如何使用SiteCatalyst属性映射组件数据。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: d9ffc796-1c2b-4fa6-b434-fb3ee03d40b5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 0%
+source-wordcount: '1450'
+ht-degree: 1%
 
 ---
 
-# 将组件数据映射到Adobe Analytics属性{#mapping-component-data-with-adobe-analytics-properties}
+# 建立组件数据与 Adobe Analytics 属性的映射{#mapping-component-data-with-adobe-analytics-properties}
 
-将组件添加到框架中以收集要发送到Adobe Analytics的数据。 用于收集Analytics数据的组件将数据存储在相应的&#x200B;**CQ变量**&#x200B;中。 将此类组件添加到框架时，该框架会显示CQ变量列表，以便您可以将每个变量添加到相应的&#x200B;**Analytics变量**。
+将组件添加到框架中以收集要发送到Adobe Analytics的数据。 用于收集Analytics数据的组件将数据存储在相应的&#x200B;**CQ变量**&#x200B;中。 将此类组件添加到框架时，该框架会显示CQ变量列表，以便您可以将每个变量映射到相应的&#x200B;**Analytics变量**。
 
 ![aa-11](assets/aa-11.png)
 

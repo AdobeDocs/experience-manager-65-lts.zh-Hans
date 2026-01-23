@@ -9,10 +9,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 6659ca39-f297-40b9-88e2-d942aa653e9b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
-source-wordcount: '1744'
-ht-degree: 8%
+source-wordcount: '1745'
+ht-degree: 10%
 
 ---
 
@@ -44,8 +44,8 @@ AEM中的标记的一些功能包括：
    * 不是容器标记的标记称为叶标记
    * 标记命名空间是叶标记或容器标记
 
-* 标记由[搜索组件](https://helpx.adobe.com/cn/experience-manager/core-components/using/quick-search.html)使用，以便于查找内容。
-* 标记由[Teaser组件](https://helpx.adobe.com/cn/experience-manager/core-components/using/teaser.html)使用，该组件监视用户的标记云以提供目标内容。
+* 标记由[搜索组件](https://helpx.adobe.com/experience-manager/core-components/using/quick-search.html)使用，以便于查找内容。
+* 标记由[Teaser组件](https://helpx.adobe.com/experience-manager/core-components/using/teaser.html)使用，该组件监视用户的标记云以提供目标内容。
 * 如果标记是内容的一个重要方面
 
    * 确保将标记与使用它们的页面一起打包
@@ -55,7 +55,7 @@ AEM中的标记的一些功能包括：
 
 “标记”控制台用于创建和管理标记及其分类。 一个目标是避免有许多与基本相同的内容相关的类似标记：例如，页面和页面或鞋和鞋。
 
-标记的管理方法是：分组到命名空间，在创建新标记之前查看现有标记的使用情况，以及在不中断标记与当前引用内容之间的连接的情况下重新组织。
+标记的管理方式为：分组到命名空间，在创建新标记之前查看现有标记的使用情况，以及在不中断标记与当前引用内容之间的连接的情况下重新组织。
 
 要访问“标记”控制台，请执行以下操作：
 
@@ -167,7 +167,7 @@ AEM中的标记的一些功能包括：
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-选择命名空间或其他标记后，可以通过选择&#x200B;**`Edit`**&#x200B;图标来更改标题、描述并提供标题的本地化设置。
+选择命名空间或其他标记后，可以通过选择**`Edit`**图标来更改标题、描述并提供标题的本地化设置。
 
 进行编辑后，选择&#x200B;**保存**。
 
@@ -252,11 +252,11 @@ AEM中的标记的一些功能包括：
       * 例如，浏览到http://localhost:4502/useradmin
 
    * 在左窗格中，选择要为其授予[读取权限](/help/sites-administering/security.md#permissions)的组（或用户）
-   * 在右侧窗格中，找到标记命名空间的&#x200B;**Path**
+   * 在右侧窗格中，找到标记命名空间的**Path**
 
       * 例如，`/content/cq:tags/mycommunity`
 
-   * 在&#x200B;**读取**&#x200B;列中选择`checkbox`
+   * 在`checkbox`读取&#x200B;**列中选择**
    * 选择&#x200B;**保存**
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
@@ -277,9 +277,9 @@ AEM中的标记的一些功能包括：
 
 ### 定义多种语言的标记标题 {#defining-tag-titles-in-multiple-languages}
 
-以下介绍如何将&#x200B;**Animals**&#x200B;标记的`title`从英语翻译为德语和法语。
+以下介绍如何将`title`Animals **标记的**&#x200B;从英语翻译为德语和法语。
 
-首先，选择&#x200B;**Stock Photography**&#x200B;命名空间下的标记，然后选择&#x200B;**`Edit`**&#x200B;图标（请参阅[编辑标记](#editing-tags)部分）。
+首先，选择&#x200B;**Stock Photography**&#x200B;命名空间下的标记，然后选择**`Edit`**图标（请参阅[编辑标记](#editing-tags)部分）。
 
 通过“编辑标记”面板，可以选择标记标题将本地化的语言。
 
@@ -305,4 +305,4 @@ AEM中的标记的一些功能包括：
 
   有关标记框架和扩展以及在自定义应用程序中包括标记的信息。
 
-* [经典UI标记控制台](/help/sites-administering/classic-console.md)
+* [经典 UI 标记控制台](/help/sites-administering/classic-console.md)

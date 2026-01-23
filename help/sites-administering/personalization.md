@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
 exl-id: 558cf29b-34f4-4ead-b8d6-67ef8aaa5dc5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 2%
@@ -61,7 +61,7 @@ Personalization可用于多种情况，例如：
 
 ### Intranet页面 {#intranet-pages}
 
-* 可以根据用户的位置、部门和/或角色（已在内部网络中定义）提供内容。
+* 可以根据已在内部网络中定义的用户的位置、部门和/或角色提供内容。
 * 根据可用的选择，用户可以进一步进行选择。
 
 ### 特定、有限、目标用户组 — 外部网 {#extranets}
@@ -143,7 +143,7 @@ AEM提供了各种组件以进行个性化。 有些功能允许用户登录并�
 | 组合登录注册 | 允许用户登录到现有帐户或注册新帐户。 |
 | Forms地址字段 | 允许输入国际地址的复杂字段。 |
 | Forms开始 | 开始表单定义 |
-| Forms验证码 | 由自动刷新的字母数字单词组成的字段。 captcha组件可保护网站免受机器人攻击。 |
+| 表单验证码 | 由自动刷新的字母数字单词组成的字段。 captcha组件可保护网站免受机器人攻击。 |
 | Forms复选框组 | 将多个项目组织到一个列表中，且前面带有复选框。 用户可以选中多个复选框。 |
 | Forms下拉列表 | 将多个项目组织到下拉列表中。 “多选”开关指定是否可以从列表中选择多个元素。 |
 | Forms结束 | 终止表单定义。 |

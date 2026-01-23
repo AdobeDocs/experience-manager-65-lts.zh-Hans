@@ -1,5 +1,5 @@
 ---
-title: Granite操作 — 用户和组管理
+title: Granite 操作——用户和群组管理
 description: 了解Granite用户和组管理。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,14 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: ba02f9d4-5286-41d6-995c-307d6e13431b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
 source-wordcount: '951'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Granite操作 — 用户和组管理{#granite-operations-user-and-group-administration}
+# Granite 操作——用户和群组管理{#granite-operations-user-and-group-administration}
 
 由于Granite采用了CRX Repository实现的JCR API规范，因此它有自己的用户和组管理。
 
@@ -91,7 +91,7 @@ Granite用户和组管理控制台都可以从触控优化UI的&#x200B;**[工具
    * **帐户设置**
 
       * **状态**
-您可以将帐户标记为&#x200B;**活动**&#x200B;或&#x200B;**非活动**。
+您可以将帐户标记为**活动**&#x200B;或&#x200B;**非活动**。
 
    * **照片**
 

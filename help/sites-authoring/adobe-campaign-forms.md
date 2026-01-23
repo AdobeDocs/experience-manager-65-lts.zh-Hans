@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
 exl-id: 6a72ba56-8222-4853-adc6-ee8f3d395d9d
-source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
+source-git-commit: 3bc6f5aab61b6ea0ae1d6d909bf2d36fd7e4dbe4
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 在AEM中创建Adobe Campaign Forms {#creating-adobe-campaign-forms-in-aem}
+# 在 AEM 中创建 Adobe Campaign 表单 {#creating-adobe-campaign-forms-in-aem}
 
 通过AEM，您可以创建并使用与网站上的Adobe Campaign交互的表单。 可以将特定字段插入表单并映射到Adobe Campaign数据库。
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   >您需要向云服务上的匿名用户提供读取权限，才能在发布上使用表单。 但是，请注意向匿名用户提供读取权限时可能存在的安全问题，并确保缓解此问题，例如，通过配置Dispatcher。
+   >您需要为云服务上的匿名用户提供读取权限，才能在发布上使用表单。 但是，请注意向匿名用户提供读取权限时可能存在的安全问题，并确保缓解此问题，例如，通过配置Dispatcher。
 
 ## 测试表单 {#testing-a-form}
 
@@ -126,7 +126,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->每个表单上都必须有&#x200B;**加密的主键**&#x200B;组件。 在组件中，选择Adobe Campaign ，以便仅显示这些组件。
+>每个表单上都必须有&#x200B;**加密的主密钥**&#x200B;组件。 在组件中，选择Adobe Campaign ，以便仅显示这些组件。
 >
 >虽然在此过程中您手动输入电话号码，但实际上，用户会在新闻稿中获取此页面的链接（无论是取消订阅、订阅还是更新您的用户档案）。 根据用户，页面会自动更新。
 >

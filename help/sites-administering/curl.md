@@ -1,5 +1,5 @@
 ---
-title: 在AEM中使用cURL
+title: 在 AEM 中使用 cURL
 description: 了解如何将cURL用于常见的Adobe Experience Manager任务。
 contentOwner: Silviu Raiman
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 45d49917-d20f-470c-bf95-6e701de67a11
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
-# 在AEM中使用cURL{#using-curl-with-aem}
+# 在 AEM 中使用 cURL{#using-curl-with-aem}
 
 管理员通常需要自动执行或简化任何系统中的常见任务。 例如，在AEM中，管理用户、安装包和管理OSGi捆绑包是通常必须完成的任务。
 
@@ -48,7 +48,7 @@ cURL命令可以为AEM中的大多数操作构建，例如触发工作流、检�
 
 以下步骤描述了如何通过在Chrome浏览器中创建新页面作为示例来完成此操作。
 
-1. 准备您希望在AEM中调用的操作。 在本例中，我们已继续到&#x200B;**创建页面**&#x200B;向导的结尾，但尚未单击&#x200B;**创建**。
+1. 准备您希望在AEM中调用的操作。 在本例中，我们继续到&#x200B;**创建页面**&#x200B;向导的结尾，但尚未单击&#x200B;**创建**。
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
@@ -61,7 +61,7 @@ cURL命令可以为AEM中的大多数操作构建，例如触发工作流、检�
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. 将cURL命令复制到文本编辑器并从命令中删除所有以`-H`开头的标头（下图中的蓝色突出显示）并添加适当的身份验证参数，如`-u <user>:<password>`。
+1. 将cURL命令复制到文本编辑器，并从命令中删除所有以`-H`开头的标头（下图中以蓝色突出显示），然后添加正确的身份验证参数，如`-u <user>:<password>`。
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -75,7 +75,7 @@ cURL命令可以为AEM中的大多数操作构建，例如触发工作流、检�
 
 >[!NOTE]
 >
->以下示例假定AEM在端口`4502`上的`localhost`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
+>以下示例假定AEM在端口`localhost`上的`4502`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
 
 ### 包管理 {#package-management}
 
@@ -223,7 +223,7 @@ curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/group
 
 有关详细信息，请参阅[备份和还原](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup)。
 
-### osgi {#osgi}
+### OSGi {#osgi}
 
 #### 启动捆绑包 {#starting-a-bundle}
 
@@ -310,7 +310,7 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 >[!NOTE]
 >
->以下示例假定AEM在端口`4502`上的`localhost`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
+>以下示例假定AEM在端口`localhost`上的`4502`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
 
 ### 页面管理 {#page-management}
 

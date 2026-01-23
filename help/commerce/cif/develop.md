@@ -9,10 +9,10 @@ thumbnail: 39476.jpg
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 22fcdadf-12c0-4545-a854-76345806386f
-source-git-commit: 4c3402aa813c115625d624f3b33ca73d31bed850
+source-git-commit: 093d38dbb1d3e2a2f63c1b7a88d9f31c9950e955
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 2%
+source-wordcount: '770'
+ht-degree: 7%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 2%
 基于适用于AEM的Commerce integration framework (CIF)来开发AEM Commerce项目时，遵循与其他AEM项目相同的规则和最佳实践。 请先查看以下内容：
 
 - [AEM Developing用户指南](/help/sites-developing/getting-started.md)
-- [AEM核心概念](/help/sites-developing/the-basics.md)
-- [AEM 开发 - 准则和最佳实践](/help/sites-developing/dev-guidelines-bestpractices.md)
-- [如何使用Apache Maven构建AEM项目](/help/sites-developing/ht-projects-maven.md)
+- [AEM 核心概念](/help/sites-developing/the-basics.md)
+- [AEM 开发——准则和最佳做法](/help/sites-developing/dev-guidelines-bestpractices.md)
+- [如何使用 Apache Maven 构建 AEM 项目](/help/sites-developing/ht-projects-maven.md)
 
 ## AEM Commerce的本地开发 {#local}
 
@@ -31,17 +31,17 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->以下说明可帮助您使用具有适用于AEM 6.5 LTS的CIF为AEM Commerce设置本地AEM开发环境。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=zh-Hans)文档。
+>以下说明可帮助您使用CIF为AEM Commerce设置本地AEM开发环境，并重点关注适用于AEM 6.5 LTS)。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)文档。
 
 适用于AEM的AEM Commerce加载项(称为CIF加载项)可用于本地开发，并作为AEM包提供。 可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载它作为功能包。
 
 ### 所需的软件
 
-下列内容应本地安装：
+需要在本地安装以下软件：
 
 - 本地AEM 6.5 LTS
 - [Java 17/Java 21](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-- [Apache Maven](https://maven.apache.org/) （3.3.9或更高版本）
+- [Apache Maven](https://maven.apache.org/)（3.3.9 或更新版本）
 - [节点LTS](https://nodejs.org/en/)
 - [npm 6+](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
@@ -153,7 +153,7 @@ CIF核心组件可以通过包括提供的`all`包在任何项目中使用，或
 
 由[AEM项目原型](https://github.com/adobe/aem-project-archetype)或[AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)生成的项目已包含必须调整的[默认配置](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)。
 
-将`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`中`url`的值替换为项目使用的商务系统的GraphQL端点。
+将`url`中`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`的值替换为项目使用的商务系统的GraphQL端点。
 
 AEM Commerce附加组件和CIF核心组件通过AEM服务器并直接通过浏览器连接到GraphQL端点。 默认情况下，客户端CIF核心组件和CIF附加组件创作工具连接到`/api/graphql`。 如果需要，可以通过CIF Cloud Service配置调整此设置（请参阅下文）。
 

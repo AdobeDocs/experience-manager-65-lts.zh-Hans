@@ -1,5 +1,5 @@
 ---
-title: 电子邮件模板的最佳实践
+title: 电子邮件模板最佳做法
 description: 查找有关在AEM中创建电子邮件模板的最佳实践。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,21 +11,21 @@ feature: Integration
 role: Admin
 exl-id: 34678cae-3c7f-4c9f-b7b6-c1dd4e0758ad
 index: false
-source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
 source-wordcount: '1072'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# 电子邮件模板的最佳实践 {#best-practices-for-email-templates}
+# 电子邮件模板最佳做法 {#best-practices-for-email-templates}
 
 >[!CAUTION]
 >
 >本文适用于已弃用的基于Foundation Components的AEM电子邮件组件。
 >
->建议用户使用新版[核心组件电子邮件组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html?lang=zh-Hans)
+>建议用户使用新版[核心组件电子邮件组件。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
 
 本文档介绍了一些有关电子邮件设计的最佳实践，这些实践最终形成了开发良好的电子邮件营销活动模板。
 
@@ -60,7 +60,7 @@ AEM中提供的演示活动遵循所有这些最佳实践。 对于每种最佳�
    <td><strong>实施</strong></td>
   </tr>
   <tr>
-   <td><p>指定文档类型，以确保一致的呈现。</p> <p>在开头添加DOCTYPE(HTML或XHTML)</p> </td>
+   <td><p>指定文档类型以确保一致的呈现。</p> <p>在开头添加DOCTYPE(HTML或XHTML)</p> </td>
    <td><p>可通过设计更改<i>"/etc/designs/default/jcr：content/campaign_newsletterpage"</i>中的<i>cq：doctype</i>属性进行配置</p> <p>默认值为“XHTML”：</p> <p>&lt;！DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional/EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p> <p>可更改为“HTML_5”：</p> <p>&lt;！DOCTYPE HTML&gt;</p> </td>
   </tr>
   <tr>

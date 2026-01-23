@@ -6,14 +6,14 @@ feature: Asset Management
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 453331b3-41f7-4bf1-90fc-afeaf40577c8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f27795b9acf834101d82937d9f9f142361816735
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 12%
+ht-degree: 14%
 
 ---
 
-# 时间轴中的活动流 {#activity-stream-in-timeline}
+# 时间线中的活动流 {#activity-stream-in-timeline}
 
 此功能在时间轴上显示资源的活动日志。 如果在[!DNL Adobe Experience Manager Assets]中执行以下任何与资产相关的操作，则活动流功能会更新时间线以反映该活动。
 
@@ -28,7 +28,7 @@ ht-degree: 12%
 * 拒绝
 * 移动
 
-将从存储日志文件的CRX中的位置`/var/audit/com.day.cq.dam/content/dam`获取要在时间轴中显示的活动日志。 此外，当上传新资产或通过[Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)或[Experience Manager桌面应用程序](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=zh-Hans)修改现有资产并签入[!DNL Experience Manager]时，将记录时间轴活动。
+将从存储日志文件的CRX中的位置`/var/audit/com.day.cq.dam/content/dam`获取要在时间轴中显示的活动日志。 此外，当上传新资源或通过[!DNL Experience Manager]Adobe Asset Link[或](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)Experience Manager桌面应用程序[修改现有资源并签入](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)时，将记录时间轴活动。
 
 >[!NOTE]
 >

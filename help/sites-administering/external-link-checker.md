@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 3fafb5e6-f5ac-4c11-809f-6cb2c5269377
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
 source-wordcount: '969'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ Link Checker会自动运行以帮助内容作者使用其链接，包括：
 * 显示内容中所有外部链接的列表
 * 执行链接转换
 
-Link Checker具有多个[配置选项](#configuring)，例如定义验证内部、允许在验证中忽略某些链接或链接模式，以及重写链接重写规则。
+链接检查器具有多个[配置选项](#configuring)，例如定义验证内部、允许从验证中忽略某些链接或链接模式，以及重写链接重写规则。
 
 链接检查器验证[内部链接](#internal)和[外部链接。](#external)
 
@@ -35,7 +35,7 @@ Link Checker具有多个[配置选项](#configuring)，例如定义验证内部�
 内部链接是指向AEM存储库中其他内容的链接。 可以使用RTE中的路径选择器或使用自定义组件添加内部链接。 例如：
 
 * 您的页面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文本组件中包含指向`/content/wknd/us/en/adventures/extreme-ironing.html`的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
+* 在`/content/wknd/us/en/adventures/extreme-ironing.html`文本组件中包含指向[的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)
 
 内容作者向页面添加内部链接后，将立即验证内部链接。 如果链接无效：
 
@@ -49,7 +49,7 @@ Link Checker具有多个[配置选项](#configuring)，例如定义验证内部�
 外部链接是指向AEM存储库外部内容的链接。 可以使用RTE或使用自定义组件添加外部链接。 例如：
 
 * 您的页面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在[文本组件中包含指向`https://bunwarmerthermalunderwear.com`的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
+* 在`https://bunwarmerthermalunderwear.com`文本组件中包含指向[的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html)
 
 验证外部链接的语法和检查其可用性。 此检查在可配置的内部异步完成。 如果Link Checker发现外部链接无效：
 

@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Authoring, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 391d46e3-05c9-4af1-8882-ffd39b04a701
-source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
+source-git-commit: 03bd86504b5399163190cf88e814d95753b78767
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 4%
@@ -35,7 +35,7 @@ AI Assistant支持AEM as a Cloud Service，包括以下解决方案：
 
 以下时长3分钟、时长25秒的视频分步介绍了AEM中的AI助手。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475368/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## 访问AEM中的AI助手{#get-access}
 
@@ -59,7 +59,7 @@ AI Assistant支持AEM as a Cloud Service，包括以下解决方案：
 
 ## 范围 {#scope}
 
-AEM中AI助理的当前范围侧重于解决AEMr as a Cloud Service的产品知识问题。 该范围包括对关键领域的全面支持。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
+AEM中的AI助手当前的工作范围侧重于解决AEM as a Cloud Service的产品知识问题。 该范围包括对关键领域的全面支持。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
 
 * **表面**：在AEM Experience Hub、创作UI、Cloud Manager中可用。
 * **功能**：产品知识以及故障排除和指导的第一站，支持票证的自动创建和查找。
@@ -128,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 

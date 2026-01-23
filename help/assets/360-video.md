@@ -10,7 +10,7 @@ feature: 360 VR Video
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 17e45464-3de4-40a8-b102-ccc9eaba92a3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f27795b9acf834101d82937d9f9f142361816735
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 您可以使用Adobe Premier Pro查看和编辑360/VR素材。 例如，您可以在场景中正确放置徽标和文本，并应用专门为等矩形介质设计的效果和过渡。
 
-查看[编辑360/VR视频](https://helpx.adobe.com/cn/premiere-pro/how-to/edit-360-vr-video.html)。
+查看[编辑360/VR视频](https://helpx.adobe.com/premiere-pro/how-to/edit-360-vr-video.html)。
 
 ## 上传资产以用于360视频查看器 {#uploading-assets-for-use-with-the-video-viewer}
 
@@ -51,7 +51,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 **上传资源以用于360视频查看器：**
 
-1. 创建了一个专用于您的360视频资产的文件夹。
+1. 创建专用于360视频资产的文件夹。
 1. [将自适应视频配置文件应用到文件夹](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
 
    与标准的非360视频内容相比，渲染360视频内容对源视频分辨率和编码呈现版本分辨率提出了更高的要求。

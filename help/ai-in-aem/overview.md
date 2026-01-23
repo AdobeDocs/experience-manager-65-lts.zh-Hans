@@ -4,7 +4,7 @@ description: 了解Adobe Experience Manager 6.5 LTS中的AI
 feature: Generative AI, AI Assistant, AI Tools
 role: Admin, Architect, Developer, User
 exl-id: 312e1d66-ba2e-4b9a-a679-4e44112f3222
-source-git-commit: 20978122a1d4e935e1384674dd5503f3cc807ef5
+source-git-commit: f27795b9acf834101d82937d9f9f142361816735
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 34%
