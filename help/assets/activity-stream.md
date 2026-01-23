@@ -28,7 +28,7 @@ ht-degree: 14%
 * 拒绝
 * 移动
 
-将从存储日志文件的CRX中的位置`/var/audit/com.day.cq.dam/content/dam`获取要在时间轴中显示的活动日志。 此外，当上传新资源或通过[!DNL Experience Manager]Adobe Asset Link[或](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)Experience Manager桌面应用程序[修改现有资源并签入](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)时，将记录时间轴活动。
+将从存储日志文件的CRX中的位置`/var/audit/com.day.cq.dam/content/dam`获取要在时间轴中显示的活动日志。 此外，当上传新资源或通过[!DNL Experience Manager]Adobe Asset Link[或](https://helpx.adobe.com/cn/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html)Experience Manager桌面应用程序[修改现有资源并签入](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=zh-Hans)时，将记录时间轴活动。
 
 >[!NOTE]
 >

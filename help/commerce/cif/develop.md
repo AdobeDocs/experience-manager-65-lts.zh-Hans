@@ -31,7 +31,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->以下说明可帮助您使用CIF为AEM Commerce设置本地AEM开发环境，并重点关注适用于AEM 6.5 LTS)。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html)文档。
+>以下说明可帮助您使用CIF为AEM Commerce设置本地AEM开发环境，并重点关注适用于AEM 6.5 LTS)。 如果您使用的是AEM as a Cloud Service，请参阅[AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html?lang=zh-Hans)文档。
 
 适用于AEM的AEM Commerce加载项(称为CIF加载项)可用于本地开发，并作为AEM包提供。 可以从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)下载它作为功能包。
 
