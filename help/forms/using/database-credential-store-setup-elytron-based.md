@@ -1,15 +1,15 @@
 ---
 title: 数据库凭据存储设置（基于Elytron）
-description: JBoss EAP 8支持Elytron凭据存储区，以便在AEM Forms中进行安全的数据库密码管理，并提供了用于域模式设置的自动化脚本。
+description: JBoss EAP 8支持Elytron凭据存储，以便在AEM Forms中进行安全的数据库密码管理，进而进行域模式设置。
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 5d020671efaa4527a5f6dbb4b779c7a3351888a4
+source-git-commit: d397e6a51ad2a52da5ccb0a690e1acd3fafcee3c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '379'
 ht-degree: 2%
 
 ---

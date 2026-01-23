@@ -4,9 +4,9 @@ description: 查找 [!DNL Adobe Experience Manager] 6.5 LTS SP1的发行信息�
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 5d020671efaa4527a5f6dbb4b779c7a3351888a4
+source-git-commit: b172fd1c328f54e759be59d5e7fd24be6f0d59e9
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '566'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ JBoss EAP 8上的AEM Forms使用Elytron管理安全凭据。 客户必须配置�
 
 ## 升级
 
-有关详细的升级说明，请参阅JEE **上的** AEM Forms 6.5 LTS SP1升级指南。
+有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 ## 安装
 

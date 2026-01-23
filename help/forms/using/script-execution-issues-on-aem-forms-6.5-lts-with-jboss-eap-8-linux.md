@@ -1,15 +1,15 @@
 ---
 title: 在使用JBoss EAP 8 (Linux)的AEM Forms 6.5 LTS上脚本执行失败
-description: 在Linux环境中设置JBoss EAP 8.0 (AEM Forms 6.5.1 LTS)时，在运行shell脚本或启动文件时可能会遇到某些错误
+description: 在Linux环境中设置JBoss EAP 8.0时，在运行shell脚本或启动文件时可能会遇到某些错误
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 5d020671efaa4527a5f6dbb4b779c7a3351888a4
+source-git-commit: d397e6a51ad2a52da5ccb0a690e1acd3fafcee3c
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 1%
 $'\r': command not found
 ```
 
-在&#x200B;**Windows**&#x200B;系统上创建或编辑Shell脚本或配置文件并包含&#x200B;**CRLF（回车+换行）**&#x200B;行结尾时，会发生这些错误。
-Linux系统仅支持&#x200B;**LF（换行）**&#x200B;行结尾，并且Windows样式的行结尾会导致脚本执行失败。
+在&#x200B;**Windows**&#x200B;系统上创建或编辑Shell脚本或配置文件并包含&#x200B;**CRLF（回车+换行）**行结尾时，会发生这些错误。
+Linux系统仅支持**LF（换行）**&#x200B;行结尾，并且Windows样式的行结尾会导致脚本执行失败。
 
 ## 应用到
 
