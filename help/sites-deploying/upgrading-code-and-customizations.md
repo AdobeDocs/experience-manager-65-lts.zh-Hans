@@ -1,5 +1,5 @@
 ---
-title: 升级代码和自定义项
+title: 升级代码与自定义项
 description: 了解有关在AEM中升级代码和自定义设置的更多信息。
 contentOwner: sarchiz
 topic-tags: upgrading
@@ -11,14 +11,14 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 6b94caf1-97b7-4430-92f1-4f4d0415aef3
-source-git-commit: f983fc1edc613feaa070c4e82a92aabab9d50cbb
+source-git-commit: c1935b95d4e9e8e3773f2ff9825c759f97738304
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 0%
+source-wordcount: '1097'
+ht-degree: 1%
 
 ---
 
-# 升级代码和自定义项{#upgrading-code-and-customizations}
+# 升级代码与自定义项{#upgrading-code-and-customizations}
 
 在计划升级时，必须调查并解决实施的以下方面。
 
@@ -92,6 +92,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 
 * AEM 6.5 LTS不包括现成的Google guava库，可以根据需要安装所需的版本。
 * Sling XSS包现在使用Java HTML清理器库，应使用`XSSAPI#filterHTML()`方法安全地呈现HTML内容，而不是将数据传递到其他API。
+* 更新到Apache Felix HTTP SSL过滤器配置：在AEM 6.5 LTS中，`org.apache.felix.http.sslfilter`捆绑包已从版本1.2.6升级到2.0.2。作为此升级的一部分，OSGi配置PID `org.apache.felix.http.sslfilter.SslFilter`已被弃用，并替换为新的PID： `org.apache.felix.http.sslfilter.Configuration`。 如果部署中使用了SSL筛选器，则必须使用OSGi Configuration Manager (`/system/console/configMgr`)将现有配置手动迁移到新PID。 未能迁移配置可能会导致升级后无法按预期应用SSL过滤器。
 
 ## 测试过程 {#testing-procedure}
 
