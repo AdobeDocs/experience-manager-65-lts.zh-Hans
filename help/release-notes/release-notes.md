@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: c9a7faf5810e78f8e80b38a87446794488efdd35
+source-git-commit: 8f5a06dc80943362acebfd7b19fed13c051417d1
 workflow-type: tm+mt
-source-wordcount: '7355'
-ht-degree: 99%
+source-wordcount: '7751'
+ht-degree: 93%
 
 ---
 
@@ -40,6 +40,90 @@ ht-degree: 99%
 ### Forms
 
 JEE上的AEM 6.5 Forms LTS现已推出。 有关支持的环境的详细信息，请参阅[支持的平台](/help/forms/using/aem-forms-jee-supported-platforms.md)组合文档。 安装程序链接在[AEM Forms版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)页面上可用。
+
+#### AEM Forms 6.5 LTS SP1中包含的内容
+
+**Java支持更新**
+
+已引入对较新Java版本的支持：
+
+* Java™ 17
+* Java™ 21
+
+**应用程序服务器支持更新**
+
+* 添加了对JBoss EAP 8的支持。
+* 已删除旧版PicketBox安全框架。
+* 基于Elytron的凭据存储现在支持安全凭据管理。
+
+**配置：凭据存储（基于Elytron）**
+
+JBoss EAP 8上的AEM Forms使用Elytron管理安全凭据。 客户必须配置基于Elytron的凭据存储区，以确保服务器成功启动和安全数据库身份验证。
+
+有关配置详细信息，请参阅安装和配置指南。
+
+**平台和兼容性更改**
+
+* 支持Servlet规范5+
+* 基于Jakarta EE 9合规性
+
+**命名空间迁移要求**
+
+* Jakarta EE 9引入命名空间从`javax.*`更改为`jakarta.*`
+* 必须将所有&#x200B;**自定义DSC**&#x200B;迁移到`jakarta.*`命名空间
+* AEM Forms 6.5 LTS SP1仅支持&#x200B;**基于Jakarta EE 9+的应用程序服务器**
+
+有关详细信息，请参阅&#x200B;**从javax迁移到jakarta命名空间**。
+
+**从Javax迁移到Jakarta命名空间**
+
+#### 从`javax`到`jakarta`命名空间的迁移
+
+从&#x200B;**AEM Forms 6.5 LTS SP1**&#x200B;开始，仅支持实施&#x200B;**Jakarta Servlet API 5/6**&#x200B;的应用程序服务器。 使用&#x200B;**Jakarta EE 9及更高版本**&#x200B;时，所有API都从`javax.{}`命名空间转换为`jakarta.`。
+
+因此，**所有自定义DSC都必须使用`jakarta`命名空间**。 使用`javax.{}` API构建的自定义组件&#x200B;**与支持的应用程序服务器不兼容**。
+
+自定义DSC的&#x200B;**迁移选项**
+
+您可以使用以下方法之一迁移现有的自定义DSC：
+
+**选项1：迁移Source代码（推荐）**
+
+* 将所有导入语句从`javax.{}`更新为`jakarta.`
+* 重新构建并重新编译自定义DSC项目
+* 将更新的组件重新部署到应用程序服务器
+
+**优势：**
+
+* 确保与Jakarta EE 9+长期兼容
+* 最适合积极维护的项目
+
+**选项2：使用Eclipse转换器进行二进制迁移**
+
+* 使用&#x200B;**Eclipse转换器**&#x200B;工具将编译的二进制文件(`.jar`， `.war`)从`javax`转换为`jakarta`
+* 无需更改源代码或重新编译
+* 将转换后的二进制文件重新部署到应用程序服务器
+
+>[!NOTE]
+>
+> 在&#x200B;**字节代码级别**&#x200B;执行二进制转换。
+
+以下是迁移期间所需的命名空间更改的常见示例：
+
+之前(javax)    之后（雅加达）
+javax.servlet。 **jakarta.servlet**
+javax.servlet.http。 **jakarta.servlet.http.**
+
+**示例导入映射**
+
+下表显示了从`javax`迁移到`jakarta`时所需的常见命名空间更改：
+
+| 早于(`javax`) | 在(`jakarta`)之后 |
+| ---------------------- | ------------------------ |
+| `javax.servlet.*` | `jakarta.servlet.*` |
+| `javax.servlet.http.*` | `jakarta.servlet.http.*` |
+
+在更新自定义DSC源代码或验证转换后的二进制文件时，使用这些映射作为引用。
 
 <!-- 6.5 LTS REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
@@ -448,6 +532,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -520,14 +605,15 @@ AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器�
 
 <!-- CARRY OVER EACH RELEASE -->
 
-Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户价值。这些改变都仔细考虑了向后兼容的情况。
+Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换旧功能而为客户提供更大的价值。 实施这些更改时会仔细考虑向后兼容性。
 
-沟通有关即将删除或取代 Adobe Experience Manager（AEM）功能的消息时，适用以下规则：
+为了确保透明度并允许进行充分的规划，Adobe将遵循Adobe Experience Manager (AEM)的弃用流程：
 
-1. 首先发布弃用公告。功能在弃用阶段仍可使用，但不会再进行改进。
-1. 最早会在下一个主要版本中移除已弃用的功能。移除的实际目标日期会计划稍后公布。
+* 首先宣布弃用。 已弃用的功能仍然可用，但不再增强。
 
-在实际移除之前，此过程将为客户提供至少一个发布周期时间，使客户的实施能够适应功能弃用后的新版本或后续版本。
+* 删除不会早于下一个主要版本。 计划的删除时间表单独通知。
+
+* 在功能被移除之前，至少会为客户提供一个发布周期以过渡到受支持的替代方案。
 
 ### 已弃用的功能  {#deprecated-features}
 
@@ -543,6 +629,10 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 ### 已移除的功能  {#removed-features}
 
 此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
+
+* 删除了对CRX存储库持久性的RDBMK支持。
+
+* 在群集环境中，MongoMK现在是存储库持久性唯一支持的选项。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
