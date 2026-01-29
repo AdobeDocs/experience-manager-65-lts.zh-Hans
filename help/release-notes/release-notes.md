@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 8f5a06dc80943362acebfd7b19fed13c051417d1
+source-git-commit: 6a6a79663579e4d63e68ae6c9a4bec97f24032f9
 workflow-type: tm+mt
-source-wordcount: '7751'
+source-wordcount: '7745'
 ht-degree: 93%
 
 ---
@@ -75,8 +75,6 @@ JBoss EAP 8上的AEM Forms使用Elytron管理安全凭据。 客户必须配置�
 
 有关详细信息，请参阅&#x200B;**从javax迁移到jakarta命名空间**。
 
-**从Javax迁移到Jakarta命名空间**
-
 #### 从`javax`到`jakarta`命名空间的迁移
 
 从&#x200B;**AEM Forms 6.5 LTS SP1**&#x200B;开始，仅支持实施&#x200B;**Jakarta Servlet API 5/6**&#x200B;的应用程序服务器。 使用&#x200B;**Jakarta EE 9及更高版本**&#x200B;时，所有API都从`javax.{}`命名空间转换为`jakarta.`。
@@ -110,9 +108,9 @@ JBoss EAP 8上的AEM Forms使用Elytron管理安全凭据。 客户必须配置�
 
 以下是迁移期间所需的命名空间更改的常见示例：
 
-之前(javax)    之后（雅加达）
-javax.servlet。 **jakarta.servlet**
-javax.servlet.http。 **jakarta.servlet.http.**
+* 之前(javax)    之后（雅加达）
+* javax.servlet。 **jakarta.servlet**
+* javax.servlet.http。 **jakarta.servlet.http.**
 
 **示例导入映射**
 
@@ -532,7 +530,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
