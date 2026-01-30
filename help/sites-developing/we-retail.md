@@ -36,7 +36,7 @@ ht-degree: 9%
 | [响应布局](/help/sites-authoring/responsive-layout.md) | 所有页面都具有响应式布局，可动态调整以适应屏幕和设备大小。 | [试用！](/help/sites-developing/we-retail-responsive-layout.md) |
 | [可编辑的模板](/help/sites-developing/page-templates-editable.md) | 所有页面都基于可编辑的模板，允许非开发人员调整和自定义模板。 | [试用！](/help/sites-developing/we-retail-editable-templates.md) |
 | [HTML 模板语言](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-htl/content/overview) | 所有组件都基于HTL |  |
-| [ Universal Editor ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction) | 所有组件都基于新的核心组件，并且更加可用，可开箱即用且可由用户配置 | [试用！](/help/sites-developing/we-retail-core-components.md) |
+| [&#x200B; Universal Editor &#x200B;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction) | 所有组件都基于新的核心组件，并且更加可用，可开箱即用且可由用户配置 | [试用！](/help/sites-developing/we-retail-core-components.md) |
 | [内容片段](/help/assets/content-fragments/content-fragments.md) | `We.Retail`体验部分展示了通过内容片段重用内容的强大功能。 | [试试看！](/help/sites-developing/we-retail-content-fragments.md) |
 | [体验片段](/help/sites-authoring/experience-fragments.md) | 体验片段是由一个或多个组件组成的组，其中包括可在页面中引用的内容和布局。 | [试试看！](/help/sites-developing/we-retail-experience-fragments.md) |
 

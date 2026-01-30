@@ -118,7 +118,7 @@ msiexec /i "<absolute path>\Designer.msi" /quiet SERIALNUMBER=****-****-****-***
    * 可通过两种方式检查Forms Designer版本：
 
       1. 打开Designer。
-      1. 单击&#x200B;**帮助** > **关于Designer**查看Designer版本和位信息。
-例如，版本字符串以**64位**结尾，如以下示例所示：
+      1. 单击&#x200B;**帮助** > **关于Designer**&#x200B;查看Designer版本和位信息。
+例如，版本字符串以&#x200B;**64位**&#x200B;结尾，如以下示例所示：
          `6.5.21.20240522.1.161 | 64 bit`
       1. 打开Designer，左上角显示一个品牌图标，其中包含带有产品名称的64位信息。
