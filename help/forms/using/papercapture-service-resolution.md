@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: de3cd0ad-0b18-4d9a-8c6b-72cc16149cfc
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: eb6f6b994fdd3b2b01e77700d2deb7bd2830ac8f
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 2%
+source-wordcount: '192'
+ht-degree: 23%
 
 ---
 
@@ -18,26 +18,25 @@ ht-degree: 2%
 
 ## 问题
 
-升级到AEM Forms Service Pack 6.5.21.0后，`PaperCapture`服务无法对PDF执行OCR（光学字符识别）操作。 该服务不会以PDF或日志文件的形式生成输出。
+在升级到 AEM Forms 服务包 6.5.21.0 后，`PaperCapture` 服务无法对 PDF 执行 OCR（光学字符识别）操作。该服务不会以PDF或日志文件的形式生成输出。
 
 ## 应用到
 
 此解决方案适用于：
-* 所有(JBoss、Weblogic、Websphere) JEE服务器上的AEM Forms
+
+* 所有(JBoss®、WebLogic、WebSphere®) JEE服务器上的AEM Forms
 * OSGi上的AEM Forms
 
-## 解决方案
+## 解决办法
 
 1. 从软件分发门户下载[修补程序](https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexperience.adobe.com%2F%23%2Fdownloads%2Fcontent%2Fsoftware-distribution%2Fen%2Faem.html%3Fpackage%3D%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2FPaperCaptureSvc.zip&data=05%7C02%7Cruchitas%40adobe.com%7Cf50f80aab6994875271a08dc91f2f137%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638545719814675925%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=9pTrMfiMD%2B5kQezxsZwTdOmaaktxURR99d7f6wHr%2FWQ%3D&reserved=0)。
 1. 提取并复制下载文件夹的内容。
 1. 导航到以下相应应用程序服务器的路径：
-   * **jboss**：
-
+   * **JBoss®**：
      `..\Adobe\Adobe_Experience_Manager_Forms\jboss\standalone\svcnative\PaperCaptureSvc`
-   * **weblogic**：
-
+   * **WebLogic**：
      `..\Adobe\Adobe_Experience_Manager_Forms\crx-repository\bedrock\svcnative\PaperCaptureSvc`
-   * **websphere**：\
+   * **WebSphere®**：\
      `..\Adobe\Adobe_Experience_Manager_Forms\crx-repository\bedrock\svcnative\PaperCaptureSvc`
    * **OSGi设置**：\
      `..\quickstart\crx-quickstart\bedrock\svcnative\PaperCaptureSvc`
@@ -47,4 +46,4 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   >Adobe建议您使用`Ctrl + C`命令重新启动SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
