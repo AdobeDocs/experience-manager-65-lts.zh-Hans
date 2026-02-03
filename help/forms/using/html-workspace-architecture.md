@@ -1,5 +1,5 @@
 ---
-title: AEM Forms Workspace架构
+title: AEM Forms Workspace 架构
 description: LiveCycle AEM Forms Workspace架构的概念信息和概述。
 contentOwner: robhagat
 content-type: reference
@@ -9,14 +9,14 @@ solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
 exl-id: d317274f-2c9a-4809-b43e-2efebc8fcb3f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 5995dda0aac101e6c0d506ac5bba786674b0735b
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 0%
+source-wordcount: '224'
+ht-degree: 1%
 
 ---
 
-# AEM Forms Workspace架构 {#aem-forms-workspace-architecture}
+# AEM Forms工作区架构 {#aem-forms-workspace-architecture}
 
 AEM Forms工作区是托管在CRX™上的Web应用程序。 在浏览器中打开工作区时，将访问CRX资源，并且应用程序将在浏览器中呈现为HTML页面。
 
@@ -29,7 +29,7 @@ AEM Forms工作区是托管在CRX™上的Web应用程序。 在浏览器中打�
 
 AEM Forms服务器通过JDBC访问AEM Forms数据库。 数据库保存任务、进程及其实例、用户和相关信息。
 
-AEM Forms工作区设计为模块化JavaScript™组件，可以单独自定义这些组件，并在其他Web应用程序中重复使用。 这些组件基于BackBone，它是一个JavaScript库，为Web应用程序提供结构。 描述组件与BackBone交互的详细文章是[此处](/help/forms/using/backbone-interaction.md)。 [此](/help/forms/using/folder-structure.md)文章中讨论了CRX文件夹结构中组件的组织。
+AEM Forms工作区设计为模块化JavaScript组件，可以单独自定义这些组件，并在其他Web应用程序中重复使用。 这些组件基于BackBone，它是一个JavaScript库，为Web应用程序提供结构。 描述组件与BackBone交互的详细文章是[此处](/help/forms/using/backbone-interaction.md)。 [此](/help/forms/using/folder-structure.md)文章中讨论了CRX文件夹结构中组件的组织。
 
 为AEM Forms工作区提供的包：
 
