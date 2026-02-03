@@ -117,7 +117,7 @@ function getAdobeSignRecipients() {
 
 您可以使用[RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面动态选择用户或组以执行Adobe Sign和分配任务步骤。 您可以创建一个使用[RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口的OSGi捆绑包，并将其部署到AEM Forms服务器。 该选项可供在AEM工作流的`Assign Task`和Adobe Sign组件中选择。
 
-您需要[AEM Forms客户端SDK](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件来编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi捆绑包项目中。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
+您需要[AEM Forms客户端SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件来编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi捆绑包项目中。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
 
 1. 打开Eclipse IDE。 导航到&#x200B;**[!UICONTROL 文件]**> **[!UICONTROL 新建项目]**。
 1. 在选择向导屏幕上，选择&#x200B;**[!UICONTROL Maven项目]**，然后单击&#x200B;**[!UICONTROL 下一步]**。
