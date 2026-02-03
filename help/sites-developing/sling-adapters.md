@@ -313,7 +313,7 @@ Node node = resource.adaptTo(Node.class);
 | [节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) | 组件的节点。 |
 | ... | 组件资源可以适应的一切。 |
 
-**模板[2}](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Template.html)适应：**
+**模板[2&rbrace;](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Template.html)适应：**
 
 <table>
  <tbody>
@@ -338,7 +338,7 @@ Node node = resource.adaptTo(Node.class);
 
 #### 安全性 {#security}
 
-**可授权**、{User**和&#x200B;**组**&#x200B;适应：
+**可授权**、&lbrace;User&#x200B;**和&#x200B;**&#x200B;组**&#x200B;适应：
 
 | [节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) | 返回用户/组主节点。 |
 | --- | --- |
