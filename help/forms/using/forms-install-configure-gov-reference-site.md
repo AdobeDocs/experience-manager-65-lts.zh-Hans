@@ -228,7 +228,7 @@ ht-degree: 2%
 **引用：**
 
 1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [配置Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms#)
+1. [配置Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms#)
 
 #### MS® Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
 
@@ -483,7 +483,7 @@ ht-degree: 2%
 
 阅读更多说明前，请查看以下内容：
 
-* [配置自动表单转换服务](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/configure-service#)
+* [配置自动表单转换服务](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/configure-service#)
 
 #### 创建IMS配置 — 第1部分 {#creating-ims-config}
 
@@ -582,7 +582,7 @@ IMS配置完成后，您可以继续查看AEM中的云配置。 如果配置不�
 
 1. 对于此配置，两个复选框值留空。
 
-   要了解有关这些选项的更多信息，请参阅[配置云服务](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/configure-service#configure-the-cloud-service)。
+   要了解有关这些选项的更多信息，请参阅[配置云服务](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/configure-service#configure-the-cloud-service)。
 
 #### 配置云配置（`We.Finance` AFC生产） {#configure-cloud-configuration-wefinance}
 
@@ -612,7 +612,7 @@ IMS配置完成后，您可以继续在AEM中创建云配置。
 
 1. 对于此配置，两个复选框值留空。
 
-   * 要了解有关这些选项的更多信息，请参阅[配置云服务](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/configure-service#configure-the-cloud-service)。
+   * 要了解有关这些选项的更多信息，请参阅[配置云服务](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/configure-service#configure-the-cloud-service)。
 
 #### 测试表单转换（We.Gov注册应用程序） {#test-forms-conversion}
 
@@ -652,7 +652,7 @@ IMS配置完成后，您可以继续在AEM中创建云配置。
 
 #### 已知问题和说明 {#known-issues-notes}
 
-自动表单转换服务包括某些[最佳实践、已知复杂模式](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices#)和[已知问题](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/known-issues#)。 在开始使用AEM Forms自动表单转换服务之前，请查看此信息。
+自动表单转换服务包括某些[最佳实践、已知复杂模式](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/styles-and-pattern-considerations-and-best-practices#)和[已知问题](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/known-issues#)。 在开始使用AEM Forms自动表单转换服务之前，请查看此信息。
 
 1. 创建表单时，如果要在转换后将表单绑定到FDM，则可以在生成自适应表单时启用数据绑定。
 
