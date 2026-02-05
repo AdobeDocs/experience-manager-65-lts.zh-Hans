@@ -1,5 +1,5 @@
 ---
-title: 用于处理表单门户上提交的表单的API
+title: 用于在Forms门户网站上处理已提交表单的API
 description: AEM Forms提供了API，您可以使用这些API在Forms Portal中查询已提交的表单数据并对其执行操作。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,22 +8,22 @@ feature: Forms Portal
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: a24d0218-d534-49c9-81c1-12b38d794caa
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 16f57ae1663f035d1dc39005d37426c7a0d8dc16
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 5%
+source-wordcount: '512'
+ht-degree: 6%
 
 ---
 
-# 用于处理表单门户上提交的表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
+# 用于在Forms Portal上处理已提交表单的API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms提供了可用于查询通过表单门户提交的表单数据的API。 此外，您可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
+AEM Forms提供了可用于查询通过Forms Portal提交的表单数据的API。 此外，您可以使用本文档中介绍的API发布注释或更新已提交表单的属性。
 
 >[!NOTE]
 >
->必须将调用API的用户添加到审阅人组，如[将提交审阅人关联到表单](/help/forms/using/adding-reviewers-form.md)中所述。
+>调用API的用户必须添加到审阅者组中。 请参阅[将提交审阅人关联到表单](/help/forms/using/adding-reviewers-form.md)。
 
-## GET /content/forms/portal/submission.review.json？func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
+## GET `/content/forms/portal/submission.review.json?func=getFormsForSubmissionReview` {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
 返回所有符合条件的表单的列表。
 
@@ -57,7 +57,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 [{"formPath":"/content/dam/formsanddocuments/forms-review/form2","formName":"form2"},{"formPath":"/content/dam/formsanddocuments/forms-review/form1","formName":"form1"}]
 ```
 
-## GET /content/forms/portal/submission.review.json？func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
+## GET `/content/forms/portal/submission.review.json?func=getAllSubmissions` {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
 返回所有已提交表单的详细信息。 但是，您可以使用URL参数来限制结果。
 
@@ -85,11 +85,11 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （可选）</td>
-   <td>指定用于排序结果的属性。 默认值为<strong>jcr：lastModified</strong>，该值根据上次修改时间对结果进行排序。</td>
+   <td>指定用于排序结果的属性。 默认值为<code>jcr:lastModified</code>，该值根据上次修改时间对结果进行排序。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （可选）</td>
-   <td>指定排序结果的顺序。 默认值为<strong>desc</strong>，该值按降序对结果进行排序。 您可以指定<code>asc</code>以对结果进行升序排序。</td>
+   <td>指定排序结果的顺序。 默认值为<code>desc</code>，该值按降序对结果进行排序。 您可以指定<code>asc</code>以对结果进行升序排序。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （可选）</td>
@@ -97,7 +97,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>search</code> <br /> （可选）</td>
-   <td>在表单属性中搜索指定的值并返回具有匹配值的表单。 默认值为<strong>“</strong>”。</td>
+   <td>在表单属性中搜索指定的值并返回具有匹配值的表单。 默认值为 <code>""</code>。</td>
   </tr>
  </tbody>
 </table>
@@ -127,7 +127,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getAllSub
 {"total":1,"items":[{"formName":"form2","formPath":"/content/dam/formsanddocuments/forms-review/form2","submitID":"1403037413508500","formType":"af","jcr:lastModified":"2015-11-05T17:52:32.243+05:30","owner":"admin"}]}
 ```
 
-## 发布/content/forms/portal/submission.review.json？func=addComment {#post-content-forms-portal-submission-review-json-func-addcomment-br}
+## 发布`/content/forms/portal/submission.review.json?func=addComment` {#post-content-forms-portal-submission-review-json-func-addcomment-br}
 
 向指定的提交实例添加注释。
 
@@ -158,7 +158,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json？func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET `/content/forms/portal/submission.review.json?func=getComments`   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 返回在指定提交实例上发布的所有评论。
 
@@ -196,7 +196,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 [{"owner":"fr1","comment":"API test comment","time":1446726988250}]
 ```
 
-## POST /content/forms/portal/submission.review.json？func=updateSubmission {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
+## 发布`/content/forms/portal/submission.review.json?func=updateSubmission` {#post-content-forms-portal-submission-review-json-func-updatesubmission-br}
 
 更新指定提交的表单实例的指定属性的值。
 
@@ -212,7 +212,7 @@ https://[host]:'port'/content/forms/portal/submission.review.json?func=getCommen
 
 ### 响应 {#response-4}
 
-返回包含有关所发布更新的信息的JSON对象。
+它会返回一个JSON对象，其中包含有关发布的更新的信息。
 
 ### 示例 {#example-4}
 
