@@ -4,7 +4,7 @@ description: JBoss EAP 8使用Elytron实现辅助节点与主域控制器的安�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: 259cb81eb9652405dc7270535cbf9deb996ad2ac
+source-git-commit: f093f39fb535209297940cff13a99c7631812152
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 3%
@@ -19,6 +19,7 @@ ht-degree: 3%
 JBoss EAP 8使用&#x200B;**Elytron**&#x200B;验证群集部署中&#x200B;**主节点和辅助节点**&#x200B;之间的通信。 此配置确保辅助节点与主域控制器之间的安全注册和通信。
 
 根据环境和安全要求，有两种设置选项可用。
+
 
 ## 先决条件
 

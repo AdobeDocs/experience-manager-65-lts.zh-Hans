@@ -4,7 +4,7 @@ description: JBoss EAP 8支持Elytron凭据存储，以便在AEM Forms中进行�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: 259cb81eb9652405dc7270535cbf9deb996ad2ac
+source-git-commit: f093f39fb535209297940cff13a99c7631812152
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 2%
@@ -17,6 +17,7 @@ ht-degree: 2%
 ## 使用Elytron配置数据库凭据存储
 
 JBoss EAP 8使用&#x200B;**Elytron凭据存储区**&#x200B;安全地管理AEM Forms部署的数据库密码。 Adobe提供了&#x200B;**自动脚本**，以简化域模式下基于Elytron的凭据存储区的创建和配置。
+
 
 在启动JBoss域控制器&#x200B;**之前，必须完成此设置**。
 

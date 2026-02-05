@@ -4,7 +4,7 @@ description: 在独立模式下，查找JBoss/Red Hat EAP上AEM Forms JEE的数�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: 259cb81eb9652405dc7270535cbf9deb996ad2ac
+source-git-commit: f093f39fb535209297940cff13a99c7631812152
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -17,6 +17,7 @@ ht-degree: 0%
 ## 概述
 
 本指南介绍在&#x200B;**独立模式**&#x200B;下JBoss/Red Hat EAP上适用于AEM Forms JEE的&#x200B;**数据库凭据存储区设置**。 执行手动安装时需要此项。
+
 
 **本指南涵盖：**
 
