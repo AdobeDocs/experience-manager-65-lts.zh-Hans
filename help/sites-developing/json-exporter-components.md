@@ -35,7 +35,7 @@ JSON导出基于[Sling模型](https://sling.apache.org/documentation/bundles/mod
 
 >[!NOTE]
 >
->有关使用Sling模型的示例，请参阅[在AEM中开发Sling模型导出程序](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter)。
+>有关使用Sling模型的示例，请参阅[在AEM中开发Sling模型导出程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter)。
 
 Sling模型实现类必须使用以下内容进行注释：
 
@@ -91,8 +91,8 @@ GITHUB上的代码
 
 ## 相关文档 {#related-documentation}
 
-* Assets用户指南[中的](https://experienceleague.adobe.com/en/docs/experience-manager-64/assets/home#)内容片段主题
+* Assets用户指南[中的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-64/assets/home#)内容片段主题
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段创作](/help/sites-authoring/content-fragments.md)
 * [内容服务的 JSON 导出器](/help/sites-developing/json-exporter.md)
-* [核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)和[内容片段组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/content-fragment-component)
+* [核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)和[内容片段组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/wcm-components/content-fragment-component)

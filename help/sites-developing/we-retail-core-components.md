@@ -86,10 +86,10 @@ ht-degree: 5%
 
 ## 另请参阅 {#further-information}
 
-有关核心组件的详细信息，请参阅创作指南[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)以了解功能概述。 有关技术概述，请参阅指南[开发核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/overview)。
+有关核心组件的详细信息，请参阅创作指南[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)以了解功能概述。 有关技术概述，请参阅指南[开发核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/overview)。
 
 
 
-有关核心组件的更多信息，请参阅创作文档[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)以了解核心组件功能的概述，并参阅开发人员文档[开发核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/overview)以了解技术详细信息。
+有关核心组件的更多信息，请参阅创作文档[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)以了解核心组件功能的概述，并参阅开发人员文档[开发核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/overview)以了解技术详细信息。
 
 您可能还想调查[可编辑的模板](/help/sites-developing/we-retail-editable-templates.md)。 有关可编辑模板的完整详细信息，请参阅创作文档[创建页面模板](/help/sites-authoring/templates.md)或开发人员文档页面[模板 — 可编辑](/help/sites-developing/page-templates-editable.md)。
