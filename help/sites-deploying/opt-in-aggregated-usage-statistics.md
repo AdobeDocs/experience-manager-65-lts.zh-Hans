@@ -10,14 +10,14 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 410691eb-27a9-4f8e-b926-01027c7f84d4
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+source-git-commit: cc96a14ebaf9f895a798b5f4904f5b4769b990bb
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '300'
+ht-degree: 2%
 
 ---
 
-# 选择收集汇总的使用情况统计数据{#opting-into-aggregated-usage-statistics-collection}
+# 选择加入汇总使用情况统计信息收集{#opting-into-aggregated-usage-statistics-collection}
 
 ## 简介 {#introduction}
 
@@ -27,13 +27,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->有各种数据保护与隐私条例；例如，包括GDPR和CCPA。 AEM Sites随时准备帮助客户履行其数据保护和隐私合规义务。 本页将指导客户完成选择启用（或禁用）汇总使用情况统计信息收集的过程。
+>有各种数据保护与隐私条例；例如，包括GDPR和CCPA。 AEM Sites随时准备帮助客户履行其数据保护和隐私合规义务。 本页将指导客户完成选择加入（或退出）汇总使用情况统计信息收集的过程。
 >
 >有关详细信息，另请参阅[Adobe的隐私中心](https://www.adobe.com/cn/privacy.html)。
 
 >[!NOTE]
 >
->您可以随时选择退出，方法是使用[Web控制台](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console)，或不在AEM选择加入屏幕上选择加入选项。
+>您可以随时选择退出，方法是使用[Web控制台]&#x200B;(/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console，或不选择AEM选择加入屏幕上的选择加入选项。
 
 ## 使用触屏UI选择加入 {#opt-in-by-using-the-touch-ui}
 
@@ -43,15 +43,15 @@ ht-degree: 1%
 
    ![usage_statisticsnavigationscreen](assets/usage_statisticsnavigationscreen.png)
 
-1. 在下拉列表中，单击“**启用聚合使用情况统计信息收集**”。
+1. 在下拉列表中，单击&#x200B;**启用聚合使用情况统计信息收集**。
 
    ![usage_statisticsnavigationscreen2](assets/usage_statisticsnavigationscreen2.png)
 
-1. 在选择加入屏幕上，选择“**允许收集汇总的使用情况统计数据**”。
+1. 在选择加入屏幕上，单击选项&#x200B;**[!UICONTROL 允许收集汇总的使用情况统计数据]**。
 
    ![usage_statisticsopt-inscreen](assets/usage_statisticsopt-inscreen.png)
 
-1. 单击“**完成**”。
+1. 单击&#x200B;**完成**。
 
 ## 使用Web控制台选择加入 {#opt-in-by-using-the-web-console}
 
@@ -65,7 +65,7 @@ ht-degree: 1%
 
    ![usage_statisticswebconsole](assets/usage_statisticswebconsole.png)
 
-1. 搜索“**汇总的使用情况统计信息集合**”。
+1. 搜索&#x200B;**汇总的使用情况统计信息集合**。
 1. 单击&#x200B;**编辑**&#x200B;图标。
 
    ![usage_statisticscollectionedit](assets/usage_statisticscollectionedit.png)
