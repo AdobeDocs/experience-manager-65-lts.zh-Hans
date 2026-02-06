@@ -1,5 +1,5 @@
 ---
-title: 与Adobe Target集成的先决条件
+title: 与 Adobe Target 集成的先决条件
 description: 了解与Adobe Target集成的先决条件。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,10 +10,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: e1771229-b2ce-406a-95a5-99b11fafbe34
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 24bd1f57da3f9ce613ee28276d1ae9465b6dfba6
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 7%
+source-wordcount: '511'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 作为AEM与Adobe Target的[集成的一部分，](/help/sites-administering/target.md)您需要向Adobe Target注册、配置复制代理并在发布节点上配置安全活动设置。
 
-## 在Adobe Target中注册 {#registering-with-adobe-target}
+## 向Adobe Target注册 {#registering-with-adobe-target}
 
 要将AEM与Adobe Target集成，您必须拥有有效的Adobe Target帐户。 此帐户必须至少具有&#x200B;**审批者**&#x200B;级别的权限。 当您注册Adobe Target时，您会收到一个客户端代码。 您需要客户端代码以及Adobe Target登录名和密码才能将AEM连接到Adobe Target。
 
@@ -29,9 +29,9 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->您的帐户还必须由Target团队启用才能使用该集成。
+>Target团队必须启用您的帐户才能使用该集成。
 >
->如果不是这种情况，请联系[Adobe客户关怀](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=zh-Hans)。
+>如果不是这种情况，请联系[Adobe客户关怀](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information)。
 
 ## 启用目标复制代理 {#enabling-the-target-replication-agent}
 
@@ -44,21 +44,21 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >配置Test and Target复制代理时，在&#x200B;**传输**&#x200B;选项卡中，URI默认设置为&#x200B;**tnt:///**。 不要将此URI替换为&#x200B;**https://admin.testandtarget.omniture.com**。
+   >配置Test and Target复制代理时，在&#x200B;**传输**&#x200B;选项卡中，URI默认设置为`tnt:///`。 不要将此URI替换为`https://admin.testandtarget.omniture.com`。
    >
-   >如果尝试测试与&#x200B;**tnt:///**&#x200B;的连接，则会引发错误。 这是预期行为，因为此URI仅供内部使用；请勿与&#x200B;**测试连接**&#x200B;一起使用。
+   >如果尝试测试与`tnt:///`的连接，则会显示错误，这是预期行为。 原因是URI仅供内部使用。 不要与&#x200B;**测试连接**&#x200B;一起使用。
 
 ## 保护活动设置节点 {#securing-the-activity-settings-node}
 
-确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+保护发布实例上的活动设置节点&#x200B;**cq:ActivitySettings**，使其不可由普通用户访问。 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 
-**cq：ActivitySettings**&#x200B;节点在CRXDE lite中位于活动jcr：content节点；**下的`/content/campaigns/*nameofbrand*`**&#x200B;下，例如`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`。 此节点仅在定向组件后创建。
+**cq:ActivitySettings**&#x200B;节点在CRXDE Lite中的`/content/campaigns/*nameofbrand*`节点下的`jcr:content`* *下可用。 例如，`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`。此节点仅在定向组件后创建。
 
-活动的jcr：content下的&#x200B;**cq：ActivitySettings**&#x200B;节点受以下ACL保护：
+活动的&#x200B;**下的:ActivitySettings** cq`jcr:content`节点受以下ACL保护：
 
-* 拒绝所有人的所有
-* 允许“target-activity-authors”使用jcr：read，rep：write（作者是此组的一名现成成员）
-* 允许jcr：read，rep：write用于“targetservice”
+* 拒绝所有人。
+* 允许`jcr:read,rep:write`使用`target-activity-authors`（作者是此开箱即用组的成员）。
+* 允许`jcr:read,rep:write`用于`targetservice`。
 
 这些设置可确保普通用户无权访问节点属性。 在创作实例和发布实例上使用相同的ACL。 有关详细信息，请参阅[用户管理和安全性](/help/sites-administering/security.md)。
 
