@@ -9,16 +9,16 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 255f52f3-aff4-432c-a541-3ce03e626742
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 9bc1cad84bb14b7513ede1fff2c1a37768dac442
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1703'
 ht-degree: 5%
 
 ---
 
 # 自定义节点类型{#custom-node-types}
 
-由于Adobe Experience Manager (AEM)基于Sling并使用JCR存储库，因此可使用这两种工具提供的节点类型：
+由于Adobe Experience Manager (AEM)基于Sling并使用JCR存储库，因此两者提供的节点类型均可用于以下内容：
 
 * [JCR节点类型](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 ## 审核 {#audit}
 
-### cq：AuditEvent {#cq-auditevent}
+### `cq:AuditEvent` {#cq-auditevent}
 
 **描述**
 
@@ -55,7 +55,7 @@ ht-degree: 5%
 
 ## 注释 {#comment}
 
-### cq：Comment {#cq-comment}
+### `cq:Comment` {#cq-comment}
 
 **描述**
 
@@ -74,7 +74,7 @@ ht-degree: 5%
 * `- userIdentifier (string)`
 * `- authorizableId (string)`
 
-### cq：CommentAttachment {#cq-commentattachment}
+### `cq:CommentAttachment` {#cq-commentattachment}
 
 **描述**
 
@@ -86,7 +86,7 @@ ht-degree: 5%
    * `- * (undefined)`
    * `- * (undefined) multiple`
 
-### cq：CommentContent {#cq-commentcontent}
+### `cq:CommentContent` {#cq-commentcontent}
 
 **描述**
 
@@ -103,7 +103,7 @@ ht-degree: 5%
 * `- userIdentifier (string)`
 * `- authorizableId (string)`
 
-### cq：GeoLocation {#cq-geolocation}
+### `cq:GeoLocation` {#cq-geolocation}
 
 **描述**
 
@@ -118,7 +118,7 @@ ht-degree: 5%
 * `- latitude (double)`
 * `- longitude (double)`
 
-### cq：Trackback {#cq-trackback}
+### `cq:Trackback` {#cq-trackback}
 
 **描述**
 
@@ -130,7 +130,7 @@ ht-degree: 5%
 
 ## 核心 {#core}
 
-### cq:Page {#cq-page}
+### `cq:Page` {#cq-page}
 
 **描述**
 
@@ -144,17 +144,17 @@ ht-degree: 5%
    * `+ jcr:content (nt:base) = nt:unstructured copy primary`
    * `+ * (nt:base) = nt:base version`
 
-### cq：PseudoPage {#cq-pseudopage}
+### `cq:PseudoPage` {#cq-pseudopage}
 
 **描述**
 
-定义将节点标记为伪页面的mixin类型。 换句话说，这意味着它们可以适合于Page和WCM编辑支持。
+此mixin类型将节点标记为伪页面。 换句话说，这意味着它们可以适合于Page和WCM编辑支持。
 
 **定义**
 
 * `[cq:PseudoPage] mixin`
 
-### cq:PageContent {#cq-pagecontent}
+### `cq:PageContent` {#cq-pagecontent}
 
 **描述**
 
@@ -166,7 +166,7 @@ ht-degree: 5%
 * `@prop cq:allowedTemplates` — 用于确定允许模板的路径的正则表达式列表。
 * `@prop pageTitle` - `<title>`标记中显示的标题。
 * `@prop navTitle` — 导航中使用的标题。
-* `@prop hideInNav` — 指定是否应在导航中隐藏页面。
+* `@prop hideInNav` — 指定在导航中是否隐藏该页面。
 * `@prop onTime` — 此页面生效的时间。
 * `@prop offTime` — 此页面失效的时间。
 * `@prop cq:lastModified` — 上次修改页面（或其段落）的日期。
@@ -178,6 +178,7 @@ ht-degree: 5%
 >页面内容不必使用此类型。
 
 **定义**
+
 * `[cq:PageContent] > nt:unstructured, mix:title, mix:created, cq:OwnerTaggable, sling:VanityPath, cq:ReplicationStatus, sling:Resource orderable`
    * `- cq:template (string)`
    * `- cq:allowedTemplates (string) multiple`
@@ -191,7 +192,7 @@ ht-degree: 5%
    * `- cq:designPath (string)`
    * `- jcr:language (string)`
 
-### cq:Template {#cq-template}
+### `cq:Template` {#cq-template}
 
 **描述**
 
@@ -223,7 +224,7 @@ ht-degree: 5%
    * `- allowedChildren (string) multiple`
    * `- ranking (long)`
 
-### cq:Component {#cq-component}
+### `cq:Component` {#cq-component}
 
 **描述**
 
@@ -246,7 +247,7 @@ ht-degree: 5%
 * `@prop allowedChildren` — 用于确定允许作为子组件的组件的路径的正则表达式模式。
 * `@node virtual` — 包含反映用于组件拖放的虚拟组件的子节点。
 * `@prop componentGroup` — 组件组的名称，用于组件拖放。
-* `@node cq:infoProviders` — 包含子节点，每个子节点都有一个引用`PageInfoProvider`的属性`className`。
+* `@node cq:infoProviders` — 包含子节点，每个子节点都有一个引用`className`的属性`PageInfoProvider`。
 
 **定义**
 
@@ -271,7 +272,7 @@ ht-degree: 5%
    * `- componentGroup (string)`
    * `+ cq:infoProviders (nt:base) = nt:unstructured copy`
 
-### cq：ComponentMixin {#cq-componentmixin}
+### `cq:ComponentMixin` {#cq-componentmixin}
 
 **描述**
 
@@ -281,17 +282,17 @@ ht-degree: 5%
 
 `[cq:ComponentMixin] > cq:Component mixin`
 
-### cq：EditConfig {#cq-editconfig}
+### `cq:EditConfig` {#cq-editconfig}
 
 **描述**
 
-定义“编辑栏”的配置。
+定义`editbar`的配置。
 
 * `@prop cq:dialogMode` — 对话框模式：
    * `floating` — 对于普通浮动对话框
    * `inline` — 内联编辑
    * `auto` — 自动检测（取决于可用空间）
-* `@node cq:inplaceEditing` — 此组件有就地编辑配置。
+* `@node cq:inplaceEditing` — 已为此组件就地编辑配置。
 * `@prop cq:layout` — 编辑栏布局：
    * `editbar` — 编辑栏
    * `rollover` — 将鼠标指针置于框架之上
@@ -313,7 +314,7 @@ ht-degree: 5%
    * `+ cq:dropTargets (nt:base) = nt:unstructured`
    * `+ cq:listeners (nt:base) = cq:EditListenersConfig`
 
-### cq：DropTargetConfig {#cq-droptargetconfig}
+### `cq:DropTargetConfig` {#cq-droptargetconfig}
 
 **描述**
 
@@ -331,7 +332,7 @@ ht-degree: 5%
    * `- propertyName (string)`
    * `+ parameters (nt:base) = nt:unstructured`
 
-### cq：VirtualComponent {#cq-virtualcomponent}
+### `cq:VirtualComponent` {#cq-virtualcomponent}
 
 **描述**
 
@@ -340,7 +341,7 @@ ht-degree: 5%
 * `@prop jcr:title` — 此组件的标题。
 * `@prop jcr:description` — 此组件的描述。
 * `@node cq:editConfig` — 编辑定义编辑栏参数的配置。
-* `@node cq:childEditConfig` — 编辑子组件继承的配置。
+* `@node cq:childEditConfig` — 编辑由子组件继承的配置。
 * `@node icon.png` — 包含特征图标的文件。
 * `@node thumbnail.png` — 包含特征缩略图图像的文件。
 * `@prop allowedParents` — 用于确定允许作为父组件的组件的路径的正则表达式模式。
@@ -360,7 +361,7 @@ ht-degree: 5%
 `- allowedChildren (string) multiple`
 `- componentGroup (string)`
 
-### cq：EditListenersConfig {#cq-editlistenersconfig}
+### `cq:EditListenersConfig` {#cq-editlistenersconfig}
 
 **描述**
 
@@ -392,7 +393,7 @@ ht-degree: 5%
 
 ## DAM {#dam}
 
-### dam:AssetContent {#dam-assetcontent}
+### `dam:AssetContent` {#dam-assetcontent}
 
 **描述**
 
@@ -404,7 +405,7 @@ DAM资源的内容。
    * `+ metadata (nt:unstructured)`
    * `+ renditions (nt:folder)`
 
-### dam:Asset {#dam-asset}
+### `dam:Asset` {#dam-asset}
 
 **描述**
 
@@ -416,7 +417,7 @@ DAM资产。
 `+ jcr:content (dam:AssetContent) = dam:AssetContent copy primary`
 `+ * (nt:base) = nt:base version`
 
-### dam：Thumbnail {#dam-thumbnail}
+### `dam:Thumbnail` {#dam-thumbnail}
 
 **描述**
 
@@ -430,7 +431,7 @@ DAM资产。
 
 ## 交货容器列表 {#delivery-container-list}
 
-### cq：containerList {#cq-containerlist}
+### `cq:containerList` {#cq-containerlist}
 
 **描述**
 
@@ -443,14 +444,14 @@ DAM资产。
 
 ## 投放页面 {#delivery-page}
 
-### cq：Cq4PageAttributes {#cq-cq-pageattributes}
+### `cq:Cq4PageAttributes` {#cq-cq-pageattributes}
 
 **描述**
 
-节点类型`cq:attributes`用于ContentBus版本标记。 此节点只有一系列属性；其中三个是预定义的“created”、“csd”和“timestamp”。
+节点类型`cq:attributes`用于ContentBus版本标记。 此节点只有一系列属性，其中三个属性是预定义的： `created`、`csd`和`timestamp`。
 
 * `@prop created (long) mandatory copy` — 创建版本信息的时间戳，通常为上一版本的签入时间或页面创建时间。
-* `@prop csd (string) mandatory copy` - csd标准属性，页面节点的cq：csd属性的副本
+* `@prop csd (string) mandatory copy` - `csd`标准属性，页面节点的`cq:csd`属性的副本
 * `@prop timestamp (long) mandatory copy` — 上次修改版本的时间戳，通常为签入时间。
 * `@prop * (string) copy` — 其他属性，使用父节点进行版本控制。
 
@@ -462,7 +463,7 @@ DAM资产。
    * `- timestamp (long) mandatory copy`
    * `- &ast; (string) copy`
 
-### cq：Cq4ContentPage {#cq-cq-contentpage}
+### `cq:Cq4ContentPage` {#cq-cq-contentpage}
 
 **描述**
 
@@ -472,7 +473,7 @@ DAM资产。
 
 * `@prop cq:csd` — 页面的ContentBus CSD。
 * `@node cq:content` — 页面的内容。 如果页面节点处于“现有不含内容”或“已删除”状态，则此子节点不存在。
-* `@node cq:attributes` — 页面属性的列表，以前称为版本标记。 对于cq：contentPage类型，此节点是必需的。 当页面为节点进行版本控制时，将对“属性”节点进行版本控制。
+* `@node cq:attributes` — 页面属性的列表，以前称为版本标记。 此节点对于`cq:contentPage`类型是必需的。 当对页面节点进行版本控制时，会对attributes节点进行版本控制。
 
 **定义**
 
@@ -482,16 +483,16 @@ DAM资产。
 
 ## 导入程序 {#importer}
 
-### cq:PollConfig {#cq-pollconfig}
+### `cq:PollConfig` {#cq-pollconfig}
 
 **描述**
 
 轮询配置。
 
 * `@prop source (String) mandatory` — 数据源URI。 必填，且不能为空。
-* `@prop target (String)` — 存储从数据源检索的数据的目标位置。 可选，默认为cq：PollConfig节点。
+* `@prop target (String)` — 存储从数据源检索的数据的目标位置。 可选，默认为cq:PollConfig节点。
 * `@prop interval (Long)` — 轮询数据源中新数据或更新数据的时间间隔（以秒为单位）。 可选，默认为30分钟（1800秒）。
-* [为Adobe Experience Manager创建自定义数据导入器服务](https://helpx.adobe.com/experience-manager/using/polling.html)
+* [为Adobe Experience Manager创建自定义数据导入器服务](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview)
 
 **定义**
 
@@ -501,7 +502,7 @@ DAM资产。
    * `- target (String)`
    * `- interval (Long)`
 
-### cq:PollConfigFolder {#cq-pollconfigfolder}
+### `cq:PollConfigFolder` {#cq-pollconfigfolder}
 
 **描述**
 
@@ -513,7 +514,7 @@ DAM资产。
 
 ## 位置 {#location}
 
-### cq：GeoLocation {#cq-geolocation-1}
+### `cq:GeoLocation` {#cq-geolocation-1}
 
 **描述**
 
@@ -531,7 +532,7 @@ DAM资产。
 
 ## 邮件程序 {#mailer}
 
-### cq：mailerMessage {#cq-mailermessage}
+### `cq:mailerMessage` {#cq-mailermessage}
 
 **描述**
 
@@ -547,7 +548,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 ## MSM {#msm}
 
-### cq：LiveRelationship {#cq-liverelationship}
+### `cq:LiveRelationship` {#cq-liverelationship}
 
 **描述**
 
@@ -560,7 +561,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
    * `- cq:lastRolledoutBy (string)`
    * `- cq:sourceUUID (string)`
 
-### cq：LiveSync {#cq-livesync}
+### `cq:LiveSync` {#cq-livesync}
 
 **描述**
 
@@ -577,7 +578,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 `+ * (cq:LiveSyncAction) = cq:LiveSyncAction`
 `+ cq:LiveSyncConfig (nt:base) = cq:LiveSyncConfig`
 
-### cq：LiveSyncCanceled {#cq-livesynccancelled}
+### `cq:LiveSyncCancelled` {#cq-livesynccancelled}
 
 **描述**
 
@@ -590,7 +591,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 * `[cq:LiveSyncCancelled] > cq:LiveRelationship mixin`
    * `- cq:isCancelledForChildren (boolean)`
 
-### cq：LiveSyncAction {#cq-livesyncaction}
+### `cq:LiveSyncAction` {#cq-livesyncaction}
 
 **描述**
 
@@ -603,7 +604,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 * `[cq:LiveSyncAction] > nt:unstructured`
 
-### cq：LiveSyncConfig {#cq-livesyncconfig}
+### `cq:LiveSyncConfig` {#cq-livesyncconfig}
 
 **描述**
 
@@ -620,7 +621,7 @@ MailerService节点类型 邮件程序使用具有此mixin的节点作为消息�
 
 * `- cq:rolloutConfigs (string) multiple /** deprecated **/`
 
-### cq：BlueprintAction {#cq-blueprintaction}
+### `cq:BlueprintAction` {#cq-blueprintaction}
 
 **描述**
 
@@ -630,9 +631,9 @@ Blueprint操作
 
 * `[cq:BlueprintAction] > nt:unstructured`
 
-## Platform {#platform}
+## 平台 {#platform}
 
-### cq：Console {#cq-console}
+### `cq:Console` {#cq-console}
 
 **描述**
 
@@ -645,7 +646,7 @@ Blueprint操作
 
 ## 复制 {#replication}
 
-### cq：ReplicationStatus {#cq-replicationstatus}
+### `cq:ReplicationStatus` {#cq-replicationstatus}
 
 **描述**
 
@@ -671,21 +672,21 @@ Blueprint操作
 
 ## 安全性 {#security}
 
-### cq：ApplicationPrivilege {#cq-applicationprivilege}
+### `cq:ApplicationPrivilege` {#cq-applicationprivilege}
 
 **描述**
 
-定义应用程序权限。
+它定义了应用程序权限。
 
 **定义**
 
 * `[cq:ApplicationPrivilege] mixin`
 
-### cq：PrivilegeAcl {#cq-privilegeacl}
+### `cq:PrivilegeAcl` {#cq-privilegeacl}
 
 **描述**
 
-定义应用程序权限ACL。
+它定义应用程序权限ACL。
 
 * `@prop cq:isPathDependent`
 * `@node * ACEs`
@@ -696,11 +697,11 @@ Blueprint操作
    * `- cq:isPathDependent (boolean)`
    * `+ * (cq:PrivilegeAce) = cq:PrivilegeAce`
 
-### cq：PrivilegeAce {#cq-privilegeace}
+### `cq:PrivilegeAce` {#cq-privilegeace}
 
 **描述**
 
-定义应用程序权限ACE。
+它定义应用程序权限的ACE。
 
 * `@prop path`
 * `@prop deny`
@@ -711,21 +712,21 @@ Blueprint操作
    * `- path mandatory`
    * `- deny (boolean)`
 
-### cq：ApplicationPrivilege {#cq-applicationprivilege-1}
+### `cq:ApplicationPrivilege` {#cq-applicationprivilege-1}
 
 **描述**
 
-定义应用程序权限。
+它定义了应用程序权限。
 
 **定义**
 
 * `[cq:ApplicationPrivilege] mixin`
 
-### cq：PrivilegeAcl {#cq-privilegeacl-1}
+### `cq:PrivilegeAcl` {#cq-privilegeacl-1}
 
 **描述**
 
-定义应用程序权限ACL。
+它定义应用程序权限ACL。
 
 * `@prop cq:isPathDependent`
 * `@node * ACEs`
@@ -736,11 +737,11 @@ Blueprint操作
    * `- cq:isPathDependent (boolean)`
    * `+ * (cq:PrivilegeAce) = cq:PrivilegeAce`
 
-### cq：PrivilegeAce {#cq-privilegeace-1}
+### `cq:PrivilegeAce` {#cq-privilegeace-1}
 
 **描述**
 
-定义应用程序权限ACE。
+它定义应用程序权限的ACE。
 
 * `@prop path`
 * `@prop deny`
@@ -753,7 +754,7 @@ Blueprint操作
 
 ## 站点导入程序 {#site-importer}
 
-### cq：ComponentExtractorSource {#cq-componentextractorsource}
+### `cq:ComponentExtractorSource` {#cq-componentextractorsource}
 
 **描述**
 
@@ -765,7 +766,7 @@ Blueprint操作
 
 ## 标记 {#tagging}
 
-### cq：Tag {#cq-tag}
+### `cq:Tag` {#cq-tag}
 
 **描述**
 
@@ -779,7 +780,7 @@ Blueprint操作
    * `- * (undefined)`
    * `+ * (nt:base) = cq:Tag version`
 
-### cq:Taggable {#cq-taggable}
+### `cq:Taggable` {#cq-taggable}
 
 **描述**
 
@@ -792,7 +793,7 @@ Blueprint操作
 * `[cq:Taggable]`
    * `- cq:tags (string) multiple`
 
-### cq：OwnerTaggable {#cq-ownertaggable}
+### `cq:OwnerTaggable` {#cq-ownertaggable}
 
 **描述**
 
@@ -802,22 +803,22 @@ Blueprint操作
 
 * `[cq:OwnerTaggable] > cq:Taggable`
 
-### cq：UserTaggable {#cq-usertaggable}
+### `cq:UserTaggable` {#cq-usertaggable}
 
 **描述**
 
-任何用户/公共网站都可以为cq：userContent中使用的内容（Web2.0样式）添加标签。
+任何用户或公共网站都可以为`cq:userContent`中使用的内容（Web2.0样式）添加标签。
 
 **定义**
 
 * `[cq:UserTaggable] > cq:Taggable`
    * `mixin`
 
-### cq：AllowsUserContent {#cq-allowsusercontent}
+### `cq:AllowsUserContent` {#cq-allowsusercontent}
 
 **描述**
 
-添加可由用户修改的`cq:userContent`子节点。 每个用户都有自己的`cq:userContent/<userid>`子节点，该子节点通常具有mixin `cq:UserTaggable`。
+添加用户可以编辑的`cq:userContent`子节点。 每个用户都有自己的`cq:userContent/<userid>`子节点，该子节点通常具有mixin `cq:UserTaggable`。
 
 **定义**
 
@@ -831,11 +832,11 @@ Blueprint操作
    * `mixin`
    * `+ cq:userContent (cq:UserContent)`
 
-### cq：UserContent {#cq-usercontent}
+### `cq:UserContent` {#cq-usercontent}
 
 **描述**
 
-可由用户修改。
+用户可以对其进行编辑。
 
 **定义**
 
@@ -845,7 +846,7 @@ Blueprint操作
    * `// other content`
    * `+ * (nt:base)`
 
-### cq：UserData {#cq-userdata}
+### `cq:UserData` {#cq-userdata}
 
 **描述**
 
@@ -857,7 +858,7 @@ Blueprint操作
 
 ## 小组件 {#widgets}
 
-### cq：ClientLibraryFolder {#cq-clientlibraryfolder}
+### `cq:ClientLibraryFolder` {#cq-clientlibraryfolder}
 
 **描述**
 
@@ -869,7 +870,7 @@ Blueprint操作
    * `- categories (string) multiple`
    * `- dependencies (string) multiple`
 
-### cq：Widget {#cq-widget}
+### `cq:Widget` {#cq-widget}
 
 **描述**
 
@@ -883,7 +884,7 @@ Blueprint操作
    * `- title (string)`
    * `+ items (nt:base) = cq:WidgetCollection copy`
 
-### cq：WidgetCollection {#cq-widgetcollection}
+### `cq:WidgetCollection` {#cq-widgetcollection}
 
 **描述**
 
@@ -895,7 +896,7 @@ Blueprint操作
    * `orderable`
    * `+ * (cq:Widget) = cq:Widget copy`
 
-### cq：Dialog {#cq-dialog}
+### `cq:Dialog` {#cq-dialog}
 
 **描述**
 
@@ -905,7 +906,7 @@ Blueprint操作
 
 * `[cq:Dialog] > cq:Widget orderable`
 
-### cq：Panel {#cq-panel}
+### `cq:Panel` {#cq-panel}
 
 **描述**
 
@@ -915,7 +916,7 @@ Blueprint操作
 
 `[cq:Panel] > cq:Widget orderable`
 
-### cq：TabPanel {#cq-tabpanel}
+### `cq:TabPanel` {#cq-tabpanel}
 
 **描述**
 
@@ -926,7 +927,7 @@ Blueprint操作
 * `[cq:TabPanel]` > `cq:Panel orderable`
    * `- activeTab (long)`
 
-### cq：Field {#cq-field}
+### `cq:Field` {#cq-field}
 
 **描述**
 
@@ -941,7 +942,7 @@ Blueprint操作
 
 ## 维客 {#wiki}
 
-### wiki：主题 {#wiki-topic}
+### `wiki:Topic` {#wiki-topic}
 
 **描述**
 
@@ -962,7 +963,7 @@ Wiki主题
    * `- wiki:logMessage (string)`
    * `- wiki:quietSave (boolean)`
 
-### wiki：用户 {#wiki-user}
+### `wiki:User` {#wiki-user}
 
 **描述**
 
@@ -973,7 +974,7 @@ Wiki用户
 * `[wiki:User] mixin`
    * `- wiki:subscriptions (string) multiple`
 
-### wiki：属性 {#wiki-properties}
+### `wiki:Properties` {#wiki-properties}
 
 **描述**
 
@@ -987,7 +988,7 @@ Wiki属性
 
 ## 工作流 {#workflow}
 
-### cq：Workflow {#cq-workflow}
+### `cq:Workflow` {#cq-workflow}
 
 **描述**
 
@@ -1012,7 +1013,7 @@ Wiki属性
    * `+ metaData (nt:unstructured)`
    * `+ workItems (nt:unstructured)`
 
-### cq：WorkItem {#cq-workitem}
+### `cq:WorkItem` {#cq-workitem}
 
 **描述**
 
@@ -1030,11 +1031,11 @@ Wiki属性
    * `- sling:resourceType (String) = "cq/workflow/components/workitem" mandatory autocreated`
    * `+ metaData (nt:unstructured)`
 
-### cq：Payload {#cq-payload}
+### `cq:Payload` {#cq-payload}
 
 **描述**
 
-有效负荷
+负载
 
 **定义**
 
@@ -1047,7 +1048,7 @@ Wiki属性
    * `- * (undefined)`
    * `- * (undefined) multiple`
 
-### cq：WorkflowData {#cq-workflowdata}
+### `cq:WorkflowData` {#cq-workflowdata}
 
 **描述**
 
@@ -1061,11 +1062,12 @@ Wiki属性
    * `+ payload (cq:Payload)`
    * `+ metaData (nt:unstructured) copy`
 
-### cq：WorkflowModel {#cq-workflowmodel}
+### `cq:WorkflowModel` {#cq-workflowmodel}
 
 **描述**
 
 自动分配工作流配置。 该配置遵循以下结构：
+
 * `workflows`
    * `+ name1`
       * `- cq:path`
@@ -1086,7 +1088,7 @@ Wiki属性
    * `+ metaData (nt:unstructured)`
       * `copy`
 
-### cq：WorkflowNode {#cq-workflownode}
+### `cq:WorkflowNode` {#cq-workflownode}
 
 **描述**
 
@@ -1106,7 +1108,7 @@ Wiki属性
    * `+ timeoutConfiguration (nt:unstructured)`
       * `copy`
 
-### cq：WorkflowTransition {#cq-workflowtransition}
+### `cq:WorkflowTransition` {#cq-workflowtransition}
 
 **描述**
 
@@ -1121,7 +1123,7 @@ Wiki属性
    * `+ metaData (nt:unstructured)`
       * `copy`
 
-### cq：OrTab {#cq-ortab}
+### `cq:OrTab` {#cq-ortab}
 
 **描述**
 
@@ -1130,10 +1132,10 @@ Wiki属性
 **定义**
 
 * `[cq:OrTab]`
-   * `- workflowId (String) // not compulsory as this node will already be attached to the workflow node`
+   * `- workflowId (String) // not compulsory as this node is already be attached to the workflow node`
    * `- nodeId (String)`
 
-### cq：Wait {#cq-wait}
+### `cq:Wait` {#cq-wait}
 
 **描述**
 
@@ -1142,11 +1144,11 @@ Wiki属性
 **定义**
 
 * `[cq:Wait]`
-   * `- workflowId (String) // not compulsory as this node will be already attached to the workflow node`
+   * `- workflowId (String) // not compulsory as this node is already attached to the workflow node`
    * `- destNodeId (String)`
    * `- fromNodeId (String)`
 
-### cq：WorkflowStack {#cq-workflowstack}
+### `cq:WorkflowStack` {#cq-workflowstack}
 
 **描述**
 
@@ -1159,7 +1161,7 @@ Wiki属性
    * `- parentInstanceId (String)`
    * `- nodeId (String)`
 
-### cq：ProcessStack {#cq-processstack}
+### `cq:ProcessStack` {#cq-processstack}
 
 **描述**
 
@@ -1168,12 +1170,12 @@ Wiki属性
 **定义**
 
 * `[cq:ProcessStack]`
-   * `- workflowId (String) // not compulsory as this node will be already attached to the workflow node`
+   * `- workflowId (String) // not compulsory as this node is already attached to the workflow node`
    * `- containerWorkflowModelId (String)`
    * `- containerWorkflowNodeId`
    * `- containerWorkflowEndNodeId // still needed (if name already defines that id)`
 
-### cq：WorkflowLauncher {#cq-workflowlauncher}
+### `cq:WorkflowLauncher` {#cq-workflowlauncher}
 
 **描述**
 

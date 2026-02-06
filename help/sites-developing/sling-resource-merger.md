@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6fb6e522-fb81-4ba2-90b2-aad68f8bfa9e
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: 9bc1cad84bb14b7513ede1fff2c1a37768dac442
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -20,23 +20,23 @@ ht-degree: 1%
 
 ## 用途 {#purpose}
 
-Sling资源合并提供访问和合并资源的服务。 它提供了以下两种情况的差异（差异）机制：
+Sling资源合并器提供访问和合并资源的服务。 它提供了以下两种情况的差异（差异）机制：
 
-* 使用[配置的搜索路径](/help/sites-developing/overlays.md#configuring-the-search-paths)进行的&#x200B;**[资源叠加](/help/sites-developing/overlays.md)**。
+* 使用&#x200B;**[配置的搜索路径](/help/sites-developing/overlays.md)**&#x200B;进行的[资源叠加](/help/sites-developing/overlays.md#configuring-the-search-paths)。
 
-* 使用资源类型层次结构（通过属性`sling:resourceSuperType`）为启用了Touch的UI (`cq:dialog`)覆盖&#x200B;**组件对话框**。
+* 使用资源类型层次结构（通过属性&#x200B;**）为启用了Touch的UI (**)覆盖`cq:dialog`组件对话框`sling:resourceSuperType`。
 
-通过Sling资源合并器，覆盖/覆盖资源和/或属性与原始资源/属性合并：
+Sling资源合并器将叠加和覆盖资源（及其属性）与原始资源和属性相结合：
 
-* 自定义定义内容的优先级高于原始定义的优先级（即&#x200B;*覆盖*&#x200B;或&#x200B;*覆盖*）。
+* 自定义定义的内容具有比原始定义更高的优先级。 即，它&#x200B;*覆盖*&#x200B;或&#x200B;*覆盖*。
 
 * 根据需要，自定义项中定义的[属性](#properties)指示如何使用从原始内容合并的内容。
 
 >[!CAUTION]
 >
->Sling资源合并器和相关方法只能与[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/index.html)一起使用。 这也意味着它仅适用于标准的触屏优化UI；尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
+>Sling资源合并器和相关方法只能与[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/index.html)一起使用。 此情况还意味着该覆盖仅适用于标准的触屏优化UI，尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
 >
->其他区域（包括触屏组件或经典UI的其他方面）的覆盖/覆盖涉及将相应节点和结构从原始复制到将定义自定义的位置。
+>要叠加或覆盖其他区域（包括触控式组件或经典UI的其他部分），请从原始节点复制相应的节点和结构。 将副本放置在定义自定义的位置。
 
 ### AEM的目标 {#goals-for-aem}
 
@@ -45,23 +45,23 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 * 确保未在`/libs`中进行自定义更改。
 * 减少从`/libs`复制的结构。
 
-  在使用Sling资源合并器时，不建议从`/libs`中复制整个结构，因为这将导致自定义项中包含过多的信息（通常为`/apps`）。 在系统以某种方式升级时，不必要地复制信息会增加出现问题的机会。
+  在使用Sling资源合并器时，不建议从`/libs`中复制整个结构。 原因是它会导致自定义项中包含过多信息（通常为`/apps`）。 在系统升级时，不必要地复制信息会增加出现问题的机会。
 
 >[!NOTE]
 >
->覆盖不依赖于搜索路径，它们使用属性`sling:resourceSuperType`建立连接。
+>覆盖不依赖于搜索路径。 他们使用属性`sling:resourceSuperType`建立连接。
 >
->但是，覆盖通常在`/apps`下定义，因为AEM中的最佳实践是在`/apps`下定义自定义项；这是因为您不能更改`/libs`下的任何内容。
+>但是，覆盖通常在`/apps`下定义，因为AEM中的最佳实践是在`/apps`下定义自定义项。 原因是您不能更改`/libs`下的任何内容。
 
 >[!CAUTION]
 >
->您&#x200B;***必须***&#x200B;不更改`/libs`路径中的任何内容。
+>*不要*&#x200B;更改`/libs`路径中的任何内容。
 >
->这是因为下次升级实例时`/libs`的内容会被覆盖（在应用修补程序或功能包时很可能会被覆盖）。
+>原因在于，下次升级实例时，`/libs`的内容会被覆盖。 并且，当您应用修补程序或功能包时，它可能会被覆盖。
 >
 >建议用于配置和其他更改的方法是：
 >
->1. 在`/apps`下重新创建所需项（即`/libs`中存在的项）
+>1. 在`/libs`下重新创建所需项（即`/apps`中存在的项）
 >
 >1. 在`/apps`中进行任何更改
 >
@@ -78,19 +78,19 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
 * `sling:hideResource` ( `Boolean`)
 
-  指示是否应完全隐藏资源，包括其子资源。
+  它指示资源是否完全隐藏，包括其子级。
 
-* `sling:hideChildren` `String`（ 或 `String[]`）
+* `sling:hideChildren` （`String`或`String[]`）
 
-  包含要隐藏的子节点或子节点列表。 将保留节点的属性。
+  它包含要隐藏的子节点或子节点列表。 节点的属性将得到维护。
 
-  通配符 `*` 隐藏所有内容。
+  通配符`*`会隐藏所有。
 
-* `sling:orderBefore` `String`（ ）
+* `sling:orderBefore` ( `String`)
 
-  包含当前节点应位于其前面的同级节点的名称。
+  它包含当前节点位于前面的同级节点的名称。
 
-这些属性影响叠加/覆盖（通常在`/apps`中）使用相应/原始资源/属性（来自`/libs`）的方式。
+这些属性会影响叠加/覆盖（通常在`/libs`中）如何使用相应的/原始资源/属性（来自`/apps`）。
 
 ### 创建结构 {#creating-the-structure}
 
@@ -102,7 +102,7 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
      `/libs/cq/core/content/nav/sites/jcr:title`
 
-   * 要叠加此节点，请创建以下节点：
+   * 要叠加，请创建以下节点：
 
      `/apps/cq/core/content/nav/sites`
 
@@ -110,17 +110,17 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
 * 替代
 
-   * 为文本控制台定义启用了触屏的对话框的定义位于：
+   * 文本控制台的触屏启用对话框定义如下：
 
      `/libs/foundation/components/text/cq:dialog`
 
-   * 要覆盖此设置，请创建以下节点 - 例如：
+   * 要覆盖，请创建以下节点。 例如：
 
      `/apps/the-project/components/text/cq:dialog`
 
-要创建其中任何一个，您只需重新创建骨架结构。 为了简化结构的重新创建，所有中间节点都可以是类型 `nt:unstructured` （它们不必反映原始节点类型;例如，在 中 `/libs`）。
+要创建任一结构，您只需重新创建骨架结构。 为了简化结构的重新创建，所有中间节点都可以是`nt:unstructured`类型（它们不必反映原始节点类型）。 例如，在`/libs`中。
 
-因此，在上面的覆盖示例中，需要以下节点：
+因此，在上述覆盖示例中，需要以下节点：
 
 ```shell
 /apps
@@ -133,11 +133,11 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
 >[!NOTE]
 >
->使用 Sling 资源合并时（即，在处理标准的触屏优化 UI 时），不建议从中 `/libs` 复制整个结构，因为这会导致 中 `/apps`保存太多信息。 当系统以任何方式升级时，这可能会导致问题。
+>在使用Sling资源合并器（即，处理标准的触屏UI时）时，不建议从`/libs`复制整个结构。 原因是这将导致过多信息保存在`/apps`中。 因此，它可能会导致系统升级时出现问题。
 
 ### 用例 {#use-cases}
 
-这些功能与标准功能相结合，使您能够：
+通过标准功能，这些用例可让您执行以下操作：
 
 * **添加属性**
 
@@ -151,12 +151,12 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
   属性在`/libs`中定义，但在`/apps`覆盖/覆盖中需要新值。
 
    1. 在`/apps`中创建对应的节点
-   1. 在此节点上创建匹配属性（在/ `apps`下）
+   1. 在此节点上创建匹配属性（在`apps`下）
 
-      * 该资产的优先级将基于Sling资源解析程序配置。
+      * 该属性的优先级基于Sling资源解析程序配置。
       * 支持更改属性类型。
 
-        如果使用的属性类型与 中使用的 `/libs`属性类型不同，则将使用您定义的属性类型。
+        如果您使用的属性类型与`/libs`中使用的属性类型不同，则会使用您定义的属性类型。
 
   >[!NOTE]
   >
@@ -164,12 +164,12 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
 * **重新定义自动创建的属性**
 
-  默认情况下，自动创建的属性（如`jcr:primaryType`）不受覆盖/覆盖的约束，以确保当前位于`/libs`下的节点类型得到遵守。 要实施覆盖/覆盖，您必须在`/apps`中重新创建节点，明确隐藏属性并重新定义它：
+  默认情况下，自动创建的属性（如`jcr:primaryType`）不受覆盖/覆盖的约束，以确保当前位于`/libs`下的节点类型得到遵守。 要强制覆盖/覆盖，您必须在`/apps`中重新创建节点，明确隐藏属性并重新定义它：
 
    1. 在`/apps`下使用所需的`jcr:primaryType`创建对应的节点
    1. 在该节点上创建属性`sling:hideProperties`，其值设置为自动创建的属性的值；例如，`jcr:primaryType`
 
-      此属性（在`/apps`下定义）的优先级将高于`/libs`下定义的属性
+      此属性在`/apps`下定义，其优先级现在高于`/libs`下定义的属性
 
 * **重新定义节点及其子节点**
 
@@ -185,7 +185,7 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
   属性在`/libs`中定义，但在`/apps`覆盖/覆盖中不是必需的。
 
    1. 在`/apps`中创建对应的节点
-   1. 创建类型为`String`或`String[]`的属性`sling:hideProperties`。 使用此选项可指定要隐藏/忽略的属性。 也可以使用通配符。 例如：
+   1. 创建类型为`sling:hideProperties`或`String`的属性`String[]`。 用于指定要隐藏/忽略的属性。 也可以使用通配符。 例如：
 
       * `*`
       * `["*"]`
@@ -196,7 +196,7 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
 
   节点及其子节点在`/libs`中定义，但在`/apps`覆盖/覆盖中不是必需的。
 
-   1. 在/apps下创建对应的节点
+   1. 在`/apps`下创建对应的节点
    1. 创建属性`sling:hideResource`
 
       * 类型： `Boolean`
@@ -210,40 +210,41 @@ Sling资源合并提供访问和合并资源的服务。 它提供了以下两�
    1. 创建属性`sling:hideChildren`：
 
       * 类型： `String[]`
-      * 值：要隐藏/忽略的子节点（如 中的 `/libs`定义）的列表
+      * 值：要隐藏/忽略的子节点列表（如`/libs`中的定义）
 
-      通配符 &ast;可用于隐藏/忽略所有子节点。
+      通配符&amp;amp；ast；可用于隐藏或忽略所有子节点。
 
-* **对节点重新排序**
+* **重新排序节点**
 
-  节点及其同级在`/libs`中定义。 需要新位置，以便在`/apps`覆盖/覆盖中重新创建节点，其中新位置是引用`/libs`中的相应同级节点定义的。
+  节点及其同级在`/libs`中定义。 要更改顺序，请在`/apps`覆盖或覆盖中重新创建节点。 通过引用`/libs`中的相应同级节点来定义其新位置。
+
 
    * 使用`sling:orderBefore`属性：
 
       1. 在`/apps`下创建对应的节点
       1. 创建属性`sling:orderBefore`：
 
-         这会指定当前节点应位于之前的节点（如`/libs`中所示）：
+         指定当前节点位于之前的节点（如`/libs`中所示）：
 
          * 类型： `String`
          * 值： `<before-SiblingName>`
 
 ### 从您的代码调用Sling资源合并器 {#invoking-the-sling-resource-merger-from-your-code}
 
-Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠加，另一个用于覆盖。 您可以使用挂载点在代码中调用其中的每项：
+Sling资源合并器包含两个自定义资源提供程序 — 一个用于叠加，另一个用于覆盖。 可以在代码中使用挂载点调用每个ID：
 
 >[!NOTE]
 >
 >在访问资源时，建议使用适当的挂载点。
 >
->这可确保调用 Sling 资源合并并返回完全合并的资源（减少需要从中 `/libs`复制的结构）。
+>此方法将调用Sling资源合并器并返回完全合并的资源。 它还减少了必须从`/libs`复制的结构数量。
 
-* 覆盖：
+* 叠加：
 
-   * 目的：根据搜索路径合并资源
-   * 挂载点： `/mnt/overlay`
+   * 用途：根据资源的搜索路径合并资源
+   * 装入点： `/mnt/overlay`
    * 用法： `mount point + relative path`
-   * 例：
+   * 示例：
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
 

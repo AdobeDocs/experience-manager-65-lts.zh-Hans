@@ -10,9 +10,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: bc621086-8128-4836-a580-dca99f61c439
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d894bb145d70fba819cc8452056e9e46112e69d9
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1750'
 ht-degree: 0%
 
 ---
@@ -23,19 +23,19 @@ ht-degree: 0%
 
 [体验片段](/help/sites-authoring/experience-fragments.md)是由一个或多个组件组成的组，这些组件包括可在页面中引用的内容和布局。
 
-体验片段主和/或变量使用：
+主体验片段或变体体验片段（或两者）使用以下内容：
 
 * `sling:resourceType` ： `/libs/cq/experience-fragments/components/xfpage`
 
-由于没有`/libs/cq/experience-fragments/components/xfpage/xfpage.html`，它还原为
+由于没有`/libs/cq/experience-fragments/components/xfpage/xfpage.html`，因此它将还原为以下内容：
 
 * `sling:resourceSuperType` ： `wcm/foundation/components/page`
 
-## 纯 HTML 演绎版 {#the-plain-html-rendition}
+## 普通HTML演绎版 {#the-plain-html-rendition}
 
 使用URL中的`.plain.`选择器，您可以访问纯HTML演绎版。
 
-这可以从浏览器中获得，但其主要目的是允许其他应用程序（例如，第三方Web应用程序、自定义移动实施）仅使用URL直接访问体验片段的内容。
+可以从浏览器中使用此功能。 但是，其主要目的是允许其他应用程序（例如，第三方Web应用程序、自定义移动实施）仅使用URL直接访问体验片段的内容。
 
 纯HTML演绎版将协议、主机和上下文路径添加到路径中：
 
@@ -49,57 +49,57 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->链接始终引用发布实例。 这些链接由第三方使用，因此链接始终从发布实例（而非创作实例）调用。
+>链接始终引用发布实例。 第三方使用它们，因此它们始终从发布实例而不是创作实例调用链接。
 >
 >有关详细信息，请参阅[外部化URL](/help/sites-developing/externalizer.md)。
 
 ![xf-14](assets/xf-14.png)
 
-纯格式副本选择器使用转换器而不是其他脚本；[Sling重写器](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html)用作转换器。 此配置于
+纯格式副本选择器使用转换器而不是其他脚本；[`Sling Rewriter`](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html)用作转换器，并在以下位置进行配置：
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
 
 ### 配置HTML呈现版本生成 {#configuring-html-rendition-generation}
 
-HTML演绎版使用Sling重写器管道生成。 管道定义于`/libs/experience-fragments/config/rewriter/experiencefragments`。 HTML Transformer支持以下选项：
+HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/experience-fragments/config/rewriter/experiencefragments`。 HTML Transformer支持以下选项：
 
 * `allowedCssClasses`
    * 匹配应在最终演绎版中保留的CSS类的RegEx表达式。
-   * 如果客户想要删除某些特定的CSS类，这将很有用
+   * 如果客户想要删除某些特定的CSS类，则此功能非常有用
 * `allowedTags`
    * 最终演绎版中允许的HTML标记列表。
-   * 默认情况下，允许使用以下标记（无需配置）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link和script
+   * 默认情况下，系统允许不配置以下标记：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、`noscript`、div、link和脚本。
 
-建议使用叠加配置重写器。 查看[叠加图](/help/sites-developing/overlays.md)
+建议您使用叠加来配置重写器。 查看[叠加图](/help/sites-developing/overlays.md)
 
 ## 社交变体 {#social-variations}
 
 社交变体可发布在社交媒体（文本和图像）上。 在Adobe Experience Manager (AEM)中，这些社交变体可以包含组件；例如，文本组件、图像组件。
 
-社交帖子的图像和文本可从任何深度级别的任何图像资源类型或文本资源类型中获取（在构建块或布局容器中）。
+您可以从任何图像或文本资源类型中获取任何深度的社交帖子图像和文本。 资源可以来自构建基块或布局容器。
 
 社交变体还允许构建基块，并在进行社交操作（在发布环境中）时将其考虑在内。
 
 要将正确的文本和图像发布到社交媒体网络，如果您开发自己的自定义组件，则需要遵守一些惯例。
 
-为此，必须使用以下属性：
+必须使用以下属性：
 
-* 用于提取图像
+* 为了提取图像，
 
    * `fileReference`
    * `fileName`
 
-* 用于提取文本
+* 要提取文本，
 
    * `text`
 
-不考虑未使用此约定的组件。
+仅考虑使用此约定的组件。
 
 ## 体验片段的模板 {#templates-for-experience-fragments}
 
 >[!CAUTION]
 >
->体验片段仅支持&#x200B;***1&rbrace; [可编辑模板](/help/sites-developing/page-templates-editable.md)。***
+>体验片段仅支持&#x200B;***1}***&#x200B;可编辑模板[。](/help/sites-developing/page-templates-editable.md)
 >
 >体验片段只能在基于可编辑模板的页面上使用。
 
@@ -110,13 +110,11 @@ HTML演绎版使用Sling重写器管道生成。 管道定义于`/libs/experienc
 1. 两者：
 
    1. 模板的资源类型（初始节点）必须继承自：
-
       `cq/experience-fragments/components/xfpage`
 
    1. 模板名称必须以下列内容开头：
-
       `experience-fragments`
-这允许用户在/content/experience-fragments中创建体验片段，因为该文件夹的`cq:allowedTemplates`属性包含名称以`experience-fragment`开头的所有模板。 客户可以更新此属性以包含他们自己的命名方案或模板位置。
+允许用户在`/content/experience-fragments`中创建体验片段，因为该文件夹的`cq:allowedTemplates`属性包含名称以`experience-fragment`开头的所有模板。 客户可以更新此属性以包含他们自己的命名方案或模板位置。
 
 1. 可以在体验片段控制台中配置[允许的模板](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder)。
 <!--
@@ -132,7 +130,7 @@ HTML演绎版使用Sling重写器管道生成。 管道定义于`/libs/experienc
 
 [开发用于体验片段/体验片段的组件](/help/sites-developing/components.md)将遵循标准实践。
 
-唯一额外的配置是确保模板上允许[组件，这是通过内容策略](/help/sites-developing/page-templates-editable.md#content-policies)实现的。
+唯一额外的配置是确保模板上允许使用这些组件。 此功能是通过[内容策略](/help/sites-developing/page-templates-editable.md#content-policies)实现的。
 
 ## 体验片段链接重写器提供程序 — HTML {#the-experience-fragment-link-rewriter-provider-html}
 
@@ -151,17 +149,18 @@ HTML演绎版使用Sling重写器管道生成。 管道定义于`/libs/experienc
 * 向其中添加组件，
 * 然后以HTML格式或JSON格式将其导出为Adobe Target选件。
 
-可在AEM[&#128279;](/help/sites-administering/experience-fragments-target.md#Prerequisites)的创作实例上启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
+可在AEM[的创作实例上](/help/sites-administering/experience-fragments-target.md#Prerequisites)启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
 
-链接外部化器用于确定在创建Target选件的HTML版本(随后将发送到Adobe Target)时所需的正确URL。 此操作是必需的，因为Adobe Target要求可以公开访问Target HTML选件中的所有链接；这意味着链接引用的任何资源以及体验片段本身必须在使用之前发布。
+链接外部化器用于确定在创建Target选件的HTML版本(随后将发送到Adobe Target)时所需的正确URL。 Adobe Target需要拥有Target HTML选件中所有链接的公共访问权限。 在使用体验片段和这些链接引用的任何资源之前，先发布它们。
+
 
 默认情况下，构造Target HTML选件时，会向AEM中的自定义Sling选择器发送请求。 此选择器名为`.nocloudconfigs.html`。 顾名思义，它创建了体验片段的纯HTML渲染，但不包括云配置（这会是多余的信息）。
 
-生成HTML页面后，Sling重写器管道对输出进行修改：
+生成HTML页面后，`Sling Rewriter`管道对输出进行修改：
 
-1. `html`、`head`和`body`元素已替换为`div`元素。 `meta`、`noscript`和`title`元素已被删除（它们是原始`head`元素的子元素，当这被替换为`div`元素时，不考虑它们）。
+1. `html`、`head`和`body`元素已替换为`div`元素。 已删除`meta`、`noscript`和`title`元素（它们是原始`head`元素的子元素，在被`div`元素替换时不会考虑）。
 
-   这样做是为了确保HTML Target选件可包含在Target活动中。
+   完成此过程是为了确保HTML Target选件可包含在Target活动中。
 
 1. AEM会修改HTML中存在的任何内部链接，以便这些链接指向已发布的资源。
 
@@ -176,24 +175,24 @@ HTML演绎版使用Sling重写器管道生成。 管道定义于`/libs/experienc
    >
    >通常，HTML中的内部链接是相对链接，但在某些情况下，自定义组件会在HTML中提供完整的URL。 默认情况下，AEM会忽略这些功能齐全的URL且不进行任何修改。
 
-   这些属性中的链接通过AEM链接外部化器`publishLink()`运行，以重新创建URL，就像在已发布的实例上一样，因此是公开可用的。
+   这些属性中的链接通过AEM链接外部化器`publishLink()`重新创建URL，就像在已发布的实例上一样，因此是公开可用的。
 
-使用开箱即用的实施时，上述流程应足以从体验片段生成Target选件，然后将其导出到Adobe Target。 但是，有一些用例未在此流程中说明；这些用例包括：
+使用开箱即用的实施时，上述流程足以从体验片段生成Target选件，然后将其导出到Adobe Target。 但是，此流程中尚未考虑一些用例，包括：
 
-* Sling映射仅在发布实例上可用
-* Dispatcher重定向
+* Sling映射仅在发布实例上可用。
+* Dispatcher重定向。
 
 对于这些用例，AEM提供了链接重写器提供程序界面。
 
 ### 链接重写器提供程序界面 {#link-rewriter-provider-interface}
 
-对于[default](#default-link-rewriting)未涵盖的更复杂的情况，AEM提供链接重写器提供程序接口。 这是可在捆绑包中作为服务实现的`ConsumerType`接口。 它绕过AEM对HTML选件的内部链接执行的修改，这些修改是从Experience Fragment渲染的。 利用此界面，可自定义重写HTML内部链接的流程，以满足您的业务需求。
+对于[default](#default-link-rewriting)未涵盖的更复杂的情况，AEM提供链接重写器提供程序接口。 此工作流是`ConsumerType`接口，您可以在捆绑包中将其实施为服务。 它绕过AEM对HTML选件的内部链接执行的修改，这些修改是从Experience Fragment渲染的。 利用此界面，可自定义重写HTML内部链接的流程，以满足您的业务需求。
 
 实施此接口作为服务的用例示例包括：
 
-* Sling映射在发布实例上启用，但在创作实例上未启用
-* 使用Dispatcher或类似技术从内部重定向URL
-* 资源已准备好`sling:alias mechanisms`
+* Sling映射在发布实例上启用，但在创作实例上未启用。
+* 使用Dispatcher或类似的技术在内部重定向URL。
+* 资源有`sling:alias`机制。
 
 >[!NOTE]
 >
@@ -260,7 +259,8 @@ public class GeneralLinkRewriter implements ExperienceFragmentLinkRewriterProvid
 
 #### shouldRewrite {#shouldrewrite}
 
-您需要向系统指示当对特定体验片段变量调用“导出到Target”时，是否需要重写链接。 要执行此操作，请实施以下方法：
+您需要向系统指示当对特定体验片段变量调用“导出到Target”时，是否需要重写链接。 您可以使用以下方法执行此&#x200B;**实施**：
+
 
 `shouldRewrite(ExperienceFragmentVariation experienceFragment);`
 
@@ -275,7 +275,7 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 
 此方法接收导出到Target系统当前正在重写的体验片段变体作为参数。
 
-在上面的示例中，我们要重写：
+在上例中，您想要重写：
 
 * `src`中存在链接
 
@@ -284,18 +284,18 @@ public boolean shouldRewrite(ExperienceFragmentVariation experienceFragment) {
 * 对于特定体验片段：
   `/content/experience-fragment/master`
 
-任何通过“导出到Target”系统的其他体验片段将被忽略，并且不受此服务中实施的更改的影响。
+导出到Target系统忽略通过它的任何其他体验片段，并且此服务不会影响它们。
 
 #### rewriteLink {#rewritelink}
 
-对于受重写过程影响的体验片段变体，它会继续让服务处理链接重写。 每当在内部HTML中遇到链接时，都会调用以下方法：
+对于受重写过程影响的体验片段变体，它会继续让服务处理链接重写。 每次在内部HTML中遇到链接时，都会调用以下方法：
 
 `rewriteLink(String link, String tag, String attribute)`
 
 作为输入，方法接收参数：
 
 * `link`
-正在处理的链接的`String`表示形式。 这通常是指向创作实例上资源的相对URL。
+正在处理的链接的`String`表示形式。 通常是创作实例中指向资源的相对URL。
 
 * `tag`
 正在处理的HTML元素的名称。
@@ -317,7 +317,7 @@ rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", a
 
 在创建服务时，您可以根据给定的输入进行决策，然后相应地重写链接。
 
-例如，我们希望删除URL的`/etc.clientlibs`部分并添加适当的外部域。 为了简单起见，我们将考虑我们有权访问您服务的资源解析程序，如`rewriteLinkExample2`：
+例如，您要删除URL的`/etc.clientlibs`部分并添加适当的外部域。 为了简单起见，请考虑您有权访问服务的资源解析程序，如`rewriteLinkExample2`中所示：
 
 >[!NOTE]
 >
@@ -354,7 +354,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 #### 优先级 — getPriority {#priorities-getpriority}
 
-需要多个服务来满足不同类型的体验片段的情况并不少见，甚至需要拥有一项通用服务来处理所有体验片段的外部化和映射操作。 在这些情况下，可能会发生与使用哪个服务有关的冲突，因此AEM提供了为其他服务定义&#x200B;**优先级**&#x200B;的可能性。 使用下列方法指定优先级：
+您可能需要多项服务才能支持不同类型的体验片段。 您还可以使用通用服务来外部化和映射所有体验片段。 在这些情况下，可能会发生与使用哪个服务有关的冲突，因此AEM提供了为其他服务定义&#x200B;**优先级**&#x200B;的可能性。 使用下列方法指定优先级：
 
 * `getPriority()`
 
