@@ -99,7 +99,7 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 
 >[!CAUTION]
 >
->体验片段仅支持&#x200B;***1}***&#x200B;可编辑模板[。](/help/sites-developing/page-templates-editable.md)
+>体验片段仅支持&#x200B;***1&rbrace;***&#x200B;可编辑模板[。](/help/sites-developing/page-templates-editable.md)
 >
 >体验片段只能在基于可编辑模板的页面上使用。
 
