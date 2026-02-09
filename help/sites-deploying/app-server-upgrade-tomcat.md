@@ -5,22 +5,22 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 7f8de16f-9e9a-4d37-9978-d26c496b911c
-source-git-commit: b9b5492b1bf5f717dec6a48ffbe808bf75cbce6a
+source-git-commit: 2a33cb4b8aa1dcfd989cf61465492d563f9cd99a
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
-# 应用程序服务器安装的升级步骤(Tomcat) {#upgrade-steps-for-application-server-installations-tomcat}
+# 应用程序服务器安装的升级步骤(Tomcat - Sidegrade) {#upgrade-steps-for-application-server-installations-tomcat}
 
 >[!NOTE]
 >
->此页概述了Tomcat上AEM 6.5 LTS的升级过程。
+>此页概述从Tomcat上的AEM 6.5升级到AEM 6.5 LTS的过程。 要从AEM 6.5 LTS升级到AEM 6.5 LTS Servicepack [，请参阅此](/help/sites-deploying/app-server-upgrade-tomcat-inplace.md)
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [&#128279;](/help/sites-deploying/technical-requirements.md)的要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估计复杂性。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [的](/help/sites-deploying/technical-requirements.md)要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/aem-analyzer.md)如何帮助您估计复杂性。
 
 
 ### 迁移先决条件 {#migration-prerequisites}
