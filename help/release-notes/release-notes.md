@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 6a6a79663579e4d63e68ae6c9a4bec97f24032f9
+source-git-commit: 7c3f5d203be1ee2daa3274f76eade9af2ab9c821
 workflow-type: tm+mt
-source-wordcount: '7745'
+source-wordcount: '7751'
 ht-degree: 93%
 
 ---
@@ -530,7 +530,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -617,12 +617,12 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 本节列出了 Adobe 在 AEM 6.5 LTS 中已弃用的功能。通常情况下，Adobe 在未来版本中移除某些功能之前，会先弃用这些功能并提供替代方案。
 
-
 建议客户检查其当前部署中是否使用了此类特性/功能，然后制定相应的计划，使用所提供的替代功能更改自己的实施。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
+| [!DNL Foundation] | 支持 com.adobe.granite.oauth.server | Adobe IMS 集成 |  |
 
 ### 已移除的功能  {#removed-features}
 
