@@ -53,7 +53,7 @@ ht-degree: 2%
 | 指南 | 描述 |
 | --- | --- |
 | [准备安装AEM Forms （单服务器） (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/prepare-install-single-server.pdf) | 在&#x200B;**之前**&#x200B;使用&#x200B;**全新单服务器（非全包安装）安装**。 本文档列出了在单服务器拓扑中在JEE上安装AEM Forms的先决条件和环境准备步骤。 |
-| [在JEE for JBoss (PDF)上安装和部署AEM Forms ](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成**&#x200B;准备安装AEM Forms （单服务器）*后*&#x200B;遵循本指南。 |
+| [在JEE for JBoss (PDF)上安装和部署AEM Forms &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成**&#x200B;准备安装AEM Forms （单服务器）*后*&#x200B;遵循本指南。 |
 
 <!--
 | Preparing to Install AEM Forms (Server Cluster) (PDF) (**TBD**) | Use **before** a **fresh cluster installation**. Describes prerequisites and environment preparation steps for installing AEM Forms on JEE in a server cluster topology. *(Link will be added once the PDF is available.)* |
