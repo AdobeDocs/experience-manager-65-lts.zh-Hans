@@ -52,7 +52,7 @@ ht-degree: 6%
 
      迁移实用程序使自适应表单和以前版本的通信管理资产与AEM 6.5表单兼容。 您可以从AEM Software Distribution下载该实用程序。 有关配置和使用迁移实用程序的逐步信息，请参阅[迁移实用程序](../../forms/using/migration-utility.md)。
 
-     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
+     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
 
      ```sql
      UPDATE metadata m, additionalmetadatatable am
@@ -93,7 +93,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
+   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
 
 
 ## 在JBoss EAP 8上部署AEM (Windows)
@@ -396,7 +396,7 @@ Deployed "cq-quickstart.war" (runtime-name : "cq-quickstart.war")
 
 * [JBoss EAP 8文档](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/8.0)
 * [Adobe Experience Manager文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
-* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)
+* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hans)
 
 ### 文档信息
 
