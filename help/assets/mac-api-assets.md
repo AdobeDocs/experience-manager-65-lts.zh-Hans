@@ -7,7 +7,7 @@ feature: Assets HTTP API,Developer Tools
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 7bb4aec8-e6c0-416a-a318-d3120f9688c4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f0385f595035dfd0dce77fc7eb8b2413eaf5431a
 workflow-type: tm+mt
 source-wordcount: '1775'
 ht-degree: 1%
@@ -18,17 +18,17 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 ## 概述 {#overview}
 
-[!DNL Assets] HTTP API允许对数字资源执行创建 — 读取 — 更新 — 删除(CRUD)操作，包括对元数据、演绎版和评论的操作，以及使用[!DNL Experience Manager]内容片段的结构化内容。 它在`/api/assets`中公开，并作为REST API实现。 它包括对内容片段[&#128279;](/help/assets/assets-api-content-fragments.md)的支持。
+[!DNL Assets] HTTP API允许对数字资源执行创建 — 读取 — 更新 — 删除(CRUD)操作，包括对元数据、演绎版和评论的操作，以及使用[!DNL Experience Manager]内容片段的结构化内容。 它在`/api/assets`中公开，并作为REST API实现。 它包括对内容片段[的](/help/assets/assets-api-content-fragments.md)支持。
 
 要访问API，请执行以下操作：
 
 1. 在`https://[hostname]:[port]/api.json`处打开API服务文档。
-1. 关注指向`https://[hostname]:[server]/api/assets.json`的[!DNL Assets]服务链接。
+1. 关注指向[!DNL Assets]的`https://[hostname]:[server]/api/assets.json`服务链接。
 
 API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类型的响应代码。 JSON响应是可选的，可能不可用于（例如）PDF文件。 依靠响应代码进行进一步分析或执行操作。
 
@@ -36,7 +36,7 @@ API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类�
 
 >[!CAUTION]
 >
->[HTTP API更新`jcr`命名空间中的元数据属性](#update-asset-metadata)。 但是，Experience Manager用户界面会更新`dc`命名空间中的元数据属性。
+>[HTTP API更新](#update-asset-metadata)命名空间中的元数据属性`jcr`。 但是，Experience Manager用户界面会更新`dc`命名空间中的元数据属性。
 
 ## 内容片段 {#content-fragments}
 
@@ -63,7 +63,7 @@ API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类�
 
 >[!NOTE]
 >
->文件夹或资产的某些属性映射到不同的前缀。 `jcr:title`、`jcr:description`和`jcr:language`的`jcr`前缀已替换为`dc`前缀。 因此，在返回的JSON中，`dc:title`和`dc:description`分别包含`jcr:title`和`jcr:description`的值。
+>文件夹或资产的某些属性映射到不同的前缀。 `jcr`、`jcr:title`和`jcr:description`的`jcr:language`前缀已替换为`dc`前缀。 因此，在返回的JSON中，`dc:title`和`dc:description`分别包含`jcr:title`和`jcr:description`的值。
 
 **链接**&#x200B;文件夹显示三个链接：
 
@@ -71,7 +71,7 @@ API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类�
 * `parent`：链接到父文件夹。
 * `thumbnail`：（可选）链接到文件夹缩略图图像。
 
-### 资源 {#assets}
+### Assets {#assets}
 
 在Experience Manager中，资产包含以下元素：
 
@@ -105,7 +105,7 @@ API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类�
 >
 >为了便于阅读，以下示例省略了完整的cURL表示法。 事实上，表示法与[Resty](https://github.com/micha/resty)相关联，后者是`cURL`的脚本包装器。
 
-**前提条件**
+**先决条件**
 
 * 访问`https://[aem_server]:[port]/system/console/configMgr`。
 * 导航到&#x200B;**[!UICONTROL Adobe Granite CSRF筛选器]**。
@@ -123,7 +123,7 @@ API响应是适用于某些MIME类型的JSON文件，是适用于所有MIME类�
 * 404 - NOT FOUND — 文件夹不存在或无法访问。
 * 500 — 内部服务器错误 — 如果出现其他错误。
 
-**响应**：返回的实体的类是资产或文件夹。 包含的实体的属性是每个实体的完整属性集的子集。 要获取实体的完整表示形式，客户端应检索链接指向的URL的内容，该URL具有`self`的`rel`。
+**响应**：返回的实体的类是资产或文件夹。 包含的实体的属性是每个实体的完整属性集的子集。 要获取实体的完整表示形式，客户端应检索链接指向的URL的内容，该URL具有`rel`的`self`。
 
 ## 创建文件夹 {#create-a-folder}
 
@@ -318,6 +318,6 @@ curl -u admin:admin -X MOVE https://[aem_server]:[port]/api/assets/source/file.p
 
 ## 提示和限制 {#tips-best-practices-limitations}
 
-* [HTTP API更新`jcr`命名空间中的元数据属性](#update-asset-metadata)。 但是，Experience Manager用户界面会更新`dc`命名空间中的元数据属性。
+* [HTTP API更新](#update-asset-metadata)命名空间中的元数据属性`jcr`。 但是，Experience Manager用户界面会更新`dc`命名空间中的元数据属性。
 
 * Assets HTTP API不返回完整的元数据。 命名空间是硬编码的，并且只返回这些命名空间。 有关完整的元数据，请参阅资源路径`/jcr_content/metadata.json`。
