@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 56a6a366aa563cab3a0385c619041238f04b31c5
+source-git-commit: ad26ea17d3d8fba351c31199607003ab4981c53d
 workflow-type: tm+mt
-source-wordcount: '5867'
+source-wordcount: '6060'
 ht-degree: 21%
 
 ---
@@ -302,9 +302,9 @@ Assets Relate现在适用于包含空格的文件名。 更新的“关系”客
 <!--
 #### Jetty{#foundation-jetty-65-lts-sp2}
 
-#### Localization{#foundation-localization-65-lts-sp2}
+#### Localization{#foundation-localization-65-lts-sp2} 
 
-#### Oak {#foundation-oak-65-lts-sp2}
+
 
 #### Omnisearch{#foundation-omnisearch-65-lts-sp2}
 
@@ -313,9 +313,36 @@ Assets Relate现在适用于包含空格的文件名。 更新的“关系”客
 #### Projects{#foundation-projects-65-lts-sp2}
 -->
 
+#### Oak {#foundation-oak-65-lts-sp2}
+
+AEM 6.5 LTS Service Pack 2需要S3 Connector 1.60.10或更高版本。 S3数据存储配置现在包括`crossRegionAccess`和`mode`，因此管理员可以启用跨区域存储段访问并在需要时将存储切换到GCP。 `s3EndPoint`现在需要与`s3Region`对齐的区域，或者它保持为空以便驱动程序生成终结点。 (GRANITE-64873)
+
+
 #### 快速入门{#foundation-quickstart-65-lts-sp2}
 
-AEM 6.5 LTS SP2将更新Sling、Oak和Felix的基础层捆绑包集。 这些升级增强了核心运行时的稳定性，并在整个平台上调整依赖项版本。 (GRANITE-61874)
+* Sling更新了管理登录允许列表，以使用包含术语和新的配置PID。 此更改与Sling JCR Base 3.2.0一致。 (GRANITE-63756)
+
+  **影响**
+
+   * Sling弃用这些PID，您应该从配置中删除它们：
+      * 工厂PID： `org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment`
+      * 全局PID： `org.apache.sling.jcr.base.internal.LoginAdminWhitelist`
+这些旧配置使用属性，如`whitelist.name`和`whitelist.bundles`。
+
+   * Sling仍为已弃用的PID提供部分向后兼容性，但不要将其用于新配置。 请改用较新的`LoginAdminAllowList.*` PID。
+   * 不要同时运行已弃用和新的列入允许列表配置。 混合配置可能会产生歧义并产生意外行为。 迁移到AEM 6.5 LTS SP2时，请完全删除已弃用的PID。
+
+  **您应该做什么**
+
+   1. 查找使用`LoginAdminWhitelist*` PID的允许列表配置。
+   1. 将它们替换为相应的新PID：
+
+      * 工厂PID： `org.apache.sling.jcr.base.LoginAdminAllowList.fragment`
+      * 全局PID： `org.apache.sling.jcr.base.LoginAdminAllowList`
+
+      列入允许列表有关其他详细信息，请参阅[管理登录的已弃用包](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecated-approach-to-allowlist-bundles-for-administrative-login)。
+
+* AEM 6.5 LTS SP2将更新Sling、Oak和Felix的基础层捆绑包集。 这些升级增强了核心运行时的稳定性，并在整个平台上调整依赖项版本。 (GRANITE-61874)
 
 <!--
 #### Security{#foundation-security-65-lts-sp2}
@@ -362,7 +389,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -537,5 +564,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
