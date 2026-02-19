@@ -1,5 +1,5 @@
 ---
-title: 呈现交互式PDF forms
+title: 渲染交互式 PDF 表单
 description: 使用Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms，以从用户那里收集信息。 您可以使用Forms服务通过Java API和Web服务API呈现交互式表单。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: de61c579-50ed-423b-adca-60329f3f0b89
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
 source-wordcount: '2455'
 ht-degree: 0%
 
 ---
 
-# 呈现交互式PDF forms {#rendering-interactive-pdf-forms}
+# 渲染交互式 PDF 表单 {#rendering-interactive-pdf-forms}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -152,7 +152,7 @@ Forms应用程序中资源的路径为：
 * 在Designer中设计表单设计时单击提交按钮
 * 通过使用Forms服务客户端API
 
-如果在表单设计内定义了目标URL，请勿使用Forms服务客户端API覆盖它。 也就是说，使用Forms API设置目标URL会将表单设计中指定的URL重置为使用API指定的URL。 如果您要将PDF表单提交到表单设计中指定的目标URL，则以编程方式将目标URL设置为空字符串。
+如果在表单设计内定义了目标URL，请勿使用Forms服务客户端API覆盖它。 也就是说，使用Forms API设置目标URL会将表单设计中指定的URL重置为使用API指定的URL。 如果要将PDF表单提交到表单设计中指定的目标URL，则以编程方式将目标URL设置为空字符串。
 
 如果您的表单包含提交按钮和计算按钮（具有在服务器上运行的相应脚本），则可以通过编程方式定义将表单发送到哪个URL以执行脚本。 使用表单设计上的提交按钮指定将表单数据发布到的URL。 （请参阅[计算表单数据](/help/forms/developing/calculating-form-data.md)。）
 
@@ -227,11 +227,11 @@ Forms应用程序中资源的路径为：
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过调用`FormsResult`对象的`getOutputContent`方法创建`com.adobe.idp.Document`对象。
-   * 通过调用其`getContentType`方法获取`com.adobe.idp.Document`对象的内容类型。
-   * 通过调用其`setContentType`方法并传递`com.adobe.idp.Document`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
-   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建用于将表单数据流写入客户端Web浏览器的`javax.servlet.ServletOutputStream`对象。
-   * 通过调用`com.adobe.idp.Document`对象的`getInputStream`方法创建`java.io.InputStream`对象。
+   * 通过调用`com.adobe.idp.Document`对象的`FormsResult`方法创建`getOutputContent`对象。
+   * 通过调用其`com.adobe.idp.Document`方法获取`getContentType`对象的内容类型。
+   * 通过调用其`javax.servlet.http.HttpServletResponse`方法并传递`setContentType`对象的内容类型来设置`com.adobe.idp.Document`对象的内容类型。
+   * 通过调用`javax.servlet.ServletOutputStream`对象的`javax.servlet.http.HttpServletResponse`方法，创建用于将表单数据流写入客户端Web浏览器的`getOutputStream`对象。
+   * 通过调用`java.io.InputStream`对象的`com.adobe.idp.Document`方法创建`getInputStream`对象。
    * 通过调用`InputStream`对象的`read`方法并将字节数组作为参数传递，创建字节数组并使用表单数据流填充该数组。
    * 调用`javax.servlet.ServletOutputStream`对象的`write`方法将表单数据流发送到客户端Web浏览器。 将字节数组传递给`write`方法。
 
@@ -286,11 +286,11 @@ Forms应用程序中资源的路径为：
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过获取`com.adobe.idp.services.holders.FormsResultHolder`对象的`value`数据成员的值创建`FormResult`对象。
-   * 通过调用`FormsResult`对象的`getOutputContent`方法，创建包含表单数据的`BLOB`对象。
-   * 通过调用其`getContentType`方法获取`BLOB`对象的内容类型。
-   * 通过调用其`setContentType`方法并传递`BLOB`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
-   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建用于将表单数据流写入客户端Web浏览器的`javax.servlet.ServletOutputStream`对象。
+   * 通过获取`FormResult`对象的`com.adobe.idp.services.holders.FormsResultHolder`数据成员的值创建`value`对象。
+   * 通过调用`BLOB`对象的`FormsResult`方法，创建包含表单数据的`getOutputContent`对象。
+   * 通过调用其`BLOB`方法获取`getContentType`对象的内容类型。
+   * 通过调用其`javax.servlet.http.HttpServletResponse`方法并传递`setContentType`对象的内容类型来设置`BLOB`对象的内容类型。
+   * 通过调用`javax.servlet.ServletOutputStream`对象的`javax.servlet.http.HttpServletResponse`方法，创建用于将表单数据流写入客户端Web浏览器的`getOutputStream`对象。
    * 创建字节数组，并通过调用`BLOB`对象的`getBinaryData`方法填充该数组。 此任务将`FormsResult`对象的内容分配给字节数组。
    * 调用`javax.servlet.http.HttpServletResponse`对象的`write`方法将表单数据流发送到客户端Web浏览器。 将字节数组传递给`write`方法。
 

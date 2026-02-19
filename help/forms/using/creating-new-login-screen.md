@@ -1,18 +1,18 @@
 ---
-title: 创建登录屏幕
+title: 创建登录界面
 description: 如何修改LiveCycle模块的登录页面，例如AEM Forms工作区或Forms Manager。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 3e20857b-05bb-4f44-8011-550bdaf857c5
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
 source-wordcount: '443'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
-# 创建登录屏幕{#creating-a-new-login-screen}
+# 创建登录界面{#creating-a-new-login-screen}
 
 您可以修改所有使用AEM Forms登录屏幕的AEM Forms模块的登录屏幕。 例如，修改会同时影响Forms Manager和AEM Forms工作区的登录屏幕。
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 1. 使用管理员权限在`/lc/crx/de`登录。
 1. 执行以下操作：
 
-   1. 在`/apps/livecycle/core/content`处复制`/libs/livecycle/core/content`的分层结构。
+   1. 在`/libs/livecycle/core/content`处复制`/apps/livecycle/core/content`的分层结构。
 
       维护相同的（节点/文件夹）属性和访问控制。
 
@@ -35,7 +35,7 @@ ht-degree: 3%
 
 1. 执行以下操作：
 
-   1. 在`/apps/livecycle/core/components/login`处复制`/libs/livecycle/core/components/login`的分层结构。 维护相同的（节点/文件夹）属性和访问控制。
+   1. 在`/libs/livecycle/core/components/login`处复制`/apps/livecycle/core/components/login`的分层结构。 维护相同的（节点/文件夹）属性和访问控制。
 
    1. 将组件文件夹：从`/libs/livecycle/core`复制到`/apps/livecycle/core`。
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 
    1. 将文件夹重命名为要支持的区域设置名称。 例如 `ar`。
 
-   1. 将`ar`文件夹的属性`jcr:language`值更改为`ar`。
+   1. 将`jcr:language`文件夹的属性`ar`值更改为`ar`。
 
    >[!NOTE]
    >
@@ -241,7 +241,7 @@ String browserLocale = "en";
    * 从 `/libs/livecycle/core/content`
    * 至`/apps/livecycle/core/content`
 
-1. 从节点`/apps/livecycle/core/content/login.`删除文件`login.js`和`jquery-1.8.0.min.js`
+1. 从节点`login.js`删除文件`jquery-1.8.0.min.js`和`/apps/livecycle/core/content/login.`
 1. 修改CSS文件中的样式。
 1. 要添加新样式，请执行以下操作：
 
@@ -310,9 +310,8 @@ css.newLoginContentArea {
 ```
 
 
-在/apps/livecycle/core/components/login.jsp.
-中修改    *以下内容
-
+在/apps/livecycle/core/components/login.jsp.    中修改
+*以下内容
 ```jsp
 <div class="loginContainerBkg">
 ```

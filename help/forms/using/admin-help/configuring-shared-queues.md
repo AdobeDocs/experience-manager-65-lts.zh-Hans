@@ -11,7 +11,7 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 6665b95a-39fd-472a-b3b5-8b97257c69a7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
@@ -78,7 +78,7 @@ ht-degree: 0%
 1. 选择&#x200B;**服务** > **Forms Workflow** > **共享队列**。
 
 1. 在管理对用户的访问权限选项卡上，查找并选择您要共享其队列的用户。 在任何时候，右下角的窗格都会显示有权访问所选用户队列的用户列表。
-1. 在左下方的窗格中，查找并选择您希望与选定用户共享的用户队列。 单击共享。
+1. 在左下方的窗格中，查找并选择您要与选定用户共享的用户队列。 单击共享。
 1. 单击“保存”以完成。
 
 ### 撤销对选定用户队列的访问权限 {#revoking_access_to_a_selected_user_queue-1}

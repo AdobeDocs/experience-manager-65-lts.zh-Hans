@@ -1,5 +1,5 @@
 ---
-title: 创建“邀请外部用户”处理程序
+title: 创建外部用户邀请处理程序
 description: 了解如何创建邀请外部用户处理程序。 它允许Rights Management服务邀请外部用户成为Rights Management用户。
 role: Developer
 solution: Experience Manager, Experience Manager Forms
@@ -7,14 +7,14 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 5e1f1f3c-a2f3-4bf1-ba96-a02f8b16c180
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
 source-wordcount: '1160'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# 创建“邀请外部用户”处理程序 {#create-invite-external-users-handler}
+# 创建外部用户邀请处理程序 {#create-invite-external-users-handler}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -93,7 +93,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
     local_user.setEmail( email_address ); 
     local_user.setEmailAliases( aliases ); 
          
-    //  You may wish to disable the local user until, for example, his registration is processed by a confirmation link 
+    //  You may want to disable the local user until, for example, his registration is processed by a confirmation link 
     //local_user.setDisabled( true ); 
  
     DirectoryManager directory_manager = new DirectoryManagerServiceClient( _factory ); 
@@ -240,7 +240,7 @@ A.组件所需的外部JAR文件B. JAVA文件
 
    >[!NOTE]
    >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   > 建议使用 “Ctrl + C” 命令重新启动 SDK。如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 登录到管理控制台。
 1. 单击&#x200B;**[!UICONTROL 服务]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 配置]** >已邀请的&#x200B;**[!UICONTROL 用户注册]**。

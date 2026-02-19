@@ -1,20 +1,20 @@
 ---
 title: 如何在AEM Forms on JEE Workbench中使用execute脚本服务来构建XML数据？
-description: 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据
+description: 在 JEE 上的 AEM Forms 工作台中使用执行脚本服务生成 XML 数据
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2f49cb29-698b-43ab-971f-81e2b18e6fa9
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# 使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据 {#using-execute-script-service-forms-jee-workbench}
+# 在 JEE 上的 AEM Forms 工作台中使用执行脚本服务生成 XML 数据 {#using-execute-script-service-forms-jee-workbench}
 
 JEE流程管理工作流中的AEM Forms涉及许多XML，例如：XML信息可以在流程中构建并发送到JEE Workspace上的AEM Forms中的Flex应用程序，用于系统设置，或者在表单之间传递信息。 在许多情况下，JEE上的AEM Forms开发人员需要管理XML，并且很多时候这需要通过JEE上的AEM Forms流程来管理XML。
 
@@ -30,7 +30,7 @@ JEE流程管理工作流中的AEM Forms涉及许多XML，例如：XML信息可�
 
 在本教程中，整个应用程序和进程创建不在范围之内，但出于本说明的目的，已创建名为“DemoApplication02”的应用程序。 假定已创建应用程序，则需要在此应用程序中创建进程以调用executeScript服务。 要将进程添加到包含`Execute Script`服务的应用程序，请执行以下操作：
 
-1. 右键单击您的应用程序并选择&#x200B;**[!UICONTROL 新建]**。 在&#x200B;**[!UICONTROL 新建]**&#x200B;滑出菜单中，选择&#x200B;**[!UICONTROL 进程]**。 命名您的进程，添加说明（如有必要），然后选择要代表此进程的图标。 在本教程中，我们创建了一个进程并将其命名为`executeScriptDemoProcess`。
+1. 右键单击您的应用程序并选择&#x200B;**[!UICONTROL 新建]**。 在&#x200B;**[!UICONTROL 新建]**&#x200B;滑出菜单中，选择&#x200B;**[!UICONTROL 进程]**。 命名进程，添加说明（如有必要），然后选择要表示此进程的图标。 在本教程中，我们创建了一个进程并将其命名为`executeScriptDemoProcess`。
 1. 定义您的起点，或简单地选择稍后添加起点。
 1. 进程现已创建，应在[!UICONTROL 进程设计]窗口中自动打开。 在此窗口中，单击“流程设计”窗口顶部的“活动选取器”图标，然后将新活动拖到泳道上。 此时，应该会显示[!UICONTROL 定义活动窗口]（请参阅下图）。
    ![定义活动](assets/define-activity.jpg)

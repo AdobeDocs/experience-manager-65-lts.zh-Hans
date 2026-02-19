@@ -1,517 +1,349 @@
 ---
-title: Adobe Experience Manager 6.5 LTS SP1 的最新发行说明
-description: 查找 Adobe Experience Manager 6.5 LTS 服务包 1 的当前版本信息。
+title: Adobe Experience Manager 6.5 LTS SP2的最新发行说明
+description: 查找 Adobe Experience Manager 6.5 LTS 服务包 2 的当前版本信息。
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: e7bedb3c220fda8e2f9466cb074f17efa3b41db6
+source-git-commit: 56a6a366aa563cab3a0385c619041238f04b31c5
 workflow-type: tm+mt
-source-wordcount: '7751'
-ht-degree: 93%
+source-wordcount: '5867'
+ht-degree: 21%
 
 ---
 
-# Adobe Experience Manager 6.5 LTS SP1 的最新发行说明 {#release-notes}
+# Adobe Experience Manager 6.5 LTS SP2的最新发行说明 {#release-notes}
 
 ## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 LTS |
 |---|---|
-| 版本 | 服务包 1 (SP1)，GRANITE-61551 热修复 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | Service Pack 2 (SP2) <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 类型 | 服务包发行 |
-| 日期 | 2025 年 9 月 9 日 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.1-hotfix-GRANITE-61551-1.4.zip) |
-
-<!-- OLD URL TO JAR
-(https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.1.jar) | -->
+| 日期 | 2026年2月19日<!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.2.jar) |
 
 
 <!-- UPDATE ABOVE FOR EACH NEW RELEASE -->
 
-## [!DNL Adobe Experience Manager] 6.5 LTS SP1 中包含的内容 {#what-is-new}
+## [!DNL Adobe Experience Manager] 6.5 LTS SP2中包含的内容 {#what-is-new}
 
 <!-- UPDATE EACH RELEASE -->
 
-[!DNL Experience Manager] 6.5 LTS SP1 包含新功能、客户要求的重要增强功能以及错误修复。还包括自 2025 年 3 月 6.5 LTS 首次发布以来推出的在性能、稳定性和安全性方面的改进。在 6.5 LTS 上[安装此服务包](#install-update)。
+[!DNL Experience Manager] 6.5 LTS，SP2包括新增功能、客户请求的关键增强功能和错误修复。 还包括自 2025 年 3 月 6.5 LTS 首次发布以来推出的在性能、稳定性和安全性方面的改进。在 6.5 LTS 上[安装此服务包](#install-update)。
 
 ## 主要功能和增强功能
 
-### Forms
+**AEM Sites**
 
-JEE上的AEM 6.5 Forms LTS现已推出。 有关支持的环境的详细信息，请参阅[支持的平台](/help/forms/using/aem-forms-jee-supported-platforms.md)组合文档。 安装程序链接在[AEM Forms版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)页面上可用。
+AEM 6.5 LTS SP2现在包括用于内容片段和模型管理和启动的OpenAPI。 这些API提供对内容片段和启动项的访问权限，以进行创作和计划。 它们使用与AEM as a Cloud Service相同的现代OpenAPI。
 
-#### AEM Forms 6.5 LTS SP1中包含的内容
 
-**Java支持更新**
+<!-- UPDATE THE EACH RELEASE -->
 
-已引入对较新Java版本的支持：
-
-* Java™ 17
-* Java™ 21
-
-**应用程序服务器支持更新**
-
-* 添加了对JBoss EAP 8的支持。
-* 已删除旧版PicketBox安全框架。
-* 基于Elytron的凭据存储现在支持安全凭据管理。
-
-**配置：凭据存储（基于Elytron）**
-
-JBoss EAP 8上的AEM Forms使用Elytron管理安全凭据。 客户必须配置基于Elytron的凭据存储区，以确保服务器成功启动和安全数据库身份验证。
-
-有关配置详细信息，请参阅安装和配置指南。
-
-**平台和兼容性更改**
-
-* 支持Servlet规范5+
-* 基于Jakarta EE 9合规性
-
-**命名空间迁移要求**
-
-* Jakarta EE 9引入命名空间从`javax.*`更改为`jakarta.*`
-* 必须将所有&#x200B;**自定义DSC**&#x200B;迁移到`jakarta.*`命名空间
-* AEM Forms 6.5 LTS SP1仅支持&#x200B;**基于Jakarta EE 9+的应用程序服务器**
-
-有关详细信息，请参阅&#x200B;**从javax迁移到jakarta命名空间**。
-
-#### 从`javax`到`jakarta`命名空间的迁移
-
-从&#x200B;**AEM Forms 6.5 LTS SP1**&#x200B;开始，仅支持实施&#x200B;**Jakarta Servlet API 5/6**&#x200B;的应用程序服务器。 使用&#x200B;**Jakarta EE 9及更高版本**&#x200B;时，所有API都从`javax.{}`命名空间转换为`jakarta.`。
-
-因此，**所有自定义DSC都必须使用`jakarta`命名空间**。 使用`javax.{}` API构建的自定义组件&#x200B;**与支持的应用程序服务器不兼容**。
-
-自定义DSC的&#x200B;**迁移选项**
-
-您可以使用以下方法之一迁移现有的自定义DSC：
-
-**选项1：迁移Source代码（推荐）**
-
-* 将所有导入语句从`javax.{}`更新为`jakarta.`
-* 重新构建并重新编译自定义DSC项目
-* 将更新的组件重新部署到应用程序服务器
-
-**优势：**
-
-* 确保与Jakarta EE 9+长期兼容
-* 最适合积极维护的项目
-
-**选项2：使用Eclipse转换器进行二进制迁移**
-
-* 使用&#x200B;**Eclipse转换器**&#x200B;工具将编译的二进制文件(`.jar`， `.war`)从`javax`转换为`jakarta`
-* 无需更改源代码或重新编译
-* 将转换后的二进制文件重新部署到应用程序服务器
-
->[!NOTE]
->
-> 在&#x200B;**字节代码级别**&#x200B;执行二进制转换。
-
-以下是迁移期间所需的命名空间更改的常见示例：
-
-* 之前(javax)    之后（雅加达）
-* javax.servlet。 **jakarta.servlet**
-* javax.servlet.http。 **jakarta.servlet.http.**
-
-**示例导入映射**
-
-下表显示了从`javax`迁移到`jakarta`时所需的常见命名空间更改：
-
-| 早于(`javax`) | 在(`jakarta`)之后 |
-| ---------------------- | ------------------------ |
-| `javax.servlet.*` | `jakarta.servlet.*` |
-| `javax.servlet.http.*` | `jakarta.servlet.http.*` |
-
-在更新自定义DSC源代码或验证转换后的二进制文件时，使用这些映射作为引用。
-
-<!-- 6.5 LTS REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
-
-<!-- UPDATE EACH RELEASE -->
-
-## 6.5 LTS 服务包 1 中修复的问题 {#fixed-issues}
+## 6.5 LTS 服务包 2 中修复的问题 {#fixed-issues}
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-### [!DNL Sites]{#sites-65-LTS-SP1}
+### [!DNL Sites]{#sites-65-LTS-SP2}
 
-#### 无障碍可访问性 {#sites-accessibility-65-lts-sp1}
+#### 辅助功能 {#sites-accessibility-65-lts-sp2}
 
-* 修复了内容片段中的文本编辑器元素默认被截断的问题。文本编辑器中现在显示完整的内容，不会截断。（SITES-33005）
-* 修复了点击 URL 路径会打开 Indigo 主页而不是正确的目标 URL 的问题。（SITES-33004）
-* 修复了一个自定义 AEM 组件中的无障碍可访问性问题，该问题导致自动测试时不符合 ADA 合规要求。（SITES-30660）
-* 通过确保文本在浅色背景上显示为黑色并满足 WCAG 2.0 对比度要求，修复了“警报”对话框和工作流消息中的 ADA 合规性问题。（SITES-30138）
-* 修复了一个无障碍可访问性问题：AEM Sites 编辑器中的“类别”按钮缺少一个专门的标签，导致 JAWS 将其公告为“图像按钮菜单”，而不是提供描述的标签。（SITES-27497）
-* 修复了一个无障碍可访问性问题：有效权限屏幕中的复选标记图标缺少替换文本，导致 JAWS 无法读取和传达其含义。（SITES-27272）
-* 修复了一个无障碍可访问性问题：“权限”页面不提供用于移除用户或组权限的清晰的 JAWS 公告，使屏幕阅读器用户感到困惑。（SITES-27238）
-* 修复了一个无障碍可访问性问题：错误消息仅显示为图标而没有描述性文本，导致 JAWS 无法在发生错误时公告错误。（SITES-27155）
-* 修复了一个无障碍可访问性问题：JAWS 在 AEM 内部部署环境中读取到不正确且不清楚的按钮描述，包括该模块分区缺少 2 级标题的文本。（SITES-27152）
-* 修复了一个无障碍可访问性问题：JAWS 在 AEM Assets 选项卡中筛选值后不公告结果数量。（SITES-27150）
-* 修复了一个无障碍可访问性问题：创建文件夹后不显示确认，并且 JAWS 不在 Assets UI 中公告确认。（SITES-27141）
-* 修复了 AEM Sites 中的一个无障碍可访问性问题。JAWS 不公告表单错误，焦点移到非交互式错误元素，按下 tab 移出焦点时不显示必填字段错误。（SITES-27138）
-* 修复了一个无障碍可访问性问题：时间线按钮菜单缺少一个专门的标签，导致 JAWS 只读取“活动按钮菜单”而不提供清晰的描述。（SITES-27134）
-* 修复了一个无障碍可访问性问题：JAWS 不公告容器项的操作或角色，只读取“痕迹导航 v1”和“按钮 v2”而不是描述性标签。（SITES-27131）
-* 修复了一个无障碍可访问性问题：快速发布弹出窗口不提供正确的成功消息，导致屏幕阅读器不公告完成的反馈。（SITES-26912）
-* 修复了 coral 列视图中的一个无障碍可访问性问题：ARIA 角色的元素需要子角色，但不包含子角色，导致不符合无障碍标准。（SITES-26898）
-* 修复了一个无障碍可访问性问题：创建页面顶部导航中的“模板”和“属性”文本在“重排”模式下不可见，导致键盘和屏幕阅读器用户无法访问。（SITES-26895）
-* 修复了一个无障碍可访问性问题：无法通过键盘导航访问顶部导航中的“搜索”、“解决方案”、“帮助”、“收件箱”和“用户”图标的工具提示。（SITES-26889）
-* 修复了一个无障碍可访问性问题：基本选项卡表单字段不提供错误建议，导致在必填字段未填写时用户未获得指导。（SITES-26885）
-* 修复了一个无障碍可访问性问题：NVDA 和 Narrator 屏幕阅读器在“创建”页面中不公告模板文件详细信息，导致用户无法以编程方式获得完整信息。（SITES-26884）
-* 修复了一个无障碍可访问性问题：“基本”选项卡中“页面标题文本框”使用错误的名称，导致屏幕阅读器无法向用户提供准确的信息。（SITES-26879）
-* 更新了按钮前景和背景颜色，以满足 WCAG 2.2 AA 最低对比度要求，为所有用户提高可读性和无障碍可访问性。（SITES-26877）
-* 解决了创建页面顶部导航中的“模板”和“属性”文本在调整大小后消失的问题，确保了视力较差的用户的可见性和无障碍可访问性。（SITES-26872）
-* 修复了应用“重排”后主页面上出现多个水平滚动条的问题，现在只显示一个滚动条，确保正确的可访问性和内容可见性。（SITES-26800）
-* 修复了 AEM 页面编辑器中的一个无障碍可访问性问题：在激活“用户画像”、“购物车”或“放弃”等按钮后，键盘焦点会意外重置到“人口统计”工具栏的起始位置。现在，焦点保留在已激活的按钮上，以确保一致的键盘导航和屏幕阅读器工作流。（SITES-25306）
-* 修复了页面标题和标记字段的无障碍标签关联问题。现在，AEM 界面在使用 JAWS 等屏幕阅读器时，能够正确关联“标题”和“页面标题”字段的无障碍标签。此项修复确保在页面创建、属性和移动工作流中正确朗读标签，从而改善 ADA 合规性。（SITES-27149）
-* 修复了时间线中注释输入字段缺少可视化标签的问题。已为时间线部分下的“评论”输入字段补充可视化标签，以提升无障碍性。此更新确保屏幕阅读器能够准确播报字段标签。这种体验为所有用户改善了表单导航和提交体验，特别是为依赖辅助技术的用户带来便利。（SITES-26903）
-* 修复了时间线评论中省略号按钮的键盘辅助功能问题。为时间线部分评论旁边的省略号（三个点）按钮启用了键盘导航功能。用户现在可以使用 Tab 键访问按钮并与之交互，改善了无障碍体验，方便依赖键盘进行导航的用户使用。（SITES-26891）
-* 改进了 NVDA/Narrator 对选择对话框中搜索结果的公告。更新后的“打开选择”对话框在使用 NVDA 或 Narrator 等屏幕阅读器时，会播报是否找到搜索结果。此项改进可以帮助依赖辅助技术的用户在无需视觉确认的情况下理解搜索操作的结果。（SITES-26883）
-* 修复了评论输入字段旁省略号图标的 ARIA 角色错误问题。现已将评论输入字段旁的省略号（三点）图标更新为正确的 ARIA 角色，确保屏幕阅读器能够准确识别该元素。此项改进提升了无障碍合规性，并优化了依赖于辅助技术的用户的使用体验。（SITES-26881）
-* 修复了 Coral UI 组件中的无效 ARIA 属性问题。已更新 Coral UI 组件，确保所有 ARIA 属性均使用有效值，从而改善无障碍合规性。特别修复了此前错误分配的无效值（如 `aria-modal="dialog"`）。此项增强功能使屏幕阅读器能够正确解析对话框元素，从而提升依赖于辅助技术的用户的可访问性。（SITES-26873）
-* 改进了“重排”场景下的图标可见性和工具提示。优化了“重排”行为，确保&#x200B;**下载**、**重新处理资产**&#x200B;和&#x200B;**签出**&#x200B;图标的工具提示能够正确显示。重点修复了当视口调整大小或更改浏览器缩放设置时，图标及其标签可能变得不可见的辅助功能问题。此项修复可以帮助视力低下的用户在“重排”过程中仍然能够看到图标，并会提供正确的图标说明。（SITES-26871）
+* 当作者在编辑过程中将组件浏览器中的项目悬停在该组件上时，文本组件会失去键盘焦点。 这会中断键入并触发WCAG 3.2.1下的辅助功能故障。此修复可防止悬停样式切换焦点，并可在组件浏览器交互期间保持文本组件聚焦。 （SITES-35370）
+* 更正了“描述”富文本字段中的焦点管理，该字段使用Tab键阻止了向前导航。 用户在RTE中卡住，因为组件依赖非标准键盘命令来转移焦点，这破坏了预期的对话框导航。 此更改强制标准键盘交互操作，并保留整个对话框中的逻辑选项卡排序。 （SITES-35228）
+* 修复了站点编辑器中的问题，该问题在页面创作期间中断了预期行为并导致组件交互不一致。 作者遇到不可靠的UI响应，这干扰了标准编辑任务并降低工作流效率。 该更新细化了底层编辑器逻辑，并恢复了受影响组件之间稳定、可预测的交互。 （SITES-35227）
+* 一种回归，破坏了页面编辑器中的资产选择器，并阻止其在特定页面编辑场景中加载。 现在，作者在编辑页面时选择或浏览资产时，可以正常打开并使用资产选择器。 此更改恢复对加载失败中断的资源选择工作流的一致访问权限。 （SITES-35226）
+* 消除了站点编辑器中的问题，该问题在页面交互期间导致不一致行为并中断了标准创作工作流。 该缺陷导致意外的UI响应，干扰了组件配置和内容更新。 此更新可稳定受影响的功能，并恢复跨页面可靠执行编辑操作。 （SITES-35225）
+* 消除了Sites创作界面中导致页面编辑期间出现不一致行为并中断正常工作流的缺陷。 作者遇到意外的UI响应，这些响应会干扰组件交互和内容更新。 此更新使受影响的功能更加稳定，并在所有编辑场景中恢复可靠、可预测的行为。 （SITES-35224）
+* AEM Sites现在包括对图像的`alt`文本支持，以满足ADA和WCAG要求。 页面输出不再忽略`alt`属性，因此屏幕阅读器会收到正确的替换文本。 （SITES-27153）
+* 修复了`Note Add`工具栏布局，以便“添加”按钮不再与320px视区宽度处的标题重叠。 改进了小屏幕重排，使控件在400%缩放期间保持可读性和可用性。 （SITES-25376）
+* 修复了链接选择对话框错误导致的屏幕阅读器公告缺失问题。 UI现在通过状态消息容器发布错误文本，因此NVDA会在消息出现时立即读取消息。 （SITES-25368）
+* 从侧边栏资产列表中删除了ARIA网格和网格单元格角色。 恢复标准列表语义和键盘焦点顺序，从而改进屏幕阅读器导航并减少额外的制表位。 （SITES-25361）
+* 更正了侧边栏Assets中的焦点排序。 键盘用户现在可通过一致的选项卡路径执行每个资产操作，包括编辑。 （SITES-25360）
+* 修复了Search Assets模式中视区宽度为320px的布局溢出问题。 模态内容现在会重新流动并保持可读状态，因此控件不再重叠或溢出对话框。 （SITES-25330）
+* 更正了“编辑”按钮的NVDA输出。 NVDA现在会宣布“编辑”操作，而不是“按下预览按钮”。 （SITES-25320）
+* 修复了导致静默或常规屏幕阅读器输出的未命名的人口统计工具栏文本输入。 现在，每个输入都公开一个清晰的基于标签的可访问名称，这改进了键盘和辅助技术导航。 （SITES-25316）
+* 更正了“布局预览”导航期间“人口统计”工具栏的键盘焦点顺序。 选项卡导航现在直接从“人口统计”按钮移动到工具栏控件，而无需跳至辅助工具栏。 （SITES-25305）
+* 修复了“编辑布局”标尺上“较小的Screens”和“平板电脑”标签的公告顺序不正确的问题。 屏幕阅读器现在会在正确的标尺标记处朗读这些标签，这些标记与页面布局相匹配。 （SITES-25291）
+* 修复了“编辑布局”工具栏在200%缩放时溢出的问题。 内容现在保留在视区中，并保持可通过滚动访问。 （SITES-25288）
+* 解决了批注叠加中焦点顺序不正确的问题。 键盘Tab键现在可在叠加控件和注释项之间循环。 父页面不再从叠加后获得焦点。 （SITES-25282）
+* 修复了样本弹出框焦点处理问题。 该对话框现在将焦点移动到清晰的标题，并在该入口点开始屏幕阅读器输出。 NVDA不再不按顺序读取完整的对话框内容。 （SITES-25275）
+* 修复了日期选取器关闭后的时间扭曲模式焦点处理问题。 `Escape`现在将焦点返回到日期选取器按钮。 日期选择现在将焦点置于日期选取器控件旁边的输入字段，从而防止焦点丢失和后台页面访问。 （SITES-25264）
+* 修复了“删除注释”对话框的键盘焦点处理问题。 现在，“取消”将焦点返回到打开该对话框的`Delete`控件，而不是“确认十六进制值”控件。 取消后，屏幕阅读器不再朗读不相关的对话框内容。 （SITES-25258）
+* 修复了“注释模式”对话框的焦点处理问题。 现在，打开对话框会将焦点置于对话框标题上，并阻止NVDA读取画布内容和无关的对话框文本。 键盘导航现在保留在对话框中，直到关闭。 （SITES-25257）
+* 修复了320px宽度时的搜索模态布局问题。 模式内容现在可以干净地重排，并避免与树目录重叠。 用户可以查看结果并导航目录，而无需隐藏控件。 （SITES-25246）
+* 搜索模式文本在文本间距增加后不再剪切。 树目录布局现在保持清晰的分离状态，因此标签和条目保持可读性。 用户现在可以在没有重叠或截断文本的情况下完成搜索和导航。 （SITES-25245）
+* 激活注释现在将键盘焦点移动到注释内容，而不是退出注释按钮。 Tab键顺序遵循逻辑顺序，使相关控件无需反向导航即可访问。 （SITES-25241）
+* 在键盘导航期间，“设置日期”和“退出时间扭曲”链接缺少可见的焦点指示器。 UI现在呈现一种独特的高对比度焦点样式，以便用户能够一眼就识别活动链接。 （SITES-25232）
+* Teaser模式标头不再阻止键盘用户移动对话框。 键盘控件现在允许拾取、移动和放置操作，这提高了屏幕阅读器的可用性和整体可操作性。 （SITES-25226）
+* AEM现在为“Teaser模式信息”按钮使用有意义的易访问标签。 屏幕阅读器会朗读一个清除操作名称，而不是默认的图标替换文本字符串。 （SITES-25223）
+* 屏幕阅读器现在在用户激活编辑按钮时朗读正确的操作。 NVDA不再报告“预览按钮已按下”，这会导致键盘导航期间出现误导性反馈和混淆。 （SITES-25208）
+* 现在，展开左边栏可将键盘焦点移动到第一个左边栏控件。 选项卡序列不再跳转到辅助工具栏或登陆中间列表，因此键盘用户无需反向导航即可访问左边栏内容。 （SITES-24998）
+* 设备模拟器栏内容现在在320像素视区宽度下保持完全可见。 工具栏文本和控制自动换行，而不是截断，从而减少重叠并提高可读性。 （SITES-24953）
+* AEM现在在模拟器工具栏中显示完整的iPhone设备标签。 文本不再以默认宽度截断，从而提高可读性和设备选择清晰度。 （SITES-24952）
+* 列表视图表标题现在通过ARIA公开排序状态。 屏幕阅读器在列排序操作后公告升序或降序。 （SITES-24943）
+* 在文本间距更改期间，AEM现在保留卡片视图中的“更多操作”菜单标签可见性。 菜单选项保留完整的文本，包括“快速发布”，并且在任何WCAG文本间距设置期间，菜单保持可读性。 （SITES-24941）
+* 信息卡操作菜单栏现在会在信息卡视图中公开一个可访问的名称。 屏幕阅读器清晰地宣布了菜单栏的目的，语音控制可以通过名称来定位控制。 （SITES-24938）
+* 卡片视图不再依赖导致屏幕阅读器行为混乱的ARIA网格语义。 UI现在为卡片内容和卡片操作栏提供有意义的角色和标签，这减少了键盘使用期间缺少的控件。 （SITES-24933）
+* 现在，每当用户将工具提示图标悬停时，`Delete Modal`工具提示都会显示。 焦点操作现在显示相同的工具提示文本，这提高了鼠标和键盘用户的重复访问能力。 （SITES-24778）
+* 现在，用户配置边栏后，左边栏导航会遵循预期的键盘焦点顺序。 Tab键焦点位于选定的左边栏区域而不是Switch Display，这可以提高屏幕阅读器导航的清晰度。 （SITES-24754）
+* 修复了在“用户首选项”模式中的色板导航期间出现错误的NVDA反馈。 NVDA现在会读取接收焦点的样本的标签，从而删除误导性的颜色输出。 样本集现在支持一致的键盘导航和清晰的选择感知。 （SITES-24739）
+* 减少了`Spin`控件的详细NVDA输出。 删除了重复输入标签的冗余组标签，因此NVDA会公告一次控制名称。 现在，键盘和屏幕阅读器导航功能可提供单一、清晰的公告。 （SITES-24725）
+* “轮播”对话框现在将焦点置于对话框标题而不是“项目”选项卡。 取消并Esc将焦点还原到启动该对话框的控制项，这将减少详细的NVDA输出。 （SITES-24716）
+* 现在，链接选择对话框会将编程标签与上一级树项目的屏幕标签保持一致。 箭头键导航会触发每个项目的可靠屏幕阅读器公告，并删除误导性的标签输出。 （SITES-24710）
+* 现在，链接打开选择对话框在320-px视区下可正确重排。 内容不再超出模式或截断，并且模式不再显示水平滚动条。 （SITES-24709）
+* 现在，链接打开选择对话框在“关闭”或“取消”后将键盘焦点恢复到该对话框触发器。 焦点不再跳转到链接输入，这可保持屏幕阅读器上下文稳定并减少额外导航。 （SITES-24707）
+* 图像模式对话框现在遵循逻辑焦点顺序。 取消后，焦点不再跳过之前的控件，也不会落到页面标志上，并且用户会在退出后重新获得对配置按钮的关注。 （SITES-24693）
+* 引用边栏模式对话框现在会捕获键盘焦点。 Tab键和Shift+Tab键停留在对话框控件中，并且焦点不再跳转到页面内容。 屏幕阅读器仅朗读对话框内容。 （SITES-24683）
+* 现在，超链接路径选择模式将焦点设置在打开的对话框标题上。 取消关闭对话框并将焦点恢复到“打开选定内容对话框”按钮，从而防止焦点丢失和屏幕阅读器输出冗余。 （SITES-24672）
+* “搜索”字段现在使用永久的屏幕标签，而不是占位符文本。 标签在输入期间保持可见，这提高了键盘、屏幕阅读器和语音用户的清晰度。 （SITES-24529）
+* Teaser模式对话框现在将焦点设置在打开的对话框标题上。 关闭该对话框会将焦点返回到`Configure`控件，从而防止焦点丢失和屏幕阅读器输出过多。 （SITES-24522）
+* 侧边栏Assets面板现在包含一个“关闭”控件。 “关闭”将键盘焦点返回到侧边栏切换开关中，并防止通过面板内容强制使用Tab键。 （SITES-24489）
+* 键盘Tab键现在可访问管理员表格内的按钮和链接。 用户不再依赖箭头键单元格导航来查找交互式控件。 （SITES-24285）
+* 图像组件对话框不再以图像形式显示装饰性帮助图标和全屏图标。 屏幕阅读器现在会跳过这些图标，继续将重点放在可操作控件和字段内容上。 （SITES-2940）
+* 站点管理员现在从文件夹缩略图图标中删除图像角色。 辅助技术会跳过这些装饰性元素，将焦点集中在文件夹名称和操作上。 （SITES-2852）
+* 内容树现在将键盘焦点路由到活动树项或第一个树项。 树容器不再充当空的Tab停止点，从而防止出现Shift+Tab焦点陷阱。 （SITES-1577）
+
+#### 管理员用户界面{#sites-adminui-65-lts-sp2}
+
+站点控制台列表视图设置未反映列表视图中显示的列。 该对话框打开，其中已清除复选框，且所选列计数不正确。 “修复同步”对话框的状态与活动的网格列一致，并更新计数器以匹配实际的列可见性。 （SITES-38576）
+
+#### 经典用户界面{#sites-classicui-65-lts-sp2}
+
+升级后，经典UI文本组件编辑显示原始HTML标记，而不是富文本。 Service Pack 2更正了经典UI RTE（富文本编辑器）渲染，以便编辑器显示格式化的内容并保留存储的标记。 该修复还会在重复编辑期间停止标记扩展并保存。 （SITES-38709）
+
+#### [!DNL Content Fragments]{#sites-contentfragments-65-lts-sp2}
+
+Headless事件支持在6.5 LTS中缺少内容片段和模型所需的OSGi事件。 更新添加了事件捆绑包以及所需的依赖关系，并包括6.5 LTS版本。 内容片段和模型事件现在可以正确触发，并支持启动API工作流。 （SITES-35329）
+
+#### [!DNL Content Fragments] - 管理{#sites-admin-65-lts-sp2}
+
+* 调整了Sites创作界面中的组件处理，以停止页面更新期间的不规则行为。 该缺陷导致不可预测的编辑器响应，干扰了常规的内容修改并降低工作流效率。 该更新使编辑器逻辑与预期的交互模式一致，并在创作活动期间提供可靠的性能。 (SITES-35078)关键
+
+* 回归损坏了内容片段的Assets控制台列表视图，并在列表呈现期间触发了错误。 在删除preview-info后，更新会更正列表视图逻辑，并恢复稳定的列表输出。 控制台现在可正常显示内容片段，而不会出现任何故障，并使列表交互保持可用。 （SITES-38683）
+* 内容片段编辑器现在本地化标记标签。 编辑器还会本地化收藏集标签，因此UI文本与选定的区域设置匹配。 （SITES-977）
 
 
-#### 管理员用户界面{#sites-adminui-65-lts-sp1}
+#### [!DNL Content Fragments] - 片段编辑器{#sites-fragments-editor-65-lts-sp2}
 
-* 修复了一个无障碍可访问性问题：JAWS 在“创建网站”对话框中不公告列表角色，也不提供导航和激活指导。（SITES-30661）
-* 屏幕阅读器对网站过滤视图中的状态消息的支持按预期工作，确保用户在视图之间切换时获得清晰及时的反馈。（SITES-24992）
-* 过滤器边栏中的日期选取器完全显示在其容器内，提供足够的触摸目标尺寸，解决了剪切问题。（SITES-24988）
-* 选定的过滤器标记现在使用与视觉呈现相匹配的语义 HTML 和 aria 标签，确保准确支持角色，为辅助性技术确保清晰操作。（SITES-24980）
-* 在引用边栏区域添加了 aria 标签属性，为屏幕阅读器用户提供独特的描述性标签，确保在整个页面上一致识别地标。（SITES-24973）
-* 更新了引用边栏，为大小调整和定位使用相对单位，使内容能够缩放并在 1280x1024 视口放大到 400% 时保持完整功能。（SITES-24972）
-* 网站主页列表视图中已确认的表格元素包含适当的列标题角色，使屏幕阅读器能够公告每个数据单元的标题。（SITES-24942）
-* NVDA 现在会公告树形目录中的修改日期，确保屏幕阅读器用户获得完整的资产详细信息。（SITES-24782）
-* 解决了 NVDA 屏幕阅读器对 AEM Sites 的树形目录组件中各项的文本公告不完整的问题。NVDA 现在可以读取每项的全文，提高了无障碍可访问性和合规性。（SITES-24780）
-* 为树形目录中的窗口分割添加了键盘可访问性，使用户仅使用键盘即可调整左侧栏的大小。（SITES-24779）
-* 更新了帮助菜单搜索结果，现在包含列表项的正确 ARIA 角色，确保屏幕阅读器正确公告链接，提高无障碍可访问性。（SITES-24729）
-* 修复了屏幕阅读器不公告“Y 个结果中的 X 个”状态消息的问题。或者，在网站过滤器面板中应用过滤器后显示“未找到结果”消息，确保用户获得正确的结果确认。（SITES-24720）
-* 修正了应用程序导航中导航链接缺少角色分配的问题。添加了适当的 ARIA 角色，以确保屏幕阅读器正确识别和公告导航元素。（SITES-24719）
-* 用按钮元素替换了特定过滤器标记的错误网格角色标记，并添加了可访问的名称，确保屏幕阅读器正确公告和识别标记。（SITES-24717）
-* 添加了在执行多选时屏幕阅读器对引用边栏状态消息的公告，确保用户获得变更确认。（SITES-24678）
-* 修正了搜索字段的行为，现在不自动公告第一个结果。屏幕阅读器现在会公告找到的结果数量，使用户能够导航列表而不会听到错误的焦点公告。（SITES-24658）
-* 从列表视图的非交互式静态元素中删除了错误的 `aria-label` 属性，以防止屏幕阅读器公告误导性或不相关的信息。（SITES-24515）
-* 更新了列表视图第一列中的复选框，使用“标题”列文本作为其可访问名称，确保屏幕阅读器准确传达表单字段的用途。（SITES-24514）
-* 添加了适当的 ARIA 属性和实时区域支持，以便在屏幕阅读器用户在内容中导航时公告加载状态的消息。（SITES-24481）
-* 更新了响应式设计，当内容在 1280×1024 宽度的视口中放大到 400% 时消除水平滚动，确保不用横向滚动也可看到完整内容。（SITES-24308）
-* 按照逻辑顺序修正了网站管理员 UI 中的焦点导航，按下 Esc 后焦点返回到“全选”按钮，按下 Tab 后焦点移到下一个交互式元素。（SITES-24307）
-* 更新了网站管理员 UI 中的焦点顺序，使 `<betty-titlebar-title>` 元素中的痕迹导航按钮在键盘导航过程中按照正确的顺序获得焦点。（SITES-24305）
-* 验证了跳过链接功能，确保它将键盘焦点移到主要内容区域，从而允许键盘用户绕过标题元素并有效地访问内容。（SITES-24061）
+* 重构后，当功能切换保持禁用状态时，内容片段变体标记消失。 此修复程序可恢复对变体标记的支持，即使该切换保持关闭状态也是如此。 作者可以在内容片段编辑器中再次添加和查看变体标记。 (SITES-38682)关键
+* 在作者从内容片段编辑器导航回之后，编辑的内容片段从Assets控制台列表中消失。 浏览器缓存返回了一个过时的列表并隐藏了更新的片段，直到手动刷新为止。 此修复程序为编辑器返回路径添加了缓存控制处理，以便列表正确重新加载并保持编辑后的片段可见。 (SITES-35374)关键
 
+* 在最近的UI样式更改后，内容片段RTE显示布局和视觉问题。 Service Pack 2改进了RTE样式，以便工具栏和可编辑区域正确呈现并保持可读。 内容片段编辑器现在与页面编辑器的外观和行为一致。 （SITES-38684）
+* 从Polaris资产选择器中删除IMS范围破坏了内容片段与投放端点的集成。 打开远程资产选择器并选择资产时，作者会遇到故障。 该更新重新添加所需的IMS范围并恢复稳定的投放层访问。 （SITES-35837）
+* “关联内容”面板不再呈现硬编码的“未定义”占位符。 内容片段编辑器现在通过本地化资源解析该文本，因此编辑器可以看到翻译的UI文本。 （SITES-33675）
+  <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
+* 内容片段编辑器现在在各个区域设置中显示翻译的“常规”选项卡标签。 编辑器会替换未本地化的选项卡文本，并从选项卡标题中删除内部ID。 （SITES-30715）
+* 内容片段编辑器现在为允许的资源类型显示翻译的名称。 在作者配置内容引用限制时，选取器列表不再混合内部字符串和仅英语标签。 （SITES-29699）
 
-#### 经典用户界面{#sites-classicui-65-lts-sp1}
+#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-65-lts-sp2}
 
-修复了经典 UI 中复选框标签缺失，并且多个 UI 元素（包括日期搜索和非标准界面）中的 HTML 显示为编码文本的问题。（SITES-31822）
+* 优化了GraphQL查询验证处理，以停止因过滤器执行错误导致的部署失败。 缺陷会在应用程序启动期间产生异常，并阻止在受影响的环境中成功转出。 该修订版确保一致的验证行为，并支持顺利部署，而不会出现运行时查询验证中断的情况。 (SITES-34301)关键
 
-#### [!DNL Content Fragments]{#sites-contentfragments-65-lts-sp1}
+* “编辑GraphQL端点”对话框现在显示本地化的UI字符串。 该对话框不再显示纯英文文本，例如“从配置中获取GraphQL架构”，并且相关标签在各个区域设置中正确呈现。 （SITES-34018）
 
-AEM 现已防止由图像资产中格式错误的 XMP 元数据导致的性能下降。包含无效或不合规 XMP 属性名称（例如带有数字区段或未限定结构）的资产，在处理过程中不再反复触发警告日志。系统会过滤掉有问题的元数据，确保资产摄取和验证能够顺利完成且无错误。（SITES-30683）
+#### [!DNL Content Fragments] - GraphQL查询编辑器{#sites-graphql-query-editor-65-lts-sp2}
 
-<!--
-#### [!DNL Content Fragments] - Admin{#sites-admin-65-lts-sp1} -->
+* 优化了GraphQL查询验证处理，以停止因过滤器执行错误导致的部署失败。 缺陷会在应用程序启动期间产生异常，并阻止在受影响的环境中成功转出。 该修订版确保一致的验证行为，并支持顺利部署，而不会出现运行时查询验证中断的情况。 （SITES-35529）
+* 当配置浏览器名称包含CJK字符时，GraphQL Explorer不再失败。 端点创建和保存的查询访问正常工作，并且GraphQL查询编辑器页面保持无错误。 （SITES-31616）
 
-#### [!DNL Content Fragments] - 片段编辑器{#sites-fragments-editor-65-lts-sp1}
+#### [!DNL Content Fragments] — 模型编辑器{#sites-model-editor-65-lts-sp2}
 
-在一位作者已签出内容片段的情况下，其他作者仍然可以发布该片段，这与签出功能的预期行为不符。此项修复可防止在签出内容片段时，其他用户在创作界面中看到或使用发布按钮。（SITES-30578）
+* 当重构将功能绑定到禁用的切换开关时，嵌套内容片段模型停止工作。 该修复程序无需切换更改即可恢复嵌套模型支持。 作者可以在模型编辑器中再次创建并使用嵌套模型。 (SITES-38681)关键
 
-<!--
-#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-65-lts-sp1}
+* 内容片段模型过滤器面板不再显示未本地化的字符串。 AEM现在显示所有区域设置的本地化过滤器标签和本地化状态值。 （SITES-30863）
+* 内容片段模型编辑器现在呈现锁定警告对话框的本地化字符串。 UI用各种受支持语言的区域设置资源替换未本地化的英文消息。 （SITES-28592）
 
-#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-65-lts-sp1}
+#### [!DNL Content Fragments] - REST API{#sites-restapi-65-lts-sp2}
 
-#### [!DNL Content Fragments] - REST API{#sites-restapi-65-lts-sp1} -->
+AEM Headless需要一个专用发布分支来避免依赖关系，以及避免与主线内部版本的捆绑包版本冲突。 此更新添加了6.5lts版本的Headless分支，并使依赖项集和捆绑包版本保持一致。 Jenkins现在可以干净地构建Headless代码库，而不会出现版本冲突。 （SITES-36585）
 
-#### 组件控制台{#sites-component-console-65-lts-sp1}
+<!-- #### Component console{#sites-component-console-65-lts-sp2} -->
 
-修复了产品列表组件中的一个问题，即“全选”复选框仅添加了初始页面中的前 20 个 SKU，而不是搜索结果中的所有 SKU。（SITES-29191）
+#### 内容API{#sites-content-api-65-lts-sp2}
 
-#### 核心后端{#sites-core-backend-65-lts-sp1}
+功能切换缺陷误报了页面管理API状态。 该更新会添加一个专用启用标志，并在现有切换旁评估该标志。 页面管理API现在显示稳定状态。 站点管理API仍处于试验阶段。 （SITES-39284）
 
-XMP 元数据格式不正确导致在 `ValidationDataServlet` 中处理图像资产时触发错误。此修复确保了对元数据的正确处理，并避免了对无效属性的重复解析。（SITE-30683） 
+#### 核心后端{#sites-core-backend-65-lts-sp2}
 
-<!--
-#### Core Components{#sites-core-components-65-lts-sp1}
+* 对站点创作体验进行了更改，以解决会中断标准页面编辑工作流的不一致行为。 在组件交互过程中，作者遇到意外结果，这会干扰内容更新并降低可靠性。 此更改将恢复稳定的编辑器行为，并确保在受影响的场景中一致地执行创作操作。 (SITES-35162)关键
 
-#### Campaign integration{#sites-campaign-integration-65-lts-sp1}
-
-#### Experience Fragments{#sites-experiencefragments-65-lts-sp1}
-
-#### Foundation Components (Legacy){#sites-foundation-components-legacy-65-lts-sp1}
-
-#### Launches{#sites-launches-65-lts-sp1}
-
-#### Link Checker{#sites-link-checker-65-lts-sp1} -->
-
-#### MSM - 实时副本{#sites-msm-live-copies-65-lts-sp1}
-
-* 修复了在 AEM 6.5 内部部署中重新启用幽灵组件继承时发生的 JavaScript 错误 `ns.ui.alert is not a function`。（SITES-31993）
-* 修复了在 AEM 6.5 中“稍后”推出选项在不选择日期的情况下允许继续的问题。（SITES-31374）
-
-#### 页面编辑器{#sites-pageeditor-65-lts-sp1}
-
-* 解决了 Teaser 模态中的一个问题，即在输入有效数据并解决错误后，“链接和操作”选项卡继续显示样式、图标和 aria 无效属性的错误。（SITES-25527）
-* 修复了 Teaser 模态文本编辑器中列表和段落按钮未将其展开或折叠的状态传达给屏幕阅读器的问题，从而确保准确更新 aria 展开的属性。（SITES-25365）
-* 修复了人口统计工具栏中的一个问题：使用键盘输入调整购物车滑块时，焦点会移到购物车按钮而不是保留在滑块上，问题修复后提高了键盘用户的导航效率。（SITES-25324）
-* 通过为关联的 `<label>` 元素分配一个值，为人口统计工具栏中的购物车滑块添加了可访问的名称。此修复提高了与辅助技术的兼容性，为屏幕阅读器用户增强了可用性。（SITES-25322）
-* 为人口统计工具栏下拉菜单中的按钮添加了 ARIA 角色和可访问的名称。此修复使辅助性技术能够正确识别，改进了键盘和屏幕阅读器用户的导航。（SITES-25315）
-* 调整了人口统计工具栏布局，以防止在浏览器放大 200% 时内容溢出视口，确保无需水平滚动可访问所有控件。（SITES-25309）
-* 修正了人口统计工具栏中的焦点管理，使键盘焦点保持在已激活的按钮上，而不是重置到工具栏的起始位置。（SITES-25306）
-* 按钮标签重叠功能按设计预期工作，当具有相似屏幕宽度的模式被激活时，使用工具提示来显示标签。（SITES-25285）
-* 注释模态包含一个可见的提交按钮，用户无需按下 Escape 键或点击模态以外即可提交注释。（SITES-25281）
-* 注释模态包含一个铅笔图标按钮，允许用户提交注释，提供一种清晰易用的提交方法。（SITES-25269）
-* 修正了注释和关闭注释按钮的屏幕阅读器公告，以提供准确、相关的反馈，并移除不相关或令人困惑的信息。（SITES-25268）
-* AEM 编辑器页面的画布部分现在全面支持键盘无障碍访问功能。用户仅需使用键盘即可激活区块标题和编辑按钮，而无需依赖鼠标悬停。此更新确保符合 WCAG 2.1.1 要求，并提升了组件（如 Teaser、图像、轮播、布局、时间扭曲和注释模态）的可用性。（SITES-25256）
-* 移除了宽度为 320px 的轮播模态中不必要的水平滚动，以确保视口中显示所有内容，无需横向导航。（SITES-25254）
-* 移除了宽度为 320px 的图像模态中不必要的水平滚动，以确保视口中显示所有内容，无需横向导航。（SITES-25244）
-* 移除了宽度为 320px 的 Teaser 模态中不必要的水平滚动，以确保视口中显示所有内容，无需横向导航。（SITES-25242）
-* 为 Teaser 模态中的 `List` 和 `Paragraph Format` 两个弹出菜单启用了键盘导航。此修复允许用户使用箭头键访问和导航这两个菜单。（SITES-25235）
-* 修正了注释和关闭注释按钮的屏幕阅读器公告，以提供与相关联的操作一致的准确、相关的反馈。（SITES-25234）
-* 改进了 Teaser 模态中的帮助按钮标签，以清楚地描述其用途，并为所有用户（包括辅助技术用户）提供有意义的背景信息。（SITES-25224）
-* 通过将模拟器尺子测量值与各设备关联起来，改进了屏幕阅读器用户的模拟器尺子。还用 aria-describedby 元素替换了工具提示。（SITES-24955）
-* 未实施修复，因为“编辑”按钮按预期工作，提供信息上下文而不是执行操作。（SITES-24950）
-* 编辑器页面上确认的焦点顺序遵循逻辑顺序，允许用户导航所有交互式元素，不会意外跳过或循环跳回。（SITES-24937）
-* 当用户应用自定义文本间距设置时，预览模式画布现在会正确更新文本间距，确保所有内容区域的格式一致。（SITES-24936）
-* 经过验证的预览按钮不再触发上下文或焦点状态变化，确保用户在页面视图更新之前有目的地激活该按钮。（SITES-24784）
-* 为应用程序导航链接添加了正确的 ARIA 角色分配，使屏幕阅读器能够准确识别并公告导航项，改进了无障碍可访问性。（SITES-24718）
-* 更新了“更改过滤器”按钮，以便告知屏幕阅读器展开和折叠状态，删除了多余的 ARIA 属性，调整了标签，以提供清晰、不重复的描述。（SITES-24713）
-* 在链接选择对话框中添加了搜索结果状态消息的屏幕阅读器公告，确保用户在结果加载或未找到匹配项时获得确认。（SITES-24700）
-* 添加了图像模态加载状态的屏幕阅读器公告，确保用户在模态加载并准备进行交互时获得反馈。（SITES-24697）
-* 解决了 Teaser 模态内容在放大 200% 和 400% 时被粘性标题遮挡的无障碍问题，确保在页面放大时的完全可见性和可用性。（SITES-24523）
-* 在搜索/过滤字段中添加了包含搜索结果数量的状态消息，使屏幕阅读器能够向用户公告结果。（SITES-24506）
-* 添加了搜索/过滤字段中搜索结果数量的屏幕阅读器公告，确保用户在结果加载后立即获得反馈。（SITES-24505）
-* 在侧边栏面板的选项卡列表中添加了可访问的名称，使屏幕阅读器能够按照 WAI-ARIA 指南公告其用途。（SITES-24492）
-* 为含义不清的编辑器图标添加了描述性标签，确保所有用户清楚地了解每个按钮的功能。（SITES-24480）
-* 启用了“画布”视图中分区标题和操作按钮的完全键盘可访问性，确保鼠标和键盘用户的操作一致。（SITES-24479）
+* 改进了Sites创作行为，以解决在组件交互期间中断页面编辑并导致结果不一致的问题。 作者遇到了意外的UI响应，这些响应会干扰内容更新并降低工作流的可靠性。 此更改可恢复稳定的编辑器状态管理，并确保在受影响的场景中可预见地执行创作操作。 （SITES-34499）
 
 <!--
-#### Replication{#sites-replication-65-lts-sp1}
+#### Core Components{#sites-core-components-65-lts-sp2}
 
-#### Rich Text Editor{#sites-rte-65-lts-sp1} -->
+#### Campaign integration{#sites-campaign-integration-65-lts-sp2}
 
-#### 通用编辑器 {#sites-universal-editor-65-lts-sp1}
+#### Experience Fragments{#sites-experiencefragments-65-lts-sp2}
 
-* 修复了 QueryTokenService 中的一个竞争条件：在登录令牌服务返回结果之前如果触发了多个带有查询参数的请求，该竞争条件会导致登录失败。（SITES-30659）
-* 修复了 UniversalEditorURLService 中的一个问题，即在 Felix ConfigMgr 中保存一个映射路径的数组时只保留第一项。（SITES-30292）
+#### Foundation Components (Legacy){#sites-foundation-components-legacy-65-lts-sp2}
+-->
 
-### [!DNL Assets]{#assets-65-lts-sp1}
+#### 发布项{#sites-launches-65-lts-sp2}
 
-修复了将资产从远程 DAM 同步到 Sites 本地 AEM 时资产中的已发布状态和与复制相关的属性被移除的问题。（Assets-48958）
+* 站点时间轴在启动项促销活动期间显示硬编码英语文本：“在启动项促销活动之前创建版本……”。 更新将硬编码字符串替换为本地化的消息处理。 时间轴现在显示本地化文本，并使条目与标准AEM本地化行为保持一致。 （SITES-39157）
+* 当作者使用提升当前页面和子页面提升子部分时，启动项提升作用域已偏移。 AEM还会提升不相关的页面，并引起意外的实时网站修改。 此修复程序更正了Launch作用域的计算，因此仅提升所选的子树。 （SITES-38315）
+* 启动项中的内容片段未参与`damAssetLucene`索引，搜索结果和查询效率有限。 此更改将Launch内容片段路径添加到索引定义。 搜索和自定义查询现在可在`/content/launches`下找到内容片段。 （SITES-35634）
+* 启动项UI显示了内容片段启动项控件，即使产品未在触屏UI中公开内容片段启动项也是如此。 此更改会从cq-launches-content中剥离内容片段启动代码路径，并调整Launch列表筛选。 作者现在可以看到一致的页面启动选项，但没有内容片段启动条目。 （SITES-35633）
+* AEM 6.5 LTS快速入门缺少所需的启动包和先决条件，这会阻止启动项OpenAPI启用。 该更新添加启动项包和所需的依赖项，例如量度支持、DAM-cfm更新和队列配置。 现在可在6.5 LTS快速启动上运行、且包含所需运行时组件的启动项API。 （SITES-35297）
+* CF Launches打包提取了较新的依赖项版本和不必要的GraphQL库，这会使AEM 6.5 LTS集成复杂化。 此更改使依赖项版本与AEM 6.5 LTS基线保持一致，并剥离未使用的GraphQL依赖项。 包分辨率现在保持不变，并且CF Launch启动保持稳定。 （SITES-35295）
+* AEM Launch现在为6.5 LTS分支运行专用的Jenkins管道。 管道每夜运行一次，以生成并通过电子邮件发送故障警报。 该设置增加了测试覆盖率并提前捕获回归。 （SITES-35293）
+* AEM 6.5 LTS现在发布了更新的Launches API捆绑包，其中包含已调整的人工因素版本。 该捆绑包将跟踪主代码行，同时保留正确的6.5 LTS发行版本。 此更新稳定了6.5 LTS栈栈中的Launches API消耗。 （SITES-35292）
+* AEM 6.5 LTS现在包含一个更新的launches-core捆绑包，该捆绑包具有对齐的依赖项版本。 此更新添加了“片段UUID”和“引用UUID”数据类型的启动项核心处理。 现在，启动项处理可保持启动项和内容片段工作流之间的行为一致。 （SITES-35290）
+* 改进了站点编辑器，以解决中断正常页面创作工作流的不一致行为。 作者遇到意外的组件交互，这会干扰内容更新并降低编辑可靠性。 此更改可恢复一致的UI状态管理，并确保在受影响的场景中可预见地执行创作操作。 （SITES-35138）
+* Launches Edit现在显示本地化的错误文本，而不是硬编码的`Provided path is not a launch`字符串。 现在，当Edit收到无效的启动路径时，UI会呈现跨语言的翻译消息传递。 （SITES-33360）
+* AEM 6.5 LTS现在包括启动项OpenAPI侧端口工作。 此更新将启动项API包、内容包和所需的快速启动工件引入奇偶校验，并支持具有稳定CI验证的内容片段启动项OpenAPI方案。 （SITES-32050）
+* 启动项UI现在会本地化覆盖的模板标签。 模板覆盖详细信息现在显示已翻译文本而非仅英文字符串。 （SITES-29525）
+* AEM解决了&#x200B;**站点** > **启动项** > **编辑**&#x200B;中缺少本地化键的问题。 用户现在会看到已翻译的错误消息，而不是原始“无法更新启动项源列表”字符串。 （SITES-21499）
+* 启动项提升UI现在显示本地化的状态标签和操作。 预览区域显示&#x200B;**已删除**、**新建**&#x200B;和&#x200B;**视图**&#x200B;的已翻译文本，而不是原始英文字符串。 （SITES-13540）
+* 现在，创建启动项时会显示本地化的错误消息。 UI不再显示原始英文字符串，如`Unable to create launch page`、`Source root resource is not a page`或`Mandatory parameter is missing`。 （SITES-13085）
+
+
+<!-- #### Link Checker{#sites-link-checker-65-lts-sp2} -->
+
+
+#### MSM - 实时副本{#sites-msm-live-copies-65-lts-sp2}
+
+* 在内容更改期间，管理员对MSM推送修改处理的可见性有限。 此修复添加有关MSM事件接收和转出执行的详细日志记录。 Debug输出现在显示触发了哪些事件、更改了哪些内容路径以及谁触发了更改。 （SITES-38029）
+* AEM修复了Blueprint转出日期字段上的本地化布局问题。 日期提示现在符合控件并且在支持的语言（包括`fr_FR`）中保持可读性。 （SITES-14961）
+
+<!-- #### Page editor{#sites-pageeditor-65-lts-sp2} -->
+
+#### 复制{#sites-replication-65-lts-sp2}
+
+页面编辑器发布现在可处理包含选择器或后缀的URL。 发布的请求现在会发送JCR页面路径，而不是选择器或后缀URL字符串，因此激活会完成，内容会启用。 复制现在会在失败时返回错误状态，从而阻止出现误的“发布已启动”消息。 （NPR-43288）
+
+<!-- #### Rich Text Editor{#sites-rte-65-lts-sp2} -->
+
+#### 模板编辑器{#sites-template-editor-65-lts-sp2}
+
+对于某些区域设置，模板状态文本垂直显示在&#x200B;**工具** > **常规** > **模板**&#x200B;中。 “已过时”标签破坏了布局，读为一列字符。 该修复程序会更正模板状态样式，以使标签在单个水平线上呈现。 （SITES-36797）
+
+#### 通用编辑器 {#sites-universal-editor-65-lts-sp2}
+
+* 已将OSGi默认配置设置为`preview=true`，并强制通用编辑器在预览模式下启动。 此更新更正默认值并恢复标准的生产条目行为。 除非管理员明确启用预览模式，否则通用编辑器现在会在生产模式下打开。 （SITES-37193）
+* 在开发和暂存环境中，“通用编辑器打开”命令现在默认为预览模式。 该命令会添加preview=true，这样可保持作者检查与预览上下文一致，并避免意外打开生产环境。 （SITES-33839）
+
+### [!DNL Assets]{#assets-65-lts-sp2}
+
+Assets Relate现在适用于包含空格的文件名。 更新的“关系”客户端逻辑现在可以正确处理包含空间的路径，并避免在关系选择期间出现`undefined`源错误。 现在将打开“关系”对话框并保存关系，而不使用UI挂起或旋转器。 DAM用户无需重命名文件即可关联、派生和取消关联资源。 (Assets-56418)
+
+#### [!DNL Dynamic Media]{#assets-dm-65-lts-sp2}
+
+* 新的Dynamic Media视频播放器集成（限量推出） — 现在，AEM 6.6快速入门中提供了新的Dynamic Media视频播放器体验。 此增强功能目前仅作为受控转出的一部分为初始客户启用。 (Assets-60165)
+* 解决了视频属性对话框中的选择缩略图选项未打开资产选取器的问题，恢复了用户为视频资产选择自定义缩略图的功能。 (Assets-58926)
+* 在Dynamic Media视频中，增加了在“字幕和音轨语言”下拉列表中选择阿拉伯语的支持，使作者能够直接在AEM中管理阿拉伯语字幕。 (Assets-61771)
+
+<!-- #### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp2} -->
+
 
 <!--
-#### [!DNL Dynamic Media]{#assets-dm-65-lts-sp1}
+### [!DNL Forms]{#forms-65-lts-sp2}
 
-#### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp1}
-
-### [!DNL Forms]{#forms-65-lts-sp1}
-
-#### Forms Designer 
+#### Forms Designer
 
 #### Forms
 
 #### Forms JEE 
- 
-#### Forms Captcha {#forms-captcha-65-lts-sp1} 
 
-#### XMLFM {#forms-xmlfm-65-lts-sp1}
+#### Forms Captcha {#forms-captcha-65-lts-sp2}
 
-#### [!DNL Adaptive Forms] {#adaptive-forms-65-lts-sp1}
+#### XMLFM {#forms-xmlfm-65-lts-sp2}
 
-#### [!DNL Forms Designer] {#forms-designer-65-lts-sp1} -->
+#### [!DNL Adaptive Forms] {#adaptive-forms-65-lts-sp2}
 
-### 基础 {#foundation-65-lts-sp1}
+#### [!DNL Forms Designer] {#forms-designer-65-lts-sp2}
 
-<!--
-#### Apache Felix {#foundation-apachefelix-65-lts-sp1}
+#### Forms Designer
 
-#### Campaign{#foundation-campaign-65-lts-sp1}
+#### AdaptIve Forms
 
-#### Cloud Services{#foundation-cloudservices-65-lts-sp1}
+#### Forms Captcha
+
+#### Forms Management UI
+-->
 
 
+### 基础 {#foundation-65-lts-sp2}
 
-#### Communities {#foundation-communities-65-lts-sp1}
+#### Apache Felix {#foundation-apachefelix-65-lts-sp2}
 
-#### Content distribution{#foundation-content-distribution-65-lts-sp1}
-
-#### CRX {#foundation-crx-65-lts-sp1}
-
-#### Granite{#foundation-granite-65-lts-sp1} -->
-
-#### HTL{#foundatoin-htl-5-lts-sp1}
-
-解决了 OSGi 依赖循环阻止 HTL 脚本引擎工厂正常工作的问题，确保了正确的服务解析和脚本执行。（Granite-58275）
-
-#### 集成{#foundation-integrations-65-lts-sp1}
-
-* 从 `com.adobe.cq.cq-analytics-integration` 捆绑包中移除了 commons-httpclient 3.x 的使用，将其替换为 `org.apache.httpcomponents.httpclient` 4.5.13.B0001，以符合最新的 AEM 6.5 LTS 标准。（CQ-4360586）
-* 从 AEM 中移除了已弃用的 Search&amp;Promote 集成捆绑包，以去除不使用的组件，减少维护开销。（CQ-4358030）
-* 为 SiteCatalyst 集成添加了新的后端测试案例，以改进分析验证并确保更全面的覆盖。（CQ-4359991）
-* 修复了“启动项配置”的“属性”部分中“公司和属性”下拉菜单不显示的问题。此外，尽管所有必填字段都已填写，“保存并关闭”仍会触发错误；在只有“标题”字段为空的情况下，“公司和属性”显示不正确的错误消息。（CQ-4359853）
-* 从版本 6.6 中移除了 `searchpromote` servlet 路径条目，与 Search&amp;Promote 捆绑包移除保持一致。（CQ-4359523）
-* 修复了目标存储库的 HTTP 测试案例，以确保准确验证并提高测试可靠性。（CQ-4359022）
-* 从 integration-adobeims-console 模块中移除了 Guava 缓存使用，以消除 Guava 库依赖项。（CQ-4358710）
-* 验证了 AEM 6.6 中的 DTM 集成工作流、收件箱任务和项目功能，确保在 AEM 6.5 中正常运行。（CQ-4358151）
-* 验证了 AEM 6.6 中的内容洞察功能，确保在 AEM 6.5 中的兼容性和正常运行。（CQ-4357774）
-* 验证了 AEM 6.6 中的云服务功能，确保在 AEM 6.5 中的兼容性和正常运行。（CQ-4357773）
-* 验证了 AEM 6.6 中的 Adobe IMS 控制台集成，确保在 AEM 6.5 中的兼容性和正常运行。（CQ-4357772）
-* 为 Test&amp;Target 集成更新了 Jenkins 管道，确保在 Java 17 上运行，解决 Selenium 测试失败问题，将选择测试移至 Playwright，并确保通过所有单元测试。（CQ-4357770）
-* 通过更新构建和测试管道，使 DX 集成、工作流、收件箱和项目与 6.6.0 分支保持一致。还解决了升级兼容性问题，并验证了所有相关服务的稳定性和功能。（CQ-4357767）
+* Sling资源访问安全现在在1.1.2版上运行。当多个ResourceAccessGateHandler服务注册时，ResourceAccessSecurityImpl在初始化期间不再引发ClassCastException。 初始化现在可以可靠完成，并避免在具有多个处理程序的环境中启动失败。 （NPR-42750）
+* JMX控制台和Web控制台现在为控制台CSS资源发送`Content-Type: text/css header`。 严格的MIME检查不再阻止样式表加载，因此`/system/console/jmx` UI将以正常样式呈现。 (GRANITE-63677)
+* AEM现在可避免在生成的`contributor`中为`WEB-INF/resources/provisioning/model.txt`组输入重复的ACL条目。 WAR输出现在包含一个一致的ACL块，以防止在查看期间混淆权限差异。 (GRANITE-63269)
+* 在捆绑刷新操作期间，AEM列入阻止列表 列入允许列表不再清除反序列化防火墙和设置。 更新了筛选器注册逻辑，使活动防火墙实例与保存的配置保持一致，因此无需重新启动即可保持启用保护状态。 (GRANITE-61382)
+* Felix Web控制台在访问`NullPointerException`期间不再引发间歇性`/system/console`错误。 更新了ServiceTracker处理，防止出现null跟踪器状态。 在重复请求和自动验证期间，控制台登录和导航保持稳定。 (GRANITE-61042)
 
 <!--
-#### Jetty{#foundation-jetty-65-lts-sp1} -->
+#### Campaign{#foundation-campaign-65-lts-sp2}
 
-#### 本地化{#foundation-localization-65-lts-sp1}
+#### Cloud Services{#foundation-cloudservices-65-lts-sp2}
 
-* 将“权限”列表中“移除访问控制”对话框中的字符串本地化，以显示正确的翻译。（GRANITE-59427）
-* 修复了模型编辑器的“OR 拆分属性”添加规则对话框中多个 UI 字符串（包括运算符和字段标签）的显示未本地化的问题。所有字符串的显示现在都已正确本地化。（CQ-4354014）
-* 为工作流模型编辑对话框中的“显示描述”工具提示添加了缺失的翻译。（CQ-4347996）
+#### Communities {#foundation-communities-65-lts-sp2}
 
-#### Oak {#foundation-oak-65-lts-sp1}
+#### Content distribution{#foundation-content-distribution-65-lts-sp2}
+-->
 
-解决了 AEM 在升级过程中将 `/apps/system/config` 中的现有配置文件重新创建或重命名，将 `.cfg.json` 文件替换为 `.config` 文件的问题。（GRANITE-58899）
+#### CRX {#foundation-crx-65-lts-sp2}
 
-#### 全方位搜索{#foundation-omnisearch-65-lts-sp1}
+升级Service Pack后打开JSP文件时，CRXDE Lite不再显示空白选项卡。 AEM现在提供了匹配的CodeMirror核心和附加代码，可防止严重的浏览器错误并保持编辑器可用。 (GRANITE-64333)
 
-修复了占位符错误地显示为输入字段标签的无障碍可访问性问题。此问题导致搜索、AEM 体验片段、内容片段和内容片段模型中缺少字段标签。（Granite-61791）
+#### Granite{#foundation-granite-65-lts-sp2}
 
-<!--
-#### Platform{#foundation-platform-65-lts-sp1} -->
+表达式安全验证器现在处理空或null OSGi配置值。 它应用安全默认值，忽略空数组，并记录清晰的日志，从而防止NullPointerException和不可预测的验证结果。 （NPR-43163）
 
-#### 项目{#foundation-projects-65-lts-sp1}
+<!-- #### HTL{#foundatoin-htl-5-lts-sp2} -->
 
-* 解决了在日程表视图中删除项目时，尽管项目删除成功却显示不正确的错误弹出窗口的问题。（CQ-4358890）
-* 修复了 Firefox 中“项目”视图中的“资产收集”卡片页脚与卡片边框重叠的问题。页脚现在正确对齐，不再重叠。（CQ-4353317）
+#### 集成{#foundation-integrations-65-lts-sp2}
 
-#### 快速入门{#foundation-quickstart-65-lts-sp1}
-
-* 更新了卸载脚本，调整了 Guava 捆绑包的版本范围，防止其在通过包管理器安装时被列入阻止列表。（GRANITE-59559）
-* 通过修正界面中经典复选框的处理，修复了在编辑复制代理时复制 UI 中显示错误（`#1660`）的问题。（GRANITE-58302）
-* 通过解决缺少服务权限、更新配置处理以及确保所需服务正确初始化，解决了运行使用 JDK 21 的 AEM 6.5 LTS 时 S3 数据存储库的多个启动错误。（GRANITE-57082）
-* 定义了 AEM 6.5 的维护和支持策略。此修复包括以下内容：
-   * 服务包 cadence。
-   * 热修复 cadence。
-   * 同时支持 AEM 6.6。
-   * 更新了支持矩阵。
-   * 附加组件所有权责任。（GRANITE-50459）
+现在，即使存在开始和结束日期，AEM也会同步Adobe Target活动。 Target有效负载现在将活动日期格式化为完整的ISO 8601时间戳，包括秒、毫秒和时区。 Target不再拒绝具有`InvalidJson.Json`的请求。 计划的活动现在会迁移到同步状态，而不是保持不同步。 （CQ-4360733）
 
 <!--
-#### Security{#foundation-security-65-lts-sp1} -->
+#### Jetty{#foundation-jetty-65-lts-sp2}
 
-#### Sling{#foundation-sling-65-lts-sp1}
+#### Localization{#foundation-localization-65-lts-sp2}
 
-* 将 Sling ResourceAccessSecurity 更新至版本 1.1.2，以解决在多个 `ResourceAccessGate` 引用初始化 `ResourceAccessSecurityImpl` 时发生的 `ClassCastException` 问题。（NPR-42750）
-* 修复了 Adobe Stock 集成中许可证对话框显示为灰色的问题。导致此问题的原因是 `sunt:initList` 函数移除了必需的输入字段。该函数位于 Coral Foundation 客户端库中。更新了客户端库以保留必要的字段，确保启用正确的许可证对话框功能。（NPR-42748）
-* 修复了 `org.apache.sling.scripting.jsp 2.6.0` 中的意外 JSP 编译错误。（NPR-42640）
+#### Oak {#foundation-oak-65-lts-sp2}
+
+#### Omnisearch{#foundation-omnisearch-65-lts-sp2}
+
+#### Platform{#foundation-platform-65-lts-sp2}
+
+#### Projects{#foundation-projects-65-lts-sp2}
+-->
+
+#### 快速入门{#foundation-quickstart-65-lts-sp2}
+
+AEM 6.5 LTS SP2将更新Sling、Oak和Felix的基础层捆绑包集。 这些升级增强了核心运行时的稳定性，并在整个平台上调整依赖项版本。 (GRANITE-61874)
 
 <!--
-* Backported the fix for Sling Scripting issue that caused `DataTimeParseException` and `String.length()` null pointer exceptions during package installation. Updated Sling Scripting to version 2.8.3-1.0.10.6 to reduce installation errors and improve stability. (NPR-42640) -->
+#### Security{#foundation-security-65-lts-sp2}
+
+AEM now prevents NullPointerException errors when a logged-in user lacks read access for some groups and opens the Groups tab. The tab now hides groups without access and renders group membership details without a blank or unresponsive UI. (NPR-43311) -->
+
+#### Sling{#foundation-sling-65-lts-sp2}
+
+AEM现在包括Sling Engine 2.16.6。此更改消除了安全工具标记的XSS违规，并提高了核心渲染的安全性和稳定性。 （NPR-43105）
 
 <!--
+#### Translation{#foundation-translation-65-lts-sp2}
 
-#### Translation{#foundation-translation-65-lts-sp1} -->
+#### User interface{#foundation-ui-65-lts-sp2}
+-->
 
-#### 用户界面{#foundation-ui-65-lts-sp1}
+#### WCM{#foundation-wcm-65-lts-sp2}
 
-* 解决了 AEM Author UI 中用户组限制显示 41 个的问题。导致此问题的原因是 Granite UI 组选取器组件中默认限制批次。更新了组件以显示所有组，不再被截断。（NPR-42749）
-* 解决了内部部署页面创建向导中的问题，即在编辑页面属性时未重新验证多字段组件中的必填字段。这个问题使得作者可以绕过验证，使用不完整的数据继续工作。（GRANITE-58826）
-* 修正了 AEM 中帮助按钮的 ARIA 属性，以确保 JAWS 屏幕阅读器公告清晰、用户友好的标签，而不是显示未经翻译的图标和文本元数据。（GRANITE-55360）
+由于XLIFF格式问题，AEM翻译在Java 17或Java 21上不再失败。 导出管道现在可生成翻译提供商接受的符合标准的XLIFF。 此更改将删除翻译作业中断，并恢复AEM和翻译服务之间的可预测切换。 现在，翻译工作流在受支持的Java运行时保持稳定。 （CQ-4360217）
 
-#### WCM{#foundation-wcm-65-lts-sp1}
+#### 工作流{#foundation-workflow-65-lts-sp2}
 
-* 添加了 Java 17 对 AEM Translations 的支持，更新了翻译捆绑包、验证了 Java 包兼容性、移除了已弃用的依赖项，并通过全面测试确保完整功能。（CQ-4357525）
-* 移除了不稳定的 Evergreen 测试 `com.adobe.cq.platform.it.http.workflow.inbox.InboxOnOffTimeIT.testActivateLater`，以防止自动测试过程中发生虚假失败。（CQ-4298376）
+在工作流通知处理期间，EmailNotificationService-Processor不再触发重复的“未找到区段”错误。 更新的异常处理检测到SegmentNotFoundException并停止处理循环，而不是继续无效读取。 在收件箱和工作项访问期间，工作流执行保持稳定，并记录噪音下降。 (GRANITE-62635)
 
-#### 工作流{#foundation-workflow-65-lts-sp1}
 
-* 添加了收件箱项中缺少的 `data-detailsurl` 属性，以防止在使用带有 Java 21 的 AEM 6.5 LTS 时 URL 中出现未定义的值。（GRANITE-60158）
-* 修复了在运行使用 Java 21 的 AEM 6.5 LTS 时 `WorkflowToPublishEventService` 捆绑包的 `deactivate` 方法中的 NullPointerException，确保工作流服务正确关闭，不出现错误。（GRANITE-58151）
-* 更新了工作流索引，以支持共享、离开办公室自定义和时间线查询问题解决方法。（GRANITE-52640）
-* 更新了工作流索引，以支持共享、离开办公室自定义功能和时间线查询问题解决方法。（GRANITE-52294）
-* 解决了程序升级到 AEM 版本 10912 时日志比较验证过程中日志失败错误增多的问题，确保了工作流的稳定执行。（GRANITE-44268）
-* 更新了 Workflow 存储库中的 URL 清理方法，将 `url.searchParams` 替换为 `url.search`，从而增强了对易受攻击的 URL 的 XSS 保护。（CQ-4359585）
-* 验证 AEM 6.6 Forms 中的工作流、收件箱和项目功能，以确保正确运行和集成。（CQ-4358777）
-* 实施了通过 Jenkins 自动发布 Workflow 内容工件，实现了 AEM 6.5 中简化且一致的部署流程。（CQ-4358472）
-* 修复了收件箱创建任务工作流中的一个问题：尽管任务已创建，但由于 JavaScript 语法错误，“添加任务”对话框在点击“提交”后不关闭。（CQ-4355336）
-* 修复了由于缺少 `isEndUserConfigurationEnabled` 属性定义而导致无法保存收件箱视图配置的问题。（CQ-4287757）
 
-## Forms
 
-### Forms Designer
-
-* 在用户使用 exportDataAPI 导出基于 XFA 的 PDF 数据时，生成的 XML 与通过 Acrobat Reader 手动导出的 XML 数据存在差异。与 Acrobat Reader 生成的输出相比，部分字段的值在输出中缺失。（LC-3922791）
-* 使用工作台中的输出服务生成带标记的 PDF 时，在目录项表的引用标记下会意外添加一个标签标记。（LC-3922756）
-* 当使用输出服务将动态可填写 PDF 转化为 PDF/A 格式时，动态状态不会被保留。此问题会导致数据丢失和潜在的合规风险，尤其是在启用标记功能时。（LC-3922708）
-* 当用户在 AEM Forms Designer 中将字段标题设置为底部或右对齐时，标记树仅包含标题而不包含对应的值，导致辅助功能标记不完整。（LC-3922619）
-* 生成的 PDF 中 QR 代码将无法识别。同时，QR 代码的替换文本在辅助功能测试中也未通过，影响了屏幕阅读器的兼容性。（LC-3922551）
-* 当用户在代理 UI 中渲染信函时，由于 FormService 的 render() API，内容无法正确显示。（LC-3922461）
-* 当用户尝试在 AEM Forms 中从具有 Sunken Square 样式的 XDP 创建 PDF/A 文件时，会出现边框渲染问题。（LC-3922180）
-* 将绑定 XSD 架构的动态表单进行扁平化处理会导致部分数据丢失，因为最终 PDF 文件中未能保留某些绑定表单数据。（LC-3922008）
-* 与手动导出相比，当用户尝试使用 AEM Forms 6.5.13 及更高版本中的 extractData API 从交互式 PDF 导出数据时会导致数据丢失。（LC-3921983）
-* 使用 AEM Forms Designer 或 Output 服务将 XDP 表单转换为静态 PDF 时，会生成多个 `Link-OBJR` 标记。这些问题会引发可访问性合规性问题，因为系统预期应只有一个统一的链接标记。（LC-3921977）
-
-### 自适应表单
-
-* 在 AEM Forms 中，如果在根面板上启用了“允许标题使用富文本”，则在嵌套面板上启用“从记录文档中排除标题”时，会错误地隐藏根面板的标题。此问题会在生成的记录文档中出现。（FORMS-19696）
-* 系统忽略了通过 JSON 架构中的 `aem:afProperties` 指定的自定义 `sling:resourceType`。渲染期间将忽略自定义资源类型。（FORMS-19691）
-* 当用户提交包含通过 URI 预填附件的自适应表单时，由于缺少二进制数据，表单提交会因 NullPointerException 而失败。（FORMS-19371）（FORMS-19486）
-* 当用户在“表单与文档”部分上传 PDF 时，时间线功能会停止工作。（FORMS-19407）（FORMS-19234）
-* 当用户在 AEM Forms 中使用开箱即用（OOTB）文件附件组件上传文件时，会检测到安全漏洞。此问题可能导致未授权实体拦截提交流程。（FORMS-19271）
-* 当用户将 AEM Forms 中的开箱即用自适应表单配置为自动生成记录文档（DoR）时，Acrobat Reader 的“文档属性”中的“标题”字段未显示捕获的 DoR 标题。默认情况下，表单标题不会替换文件名显示。（FORMS-19263）
-* 当用户在代理 UI 中打开交互式通信时，预填数据无法被完全清除；移除后，系统会自动再次填充相同数据。（FORMS-19151）
-* 当用户在代理 UI 中预览日期字段时，日期会被意外更改。该问题是由于虚拟机的 UTC 设置与系统对日期的解读存在时区差异导致的。（FORMS-19115）
-* 当用户提交表单时，文件附件可能会重复，导致同一文件多次上传。（FORMS-19045）（FORMS-19051）
-* 在文档安全中，将协调员添加到策略集时操作失败，该问题在生产环境和较低环境中均会出现。（FORMS-18603, FORMS-18212, FORMS-19697）
-* 当用户在桌面模式下点击空字段的“datepicker-calendar-icon”时，由于未定义 _$focusedDate 变量而报错，进而导致相关自定义脚本中断。（FORMS-18483）（FORMS-18268）
-* 当客户预览信函时，“大写金额”字段无法正确显示或更新数值，导致内容错位并缺少空格。（FORMS-18437, FORMS-17330, FORMS-18209, FORMS-18557, CTG-4150848,FORMS-19614, LC-3922004）
-* 在 RHEL 上，当客户预览已保存的信函时，内容会出现错位、缺少空格，并显示如“x”等意外字符。（FORMS-18422）（FORMS-17641）
-* 在 AEM Forms 中，当用户在不同选项卡之间切换时，无法响应对第一个选项卡中组件的选择操作。（FORMS-18345）
-* 当用户使用 WebToPDF 选项将 HTML 文件转化为 PDF 时，输出 PDF 中缺少页眉部分，包括元数据和标题标记。（FORMS-18223、FORMS-17835、FORMS-19642、FORMS-18224）
-* 在 AEM JEE Process Manager SDK 中，当用户调用 retryAction（long actionOid）方法时，系统会错误地重试在 tb_action_instance 表中找到的第一个操作。即使提供了特定的操作 ID 或传入空值，仍会发生该工作流错误，导致产生非预期行为。（FORMS-18187）
-* 用户遇到问题：已保存草稿和提交功能均无法正常工作，且未显示任何错误消息。（FORMS-18069）
-* 从基于 XSD 的基础组件迁移到核心组件会阻止在 JSON 架构中实施跨文件引用，从而影响自适应表单的迁移。（FORMS-18065）
-* 当用户在代理 UI 中预览书信时，由于 IC 时间转化问题，日期字段会显示不正确的值。这些差异源于虚拟机环境与系统对时间的解读之间的时区差异（UTC 与本地时间）。（FORMS-17988）（FORMS-17248）
-* 当用户在 AEM Forms 中使用 Notice IC 模板预览书信时，PDF 生成时间差异较大，即使在同一服务器上，生成时间也可能从 1.5 秒到 10 秒以上不等。这种不一致性会影响业务重要工作流。（FORMS-17951）
-* 当用户在自适应表单中使用“数据源”选项将手写签名对象绑定到 XDP 时，更改无法保存。其原因在于持续存在纵横比验证错误，即使输入的值有效也是如此。（FORMS-17587）
-* 当用户在文档片段中使用包含大量隐藏字段的特定 XDP 时，AEM 会创建将 `cm:optional` 属性设置为假的 CRX 节点，导致交互式通信 (IC) 提交失败。（FORMS-17538）
-* 当客户预览信函时，数值框字段在定义 Lead 和 Frac 位数限制的情况下无法正确处理负值。该问题是由于使用了 parseFloat 方法，它会将减号视为数字的一部分。（FORMS-17451）
-* 在预览信件时，注意到 Adobe.json 文件中使用了 &quot;*&quot; 通配符，引发了对其用途和潜在修改的担忧。（FORMS-17317）
-* 当用户在“申请固定利率储蓄联名账户”页面使用屏幕阅读器时，标题被错误识别为可点击状态，引发可访问性问题。（FORMS-17038）
-* 当嵌入表单时，生成的 iframe 缺少标题属性，导致不符合无障碍合规要求。（FORMS-17010）
-* 通过表单管理器 UI 下载表单时，总是包含相关依赖项，例如主题和片段。（FORMS-15811）
-* 当用户在移动设备（iOS 和 Android™）上访问表单时，第一页上的“下一步”和“上一步”按钮处于禁用状态。然而，屏幕阅读器并未将其识别为禁用状态。（FORMS-15773）
-* 当用户保存包含片段并启用了延迟加载的大型表单时，无法成功检索草稿，导致工作流中断。（FORMS-19890、FORMS-19808）
-* 用户在保存基于核心组件的自适应表单的表单属性时遇到了问题。该错误是由于包含了基于基础组件编辑器的自适应表单中冗余的脚本，导致与基于核心组件的自适应表单发生冲突。编辑器。（FORMS-17474）
-* 用户遇到了 Adobe Sign GovCloud 签名页面无法在 iframe 中呈现的问题。（FORMS-16803）
-* 用户在选择核心组件的自适应表单 (AF) 片段的引用时遇到了错误。出现错误信息“无法呈现引用：非绝对路径”，导致引用无法正常呈现。（FORMS-19678）
-* 添加了对 Acrobat DC 多线程转化的支持，使用户能够更高效地同时将 Word、Excel 和 PowerPoint 文档转化为 PDF 文档。（FORMS-21310）
-* 在 AEM 服务包 24 中添加了 `com.adobe.granite.toggle.impl.dev` 捆绑包，通过将其从 Forms 附加组件中移除，实现了更简化的开发流程。（FORMS-20139）
-* 从 forms-foundation 移除了 FeatureToggleRenderConditionServlet，并从 Forms 附加组件中删移除了 com.adobe.granite.toggle.impl.dev 捆绑包。此更新确保在安装 Forms 附加组件后能正确解析呈现条件，从而提升客户组件功能体验。（FORMS-20138）
-* 用户因自适应表单中长期运行的查询而遭遇性能延迟。此更新回溯移植查询更改以提高效率。客户现在可以使用标记名称 aemformsAFReferences 创建索引。（FORMS-21411）
-* 用户在使用 WebtoPDF 将 HTML 转化为可移植文档格式（PDF）时遇到了标题位置未对齐的情况。该问题影响了文档布局的一致性和输出的可读性。（FORMS-21502、FORMS-21540）
-* 尽管 PreFlight 验证成功，但用户仍遇到 PDF/A-1b 验证失败的情况。此问题影响了使用 PDF 验证工具的企业客户对文档合规性的检查。（FORMS-20196）
-* 用户在用户界面中遇到了未翻译的字符串，导致操作时出现困惑并且难以理解界面功能。（FORMS-6542）
-* 用户在电子邮件通知方面遇到了问题。发送电子邮件工作流步骤无法发送电子邮件，从而影响自动通信流程。（FORMS-17961）
-* 用户在 Form 工作流测试中遭遇失败，导致工作流流程无法高效完成。（FORMS-16231）
-* 用户无法在 AEM Forms 中使用 PDF 文件的时间线功能。该问题影响了用户有效跟踪文档更改和修订的能力。在 AEM Forms 区域的“表单和文档”部分上传任何 PDF 时，时间线视图功能失效。（FORMS-19408）
-* 用户在与 OData 交互时遇到空指针异常。这会导致数据检索流程中断。（FORMS-20348）
-* 在移除开源 Java 库 Guava 后，google.common.collect 也会随之一同移除。此更新可确保使用自适应表单的企业客户获得更好的兼容性和性能。（FORMS-17031）
-
-### Forms Captcha
-
-* 为基于基础组件的自适应表单新增了对 `Hcaptcha` 和 `Turnstile` 的支持。（FORMS-16562）
-* 用户在 `Create hCaptcha Configuration` 对话框中遇到了图标重叠问题。填写必填字段时，信息图标与错误图标重叠，导致配置设置过程出现混淆。（FORMS-16916）
-* 用户在基于核心组件的自适应表单中遇到 reCAPTCHA 配置被错误读取并应用的问题。当表单未选中配置容器时，`conf/global` 文件夹中的多个配置导致了该问题的发生。（FORMS-19237）
-* 用户遇到了 reCAPTCHA 无法呈现的问题。这影响了企业客户的表单提交和安全验证。（FORMS-17136、FORMS-19596）
-* 用户遇到一个问题，即 reCAPTCHA Enterprise 的大小未反映在用户界面（UI）中。（FORMS-16574）
-* 由于 `ReCaptchaConfigurationServiceImpl` 中存在未关闭的 ResourceResolver，用户在表单提交过程中遇到 ReCaptcha 功能问题，导致验证偶尔失败。（FORMS-19241）
-* 用户在 Sites 中创建表单时遭遇 reCAPTCHA 验证问题。AEM Forms 无法正确识别表单名称，导致验证失败。（FORMS-20486）
-* 即使 reCAPTCHA Enterprise 评分为 1.0，用户仍能提交表单，但存在潜在安全风险。（FORMS-16766）{{$include }}
-* 通过将提交错误代码更新为 400，在自适应表单中改进了 reCAPTCHA 警报功能：此外，优化了日志警报功能，以区分超时、过期和机器人检测失败，从而提升故障排查的准确性和系统的可观测性。（FORMS-19240）
-* 关闭了 ReCaptchaConfigurationServiceImpl 中未关闭的 ResourceResolver 实例，以防止潜在的资源泄漏，并在使用 AEM Forms 内的 reCAPTCHA 集成时提升系统稳定性。（FORMS-19242）
-* 改进了 AEM Forms 的 CAPTCHA 配置处理逻辑，确保当 /conf/global 文件夹中存在多个配置项时，每个表单均能绑定到正确的配置。此项修复避免了在未明确选择配置容器时，意外使用不正确的 CAPTCHA 设置的问题。（FORMS-19239）
-
-### Forms Management UI
-
-* 用户在 `Forms` > `Create Watchfolder` > ` Watchfolder` 创建过程中遇到了未本地化的字符串。在创建监控文件夹时，未找到诸如 `Watchfolder creation` 和 `Watchfolder created successfully` 等的字符串，影响了用户界面体验。（FORMS-15234）
-
-## [!DNL Experience Manager Foundation] {#experience-manager-foundation}
+## 关于 [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
 [!DNL Adobe Experience Manager] 6.5 LTS 的平台的构建基础是更新版本的基于 OSGi 的框架（Apache Sling 和 Apache Felix）和 Java™ 内容存储库：Apache Jackrabbit Oak 1.68.x。
 
@@ -530,24 +362,24 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
 <!-- THE INFORMATION UNDER THIS HEADING CAME FROM CQDOC-23078 -->
 
 **环境**
-适用对象：安装服务包 1 (SP1) 的 AEM 6.5 LTS（内部部署）客户。SP1 以 Quickstart JAR 形式交付。
+适用于：安装Service Pack 2 (SP2)的AEM 6.5 LTS（内部部署）客户。 SP2作为快速入门JAR提供。
 
 **为什么这很重要**
-AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器安装的 ZIP 文件。内部部署客户可通过替换 Quickstart JAR、解压并重新启动的方式进行升级。此方法与 Adobe 的就地升级流程保持一致。
+适用于AEM 6.5 LTS的SP2以快速入门JAR的形式提供，而不是以通过包管理器安装的ZIP形式提供。 内部部署客户可通过替换 Quickstart JAR、解压并重新启动的方式进行升级。此方法与 Adobe 的就地升级流程保持一致。
 
 **推荐的升级流程（创作或发布实例）**
 
-1. 确认您的 AEM 6.5 LTS 实例运行正常且可访问。
-1. 从软件分发下载 SP1 Quickstart JAR（例如 `cq-quickstart-6.6.x.jar`）。
+1. 验证您的AEM 6.5 LTS实例是否健康且可访问。
+1. 从Software Distribution下载快速入门JAR（例如，`cq-quickstart-6.6.x.jar`）。
 1. 停止正在运行的实例。
-1. 在 AEM 安装目录中（`crx-quickstart/` 目录之外），将原有的 Quickstart JAR 替换为 SP1 JAR。
+1. 在AEM安装目录（`crx-quickstart/`外部）中，将以前的快速入门JAR替换为SP2 JAR。
 1. 解压该 JAR 文件：
 
    ```java
@@ -562,12 +394,12 @@ AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器�
 **良好维护规范**
 
 * 在生产环境升级前，先在较低环境或测试环境中执行升级操作。
-* 在开始前，请对存储库及所有外部数据存储库执行完整且可恢复的备份。
+* 在开始之前，请先进行完整、可恢复的备份（存储库以及任何外部数据存储）。
 * 查看 Adobe 的就地升级指南及技术要求（LTS 建议使用 Java 17 或 21）。
 
 >[!NOTE]
 >
->上述文件名（例如 `cq-quickstart-6.6.x.jar`）反映了此 LTS 版本中 SP1 Quickstart 工件的命名方式；请务必使用从软件分发实际下载的文件名称。
+>上面显示的文件名（例如，`cq-quickstart-6.6.x.jar`）反映了为此LTS发行版观察到的快速入门工件命名；始终使用您从Software Distribution下载的确切文件名。
 
 ## 安装和更新{#install-update}
 
@@ -575,7 +407,7 @@ AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器�
 
 >[!NOTE]
 >
-> 如果您直接从旧版 6.5 SP 升级到 LTS SP1，请按照从 6.5 [升级](/help/sites-deploying/upgrade.md)到 6.5 LTS GA 的说明进行操作。
+> 如果您从旧的6.5 SP直接升级到LTS SP1，请按照6.5到6.5 LTS GA [升级](/help/sites-deploying/upgrade.md)的说明操作。
 
 
 有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
@@ -587,7 +419,6 @@ AEM 6.5 LTS 的 SP1 以 Quickstart JAR 形式提供，而非通过包管理器�
 ## 安装并更新 AEM Forms 附加组件 {#install-update-aem-forms-add-on}
 
 有关详细说明，请参阅[执行就地升级](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/aem-forms-current-service-pack-installation-instructions)。
-
 
 
 ## 支持的平台 {#supported-platforms}
@@ -608,9 +439,7 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 为了确保透明度并允许进行充分的规划，Adobe将遵循Adobe Experience Manager (AEM)的弃用流程：
 
 * 首先宣布弃用。 已弃用的功能仍然可用，但不再增强。
-
 * 删除不会早于下一个主要版本。 计划的删除时间表单独通知。
-
 * 在功能被移除之前，至少会为客户提供一个发布周期以过渡到受支持的替代方案。
 
 ### 已弃用的功能  {#deprecated-features}
@@ -621,6 +450,8 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
+| 快速入门 | Mongo API | Mongo API现已弃用，并计划在未来版本中删除。 | 6.5 TS SP2 |
+| Sites | AEM Assets REST API中的内容片段支持 | AEM 6.5 LTS SP2为内容片段和模型管理提供了现代化的OpenAPI，因此现已弃用AEM Assets REST API中的旧版内容片段支持端点。<br>Adobe打算在生命周期结束公告之前保持这些旧端点可用。 Adobe不计划为已弃用的端点提供进一步的增强功能。 | 6.5 LTS SP2 |
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
 | [!DNL Foundation] | 支持 com.adobe.granite.oauth.server | Adobe IMS 集成 |  |
 
@@ -629,7 +460,6 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
 
 * 删除了对CRX存储库持久性的RDBMK支持。
-
 * 在群集环境中，MongoMK现在是存储库持久性唯一支持的选项。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
@@ -656,21 +486,18 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 ## 已知问题 {#known-issues}
 
-<!-- DO THESE KNOWN ISSUES CARRY OVER EACH RELEASE? THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
+### 为Sites Headless API安装所需的Oak索引{#site-headless-api}
 
-<!-- REMOVED THIS SECTION AS PER CQDOC-23046
-### Issue with JSP scripting bundle in AEM 6.5.21-6.5.23 and AEM 6.5 LTS GA
+一些迁移到Sites Headless的API需要额外的Oak索引才能实现完整功能。
 
-AEM 6.5.21, 6.5.22, 6.5.23, and AEM 6.5 LTS GA ship with the `org.apache.sling.scripting.jsp:2.6.0` bundle, which contains a known issue. The issue typically occurs under high load when the AEM instance handles many concurrent requests.
+安装`cq-dam-cfm-indices`包以使用下列功能：
 
-When this issue occurs, one of the following exceptions may appear in the error logs alongside references to `org.apache.sling.scripting.jsp:2.6.0`:
+* 列出内容片段模型
+* 列出内容片段
+* 搜索API
+* 工作流
 
-* `java.io.IOException: classFile.delete() failed`
-* `java.io.IOException: tmpFile.renameTo(classFile) failed`
-* `java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0`
-* `java.io.FileNotFoundException`
-
-A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-NPR-42640-1.2.zip) is available to resolve this problem. -->
+从Adobe软件分发门户下载索引包[cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-dam-cfm-indices-1.1.2.zip)。
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
@@ -680,7 +507,7 @@ A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/download
 
 在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。启用此功能后，健康检查可能会失败，并且 Dispatcher 和 AEM 实例之间的通信可能会中断。尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。它与 SNI（服务器名称指示）验证问题有关。
 
-**影响：** 
+**影响**
 
 * 健康检查失败，出现 HTTP 400 响应码
 * Dispatcher 与 AEM 实例之间的通信中断
@@ -688,14 +515,15 @@ A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/download
 * 使用 HTTPS 与 Dispatcher 配置中的 IP 地址时连接失败
 * 通过 HTTPS + IP 连接时出现 HTTP 400“SNI 无效”的错误
 
-**受影响的环境：**
+**受影响的环境**
 
 * 具有 Dispatcher 配置的 AEM 部署
 * 启用了仅 SSL 功能的系统
 * 使用 `https + IP` 方法与 AEM 实例连接的 Dispatcher 配置
 
-**解决方法：**
-如果您遇到此问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
+**解决方案**
+
+如果您遇到此问题，请联系Adobe客户支持。 有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
 
 ## 包含的 OSGi 捆绑包和内容包{#osgi-bundles-and-content-packages-included}
 
@@ -709,5 +537,5 @@ A hotfix [cq-6.5.lts.0-hotfix-NPR-42640](https://experience.adobe.com/#/download
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 

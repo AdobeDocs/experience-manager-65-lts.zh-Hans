@@ -6,9 +6,9 @@ feature: Workfront Integrations and Apps
 hide: true
 solution: Experience Manager, Workfront
 exl-id: 810be820-b577-4035-9fda-3d919361c58c
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1696'
 ht-degree: 1%
 
 ---
@@ -17,18 +17,18 @@ ht-degree: 1%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-configure.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在[!DNL Adobe Experience Manager]中具有管理员访问权限的用户在安装增强连接器后对其进行配置。 有关安装说明，请参阅[安装连接器](/help/assets/workfront-integrations.md)。
 
 >[!IMPORTANT]
 >
->* Adobe仅需要通过认证合作伙伴或[!DNL Adobe Professional Services]来部署和配置[!DNL Adobe Workfront for Experience Manager enhanced connector]。 如果未使用认证合作伙伴或[!DNL Adobe Professional Services]进行部署和配置，则Adobe不支持该功能。
+>* Adobe仅需要通过认证合作伙伴或[!DNL Adobe Workfront for Experience Manager enhanced connector]来部署和配置[!DNL Adobe Professional Services]。 如果未使用认证合作伙伴或[!DNL Adobe Professional Services]进行部署和配置，则Adobe不支持该功能。
 >
 >* Adobe可能会发布对[!DNL Adobe Workfront]和[!DNL Adobe Experience Manager]的更新，使此连接器冗余；如果发生这种情况，客户可能需要从使用此连接器过渡。
 >
->* Adobe支持增强型连接器版本1.7.4及更高版本。 不支持以前的预发行版和自定义版本。 要检查增强型连接器版本，请导航到[包管理器](/help/sites-administering/package-manager.md)的左窗格中可用的`digital.hoodoo`组。
+>* Adobe支持增强型连接器版本1.7.4及更高版本。 不支持以前的预发行版和自定义版本。 要检查增强型连接器版本，请导航到`digital.hoodoo`包管理器[的左窗格中可用的](/help/sites-administering/package-manager.md)组。
 >
 >* 查看Experience Manager Assets增强型连接器的[Workfront合作伙伴认证考试](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html)。 有关考试的信息，请参阅[考试指南](https://express.adobe.com/page/Tc7Mq6zLbPFy8/)。
 
@@ -59,9 +59,9 @@ ht-degree: 1%
 ### 链接的文件夹结构配置 {#linked-folder-structure}
 
 1. 转到云服务中的项目链接文件夹选项卡。
-1. 链接文件夹父路径：选择DAM中要创建链接文件夹的文件夹。 如果留空，则默认为/content/dam。 确保Workfront工具元数据架构和Workfront链接文件夹元数据架构已应用于所选文件夹。
-1. 链接的文件夹结构：输入逗号分隔的值。 每个值应为`DE:<some-project-custom-form-field>`、Portfolio、Program、Year、Name或某个“文本字符串值”（最后一个值带有引号）。 当前设置为Portfolio、项目、年、DE：项目类型、名称。
-1. 配置权限：将`jcr:all permissions`权限添加到`wf-workfront-users`组的`/conf/workfront-tools/settings/cloudconfigs`。
+1. 链接的文件夹父路径：在DAM中选择一个文件夹，您要在该文件夹中创建链接的文件夹。 如果留空，则默认为/content/dam。 确保Workfront工具元数据架构和Workfront链接文件夹元数据架构已应用于所选文件夹。
+1. 链接的文件夹结构：输入逗号分隔的值。 每个值应为`DE:<some-project-custom-form-field>`、Portfolio、Program、Year、Name或某个“文本字符串值”（最后一个值带有引号）。 它当前设置为Portfolio，Program，Year，DE:Project Type，Name。
+1. 配置权限：将`jcr:all permissions`权限添加到`/conf/workfront-tools/settings/cloudconfigs`组的`wf-workfront-users`。
 1. 如果Workfront中的文件夹标题应包括结构中的所有文件夹，则应选中使用文件夹结构名称在Workfront中构建链接的文件夹标题。 否则，它是最后一个文件夹的标题。
 1. 子文件夹多字段允许您指定应创建为链接文件夹的子文件夹的文件夹列表。
 1. 项目状态：选择项目的状态以创建链接文件夹。
@@ -79,7 +79,7 @@ Workfront项目和AEM文件夹之间的元数据映射在AEM文件夹元数据�
 
 要配置映射，请执行以下步骤：
 
-1. 为`wf-workfront-users`组添加`jcr:read`权限到`/conf/global/settings/dam/adminui-extension/foldermetadataschema`。
+1. 为`jcr:read`组添加`/conf/global/settings/dam/adminui-extension/foldermetadataschema`权限到`wf-workfront-users`。
 1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 文件夹元数据架构]**。
 1. 选择要编辑的文件夹元数据架构表单，然后单击编辑。
 1. 选择要编辑的文件夹元数据架构表单字段，然后选择右侧面板上的设置选项卡。
@@ -99,7 +99,7 @@ Adobe Workfront文档与Assets之间的元数据映射在AEM元数据架构中�
 1. 导航到&#x200B;**工具** > **Assets** > **元数据架构**。
 1. 选择要编辑的元数据架构表单，然后单击&#x200B;**编辑**&#x200B;或从头开始创建元数据架构。
 1. 选择要编辑的元数据架构表单字段，然后选择右侧面板上的&#x200B;**设置**&#x200B;选项卡。
-1. 在[!DNL Workfront]自定义表单字段中，选择要映射到选定AEM属性的[!DNL Workfront]字段的名称。 可用选项包括：
+1. 在[!DNL Workfront]自定义表单字段中，选择要映射到所选AEM属性的[!DNL Workfront]字段的名称。 可用选项包括：
 
    * 文档自定义表单字段
    * 项目自定义表单字段
@@ -107,7 +107,7 @@ Adobe Workfront文档与Assets之间的元数据映射在AEM元数据架构中�
    * 任务自定义表单字段
    * 项目概述字段（ID、名称、描述或参考编号）
 
-1. 如果在[!UICONTROL Workfront自定义表单字段]中选择的[!DNL Workfront]字段是Workfront用户预输入字段，则需要指定要映射的Workfront用户字段。 为此，请选中“从Workfront引用对象字段获取值”，然后指定要从中检索要映射的值的[!UICONTROL Workfront用户自定义表单字段]的名称。
+1. 如果在[!DNL Workfront]Workfront自定义表单字段[!UICONTROL 中选择的]字段是Workfront用户预输入字段，则需要指定要映射的Workfront用户字段。 为此，请选中“从Workfront引用对象字段获取值”，然后指定要从中检索要映射的值的[!UICONTROL Workfront用户自定义表单字段]的名称。
 
    ![元数据映射配置](/help/assets/assets/wf-metadata-mapping-config1.png)
 
@@ -126,7 +126,7 @@ Adobe Workfront文档与Assets之间的元数据映射在AEM元数据架构中�
    * 由前缀`DE:`标识的自定义表单字段。
    * 由其名称标识的可编辑字段。 在[[!DNL Workfront] API Explorer](https://experience.workfront.com/s/api-explorer)中找到字段名称。
 
-* `aem-mapped-property`可以是：
+* `aem-mapped-property` 可以是：
 
    * 文本值。 应使用引号将它们括起来。
    * AEM资产。 此引用应当相对于工作流有效负荷。
@@ -197,12 +197,12 @@ Adobe Workfront文档与Assets之间的元数据映射在AEM元数据架构中�
 
 1. 选择&#x200B;**[!UICONTROL 从Workfront]**&#x200B;发送时自动发布资源。 当资产从Workfront发送到AEM时，此选项支持自动发布资产。 可以通过指定Workfront自定义表单字段及其应设置为的值，有条件地启用此功能。 每当文档被发送到AEM时，如果它满足条件，则资源将自动发布。
 
-1. 选择&#x200B;**[!UICONTROL 项目完成时将所有项目资源发布到Brand Portal]**。 此选项允许当资产所属的Workfront项目的状态更改为`Complete`时，将资产自动发布到[!DNL Brand Portal]。
+1. 选择&#x200B;**[!UICONTROL 项目完成时将所有项目资源发布到Brand Portal]**。 此选项允许当资产所属的Workfront项目的状态更改为[!DNL Brand Portal]时，将资产自动发布到`Complete`。
 
 ![配置自动发布](/help/assets/assets/wf-auto-publish-config.png)
 
 ## Workfront文档自定义表单更新 {#subscribe-workfront-doc-custom-form-updates}
 
-要订阅[!DNL Workfront]文档自定义表单中的更改，请在&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中选择相关选项。 当您订阅这些更新时，它会在[!DNL Workfront]文档自定义表单中的相应字段更改时更新映射的[!DNL Experience Manager]元数据字段。
+要订阅[!DNL Workfront]文档自定义表单中的更改，请在&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中选择相关选项。 当您订阅这些更新时，它会在[!DNL Experience Manager]文档自定义表单中的相应字段更改时更新映射的[!DNL Workfront]元数据字段。
 
 ![Workfront在[!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)中记录自定义表单更新配置
