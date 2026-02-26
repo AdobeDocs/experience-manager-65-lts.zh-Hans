@@ -8,10 +8,10 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: aceec3ac-abdf-4ae2-b197-f58cb7faea5f
 index: false
-source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
+source-git-commit: 97f3bbc3eb5b4119accf2d93fb63bec35fd56c44
 workflow-type: tm+mt
 source-wordcount: '1925'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -48,7 +48,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 >
 >本文档仅将[WKND Spa项目应用程序](https://github.com/adobe/aem-guides-wknd-spa)用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
 
 ### 什么是 SPA？ {#what-is-a-spa}
 
@@ -83,7 +83,7 @@ SPA 的工作方式的特性使其更快、更流畅且更类似于本机应用�
 
 SPA的主要思想是减少对服务器的调用和依赖以将服务器调用引起的延迟最小化，以便SPA接近本机应用程序的响应性。
 
-在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。当访客与页面上的元素进行交互时，可能需要额外的调用。 由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
+在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。当访客与页面上的元素交互时，可能需要额外调用。由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
