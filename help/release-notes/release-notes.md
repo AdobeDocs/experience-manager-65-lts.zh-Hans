@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: f75f02c1e10deb6eef788d6584229c045b88880d
+source-git-commit: 4d32ffe38219728b916240784aad87beb0b277b7
 workflow-type: tm+mt
 source-wordcount: '6062'
 ht-degree: 21%
@@ -42,8 +42,6 @@ AEM 6.5 LTS SP2现在包含用于[内容片段和模型管理](https://developer
 <!-- UPDATE THE EACH RELEASE -->
 
 ## 6.5 LTS 服务包 2 中修复的问题 {#fixed-issues}
-
-<!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
 ### [!DNL Sites]{#sites-65-LTS-SP2}
 
@@ -389,7 +387,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -564,5 +562,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
