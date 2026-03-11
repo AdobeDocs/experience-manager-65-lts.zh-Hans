@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: f4b6c695110704bdd92967ce7f256c55c1229d34
+source-git-commit: c275e55834c2375fbc23d0bbc209760062e6c2bc
 workflow-type: tm+mt
-source-wordcount: '6063'
-ht-degree: 21%
+source-wordcount: '6197'
+ht-degree: 20%
 
 ---
 
@@ -25,6 +25,10 @@ ht-degree: 21%
 
 
 <!-- UPDATE ABOVE FOR EACH NEW RELEASE -->
+
+>[!IMPORTANT]
+>
+> **强制修补程序** — 要避免在安装SP2时出现脱机压缩的SNFE (SegmentNotFoundException)问题，请安装[已知问题 — 联机压缩期间存储库损坏](#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146)中描述的修补程序。
 
 ## [!DNL Adobe Experience Manager] 6.5 LTS SP2中包含的内容 {#what-is-new}
 
@@ -387,7 +391,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -511,6 +515,20 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 ## 已知问题 {#known-issues}
 
+### 离线压缩后在线压缩期间存储库损坏(GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
+
+如果以前对JCR存储库运行过离线压缩，则用户可能会在在线压缩期间遇到存储库损坏的情况。 在此情况下可能会出现`SegmentNotFoundException` (SNFE)，并且可能导致存储库损坏。
+
+要解决此问题，请安装修补程序（包管理器）。 Yiu可以从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-65388-1.0.zip)获取修补程序。 由于该修补程序包含一个低级`oak-segment-tar`捆绑包，因此实例会在安装后重新启动。
+
+规划应用时的实例停机时间。 若要离线压缩，请使用相应的[oak-run jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)，该变量也在Software Distribution上提供。
+
+>[!NOTE]
+>
+> * 对于任何oak-run操作，请使用[oak-run 1.88.1-B006 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)。
+>
+> * 通过设置系统属性`oak.compaction.legacy=true`启动AEM。
+
 ### 为Sites Headless API安装所需的Oak索引{#site-headless-api}
 
 一些迁移到Sites Headless的API需要额外的Oak索引才能实现完整功能。
@@ -562,5 +580,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
