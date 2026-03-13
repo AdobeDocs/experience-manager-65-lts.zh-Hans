@@ -4,9 +4,9 @@ description: 了解通用编辑器的灵活性，以及它如何帮助您使用A
 feature: Developing
 role: Developer
 exl-id: 495df631-5bdd-456b-b115-ec8561f33488
-source-git-commit: 24bd1f57da3f9ce613ee28276d1ae9465b6dfba6
+source-git-commit: 49922325d3cc993d551683fac1effe9fc9590880
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1191'
 ht-degree: 42%
 
 ---
@@ -39,15 +39,19 @@ ht-degree: 42%
 以下内容支持通用编辑器：
 
 * AEM 6.5 LTS GA
-   * 支持内部部署和Adobe Managed Services (AMS)托管。
+   * 支持内部部署和Adobe Managed Services (AMS)*托管。
 * [AEM 6.5](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
-   * 支持内部部署和AMS托管。
+   * 支持内部部署和AMS*托管。
 * [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)（版本`2023.8.13099`或更高版本）
 
 本文档重点介绍对通用编辑器的AEM 6.5 LTS支持。 要将通用编辑器与AEM 6.5 LTS结合使用，您需要满足以下条件：
 
 * AEM 6.5 LTS GA
 * 正确配置 Dispatcher
+
+>[!NOTE]
+>
+>*如果您使用Adobe Managed Services (AMS)，并且想要使用通用编辑器，请联系您的客户成功工程师(CSE)。
 
 ## 设置 {#setup}
 
