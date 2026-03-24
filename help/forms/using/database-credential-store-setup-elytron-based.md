@@ -4,13 +4,13 @@ description: JBoss EAP 8支持Elytron凭据存储，以便在AEM Forms中进行�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: f093f39fb535209297940cff13a99c7631812152
+exl-id: d7a9502b-8d6a-4d83-9b1f-0c82cbf34b70
+source-git-commit: 58f549aaf5f248c2382477790c825bba1d737137
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
-
 
 # 数据库凭据存储设置（基于Elytron）
 
@@ -186,5 +186,5 @@ chmod +x create-elytron-cred-domain.sh
 
 >[!NOTE]
 >
->* 仅在主节点上配置凭据存储。
->* 辅助节点会自动使用与主节点同步的域配置。
+>* 将在主节点上创建的凭据存储文件(cred-store.p12)复制到每个从节点。
+
