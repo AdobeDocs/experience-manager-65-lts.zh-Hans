@@ -5,10 +5,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Architect,Data Architect,Developer
 exl-id: c2beb0fa-ff6c-4e42-842d-6a73311f4740
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d680ecf942886a61579cf72f82809e3dbbcfd394
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 88%
+ht-degree: 90%
 
 ---
 
@@ -45,18 +45,18 @@ ht-degree: 88%
 
 **推荐**
 
-使用GraphQL *的客户必须*&#x200B;安装包含GraphQL索引包的Experience Manager内容片段。 这样，您就可以根据实际使用的功能添加所需的索引定义。 无法安装此包可能会导致GraphQL查询缓慢或失败。
+使用GraphQL *的客户必须*&#x200B;安装包含GraphQL索引包的Experience Manager内容片段。 这样，您就可以根据实际使用的功能添加所需的索引定义。 如果未安装该包，可能会导致 GraphQL 查询变慢或失败。
 
 请参阅适用于您的Service Pack的版本的发行说明。 例如，对于最新的Service Pack，请参阅[安装适用于GraphQL内容片段的Experience Manager索引包](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) 。
 
 >[!NOTE]
 >
->每个实例仅安装此包一次；无需随每个Service Pack一起重新安装。
+>每个实例只需安装一次该包；无需在每次安装服务包时重新安装。
 
 **进一步引用**
 请参阅：
 
-* [安装适用于Experience Manager内容片段的GraphQL索引包](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)
+* [为 Experience Manager 内容片段安装 GraphQL 索引包](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package)
 
 ### 缓存策略 {#cache-strategy}
 
@@ -66,7 +66,7 @@ ht-degree: 88%
 
 **推荐**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 是 AEM 服务中的第一级缓存，位于 CDN 缓存之前。
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 是 AEM 服务中的第一级缓存，位于 CDN 缓存之前。
 
 **进一步的参考**
 
@@ -84,7 +84,7 @@ ht-degree: 88%
 
 请参阅：
 
-* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn)
+* [在AEM中使用CDN](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### 设置 HTTP 缓存控制标头 {#set-http-cache-control-headers}
 
@@ -98,7 +98,7 @@ ht-degree: 88%
 
 ```shell
 $ curl -X PUT \
-    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H 'authorization: Basic yourauthorizationcode' \
     -H "Content-Type: application/json" \
     "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
     -d \

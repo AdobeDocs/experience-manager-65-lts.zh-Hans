@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,GraphQL API
 role: Developer
 exl-id: 686d5510-8cdb-49eb-9ed0-f360be9bdc6d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d680ecf942886a61579cf72f82809e3dbbcfd394
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 86%
@@ -55,7 +55,7 @@ ht-degree: 86%
 
 ## 如何使 GraphQL 查询持久 {#how-to-persist-query}
 
-建议先在 AEM 作者环境中保留查询，然后将[查询转移到](#transfer-persisted-query-production) AEM 发布环境中，供应用程序使用。
+建议先在 AEM 作者环境中保留查询，然后将[查询转移到生产](#transfer-persisted-query-production) AEM 发布环境中，供应用程序使用。
 
 有多种持久查询的方法，包括：
 
@@ -71,7 +71,7 @@ GraphiQL IDE 是 **首选**&#x200B;保留查询的方法。使用 **cURL** 命�
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -117,7 +117,7 @@ GraphiQL IDE 是 **首选**&#x200B;保留查询的方法。使用 **cURL** 命�
 
    ```shell
    $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query" \
        -d \
@@ -143,7 +143,7 @@ GraphiQL IDE 是 **首选**&#x200B;保留查询的方法。使用 **cURL** 命�
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-wrapped" \
        -d \
@@ -156,7 +156,7 @@ GraphiQL IDE 是 **首选**&#x200B;保留查询的方法。使用 **cURL** 命�
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
        -d \
@@ -169,7 +169,7 @@ GraphiQL IDE 是 **首选**&#x200B;保留查询的方法。使用 **cURL** 命�
 
    ```shell
    $ curl -X PUT \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+       -H 'authorization: Basic yourauthorizationcode' \
        -H "Content-Type: application/json" \
        "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-parameters" \
        -d \
@@ -265,7 +265,7 @@ query getAdventuresByActivity($activity: String!) {
 
 ## 正在缓存您的持久查询 {#caching-persisted-queries}
 
-建议使用持久查询，因为可在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans) 和内容交付网络 (CDN) 层缓存此类查询，最终提高发出请求的客户端应用程序的性能。
+建议使用持久查询，因为可在 [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) 和内容交付网络 (CDN) 层缓存此类查询，最终提高发出请求的客户端应用程序的性能。
 
 默认情况下，AEM 将根据生存时间 (TTL) 定义使缓存失效。可通过以下参数定义这些 TTL。可通过多种方式访问这些参数，其名称因所使用的机制而异：
 
@@ -353,7 +353,7 @@ curl -u admin:admin -X POST \
 
 ### 使用 OSGi 配置管理缓存 {#cache-osgi-configration}
 
-要全局管理缓存，您可以[为&#x200B;**持久查询服务配置**&#x200B;配置OSGi设置](/help/sites-deploying/configuring-osgi.md)。 否则，此OSGi配置对发布实例[&#128279;](#publish-instances)使用默认值。
+要全局管理缓存，您可以[为](/help/sites-deploying/configuring-osgi.md)持久查询服务配置&#x200B;**配置OSGi设置**。 否则，此OSGi配置对发布实例[使用](#publish-instances)默认值。
 
 >[!NOTE]
 >
@@ -395,7 +395,7 @@ URL 可以划分为以下部分：
 
 ### 持久查询包
 
-可以将持久查询构建在[&#x200B; AEM 程序包](/help/sites-administering/package-manager.md)中。然后，可以在不同的环境中下载和安装 AEM 包。AEM 包也可以从 AEM 创作环境复制到 AEM 发布环境。
+可以将持久查询构建在[ AEM 程序包](/help/sites-administering/package-manager.md)中。然后，可以在不同的环境中下载和安装 AEM 包。AEM 包也可以从 AEM 创作环境复制到 AEM 发布环境。
 
 要创建包：
 
