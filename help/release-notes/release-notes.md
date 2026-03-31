@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 68bcdfff6ea13c7d392991eba9df957bd5ab1523
+source-git-commit: a3d1ebd3e1c4adba80fb63f0138d662a6d056cc6
 workflow-type: tm+mt
-source-wordcount: '6243'
-ht-degree: 20%
+source-wordcount: '6403'
+ht-degree: 19%
 
 ---
 
@@ -239,14 +239,18 @@ Assets Relate现在适用于包含空格的文件名。 更新的“关系”客
 
 <!-- #### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp2} -->
 
-
 <!--
+#### Forms Designer-->
+
 ### [!DNL Forms]{#forms-65-lts-sp2}
 
-#### Forms Designer
 
 #### Forms
 
+* 在JBoss EAP 8上的AEM Forms 6.5 LTS群集部署中，`domain/configuration/domain_oracle.xml`不再包含导致无效XML并阻止域控制器启动的重复`<security>`标记。 （FORMS-24687）
+* 在Turnkey Upgrade模式下，现在在升级期间正确应用了`lc_turnkey.xml`中的数据库端口，并且不再引用旧端口值。 （FORMS-24689）
+* 在Linux上设置JBoss EAP 8.0时，在Windows上修改的shell脚本不再因CRLF行结尾而导致`/bin/sh^M: bad interpreter or $'\r': command not found`错误。 （FORMS-24688）
+<!--
 #### Forms JEE 
 
 #### Forms Captcha {#forms-captcha-65-lts-sp2}
@@ -417,7 +421,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -541,6 +545,14 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 ## 已知问题 {#known-issues}
 
+### AEM Forms
+
+* **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择任何模块，则在采用自定义配置的统包模式下运行AEM Forms 6.5 LTS JEE时，数据库初始化在引导过程中失败。
+
+* **FORMS-24692：**&#x200B;邮件服务可能无法建立TLS套接字连接，从而导致电子邮件投放失败。
+
+* **FORMS-24741：**&#x200B;在Linux上的AEM Forms 6.5 LTS JEE中，如果未正确设置OSFileSetIntendedFor，Configuration Manager可能会失败。 请在运行Configuration Manager之前将其更新到所需配置文件中的Linux。
+
 ### 离线压缩后在线压缩期间存储库损坏(GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
 如果以前对JCR存储库运行过离线压缩，则用户在在线压缩期间可能会遇到存储库损坏的情况。 在此情况下可能会出现`SegmentNotFoundException` (SNFE)，并且可能导致存储库损坏。
@@ -606,5 +618,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
