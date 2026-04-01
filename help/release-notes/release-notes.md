@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 2ef60b4896c8d90714b33a9025567bf833f2ce06
+source-git-commit: 449f466473a3696d2ae8a7b91bd762765ddeac5b
 workflow-type: tm+mt
-source-wordcount: '6954'
+source-wordcount: '6983'
 ht-degree: 18%
 
 ---
@@ -286,9 +286,9 @@ Assets Relate现在适用于包含空格的文件名。 更新的“关系”客
 
 * Forms-20679：用户在“自适应Forms”功能板中遇到安全漏洞。 具体而言，在startpointcontrol.js文件中发现了一个跨站点脚本(XSS)问题，该问题可能会允许执行恶意脚本。
 
-* Forms-24687：在JBoss EAP 8上的AEM Forms 6.5 LTS群集部署中，`domain/configuration/domain_oracle.xml`不再包含导致无效XML并阻止域控制器启动的重复`<security>`标记。
+* Forms-24687：在JBoss EAP 8上的AEM Forms 6.5 LTS群集部署中，domain/configuration/domain_oracle.xml、domain_mysql.xml和domain_mssql.xml文件不再包含重复的`<security>`标记，这些标记导致无效的XML并阻止域控制器启动。
 
-* Forms-24689:In Turnkey Upgrade Mode在`lc_turnkey.xml`中更新数据库端口现在在升级期间正确应用，不再引用旧端口值。
+* Forms-24689：在Turnkey模式下，现在可在全新安装和升级期间正确应用数据库端口更新。 在全新安装模式下，用户可以从所有可用端口中进行选择，而在升级模式下，在升级过程中会正确引用lc_turnkey.xml中更新的数据库端口。
 
 * Forms-24688：在Linux上设置JBoss EAP 8.0时，在Windows上修改的Shell脚本不再因CRLF行结尾而导致`/bin/sh^M: bad interpreter or $'\r': command not found`错误。
 
@@ -463,7 +463,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -589,7 +589,7 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 ### AEM Forms
 
-* **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择模块或仅选择有限的组件，则在AEM Forms 6.5 LTS JEE Turnkey Custom模式下的引导期间，数据库初始化可能会失败。 失败是由于缺少依赖项(xalan-2.7.2.jar)，从而导致错误。 将JAR文件添加到adobe-livecycle-jboss.ear\lib解决了此问题。
+* **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择模块或仅选择有限的组件，则在AEM Forms 6.5 LTS JEE Turnkey Custom模式下的引导期间，数据库初始化会失败。 失败是由于缺少依赖项(xalan-2.7.2.jar)，从而导致错误。 将JAR文件添加到adobe-livecycle-jboss.ear\lib解决了此问题。
 
 * **FORMS-24692：**&#x200B;邮件服务可能无法建立TLS套接字连接，从而导致电子邮件投放失败。
 
@@ -658,5 +658,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
