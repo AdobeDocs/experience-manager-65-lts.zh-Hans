@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: a3d1ebd3e1c4adba80fb63f0138d662a6d056cc6
+source-git-commit: 2ef60b4896c8d90714b33a9025567bf833f2ce06
 workflow-type: tm+mt
-source-wordcount: '6403'
-ht-degree: 19%
+source-wordcount: '6954'
+ht-degree: 18%
 
 ---
 
@@ -42,6 +42,23 @@ ht-degree: 19%
 
 AEM 6.5 LTS SP2现在包含用于[内容片段和模型管理](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/65lts/)和[启动项](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/launches/)的OpenAPI。 这些API提供对内容片段和启动项的访问权限，以进行创作和计划。 它们使用与AEM as a Cloud Service相同的现代OpenAPI。
 
+**AEM 表单**
+
+* 增强了可视规则编辑器中的用户体验。 此更新包括：
+
+   * 保存后自动重新加载摘要视图以显示更新的规则状态
+
+   * 显示“添加”/“删除”按钮并允许切换而不是隐藏它们
+
+   * 在规则保存操作失败时提供明确的反馈(FORMS-21261)
+
+* 添加了运行时应用程序编程接口(API)，用于在AEM Forms中切换旧版可扩展标记语言(XML)导出模式，替换了-Dcom.adobe.fd.forms.export.legacy参数。 此增强使用户能够更有效地切换导出模式，从而提高工作流的灵活性。 （FORMS-23115）
+
+* 在自适应Forms中添加了对具有命名空间标记的JavaScript对象表示法(JSON)的支持。 此增强功能使用户能够更有效地处理JSON数据结构，从而提高数据集成和处理能力。 （FORMS-22519）
+
+* 在规则编辑器中添加了下载记录文档(DoR) /表单提交作为现成按钮(OOTB)。 通过此增强功能，客户无需编写自定义代码即可使用downloadDoR函数，从而提高可用性和效率。 （FORMS-21263）
+
+* 在自适应Forms中添加了对具有命名空间标记的JavaScript对象表示法(JSON)的支持。 此增强功能使用户能够更准确、更高效地预填表单，从而提高数据集成度并减少手动输入错误。 （FORMS-10883）
 
 <!-- UPDATE THE EACH RELEASE -->
 
@@ -247,9 +264,34 @@ Assets Relate现在适用于包含空格的文件名。 更新的“关系”客
 
 #### Forms
 
-* 在JBoss EAP 8上的AEM Forms 6.5 LTS群集部署中，`domain/configuration/domain_oracle.xml`不再包含导致无效XML并阻止域控制器启动的重复`<security>`标记。 （FORMS-24687）
-* 在Turnkey Upgrade模式下，现在在升级期间正确应用了`lc_turnkey.xml`中的数据库端口，并且不再引用旧端口值。 （FORMS-24689）
-* 在Linux上设置JBoss EAP 8.0时，在Windows上修改的shell脚本不再因CRLF行结尾而导致`/bin/sh^M: bad interpreter or $'\r': command not found`错误。 （FORMS-24688）
+* Forms-23971：用户遇到表单数据模型(FDM)编辑器的“数据Source/输入关键字”功能问题。 这会影响搜索和选择数据源的能力。
+
+* Forms-23754：在移动设备上，自适应Forms中的表组件在顶部呈现了一个隐藏的标题，导致屏幕阅读器误发内容。 这会影响依赖屏幕阅读器进行导航的用户。
+
+* Forms-23632：用户遇到基于核心组件的自适应Forms引用标记为granite:InternalArea的资源类型的问题，这影响了本地Forms加载项中的多个granite组件的功能。
+
+* Forms-23457：升级到AEM 6.5 LTS SP1后，表单提交失败。 用户遇到缺少com.adobe.cq.social.commons.CollabUtil的情况，这导致JSP编译错误和电子邮件操作失败。
+
+* Forms-23426：用户在基于Foundation Components的自适应Forms中遇到了hCaptcha无法正确翻译的问题。 这会影响非英语用户准确完成表单的能力。
+
+* Forms-22633：用户遇到表单提交失败，出现SAXParseException：“prolog中不允许包含内容”(HTTP 500)。 出现此问题的原因是，预填充数据XML中存在空值，导致服务器端XML解析失败。
+
+* Forms-22101：由于表单的选项卡导航标记无效，用户遇到自适应Forms未通过Web内容无障碍准则(WCAG)审核的问题；非列表元素呈现为列表的直接子级，其中仅允许列表项。 这会阻止表单通过必须满足法律或内部合规性要求的辅助功能验证器和受影响的组织。
+
+* Forms-21989：用户遇到记录文档(DoR) /提交PDF存在辅助功能问题，其中空表单字段未标记为表单元素。 这给屏幕阅读器带来了困难，影响了残障用户有效导航和完成表单的能力。
+
+* Forms-21925：用户遇到在表单加载期间子面板中组件的脚注未显示的问题。 当带有脚注的项目是页面上的最后一个组件时，会发生这种情况。
+
+* Forms-21814：用户在AEM Forms编辑器中选择组件时遇到问题。 当在选项卡之间导航并返回第一个选项卡时，某些容器变为不可选，从而阻止轻松识别和交互。
+
+* Forms-20679：用户在“自适应Forms”功能板中遇到安全漏洞。 具体而言，在startpointcontrol.js文件中发现了一个跨站点脚本(XSS)问题，该问题可能会允许执行恶意脚本。
+
+* Forms-24687：在JBoss EAP 8上的AEM Forms 6.5 LTS群集部署中，`domain/configuration/domain_oracle.xml`不再包含导致无效XML并阻止域控制器启动的重复`<security>`标记。
+
+* Forms-24689:In Turnkey Upgrade Mode在`lc_turnkey.xml`中更新数据库端口现在在升级期间正确应用，不再引用旧端口值。
+
+* Forms-24688：在Linux上设置JBoss EAP 8.0时，在Windows上修改的Shell脚本不再因CRLF行结尾而导致`/bin/sh^M: bad interpreter or $'\r': command not found`错误。
+
 <!--
 #### Forms JEE 
 
@@ -421,7 +463,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -547,11 +589,9 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 ### AEM Forms
 
-* **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择任何模块，则在采用自定义配置的统包模式下运行AEM Forms 6.5 LTS JEE时，数据库初始化在引导过程中失败。
+* **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择模块或仅选择有限的组件，则在AEM Forms 6.5 LTS JEE Turnkey Custom模式下的引导期间，数据库初始化可能会失败。 失败是由于缺少依赖项(xalan-2.7.2.jar)，从而导致错误。 将JAR文件添加到adobe-livecycle-jboss.ear\lib解决了此问题。
 
 * **FORMS-24692：**&#x200B;邮件服务可能无法建立TLS套接字连接，从而导致电子邮件投放失败。
-
-* **FORMS-24741：**&#x200B;在Linux上的AEM Forms 6.5 LTS JEE中，如果未正确设置OSFileSetIntendedFor，Configuration Manager可能会失败。 请在运行Configuration Manager之前将其更新到所需配置文件中的Linux。
 
 ### 离线压缩后在线压缩期间存储库损坏(GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
@@ -618,5 +658,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
