@@ -5,12 +5,13 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 449f466473a3696d2ae8a7b91bd762765ddeac5b
+source-git-commit: f1dbf625f1cb42feaede7acb0dee073ac78ebab3
 workflow-type: tm+mt
-source-wordcount: '6983'
+source-wordcount: '7002'
 ht-degree: 18%
 
 ---
+
 
 # Adobe Experience Manager 6.5 LTS SP2的最新发行说明 {#release-notes}
 
@@ -43,6 +44,10 @@ ht-degree: 18%
 AEM 6.5 LTS SP2现在包含用于[内容片段和模型管理](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/65lts/)和[启动项](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/launches/)的OpenAPI。 这些API提供对内容片段和启动项的访问权限，以进行创作和计划。 它们使用与AEM as a Cloud Service相同的现代OpenAPI。
 
 **AEM 表单**
+
+**AEM Forms 6.5 LTS SP2中包含的内容**
+
+* 支持带有JBOSS EAP 8.0的RDBMK  已添加。
 
 * 增强了可视规则编辑器中的用户体验。 此更新包括：
 
@@ -463,7 +468,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -658,5 +663,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
