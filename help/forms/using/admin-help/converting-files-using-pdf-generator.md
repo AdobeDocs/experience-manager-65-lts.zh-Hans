@@ -53,7 +53,7 @@ PDF Generator在Acrobat 5.0或更高版本中创建的PDF文档包含XML格式�
 
 文档元数据包含（但不限于）也显示在Acrobat“文档属性”对话框的“描述”选项卡上的信息。 在“描述”选项卡中所做的更改将反映在文档元数据中。 可以使用第三方产品扩展和修改文档元数据。
 
-Adobe可扩展元数据平台(XMP)为Adobe应用程序提供了一个通用XML框架，该框架跨发布工作流标准化了文档元数据的创建、处理和交换。 您可以以XMP格式保存和导入文档元数据XML源代码，以便在不同文档之间共享元数据。 有关XMP文件的更多信息，请参阅[可扩展元数据平台(XMP)](https://www.adobe.com/products/xmp/)和[Adobe XMP开发人员中心](https://www.adobe.com/devnet/xmp.html)。
+Adobe可扩展元数据平台(XMP)为Adobe应用程序提供了一个通用XML框架，该框架跨发布工作流标准化了文档元数据的创建、处理和交换。 您可以以XMP格式保存和导入文档元数据XML源代码，以便在不同文档之间共享元数据。 有关XMP文件的更多信息，请参阅[可扩展元数据平台(XMP)](https://www.adobe.com/cn/products/xmp/)和[Adobe XMP开发人员中心](https://www.adobe.com/devnet/xmp.html)。
 
 您可以在Acrobat中创建XMP文件。
 
