@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+source-git-commit: 4c1f1b9a7b6667c58760b5e427cdd82bf197f297
 workflow-type: tm+mt
-source-wordcount: '7002'
-ht-degree: 18%
+source-wordcount: '7102'
+ht-degree: 17%
 
 ---
 
@@ -468,7 +468,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -596,7 +596,11 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 * **FORMS-24690：**&#x200B;在Configuration Manager中，如果未选择模块或仅选择有限的组件，则在AEM Forms 6.5 LTS JEE Turnkey Custom模式下的引导期间，数据库初始化会失败。 失败是由于缺少依赖项(xalan-2.7.2.jar)，从而导致错误。 将JAR文件添加到adobe-livecycle-jboss.ear\lib解决了此问题。
 
-* **FORMS-24692：**&#x200B;邮件服务可能无法建立TLS套接字连接，从而导致电子邮件投放失败。
+* **FORMS-24894：**&#x200B;在JBoss EAP 8上运行的Forms JEE LTS部署中，Reader扩展UI可能会失败，并显示内部服务器错误。
+
+* **FORMS-24892：**&#x200B;在JBoss上运行的Forms JEE LTS上，与电子邮件相关的功能可能会失败。 尝试使用电子邮件功能时，服务器可能会记录类似于`Error IMAPProvider not a subtype`的错误。
+
+* **FORMS-24741：**&#x200B;在Linux平台上，Forms JEE LTS要求在运行Configuration Manager之前正确设置`OSFileSetIntendedFor`中的`LFS_Foundation.properties`属性。 如果未更新，则配置可能无法针对Linux进行适当定制，这可能会导致运行时或部署问题。 若要解决此问题，请在运行安装程序之后，执行Configuration Manager之前，导航到`configurationManager/config/solcomp/`，打开`LFS_Foundation.properties`，设置`OSFileSetIntendedFor=Linux`，保存文件，然后运行Configuration Manager。
 
 ### 离线压缩后在线压缩期间存储库损坏(GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
@@ -663,5 +667,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
