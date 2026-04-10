@@ -3,9 +3,9 @@ title: 清单 - 进一步参考
 description: 了解可进一步阐述和/或补充《管理项目 - 最佳做法清单》中所涵盖文档和原则的详细信息。
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
+role: Admin,Developer,Leader
 exl-id: 15d9c2ac-0b13-4839-a873-bc884ee69132
-source-git-commit: 2efe81437790352d674bdb0e9cc9ff524fd00487
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '3695'
 ht-degree: 100%
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ### AEM 内的功能 {#features-within-aem}
 
-在实施 AEM（尤其是首次实施）时，请查看 [AEM 的功能和工作流](https://business.adobe.com/cn/products/experience-manager/adobe-experience-manager.html)，以确保明确您所需要或希望使用的功能领域。
+在实施 AEM（尤其是首次实施）时，请查看 [AEM 的功能和工作流](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)，以确保明确您所需要或希望使用的功能领域。
 
 请考虑您正在使用的 AEM 功能，以及它们对设计的影响。例如：
 

@@ -8,11 +8,11 @@ topic-tags: personalization
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: b5fc6cf5-fffd-4ee9-91d4-d10e532c3a11
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1936'
 ht-degree: 75%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 75%
 
 >[!CAUTION]
 >
->确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+>保护发布实例上的活动设置节点&#x200B;**cq:ActivitySettings**，使其不可由普通用户访问。 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 >
 >请参阅[与 Adobe Target 集成的先决条件](/help/sites-administering/target-requirements.md#securingtheactivitysettings)，以了解详细信息。
 
@@ -80,7 +80,7 @@ ht-degree: 75%
 * **定位引擎：**&#x200B;将 [AEM](/help/sites-authoring/personalization.md#aem) 或 [Adobe Target](/help/sites-authoring/personalization.md#adobe-target) 作为目标内容的引擎。
 
 * **选择 Target 配置：**（仅限 Adobe Target）此活动连接到 Adobe Target 的云配置。只有为定位引擎选择了 Adobe Target 时，才会显示此选项。
-* **活动类型：**&#x200B;活动类型 — A/B测试或体验定位
+* **活动类型：**活动类型 — A/B测试或体验定位
 * **目标：**（可选）活动描述。
 * **体验：**&#x200B;受众名称和您定位的营销区段之间的映射。
 * **流量百分比：**&#x200B;如果选择 A/B 测试，则可以更改每个体验的流量（百分比）。
@@ -108,7 +108,7 @@ ht-degree: 75%
 1. 向活动添加一个或多个体验。 单击&#x200B;**添加体验**。
 1. 如果您使用的是 AEM 定位或 Adobe Target 体验定位：
 
-   1. 单击&#x200B;**选择受众**&#x200B;并选择您的体验定位的区段。
+   1. 单击**选择受众**并选择您的体验定位的区段。
    1. 单击&#x200B;**添加体验**，键入名称，然后单击&#x200B;**确定**。
 
    1. 单击&#x200B;**下一步**。

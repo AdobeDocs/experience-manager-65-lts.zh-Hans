@@ -1,5 +1,5 @@
 ---
-title: Creative Project与PIM集成
+title: 创意项目与 PIM 集成
 description: Creative项目简化了整个照片拍摄工作流，包括生成照片拍摄请求、上传照片拍摄、协作拍摄照片以及打包已批准的资产
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -7,20 +7,20 @@ topic-tags: projects
 content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 4531a41c-99fa-4e98-b4f4-f8fc92ed9095
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
 
 ---
 
-# Creative Project与PIM集成 {#creative-project-and-pim-integration}
+# 创意项目与 PIM 集成 {#creative-project-and-pim-integration}
 
-如果您是营销人员或创意专业人员，则可以使用Adobe Experience Manager (AEM)中的Creative Project工具来管理与电子商务相关的产品摄影以及组织内的相关创意流程。
+如果您是营销人员或创意专业人员，则可以使用Adobe Experience Manager (AEM)中的Creative项目工具来管理组织内与电子商务相关的产品摄影和相关创意流程。
 
-您可以使用Creative Project简化照片拍摄工作流中的以下任务：
+您可以使用Creative项目简化照片拍摄工作流中的以下任务：
 
 * 生成照片拍摄请求
 * 上传照片拍摄
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 ## 产品照片拍摄工作流  {#exploring-product-photo-shoot-workflows}
 
-Creative Project提供各种项目模板以满足各种项目要求。 **产品照片拍摄项目**&#x200B;模板现成可用。 此模板包含照片拍摄工作流，可让您启动和管理产品照片拍摄请求。 它还包含一系列任务，使您能够通过适当的审阅和批准流程获取产品的数字图像。
+Creative项目提供各种项目模板，以满足各种项目要求。 **产品照片拍摄项目**&#x200B;模板现成可用。 此模板包含照片拍摄工作流，可让您启动和管理产品照片拍摄请求。 它还包含一系列任务，使您能够通过适当的审阅和批准流程获取产品的数字图像。
 
 ## 创建产品照片拍摄项目 {#create-a-product-photo-shoot-project}
 
@@ -60,12 +60,12 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 
 **产品照片拍摄项目**&#x200B;包括以下现成的工作流：
 
-* **产品照片拍摄(Commerce集成)工作流**：此工作流使用商业集成与产品信息管理(PIM)系统来自动生成选定产品（层次结构）的拍摄列表。 工作流完成后，您可以将产品数据作为资产元数据的一部分查看。
+* **产品照片拍摄（Commerce集成）工作流**：此工作流使用商业集成与产品信息管理(PIM)系统来自动生成选定产品（层次结构）的拍摄列表。 工作流完成后，您可以将产品数据作为资产元数据的一部分查看。
 * **产品照片拍摄工作流**：此工作流允许您提供拍摄列表，而不是依赖商业集成。 它将上传的图像映射到Project Assets文件夹中的CSV文件。
 
-使用&#x200B;**产品照片拍摄(Commerce集成)**&#x200B;工作流将图像资源映射到AEM中的产品。 此工作流使用商务集成将批准的图像链接到位置`/etc/commerce`上的现有产品数据。
+使用&#x200B;**产品照片拍摄（Commerce集成）**&#x200B;工作流将图像资源映射到AEM中的产品。 此工作流使用商务集成将批准的图像链接到位置`/etc/commerce`上的现有产品数据。
 
-**产品照片拍摄(Commerce集成)**&#x200B;工作流包含以下任务：
+**产品照片拍摄（Commerce集成）**&#x200B;工作流包含以下任务：
 
 * 创建拍摄列表
 * 上传照片拍摄
@@ -140,14 +140,14 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 
 您可以通过类似方式为&#x200B;**产品照片拍摄**&#x200B;工作流配置其他任务。
 
-执行相同步骤以配置&#x200B;**产品照片拍摄(Commerce集成)工作流**&#x200B;中的任务。
+执行相同步骤以配置&#x200B;**产品照片拍摄（Commerce集成）工作流**&#x200B;中的任务。
 
 ## 启动项目工作流 {#starting-a-project-workflow}
 
 本节介绍如何将产品信息管理与您的创意项目集成。
 
 1. 导航到产品照片拍摄项目，然后单击&#x200B;**工作流**&#x200B;信息卡上的&#x200B;**添加工作**&#x200B;图标。
-1. 选择&#x200B;**产品照片拍摄(Commerce集成)**&#x200B;工作流卡以启动&#x200B;**产品照片拍摄(Commerce集成)**&#x200B;工作流。 如果`/etc/commerce`下的产品信息不可用，请选择&#x200B;**产品照片拍摄**&#x200B;工作流并启动&#x200B;**产品照片拍摄**&#x200B;工作流。
+1. 选择&#x200B;**产品照片拍摄（Commerce集成）**&#x200B;工作流卡以启动&#x200B;**产品照片拍摄（Commerce集成）**&#x200B;工作流。 如果`/etc/commerce`下的产品信息不可用，请选择&#x200B;**产品照片拍摄**&#x200B;工作流并启动&#x200B;**产品照片拍摄**&#x200B;工作流。
 
    ![工作流向导](assets/chlimage_1-140a.png)
 
@@ -194,7 +194,7 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 
    ![查看拍摄列表](assets/chlimage_1-148a.png)
 
-   要编辑现有数据或添加新数据，请单击工具栏中的&#x200B;**编辑**。 只能编辑&#x200B;**Product**&#x200B;和&#x200B;**Description**&#x200B;字段。
+   要编辑现有数据或添加新数据，请单击工具栏中的&#x200B;**编辑**。 只能编辑**Product**和&#x200B;**Description**&#x200B;字段。
 
    ![编辑拍摄列表](assets/chlimage_1-149a.png)
 
@@ -240,7 +240,7 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 
 如果您是编辑器，则可以上传在上一个任务中创建或上传的&#x200B;**shotlist.csv**&#x200B;文件中列出的产品的拍摄照片。
 
-要上载的图像的名称必须以`<ProductId_>`开头，其中`ProductId`是从`shotlist.csv`文件中的&#x200B;**Id**&#x200B;字段引用的。 例如，对于拍摄列表中具有&#x200B;**Id** `397122`的产品，您可以上载名称为`397122_highcontrast.jpg`、`397122_lowlight.png`等的文件。
+要上载的图像的名称必须以`<ProductId_>`开头，其中`ProductId`是从&#x200B;**文件中的** Id`shotlist.csv`字段引用的。 例如，对于拍摄列表中具有&#x200B;**Id** `397122`的产品，您可以上载名称为`397122_highcontrast.jpg`、`397122_lowlight.png`等的文件。
 
 您可以直接上传图像或上传包含图像的ZIP文件。 根据图像名称，图像将放置在照片拍摄文件夹中相应的产品文件夹中。
 
@@ -296,7 +296,7 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 
 单击下一个级别可查看根据产品数据层次结构划分的产品。
 
-创意项目将批准的资产与引用的产品关联。 资源元数据更新了&#x200B;**产品数据**&#x200B;选项卡的资源属性下的产品引用和基本信息，这些产品引用和基本信息显示在AEM资源元数据部分中。
+Creative项目将批准的资产与引用的产品关联。 资源元数据更新了&#x200B;**产品数据**&#x200B;选项卡的资源属性下的产品引用和基本信息，这些产品引用和基本信息显示在AEM资源元数据部分中。
 
 >[!NOTE]
 >
@@ -334,7 +334,7 @@ Creative Project提供各种项目模板以满足各种项目要求。 **产品�
 您可以根据自己的要求自定义&#x200B;**项目照片拍摄**&#x200B;工作流。 这是一个基于角色的可选任务，您可以执行该任务来设置项目中的变量值。 之后，您可以使用配置的值做出决策。
 
 1. 单击AEM徽标，然后导航到&#x200B;**工具** > **工作流** > **模型**，以打开&#x200B;**工作流模型**&#x200B;页面。
-1. 选择&#x200B;**产品照片拍摄(Commerce集成)**&#x200B;工作流或&#x200B;**产品照片拍摄**&#x200B;工作流，然后单击工具栏中的&#x200B;**编辑**&#x200B;以在编辑模式下打开该工作流。
+1. 选择&#x200B;**产品照片拍摄（Commerce集成）**&#x200B;工作流或&#x200B;**产品照片拍摄**&#x200B;工作流，然后单击工具栏中的&#x200B;**编辑**&#x200B;以在编辑模式下打开该工作流。
 1. 打开侧面板并找到&#x200B;**创建基于角色的项目任务**&#x200B;步骤，然后将其拖动到工作流。
 
    ![创建基于角色的项目任务](assets/project-model-role-based.png)

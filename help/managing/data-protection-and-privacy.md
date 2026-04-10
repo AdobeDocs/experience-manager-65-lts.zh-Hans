@@ -3,9 +3,9 @@ title: 数据保护和数据隐私法规——Adobe Experience Manager 准备工
 description: 了解 Adobe Experience Manager 如何支持各类数据保护和隐私法规。其中包括欧盟《通用数据保护条例》（GDPR）、加州消费者隐私法，以及在实施新 AEM 项目时的合规方法。
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
+role: Developer,Leader,User
 exl-id: 6faf8e4f-ca2a-4d68-a354-fb0aa6c2644b
-source-git-commit: 4a93e17da1157253a681bf8b3a38252962d8fb59
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 98%
@@ -105,7 +105,7 @@ Adobe 提供了在 Adobe Experience Manager 中处理与访问、删除和退出
 
 * [Adobe Target - 隐私概述](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en)
 
-* [Adobe Analytics 数据隐私工作流](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=zh-Hans)
+* [Adobe Analytics 数据隐私工作流](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)
 
 ## AEM Forms {#aem-forms}
 

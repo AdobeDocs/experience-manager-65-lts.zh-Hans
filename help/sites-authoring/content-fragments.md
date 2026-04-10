@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Content Fragments
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 5bde6c78-84bc-48f5-b06f-1c4282eaf5c1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 66%
@@ -180,7 +180,7 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 
 ### 使用关联内容 {#using-associated-content}
 
-如果您有[&#128279;](/help/assets/content-fragments/content-fragments-assoc-content.md)与[内容片段](/help/assets/content-fragments/content-fragments.md)关联的内容，则这些资产可从侧面板（在将片段放置到内容页面后）中获取。 关联内容实际上是中间内容的[特殊内容源](#adding-in-between-content)。
+如果您有[与](/help/assets/content-fragments/content-fragments-assoc-content.md)内容片段[关联的内容](/help/assets/content-fragments/content-fragments.md)，则这些资产可从侧面板（在将片段放置到内容页面后）中获取。 关联内容实际上是中间内容的[特殊内容源](#adding-in-between-content)。
 
 >[!NOTE]
 >

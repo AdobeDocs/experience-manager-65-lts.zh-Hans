@@ -11,7 +11,7 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 470636ce-3934-4aac-80ff-1fe6bd84455e
 index: false
-source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 6%
@@ -84,7 +84,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 * `cq:wcmmode`：编辑器的WCM模式（例如，页面、模板）
 * `cq:pagemodel_root_url`：应用程序的根模型的URL。 由于子页面模型是应用程序根模型的片段，因此直接访问子页面时至关重要。 然后，` [PageModelManager](/help/sites-developing/spa-page-component.md)`会系统地重新构建应用程序初始模型，使其从根入口点进入应用程序。
 
-* `cq:pagemodel_router`：启用或禁用`PageModelManager`库的` [ModelRouter](/help/sites-developing/spa-routing.md)`
+* `cq:pagemodel_router`：启用或禁用` [ModelRouter](/help/sites-developing/spa-routing.md)`库的`PageModelManager`
 
 * `cq:pagemodel_route_filters`：逗号分隔列表或正则表达式，用于提供` [ModelRouter](/help/sites-developing/spa-routing.md)`必须忽略的路由。
 
@@ -92,7 +92,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 >
 >本文档仅将We.Retail日志应用程序用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
 
 ## 页面编辑器叠加同步 {#page-editor-overlay-synchronization}
 
@@ -100,7 +100,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 
 ## Sling模型JSON导出结构配置 {#sling-model-json-exported-structure-configuration}
 
-启用路由功能后，会假设在SPA的JSON导出中包含应用程序的不同路由(这归功于AEM导航组件的JSON导出)。 AEM导航组件的JSON输出可通过以下两个属性在SPA的根页面内容策略中进行配置：
+启用路由功能后，会假设在SPA的JSON导出中包含应用程序的不同路由（这归功于AEM导航组件的JSON导出）。 AEM导航组件的JSON输出可通过以下两个属性在SPA的根页面内容策略中进行配置：
 
 * `structureDepth`：与导出的树深度对应的数字
 * `structurePatterns`：与要导出的页面对应的正则表达式数组的正则表达式

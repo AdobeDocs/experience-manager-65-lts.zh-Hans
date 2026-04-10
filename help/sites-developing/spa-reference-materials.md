@@ -1,5 +1,5 @@
 ---
-title: SPA参考资料
+title: SPA 参考材料
 description: 单页应用程序API引用和源代码存储库概述
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: ba64fb22-85fb-434b-93fa-be910af107a0
 index: false
-source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
 
-# SPA参考资料 {#spa-reference-materials}
+# SPA 参考材料 {#spa-reference-materials}
 
 ## SPA JavaScript API参考{#spa-javascript-api-references}
 

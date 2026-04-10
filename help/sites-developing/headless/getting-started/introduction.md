@@ -3,9 +3,9 @@ title: Headless快速入门指南
 description: 通过本快速入门指南，了解Adobe Experience Manager (AEM) 6.5强大的Headless功能的基础知识，例如内容模型、内容片段和GraphQL API。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
+role: Admin,Developer
 exl-id: 867613e7-59fe-4948-a19a-bd196aec737b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 39%
@@ -18,7 +18,7 @@ Headless快速入门指南为已熟悉AEM和Headless技术的用户制定了五�
 
 1. [创建配置](create-configuration.md)
 1. [创建内容片段模型](create-content-model.md)
-1. [创建资源文件夹](create-assets-folder.md)
+1. [创建资产文件夹](create-assets-folder.md)
 1. [创建内容片段](create-content-fragment.md)
 1. [访问和交付内容片段](create-api-request.md)
 

@@ -11,9 +11,9 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 6a0c7dbf-02ae-4211-a5c7-941eb353a403
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
 workflow-type: tm+mt
-source-wordcount: '10800'
+source-wordcount: '10799'
 ht-degree: 1%
 
 ---
@@ -30,12 +30,12 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * SOAP
 * 观察文件夹
 * 电子邮件
-* (已在AEM表单中弃用)远程处理
+* （已在AEM表单中弃用）远程处理
 * 任务管理器
 
 >[!NOTE]
 >
->SOAP、EJB和(不用于JEE上的AEM Forms)远程端点会自动为每个激活的服务创建。 SOAP和EJB端点为所有服务操作启用SOAP和EJB。
+>SOAP、EJB和（不用于JEE上的AEM Forms）远程端点会自动为每个激活的服务创建。 SOAP和EJB端点为所有服务操作启用SOAP和EJB。
 
 远程端点使Flex客户端能够调用对该端点所添加到的AEM Forms服务的操作。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的RemoteObjects以调用对相关服务的操作。
 
@@ -46,7 +46,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 您可以使用Endpoint Registry服务完成以下任务：
 
 * 添加EJB端点。 （请参阅[添加EJB端点](programmatically-endpoints.md#adding-ejb-endpoints)。）
-* 添加SOAP端点。 (请参阅[添加SOAP端点](programmatically-endpoints.md#adding-soap-endpoints)。)
+* 添加SOAP端点。 （请参阅[添加SOAP端点](programmatically-endpoints.md#adding-soap-endpoints)。）
 * 添加观察文件夹终结点（请参阅[添加观察文件夹终结点](programmatically-endpoints.md#adding-watched-folder-endpoints)。）
 * 添加电子邮件端点。 （请参阅[添加电子邮件终结点](programmatically-endpoints.md#adding-email-endpoints)。）
 * 添加远程端点。 （请参阅[添加远程端点](programmatically-endpoints.md#adding-remoting-endpoints)。）
@@ -83,8 +83,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -146,7 +146,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的enable方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的enable方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -188,8 +188,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 创建SOAP端点需要这些JAR文件。 但是，如果您使用SOAP端点调用服务，则需要添加JAR文件。 有关AEM Forms JAR文件的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -251,7 +251,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的enable方法启用终结点，并传递`createEndpoint`方法返回的`Endpoint`对象。
+   通过调用`EndpointRegistryClient`对象的enable方法启用终结点，并传递`Endpoint`方法返回的`createEndpoint`对象。
 
 **另请参阅**
 
@@ -265,13 +265,13 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 ## 添加观察文件夹端点 {#adding-watched-folder-endpoints}
 
-您可以使用AEM Forms Java API以编程方式将观察文件夹端点添加到服务。 通过添加Watched Folder端点，用户可以将文件(如PDF文件)放置在文件夹中。 将文件放在文件夹中后，将调用配置的服务并操作文件。 服务执行指定的操作后，将修改的文件保存在指定的输出文件夹中。 观察文件夹配置为按固定速率间隔或按cron时间表进行扫描，例如每周一、周三和周五中午。
+您可以使用AEM Forms Java API以编程方式将观察文件夹端点添加到服务。 通过添加Watched Folder端点，用户可以将文件（如PDF文件）放置在文件夹中。 将文件放在文件夹中后，将调用配置的服务并操作文件。 服务执行指定的操作后，将修改的文件保存在指定的输出文件夹中。 观察文件夹配置为按固定速率间隔或按cron时间表进行扫描，例如每周一、周三和周五中午。
 
-为了以编程方式将Watched Folder端点添加到服务，请考虑以下名为&#x200B;*EncryptDocument*&#x200B;的短暂进程。 (请参阅[了解AEM Forms流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)。)
+为了以编程方式将Watched Folder端点添加到服务，请考虑以下名为&#x200B;*EncryptDocument*&#x200B;的短暂进程。 （请参阅[了解AEM Forms流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)。）
 
 ![aw_aw_encryptdocumentprocess](assets/aw_aw_encryptdocumentprocess.png)
 
-此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 PDF文档使用密码进行加密，并且经过密码加密的PDF文档是此过程的输出值。 输入值(不安全的PDF文档)的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值(密码加密的PDF文档)的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
+此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 PDF文档使用密码进行加密，并且经过密码加密的PDF文档是此过程的输出值。 输入值（不安全的PDF文档）的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值（密码加密的PDF文档）的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -298,8 +298,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -451,7 +451,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -504,7 +504,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 ![ae_ae_encryptdocumentprocess](assets/ae_ae_encryptdocumentprocess.png)
 
-此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 此过程使用密码对PDF文档进行加密，并将经过密码加密的PDF文档作为输出值返回。 输入值(不安全的PDF文档)的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值(密码加密的PDF文档)的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
+此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 此过程使用密码对PDF文档进行加密，并将经过密码加密的PDF文档作为输出值返回。 输入值（不安全的PDF文档）的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值（密码加密的PDF文档）的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
 
 >[!NOTE]
 >
@@ -531,8 +531,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -568,7 +568,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * **userName**：从电子邮件调用目标服务时使用的用户名。 默认值为 `SuperAdmin`。
 * **domainName**：必需的配置值。 默认值为 `DefaultDom`。
 * **domainPattern**：指定提供程序接受的传入电子邮件的域模式。 例如，如果使用`adobe.com`，则仅处理来自adobe.com的电子邮件，而忽略来自其他域的电子邮件。
-* **filePattern**：指定提供程序接受的传入文件附件模式。 这包括具有特定文件扩展名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的文件、具有特定名称（数据）的文件以及名称和扩展名中包含复合表达式的文件(&amp;amp；ast；)。[d][aA]&#39;端口&#39;)。 默认值为 `*`。
+* **filePattern**：指定提供程序接受的传入文件附件模式。 这包括具有特定文件扩展名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的文件、具有特定名称（数据）的文件以及名称和扩展名中包含复合表达式的文件(&amp;amp；ast；)。`[dD][aA]`&#39;端口&#39;)。 默认值为 `*`。
 * **recipientSuccessfulJob**：发送消息以指示作业成功的电子邮件地址。 默认情况下，成功的工作消息将始终发送给发件人。 如果键入`sender`，则将电子邮件结果发送给发件人。 最多支持100个收件人。 指定具有电子邮件地址的其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 在某些情况下，您可能希望触发一个进程，而不希望收到关于结果的电子邮件通知。 默认值为 `sender`。
 * **recipientFailedJob**：发送消息以指示失败的作业的电子邮件地址。 默认情况下，始终将失败的作业消息发送给发件人。 如果键入`sender`，则将电子邮件结果发送给发件人。 最多支持100个收件人。 指定具有电子邮件地址的其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 默认值为 `sender`。
 * **inboxHost**：要扫描的电子邮件提供程序的收件箱主机名或IP地址。
@@ -593,7 +593,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 要定义电子邮件端点所需的输入参数值，请指定以下值：
 
-**输入参数名称**：输入参数的名称。 在Workbench中为进程指定输入值的名称。 如果输入值属于服务操作(不是在Workbench中创建的进程的Forms服务)，则在component.xml文件中指定输入名称。 例如，此部分引入的进程的输入参数的名称是`InDoc`。
+**输入参数名称**：输入参数的名称。 在Workbench中为进程指定输入值的名称。 如果输入值属于服务操作（不是在Workbench中创建的进程的Forms服务），则在component.xml文件中指定输入名称。 例如，此部分引入的进程的输入参数的名称是`InDoc`。
 
 **映射类型**：用于配置调用服务操作所需的输入值。 两种类型的映射如下所示：
 
@@ -696,7 +696,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -754,13 +754,13 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 >
 >JEE上的AEM表单弃用LiveCycle Remoting API。
 
-您可以使用AEM Forms Java API以编程方式将远程端点添加到服务。 通过添加远程端点，您可以使Flex应用程序通过使用远程来调用服务。 (请参阅[使用AEM Forms调用(AEM Forms已弃用) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+您可以使用AEM Forms Java API以编程方式将远程端点添加到服务。 通过添加远程端点，您可以使Flex应用程序通过使用远程来调用服务。 (请参阅[使用AEM Forms调用（AEM Forms已弃用） AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
 
 为了以编程方式将远程端点添加到服务，请考虑以下名为&#x200B;*EncryptDocument*&#x200B;的短暂进程。
 
 ![ar_ar_encryptdocumentprocess](assets/ar_ar_encryptdocumentprocess.png)
 
-此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 PDF文档使用密码进行加密，并且经过密码加密的PDF文档是此过程的输出值。 输入值(不安全的PDF文档)的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值(密码加密的PDF文档)的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
+此进程接受不安全的PDF文档作为输入值，然后将不安全的PDF文档传递到加密服务的`EncryptPDFUsingPassword`操作。 PDF文档使用密码进行加密，并且经过密码加密的PDF文档是此过程的输出值。 输入值（不安全的PDF文档）的名称为`InDoc`，数据类型为`com.adobe.idp.Document`。 输出值（密码加密的PDF文档）的名称为`SecuredDoc`，数据类型为`com.adobe.idp.Document`。
 
 为了演示如何向服务添加远程端点，本节将远程端点添加到名为EncryptDocument的服务。
 
@@ -786,8 +786,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -849,7 +849,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -888,8 +888,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -970,7 +970,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -1009,8 +1009,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1111,8 +1111,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1184,7 +1184,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 >[!NOTE]
 >
->本主题使用`ConnectorRegistryClient` API检索有关终结点连接器的信息。 (请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+>本主题使用`ConnectorRegistryClient` API检索有关终结点连接器的信息。 （请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。）
 
 ### 步骤摘要 {#summary_of_steps-8}
 
@@ -1203,8 +1203,8 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 如果AEM Forms部署在受支持的J2EE应用程序服务器（不是JBoss）上，请将adobe-utilities.jar和jbossall-client.jar替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。 有关所有AEM Forms JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 

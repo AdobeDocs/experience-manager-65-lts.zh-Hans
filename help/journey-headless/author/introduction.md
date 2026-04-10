@@ -1,31 +1,31 @@
 ---
-title: 使用Adobe Experience Manager为Headless创作
-description: 简单介绍Adobe Experience Manager强大而灵活的Headless功能，以及如何为项目创作内容。
+title: 使用 Adobe Experience Manager 进行 Headless 创作
+description: 本节将介绍 Adobe Experience Manager 强大而灵活的 Headless 功能，以及如何为项目进行内容创作。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
+role: Admin,Developer,User,Leader
 exl-id: 4864d5e7-65e3-4309-9512-cde4a138e04c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '649'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# 使用 AEM 为 Headless 创作 – 简介 {#author-headless-introduction}
+# 使用 AEM 进行 Headless 创作——简介 {#author-headless-introduction}
 
-在[AEM Headless内容创作历程](overview.md)的这一可选部分中，您可以了解使用Adobe Experience Manager (AEM)为Headless内容投放创作内容所必需的（基本）概念和术语。
+在 [AEM Headless 内容创作之旅](overview.md)的这一部分中，您将学习必要的基本概念和术语，以便理解如何使用 Adobe Experience Manager（AEM）创作和投放 Headless 内容。
 
 ## 目标 {#objective}
 
 * **受众**：初学者
 * **目标**：介绍与 Headless 创作相关的概念和术语。
 
-## 内容管理系统 (CMS) {#content-management-system}
+## 内容管理系统（CMS） {#content-management-system}
 
 什么是内容管理系统？
 
-顾名思义，内容管理系统 (CMS) 是一种用于管理内容的计算机系统。这有点笼统，更准确地说，它（通常）用于管理您希望在您的网站上提供的内容。
+顾名思义，内容管理系统（CMS）是一种用于管理内容的计算机系统。这有点笼统，更准确地说，它（通常）用于管理您希望在您的网站上提供的内容。
 
 ## Headless CMS {#headless-cms}
 
@@ -33,7 +33,7 @@ Headless 是一个用来描述系统的术语，指的是有效地将内容与�
 
 传统上，您将在 CMS 中管理您的内容，并且同一 CMS 将负责在您的网页上渲染该内容。
 
-现在，Headless意味着您的内容集可以在CMS中进行管理，然后由一个或多个（独立）应用程序访问。
+现在，Headless 意味着您的内容集可以在 CMS 中进行管理，然后由一个或多个（独立的）应用程序进行访问。
 
 这意味着，您的内容可采用一系列广泛的格式传送到任意设备。这将使整个过程变得更加灵活，同时意味着您无需担心版面和格式设置。
 
@@ -51,7 +51,7 @@ Headless 是一个用来描述系统的术语，指的是有效地将内容与�
 
 * Headless CMS
    * 对于 Headless 来说，可以将内容创作为&#x200B;**内容片段**。
-它们是独立内容项，可以由一系列应用程序直接访问，因为它们具有基于&#x200B;**内容片段模型**&#x200B;的预定义结构。
+它们是独立内容项，可以由一系列应用程序直接访问，因为它们具有基于**内容片段模型**的预定义结构。
 这意味着您的内容可采用一系列广泛的格式与多种功能一起传输到多种设备。
 （如果需要，也可以在构建 AEM 网页时使用这些片段，为您带来双倍效果。）
 

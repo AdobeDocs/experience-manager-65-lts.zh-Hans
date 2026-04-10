@@ -3,9 +3,9 @@ title: 清单
 description: 项目清单旨在为项目投放提供一套最佳做法。它们会引导您完成项目生命周期的各个阶段，并对您的当前状态进行高层次监控。
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
+role: Admin,Developer,Leader
 exl-id: 4a7d8228-101a-47bd-9bcf-d521a69d87a0
-source-git-commit: 343fe14be5c85eecdd34f7428460ee016e97734b
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 100%

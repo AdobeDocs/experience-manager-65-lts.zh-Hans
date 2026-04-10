@@ -3,9 +3,9 @@ title: 翻译内容
 description: 使用翻译连接器和规则来翻译 Headless 内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
+role: Admin,Developer,User,Leader
 exl-id: 13d11e2b-5a3f-4987-a653-14e0790fbbd0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2115'
 ht-degree: 71%
@@ -133,7 +133,7 @@ ht-degree: 71%
 要查看此项目中包含的 Headless 内容的详细信息，请执行以下操作：
 
 1. 单击&#x200B;**翻译作业**&#x200B;信息卡底部的省略号按钮。
-1. **翻译作业**&#x200B;窗口将列出作业中的所有项目。
+1. **翻译作业**窗口将列出作业中的所有项目。
    ![翻译作业详细信息](assets/translation-job-detail.png)
 1. 单击一行可查看该行的详细信息，请记住，一行可能表示要翻译的多个内容项目。
 1. 单击行项目的选择复选框可查看更多选项，例如，从作业中删除行项目或在内容片段或Assets控制台中查看行项目的选项。

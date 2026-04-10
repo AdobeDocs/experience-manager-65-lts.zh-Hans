@@ -7,34 +7,34 @@ topic-tags: introduction
 content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 72ecde6c-0597-4743-aa5e-446a365953a5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# 最佳实践{#best-practices}
+# 最佳做法{#best-practices}
 
 创作最佳实践描述了如何以尽可能高效和最有效的方式使用AEM。 这一不断增加的主题列表包括AEM中的多个领域。
 
 以下区域提供了有关最佳实践的文档：
 
-* [资源](#assets)
+* [Assets](#assets)
 * [Sites](#sites)
 * [Forms](#forms)
 
 有关管理、部署和维护或开发的最佳实践，请参阅以下内容之一：
 
-* [管理最佳实践](/help/sites-administering/administer-best-practices.md)
-* [制定最佳实践](/help/sites-developing/best-practices.md)
+* [管理最佳做法](/help/sites-administering/administer-best-practices.md)
+* [开发最佳做法](/help/sites-developing/best-practices.md)
 * [部署最佳实践](/help/sites-deploying/best-practices.md)
 
 下面的表格中介绍了特定文档并将其链接到该文档。
 
-## 资源 {#assets}
+## Assets {#assets}
 
 以下主题介绍了有关Assets的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 

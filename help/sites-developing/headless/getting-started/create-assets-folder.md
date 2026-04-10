@@ -3,9 +3,9 @@ title: 创建Assets文件夹Headless快速入门指南
 description: 使用 AEM 内容片段模型定义内容片段的结构，也就是 Headless 内容的基础。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
+role: Admin,Developer
 exl-id: 4b23daf6-ea08-4cc6-b91d-0b4b029df3a5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 81%

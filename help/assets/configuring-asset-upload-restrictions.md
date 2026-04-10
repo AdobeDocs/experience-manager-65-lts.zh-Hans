@@ -2,14 +2,14 @@
 title: 配置资产上传限制
 description: 限制用户可以上传的资源类型（文件）
 contentOwner: AG
-role: Developer, Admin, Architect
+role: Developer,Admin
 feature: Asset Management,Upload
 solution: Experience Manager, Experience Manager Assets
 exl-id: c29cc43b-4930-4c70-bc1f-d50951801b7f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '192'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 

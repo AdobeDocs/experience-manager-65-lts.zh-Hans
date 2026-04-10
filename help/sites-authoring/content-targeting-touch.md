@@ -8,12 +8,12 @@ topic-tags: personalization
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 650ba9be-6546-46dc-b4ab-ea0b97abff40
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '5284'
-ht-degree: 71%
+ht-degree: 73%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 71%
 * 模拟用户体验。
 * 配置 Target 组件，以进行更多自定义。
 
-您可以将 AEM 或 Adobe Target 用作定位引擎（您必须拥有有效的 Adobe Target 帐户才能使用 Adobe Target）。如果您使用的是 Adobe Target，则必须先配置集成。请参阅有关集成Adobe Target[&#128279;](/help/sites-administering/target.md)的说明。
+您可以将 AEM 或 Adobe Target 用作定位引擎（您必须拥有有效的 Adobe Target 帐户才能使用 Adobe Target）。如果您使用的是 Adobe Target，则必须先配置集成。请参阅有关集成Adobe Target[的](/help/sites-administering/target.md)说明。
 
 ![chlimage_1-8](assets/chlimage_1-8.png)
 
@@ -149,7 +149,7 @@ ht-degree: 71%
 >
 >产品建议是目标组件的内容。
 
-体验显示在“受众”窗格中。在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和**&#x200B;**&#x200B;** Female 30以下的体验。此示例显示了目标图像组件的默认 **产品建议** 。
+体验显示在“受众”窗格中。在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和****** Female 30以下的体验。此示例显示了目标图像组件的默认 **产品建议** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -294,10 +294,10 @@ ht-degree: 71%
    >如果管理员进行了相应设置，您可能需要明确设置此位置。
    >
    >
-   >管理员可以决定是否需要在&#x200B;**https://&lt;主机>：&lt;端口>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**&#x200B;处设置此配置
+   >管理员可以决定是否需要在&#x200B;**https://&lt;主机>：&lt;端口>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**&#x200B;设置此配置
    >
    >
-   >要要求用户输入位置，请选中&#x200B;**强制位置**&#x200B;复选框。
+   >要要求用户输入位置，请选中**强制位置**复选框。
 
 1. 选择要为其创建产品建议的体验。
 1. 创建产品建议：
@@ -480,7 +480,7 @@ ht-degree: 71%
     </ul> <p>对于这些选项中的任一选项，是否已查看 mbox 指示是否已达到目标。您可以定义一个或多个 mbox。</p> </td>
   </tr>
   <tr>
-   <td><strong>参与</strong></td>
+   <td><strong>参与度</strong></td>
    <td><p>您可以衡量三种类型的参与：</p>
     <ul>
      <li>页面视图</li>
@@ -530,7 +530,7 @@ ht-degree: 71%
  </tbody>
 </table>
 
-有关成功量度的更多信息，请参阅 [Adobe Target 文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)
+有关成功量度的更多信息，请参阅 [Adobe Target 文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)
 
 ### 配置设置（AEM 定位） {#configuring-settings-aem-targeting}
 
@@ -563,19 +563,19 @@ ht-degree: 71%
    * **指定的日期和时间**：特定的时间。选择此选项时，单击日历图标，选择日期，然后指定活动结束时间。
 
 1. 要指定活动的优先级，请使用滑块选择&#x200B;**低**、**标准**&#x200B;或&#x200B;**高。**
-1. 如果您已使用Adobe帐户配置Adobe Target Anaytics，则会显示&#x200B;**报告Source**&#x200B;下拉菜单。 选 **择Adobe Target**&#x200B;**或Adobe Analytics** 作为源。
+1. 如果您已使用Adobe帐户配置Adobe Target Anaytics，则会显示&#x200B;**报告Source**&#x200B;下拉菜单。 选 **择Adobe Target****或Adobe Analytics** 作为源。
 
    如果选择 **Adobe Analytics**，请选择公司和报表包。如果选择 **Adobe Target**，则不需要执行任何操作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在“目 **标量度** ”区域的“我的主要目标 **&#x200B;**&#x200B;”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans) 。
+1. 在“目 **标量度** ”区域的“我的主要目标 **** ”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
    您可以通过单击右上角的三个圆点，然后选择&#x200B;**重命名**&#x200B;来重命名目标。
 
    如果需要清除所有字段，请单击右上角的三个圆点，然后选择&#x200B;**清除所有字段**。
 
-   您还可以定义所有量度的高级设置。选择&#x200B;**高级设置**&#x200B;可访问这些设置。请参阅上一个表中的成功量度计数方式的定义以及 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)。
+   您还可以定义所有量度的高级设置。选择&#x200B;**高级设置**&#x200B;可访问这些设置。请参阅上一个表中的成功量度计数方式的定义以及 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)。
 
    >[!NOTE]
    >

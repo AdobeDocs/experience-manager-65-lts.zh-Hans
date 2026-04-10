@@ -3,9 +3,9 @@ title: 基础组件
 description: 了解Adobe Experience Manager 6.5 LTS中的基础组件。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: c507bef7-4ddc-4e8c-9947-71cb2ecbbf0a
-source-git-commit: 1cdde3e82b0abb2be6f3d83020ad4bc0c8d68c2b
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '6848'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->AEM 6.5 LTS弃用了大多数基础组件。 Adobe建议在AEM项目中使用更新颖、可扩展的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。 这些组件是[We.Retail示例内容](/help/sites-developing/we-retail.md)的一部分，也可以[单独安装并由管理员用于开发](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=zh-Hans)。
+>AEM 6.5 LTS弃用了大多数基础组件。 Adobe建议在AEM项目中使用更新颖、可扩展的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 这些组件是[We.Retail示例内容](/help/sites-developing/we-retail.md)的一部分，也可以[单独安装并由管理员用于开发](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html)。
 >
 >您可以使用[AEM Modernize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/)重构基于基础组件的站点以使用核心组件。
 
@@ -65,7 +65,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
 
 自适应图像基础组件生成大小适合打开网页的窗口的图像。 要使用该组件，需从文件系统或DAM提供图像资源。 当打开网页时，Web浏览器下载已调整大小的图像的副本，以使其适合当前窗口。
 
@@ -140,11 +140,11 @@ ht-degree: 4%
    * **描述**
 自适应图像组件不使用此属性。
 
-### 轮盘 {#carousel}
+### 轮播 {#carousel}
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[轮盘核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[轮盘核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)。
 
 利用轮盘组件，可显示与各个页面关联的图像：
 
@@ -210,13 +210,13 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->您可以为Adobe Experience Manager创建一个自定义轮播组件，该组件在AEM DAM中显示数字资源。 请参阅[为Adobe Experience Manager创建自定义轮播组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)。
+>您可以为Adobe Experience Manager创建一个自定义轮播组件，该组件在AEM DAM中显示数字资源。 请参阅[为Adobe Experience Manager创建自定义轮播组件](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
 ### 图表 {#chart}
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 图表组件允许您添加条形图、折线图或饼图。 AEM会根据您提供的数据创建一个图表。 提供数据的方法是直接在“数据”选项卡中键入内容，或者复制并粘贴电子表格。
 
@@ -245,13 +245,13 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->您可以创建一个自定义AEM图表控件，以在AEM JCR中显示数据。 有关信息，请参阅[在图表中显示Adobe Experience Manager数据](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)。
+>您可以创建一个自定义AEM图表控件，以在AEM JCR中显示数据。 有关信息，请参阅[在图表中显示Adobe Experience Manager数据](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)。
 
 ### 内容片段 {#content-fragment}
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)。
 
 [内容片段](/help/sites-authoring/content-fragments.md)已创建并管理为独立于页面的资产。 您随后可以在创作内容页面时使用这些片段及其变体。
 
@@ -259,7 +259,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 利用此组件，可上传包含设计包的zip文件。
 
@@ -267,7 +267,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 下载组件在选定网页上创建一个链接，用于下载特定文件。 您可以从内容查找器拖动资产或上传文件。
 
@@ -287,7 +287,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 外部应用程序集成组件(**External**)允许您使用iframe将外部应用程序嵌入到AEM页面。
 
@@ -318,7 +318,7 @@ ht-degree: 4%
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 >[!CAUTION]
 >
@@ -366,7 +366,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[图像核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)。
 
 图像组件根据指定的参数显示图像和随附文本。
 
@@ -452,13 +452,13 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!NOTE]
 >
->此组件已使用[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)实施。
+>此组件已使用[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)实施。
 
 ### 列表 {#list}
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[列表核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[列表核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
 
 利用列表组件，可配置用于显示列表的搜索条件：
 
@@ -532,7 +532,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 >[!CAUTION]
 >
@@ -598,7 +598,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)。
 
 通过&#x200B;**引用**&#x200B;组件，您可以引用AEM网站其他页面（在当前实例中）的文本。 然后，引用的段落的内容会像在当前页面上一样显示。 当源段落发生更改（可能需要页面刷新）时，内容会更新。
 
@@ -632,7 +632,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[快速搜索核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[快速搜索核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html)。
 
 搜索组件可为页面添加搜索功能。
 
@@ -701,7 +701,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=zh-Hans)、[语言导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html?lang=zh-Hans)和[痕迹导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html)、[语言导航](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html)和[痕迹导航核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html)。
 
 自动列出站点地图，该列表（默认设置）列出当前网站中的所有页面（作为活动链接）。 例如，提取显示：
 
@@ -719,7 +719,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[轮盘核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[轮盘核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)。
 
 >[!CAUTION]
 >
@@ -753,7 +753,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
 
 >[!NOTE]
 >
@@ -802,7 +802,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
 
 >[!NOTE]
 >
@@ -831,7 +831,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[图像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=zh-Hans)和[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[图像](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)和[文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html)。
 
 文本和图像组件添加文本块和图像。 您还可以单独添加和编辑文本和图像。 有关详细信息，请参阅[Text](#text)和[Image](#image)组件。
 
@@ -879,7 +879,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[标题核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[标题核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
 
 标题组件可以：
 
@@ -908,7 +908,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件嵌入组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html)。
 
 >[!CAUTION]
 >
@@ -968,7 +968,7 @@ Flash组件允许您加载Flash影片。 您可以将Flash资源从内容查找�
 
 >[!CAUTION]
 >
->已弃用基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 表单组件用于创建表单，以供访客提交输入。 Forms和表单组件可用于收集包括用户反馈（例如客户满意度调查表）和用户信息（例如用户注册）的信息。
 
@@ -1088,7 +1088,7 @@ Forms由几个不同的组件组成：
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单容器核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单容器核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html)。
 
 表单组件使用&#x200B;**表单开始**&#x200B;和&#x200B;**表单结束**&#x200B;元素定义表单的开始和结束。 开始位置和结束位置始终成对，以确保正确定义表单。
 
@@ -1098,7 +1098,7 @@ Forms由几个不同的组件组成：
 
 >[!NOTE]
 >
->基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。 不支持在基础组件表单中使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)表单组件（反之）。
+>基础组件表单组件仅支持使用其他基础组件表单组件（按钮、文本、隐藏等）。 不支持在基础组件表单中使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)表单组件（反之）。
 
 #### 表单的开头 {#start-of-form}
 
@@ -1118,7 +1118,7 @@ Forms由几个不同的组件组成：
 
    * **操作类型**
 
-     表单需要操作。 操作定义根据用户提交的数据触发执行的操作(类似于HTML中的action= )。 某些客户需要相应的&#x200B;**操作配置**。
+     表单需要操作。 操作定义根据用户提交的数据触发执行的操作（类似于HTML中的action= ）。 某些客户需要相应的&#x200B;**操作配置**。
 标准AEM安装中包含一系列操作类型：
 
       * **帐户请求**
@@ -1316,7 +1316,7 @@ Forms由几个不同的组件组成：
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
 
 允许用户输入帐户名称：
 
@@ -1326,7 +1326,7 @@ Forms由几个不同的组件组成：
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
 
 允许您添加具有以下格式的国际地址字段：
 
@@ -1338,7 +1338,7 @@ Forms由几个不同的组件组成：
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 >[!CAUTION]
 >
@@ -1354,7 +1354,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
 
 通过复选框，您可以构建一个或多个复选框的列表，同时可以选择多个复选框。
 
@@ -1372,7 +1372,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 允许您提供输入信用卡详细信息所需的字段。 您可以对其进行配置，以指定接受的卡类型以及所需的信息（例如安全代码）。
 
@@ -1382,7 +1382,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
 
 下拉列表可以配置为为您提供一系列值供您选择：
 
@@ -1400,7 +1400,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 文件上传组件为用户提供了一种选择和上传文件的机制。
 
@@ -1408,13 +1408,13 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!NOTE]
 >
->您可以创建自定义上传组件以将文件上传到Sling Servlet。 有关信息，请参阅[将文件上传到Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276?profile.language=zh-Hans)。
+>您可以创建自定义上传组件以将文件上传到Sling Servlet。 有关信息，请参阅[将文件上传到Adobe Experience Manager](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-cloud-service-create-asset-servlet-for-uploading-small-files/td-p/404276)。
 
 ### 隐藏字段 {#hidden-field}
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单隐藏核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单隐藏核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html)。
 
 允许您创建隐藏字段。 这些隐藏字段可用于各种目的。 例如，在提交表单后必须执行操作，或者在后处理中需要隐藏数据时。
 
@@ -1430,7 +1430,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
 
 图像按钮允许您创建具有自己的图像和文本的按钮：
 
@@ -1440,7 +1440,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 图像上传组件为用户提供了一种选择和上传图像文件的机制。
 
@@ -1450,7 +1450,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 链接字段允许用户指定URL：
 
@@ -1462,7 +1462,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 允许用户输入密码：
 
@@ -1472,7 +1472,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 此组件为用户提供以下两个字段：
 
@@ -1487,7 +1487,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单选项核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html)。
 
 单选按钮组为您提供一个或多个单选复选框的列表，在任何特定时间只能选择其中一个复选框。
 
@@ -1505,7 +1505,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
 
 利用此组件，可创建包含默认文本的提交按钮：
 
@@ -1519,7 +1519,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。
 
 此字段允许您选择标记：
 
@@ -1546,7 +1546,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单文本核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html)。
 
 可以将标准文本字段配置为所需的大小，并在消息中拥有您自己的潜在客户：
 
@@ -1556,7 +1556,7 @@ Captcha组件要求用户键入屏幕上显示的字母数字字符串。 字符
 
 >[!CAUTION]
 >
->已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=zh-Hans)。
+>已弃用此基础组件。 Adobe建议改用[表单按钮核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html)。
 
 允许您创建在工作流中使用的提交按钮。
 

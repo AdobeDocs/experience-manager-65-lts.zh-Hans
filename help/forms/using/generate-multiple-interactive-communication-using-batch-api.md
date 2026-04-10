@@ -9,24 +9,24 @@ feature: Interactive Communication
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 92bb4045-ed22-4cc3-9365-65cb39b3c82d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
 workflow-type: tm+mt
 source-wordcount: '2134'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # 使用批处理API生成多个交互式通信 {#use-batch-api-to-generate-multiple-ic}
 
-您可以使用批处理API从模板生成多个交互式通信。 模板是一种没有任何数据的交互式通信。 批处理API将数据与模板结合起来以生成交互式通信。 该API在交互式通信的大量生产中非常有用。 例如，电话帐单、多个客户的信用卡对帐单。
+您可以使用批处理API从模板生成多个交互式通信。模板是一种没有任何数据的交互式通信。批处理API将数据与模板结合起来以生成交互式通信。该API在交互式通信的大量生产中非常有用。例如，电话帐单、多个客户的信用卡对帐单。
 
-批处理API接受JSON格式和表单数据模型中的记录（数据）。 生成的交互式通信数量等于在配置的表单数据模型中的输入JSON文件中指定的记录。 您可以使用API生成打印和Web输出。 PRINT选项会生成一个PDF文档，而WEB选项会为每个单独的记录生成JSON格式的数据。
+批处理API接受JSON格式和表单数据模型中的记录（数据）。生成的交互式通信数量等于在配置的表单数据模型中的输入JSON文件中指定的记录。您可以使用API生成打印和Web输出。PRINT选项会生成一个PDF文档，而WEB选项会为每个单独的记录生成JSON格式的数据。
 
 ## 使用批处理API {#using-the-batch-api}
 
-您可以将批处理API与Watched文件夹结合使用，或作为独立的Rest API使用。 可以为生成的交互式通信配置模板、输出类型(HTML、PRINT或两者)、区域设置、预填充服务和名称，以使用批处理API。
+您可以将批处理API与Watched文件夹结合使用，或作为独立的Rest API使用。可以为生成的交互式通信配置模板、输出类型（HTML、PRINT或两者）、区域设置、预填充服务和名称，以使用批处理API。
 
-将记录与交互式通信模板结合以生成交互式通信。 批处理API可以直接从JSON文件或通过表单数据模型访问的外部数据源读取记录（交互式通信模板的数据）。 您可以将每个记录保存在单独的JSON文件中，也可以创建JSON数组以将所有记录保存在单个文件中。
+将记录与交互式通信模板结合以生成交互式通信。批处理API可以直接从JSON文件或通过表单数据模型访问的外部数据源读取记录（交互式通信模板的数据）。您可以将每个记录保存在单独的JSON文件中，也可以创建JSON数组以将所有记录保存在单个文件中。
 
 **JSON文件中的单个记录**
 
@@ -70,48 +70,48 @@ ht-degree: 1%
 
 ### 将批处理API与Watched文件夹一起使用 {#using-the-batch-api-watched-folders}
 
-为了更便于体验API，AEM Forms现成提供了配置为使用批处理API的观察文件夹服务。 您可以通过AEM Forms UI访问服务以生成多个交互式通信。 您还可以根据要求创建自定义服务。 您可以使用下列方法将批处理API与Watched文件夹一起使用：
+为了更便于体验API，AEM Forms现成提供了配置为使用批处理API的观察文件夹服务。您可以通过AEM Forms UI访问服务以生成多个交互式通信。您还可以根据要求创建自定义服务。您可以使用下列方法将批处理API与Watched文件夹一起使用：
 
 * 指定采用JSON文件格式的输入数据（记录），以便生成交互式通信。
 * 使用保存在外部数据源中并通过表单数据模型访问的输入数据（记录）产生交互式通信。
 
 #### 指定JSON文件格式的输入数据记录，以便生成交互式通信 {#specify-input-data-in-JSON-file-format}
 
-将记录与交互式通信模板结合以生成交互式通信。 您可以为每个记录创建单独的JSON文件，或创建一个JSON数组以将所有记录保留在单个文件中：
+将记录与交互式通信模板结合以生成交互式通信。您可以为每个记录创建单独的JSON文件，或创建一个JSON数组以将所有记录保留在单个文件中：
 
 要根据保存在JSON文件中的记录创建交互式通信，请执行以下操作：
 
-1. 创建[Watched文件夹](/help/forms/using/creating-configure-watched-folder.md)并将其配置为使用批处理API：
+1. 创建一个[Watched文件夹](/help/forms/using/creating-configure-watched-folder.md)并将其配置为使用批处理API：
    1. 登录到AEM Forms创作实例。
-   1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。 选择&#x200B;**[!UICONTROL 新建]**。
-   1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。 例如 `c:\batchprocessing`。
-   1. 使用&#x200B;**字段在**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
+   1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。选择&#x200B;**[!UICONTROL 新建]**。
+   1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。例如 `c:\batchprocessing`。
+   1. 使用&#x200B;**[!UICONTROL 字段在]**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
    1. 在&#x200B;**[!UICONTROL 服务名称]**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服务。
-   1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=zh-Hans#about-file-patterns)指定Watched文件夹可以在Watched文件夹\input文件夹的子文件夹中找到输入文件。
+   1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched文件夹可以在Watched Folder\input文件夹的子文件夹中找到输入文件。
 1. 配置高级参数：
    1. 打开&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡并添加以下自定义属性：
 
       | 属性 | 类型 | 描述 |
       |--- |--- |--- |
-      | templatepath | 字符串 | 指定要使用的交互式通信模板的路径。 例如，`/content/dam/formsanddocuments/testsample/mediumic`。它是必需属性。 |
-      | recordpath | 字符串 | recordPath字段的值有助于设置交互式通信的名称。 您可以将记录字段的路径设置为recordPath字段的值。 例如，如果指定/employee/Id，则id字段的值将成为相应交互式通信的name。 默认值为[随机UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())。 |
-      | usePrefillService | 布尔值 | 将值设置为False。 可以使用usePrefillService参数预填充交互式通信，该数据是从为相应的交互式通信配置的预填充服务中获取的数据的。 当usePrefillService设置为true时，输入JSON数据（每个记录）将被视为FDM参数。 默认值为false。 |
-      | batchtype | 字符串 | 将值设置为PRINT、WEB或WEB_AND_PRINT。 缺省值为WEB_AND_PRINT。 |
-      | 区域设置 | 字符串 | 指定输出交互式通信的区域设置。 现成服务不使用区域设置选项，但您可以创建自定义服务来生成本地化的交互式通信。 默认值为en_US |
+      | templatepath | 字符串 | 指定要使用的交互式通信模板的路径。例如，`/content/dam/formsanddocuments/testsample/mediumic`。它是必需属性。 |
+      | recordpath | 字符串 | recordPath字段的值有助于设置交互式通信的名称。您可以将记录字段的路径设置为recordPath字段的值。例如，如果指定/employee/Id，则id字段的值将成为相应交互式通信的name。默认值为[随机UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())。 |
+      | usePrefillService | 布尔值 | 将值设置为False。可以使用usePrefillService参数预填充交互式通信，该数据是从为相应的交互式通信配置的预填充服务中获取的数据的。当usePrefillService设置为true时，输入JSON数据（每个记录）将被视为FDM参数。默认值为false。 |
+      | batchtype | 字符串 | 将值设置为PRINT、WEB或WEB_AND_PRINT。缺省值为WEB_AND_PRINT。 |
+      | 区域设置 | 字符串 | 指定输出交互式通信的区域设置。现成服务不使用区域设置选项，但您可以创建自定义服务来生成本地化的交互式通信。默认值为en_US |
 
    1. 选择&#x200B;**[!UICONTROL 创建]**。
 1. 使用创建的watched文件夹生成交互式通信：
-   1. 打开Watched文件夹 导航到输入文件夹。
+   1. 打开Watched文件夹导航到输入文件夹。
    1. 在输入文件夹中创建文件夹，并将JSON文件放在新创建的文件夹中。
-   1. 等待Watched文件夹处理文件。 处理开始时，输入文件和包含该文件的子文件夹将移至暂存文件夹。
+   1. 等待Watched文件夹处理文件。处理开始时，输入文件和包含该文件的子文件夹将移至暂存文件夹。
    1. 打开输出文件夹，以便查看输出：
       * 在Watched文件夹配置中指定PRINT选项时，将生成交互式通信的PDF输出。
-      * 在监视文件夹配置中指定WEB选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件[预填充Web模板](#web-template)。
+      * 在监视文件夹配置中指定WEB选项时，将为每个记录生成一个JSON文件。您可以使用JSON文件[预填充Web模板](#web-template)。
       * 当您同时指定PRINT和WEB选项时，将为每个记录生成PDF文档和JSON文件。
 
 #### 使用保存在外部数据源中并通过表单数据模型访问的输入数据产生交互式通信 {#use-fdm-as-data-source}
 
-将保存在外部数据源中的数据（记录）与交互式通信模板组合在一起，生成交互式通信。 创建交互式通信时，可通过表单数据模型(FDM)将其连接到外部数据源以访问数据。 您可以将Watched Folders批处理服务配置为使用相同的表单数据模型从外部数据源提取数据。 要[使用保存在外部数据源](/help/forms/using/work-with-form-data-model.md)中的记录创建交互式通信：
+将保存在外部数据源中的数据（记录）与交互式通信模板组合在一起，生成交互式通信。创建交互式通信时，可通过表单数据模型(FDM)将其连接到外部数据源以访问数据。 您可以将Watched Folders批处理服务配置为使用相同的表单数据模型从外部数据源提取数据。 要[根据保存在外部数据源](/help/forms/using/work-with-form-data-model.md)中的记录创建交互式通信：
 
 1. 配置模板的表单数据模型：
    1. 打开与交互式通信模板关联的表单数据模型。
@@ -126,7 +126,7 @@ ht-degree: 1%
    1. 保存属性和表单数据模型。
 1. 配置请求属性的值：
    1. 在文件系统上创建一个.json文件并打开它进行编辑。
-   1. 创建JSON数组并指定主要属性，以便您可以从表单数据模型中提取数据。 例如，以下JSON请求FDM发送id为27126或27127的记录的数据：
+   1. 创建JSON数组并指定主要属性，以便您可以从表单数据模型中提取数据。例如，以下JSON请求FDM发送id为27126或27127的记录的数据：
 
       ```json
           [
@@ -141,20 +141,20 @@ ht-degree: 1%
 
    1. 保存并关闭该文件。
 
-1. 创建[Watched文件夹](/help/forms/using/creating-configure-watched-folder.md)并将其配置为使用批处理API服务：
+1. 创建一个[Watched文件夹](/help/forms/using/creating-configure-watched-folder.md)并将其配置为使用批处理API服务：
    1. 登录到AEM Forms创作实例。
-   1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。 选择&#x200B;**[!UICONTROL 新建]**。
-   1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。 例如 `c:\batchprocessing`。
-   1. 使用&#x200B;**字段在**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
+   1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。选择&#x200B;**[!UICONTROL 新建]**。
+   1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。例如 `c:\batchprocessing`。
+   1. 使用&#x200B;**[!UICONTROL 字段在]**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
    1. 在&#x200B;**[!UICONTROL 服务名称]**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服务。
-   1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=zh-Hans#about-file-patterns)指定Watched文件夹可以在Watched文件夹\input文件夹的子文件夹中找到输入文件。
+   1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched文件夹可以在Watched文件夹\input文件夹的子文件夹中找到输入文件。
 1. 配置高级参数：
    1. 打开&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡并添加以下自定义属性：
 
       | 属性 | 类型 | 描述 |
       |--- |--- |--- |
       | templatepath | 字符串 | 指定要使用的交互式通信模板的路径。 例如，/content/dam/formsanddocuments/testsample/mediumic。 它是必需属性。 |
-      | recordpath | 字符串 | recordPath字段的值有助于设置交互式通信的名称。 您可以将记录字段的路径设置为recordPath字段的值。 例如，如果指定/employee/Id，则id字段的值将成为相应交互式通信的name。 默认值为[随机UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())。 |  |
+      | recordpath | 字符串 | recordPath字段的值有助于设置交互式通信的名称。 您可以将记录字段的路径设置为recordPath字段的值。 例如，如果指定/employee/Id，则id字段的值将成为相应交互式通信的name。 默认值为[随机UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID())。 |
       | usePrefillService | 布尔值 | 将该值设置为True。 默认值为false。 当该值设置为true时，批处理API会从配置的表单数据模型中读取数据，并将其填充到交互式通信中。 当usePrefillService设置为true时，输入JSON数据（每个记录）将被视为FDM参数。 |
       | batchtype | 字符串 | 将值设置为PRINT、WEB或WEB_AND_PRINT。 缺省值为WEB_AND_PRINT。 |
       | 区域设置 | 字符串 | 指定输出交互式通信的区域设置。 现成服务不使用区域设置选项，但您可以创建自定义服务来生成本地化的交互式通信。 缺省值为en_US。 |
@@ -166,18 +166,18 @@ ht-degree: 1%
    1. 等待Watched文件夹处理文件。 处理开始时，输入文件和包含该文件的子文件夹将移至暂存文件夹。
    1. 打开输出文件夹，以便查看输出：
       * 在Watched文件夹配置中指定PRINT选项时，将生成交互式通信的PDF输出。
-      * 在监视文件夹配置中指定WEB选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件[预填充Web模板](#web-template)。
+      * 在监视文件夹配置中指定WEB选项时，将为每个记录生成一个JSON文件。您可以使用JSON文件[预填充Web模板](#web-template)。
       * 当您同时指定PRINT和WEB选项时，将为每个记录生成PDF文档和JSON文件。
 
 ## 使用REST请求调用批处理API
 
-您可以通过代表性状态传输(REST)请求调用[批处理API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html)。 通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
+您可以通过代表性状态传输(REST)请求调用[批处理API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html)。通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
 
 在部署Java™ Servlet之前，请确保交互式通信以及相应的数据文件已准备就绪。 执行以下步骤，以便创建和部署Java™ Servlet：
 
 1. 登录AEM实例并创建交互式通信。 要使用下面给出的示例代码中提到的交互式通信，[单击此处](assets/SimpleMediumIC.zip)。
-1. [在您的AEM实例上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hans)生成和部署AEM项目。
-1. 将[AEM Forms Client SDK版本6.0.12或更高版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)添加到AEM项目的POM文件的依赖项列表中。 例如，
+1. [在您的AEM实例上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)生成和部署AEM项目。
+1. 将[AEM Forms Client SDK版本6.0.12或更高版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)添加到AEM项目的POM文件的依赖项列表中。例如，
 
    ```xml
        <dependency>
@@ -324,11 +324,11 @@ ht-degree: 1%
 
 1. 在上述代码中，将模板路径(setTemplatePath)替换为模板的路径，并设置setBatchType API的值：
    * 指定PRINT选项PDF时，将生成交互式通信的输出。
-   * 指定WEB选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件[预填充Web模板](#web-template)。
+   * 指定WEB选项时，将为每个记录生成一个JSON文件。您可以使用JSON文件[预填充Web模板](#web-template)。
    * 当您同时指定PRINT和WEB选项时，将为每个记录生成PDF文档和JSON文件。
 
-1. [使用maven将更新的代码部署到AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hans)。
-1. 要生成交互式通信，请调用批处理API。 批处理API打印会根据记录数量返回一系列PDF和.json文件。 您可以使用JSON文件[预填充Web模板](#web-template)。 如果您使用上述代码，则API部署在`http://localhost:4502/bin/batchServlet`。 该代码会打印并返回PDF和JSON文件流。
+1. [使用maven将更新的代码部署到AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)。
+1. 要生成交互式通信，请调用批处理API。 批处理API打印会根据记录数量返回一系列.json文件。您可以使用JSON文件[预填充Web模板](#web-template)。如果您使用上述代码，则API部署在`http://localhost:4502/bin/batchServlet`。该代码会打印并返回PDF和JSON文件流。
 
 ### 预填充Web模板 {#web-template}
 
@@ -338,7 +338,7 @@ ht-degree: 1%
 `http://host:port/<template-path>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=<guide-merged-json-path>`
 
 **示例**
-如果您的JSON文件位于`C:\batch\mergedJsonPath.json`，并且您使用以下交互式通信模板： `http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
+如果您的JSON文件位于`C:\batch\mergedJsonPath.json`，并且您使用以下交互式通信模板：`http://host:port/content/dam/formsanddocuments/testsample/mediumic/jcr:content?channel=web`
 
 然后，发布节点上的以下URL显示了交互式通信的Web渠道
 `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
@@ -354,7 +354,7 @@ ht-degree: 1%
 * **预填充服务协议**
   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=service://[SERVICE_NAME]/[IDENTIFIER]`
 
-  SERVICE_NAME是指OSGI预填充服务的名称。 请参阅创建并运行预填充服务。
+  SERVICE_NAME是指OSGI预填充服务的名称。请参阅创建并运行预填充服务。
 
   标识符是指OSGI预填充服务获取预填充数据所需的任何元数据。 登录用户的标识符是可以使用的元数据的示例。
 
@@ -363,4 +363,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->默认情况下仅启用CRX协议。 要启用其他支持的协议，请参阅[使用配置管理器配置预填充服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=zh-Hans)。
+>默认情况下仅启用CRX协议。 要启用其他支持的协议，请参阅[使用配置管理器配置预填充服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=en)。

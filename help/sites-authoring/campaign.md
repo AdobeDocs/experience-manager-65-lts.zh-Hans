@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe Campaign Classic和Adobe Campaign Standard
+title: 使用 Adobe Campaign Classic 和 Adobe Campaign Standard
 description: 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -7,16 +7,16 @@ content-type: reference
 topic-tags: personalization
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 1d621e12-6da5-4b49-98c9-3fb9b8189ff7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '2770'
-ht-degree: 0%
+source-wordcount: '2769'
+ht-degree: 2%
 
 ---
 
-# 使用Adobe Campaign Classic和Adobe Campaign Standard{#working-with-adobe-campaign-classic-and-adobe-campaign-standard}
+# 使用 Adobe Campaign Classic 和 Adobe Campaign Standard{#working-with-adobe-campaign-classic-and-adobe-campaign-standard}
 
 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容。 为此，您必须：
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 可能存在两种情况：
 
 * 内容可以与Adobe Campaign中的投放同步。 这样，您就可以在投放中使用AEM内容。
-* (仅限Adobe Campaign Classic)可以将内容直接发送到Adobe Campaign，后者自动生成新的电子邮件投放。 此模式具有限制。
+* （仅限Adobe Campaign Classic）可以将内容直接发送到Adobe Campaign，后者自动生成新的电子邮件投放。 此模式具有限制。
 
 本文档中详述了相关说明。
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 1. 从下拉列表中选择与您的Adobe Campaign实例匹配的配置，然后单击&#x200B;**保存**&#x200B;进行确认。
 1. 通过单击&#x200B;**Adobe Campaign**&#x200B;选项卡，可查看电子邮件已应用于该模板的模板。 如果要选择其他模板，您可以在编辑时从电子邮件中访问该模板。
 
-   如果要在&#x200B;**属性**&#x200B;中应用默认邮件模板以外的特定电子邮件投放模板(来自Adobe Campaign)，请选择&#x200B;**Adobe Campaign**&#x200B;选项卡。 在相关的Adobe Campaign实例中输入电子邮件投放模板的内部名称。
+   如果要在&#x200B;**属性**&#x200B;中应用默认邮件模板以外的特定电子邮件投放模板（来自Adobe Campaign），请选择&#x200B;**Adobe Campaign**&#x200B;选项卡。 在相关的Adobe Campaign实例中输入电子邮件投放模板的内部名称。
 
    您选择的模板决定了Adobe Campaign中可用的个性化字段。
 
@@ -177,7 +177,7 @@ ht-degree: 0%
    >
    >Adobe Campaign Classic的&#x200B;**：**
    >
-   >* 可用的上下文字段是从Adobe Campaign **nms：seedMember**&#x200B;架构中动态恢复的。 目标扩展数据可从包含与内容同步的投放的工作流中动态恢复。 (请参阅[将AEM中创建的内容与Adobe Campaign中的投放同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)部分)。
+   >* 可用的上下文字段是从Adobe Campaign **nms:seedMember**&#x200B;架构中动态恢复的。 目标扩展数据可从包含与内容同步的投放的工作流中动态恢复。 （请参阅[将AEM中创建的内容与Adobe Campaign中的投放同步](#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic)部分）。
    >
    >* 要添加或隐藏个性化元素，请参阅[管理个性化字段和块](/help/sites-administering/campaignonpremise.md#managing-personalization-fields-and-blocks)。
    >* **重要信息**：所有种子表字段也必须位于收件人表（或相应的联系人表）中。
@@ -198,7 +198,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果您使用Adobe Campaign Standard并使用示例模板，则在交付期间导入内容时，显示初始内容的两个个性化块（**&quot;&lt;%@ include view=&quot;MirrorPage&quot; %>&quot;**&#x200B;和&#x200B;**&quot;&lt;%@ include view=&quot;UnsubscriptionLink&quot; %>&quot;**）将会引发错误。 您可以使用个性化块选取器选择相应的块来调整这些内容。
+   >如果您使用Adobe Campaign Standard并使用示例模板，则在交付期间导入内容时，显示初始内容的两个个性化块（ **&quot;&lt;%@ include view=&quot;MirrorPage&quot; %>&quot;**&#x200B;和&#x200B;**&quot;&lt;%@ include view=&quot;UnsubscriptionLink&quot; %>&quot;**）将会引发错误。 您可以使用个性化块选取器选择相应的块来调整这些内容。
 
 1. 要预览个性化，请单击/点按工具栏中的相应图标以打开ContextHub。 个性化字段标记现在由所选角色的种子数据替换。 了解在ContextHub中切换角色时变量如何适应。
 
@@ -260,7 +260,7 @@ ht-degree: 0%
 
 要将在AEM中创建的页面链接到来自Adobe Campaign的电子邮件，请执行以下操作：
 
-1. 根据特定于AEM的电子邮件模板创建电子邮件。 有关详细信息，请参阅[在Adobe Campaign Standard中创建电子邮件](https://helpx.adobe.com/cn/campaign/standard/channels/using/creating-an-email.html)。
+1. 根据特定于AEM的电子邮件模板创建电子邮件。 有关详细信息，请参阅[在Adobe Campaign Standard中创建电子邮件](https://helpx.adobe.com/campaign/standard/channels/using/creating-an-email.html)。
 
    ![chlimage_1-36](assets/chlimage_1-36a.png)
 

@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 281c96e2-24f8-4568-add2-67972148b406
-source-git-commit: ebef0312d73597e28e5a1635a0e98f833d491d19
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2919'
 ht-degree: 43%
@@ -143,9 +143,9 @@ ht-degree: 43%
 
   您还可以使用[快捷键](/help/sites-authoring/keyboard-shortcuts.md) `/`（正斜杠）从任何控制台中调用搜索。
 
-* [解决方案](https://business.adobe.com/cn/)
+* [解决方案](https://business.adobe.com/)
 
-  ![解决方案](do-not-localize/screen_shot_2018-03-23at103552.png)
+  ![解决方法](do-not-localize/screen_shot_2018-03-23at103552.png)
 
 * [帮助](#accessinghelptouchoptimizedui)
 
@@ -424,7 +424,7 @@ ht-degree: 43%
 
 ![bh-15-1](assets/bh-15-1.png)
 
-* 信息卡视图显示各个项目在当前级别的信息信息卡。它们提供如下信息：
+* 信息卡视图显示各个项目在当前级别的信息信息卡。 它们提供如下信息：
 
    * 页面内容的可视表示形式。
    * 页面标题。

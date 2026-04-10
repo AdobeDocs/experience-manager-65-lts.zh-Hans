@@ -3,9 +3,9 @@ title: 配置翻译规则
 description: 了解如何定义翻译规则，标识要翻译的内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
+role: Admin,Developer,User,Leader
 exl-id: 94534336-1e1f-40eb-8364-9358c1420616
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 91%
@@ -69,7 +69,7 @@ ht-degree: 91%
 1. 使用路径浏览器选择所需的路径，然后单击&#x200B;**确认**&#x200B;按钮进行保存。 请记住，包含 Headless 内容的内容片段通常位于 `/content/dam/<your-project>` 下。
    ![选择路径](assets/select-context.png)
 1. AEM 将保存配置。
-1. 选择您创建的上下文，然后单击&#x200B;**编辑**。 这将打开&#x200B;**翻译规则编辑器**&#x200B;以配置属性。
+1. 选择您创建的上下文，然后单击&#x200B;**编辑**。 这将打开&#x200B;**翻译规则编辑器**以配置属性。
    ![翻译规则编辑器](assets/translation-rules-editor.png)
 1. 默认情况下，所有配置都继承自父路径，在此示例中为 `/content/dam`。取消选中选项&#x200B;**从`/content/dam`**&#x200B;继承以向配置添加其他字段。
 1. 取消选中后，在列表的&#x200B;**常规**&#x200B;部分下，添加您[之前标识为翻译字段](getting-started.md#content-models)的内容片段模型的属性名称。
@@ -78,7 +78,6 @@ ht-degree: 91%
    1. 单击&#x200B;**添加**。
    1. 对您必须翻译的所有字段重复这些步骤。
    1. 单击&#x200B;**保存**。
-
       ![添加属性](assets/add-property.png)
 
 您现在已配置翻译规则。

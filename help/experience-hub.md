@@ -5,9 +5,9 @@ landing-page-description: 了解 Adobe Experience Hub，它是访问所有 AEM �
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Authoring, AI Assistant, Central Interface Components, Getting Started, Onboarding, Programs, Workflows
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
-role: Admin, Architect, Developer, User
+role: Admin,Developer,User
 exl-id: 6dbc943b-3bca-4926-896d-f1471a49a70f
-source-git-commit: 79a9184fdae1cbb96172c6f507d0b326c7828551
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 7%
@@ -20,7 +20,7 @@ Experience Hub引入了一个集中化的起点，以便在Adobe Experience Mana
 
 观看重新构建的AEM Experience Hub工作区的快速导览（2分钟39秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475202/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -49,7 +49,7 @@ Adobe Experience Manager页面已更新，导航和交互式构件已得到增�
 
 >[!IMPORTANT]
 >
->显示的构件、工具和工件取决于用户角色、权限和AEM部署类型(AEM as a Cloud Service或Managed Services 6.5/6.5 LTS)。
+>显示的构件、工具和工件取决于用户角色、权限和AEM部署类型（AEM as a Cloud Service或Managed Services 6.5/6.5 LTS）。
 
 这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航。 此外，通过新的导航元素，可快速访问特定于已启用解决方案的主要Adobe Experience Manager功能。 此类解决方案包括Assets、Sites、Forms、内容片段、启动项等。
 
@@ -115,7 +115,7 @@ Experience Hub为创建内容、上传资源或管理团队访问权限等重要
 
 +++**Experience Hub如何帮助导航到不同的AEM功能？**
 
-Experience Hub在&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航提供了对AEM功能(如Assets、站点、Forms、内容片段和启动项)的快速访问。
+Experience Hub在&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航提供了对AEM功能（如Assets、站点、Forms、内容片段和启动项）的快速访问。
 
 +++
 

@@ -3,9 +3,9 @@ title: 了解创建营销活动时的分段
 description: 分段是创建营销活动时的主要考虑事项。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 7167c672-8d24-4493-aff6-b5b453074bff
-source-git-commit: 36022b939d598a43ee7f5339ed04122e476205b7
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 42%
@@ -60,7 +60,7 @@ ht-degree: 42%
 
 **派生特征** — 某些人口统计特征在未注册的情况下很难确定，但可以通过组合行为和人口统计特征来派生。
 
-例如，通过将引用URL（作为行为特征）与人口统计数据(通过诸如[Google Ad Planner](https://www.google.com/adplanner/)之类的工具获取)相结合，网站所有者可以推断其访客的人口统计特征。
+例如，通过将引用URL（作为行为特征）与人口统计数据（通过诸如[Google Ad Planner](https://www.google.com/adplanner/)之类的工具获取）相结合，网站所有者可以推断其访客的人口统计特征。
 
 **子区段** – 一个区段可以划分为若干个子区段。 这可以通过定义其他特征来完成。
 

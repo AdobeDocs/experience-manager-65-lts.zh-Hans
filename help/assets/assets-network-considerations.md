@@ -2,18 +2,18 @@
 title: 网络注意事项和要求
 description: 讨论设计 [!DNL Adobe Experience Manager Assets] 部署时的网络注意事项。
 contentOwner: AG
-role: Architect, Admin
+role: Developer,Admin
 feature: Developer Tools
 solution: Experience Manager, Experience Manager Assets
 exl-id: bf1dee29-75bb-445b-a661-fc7c52d78b63
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# [!DNL Assets]网络注意事项 {#assets-network-considerations}
+# [!DNL Assets] 网络注意事项 {#assets-network-considerations}
 
 了解您的网络与了解[!DNL Adobe Experience Manager Assets]一样重要。 网络可能会影响上传、下载和用户体验。 绘制网络拓扑图有助于识别网络中的瓶颈点和次优化区域，您必须修复这些区域才能提高网络性能和改善用户体验。
 

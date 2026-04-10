@@ -3,9 +3,9 @@ title: 查看页面分析数据以衡量页面内容的有效性
 description: 使用页面分析数据衡量其页面内容的有效性
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: b47591ac-10ff-4b87-b75d-68ed635ceca8
-source-git-commit: 87f0e0530b14c8cb7d25ee139ec89d75551fb16e
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 5%
@@ -84,4 +84,4 @@ analytics-administrators用户组的成员可以配置Sites控制台，以便作
 >
 >由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
 >
->现在应使用Adobe Analytics[提供的](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)ActivityMap插件。
+>现在应使用Adobe Analytics[提供的](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html)ActivityMap插件。

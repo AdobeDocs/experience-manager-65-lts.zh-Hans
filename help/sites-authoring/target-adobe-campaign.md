@@ -7,17 +7,17 @@ content-type: reference
 topic-tags: personalization
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: ce6ebfff-3a1d-4c9f-aa50-23d1c3afc852
-source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '421'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
-# 定位Adobe Campaign{#targeting-your-adobe-campaign}
+# 面向 Adobe Campaign 的目标选择{#targeting-your-adobe-campaign}
 
 要定位Adobe Campaign新闻稿，您需要先设置仅在Classic UI（适用于客户端上下文）中提供的分段。 之后，您可以为Adobe Campaign创建定位体验。 本节将介绍这两种方法。
 

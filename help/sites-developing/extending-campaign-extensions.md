@@ -1,5 +1,5 @@
 ---
-title: 自定义Adobe Campaign扩展
+title: 自定义 Adobe Campaign 扩展
 description: 您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,15 +10,15 @@ feature: Developing
 role: Developer
 exl-id: 7cdce721-ca00-43ac-a543-85bfad382821
 index: false
-source-git-commit: 2edf37c2d6bb04b418618f2780f773ab37559114
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '492'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
 
-# 自定义Adobe Campaign扩展 {#creating-custom-extensions}
+# 自定义 Adobe Campaign 扩展 {#creating-custom-extensions}
 
 通常，在实施项目时，您在AEM和Adobe Campaign中都拥有自定义代码。 使用现有API，您可以在Adobe Campaign中从AEM或从AEM到Adobe Campaign调用自定义代码。 本文档介绍如何执行此操作。
 

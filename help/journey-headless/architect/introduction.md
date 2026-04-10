@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Manager Headless内容架构师历程
-description: 简单介绍Adobe Experience Manager强大而灵活的Headless功能，以及如何对项目内容进行建模。
+title: Adobe Experience Manager Headless 内容架构师之旅
+description: 本节将介绍 Adobe Experience Manager 强大而灵活的 Headless 功能，以及如何为项目建模内容。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
+role: Admin,Developer
 exl-id: cb64e012-7001-47a3-b038-8f8f6891c6a0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
-# 使用 AEM 对 Headless 进行内容建模 – 简介 {#architect-headless-introduction}
+# 使用 AEM 对 Headless 进行内容建模——简介 {#architect-headless-introduction}
 
-在[AEM Headless内容架构师历程](overview.md)的这一可选部分中，您可以学习必要的（基本）概念和术语，以了解如何使用Adobe Experience Manager (AEM)对Headless内容投放进行内容建模。
+在 [AEM Headless 内容架构师之旅](overview.md)的这一部分中，您将学习理解使用 Adobe Experience Manager（AEM）进行 Headless 内容投放所需的内容建模的（基本）概念和术语。
 
 本文档可帮助您了解 Headless 内容交付、AEM 支持 Headless 的方式以及如何对 Headless 进行内容建模。阅读本文档后，您应：
 
@@ -28,11 +28,11 @@ ht-degree: 83%
 
 ## 全栈内容交付 {#full-stack}
 
-自易于使用的大型内容管理系统 (CMS) 兴起以来，组织便已将其用作管理消息、品牌化和通信的中心位置。通过将 CMS 用作管理体验的中心点，消除了在不同的系统中重复任务的需求，从而提高了效率。
+自易于使用的大型内容管理系统（CMS）兴起以来，组织便已将其用作管理消息、品牌化和通信的中心位置。通过将 CMS 用作管理体验的中心点，消除了在不同的系统中重复任务的需求，从而提高了效率。
 
 ![经典全栈 CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-在全栈CMS中，所有用于操作内容的功能都位于CMS中。 该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
+在全栈 CMS 中，所有用于操作内容的功能都集中在 CMS 内。该系统的各种功能构成了 CMS 堆栈的不同组件。全栈解决方案有许多优点。
 
 * 需要维护一个系统。
 * 集中管理内容。
@@ -53,7 +53,7 @@ ht-degree: 83%
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-消费服务，无论是 AR 体验、网上商店、移动体验、渐进式 Web 应用程序 (PWA) 等，都从 Headless CMS 摄入内容并提供其自己的呈现方式。它们负责为您的内容提供它们自己的头。
+消费服务，无论是 AR 体验、网上商店、移动体验、渐进式 Web 应用程序（PWA）等，都从 Headless CMS 摄入内容并提供其自己的呈现方式。它们负责为您的内容提供它们自己的头。
 
 忽略头将消除复杂性，从而简化 CMS。这样做还会将呈现内容的责任转移到实际需要内容且通常更适合此类呈现的服务。
 
@@ -69,9 +69,9 @@ ht-degree: 83%
 
 这更像是开发详细信息 - 但您可能会它感兴趣，仅用于完成故事。
 
-在创建内容片段模型，并且作者已使用它们生成内容后，Headless应用程序必须访问此内容。
+在您创建了内容片段模型，并由作者利用其生成内容后，Headless 应用程序必须能够访问这些内容。
 
-Adobe Experience Manager (AEM)可以使用AEM GraphQL API有选择地访问您的内容片段，以仅返回所需的内容。 利用 API，开发人员可以制定用于选择特定内容的查询。此选择过程基于&#x200B;*您的*&#x200B;内容片段模型。
+Adobe Experience Manager（AEM）可以通过 AEM GraphQL API 有选择性地访问您的内容片段，以便仅返回所需的内容。利用 API，开发人员可以制定用于选择特定内容的查询。此选择过程基于&#x200B;*您的*&#x200B;内容片段模型。
 
 这意味着您的项目可以实施结构化内容的 Headless 交付以便在您的应用程序中使用。
 

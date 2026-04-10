@@ -3,9 +3,9 @@ title: AEM Headless 翻译快速入门
 description: 了解如何组织您的 Headless 内容以及 AEM 的翻译工具的工作原理。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
+role: Admin,Developer,User,Leader
 exl-id: beebb7b6-5ed8-4cec-84cf-fa90b2ef711a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 89%
@@ -63,7 +63,7 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 >
 >在 Headless 项目的一开始就规划翻译。尽早与项目经理和内容架构师密切合作。
 >
->国际化项目经理可能需为一个单独的角色，其职责是定义应翻译的内容、不应翻译的内容以及哪些已翻译内容可由区域或本地内容制作者修改。
+>国际化项目经理可能需为一个单独的用户画像，其职责是定义应翻译的内容、不应翻译的内容以及哪些已翻译内容可由区域或本地内容制作者修改。
 
 ## AEM 存储 Headless 内容的方式 {#headless-content-in-aem}
 
@@ -88,7 +88,6 @@ AEM 的内容（无论是 Headless 还是传统网页）都由其结构推动。
 1. **内容片段模型编辑器**&#x200B;将打开。
    1. 左列包含模型的字段。我们对此列感兴趣。
    1. 右列包含可添加到模型中的字段。我们可以忽略此列。
-
       ![内容片段模型编辑器](assets/content-fragment-model-editor.png)
 1. 单击模型的其中一个字段。 AEM 会标记该字段，其详细信息会显示在右列中。
    ![内容片段模型编辑器详细信息](assets/content-fragment-model-editor-detail.png)

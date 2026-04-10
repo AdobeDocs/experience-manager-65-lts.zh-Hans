@@ -8,9 +8,9 @@ topic-tags: personalization
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 532d8289-a266-4556-ab59-855460c377cb
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 63%
@@ -28,7 +28,7 @@ ContextHub和Client Context中称为&#x200B;*区段*&#x200B;的受众是由特�
 
 在“受众”控制台中，各受众按品牌进行组织。
 
-在定位模式下，受众可用于[创作目标内容](/help/sites-authoring/content-targeting-touch.md)，您也可以在该模式下创建受众(但必须在“受众”控制台中创建Adobe Target受众)。 在“定位”模式下创建的受众会显示在“受众”控制台中。
+在定位模式下，受众可用于[创作目标内容](/help/sites-authoring/content-targeting-touch.md)，您也可以在该模式下创建受众（但必须在“受众”控制台中创建Adobe Target受众）。 在“定位”模式下创建的受众会显示在“受众”控制台中。
 
 受众显示有相应的标签，用于说明定义的受众类型：
 
@@ -65,7 +65,7 @@ ContextHub和Client Context中称为&#x200B;*区段*&#x200B;的受众是由特�
 
 >[!NOTE]
 >
->如果您在&#x200B;**0&rbrace;创建**&#x200B;1&rbrace;菜单中看不到{创建目标受众}，则您没有创建受众的必要权限。 **&#x200B;**&#x200B;您需要具有&#x200B;**/etc/segmentation**&#x200B;下的写入权限才能创建受众。 默认情况下，组内容作者具有写权限。
+>如果您在**0}创建**1}菜单中看不到{创建目标受众}，则您没有创建受众的必要权限。 ****&#x200B;您需要具有&#x200B;**/etc/segmentation**&#x200B;下的写入权限才能创建受众。 默认情况下，组内容作者具有写权限。
 
 要创建 Adobe Target 受众，请执行以下操作：
 
@@ -73,7 +73,7 @@ ContextHub和Client Context中称为&#x200B;*区段*&#x200B;的受众是由特�
 
    ![screen-shot_2019-03-05at124139](assets/screen-shot_2019-03-05at124139.png)
 
-1. 在“受众”控制台中，单击&#x200B;**创建**，然后单击&#x200B;**创建目标受众**。
+1. 在“受众”控制台中，单击&#x200B;**创建**，然后单击**创建目标受众**。
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
@@ -90,13 +90,13 @@ ContextHub和Client Context中称为&#x200B;*区段*&#x200B;的受众是由特�
 
 | **属性** | **描述** | **有关更多信息** |
 |---|---|---|
-| **移动设备** | 根据移动设备、设备类型、设备供应商、屏幕尺寸（按像素）等参数锁定移动设备。 | 请参阅 Adobe Target 上的[移动设备文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=zh-Hans)。 |
-| **自定义** | 自定义参数都是 mbox 参数。如果您将任何 mbox 参数传递给 mbox，或者使用 targetPageParams 函数，这些参数将会显示在此处以供在受众中使用。 | 请参阅 Adobe Target 上的[自定义参数文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=zh-Hans)。 |
+| **移动设备** | 根据移动设备、设备类型、设备供应商、屏幕尺寸（按像素）等参数锁定移动设备。 | 请参阅 Adobe Target 上的[移动设备文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)。 |
+| **自定义** | 自定义参数都是 mbox 参数。如果您将任何 mbox 参数传递给 mbox，或者使用 targetPageParams 函数，这些参数将会显示在此处以供在受众中使用。 | 请参阅 Adobe Target 上的[自定义参数文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)。 |
 | **操作系统** | 您可以锁定使用特定操作系统的访客。 | 定位使用Linux®、Macintosh或Windows的用户。 |
-| **站点页面** | 锁定特定页面的访客或具有特定 mbox 参数的访客。 | 请参阅 Adobe Target 上的[站点页面文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=zh-Hans)。 |
-| **浏览器** | 您可以锁定在访问您的页面时使用特定浏览器或特定浏览器选项的用户。 | 请参阅 Adobe Target 上的[浏览器选项文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=zh-Hans)。 |
-| **访客配置文件** | 锁定满足特定配置文件参数的访客。 | 请参阅 Adobe Target 上的[访客配置文件文档](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html?lang=zh-Hans)。 |
-| **流量源** | 根据将访客转至您的站点的搜索引擎或登陆页来锁定访客。 | 请参阅 Adobe Target 上的[流量源文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=zh-Hans)。 |
+| **站点页面** | 锁定特定页面的访客或具有特定 mbox 参数的访客。 | 请参阅 Adobe Target 上的[站点页面文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)。 |
+| **浏览器** | 您可以锁定在访问您的页面时使用特定浏览器或特定浏览器选项的用户。 | 请参阅 Adobe Target 上的[浏览器选项文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)。 |
+| **访客配置文件** | 锁定满足特定配置文件参数的访客。 | 请参阅 Adobe Target 上的[访客配置文件文档](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile.html)。 |
+| **流量源** | 根据将访客转至您的站点的搜索引擎或登陆页来锁定访客。 | 请参阅 Adobe Target 上的[流量源文档](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)。 |
 
 ## 在“受众”控制台中修改受众 {#modifying-an-audience-in-the-audiences-console}
 

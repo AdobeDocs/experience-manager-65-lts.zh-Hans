@@ -7,7 +7,7 @@ feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: bf5c2dff-db68-4e82-8217-ff35069dcb81
-source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '3607'
 ht-degree: 7%
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 组织可以提供一个元数据模型，用于增强资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流程和流程至关重要。 要遵循组织范围的元数据策略和标准，您可以使用帮助DAM用户一致的元数据架构。 [!DNL Adobe Experience Manager]允许使用简单灵活的方法创建、维护和应用元数据架构。
@@ -224,7 +224,7 @@ ht-degree: 7%
 
 1. （可选）添加其他必填字段。 例如，资源类型视频的格式、编解码器和持续时间。
 
-   同样，为其他资源类型添加依赖字段。 例如，为文档资源(如PDF和Word文件)添加字段页数和作者。
+   同样，为其他资源类型添加依赖字段。 例如，为文档资源（如PDF和Word文件）添加字段页数和作者。
 
    ![video_dependent_fields](assets/video_dependent_fields.png)
 
@@ -256,7 +256,7 @@ ht-degree: 7%
    >您可以应用&#x200B;**[!UICONTROL 要求]**&#x200B;条件和&#x200B;**[!UICONTROL 可见性]**&#x200B;条件，二者相互独立。
 
 1. 同样，在资产类型字段中的值Video与其他字段（例如，编解码器和持续时间）之间创建依赖关系。
-1. 重复这些步骤以在[!UICONTROL Asset Type]字段和[!UICONTROL Page Count]和[!UICONTROL Author]等字段中的文档资源(PDF和Word)之间创建依赖关系。
+1. 重复这些步骤以在[!UICONTROL Asset Type]字段和[!UICONTROL Page Count]和[!UICONTROL Author]等字段中的文档资源（PDF和Word）之间创建依赖关系。
 1. 单击&#x200B;**[!UICONTROL 保存]**。将元数据架构应用到文件夹。
 
 1. 导航到将元数据架构应用到的文件夹，然后打开资源的属性页面。 根据您在“资产类型”字段中的选择，将显示相关的级联元数据字段。
@@ -286,7 +286,7 @@ ht-degree: 7%
 
 ### 为MIME类型添加新表单 {#add-new-forms-for-mime-types}
 
-在相应的表单类型下创建表单。 例如，要为`image/png`子类型添加模板，请在“图像”表单下创建表单。 架构表单的标题是子类型名称。在这种情况下，标题为`png`。
+在相应的表单类型下创建表单。 例如，要为`image/png`子类型添加模板，请在“图像”表单下创建表单。 架构表单的标题是子类型名称。 在这种情况下，标题为`png`。
 
 #### 为各种MIME类型使用现有架构模板 {#use-an-existing-schema-template-for-various-mime-types}
 

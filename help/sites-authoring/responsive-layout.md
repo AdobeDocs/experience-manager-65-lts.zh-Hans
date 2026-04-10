@@ -3,9 +3,9 @@ title: 内容页面的响应式布局
 description: 通过Adobe Experience Manager，您可以使用布局容器组件为页面实现响应式布局。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 06c1c7bc-aecb-4c35-bf30-dcc852540d6c
-source-git-commit: e4d365adbfc08ddd51af692237779ed4e11c532d
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1810'
 ht-degree: 71%
@@ -132,7 +132,7 @@ AEM 让您根据设备的宽度定义布局：
 
    ![screen_shot_2018-03-23at084932](assets/screen_shot_2018-03-23at084932.png)
 
-   * 蓝色虚线表示选定设备(此处为&#x200B;*iPhone 6*)的&#x200B;**折**。
+   * 蓝色虚线表示选定设备（此处为&#x200B;*iPhone 6*）的&#x200B;**折**。
 
    ![screen_shot_2018-03-23at084947](assets/screen_shot_2018-03-23at084947.png)
 
@@ -262,7 +262,7 @@ AEM 让您根据设备的宽度定义布局：
      >在以上示例中，浮动和隐藏操作之所以可用，是因为此布局容器嵌套在一个父布局容器内。
 
    * **取消隐藏组件**
-选择父组件会显示包含&#x200B;**显示隐藏的组件**&#x200B;选项的操作工具栏。在此示例中，隐藏了两个组件。
+选择父组件会显示包含**显示隐藏的组件**&#x200B;选项的操作工具栏。在此示例中，隐藏了两个组件。
 
      ![screen_shot_2018-03-23at091200](assets/screen_shot_2018-03-23at091200.png)
 

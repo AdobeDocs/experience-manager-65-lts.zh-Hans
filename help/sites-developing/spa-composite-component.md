@@ -6,7 +6,7 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 95cc8c29-7494-4326-934d-6def59875d71
 index: false
-source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 1%
@@ -51,7 +51,7 @@ ht-degree: 1%
 首先，创建将构成复合组件的组件，即图像及其文本的组件。
 
 1. 在AEM项目中创建文本组件。
-1. 在组件的`editConfig`节点中，从项目中添加相应的`resourceType`。
+1. 在组件的`resourceType`节点中，从项目中添加相应的`editConfig`。
 
    ```text
     resourceType: 'wknd-spa/components/text' 
@@ -125,7 +125,7 @@ function Home() {
 }
 ```
 
-这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值的值时，它们存储在指定的页面路径中，即`itemPath`中指定的根级别的`/content/wknd-spa/home`。
+这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值的值时，它们存储在指定的页面路径中，即`/content/wknd-spa/home`中指定的根级别的`itemPath`。
 
 编辑器中的![复合卡组件](assets/composite-card.png)
 
@@ -133,11 +133,11 @@ function Home() {
 
 在这种情况下，卡组件已在包含标题和图像节点的AEM项目中创建了。 子节点（文本和图像）具有相应的资源类型。
 
-卡组件![&#128279;](assets/composite-node-structure.png)的节点结构
+卡组件![的](assets/composite-node-structure.png)节点结构
 
 然后，您可以将其添加到SPA并检索其内容。
 
-1. 在SPA中为此创建相应的组件。 确保子组件映射到SPA项目中的相应AEM资源类型。 在此示例中，我们使用与上一个示例中详细的[相同的`AEMText`和`AEMImage`组件。](#component-does-not-exist)
+1. 在SPA中为此创建相应的组件。 确保子组件映射到SPA项目中的相应AEM资源类型。 在此示例中，我们使用与上一个示例中详细的`AEMText`相同的`AEMImage`和[组件。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';

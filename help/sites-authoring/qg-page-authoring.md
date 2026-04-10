@@ -8,12 +8,12 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 5a962fd3-33bb-44df-a48d-416a04f393eb
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1540'
-ht-degree: 62%
+ht-degree: 63%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 62%
 
 有关使用 AEM 进行创作的完整详细信息，请参阅：
 
-* [作者的首要步骤](/help/sites-authoring/first-steps.md)
+* [作者入门指南](/help/sites-authoring/first-steps.md)
 * [创作页面](/help/sites-authoring/page-authoring.md)
 
 ## 一些快速提示 {#a-few-quick-hints}
@@ -68,7 +68,7 @@ ht-degree: 62%
 
 查找页面时存在很多方面；您可以导航和/或搜索：
 
-1. 打开&#x200B;**站点**&#x200B;控制台（使用[全局导航](/help/sites-authoring/basic-handling.md#global-navigation)中的&#x200B;**站点**&#x200B;选项） — 此操作将在您选择Adobe Experience Manager链接（左上方）时触发（下拉列表）。
+1. 打开&#x200B;**站点**&#x200B;控制台（使用&#x200B;**全局导航**&#x200B;中的[站点](/help/sites-authoring/basic-handling.md#global-navigation)选项） — 此操作将在您选择Adobe Experience Manager链接（左上方）时触发（下拉列表）。
 
 1. 通过点按/单击相应的页面，在树中向下导航。 页面资源的显示方式取决于您使用的视图 — [卡片、列表或列](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)：
 

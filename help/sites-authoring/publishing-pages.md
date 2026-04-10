@@ -3,9 +3,9 @@ title: 发布内容页面
 description: 了解如何在Adobe Experience Manager 6.5 LTS中发布内容页面。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 89bab7e3-f688-4c95-8571-08477e737bc8
-source-git-commit: 46948a857ccb9d093f946ec9e48ff585b0647314
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 65%
@@ -267,7 +267,7 @@ Sites 控制台中有两个用于发布的选项：
 
 您可以确定页面的发布状态：
 
-* 在[&#x200B; Sites 控制台上的资源概述信息](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中
+* 在[ Sites 控制台上的资源概述信息](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)中
 
   ![screen-shot_2019-03-05at112019](assets/screen-shot_2019-03-05at112019.png)
 

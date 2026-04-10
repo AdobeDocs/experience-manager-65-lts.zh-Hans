@@ -11,16 +11,16 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ae001541-ae7f-42ce-8236-5fbb6ddb4c1f
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
 workflow-type: tm+mt
-source-wordcount: '7192'
+source-wordcount: '7168'
 ht-degree: 0%
 
 ---
 
 # 配置观察文件夹端点 {#configuring-watched-folder-endpoints}
 
-管理员可以配置网络文件夹（称为&#x200B;*观察文件夹*），以便当用户将文件(如PDF文件)放入watched文件夹时，调用配置的服务操作并操作该文件。 服务执行指定的操作后，将修改的文件保存在指定的输出文件夹中。
+管理员可以配置网络文件夹（称为&#x200B;*观察文件夹*），以便当用户将文件（如PDF文件）放入watched文件夹时，调用配置的服务操作并操作该文件。 服务执行指定的操作后，将修改的文件保存在指定的输出文件夹中。
 
 ## 配置Watched文件夹服务 {#configuring-the-watched-folder-service}
 
@@ -160,9 +160,9 @@ Watched Folder服务处理端点的创建、更新和删除。 管理员创建�
 * 具有特定名称的文件；例如，数据。&amp;amp；ast；将排除名为&#x200B;*data1*、*data2*&#x200B;等的文件和文件夹。
 * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-   * 数据[0-9][0-9][0-9]。[d][aA]&#39;端口&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;端口&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 数据`[0-9][0-9][0-9]`。`[dD][aA]`&#39;端口&#39;
+   * &amp;amp；ast；。`[dD][Aa]`&#39;端口&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 有关文件模式的详细信息，请参阅[关于文件模式](configuring-watched-folder-endpoints.md#about-file-patterns)。
 
@@ -176,9 +176,9 @@ Watched Folder服务处理端点的创建、更新和删除。 管理员创建�
 * 具有特定名称的文件；例如，数据。&amp;amp；ast；将包含名为&#x200B;*data1*、*data2*&#x200B;等的文件和文件夹。
 * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-   * 数据[0-9][0-9][0-9]。[d][aA]&#39;端口&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;端口&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 数据`[0-9][0-9][0-9]`。`[dD][aA]`&#39;端口&#39;
+   * &amp;amp；ast；。`[dD][Aa]`&#39;端口&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 有关文件模式的详细信息，请参阅[关于文件模式](configuring-watched-folder-endpoints.md#about-file-patterns)。
 
@@ -248,9 +248,9 @@ Watched Folder服务处理端点的创建、更新和删除。 管理员创建�
 * 具有特定名称的文件。 例如，数据。&amp;amp；ast；
 * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-   * 数据[0-9][0-9][0-9]。[d][aA]&#39;端口&#39;
-   * &amp;amp；ast；。[d][Aa]&#39;端口&#39;
-   * &amp;amp；ast；。[Xx][毫米][Ll]
+   * 数据`[0-9][0-9][0-9].[dD][aA]`&#39;端口&#39;
+   * &amp;amp；ast；。`[dD][Aa]`&#39;端口&#39;
+   * &amp;amp；ast；.`[Xx][Mm][Ll]`
 
 管理员可以定义用于存储结果的输出文件夹的文件模式。 对于输出文件夹（“结果”、“保留”和“失败”），管理员可以指定以下任何文件模式：
 

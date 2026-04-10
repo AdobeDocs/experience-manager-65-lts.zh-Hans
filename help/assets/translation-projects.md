@@ -2,14 +2,14 @@
 title: 创建翻译项目
 description: 了解如何在 [!DNL Adobe Experience Manager]中创建翻译项目。
 contentOwner: AG
-role: Architect, Admin
+role: Developer,Admin
 feature: Translation
 solution: Experience Manager, Experience Manager Assets
 exl-id: e6b78580-a96e-4560-8f25-b62bb04b060e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1889'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -261,5 +261,5 @@ ht-degree: 13%
 
 ## 提示和限制 {#tips-limitations}
 
-* 如果您启动复杂资源(如PDF和[!DNL Adobe InDesign]文件)的翻译工作流，则不会提交其子资源或演绎版（如果有）进行翻译。
+* 如果您启动复杂资源（如PDF和[!DNL Adobe InDesign]文件）的翻译工作流，则不会提交其子资源或演绎版（如果有）进行翻译。
 * 如果使用机器翻译，则不会翻译资产二进制文件。

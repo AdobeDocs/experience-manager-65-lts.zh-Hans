@@ -7,9 +7,9 @@ topic-tags: projects
 content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 53400e3d-542f-4abc-9909-45eb11b0cfcc
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 18%
@@ -24,7 +24,7 @@ ht-degree: 18%
 
 使用该控制台，您可以创建项目、将资源与项目关联，还可以删除项目或资源链接。
 
-## 访问要求 {#access-requirements}
+## 满足访问权限要求 {#access-requirements}
 
 项目使用标准的AEM功能，无需任何其他设置。
 
@@ -107,7 +107,7 @@ Assets会显示在边栏中。 完成后，使用边栏选择器返回到普通�
 
 ### 查看不活动的项目 {#viewing-active-inactive-projects}
 
-要在&#x200B;**项目**&#x200B;控制台中的活动项目和[非活动项目](#making-projects-inactive-or-active)之间切换，请单击工具栏中的&#x200B;**切换活动项目**&#x200B;图标。
+要在[项目](#making-projects-inactive-or-active)控制台中的活动项目和&#x200B;**非活动项目**&#x200B;之间切换，请单击工具栏中的&#x200B;**切换活动项目**&#x200B;图标。
 
 ![切换活动项目图标](assets/projects-toggle-active.png)
 
@@ -133,7 +133,7 @@ Assets会显示在边栏中。 完成后，使用边栏选择器返回到普通�
 
 ### 正在停用项目 {#making-projects-inactive-or-active}
 
-如果项目已完成，但您仍要保留有关该项目的信息，则可能需要将其标记为非活动状态。 默认情况下，[非活动项目现在会在&#x200B;**项目**&#x200B;控制台中显示](#viewing-active-inactive-projects)。
+如果项目已完成，但您仍要保留有关该项目的信息，则可能需要将其标记为非活动状态。 默认情况下，[非活动项目现在会在](#viewing-active-inactive-projects)项目&#x200B;**控制台中显示**。
 
 要使项目处于非活动状态，请执行以下步骤。
 

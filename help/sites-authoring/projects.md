@@ -3,12 +3,12 @@ title: 项目
 description: 通过项目，您可以将资源分组到一个实体中，该实体具有共享的通用环境，从而可轻松管理您的项目。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Projects
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: c5b4ffe5-b722-4452-8450-1e1089e3ffba
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1360'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 26%
 * 将内容和资源文件夹关联到项目
 * 从项目中删除内容链接
 
-## 访问要求 {#access-requirements}
+## 满足访问权限要求 {#access-requirements}
 
 项目使用标准的AEM功能，无需任何其他设置。
 
@@ -82,7 +82,7 @@ ht-degree: 26%
 
 您可以将以下图块与您的项目关联。
 
-* [资源](#assets)
+* [Assets](#assets)
 * [资源收藏集](#asset-collections)
 * [体验](#experiences)
 * [链接](#links)
@@ -235,5 +235,5 @@ ht-degree: 26%
 
 * [管理项目](/help/sites-authoring/touch-ui-managing-projects.md)
 * [处理任务](/help/sites-authoring/task-content.md)
-* [使用项目工作流程](/help/sites-authoring/projects-with-workflows.md)
-* [Creative Project与PIM集成](/help/sites-authoring/managing-product-information.md)
+* [使用项目工作流](/help/sites-authoring/projects-with-workflows.md)
+* [创意项目与 PIM 集成](/help/sites-authoring/managing-product-information.md)

@@ -11,7 +11,7 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: f4a15b51-fbb9-454f-809d-b15ed8cbdd0c
 index: false
-source-git-commit: f6a3d16c55a6b62aea9a374904339e16d30f0a75
+source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 9%
@@ -33,12 +33,12 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 本文说明了We.Retail Journal示例SPA上的天气组件示例。
 
-在阅读本文之前，您应该熟悉AEM[&#128279;](/help/sites-developing/spa-getting-started-react.md)的SPA应用程序的结构。
+在阅读本文之前，您应该熟悉AEM[的SPA应用程序的](/help/sites-developing/spa-getting-started-react.md)结构。
 
 >[!CAUTION]
 >本文档仅将[We.Retail Journal应用程序](https://github.com/adobe/aem-sample-we-retail-journal)用于演示目的。 请勿将其用于任何项目工作。
 >
->任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
+>任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
 
 ## 天气组件 {#the-weather-component}
 

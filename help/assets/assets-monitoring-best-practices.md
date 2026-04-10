@@ -2,13 +2,13 @@
 title: 监控 [!DNL Assets] 部署的最佳实践
 description: 部署 [!DNL Adobe Experience Manager] 部署后监视其环境和性能的最佳实践。
 contentOwner: AG
-role: Admin, Architect
+role: Admin,Developer
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: d2cb447c-69d6-4659-a29e-02af22b543fd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Threads
 
 **监视器[!DNL Experience Manager]**
 
-[!DNL Experience Manager]还通过JMX公开一组统计数据和操作。 这些功能有助于评估系统运行状况，并在潜在问题影响用户之前发现它们。 有关详细信息，请参阅[!DNL Experience Manager] JMX MBean上的[文档](/help/sites-administering/jmx-console.md)。
+[!DNL Experience Manager]还通过JMX公开一组统计数据和操作。 这些功能有助于评估系统运行状况，并在潜在问题影响用户之前发现它们。 有关详细信息，请参阅[ JMX MBean上的](/help/sites-administering/jmx-console.md)文档[!DNL Experience Manager]。
 
 以下是您可以为[!DNL Experience Manager]监视的一些基线参数：
 
@@ -131,7 +131,7 @@ Threads
 会话计数器
 
 * MBean： `org.apache.jackrabbit.oak:id=7,name="OakRepository Statistics",type="RepositoryStats"`
-* URL： */system/console/jmx/org.apache.jackrabbit.oak：id=7，name=&quot;OakRepository Statistics&quot;，type*=&quot;RepositoryStats&quot;
+* URL： */system/console/jmx/org.apache.jackrabbit.oak:id=7，name=&quot;OakRepository Statistics&quot;，type*=&quot;RepositoryStats&quot;
 * 实例：所有服务器
 * 警报阈值：当打开的会话超过基线50%以上时。
 * 警报定义：会话可以通过一段代码打开，但永远不会关闭。 随着时间的推移，这种情况可能会慢慢出现，并最终导致系统中内存泄漏。 虽然会话的数量应在系统中波动，但不应持续增加。
@@ -194,7 +194,7 @@ Threads
 在监视过程中，如果您遇到问题，可以执行以下一些故障排除任务，以解决[!DNL Experience Manager]部署的常见问题：
 
 * 如果使用TarMK，请经常运行Tar压缩。 有关详细信息，请参阅[维护存储库](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)。
-* 检查`OutOfMemoryError`日志。 有关详细信息，请参阅[分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans)。
+* 检查`OutOfMemoryError`日志。 有关详细信息，请参阅[分析内存问题](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)。
 
 * 检查日志中是否存在对未索引查询、树遍历或索引遍历的任何引用。 这些指示未索引的查询或索引不足的查询。 有关优化查询和索引性能的最佳实践，请参阅[有关查询和索引的最佳实践](/help/sites-deploying/best-practices-for-queries-and-indexing.md)。
 * 使用工作流控制台验证您的工作流是否按预期执行。 如果可能，将多个工作流合并到单个工作流中。

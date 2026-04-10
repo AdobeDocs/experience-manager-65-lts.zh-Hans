@@ -7,16 +7,16 @@ content-type: reference
 topic-tags: site-features
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Integration
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: debcc73f-c2bb-4e3a-8ebf-c7590264d289
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '638'
-ht-degree: 4%
+source-wordcount: '640'
+ht-degree: 5%
 
 ---
 
-# 查看页面分析数据{#seeing-page-analytics-data}
+# 请参阅页面分析数据{#seeing-page-analytics-data}
 
 使用页面分析数据来衡量页面内容的有效性。
 
@@ -74,7 +74,7 @@ analytics-administrators用户组的成员可以配置Sites控制台，以便作
 
 ### 从站点打开内容分析 {#opening-content-insights-from-sites}
 
-从站点控制台打开[内容分析](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
+从站点控制台打开[内容Insight](/help/sites-authoring/content-insights.md)以进一步调查页面有效性。
 
 1. 在站点控制台中，选择要查看其内容分析的页面。
 1. 在工具栏上，单击Analytics和“推荐”图标。

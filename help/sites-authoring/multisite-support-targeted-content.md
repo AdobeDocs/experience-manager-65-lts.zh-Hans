@@ -7,12 +7,12 @@ content-type: reference
 topic-tags: personalization
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Multi Site Manager
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 058f0019-68c2-4769-b49d-c1e251196ff1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2838'
-ht-degree: 83%
+ht-degree: 84%
 
 ---
 
@@ -156,7 +156,7 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->默认情况下，当您单击品牌&#x200B;**的名称后，名为“主区域”的默认区域会折叠，直到您创建其他区域**&#x200B;为止。 然后，在“活动”或“产品建议”控制台中选 **择品牌**&#x200B;**时，您会看到“区** 域 **&#x200B;**&#x200B;”控制台。
+>默认情况下，当您单击品牌&#x200B;**的名称后，名为“主区域”的默认区域会折叠，直到您创建其他区域**&#x200B;为止。 然后，在“活动”或“产品建议”控制台中选 **择品牌****时，您会看到“区** 域 **** ”控制台。
 
 要创建区域，请执行以下操作：
 

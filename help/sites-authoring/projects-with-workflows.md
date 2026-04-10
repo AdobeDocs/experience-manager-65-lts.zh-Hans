@@ -7,12 +7,12 @@ topic-tags: projects
 content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: eb19a269-8b3f-476b-b22b-8116dce70388
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -38,12 +38,12 @@ ht-degree: 41%
 | 请求启动项 | x |  |  |  |
 | 请求登陆页面 | x |  |  |  |
 | 请求电子邮件 | x |  |  |  |
-| DAM 创建语言副本&ast; |  |  |  | x |
-| DAM 创建和翻译语言副本&ast; |  |  |  | x |
+| DAM 创建语言副本&amp;ast; |  |  |  | x |
+| DAM 创建和翻译语言副本&amp;ast; |  |  |  | x |
 
 >[!NOTE]
 >
->&ast;这些工作流不会从项目中的&#x200B;**工作流**&#x200B;拼贴启动。请参阅[创建Assets的语言副本。](/help/sites-administering/tc-manage.md)
+>&amp;ast;这些工作流不会从项目中的&#x200B;**工作流**&#x200B;拼贴启动。请参阅[创建Assets的语言副本。](/help/sites-administering/tc-manage.md)
 
 无论您选择哪个工作流，启动和完成工作流的步骤都是相同的。只是具体的实施步骤有所不同。
 

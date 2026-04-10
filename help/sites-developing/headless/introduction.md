@@ -1,11 +1,11 @@
 ---
 title: 适用于AEM 6.5站点的Headless开发
-description: 了解AEM 6.5强大的Headless功能(如内容模型、内容片段和GraphQL API)如何协同工作，让您能够集中管理体验并跨渠道提供这些体验。
+description: 了解AEM 6.5强大的Headless功能（如内容模型、内容片段和GraphQL API）如何协同工作，让您能够集中管理体验并跨渠道提供这些体验。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
+role: Admin,Developer
 exl-id: 4eb42d3a-f869-4831-9aaf-58e7272bd1fe
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 35%
@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # 适用于AEM 6.5站点的Headless开发 {#headless-development}
 
-了解AEM 6.5强大的Headless功能(如内容模型、内容片段和GraphQL API)如何协同工作，让您能够集中管理体验并跨渠道提供这些体验。
+了解AEM 6.5强大的Headless功能（如内容模型、内容片段和GraphQL API）如何协同工作，让您能够集中管理体验并跨渠道提供这些体验。
 
 ## 概述 {#overview}
 
@@ -56,6 +56,6 @@ AEM 6.5是一款灵活的工具，提供了三种强大的服务，可用于head
 | 资源 | 描述 | 类型 | 受众 | 估计用时 |
 |---|---|---|---|---|
 | [Headless 开发人员历程](/help/journey-headless/developer/overview.md) | **面向刚开始接触AEM和Headless**&#x200B;技术的用户，从这里开始全面了解AEM及其Headless功能，从Headless的理论直到您的第一个Headless项目。 | 指南 | **刚开始接触 AEM 和 Headless** 的开发人员 | 1 小时 |
-| [Headless入门指南](/help/sites-developing/headless/getting-started/introduction.md) | **面向有经验的 AEM 用户**，在需要关键 AEM Headless 功能的简短摘要时，可以查看此快速入门概览。 | 快速入门 | **具有 AEM 经验**&#x200B;的开发人员、管理员 | 20 分钟 |
+| [Headless入门指南](/help/sites-developing/headless/getting-started/introduction.md) | **面向有经验的 AEM 用户**，在需要关键 AEM Headless 功能的简短摘要时，可以查看此快速入门概述。 | 快速入门 | **具有 AEM 经验**&#x200B;的开发人员、管理员 | 20 分钟 |
 | [AEM Headless实践教程快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-Headless/graphql/multi-step/overview.html?lang=zh-Hans) | **如果您偏好实践方法并且熟悉AEM**，本教程将直接深入到创建简单的Headless项目。 | 教程 | 开发人员 | 2 小时 |
 | [AEM 开发人员门户](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=zh-Hans) | 此资源集合是为&#x200B;**新**&#x200B;和&#x200B;**经验丰富的**&#x200B;开发人员提供的。 | 资源集合 | 开发人员 | |

@@ -3,9 +3,9 @@ title: WCAG 2.1 快速指南
 description: Web 内容无障碍指南（WCAG）2.1 快速指南
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
+role: Developer,Leader,User
 exl-id: 57afd8bf-c6d6-47ab-9a30-c5830bc5ea51
-source-git-commit: 5aafd5e1ba5e2202f941975d292a3e242363601a
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 100%

@@ -3,9 +3,9 @@ title: 组件控制台
 description: 组件控制台允许您浏览针对实例定义的所有组件，并查看每个组件的关键信息。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: e19f9c2b-dc69-4077-a038-d8eb25a1ad6a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 57%
@@ -67,6 +67,6 @@ ht-degree: 57%
 
 * **文档**
 
-  如果开发人员提供了组件[&#128279;](/help/sites-developing/developing-components.md#documenting-your-component)的文档，则该文档将显示在&#x200B;**Documentation**&#x200B;选项卡上。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
+  如果开发人员提供了组件[的](/help/sites-developing/developing-components.md#documenting-your-component)文档，则该文档将显示在&#x200B;**Documentation**&#x200B;选项卡上。 如果没有可用文档，则不会显示&#x200B;**文档**&#x200B;选项卡。
 
   ![文档](assets/chlimage_1-171.png)

@@ -2,14 +2,14 @@
 title: 收藏集、代码片段和代码片段模板的多租户
 description: 了解多租户功能如何让您根据客户组织分离CRX存储库中的内容，以防止未经授权的访问。
 contentOwner: AG
-role: Architect, Admin, Leader
+role: Developer,Admin,Leader
 feature: Collections
 solution: Experience Manager, Experience Manager Assets
 exl-id: 39e14f89-8e60-4b5e-8859-d69ebd51864e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 例如，如果您创建名为`Demo`的文件夹，[!DNL Experience Manager]资源通常将该文件夹存储在`../content/dam/Demo`中。 启用多租户后，您现在可以在`../content/dam/<organization prefix>/<organization id>Demo`处存储数据
 
-例如，如果对于分配给`aodpremium`组织的[!DNL Assets]的[!DNL Adobe Marketing Cloud]用户（按需），您可以使用多租户功能配置`../content/dam/<mac>/<aodpremium>Demo`路径以分离其内容。 在此示例中，`mac`是组织前缀，`aodpremium`是组织ID。
+例如，如果对于分配给[!DNL Adobe Marketing Cloud]组织的[!DNL Assets]的`aodpremium`用户（按需），您可以使用多租户功能配置`../content/dam/<mac>/<aodpremium>Demo`路径以分离其内容。 在此示例中，`mac`是组织前缀，`aodpremium`是组织ID。
 
 根据用户的组织和ID，此限定路径将显示在[!DNL Assets]界面和各种向导中，包括用于强制实施隔离的移动和代码片段创建向导。
 
@@ -33,4 +33,4 @@ ht-degree: 0%
 * 目录（包括“添加/选择页面”向导）
 * 模板
 * 代码片段模板
-* 灯箱
+* Lightbox

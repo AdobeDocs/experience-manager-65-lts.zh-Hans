@@ -2,10 +2,10 @@
 title: ' [!DNL Adobe Experience Manager Assets]的可访问功能和接口'
 description: 了解 [!DNL Adobe Experience Manager] 6.5 LTS [!DNL Assets] 中的辅助功能如何帮助残障用户。
 feature: Asset Management
-role: User, Architect, Leader
+role: User,Developer,Leader
 solution: Experience Manager, Experience Manager Assets
 exl-id: f9540bfb-1c4f-41f0-9caa-ef9265225648
-source-git-commit: 55a82f12f0ddd952e720bed374e5bd3515648419
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1882'
 ht-degree: 0%

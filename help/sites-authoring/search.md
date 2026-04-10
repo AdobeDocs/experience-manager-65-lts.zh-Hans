@@ -8,9 +8,9 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 4c6d1d6a-c000-48cf-9d86-306245a3c10c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 58%
@@ -80,7 +80,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
    >
    >
    >    * 具体视您选择的资源类型而定；例如，资源和社区条件理所当然是专用的；
-   >    * 您可以自定义作为[搜索Forms](/help/sites-administering/search-forms.md)的实例(适用于AEM中的位置)。
+   >    * 您可以自定义作为[搜索Forms](/help/sites-administering/search-forms.md)的实例（适用于AEM中的位置）。
    >
    >
 

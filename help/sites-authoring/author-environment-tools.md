@@ -8,16 +8,16 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 11ab6be0-ed61-4a4b-af82-d26eec982edd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2211'
 ht-degree: 48%
 
 ---
 
-# 创作 — 环境和工具{#authoring-the-environment-and-tools}
+# 创作——环境与工具{#authoring-the-environment-and-tools}
 
 AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
 
@@ -345,7 +345,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 ![screen_shot_2018-03-22at154521](assets/screen_shot_2018-03-22at154521.png)
 
 * 选择资源后，对话框右上角的&#x200B;**选择**&#x200B;按钮将变为活动状态。单击以确认选择，或单击&#x200B;**取消**&#x200B;以中止。
-* 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **&#x200B;**&#x200B;”按钮，但也会将选定资源的计数添加到窗口的右上角。单击该数字旁边的&#x200B;**X**&#x200B;可取消选择全部。
+* 如果上下文允许选择多个资源，则选择某个资源也会激活“选择 **** ”按钮，但也会将选定资源的计数添加到窗口的右上角。单击该数字旁边的&#x200B;**X**&#x200B;可取消选择全部。
 * 在树中导航时，您的位置会反映在对话框顶部的痕迹导航中。还可使用这些痕迹导航在资源层次结构中快速跳转。
 * 您可以随时使用对话框顶部的搜索字段。 单击搜索字段中的 **X** 可清除搜索。
 * 要缩小搜索范围，您可以显示过滤器选项并按特定路径筛选结果。

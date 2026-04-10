@@ -1,29 +1,29 @@
 ---
-title: '[!DNL Assets]代理开发'
+title: '[!DNL Assets] 代理开发'
 description: 代理是使用代理工作程序处理作业的 [!DNL Experience Manager] 实例。 了解如何配置 [!DNL Experience Manager] 代理、支持的操作、代理组件以及如何开发自定义代理工作程序。
 contentOwner: AG
-role: Admin, Architect
+role: Admin,Developer
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
 exl-id: 8de16e9d-40b6-49d2-9e6b-1aba13137d78
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
 
 ---
 
-# [!DNL Assets]代理开发 {#assets-proxy-development}
+# [!DNL Assets] 代理开发 {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets]使用代理为特定任务分配处理。
 
-代理是一种特定的（有时是单独的）Experience Manager实例，它使用代理工作程序作为负责处理作业和创建结果的处理器。 代理工作程序可用于多种任务。 如果具有[!DNL Assets]代理，则此项可用于加载资源以在Assets中呈现。 例如，[IDS代理工作进程](indesign.md)使用[!DNL Adobe InDesign]服务器来处理文件以在Assets中使用。
+代理是一种特定的（有时是单独的）Experience Manager实例，它使用代理工作程序作为负责处理作业和创建结果的处理器。 代理工作程序可用于多种任务。 如果具有[!DNL Assets]代理，则此项可用于加载资源以在Assets中呈现。 例如，[IDS代理工作进程](indesign.md)使用[!DNL Adobe InDesign]服务器处理要在Assets中使用的文件。
 
-当代理是单独的[!DNL Experience Manager]实例时，这有助于减少[!DNL Experience Manager]创作实例上的负载。 默认情况下，[!DNL Assets]在同一JVM中执行资源处理任务（通过代理外部化），以减少[!DNL Experience Manager]创作实例上的负载。
+当代理是单独的[!DNL Experience Manager]实例时，这有助于减少[!DNL Experience Manager]创作实例上的负载。 默认情况下，[!DNL Assets]在同一JVM中执行资产处理任务（通过代理外部化），以减少[!DNL Experience Manager]创作实例上的负载。
 
 ## 代理（HTTP访问） {#proxy-http-access}
 
-当代理配置为接受位于`/libs/dam/cloud/proxy`的处理作业时，可通过HTTP Servlet使用代理。 此Servlet根据发布的参数创建一个Sling作业。 然后将其添加到代理作业队列，并连接到相应的代理工作进程。
+当代理配置为接受位于`/libs/dam/cloud/proxy`的处理作业时，可以通过HTTP Servlet使用该代理。 此servlet根据发布的参数创建sling作业。 然后将其添加到代理作业队列，并连接到相应的代理工作进程。
 
 ### 支持的操作 {#supported-operations}
 
@@ -113,13 +113,13 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 >Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
-可通过云服务配置使用代理和代理工作进程配置，这些配置可从[!DNL Assets] **工具**&#x200B;控制台或`/etc/cloudservices/proxy`下访问。 每个代理工作进程应在`/etc/cloudservices/proxy`下添加一个节点，用于工作进程特定配置详细信息（例如，`/etc/cloudservices/proxy/workername`）。
+代理和代理工作程序配置均可通过云服务配置使用，可从[!DNL Assets] **工具**&#x200B;控制台或`/etc/cloudservices/proxy`下访问。 每个代理辅助进程应在`/etc/cloudservices/proxy`下添加一个节点，用于辅助进程特定的配置详细信息（例如，`/etc/cloudservices/proxy/workername`）。
 
 >[!NOTE]
 >
->有关详细信息，请参阅[InDesign Server代理工作器配置](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[Cloud Service配置](../sites-developing/extending-cloud-config.md)。
+>有关详细信息，请参阅[InDesign Server Proxy Worker配置](indesign.md#configuring-the-proxy-worker-for-indesign-server)和[Cloud Services配置](../sites-developing/extending-cloud-config.md)。
 
-以下是API用法示例：
+以下是API用法的示例：
 
 ```java
 @Reference(policy = ReferencePolicy.STATIC)
@@ -134,7 +134,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
  final String value = cloudConfig.get("someProperty", "defaultValue");
 ```
 
-### 开发自定义的代理工作进程 {#developing-a-customized-proxy-worker}
+### 开发自定义的代理工作程序 {#developing-a-customized-proxy-worker}
 
 [IDS代理工作程序](indesign.md)是现成提供的[!DNL Assets]代理工作程序的示例，用于外包InDesign资产的处理。
 
@@ -160,13 +160,13 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 >[!NOTE]
 >
->在以下步骤中，将InDesign等效项作为参考示例来表示。
+>在以下步骤中，将InDesign的对等项表示为参考示例。
 
-1. 已使用[Sling作业](https://sling.apache.org/site/eventing-and-jobs.html)，因此需要为您的用例定义作业主题。
+1. 已使用[Sling作业](https://sling.apache.org/site/eventing-and-jobs.html)，因此您需要为用例定义作业主题。
 
    例如，请参阅`IDSJob.IDS_EXTENDSCRIPT_JOB`以了解IDS代理工作进程。
 
-1. 外部步骤用于触发事件，然后等待该操作完成；可通过轮询ID来完成此操作。 制定您自己的步骤以实施新功能。
+1. 外部步骤用于触发事件，然后等待该操作完成；这是通过对id进行轮询来完成的。 自行开发实施新功能的步骤。
 
    实施`WorkflowExternalProcess`，然后使用JobService API和作业主题准备作业事件并将其调度到JobService（OSGi服务）。
 

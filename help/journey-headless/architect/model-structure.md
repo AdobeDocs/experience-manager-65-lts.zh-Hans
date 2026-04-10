@@ -3,9 +3,9 @@ title: 了解如何在 AEM 中创建内容片段模型
 description: 了解使用内容片段模型对 Headless CMS 进行内容建模的概念和机制。
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
+role: Admin,Developer
 exl-id: fe603779-7763-4cb9-b95a-34e4b78d72db
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 92%
@@ -80,7 +80,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 >[!NOTE]
 >
->请参阅“其他资源 – 内容片段模型”。
+>请参阅“其他资源——内容片段模型”。
 
 ## 管理内容片段模型 {#managing-content-fragment-models}
 
@@ -88,8 +88,8 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 管理内容片段模型涉及：
 
-* 启用（或禁用）内容片段模型 – 这使作者在创建内容片段时能够使用它们。
-* 删除 - 始终需要执行删除操作，但您需要注意删除已用于内容片段的模型，特别是已发布的片段。
+* 启用（或禁用）内容片段模型——这使作者在创建内容片段时能够使用它们。
+* 删除——始终需要执行删除操作，但您需要注意删除已用于内容片段的模型，特别是已发布的片段。
 
 ## 发布 {#publishing}
 

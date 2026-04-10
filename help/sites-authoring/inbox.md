@@ -3,9 +3,9 @@ title: 用于管理任务的收件箱
 description: 使用Adobe Experience Manager 6.5 LTS中的收件箱管理您的任务。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 077407ef-1d7f-47ad-b924-0afa19f21119
-source-git-commit: 524f1bcea6761e299141bc1d1496e32c498ffd14
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 39%

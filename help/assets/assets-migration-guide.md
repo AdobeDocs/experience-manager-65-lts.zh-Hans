@@ -2,11 +2,11 @@
 title: 批量迁移资产
 description: 介绍如何将资源引入 [!DNL Adobe Experience Manager]、应用元数据、生成演绎版并将其激活到发布实例。
 contentOwner: AG
-role: Architect, Admin
+role: Developer,Admin
 feature: Migration,Renditions,Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: b8328197-6d2a-493d-8098-db4f68f1fcb0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 将资产迁移到[!DNL Adobe Experience Manager]时，需要考虑以下几个步骤。 从当前主目录中提取资源和元数据超出了此文档的范围，因为不同实施之间的资产和元数据差异很大，但本文档介绍了如何将这些资产引入[!DNL Experience Manager]、应用其元数据、生成演绎版并将它们激活以发布实例。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在实际执行此方法中的任何步骤之前，请查看并实施[Assets性能优化提示](performance-tuning-guidelines.md)中的指导。 通过配置最大并发作业等许多步骤，可以大大提高服务器在负载下的稳定性和性能。 加载系统资产后，其他步骤（如配置文件数据存储）的执行难度会大得多。
 
@@ -84,7 +84,7 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 根据需要配置工作流后，有两个选项可用于执行工作流：
 
 1. 最简单的方法是[ACS Commons的批量工作流管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html)。 使用此工具，您可以执行查询，并通过工作流处理查询的结果。 也可以选择设置批次大小。
-1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [&#128279;](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 虽然此方法涉及的范围更广，但它允许您在优化服务器资源的使用时删除[!DNL Experience Manager]工作流引擎的开销。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
+1. 您可以将 [ACS Commons Fast Action Manager与Synthetic Workflows一起使](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) 用 [](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)。 虽然此方法涉及的范围更广，但它允许您在优化服务器资源的使用时删除[!DNL Experience Manager]工作流引擎的开销。 此外，Fast Action manager还通过动态监视服务器资源和限制系统上的负载来进一步提升性能。 ACS Commons功能页上提供了示例脚本。
 
 ### 激活资产 {#activating-assets}
 
@@ -92,7 +92,7 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
 
 要解决此问题，您可以使用[快速操作管理器](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html)管理资源复制。 此操作无需使用Sling队列，从而降低了开销，同时抑制了工作负载以防止服务器过载。 该功能的文档页面上显示了使用FAM管理复制的示例。
 
-将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一个选项是为名为[Grabbit](https://github.com/TWCable/grabbit)的[!DNL Experience Manager]基础结构使用开源工具，该工具声称比vlt的性能更快。
+将资产转至发布场的其他选项包括使用 [vlt-rcp](https://jackrabbit.apache.org/filevault/rcp.html) 或 [oak-run](https://github.com/apache/jackrabbit-oak/tree/trunk/oak-run)，这些选项作为 Jackrabbit 中的工具提供。另一个选项是为名为[!DNL Experience Manager]Grabbit[的](https://github.com/TWCable/grabbit)基础结构使用开源工具，该工具声称比vlt的性能更快。
 
 对于这些方法中的任一方法，需要注意的是，创作实例上的资产不会显示为已激活。 若要以正确的激活状态处理标记这些资产的问题，您还需要运行脚本以将资产标记为已激活。
 
@@ -131,7 +131,7 @@ Adobe的Managed Services团队使用名为Glutton的工具将数据加载到客�
    * **Vault远程副本**&#x200B;或vlt rcp允许您通过网络使用vlt。 您可以指定源目录和目标目录，vlt将从一个实例下载所有资料档案库数据，然后将其加载到另一个实例中。 Vlt rcp记录在[https://jackrabbit.apache.org/filevault/rcp.html](https://jackrabbit.apache.org/filevault/rcp.html)
    * **Grabbit**&#x200B;是由Time Warner Cable为其[!DNL Experience Manager]实现开发的开源内容同步工具。 由于它使用连续的数据流，与vlt rcp相比，它的延迟更小，速度比vlt rcp快2到10倍。 Grabbit还仅支持增量内容的同步，这允许它在完成初始迁移阶段后同步更改。
 
-1. 激活资产：按照为初始迁移到[!DNL Experience Manager]而记录的[激活资产](#activating-assets)的说明进行操作。
+1. 激活资产：按照为初始迁移到[而记录的](#activating-assets)激活资产[!DNL Experience Manager]的说明进行操作。
 
 1. 克隆发布：与新迁移一样，加载单个发布实例并进行克隆比在两个节点上激活内容更有效。 请参阅[正在克隆发布。](#cloning-publish)
 

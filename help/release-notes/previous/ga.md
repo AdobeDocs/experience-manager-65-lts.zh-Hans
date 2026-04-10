@@ -3,10 +3,10 @@ title: ' [!DNL Adobe Experience Manager] 6.5 LTS 的发行说明'
 description: 查找 Adobe Experience Manager 6.5 LTS 的当前版本信息。
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: dfda31ac-765b-401d-98d0-c19f0de22aab
-source-git-commit: eda8fc347ee8c68c1022495cbe8d48175c819be3
-workflow-type: ht
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+workflow-type: tm+mt
 source-wordcount: '1068'
 ht-degree: 100%
 
@@ -70,9 +70,9 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户价值。这些改变都仔细考虑了向后兼容的情况。
 
-沟通有关即将删除或取代 Adobe Experience Manager (AEM) 功能的消息时，适用以下规则：
+沟通有关即将删除或取代 Adobe Experience Manager（AEM）功能的消息时，适用以下规则：
 
-1. 首先宣布弃用。已弃用的功能仍然可供使用，但不再继续改进。
+1. 首先发布弃用公告。功能在弃用阶段仍可使用，但不会再进行改进。
 1. 最早会在下一个主要版本中移除已弃用的功能。移除的实际目标日期会计划稍后公布。
 
 在实际移除之前，此过程将为客户提供至少一个发布周期时间，使客户的实施能够适应功能弃用后的新版本或后续版本。
@@ -84,7 +84,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 建议客户检查其当前部署中是否使用了此类特性/功能，然后制定相应的计划，使用所提供的替代功能更改自己的实施。
 
-| 区域 | 专题 | 替换 | 版本 (SP) |
+| 区域 | 专题 | 替换 | 版本（SP） |
 |---|---|---|---|
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
 
@@ -92,7 +92,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
 
-| 区域 | 专题 | 替换 | 版本 (SP) |
+| 区域 | 专题 | 替换 | 版本（SP） |
 |--- |--- |--- |--- |
 | Commerce | 不支持 AEM CIF Classic。 | 迁移到 [AEM CIF](/help/commerce/cif/migration.md)。 | 6.5 LTS GA |
 | 解决方案 | 不支持社交/Communities。 | 没有替代功能可用。 | 6.5 LTS GA |
@@ -151,7 +151,7 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 
 ## 受限网站{#restricted-sites}
 
-这些网站只提供给客户。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
+这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
-* [从 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
+* [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
 * [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。

@@ -3,10 +3,10 @@ title: ' [!DNL Assets]的最佳实践'
 description: 通过确定并遵循取决于您的部署和配置的最佳做法，增强系统在负载下的稳定性和性能。
 contentOwner: AG
 feature: Asset Management
-role: Architect, Admin
+role: Developer,Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 754659d0-7d5f-4e60-a5a1-9bad177de9bc
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -26,5 +26,5 @@ ht-degree: 0%
 * [Assets迁移指南](/help/assets/assets-migration-guide.md)：如果要将资产从旧系统迁移到Assets，则需要考虑以下几个步骤来简化迁移过程。 迁移指南包含有关您执行任务的最佳实践，以便分阶段将资产导入[!DNL Experience Manager]。 这包括应用元数据、生成演绎版和激活资源以发布实例。
 * [Assets网络注意事项文档](/help/assets/assets-network-considerations.md)：在处理[!DNL Experience Manager]部署时，了解网络拓扑对于了解网络性能、识别阻塞点以及描述预期的用户体验非常重要。 [!DNL Assets]网络注意事项文档讨论了设计资产部署时的网络注意事项。
 * [Assets监视指南](/help/assets/assets-monitoring-best-practices.md)：在部署[!DNL Experience Manager]部署后，您应该监视某些任务和一般系统，以确保系统完整性和操作效率。 监控指南包含用于监控系统各个方面的最佳实践。
-* [Experience Manager桌面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=zh-Hans)： [!DNL Experience Manager]桌面应用程序将您的数字资产管理(DAM)解决方案与桌面链接，以便您可以直接在桌面上打开[!DNL Experience Manager] Web用户界面中提供的文件。 通过使用桌面操作系统提供的网络共享技术，可以启用桌面应用程序易于使用的工作流。 本指南介绍[!DNL Experience Manager]桌面应用程序的关键功能和建议用途。
+* [Experience Manager桌面应用程序最佳实践](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)： [!DNL Experience Manager]桌面应用程序将您的数字资产管理(DAM)解决方案与桌面链接，以便您可以直接在桌面上打开[!DNL Experience Manager] Web用户界面中提供的文件。 通过使用桌面操作系统提供的网络共享技术，可以启用桌面应用程序易于使用的工作流。 本指南介绍[!DNL Experience Manager]桌面应用程序的关键功能和建议用途。
 * [Experience Manager与Creative Cloud集成最佳实践](/help/assets/aem-cc-integration-best-practices.md)：您可以通过多种方式将您的[!DNL Experience Manager]部署与[!DNL Creative Cloud]集成。 遵循一些最佳实践以简化您的集成和资产传输工作流，有助于实现最高效率。 本指南包括将[!DNL Assets]与[!DNL Adobe Creative Cloud]集成的最佳实践。

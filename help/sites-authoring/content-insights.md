@@ -1,36 +1,36 @@
 ---
-title: 内容分析
-description: 内容分析提供了有关使用网站分析和SEO推荐的页面性能的信息
+title: 内容洞察
+description: 内容Insight提供了有关使用网站分析和SEO推荐的页面性能的信息
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: site-features
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 10bf533d-c0a8-43ac-8dd5-d4fa501b8726
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '537'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 内容分析{#content-insight}
+# 内容洞察{#content-insight}
 
-内容分析提供了有关使用Web分析和SEO推荐的页面性能的信息。 使用内容分析可做出有关如何修改页面的决策，或了解以前的更改如何更改性能。 对于您创作的每个页面，都可以打开“内容分析”来分析该页面。
+内容Insight提供了有关使用Web分析和SEO推荐的页面性能的信息。 使用内容Insight可做出有关如何修改页面的决策，或了解以前的更改如何更改性能。 对于您创作的每个页面，都可以打开Content Insight来分析该页面。
 
 ![chlimage_1-311](assets/chlimage_1-311.png)
 
-“内容分析”页面的布局会随着您使用的设备的屏幕维度和方向而发生更改。
+“内容Insight”页面的布局会随着您使用的设备的屏幕尺寸和方向而发生变化。
 
 ## 报表数据
 
-“内容分析”页面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge数据的报表：
+“内容Insight”页面包含使用Adobe SiteCatalyst、Adobe Target、Adobe Social和BrightEdge数据的报表：
 
 * SiteCatalyst：提供了以下量度的报表：
 
-   * 页面查看次数
+   * 页面浏览量
    * 页面平均逗留时间
    * 源
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->内容分析仪表板的时间表在`GMT`之内。
+>内容Insight仪表板的时间表在`GMT`之内。
 
 您还可以指定报告数据的粒度，例如，您可以查看每日、每周、每月或每年数据。
 

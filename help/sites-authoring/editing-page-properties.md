@@ -3,10 +3,10 @@ title: 编辑页面属性
 description: 在Adobe Experience Manager中为页面定义所需的属性。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 5148afb9-f447-4475-a15c-1fa345325711
 mini-toc-levels: 2
-source-git-commit: 4817296c00e094a65744a896d798e429d3ab6c7d
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 38%
@@ -41,7 +41,7 @@ ht-degree: 38%
 
 #### 品牌化 {#branding}
 
-通过将品牌概要附加到每个页面标题，跨页面应用一致的品牌识别。此功能需要使用 2.14.0 版或更高版本的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)中的页面组件。
+通过将品牌概要附加到每个页面标题，跨页面应用一致的品牌识别。此功能需要使用 2.14.0 版或更高版本的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)中的页面组件。
 
 * **覆盖** – 选中可在此页面上定义品牌概要。
    * 该值会由任何子页面继承，除非它们也设置了&#x200B;**覆盖**&#x200B;值。
@@ -85,7 +85,7 @@ ht-degree: 38%
 
 输入此页面的虚URL，这样可让您的URL长度更短和/或更具有表现性。
 
-例如，如果将网站`http://example.com,`的虚URL设置为由路径`/v1.0/startpage`标识的页面`welcome`，则`http://example.com/welcome`将是`http://example.com/content/v1.0/startpage`的虚URL
+例如，如果将网站`welcome`的虚URL设置为由路径`/v1.0/startpage`标识的页面`http://example.com,`，则`http://example.com/welcome`将是`http://example.com/content/v1.0/startpage`的虚URL
 
 >[!CAUTION]
 >
@@ -95,7 +95,7 @@ ht-degree: 38%
 >* 不支持正则表达式模式。
 >* 不应设置为现有页面。
 
-配置Dispatcher以启用对虚名URL的访问。 有关详细信息，请参阅[启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#enabling-access-to-vanity-urls-vanity-urls)。
+配置Dispatcher以启用对虚名URL的访问。 有关详细信息，请参阅[启用对虚名URL的访问](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls)。
 
 * **添加** — 点击或单击可添加虚URL。
 * **删除** — 点击或单击可删除虚URL。
@@ -117,7 +117,7 @@ ht-degree: 38%
 
 #### 配置 {#configuration}
 
-* **继承自&lt;*路径*>** — 启用/禁用页面&#x200B;**云配置**&#x200B;的继承
+* **继承自&lt;*path*>** — 启用/禁用页面&#x200B;**云配置**&#x200B;的继承
 * **云配置** – 配置的路径
 
 #### 模板设置 {#templates}
@@ -148,7 +148,7 @@ ht-degree: 38%
 
 * **规范URL** — 用于覆盖页面的规范URL
    * 如果留空，则页面的URL是它的规范URL。
-* **Robots标记** — 使用下拉菜单选择Robots标记以控制搜索引擎爬网程序的行为
+* **Robots标签** — 使用下拉菜单选择Robots标签，以控制搜索引擎爬虫的行为
    * 有些选项会相互冲突，在这种情况下，以更宽松的选项为准。
 * **生成站点地图** — 在选中时，将为此页面及其后代生成`sitemap.xml`。
 
@@ -171,7 +171,7 @@ ht-degree: 38%
 * **选择图像** — 选择要用作缩略图的现有资源
 * **还原** — 在您更改缩略图后，此选项将变得可用。 如果不想保留您的更改，可以在保存前还原更改。
 
-### Cloud Service {#cloud-services}
+### 云服务 {#cloud-services}
 
 * **Cloud Service配置** — 定义用于页面的云服务的配置
 * **继承自** — 对于活动副本和语言副本，默认从Blueprint继承云配置。
@@ -186,7 +186,7 @@ ht-degree: 38%
 * **ContextHub路径** — 选择[ContextHub配置](/help/sites-developing/ch-configuring.md)
 * **段路径** — 选择[段路径](/help/sites-administering/segmentation.md)。
 
-#### 定位配置 {#targeting}
+#### 目标选择配置 {#targeting}
 
 选择一个[品牌以指定定位范围。](/help/sites-authoring/target-adobe-campaign.md)
 
@@ -304,7 +304,7 @@ ht-degree: 38%
 >
 >也可以对资源使用批量编辑属性功能。两者相似，但在几个方面有所不同。 有关详细信息，请参阅[编辑多个Assets的属性](/help/assets/metadata.md)。
 >
->还有[批量编辑器](/help/sites-administering/bulk-editor.md)。 通过此编辑器，您可以使用GQL(Google查询语言)从多个页面搜索内容，然后直接使用批量编辑器编辑内容，再将更改保存到原始页面。
+>还有[批量编辑器](/help/sites-administering/bulk-editor.md)。 通过此编辑器，您可以使用GQL（Google查询语言）从多个页面搜索内容，然后直接使用批量编辑器编辑内容，再将更改保存到原始页面。
 
 可以通过多种方法选择要批量编辑的多个页面，这些方法包括：
 

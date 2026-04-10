@@ -3,9 +3,9 @@ title: AEM 6.5 LTS中的AI助手
 description: 使用 AI 助手帮助您找到答案，并为 Adobe Experience Manager 中提供的解决方案修复错误。
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Authoring, AI Assistant, AI Tools
-role: Admin, Architect, Developer, User
+role: Admin,Developer,User
 exl-id: 391d46e3-05c9-4af1-8882-ffd39b04a701
-source-git-commit: 03bd86504b5399163190cf88e814d95753b78767
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '1312'
 ht-degree: 4%
@@ -35,7 +35,7 @@ AI Assistant支持AEM as a Cloud Service，包括以下解决方案：
 
 以下时长3分钟、时长25秒的视频分步介绍了AEM中的AI助手。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475368/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## 访问AEM中的AI助手{#get-access}
 
@@ -102,7 +102,7 @@ AEM中的AI助手在设计中特别强调隐私、安全和治理。
 * 以简洁明了的方式清楚地陈述您的任务或问题。
 * 避免使用含糊不清的措辞或过于复杂的语法，以增进理解。
 * 包含有关您的任务或问题的相关上下文，因为此方法有助于AEM中的AI助手提供更精确且相关的答案。
-例如，在提示符下，为您正在使用的AEM解决方案命名(Sites、Assets、Dynamic Media、Edge Delivery Services、Cloud Manager或Forms)会很有帮助。
+例如，在提示符下，为您正在使用的AEM解决方案命名（Sites、Assets、Dynamic Media、Edge Delivery Services、Cloud Manager或Forms）会很有帮助。
 
 ### 不支持的问题的示例 {#ai-unsupported-questions}
 
@@ -128,7 +128,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
@@ -139,7 +139,7 @@ See also [Custom Permissions](/help/implementing/cloud-manager/custom-permission
 
 **在AEM对话中启动AI助手：**
 
-1. 在AEM用户界面的右上角(从Cloud Manager页面或AEM环境的创作实例)附近，单击&#x200B;**AI助手**&#x200B;图标。
+1. 在AEM用户界面的右上角（从Cloud Manager页面或AEM环境的创作实例）附近，单击&#x200B;**AI助手**&#x200B;图标。
 
    工具栏上的![AI助手图标](/help/assets/assets-ai/ai-assistant-icon.png)
 

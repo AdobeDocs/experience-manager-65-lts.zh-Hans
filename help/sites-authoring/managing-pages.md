@@ -3,9 +3,9 @@ title: 使用AEM创建和组织页面
 description: 了解如何使用Adobe Experience Manager创建和管理页面。
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
+role: User,Admin,Developer
 exl-id: 66bbd6d8-d07c-48ad-b58e-819bf032851a
-source-git-commit: c99c7b2616e652ae372e98349d5de3b658a0beb1
+source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
 source-wordcount: '2468'
 ht-degree: 65%
@@ -187,7 +187,7 @@ AEM 附带了一些现成的模板。可用模板取决于单个网站。关键�
 
 除非提前为您创建了所有页面，否则在开始创建内容之前，您必须创建一个页面：
 
-1. 打开站点控制台(例如，[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content))。
+1. 打开站点控制台（例如，[https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)）。
 1. 导航到要创建新页面的位置。
 1. 使用工具栏中的&#x200B;**创建**&#x200B;打开下拉选择器，然后从列表中选择&#x200B;**页**：
 
@@ -390,7 +390,7 @@ AEM 还有一项功能是允许您对引用被重命名页面或被移动页面�
 
   ![异步页面移动](assets/asynchronous-page-move.png)
 
-可在&#x200B;[**全局导航** > &#x200B;](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;操作&#x200B;**>**&#x200B;作业&#x200B;**的**&#x200B;异步作业状态&#x200B;**仪表板**&#x200B;中检查异步作业的状态
+可在&#x200B;[**全局导航** > ](/help/sites-administering/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)工具&#x200B;**>**&#x200B;操作&#x200B;**>**&#x200B;作业&#x200B;**的**&#x200B;异步作业状态&#x200B;**仪表板**&#x200B;中检查异步作业的状态
 
 >[!NOTE]
 >
