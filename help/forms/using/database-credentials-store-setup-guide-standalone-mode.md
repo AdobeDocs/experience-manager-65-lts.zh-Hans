@@ -4,13 +4,13 @@ description: 在独立模式下，查找JBoss/Red Hat EAP上AEM Forms JEE的数�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: f093f39fb535209297940cff13a99c7631812152
+exl-id: f6e29287-a558-43ad-8465-ebf167c79c63
+source-git-commit: b4abf61e0d30396e78ecebf228114ad2bde30633
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
-
 
 # Database Credential Store安装指南（独立模式）
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 3. **您已决定凭据存储区的安全密码**
 
 4. **您知道要使用哪个数据库配置文件：**
-   - `lc_oracle.xml` (用于Oracle数据库)
+   - `lc_oracle.xml` （用于Oracle数据库）
    - `lc_mysql.xml` （对于MySQL数据库）
-   - `lc_mssql.xml` (对于Microsoft SQL Server数据库)
+   - `lc_mssql.xml` （对于Microsoft SQL Server数据库）
 
 ## 设置步骤
 
@@ -67,11 +67,11 @@ ht-degree: 0%
 
 #### 在Windows上：
 
-**脚本位置：** `create-elytron-cred-standalone.bat`
+**脚本：** `create-elytron-cred-standalone.bat`
 
-`batch cd path\to\script\location create-elytron-cred-standalone.bat`
+从`create-elytron-cred-standalone.bat`软件分发门户[下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)脚本。
 
-**脚本将提示您输入：**
+**脚本提示您输入：**
 1. **JBOSS_HOME路径** （例如，`C:\Adobe\Adobe_Experience_Manager_Forms\jboss`）
 2. **配置文件名** （如`lc_oracle.xml`、`lc_mysql.xml`或`lc_mssql.xml`）
 3. **凭据存储区密码** （这将保护密钥存储区文件 — 记住此密码）
@@ -91,11 +91,11 @@ ht-degree: 0%
 
 #### 在Linux上：
 
-**脚本位置：** `create-elytron-cred-standalone.sh`
+**脚本** `create-elytron-cred-standalone.sh`
 
-`bash cd /path/to/script/location chmod +x create-elytron-cred-standalone.sh./create-elytron-cred-standalone.sh`
+从`create-elytron-cred-standalone.sh`软件分发门户[下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)脚本。
 
-**脚本将提示您输入：**
+**脚本提示您输入：**
 
 1. **JBOSS_HOME路径** （例如，`/opt/Adobe/Adobe_Experience_Manager_Forms/jboss`）
 2. **配置文件名** （如`lc_oracle.xml`、`lc_mysql.xml`或`lc_mssql.xml`）
@@ -296,4 +296,3 @@ ERROR: Configuration file not found
 
 - 变量： `-DCS_PASS=password`
 - 文件： `standalone.conf.bat` (Windows)或`standalone.conf` (Linux)
-
