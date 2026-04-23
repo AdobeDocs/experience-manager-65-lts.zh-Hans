@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: c04d683015576ab4aa59427f2ac1ec53fbb1d8f4
+source-git-commit: 560d505465362d33f2864f13e9b75921b83ba5e4
 workflow-type: tm+mt
 source-wordcount: '7427'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -450,7 +450,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### 升级 {#upgrade}
 
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
-* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
+* 有关详细的升级说明，请参阅JEE上的[AEM Forms 6.5 LTS SP1升级指南](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
 #### AEM 6.5 LTS 服务包升级最佳做法
 
@@ -618,17 +618,17 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 
 **影响**
 
-* 健康检查失败，出现 HTTP 400 响应码
-* Dispatcher 与 AEM 实例之间的通信中断
-* 无法通过 Dispatcher 正确提供内容
-* 使用 HTTPS 与 Dispatcher 配置中的 IP 地址时连接失败
-* 通过 HTTPS + IP 连接时出现 HTTP 400“SNI 无效”的错误
+* HTTP 400响应代码的运行状况检查失败。
+* Dispatcher实例与AEM实例之间的流量中断。
+* 无法通过Dispatcher正确提供内容。
+* 在Dispatcher配置中将HTTPS与IP地址一起使用时出现连接故障。
+* 通过HTTPS + IP连接时，出现HTTP 400“SNI无效”错误。
 
 **受影响的环境**
 
-* 具有 Dispatcher 配置的 AEM 部署
-* 启用了仅 SSL 功能的系统
-* 使用 `https + IP` 方法与 AEM 实例连接的 Dispatcher 配置
+* AEM部署和Dispatcher配置。
+* 已启用仅SSL功能的系统。
+* Dispatcher配置使用`https + IP`连接方法连接到AEM实例。
 
 **解决方案**
 
@@ -646,5 +646,5 @@ Adobe不断检讨和改进产品功能，以通过使旧功能现代化或替换
 这些网站仅向客户开放。 如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
 * [产品下载地址：licensing.adobe.com](https://licensing.adobe.com/)
-* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
+* [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience)。
 
