@@ -6,9 +6,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c7351625-b29e-45a7-b966-e7c0f56d4f22
-source-git-commit: 57bf39aa914bddca05d526b46b581579965069d6
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 升级前步骤 {#pre-upgrade-steps}
 
-在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS [的](/help/sites-deploying/technical-requirements.md)要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
+在执行升级之前，必须完成多个步骤。 有关详细信息，请参阅[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)和[升级前维护任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)。 此外，请确保您的系统符合AEM 6.5 LTS ](/help/sites-deploying/technical-requirements.md)的[要求，并查看[升级计划注意事项](/help/sites-deploying/upgrade-planning.md)以及[Analyzer](/help/sites-deploying/pattern-detector.md)如何帮助您估计复杂性。
 
 ## 迁移先决条件 {#migration-prerequisites}
 
@@ -47,7 +47,8 @@ ht-degree: 1%
 
 1. 如果需要应用自定义sling.properties，请创建新的本地AEM实例，并从其crx-quickstart/conf目录中检索sling.properties文件。 将所需的自定义更改应用于此文件，然后将其复制到要升级的AEM实例的crx-quickstart/conf目录。 如果没有自定义属性，则可以跳过此步骤。
 
-<!-- Alexandru: drafting temporarily
+<!--
+Alexandru: drafting temporarily
 
 ## Content Repository Migration {#content-repository-migration}
 
@@ -169,8 +170,8 @@ Where `/path/to/datastore` represents the path to your File Datastore.
 
 1. 提取S3连接器（版本1.60.2）并复制`crx-quickstart/install`下的以下文件夹的内容，如下所示：
 
-   1. 复制`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/1`下的`crx-quickstart/install/1`
-   1. 复制`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/15`下的`crx-quickstart/install/15`
+   1. 复制`crx-quickstart/install/1`下的`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/1`
+   1. 复制`crx-quickstart/install/15`下的`com.adobe.granite.oak.s3connector-1.60.2/jcr_root/libs/system/install/15`
 
 现在，使用通过[确定正确的升级启动命令](#determining-the-correct-upgrade-start-command)部分下的信息确定的新命令启动AEM实例。
 

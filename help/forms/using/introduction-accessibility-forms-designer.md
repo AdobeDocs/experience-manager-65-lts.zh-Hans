@@ -7,9 +7,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 97da988b-1a0c-4ba9-bd68-9219f279b2a0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -22,5 +22,5 @@ Adobe LiveCycle Designer包括许多特性和功能，可增强表单对各种�
 
 将辅助功能构建到表单中不仅允许尽可能广泛的受众访问内容，而且在要求遵守辅助功能标准的地区提供文档时是一项要求。 例如，在美国，有诸如《康复法》第508条等无障碍标准，以确保信息技术可供所有用户使用，包括使用政府服务的残疾政府雇员和残疾公众成员。
 
-LiveCycle Designer可帮助开发人员遵守辅助功能标准规定的要求。 其基于组件的方法使表单生成器能够利用内置的辅助功能。 LiveCycle Designer还支持创建无障碍的XHTML文件(使用LiveCycle Forms)和PDF forms。 可访问的PDF forms包括完整的逻辑结构以及有关文档内容的其他信息，以提高可访问性。
+LiveCycle Designer可帮助开发人员遵守辅助功能标准规定的要求。 其基于组件的方法使表单生成器能够利用内置的辅助功能。 LiveCycle Designer还支持创建无障碍的XHTML文件（使用LiveCycle Forms）和PDF forms。 可访问的PDF forms包括完整的逻辑结构以及有关文档内容的其他信息，以提高可访问性。
 有关Adobe辅助功能解决方案的更多信息，请访问www.adobe.com/accessibility上的辅助功能资源中心。

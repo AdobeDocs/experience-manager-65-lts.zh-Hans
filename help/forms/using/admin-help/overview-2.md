@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 8aeacdb7-68a7-476f-a725-f9ad7406cc9c
-source-git-commit: 02b9eb98d1fdf1b090166a6ae7c0a4379487d2e1
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 0%
+source-wordcount: '334'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 *凭据*&#x200B;包含签名或识别文档所需的私钥信息。 *证书*&#x200B;是您为信任配置的公钥信息。 AEM Forms将证书和凭据用于多种用途：
 
 * Acrobat Reader DC扩展使用凭据在PDF文档中启用Adobe Reader使用权限。 （请参阅[配置凭据以用于Acrobat Reader DC扩展](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions)。）
-* 您可以将Rights Management配置为仅显示凭据以便在Acrobat中使用，这些凭据来自可信发布者。 (请参阅[配置Rights Management显示设置](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。)证书中必须存在公用名(CN)。
+* 您可以将Rights Management配置为仅显示凭据以便在Acrobat中使用，这些凭据来自可信发布者。 （请参阅[配置Rights Management显示设置](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings)。） 通用名称(CN)必须存在于证书中。
 * 签名服务访问证书和凭据。 有关签名服务的详细信息，请参阅[服务参考](https://www.adobe.com/go/learn_aemforms_services_65)。
 
 **正在生成对密钥**

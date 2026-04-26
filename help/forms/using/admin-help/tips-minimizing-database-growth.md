@@ -1,5 +1,5 @@
 ---
-title: 最大程度地减少数据库增长的提示
+title: 最小化数据库增长的技巧
 description: 长期进程将进程数据存储在AEM表单数据库中。 使用一些简单的流程设计和产品配置策略，可以最大限度地减少AEM表单数据库的增长。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ac3766c5-b741-4e65-8053-0c9cfd66a2f9
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 0%
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
-# 最大程度地减少数据库增长的提示 {#tips-for-minimizing-database-growth}
+# 最小化数据库增长的技巧 {#tips-for-minimizing-database-growth}
 
 长期进程将进程数据存储在AEM表单数据库中。 使用一些简单的流程设计和产品配置策略，可以最大限度地减少AEM表单数据库的增长。
 
@@ -36,4 +36,4 @@ ht-degree: 0%
 
 有效地使用全局文档存储(GDS)。 Forms服务器上的GDS目录用于存储（其中包括）传递到进程中AEM表单所包含的服务中的文件。 为了提高性能，较小的文档存储在内存中并保留在数据库中。
 
-管理控制台显示Default Document Max Inline Size属性，用于配置存储在内存中并保留在数据库中的文档的最大大小。 (请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。)如果将此属性设置为低值，则大多数文档将保留在GDS目录而非数据库中。 优点在于，当文件存储在GDS目录中时，可以更轻松地删除不再需要的文件。
+管理控制台显示Default Document Max Inline Size属性，用于配置存储在内存中并保留在数据库中的文档的最大大小。 （请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。） 如果将此属性设置为低值，则大多数文档将保留在GDS目录而非数据库中。 优点在于，当文件存储在GDS目录中时，可以更轻松地删除不再需要的文件。

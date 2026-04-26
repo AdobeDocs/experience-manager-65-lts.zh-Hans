@@ -1,5 +1,5 @@
 ---
-title: 升级自定义搜索Forms
+title: 升级自定义搜索表单
 description: 本文详细介绍了升级后自定义搜索表单正常运行所需的调整。
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
@@ -7,14 +7,14 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 9df608f8-cdd0-4820-aab1-eab9fd70f961
-source-git-commit: 547d7866346fb148cb66f546d8a2e1141f69f563
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1797'
-ht-degree: 2%
+source-wordcount: '1796'
+ht-degree: 3%
 
 ---
 
-# 升级自定义搜索Forms{#upgrading-custom-search-forms}
+# 升级自定义搜索表单{#upgrading-custom-search-forms}
 
 在AEM 6.2中，Customized Search Forms在存储库中的存储位置已更改。 升级后，这些用户档案会从6.1中的以下位置移动：
 
@@ -36,9 +36,9 @@ ht-degree: 2%
 
 您可以通过执行以下操作来更改属性：
 
-1. 通过转到`https://server:port/crx/de/index.jsp`打开CRXDE Lite
+1. 通过访问 `https://server:port/crx/de/index.jsp` 来打开 CRXDE Lite
 1. 按照下面[自定义搜索Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms)列表中的指定，浏览到需要调整的节点位置。
-1. 单击节点。 在右侧属性窗格中，单击并修改&#x200B;**sling：resourceType**&#x200B;属性。
+1. 单击节点。 在右侧属性窗格中，单击并修改&#x200B;**sling:resourceType**&#x200B;属性。
 1. 最后，按&#x200B;**全部保存**&#x200B;按钮保存更改。
 
 ## 自定义搜索Forms列表 {#list-of-custom-search-forms}

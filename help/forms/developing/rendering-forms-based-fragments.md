@@ -1,5 +1,5 @@
 ---
-title: 基于片段渲染Forms
+title: 基于片段渲染表单
 description: 使用Forms服务呈现基于使用Designer创建的片段的表单。
 contentOwner: admin
 content-type: reference
@@ -12,18 +12,18 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 3af4361d-ff30-46db-ac88-64bfae8f63a4
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2189'
-ht-degree: 0%
+source-wordcount: '2204'
+ht-degree: 1%
 
 ---
 
-# 基于片段渲染Forms {#rendering-forms-based-on-fragments}
+# 基于片段渲染表单 {#rendering-forms-based-on-fragments}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
-## 基于片段渲染Forms {#rendering-forms-based-on-fragments-inner}
+## 基于片段渲染表单 {#rendering-forms-based-on-fragments-inner}
 
 Forms服务可以渲染基于您使用Designer创建的片段的表单。 *片段*&#x200B;是表单的可重用部分，保存为可插入到多个表单设计中的单独XDP文件。 例如，片段可以包含地址块或法律文本。
 
@@ -83,7 +83,7 @@ Forms服务可以渲染基于您使用Designer创建的片段的表单。 *片�
 
 **渲染表单**
 
-基于片段的表单可以以与非片段表单相同的方式呈现。 也就是说，您可以将表单渲染为PDF、HTML或表单指南（已弃用）。 本节中的示例将基于片段的表单渲染为交互式PDF表单。 (请参阅[渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)。)
+基于片段的表单可以以与非片段表单相同的方式呈现。 也就是说，您可以将表单渲染为PDF、HTML或表单指南（已弃用）。 本节中的示例将基于片段的表单渲染为交互式PDF表单。 （请参阅[渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)。）
 
 **将表单数据流写入客户端Web浏览器**
 
@@ -99,9 +99,9 @@ Forms服务渲染表单时，会返回一个您必须写入客户端Web浏览器
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -149,9 +149,9 @@ Forms服务渲染表单时，会返回一个您必须写入客户端Web浏览器
 
 **另请参阅**
 
-[基于片段渲染Forms](#rendering-forms-based-on-fragments)
+[基于片段渲染表单](#rendering-forms-based-on-fragments)
 
-[快速入门(SOAP模式)：使用Java API基于片段呈现表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API基于片段呈现表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -205,6 +205,6 @@ Forms服务渲染表单时，会返回一个您必须写入客户端Web浏览器
 
 **另请参阅**
 
-[基于片段渲染Forms](#rendering-forms-based-on-fragments)
+[基于片段渲染表单](#rendering-forms-based-on-fragments)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

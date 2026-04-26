@@ -1,5 +1,5 @@
 ---
-title: 使用Remoting调用AEM Forms
+title: 使用远程调用 AEM Forms
 description: 使用远程处理来调用AEM Forms进程，以调用在Workbench中创建的进程。 您可以从使用AEM Forms构建的客户端应用程序中调用Flex进程。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms,APIs & Integrations,Workbench
 hide: true
 hidefromtoc: true
 exl-id: 37f5efaa-db0b-4035-987d-4140fc5a97be
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '4604'
-ht-degree: 0%
+source-wordcount: '4651'
+ht-degree: 1%
 
 ---
 
-# 使用Remoting调用AEM Forms {#invoking-aem-forms-using-remoting}
+# 使用远程调用 AEM Forms {#invoking-aem-forms-using-remoting}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在使用远程处理时，建议您调用在Workbench中创建的流程，而不是使用AEM Forms服务创建的流程。 但是，可以直接调用AEM Forms服务。 (请参阅AEM Forms开发人员中心上的使用远程处理加密PDF文档。)
+>在使用远程处理时，建议您调用在Workbench中创建的流程，而不是使用AEM Forms服务创建的流程。 但是，可以直接调用AEM Forms服务。 （请参阅AEM Forms开发人员中心上的使用远程处理加密PDF文档。）
 
 >[!NOTE]
 >
@@ -58,9 +58,9 @@ ht-degree: 0%
 
 [包括AEM Forms Flex库文件](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[使用AEM Forms Remoting处理文档(AEM Forms已弃用)](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[使用AEM Forms Remoting处理文档（AEM Forms已弃用）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [验证使用Flex构建的客户端应用程序](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -70,13 +70,13 @@ ht-degree: 0%
 
 [创建使用Flex构建的客户端应用程序，以调用以人为中心的长期流程](/help/forms/developing/invoking-human-centric-long-lived.md#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process)
 
-[创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)
+[创建使用 HTTP 令牌执行 SSO 身份验证的 Flash Builder 应用程序](/help/forms/developing/creating-flash-builder-applications-perform.md#creating-flash-builder-applications-that-perform-sso-authentication-using-http-tokens)
 
 <!-- For information on how to display process data in a Flex graph control, see [Displaying AEM Forms process data in Flex graphs](https://www.adobe.com/devnet/livecycle/articles/populating_flexcontrols.html). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
 >[!NOTE]
 >
->*请务必将crossdomain.xml文件放在正确的位置。 例如，假设您在JBoss上部署了AEM Forms，则将此文件放在以下位置： &lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
+>*请务必将crossdomain.xml文件放在正确的位置。 例如，假定您在JBoss上部署了AEM Forms，则将此文件放在以下位置：&lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war。*
 
 ## 包括AEM Forms Flex库文件 {#including-the-aem-forms-flex-library-file}
 
@@ -88,19 +88,19 @@ ht-degree: 0%
 
 **另请参阅**
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[使用AEM Forms Remoting处理文档(AEM Forms已弃用)](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[使用AEM Forms Remoting处理文档（AEM Forms已弃用）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [验证使用Flex构建的客户端应用程序](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
 ## 使用远程处理文档 {#handling-documents-with-remoting}
 
-AEM Forms中使用的最重要的非原始Java™类型之一是`com.adobe.idp.Document`类。 调用AEM Forms操作通常需要文档。 它主要是PDF文档，但可以包含其他文档类型，如SWF、HTML、XML或DOC文件。 (请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。)
+AEM Forms中使用的最重要的非原始Java™类型之一是`com.adobe.idp.Document`类。 调用AEM Forms操作通常需要文档。 它主要是PDF文档，但可以包含其他文档类型，如SWF、HTML、XML或DOC文件。 （请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。）
 
-使用Flex构建的客户端应用程序无法直接请求文档。 例如，您无法启动Adobe Reader来请求生成PDF文件的URL。 对文档类型(如PDF和Microsoft®Word文档)的请求将返回一个结果，即URL。 客户有责任显示URL的内容。 文档管理服务可帮助生成URL和内容类型信息。 对XML文档的请求在结果中返回完整的XML文档。
+使用Flex构建的客户端应用程序无法直接请求文档。 例如，您无法启动Adobe Reader来请求生成PDF文件的URL。 对文档类型（如PDF和Microsoft®Word文档）的请求将返回一个结果，即URL。 客户有责任显示URL的内容。 文档管理服务可帮助生成URL和内容类型信息。 对XML文档的请求在结果中返回完整的XML文档。
 
 ### 将文档作为输入参数传递 {#passing-a-document-as-an-input-parameter}
 
@@ -137,7 +137,7 @@ docRef.text = "Text for my document";  // Optionally, you can override the ser
 >如果将AEM Forms配置为允许上传不安全的文档，则您可以使用没有文档上传应用程序用户角色的用户来上传文档。 用户还可以具有文档上传权限。 但是，如果将AEM Forms配置为仅允许安全文档，请确保用户具有“文档上传应用程序用户”角色或“文档上传”权限。 (请参阅[将AEM Forms配置为接受安全且不安全的文档](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。
 
 您对指定的上载URL使用标准的Flash上载功能： `https://SERVER:PORT/remoting/lcfileupload`。 然后，只要需要`Document`类型的输入参数，您就可以使用`DocumentReference`对象
-` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`远程快速入门使用远程上传Servlet将PDF文件传递到`MyApplication/EncryptDocument`进程。 (请参阅[使用(不适用于AEM表单)AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)通过传递不安全的文档来调用短暂的进程。)
+` private function startUpload():void  {  fileRef.addEventListener(Event.SELECT, selectHandler);  fileRef.addEventListener("uploadCompleteData", completeHandler);  try  {   var success:Boolean = fileRef.browse();  }    catch (error:Error)  {   trace("Unable to browse for files.");  }  }      private function selectHandler(event:Event):void {  var request:URLRequest = new  URLRequest("https://SERVER:PORT/remoting/lcfileupload")  try   {   fileRef.upload(request);   }    catch (error:Error)   {   trace("Unable to upload file.");   }  }    private function completeHandler(event:DataEvent):void  {   var params:Object = new Object();   var docRef:DocumentReference = new DocumentReference();   docRef.url = event.data as String;   docRef.referenceType = DocumentReference.REF_TYPE_URL;  }`远程快速入门使用远程上传Servlet将PDF文件传递到`MyApplication/EncryptDocument`进程。 (请参阅[使用（不适用于AEM表单）AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)通过传递不安全的文档来调用短暂的进程。)
 
 ```java
  
@@ -170,7 +170,7 @@ function completeHandler(event: DataEvent): void  { 
 }
 ```
 
-远程快速入门使用远程上传Servlet将PDF文件传递到`MyApplication/EncryptDocument`进程。 (请参阅[使用(不适用于AEM表单)AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)通过传递不安全的文档来调用短暂的进程。)
+远程快速入门使用远程上传Servlet将PDF文件传递到`MyApplication/EncryptDocument`进程。 (请参阅[使用（不适用于AEM表单）AEM Forms Remoting](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)通过传递不安全的文档来调用短暂的进程。)
 
 ### 将文档传递回客户端应用程序 {#passing-a-document-back-to-a-client-application}
 
@@ -178,11 +178,11 @@ function completeHandler(event: DataEvent): void  { 
 
 **另请参阅**
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
 [包括AEM Forms Flex库文件](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [验证使用Flex构建的客户端应用程序](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -201,7 +201,7 @@ function completeHandler(event: DataEvent): void  { 
 >
 >本节讨论如何调用AEM Forms进程，以及当AEM Forms配置为上传不安全的文档时如何上传文档。 有关如何调用AEM Forms进程和上载安全文档以及如何配置AEM Forms以接受安全和不安全文档的信息，请参阅[传递安全文档以使用远程处理调用进程](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)。
 
-**正在创建mx：RemoteObject实例**
+**正在创建mx:RemoteObject实例**
 
 您可以创建一个`mx:RemoteObject`实例，以调用在Workbench中创建的AEM Forms进程。 要创建`mx:RemoteObject`实例，请指定以下值：
 
@@ -239,7 +239,7 @@ function completeHandler(event: DataEvent): void  { 
 
 **传递输入值**
 
-在Workbench中创建的进程可以接受零个或多个输入参数并返回输出值。 客户端应用程序使用与AEM Forms进程参数对应的字段，在`ActionScript`对象中传递输入参数。 名为`MyApplication/EncryptDocument`的短暂进程需要一个名为`inDoc`的输入参数。 进程公开的操作的名称为`invoke`（短时间进程的默认名称）。 (请参阅[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+在Workbench中创建的进程可以接受零个或多个输入参数并返回输出值。 客户端应用程序使用与AEM Forms进程参数对应的字段，在`ActionScript`对象中传递输入参数。 名为`MyApplication/EncryptDocument`的短暂进程需要一个名为`inDoc`的输入参数。 进程公开的操作的名称为`invoke`（短时间进程的默认名称）。 (请参阅[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
 
 以下代码示例将PDF文档传递到`MyApplication/EncryptDocument`进程：
 
@@ -256,7 +256,7 @@ function completeHandler(event: DataEvent): void  { 
      ...
 ```
 
-在此代码示例中，`pdfDocument`是包含不安全PDF文档的`DocumentReference`实例。 有关`DocumentReference`的信息，请参阅[使用(AEM表单已弃用)AEM Forms远程处理处理文档](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)。
+在此代码示例中，`pdfDocument`是包含不安全PDF文档的`DocumentReference`实例。 有关`DocumentReference`的信息，请参阅[使用（AEM表单已弃用）AEM Forms远程处理处理文档](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)。
 
 **调用服务的特定版本**
 
@@ -286,14 +286,14 @@ AEM Forms进程输出参数被反序列化为ActionScript对象，客户端应�
 
 您可以通过执行以下步骤来调用`MyApplication/EncryptDocument`进程：
 
-1. 通过ActionScript或MXML创建`mx:RemoteObject`实例。 请参阅创建mx：RemoteObject实例。
+1. 通过ActionScript或MXML创建`mx:RemoteObject`实例。 请参阅创建mx:RemoteObject实例。
 1. 设置`ChannelSet`实例以与AEM Forms通信，并将其与`mx:RemoteObject`实例关联。 请参阅创建AEM Forms渠道。
 1. 调用ChannelSet的`login`方法或服务的`setCredentials`方法以指定用户标识符值和密码。 （请参阅[使用单点登录](invoking-aem-forms-using-remoting.md#using-single-sign-on)。）
 1. 使用不安全的PDF文档填充`mx.rpc.livecycle.DocumentReference`实例以传递到`MyApplication/EncryptDocument`进程。 （请参阅[将文档作为输入参数传递](invoking-aem-forms-using-remoting.md#passing-a-document-as-an-input-parameter)。）
-1. 通过调用`mx:RemoteObject`实例的`invoke`方法来加密PDF文档。 传递包含输入参数(这是不安全的PDF文档)的`Object`。 请参阅传递输入值。
+1. 通过调用`mx:RemoteObject`实例的`invoke`方法来加密PDF文档。 传递包含输入参数（这是不安全的PDF文档）的`Object`。 请参阅传递输入值。
 1. 检索从进程返回的已加密的PDF文档。 请参阅处理返回值。
 
-[快速入门：通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
+[快速入门：通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](/help/forms/developing/invocation-api-quick-starts.md#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting)
 
 ## 验证使用Flex构建的客户端应用程序 {#authenticating-client-applications-built-with-flex}
 
@@ -455,7 +455,7 @@ AEM forms用户可以连接到多个AEM Forms web应用程序以执行任务。 
 
 AEM Forms开发人员编写客户端应用程序以扩展表单指南（已弃用）的功能并自定义Workspace。 例如，Workspace应用程序可以启动一个流程。 然后，客户端应用程序使用远程端点从Forms服务检索数据。
 
-当使用(不推荐用于AEM表单)AEM Forms Remoting调用AEM Forms服务时，客户端应用程序将传递身份验证Cookie作为请求的一部分。 由于用户已经过身份验证，因此无需额外登录即可从客户端应用程序连接到AEM Forms服务。
+当使用（不推荐用于AEM表单）AEM Forms Remoting调用AEM Forms服务时，客户端应用程序将传递身份验证Cookie作为请求的一部分。 由于用户已经过身份验证，因此无需额外登录即可从客户端应用程序连接到AEM Forms服务。
 
 >[!NOTE]
 >
@@ -536,19 +536,19 @@ AEM Forms开发人员编写客户端应用程序以扩展表单指南（已弃�
 
 **另请参阅**
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[使用AEM Forms Remoting处理文档(AEM Forms已弃用)](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[使用AEM Forms Remoting处理文档（AEM Forms已弃用）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
 [包括AEM Forms Flex库文件](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [使用远程处理传递安全文档以调用进程](invoking-aem-forms-using-remoting.md#passing-secure-documents-to-invoke-processes-using-remoting)
 
 ## 使用远程处理传递安全文档以调用进程 {#passing-secure-documents-to-invoke-processes-using-remoting}
 
-在调用需要一个或多个文档的进程时，您可以将安全文档传递到AEM Forms。 通过传递安全文档，您可以保护业务信息和机密文档。 在这种情况下，文档可以引用PDF文档、XML文档、Word文档等。 如果将AEM Forms配置为允许安全文档，则需要将安全文档从在Flex中编写的客户端应用程序传递到AEM Forms。 (请参阅[将AEM Forms配置为接受安全且不安全的文档](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。)
+在调用需要一个或多个文档的进程时，您可以将安全文档传递到AEM Forms。 通过传递安全文档，您可以保护业务信息和机密文档。 在这种情况下，文档可以引用PDF文档、XML文档、Word文档等。 如果将AEM Forms配置为允许安全文档，则需要将安全文档从在Flex中编写的客户端应用程序传递到AEM Forms。 （请参阅[将AEM Forms配置为接受安全且不安全的文档](invoking-aem-forms-using-remoting.md#configuring-aem-forms-to-accept-secure-and-unsecure-documents)。）
 
 传递安全文档时，请使用单点登录并指定具有&#x200B;*Document Upload Application User*&#x200B;角色的AEM表单用户。 如果没有此角色，用户将无法上传安全文档。 您可以通过编程方式为用户分配角色。 （请参阅[管理角色和权限](/help/forms/developing/users.md#managing-roles-and-permissions)。）
 
@@ -624,7 +624,7 @@ AEM Forms支持名为`getFileUploadToken`的操作，该操作返回传递给上
 >[!NOTE]
 >
 >* 要将AEM Forms配置为接受不安全的文档，请选择允许从Flex应用程序上传不安全的文档选项。 然后，重新启动应用程序或服务以确保设置生效。
->* 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> * 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 
 ### 快速入门：通过使用Remoting传递安全文档来调用短期进程 {#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting}
@@ -883,13 +883,13 @@ AEM Forms支持名为`getFileUploadToken`的操作，该操作返回传递给上
 
 **另请参阅**
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[使用AEM Forms Remoting处理文档(AEM Forms已弃用)](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[使用AEM Forms Remoting处理文档（AEM Forms已弃用）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
 [包括AEM Forms Flex库文件](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [验证使用Flex构建的客户端应用程序](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 
@@ -1270,13 +1270,13 @@ Customer ActionScript类属于名为customer的软件包。 建议您将映射�
 
 **另请参阅**
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
-[使用AEM Forms Remoting处理文档(AEM Forms已弃用)](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
+[使用AEM Forms Remoting处理文档（AEM Forms已弃用）](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting)
 
 [包括AEM Forms Flex库文件](invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)
 
-[通过使用(不推荐用于AEM表单)AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
+[通过使用（不推荐用于AEM表单）AEM Forms Remoting传递不安全的文档来调用短暂的过程](invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)
 
 [验证使用Flex构建的客户端应用程序](invoking-aem-forms-using-remoting.md#authenticating-client-applications-built-with-flex)
 

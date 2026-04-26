@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: c04e0716-2aa2-420b-bbf5-74ffd1c28794
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 12%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 用户无法执行操作，例如通过电子邮件发送PDF或通过提交配置包含附件。
 
-## 解决方案 {#solution}
+## 解决办法 {#solution}
 
 1. 将jar下载为[java.mail-1.0.jar](/help/forms/using/java.mail-1.0.jar)，然后解压缩下载的jar文件以获取清单文件。
 
@@ -56,4 +56,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。

@@ -1,5 +1,5 @@
 ---
-title: 设置PDFG网络打印机（仅限Windows）
+title: 设置 PDFG 网络打印机（仅限 Windows）
 description: 了解如何设置PDFG网络打印机（仅限Windows ）
 feature: PDF Generator
 solution: Experience Manager, Experience Manager Forms
@@ -7,14 +7,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 6e9c42d9-fb1d-432b-95b9-6e21706b2a3e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 2%
 
 ---
 
-# 设置PDFG网络打印机（仅限Windows） {#setting-up-a-pdfg-network-printer-windows-only}
+# 设置 PDFG 网络打印机（仅限 Windows） {#setting-up-a-pdfg-network-printer-windows-only}
 
 >[!NOTE]
 > 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 PDFG网络打印机允许用户从任何支持打印的应用程序生成PDF文档。 用户安装PDFG网络打印机后，名为&#x200B;*PDF生成器*&#x200B;的新打印机将出现在Windows控制面板的“打印机”部分中。 如果同名打印机已存在，则提示用户提供另一个名称。
 
-从任何应用程序打印到此打印机，都会将文档(采用PostScript格式)发送到PDF Generator，后者将PostScript文件转换为PDF。 根据您配置PDF Generator的方式，它会将PDF文档作为电子邮件的附件发送给用户，将PDF文档转发到指定的AEM表单服务或流程，或同时执行这两项操作。
+从任何应用程序打印到此打印机，都会将文档（采用PostScript格式）发送到PDF Generator，后者将PostScript文件转换为PDF。 根据您配置PDF Generator的方式，它会将PDF文档作为电子邮件的附件发送给用户，将PDF文档转发到指定的AEM表单服务或流程，或同时执行这两项操作。
 
 要设置PDFG网络打印机，需要执行以下步骤：
 

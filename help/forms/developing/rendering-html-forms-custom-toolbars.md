@@ -1,5 +1,5 @@
 ---
-title: 使用CustomToolbars渲染HTML Forms
+title: 使用自定义工具栏渲染 HTML 表单
 description: 使用Forms服务可自定义通过HTML表单呈现的工具栏。 您可以使用HTML API和Web服务API呈现带有自定义工具栏的Java表单。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: e4b02c17-dcd1-424b-9aee-579a8346b4d7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2328'
-ht-degree: 0%
+source-wordcount: '2358'
+ht-degree: 1%
 
 ---
 
-# 使用CustomToolbars渲染HTML Forms {#rendering-html-forms-with-customtoolbars}
+# 使用自定义工具栏渲染 HTML 表单 {#rendering-html-forms-with-customtoolbars}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -29,7 +29,7 @@ Forms服务允许您自定义使用HTML表单呈现的工具栏。 可以自定�
 
 >[!NOTE]
 >
->此URI位置位于adobe-forms-core.jar文件中，该文件位于adobe-forms-dsc.jar文件中。 adobe-forms-dsc.jar文件位于C:\Adobe\Adobe_Experience_Manager_forms\文件夹中(C:\是安装目录)。 您可以使用文件提取工具（如Win RAR）来打开Adobe。
+>此URI位置位于adobe-forms-core.jar文件中，该文件位于adobe-forms-dsc.jar文件中。 adobe-forms-dsc.jar文件位于C:\Adobe\Adobe_Experience_Manager_forms\文件夹中（C:\是安装目录）。 您可以使用文件提取工具（如Win RAR）来打开Adobe。
 
 您可以从此位置复制fscmenu.xml，修改它以满足您的要求，然后将其置于自定义URI位置。 接下来，使用Forms服务API设置运行时选项，这些选项会导致从指定位置使用fscmenu.xml文件来执行Forms服务。 这些操作会导致Forms服务呈现一个具有自定义工具栏的HTML表单。
 
@@ -56,7 +56,7 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 >
 >建议不要混合使用引用这些文件的方式。 也就是说，所有URI都应该使用`FSToolBarURI`关键字或绝对位置引用。
 
-您可以通过打开adobe-forms-&lt;appserver>.ear文件来获取JS和CSS文件。 在此文件中，打开adobe-forms-res.war。 所有这些文件都在WAR文件中。 adobe-forms-&lt;appserver>.ear文件位于AEM forms安装文件夹中(C:\是安装目录)。 您可以使用文件提取工具（如WinRAR）打开adobe-forms-&lt;appserver>.ear。
+您可以通过打开adobe-forms-&lt;appserver>.ear文件来获取JS和CSS文件。 在此文件中，打开adobe-forms-res.war。 所有这些文件都在WAR文件中。 adobe-forms-&lt;appserver>.ear文件位于AEM forms安装文件夹中（C:\是安装目录）。 您可以使用文件提取工具（如WinRAR）打开adobe-forms-&lt;appserver>.ear。
 
 以下XML语法显示了一个fscmenu.xml文件的示例。
 
@@ -101,7 +101,7 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 * 使用本节中介绍的方法之一（例如，`fscJS="FSToolBarURI/scripts/fscmenu.js"`）更改`fscJS`、`fscCSS`、`fscVCSS`、`fscIECSS`属性的值（在fscmenu.xml文件中）以反映引用文件的自定义位置。
 * 必须指定所有CSS和JS文件。 如果未修改任何文件，请在自定义位置提供默认文件。 通过打开本节中描述的各种文件，可以获取默认文件。
-* 允许为任何文件提供绝对引用(例如，https://www.example.com/scripts/custom-vertical-fscmenu.css)。
+* 允许为任何文件提供绝对引用（例如，https://www.example.com/scripts/custom-vertical-fscmenu.css）。
 * `div#fscmenu`节点所需的JS和CSS文件对于工具栏功能至关重要。 单个`ul#fscmenuItem`节点可能具有或不具有支持的JS或CSS文件。
 
 **更改本地值**
@@ -155,7 +155,7 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 >[!NOTE]
 >
->在渲染使用自定义工具栏的HTML表单之前，您必须了解HTML表单的渲染方式。 (请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。)
+>在渲染使用自定义工具栏的HTML表单之前，您必须了解HTML表单的渲染方式。 （请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。）
 
 有关Forms服务的详细信息，请参阅[AEM Forms的服务参考](https://www.adobe.com/go/learn_aemforms_services_63)。
 
@@ -201,11 +201,11 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)
+[将表单渲染为 HTML](/help/forms/developing/rendering-forms-html.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -259,7 +259,7 @@ fscCSS是与特定节点关联的样式表。 CSS文件中的样式指定工具�
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API通过自定义工具栏呈现HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API通过自定义工具栏呈现HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

@@ -1,5 +1,5 @@
 ---
-title: 大批量安全信息交付
+title: 大规模安全信息投放
 description: Document Security支持将许可证关联到用户，而不是关联到批量生产环境中的文档。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5df8c609-8007-4422-9bf8-5bae6d53b9b7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 0%
+source-wordcount: '326'
+ht-degree: 3%
 
 ---
 
-# 大批量安全信息交付 {#high-volume-secure-information-delivery}
+# 大规模安全信息投放 {#high-volume-secure-information-delivery}
 
 在批量生产环境中（例如为电信公司生成每月安全发票的环境中），创建特定于每个文档的许可证可能会成为一个资源密集型过程。 在这种情况下，Document Security支持将许可证与用户关联，而不是与文档关联。 为用户生成的许可证用于为该用户保护的所有文档。
 

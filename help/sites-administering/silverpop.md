@@ -1,5 +1,5 @@
 ---
-title: 与Silverpop Engage集成
+title: 与 Silverpop Engage 集成
 description: 了解如何将Adobe Experience Manager与Silverpop Engage集成。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,19 +10,21 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 1782ad8c-b514-4d41-86c9-59c60af46cde
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 0%
+source-wordcount: '605'
+ht-degree: 2%
 
 ---
 
-# 与Silverpop Engage集成{#integrating-with-silverpop-engage}
+# 与 Silverpop Engage 集成{#integrating-with-silverpop-engage}
 
-<!-- THIS ENTIRE TOPIC APPEARS OBSOLETE BECAUSE SILVERPOP NO LONGER EXISTS AND THERE ARE NO REDIRECTS FOR THE DOWNLOAD URL BELOW THAT IS 404.
+<!--
+THIS ENTIRE TOPIC APPEARS OBSOLETE BECAUSE SILVERPOP NO LONGER EXISTS AND THERE ARE NO REDIRECTS FOR THE DOWNLOAD URL BELOW THAT IS 404.
 >[!NOTE]
 >
->Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document. -->
+>Silverpop integration is **not** available out of the box. Download the Silverpop integration package `https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem620/product/cq-mcm-integrations-silverpop-content` from Package Share and install it on your instance. After you have installed the package, you can configure it as described in this document.
+-->
 
 将AEM与Silverpop Engage集成后，您可以通过Silverpop管理和发送在AEM中创建的电子邮件。 它还允许您通过AEM页面上的AEM表单使用Silverpop的潜在客户管理功能。
 
@@ -48,9 +50,9 @@ ht-degree: 0%
    >
    >除非从包共享下载包，否则Silverpop Engage在第三方服务下不可用。
 
-1. 输入标题，也可以输入名称，然后单击&#x200B;**创建**。 将打开 **&#x200B; Silverpop设置**&#x200B;配置窗口。
+1. 输入标题，也可以输入名称，然后单击&#x200B;**创建**。 将打开** Silverpop设置**配置窗口。
 1. 输入用户名、密码，然后从下拉列表中选择一个API端点。
-1. 单击&#x200B;**连接到Silverpop。**&#x200B;成功连接后，您会看到一个成功对话框。 单击“**确定**”，退出窗口。 您可以通过单击&#x200B;**转到Silverpop Engage**&#x200B;来转到Silverpop。
+1. 单击&#x200B;**连接到Silverpop。** 成功连接后，您会看到一个成功对话框。 单击“**确定**”，退出窗口。 您可以通过单击&#x200B;**转到Silverpop Engage**&#x200B;来转到Silverpop。
 1. Silverpop已配置。 您可以通过单击&#x200B;**编辑**&#x200B;来编辑配置。
 1. 此外，还可以通过提供标题和名称（可选）为个性化操作配置Silverpop Engage框架。 单击“创建”为已配置的Silverpop连接成功创建框架。
 

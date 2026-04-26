@@ -1,5 +1,5 @@
 ---
-title: 开始使用流程报告
+title: 流程报告快速入门
 description: 开始使用AEM Forms on JEE流程报告的步骤
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: e64a3b6f-7248-4426-9f13-f703eab3632d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1710'
-ht-degree: 0%
+source-wordcount: '1734'
+ht-degree: 2%
 
 ---
 
-# 开始使用流程报告{#getting-started-with-process-reporting}
+# 流程报告快速入门{#getting-started-with-process-reporting}
 
 利用Process Reporting，AEM Forms用户能够查询当前在AEM Forms实施中定义的AEM Forms流程相关信息。 但是，流程报表不会直接从AEM Forms存储库访问数据。 数据首先按计划发布到Process Reporting存储库（*由ProcessDataPublisher和ProcessDataStorage服务*&#x200B;发布）。 然后，使用发布到存储库的Process Reporting数据生成Process Reporting中的报告和查询。 Process Reporting作为Forms Workflow模块的一部分安装。
 
@@ -55,10 +55,10 @@ Process Reporting服务会按计划将数据从AEM Forms数据库发布到Proces
 >如果您在某个群集中运行AEM Forms实施，请在群集的每个节点上执行以下步骤。
 
 1. 停止AEM Forms Server实例。
-1. &#x200B;AEM
+1.  
 
    * （对于Windows）在编辑器中打开`[JBoss root]/bin/run.conf.bat`文件。
-   * (对于Linux®、AIX®和Solaris™)编辑器中的`[JBoss root]/bin/run.conf.sh`文件。
+   * （对于Linux®、AIX®和Solaris™）编辑器中的`[JBoss root]/bin/run.conf.sh`文件。
 
 1. 添加JVM参数`-Dreporting.publisher.cron = <expression>.`
 
@@ -103,7 +103,7 @@ Process Reporting服务会按计划将数据从AEM Forms数据库发布到Proces
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ### ProcessDataStorage服务 {#processdatastorage-service}
 
@@ -173,7 +173,7 @@ ProcessDataPublisher服务从AEM Forms数据库导入进程数据，并将该数
 
 1. 使用管理员凭据登录到&#x200B;**管理控制台**。
 
-   默认URL为`https://'server':port]/adminui/`。
+   默认 URL 为 `https://'server':port]/adminui/`。
 
 1. 导航到&#x200B;**主页** > **服务** > **应用程序和服务** >**服务管理**，然后打开&#x200B;**ProcessDataPublisher**&#x200B;服务。
 

@@ -1,5 +1,5 @@
 ---
-title: IBM DB2数据库：运行命令以进行常规维护
+title: IBM DB2 数据库：运行命令以进行常规维护
 description: 本文档列出了为定期维护AEM表单数据库而推荐的IBM DB2命令。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: cf505217-78c0-4af7-80f6-5ee75f09f46c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# IBM DB2数据库：运行命令以进行常规维护 {#ibm-db-database-running-commands-for-regular-maintenance}
+# IBM DB2 数据库：运行命令以进行常规维护 {#ibm-db-database-running-commands-for-regular-maintenance}
 
 建议使用以下IBM DB2命令来定期维护AEM表单数据库。 有关DB2数据库的维护和性能调整的详细信息，请参阅&#x200B;*IBM DB2 Administration Guide*。
 

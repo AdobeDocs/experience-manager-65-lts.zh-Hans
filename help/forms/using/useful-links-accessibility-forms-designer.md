@@ -7,14 +7,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 6309875f-3cf0-4e3b-abe2-10decde6b313
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 0%
+source-wordcount: '65'
+ht-degree: 3%
 
 ---
 
-# 有用的链接
+# 实用链接
 
 * Adobe辅助功能资源中心： www.adobe.com/accessibility
 * WCAG 1.0标准：http://www.w3.org/TR/WAI-WEBCONTENT/

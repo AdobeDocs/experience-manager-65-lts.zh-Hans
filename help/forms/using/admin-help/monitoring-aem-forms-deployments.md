@@ -1,5 +1,5 @@
 ---
-title: 监控AEM forms部署
+title: 监控 AEM Forms 部署
 description: 您可以从系统级别和内部级别监控AEM Forms部署。 通过本文档了解有关监控AEM表单部署的更多信息。
 contentOwner: admin
 content-type: reference
@@ -11,16 +11,16 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: aa02139f-7e47-4979-9560-5d270c36080b
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 0%
+source-wordcount: '586'
+ht-degree: 1%
 
 ---
 
-# 监控AEM forms部署 {#monitoring-aem-forms-deployments}
+# 监控 AEM Forms 部署 {#monitoring-aem-forms-deployments}
 
-您可以从系统级别和内部级别监控AEM Forms部署。 您可以使用HP OpenView、IBM®Tivoli和CA UniCenter等专业管理工具以及名为&#x200B;*JConsole*&#x200B;的第三方JMX监视器来专门监视Java™活动。 实施监控策略可提高AEM Forms部署的可用性、可靠性和性能。
+您可以从系统级别和内部级别监控AEM Forms部署。 您可以使用HP OpenView、®Tivoli和CA UniCenter等专业管理工具以及名为&#x200B;*JConsole*&#x200B;的第三方JMX监视器来专门监视Java™活动。 实施监控策略可提高AEM Forms部署的可用性、可靠性和性能。
 
 <!-- For more information about monitoring AEM forms deployments, see [A technical guide for monitoring AEM forms deployments](https://www.adobe.com/devnet/livecycle/pdfs/lc_monitoring_wp_ue.pdf). This URL is 404. No suitable replacement URL was found after a search. Do not make this link live if it is dead! -->
 
@@ -146,7 +146,7 @@ AEM Forms提供两个注册的MBean，用于提供导航和统计信息。 这�
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
-1. 在/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties文件(或&lt;Your Websphere JRE>/ lib/management/management.properties)中添加或取消注释以下三行：
+1. 在/opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties文件（或&lt;Your Websphere JRE>/ lib/management/management.properties）中添加或取消注释以下三行：
 
    ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect

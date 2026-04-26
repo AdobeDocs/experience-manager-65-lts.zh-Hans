@@ -1,5 +1,5 @@
 ---
-title: 备份和恢复EMC Documentum存储库
+title: 备份和恢复 EMC Documentum 存储库
 description: 本文档介绍了备份和恢复为您的AEM Forms环境配置的EMC Documentum存储库所需的任务。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 054d31c3-bd58-4596-8c06-4909d75e9569
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '792'
+ht-degree: 3%
 
 ---
 
-# 备份和恢复EMC Documentum存储库 {#backing-up-and-recovering-the-emc-documentum-repository}
+# 备份和恢复 EMC Documentum 存储库 {#backing-up-and-recovering-the-emc-documentum-repository}
 
 本节介绍备份和恢复为您的AEM Forms环境配置的EMC Documentum存储库所需的任务。
 
@@ -199,15 +199,15 @@ ht-degree: 0%
 
    * 完全数据库备份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>* `-U` `[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>*`-U``[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
 
    * 增量数据库备份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U` `[username]` `-P` `[password]` `-l 1 -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;数据库名称>*
 
    * 数据库日志备份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s` `<NetWorker_Server_Name>` `-U` `[username]` `-P` `[password]` `-l incr -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;数据库名称>*
 
      其中：
 
@@ -237,7 +237,7 @@ ht-degree: 0%
 
 ## 备份EMC Documentum Content Server {#back-up-the-emc-documentum-content-server}
 
-完成AEM表单数据的完整备份后，请执行以下任务。 (请参阅[备份AEM表单数据](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data)。)
+完成AEM表单数据的完整备份后，请执行以下任务。 （请参阅[备份AEM表单数据](/help/forms/using/admin-help/backing-aem-forms-data.md#backing-up-the-aem-forms-data)。）
 
 >[!NOTE]
 >
@@ -252,7 +252,7 @@ ht-degree: 0%
 
 ## 恢复EMC Documentum Content Server {#restore-the-emc-documentum-content-server}
 
-在还原AEM表单数据之前，请执行以下任务。 (请参阅[恢复AEM表单数据](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data)。)
+在还原AEM表单数据之前，请执行以下任务。 （请参阅[恢复AEM表单数据](/help/forms/using/admin-help/recovering-aem-forms-data.md#recovering-the-aem-forms-data)。）
 
 >[!NOTE]
 >

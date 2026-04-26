@@ -1,6 +1,6 @@
 ---
-title: 将Forms渲染为HTML
-description: 使用Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 您可以使用Java&amp；trade； API和Web服务API将表单渲染为HTML。
+title: 将表单渲染为 HTML
+description: 使用Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 您可以使用Java&trade； API和Web服务API将表单渲染为HTML。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: f1e6adca-0591-4974-9c12-66706aa35247
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '4099'
+source-wordcount: '4149'
 ht-degree: 0%
 
 ---
 
-# 将Forms渲染为HTML {#rendering-forms-as-html}
+# 将表单渲染为 HTML {#rendering-forms-as-html}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -55,7 +55,7 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
 
 将表单设计呈现为HTML表单时，面板不受任何特定页面大小的限制。 如果您有动态子表单，则应将它们嵌套在面板子表单中。 动态子表单可以扩展到无限数量的HTML页面。
 
-将表单渲染为HTML表单时，页面大小(对渲染为PDF的表单进行分页所必需的)没有任何意义。 由于具有流式布局的表单可以扩展到无限数量的HTML页面，因此请务必避免在母版页上使用页脚。 母版页的内容区域下方的页脚可能会覆盖流经页面边界的HTML内容。
+将表单渲染为HTML表单时，页面大小（对渲染为PDF的表单进行分页所必需的）没有任何意义。 由于具有流式布局的表单可以扩展到无限数量的HTML页面，因此请务必避免在母版页上使用页脚。 母版页的内容区域下方的页脚可能会覆盖流经页面边界的HTML内容。
 
 您必须使用`xfa.host.pageUp`和`xfa.host.pageDown`方法明确地在面板之间移动。 您可以通过向Forms服务发送表单并让Forms服务将表单渲染回客户端设备（通常是Web浏览器）来更改页面。
 
@@ -77,7 +77,7 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
 
 **`.fsc-ds-popup-bg`**：未使用此样式表属性。
 
-**。`fsc-ds-popup-btn`**：未使用此样式表属性。
+**.`fsc-ds-popup-btn`**：未使用此样式表属性。
 
 ## 正在运行脚本 {#running-scripts}
 
@@ -85,13 +85,13 @@ Forms服务将表单渲染为HTML，以响应来自Web浏览器的HTTP请求。 
 
 Forms服务可以在渲染表单时执行脚本。 因此，您可以通过连接到数据库或客户端上可能没有的Web服务来预填充包含数据的表单。 您还可以将按钮的`Click`事件设置为在服务器上运行，以便客户端将数据往返到服务器。 这允许客户端在用户与表单交互时运行可能需要服务器资源的脚本，例如企业数据库。 对于HTML表单，formcalc脚本只能在服务器上执行。 因此，您必须将这些脚本标记为在`server`或`both`运行。
 
-您可以通过调用`xfa.host.pageUp`和`xfa.host.pageDown`方法设计在页面（面板）之间移动的表单。 此脚本放置在按钮的`Click`事件中，`runAt`属性设置为`Both`。 您选择`Both`的原因是，Adobe Reader或Acrobat(适用于呈现为PDF的表单)无需转至服务器即可更改页面，而HTML表单则可通过将数据舍入到服务器来更改页面。 即，将表单发送到Forms服务，并将表单呈现为HTML，同时显示新页面。
+您可以通过调用`xfa.host.pageUp`和`xfa.host.pageDown`方法设计在页面（面板）之间移动的表单。 此脚本放置在按钮的`Click`事件中，`runAt`属性设置为`Both`。 您选择`Both`的原因是，Adobe Reader或Acrobat（适用于呈现为PDF的表单）无需转至服务器即可更改页面，而HTML表单则可通过将数据舍入到服务器来更改页面。 即，将表单发送到Forms服务，并将表单呈现为HTML，同时显示新页面。
 
 建议不要为脚本变量和表单字段指定相同的名称，例如项目。 某些Web浏览器（如Internet Explorer）可能无法初始化与表单字段同名的变量，从而导致出现脚本错误。 为表单字段和脚本变量指定不同的名称是一种好的做法。
 
-在渲染同时包含页面导航功能和表单脚本的HTML表单时（例如，假设脚本在每次渲染表单时都从数据库中检索字段数据），请确保表单脚本采用form：calculate事件，而不是form：readyevent。
+在渲染包含页面导航功能和表单脚本的HTML表单时（例如，假设脚本在每次渲染表单时都从数据库中检索字段数据），请确保表单脚本采用form:calculate事件而非form:readyevent事件。
 
-form：ready事件形式的表单脚本在表单的初始渲染期间只执行一次，而不会在后续页面检索中执行。 相反，对于渲染表单的每个页面导航执行form：calculate事件。
+表单:ready事件中的表单脚本在表单的初始渲染期间只执行一次，而不会在后续页面检索中执行。 相反，对于渲染表单的每个页面导航执行表单:calculate事件。
 
 >[!NOTE]
 >
@@ -135,7 +135,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 在Web浏览器中，验证事件仅在退出字段或提交表单时执行。 您可以使用`xfa.form.execValidate`方法强制验证事件。
 
-在Web浏览器中显示的Forms(与Adobe Reader或Acrobat不同)符合必填字段的XFA null测试（错误或警告）。
+在Web浏览器中显示的Forms（与Adobe Reader或Acrobat不同）符合必填字段的XFA null测试（错误或警告）。
 
 * 如果空测试产生错误，并且您退出字段时未指定值，则会显示一个消息框，您将在单击“确定”后重新定位到该字段。
 * 如果空测试生成警告，并且您退出字段时未指定值，则系统将提示您单击“确定”或“取消”，从而使您可以选择继续操作而不指定值，或者返回字段输入值。
@@ -184,7 +184,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 ## 呈现符合辅助功能准则的XHTML表单 {#rendering-an-accessibility-guidelines-compliant-xhtml-form}
 
-您可以渲染符合辅助功能准则的完整HTML表单。 也就是说，表单在完整HTML标记中呈现，而不是在body标记中呈现HTML表单(不是完整的HTML页面)。
+您可以渲染符合辅助功能准则的完整HTML表单。 也就是说，表单在完整HTML标记中呈现，而不是在body标记中呈现HTML表单（不是完整的HTML页面）。
 
 ## 验证表单数据 {#validating-form-data}
 
@@ -254,9 +254,9 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [使用自定义工具栏呈现HTML Forms](/help/forms/developing/rendering-html-forms-custom-toolbars.md)
 
@@ -284,7 +284,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
    >[!NOTE]
    >
-   >当`StandAlone`选项为`true`且`ApplicationWebRoot`引用了托管Forms的J2EE应用程序服务器以外的服务器时，AEM Forms在HTML中无法成功呈现（`ApplicationWebRoot`值是使用传递给`FormsServiceClient`对象的`(Deprecated) renderHTMLForm`方法的`URLSpec`对象指定的）。 如果`ApplicationWebRoot`是来自托管AEM Forms的服务器，则管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 可以通过登录到管理控制台，单击服务> Forms，并将Web根URI设置为https://server-name:port/FormServer来完成此操作。 然后，保存您的设置。
+   >当`StandAlone`选项为`true`且`ApplicationWebRoot`引用了托管Forms的J2EE应用程序服务器以外的服务器时，AEM Forms在HTML中无法成功呈现（`ApplicationWebRoot`值是使用传递给`FormsServiceClient`对象的`(Deprecated) renderHTMLForm`方法的`URLSpec`对象指定的）。 如果`ApplicationWebRoot`是来自托管AEM Forms的服务器，则管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 可以通过以下方式执行此操作：登录到管理控制台，单击“服务”>“Forms”，并将Web根URI设置为https://server-name:port/FormServer。 然后，保存您的设置。
 
 1. 呈现HTML表单
 
@@ -312,9 +312,9 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 **另请参阅**
 
-[将Forms渲染为HTML](#rendering-forms-as-html)
+[将表单渲染为 HTML](#rendering-forms-as-html)
 
-[快速入门(SOAP模式)：使用Java API渲染HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API渲染HTML表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -342,7 +342,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
    >[!NOTE]
    >
-   >当`StandAlone`选项为`true`且`ApplicationWebRoot`引用了托管Forms的J2EE应用程序服务器以外的服务器时，AEM Forms在HTML中无法成功呈现（`ApplicationWebRoot`值是使用传递给`FormsServiceClient`对象的`(Deprecated) renderHTMLForm`方法的`URLSpec`对象指定的）。 如果`ApplicationWebRoot`是来自托管AEM Forms的服务器，则管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 可以通过登录到管理控制台，单击服务> Forms，并将Web根URI设置为https://server-name:port/FormServer来完成此操作。 然后，保存您的设置。
+   >当`StandAlone`选项为`true`且`ApplicationWebRoot`引用了托管Forms的J2EE应用程序服务器以外的服务器时，AEM Forms在HTML中无法成功呈现（`ApplicationWebRoot`值是使用传递给`FormsServiceClient`对象的`(Deprecated) renderHTMLForm`方法的`URLSpec`对象指定的）。 如果`ApplicationWebRoot`是来自托管AEM Forms的服务器，则管理控制台中的Web根URI值需要设置为表单的Web应用程序URI值。 可以通过以下方式执行此操作：登录到管理控制台，单击“服务”>“Forms”，并将Web根URI设置为https://server-name:port/FormServer。 然后，保存您的设置。
 
 1. 呈现HTML表单
 
@@ -350,7 +350,7 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
    * 一个字符串值，它指定窗体设计名称，包括文件扩展名。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * 指定HTML首选项类型的`TransformTo`枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的Dynamic HTML兼容的HTML表单，请指定`TransformTo.MSDHTML`。
-   * 包含要与表单合并的数据的`BLOB`对象。 如果不想合并数据，请传递`null`。 (请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts)。)
+   * 包含要与表单合并的数据的`BLOB`对象。 如果不想合并数据，请传递`null`。 （请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md#prepopulating-forms-with-flowable-layouts)。）
    * 存储HTML运行时选项的`HTMLRenderSpec`对象。
    * 指定`HTTP_USER_AGENT`标头值的字符串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。 如果您不想设置此值，则可以传递空字符串。
    * 一个`URLSpec`对象，用于存储呈现HTML表单所需的URI值。 （请参阅[指定URI值](/help/forms/developing/rendering-interactive-pdf-forms.md)。）
@@ -376,6 +376,6 @@ XFA子集定义映射到HTML事件的XFA事件。 计算事件和验证事件的
 
 **另请参阅**
 
-[将Forms渲染为HTML](#rendering-forms-as-html)
+[将表单渲染为 HTML](#rendering-forms-as-html)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

@@ -1,5 +1,5 @@
 ---
-title: 组合PDF文档
+title: 组装 PDF 文档
 description: 使用Assembler服务将多个PDF文档组合为一个PDF文档，或将一个PDF文档分解为多个PDF文档。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms, Document Services
 hide: true
 hidefromtoc: true
 exl-id: 0dd63557-2961-497a-b820-8f2e0a823610
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 0%
+source-wordcount: '147'
+ht-degree: 4%
 
 ---
 
-# 组合PDF文档 {#assembling-pdf-documents}
+# 组装 PDF 文档 {#assembling-pdf-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 

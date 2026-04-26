@@ -7,9 +7,9 @@ feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 43fb8af8-9750-44c1-8e02-34b25b92fd65
-source-git-commit: 194937f0678ea27a04319197f391dd7cc358ec51
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '2007'
 ht-degree: 4%
 
 ---
@@ -18,10 +18,11 @@ ht-degree: 4%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-profiles.html?lang=en) |
 | AEM 6.5 LTS | 本文 |
 
-<!-- Scope of metadata articles:
+<!--
+Scope of metadata articles:
 * metadata.md: The scope of this article is basic metadata updates, changes, and so on, operations that end-users can do.
 * metadata-concepts.md: All conceptual information. Minor instructions are OK but it is an FYI article about support and standards.
 * metadata-config.md: New article. Contains all configuration and administration how-to info related to metadata of assets.
@@ -106,7 +107,7 @@ ht-degree: 4%
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 复制]**。
 1. 在&#x200B;**[!UICONTROL 复制元数据配置文件]**&#x200B;对话框中，输入元数据配置文件新副本的标题。
-1. 单击&#x200B;**[!UICONTROL 复制]**。元数据轮廓的副本将显示在&#x200B;**[!UICONTROL 元数据轮廓]**&#x200B;页面的轮廓列表中。
+1. 单击&#x200B;**[!UICONTROL 复制]**。 元数据轮廓的副本将显示在&#x200B;**[!UICONTROL 元数据轮廓]**&#x200B;页面的轮廓列表中。
 
    ![元数据配置文件页面中添加了元数据配置文件副本](assets/copy-metadata-profile.png)
 
@@ -117,8 +118,9 @@ ht-degree: 4%
 1. 单击工具栏中的&#x200B;**[!UICONTROL 删除元数据配置文件]**。
 1. 在对话框中，单击&#x200B;**[!UICONTROL 删除]**&#x200B;以确认删除操作。 元数据配置文件将从列表中删除。
 
-<!-- TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/cn/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+<!--
+TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -200,7 +202,7 @@ To apply a metadata profile globally, follow these steps:
 
 **[!UICONTROL 字段标签]**：在文件夹的属性页面上显示的元数据属性的名称。
 
-**[!UICONTROL 映射到属性]**：此属性指定保存它的CRX存储库中文件夹节点的相对路径。 它以“**”开头。/**”，这表示路径在文件夹的节点下。
+**[!UICONTROL 映射到属性]**：此属性指定保存它的CRX存储库中文件夹节点的相对路径。 它以“**./**”开头，这表示路径在文件夹的节点下。
 
 以下是此属性的有效值：
 
@@ -230,7 +232,7 @@ To apply a metadata profile globally, follow these steps:
 
 您可以从文件夹元数据架构Forms页面或在创建文件夹时，将文件夹元数据架构分配给文件夹。
 
-如果为文件夹配置元数据架构，则架构表单的路径将存储在`folderMetadataSchema`下的文件夹节点的`./jcr:content`属性中。
+如果为文件夹配置元数据架构，则架构表单的路径将存储在`./jcr:content`下的文件夹节点的`folderMetadataSchema`属性中。
 
 #### 从“文件夹元数据架构”页分配给架构 {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
@@ -262,7 +264,7 @@ To apply a metadata profile globally, follow these steps:
 
 ### 使用文件夹元数据架构 {#use-the-folder-metadata-schema}
 
-打开使用文件夹元数据架构配置的文件夹属性。**[!UICONTROL 文件夹元数据]**&#x200B;选项卡显示在文件夹[!UICONTROL 属性]页面中。 要查看文件夹元数据架构表单，请选择此选项卡。
+打开使用文件夹元数据架构配置的文件夹属性。 **[!UICONTROL 文件夹元数据]**&#x200B;选项卡显示在文件夹[!UICONTROL 属性]页面中。 要查看文件夹元数据架构表单，请选择此选项卡。
 
 在各个字段中输入元数据值，然后单击&#x200B;**[!UICONTROL 保存]**&#x200B;以存储这些值。 您指定的值存储在CRX存储库的文件夹节点中。
 
@@ -278,7 +280,7 @@ To apply a metadata profile globally, follow these steps:
 >
 >* [元数据概念和了解](metadata-concepts.md)。
 >* [编辑多个收藏集的元数据属性](manage-collections.md#editing-collection-metadata-in-bulk)。
->* 在Experience Manager Assets中[元数据导入和导出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html?lang=zh-Hans)。
+>* 在Experience Manager Assets中[元数据导入和导出](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-export.html)。
 >* [用于处理元数据、图像和视频的配置文件](processing-profiles.md)。
 >* [组织数字资产以使用处理配置文件的最佳实践](/help/assets/organize-assets.md)。
 >* [XMP写回](/help/assets/xmp-writeback.md)。

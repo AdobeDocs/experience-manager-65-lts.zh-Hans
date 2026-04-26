@@ -1,5 +1,5 @@
 ---
-title: 指定XCI配置选项
+title: 指定 XCI 配置选项
 description: 了解如何指定XCI配置选项 您可以为自适应表单指定自定义XCI文件值，以便在表单渲染时使用该值。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5fb6e6cc-6af7-4cf5-804b-bb3030079383
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
-# 指定XCI配置选项 {#specify-xci-configuration-options}
+# 指定 XCI 配置选项 {#specify-xci-configuration-options}
 
 >[!NOTE]
 > 

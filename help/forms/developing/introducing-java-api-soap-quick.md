@@ -1,6 +1,6 @@
 ---
-title: Java&amp简介；trade； API快速入门
-description: 了解如何使用通过SOAP连接启用的AEM Forms Java&amp；trade；强类型API来执行AEM Forms操作。
+title: Java&trade； API快速入门简介
+description: 了解如何使用通过SOAP连接启用的强类型API，即AEM Forms Java&trade；来执行AEM Forms操作。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: a5ae164d-d0c0-40d0-baeb-0e646fc71f55
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -69,24 +69,24 @@ JAR文件列表位于“快速入门”开头的注释部分中。 例如，以�
 
 在JEE上使用AEM Forms进行&#x200B;*编程中的大多数快速启动*&#x200B;都会调用特定服务来执行操作。 但是，有些快速入门会调用多个AEM Forms服务来执行给定工作流。 以下列表提供了可调用多个AEM Forms服务的Java™快速启动：
 
-[快速入门(SOAP模式)：使用Java™ API将AEM Forms存储库中的文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)（调用存储库和输出服务）
+[快速入门（SOAP模式）：使用Java™ API将AEM Forms存储库中的文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api)（调用存储库和输出服务）
 
-[快速入门(SOAP模式)：使用Java™ API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)基于片段创建PDF文档（调用汇编程序和输出服务）
+[快速入门（SOAP模式）：使用Java™ API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)基于片段创建PDF文档（调用汇编程序和输出服务）
 
-[快速入门(SOAP模式)：使用Java™ API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)创建包含已提交XML数据的PDF文档(调用Forms、输出和文档管理服务)
+[快速入门（SOAP模式）：使用Java™ API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)创建包含已提交XML数据的PDF文档（调用Forms、输出和文档管理服务）
 
-[快速入门(SOAP模式)：使用Java™ API将文档传递到Forms服务](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)(调用Forms和文档管理服务)
+[快速入门（SOAP模式）：使用Java™ API将文档传递到Forms服务](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)（调用Forms和文档管理服务）
 
-[快速入门(SOAP模式)：使用Java™ API对基于XFA的表单进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)(调用Forms和签名服务)
+[快速入门（SOAP模式）：使用Java™ API对基于XFA的表单进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-xfa-based-form-using-the-java-api)（调用Forms和签名服务）
 
-[快速入门(SOAP模式)：使用Java™ API管理角色和权限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （调用DirectoryManager和AuthorizationManager服务）
+[快速入门（SOAP模式）：使用Java™ API管理角色和权限](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api) （调用DirectoryManager和AuthorizationManager服务）
 
-[快速入门(SOAP模式)：使用Java™ API将文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)（调用输出和文档管理服务）
-
->[!NOTE]
->
->《使用AEM Forms进行编程快速入门》基于在JBoss®应用程序服务器和Microsoft® Windows®操作系统上部署的AEM Forms。 但是，如果您使用的是其他操作系统(如UNIX®)，请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 （请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+[快速入门（SOAP模式）：使用Java™ API将文档传递到输出服务](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)（调用输出和文档管理服务）
 
 >[!NOTE]
 >
->大多数Web服务快速启动都使用C#编写，并使用.NET Framework。 但是，您可以创建客户端应用程序逻辑，以便能够在支持AEM Forms标准的任何开发环境中调用SOAP服务。 (请参阅[使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)。)
+>《使用AEM Forms进行编程快速入门》基于在JBoss®应用程序服务器和Microsoft® Windows®操作系统上部署的AEM Forms。 但是，如果您使用的是其他操作系统（如UNIX®），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 （请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。）
+
+>[!NOTE]
+>
+>大多数Web服务快速启动都使用C#编写，并使用.NET Framework。 但是，您可以创建客户端应用程序逻辑，以便能够在支持AEM Forms标准的任何开发环境中调用SOAP服务。 （请参阅[使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)。）

@@ -7,10 +7,10 @@ solution: Experience Manager, Experience Manager Forms
 hide: true
 hidefromtoc: true
 exl-id: e2d1b548-ce30-471b-b01c-ce37b737aeb5
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -37,11 +37,13 @@ ht-degree: 0%
    1. 添加逻辑，以便可以将事务计数存储在一个整数变量中，如`transaction_count`。
    1. 操作成功后，添加`InvocationContextStack.recordTransactionCount(transaction_count)`。
 
-<!--For example, you can set count for your custom component by importing class `"com.adobe.idp.dsc.InvocationContextStack"` in the code available at `adobe-livecycle-client.jar`  and determine the transaction count basis API input/result and add (In this case we add count is equal to 3):
+<!--
+For example, you can set count for your custom component by importing class `"com.adobe.idp.dsc.InvocationContextStack"` in the code available at `adobe-livecycle-client.jar`  and determine the transaction count basis API input/result and add (In this case we add count is equal to 3):
 `InvocationContextStack.recordTransactionCount(<count>).` to 
-`InvocationContextStack.recordTransactionCount(3)`.-->
+`InvocationContextStack.recordTransactionCount(3)`.
+-->
 
 ## 相关文章
 
 * [在JEE上启用和查看AEM Forms的交易报表](/help/forms/using/transaction-report-overview-jee.md)
-* [适用于AEM Forms on JEE的可计费API列表](/help/forms/using/transaction-reports-billable-apis-jee.md)
+* [JEE 上的 AEM Forms 的可计费 API 列表](/help/forms/using/transaction-reports-billable-apis-jee.md)

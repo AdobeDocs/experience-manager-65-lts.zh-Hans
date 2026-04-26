@@ -1,5 +1,5 @@
 ---
-title: 使用SubmittedXML数据创建PDF文档
+title: 使用提交的 XML 数据创建 PDF 文档
 description: 使用Forms服务检索用户在交互式表单中输入的表单数据。 将表单数据传递到另一个AEM Forms服务操作，然后使用该数据创建PDF文档。
 contentOwner: admin
 content-type: reference
@@ -12,10 +12,10 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 66736a58-b2ef-404e-b94c-9bc407828359
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 0%
+source-wordcount: '1334'
+ht-degree: 1%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 ### 使用Java API创建包含提交的XML数据的PDF文档 {#create-a-pdf-document-with-submitted-xml-data-using-the-java-api}
 

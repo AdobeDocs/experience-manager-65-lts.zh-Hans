@@ -1,5 +1,5 @@
 ---
-title: Workspace概述
+title: 工作区概述
 description: 工作区允许用户启动、参与和跟踪业务流程。 让我们进一步了解工作区。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ce1629f3-834d-466c-a0e1-aad7a4fff943
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# Workspace概述 {#overview-of-workspace}
+# 工作区概述 {#overview-of-workspace}
 
 Workspace允许用户启动、参与和跟踪业务流程。
 

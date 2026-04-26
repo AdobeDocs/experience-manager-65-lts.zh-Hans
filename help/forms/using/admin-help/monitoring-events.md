@@ -1,5 +1,5 @@
 ---
-title: 监视事件
+title: 监控事件
 description: 启用审核功能后，通过Document Security可监视特定类型的事件。 您可以使用Document Security轻松搜索和排序事件列表。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: cee9cce0-becd-4822-ac37-094d564f2289
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
 
-# 监视事件 {#monitoring-events}
+# 监控事件 {#monitoring-events}
 
 启用审核功能后，通过Document Security可监视特定类型的事件。 您可以看到的事件取决于您的角色：
 

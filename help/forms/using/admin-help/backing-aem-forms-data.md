@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: cbcb9301-48c9-4394-b8c0-766eed76101d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ GDS位置必须备份的频率取决于AEM Forms的使用方式以及可用的�
 将AEM Forms置于安全备份（快照）模式或滚动备份（连续覆盖）模式。 在将AEM Forms设置为进入任一备份模式之前，请确保满足以下条件：
 
 * 验证系统版本并记录自上次执行完整系统映像备份以来应用的修补程序或更新。
-* 如果使用的是滚动模式或快照模式备份，请确保为数据库配置了正确的日志设置，以允许对数据库进行热备份。 (请参阅[AEM Forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。)
+* 如果使用的是滚动模式或快照模式备份，请确保为数据库配置了正确的日志设置，以允许对数据库进行热备份。 （请参阅[AEM Forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。）
 
 除此之外，请遵循以下备份/恢复过程指南。
 
@@ -60,16 +60,16 @@ GDS位置必须备份的频率取决于AEM Forms的使用方式以及可用的�
    * 请确保同步创作实例和发布实例的备份，以便同时启动。 虽然在执行备份时您可以继续使用创作和发布实例，但建议不要在备份期间发布任何资产，以避免任何未捕获的更改。 等待创作实例和发布实例的备份结束，然后再发布新资产。
    * 创作节点的完整备份包括Forms Manager和AEM Forms Workspace数据的备份。
    * Workbench开发人员可以继续在本地处理其流程。 他们不应在备份阶段部署任何新流程。
-   * 应根据AEM Forms中所有数据(DB、GDS、AEM存储库和任何其他自定义数据)的备份总耗时来确定每个备份会话的长度（用于滚动备份模式）。
+   * 应根据AEM Forms中所有数据（DB、GDS、AEM存储库和任何其他自定义数据）的备份总耗时来确定每个备份会话的长度（用于滚动备份模式）。
 
 备份AEM Forms数据库，包括任何事务日志。 请参阅[AEM Forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。
 
 有关详细信息，请参阅适用于您的数据库的知识库文章：
 <!-- The four URLs below are all 404s; checked July 19, 2023 -->
 * [适用于AEM Forms的Oracle备份和恢复](https://www.adobe.com/go/kb403624)
-* 适用于AEM Forms的[MySQL备份和恢复](https://www.adobe.com/go/kb403625)
-* [Microsoft® SQL Server Backup and Recovery for AEM Forms](https://www.adobe.com/go/kb403623)
-* 适用于AEM Forms的[DB2®备份和恢复](https://www.adobe.com/go/kb403626)
+* [适用于AEM Forms的MySQL备份和恢复](https://www.adobe.com/go/kb403625)
+* [适用于AEM Forms的Microsoft® SQL Server备份和恢复](https://www.adobe.com/go/kb403623)
+* [针对AEM Forms的DB2®备份和恢复](https://www.adobe.com/go/kb403626)
 
 这些文章为数据的备份和恢复提供了基本的数据库功能指导。 它们并非旨在作为特定供应商的数据库备份和恢复功能的全面技术指南。 它们概述了为AEM Forms应用程序数据创建可靠的数据库备份策略所需的命令。
 

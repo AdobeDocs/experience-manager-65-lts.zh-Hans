@@ -11,14 +11,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: f934b721-1ca3-4626-9039-a38f0dfecea2
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 0%
+source-wordcount: '642'
+ht-degree: 2%
 
 ---
 
-# 使用Web服务API验证DDX文档 {#validate-a-ddx-document-using-theweb-service-api}
+# 使用 Web 服务 API 验证 DDX 文档 {#validate-a-ddx-document-using-theweb-service-api}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -83,6 +83,6 @@ ht-degree: 0%
 
 **另请参阅**
 
-[验证DDX文档](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
+[验证 DDX 文档](/help/forms/developing/validating-ddx-documents.md#validating-ddx-documents)
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

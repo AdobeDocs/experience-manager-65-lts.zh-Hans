@@ -1,5 +1,5 @@
 ---
-title: 优化Forms服务的性能
+title: 优化表单服务的性能
 description: 在渲染表单并将XDP文件存储在存储库中时设置运行时选项，以优化Forms服务的性能。
 contentOwner: admin
 content-type: reference
@@ -12,10 +12,10 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 63ddfd09-17b5-48b4-b7ee-961f2bdd2ae2
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 0%
+source-wordcount: '1442'
+ht-degree: 1%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 * **线性化PDF**：组织了一个线性化PDF文件，以便在网络环境中实现高效的增量访问。 PDF文件在所有方面都是有效的PDF，并与所有现有查看器和其他PDF应用程序兼容。 也就是说，可以在下载线性化PDF的同时查看它。
 * 在客户端上呈现PDF表单时，此选项无法提高性能。
 * **GuideRSL选项**：启用使用运行时共享库生成表单指南（已弃用）。 这意味着第一个请求将下载较小的SWF文件，以及存储在浏览器缓存中的较大共享库。 有关更多信息，请参阅Flex文档中的RSL 。
-* 您还可以在客户端渲染表单，以提高Forms服务的性能。 (请参阅[在客户端渲染Forms](/help/forms/developing/rendering-forms-client.md)。)
+* 您还可以在客户端渲染表单，以提高Forms服务的性能。 （请参阅[在客户端渲染Forms](/help/forms/developing/rendering-forms-client.md)。）
 
 **渲染表单**
 
@@ -75,11 +75,11 @@ Forms服务呈现表单后，会返回您必须写入客户端Web浏览器的表
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)
+[将表单渲染为 HTML](/help/forms/developing/rendering-forms-html.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -124,7 +124,7 @@ Forms服务呈现表单后，会返回您必须写入客户端Web浏览器的表
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API优化性能](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API优化性能](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-optimizing-performance-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

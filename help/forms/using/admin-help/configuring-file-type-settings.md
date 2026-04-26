@@ -10,9 +10,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 68896dab-2d46-4998-9918-40efb8554143
-source-git-commit: 9d4681c0b184cc7769a8da20a4c50d420e1137c7
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '6185'
+source-wordcount: '6249'
 ht-degree: 0%
 
 ---
@@ -28,14 +28,14 @@ ht-degree: 0%
 在“文件类型设置”页上，可以执行以下任务：
 
 * [创建或编辑“文件类型”设置](#create-or-edit-file-type-settings)
-* 指定默认使用的文件类型设置(请参阅[导入和导出PDF Generator配置文件](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md))
+* 指定默认使用的文件类型设置（请参阅[导入和导出PDF Generator配置文件](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)）
 * [更改默认设置](/help/forms/using/admin-help/configuring-file-type-settings.md#change-the-default-settings)
-* [启用PDF/A支持](/help/forms/using/admin-help/enable-pdf-a-support.md)
+* [启用 PDF/A 支持](/help/forms/using/admin-help/enable-pdf-a-support.md)
 * [删除文件类型设置](/help/forms/using/admin-help/enable-pdf-a-support.md)
 
 >[!NOTE]
 >
->回退转换器(例如Acrobat for HTML到PDF的转换、Microsoft PowerPoint、Microsoft Word和Microsoft Excel)的文件类型设置不可用。
+>回退转换器（例如Acrobat for HTML到PDF的转换、Microsoft PowerPoint、Microsoft Word和Microsoft Excel）的文件类型设置不可用。
 
 ## 创建或编辑文件类型设置 {#create-or-edit-file-type-settings}
 
@@ -54,35 +54,35 @@ ht-degree: 0%
 
 1. 完成以下部分中的必需信息：
 
-[导入和导出PDF Generator配置文件](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
+   [导入和导出 PDF Generator 配置文件](/help/forms/using/admin-help/importing-exporting-pdf-generator-configuration.md)
 
-[Adobe PDF导出设置（仅限Windows）](#adobe-pdf-export-settings-windows-only)
+   [Adobe PDF导出设置（仅限Windows）](#adobe-pdf-export-settings-windows-only)
 
-[HTML到PDF设置](#html-to-pdf-settings)
+   [HTML到PDF设置](#html-to-pdf-settings)
 
-[Flash视频到PDF设置](#flash-videos-to-pdf-settings)
+   [Flash视频到PDF设置](#flash-videos-to-pdf-settings)
 
-[XPS到PDF设置](#xps-to-pdf-settings)
+   [XPS到PDF设置](#xps-to-pdf-settings)
 
-[PDF optimizer设置](/help/forms/using/admin-help/configuring-file-type-settings.md)
+   [PDF optimizer设置](/help/forms/using/admin-help/configuring-file-type-settings.md)
 
-[Microsoft Excel设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-excel-settings-windows-only)
+   [Microsoft Excel设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-excel-settings-windows-only)
 
-[Microsoft PowerPoint设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-powerpoint-settings-windows-only)
+   [Microsoft PowerPoint设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-powerpoint-settings-windows-only)
 
-[Microsoft项目设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-project-settings-windows-only)
+   [Microsoft项目设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-project-settings-windows-only)
 
-[Microsoft Word设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-word-settings-windows-only)
+   [Microsoft Word设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-word-settings-windows-only)
 
-[Microsoft Visio设置（仅限Windows）](#visio)
+   [Microsoft Visio设置（仅限Windows）](#visio)
 
-[Microsoft Publisher设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-publisher-settings-windows-only)
+   [Microsoft Publisher设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#microsoft-publisher-settings-windows-only)
 
-[AutoCAD设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#autocad-settings-windows-only)
+   [AutoCAD设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#autocad-settings-windows-only)
 
-[OpenOffice设置](/help/forms/using/admin-help/configuring-file-type-settings.md#openoffice-settings)
+   [OpenOffice设置](/help/forms/using/admin-help/configuring-file-type-settings.md#openoffice-settings)
 
-[其他应用程序的设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#other-applications-settings-windows-only)
+   [其他应用程序的设置（仅限Windows）](/help/forms/using/admin-help/configuring-file-type-settings.md#other-applications-settings-windows-only)
 
    若要转到其他分区，请单击其在网页上的链接，或者使用&#x200B;**[!UICONTROL 下一个]**&#x200B;或&#x200B;**[!UICONTROL 上一个]**&#x200B;按钮。
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
 **使用OCR：**&#x200B;指定是否将OCR（光学字符识别）应用于PDF。 OCR软件允许您在PDF中搜索、更正和复制文本。
 
-***注意&#x200B;**：仅在Microsoft Windows上支持OCR PDF (可搜索的PDF)功能。*
+***注意&#x200B;**：仅在Microsoft Windows上支持OCR PDF （可搜索的PDF）功能。*
 
 **主OCR语言：**&#x200B;指定OCR引擎用于标识字符的语言。
 
@@ -222,7 +222,7 @@ Adobe PDF导出设置部分中的“导出文件类型”设置可用于将PDF�
 
 ## Flash视频到PDF设置 {#flash-videos-to-pdf-settings}
 
-PDF Generator支持提交Adobe Flash视频(SWF或FLV文件)并创建PDF文件的功能，在该文件中嵌入了Adobe Flash视频。 此转换不需要在Forms Server上安装Adobe Flash Player。 有关访问此选项的说明，请参阅[创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
+PDF Generator支持提交Adobe Flash视频（SWF或FLV文件）并创建PDF文件的功能，在该文件中嵌入了Adobe Flash视频。 此转换不需要在Forms Server上安装Adobe Flash Player。 有关访问此选项的说明，请参阅[创建或编辑文件类型设置](configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
 **文件扩展名：**&#x200B;可转换的文件扩展名的逗号分隔列表。
 
@@ -267,7 +267,7 @@ PDF Generator支持减小PDF文件大小的功能。 是否使用所有这些设
 
    >[!NOTE]
    >
-   >*如果将此选项与&#x200B;**取消嵌入某些字体**&#x200B;一起使用，则&#x200B;**将字体添加到取消嵌入**&#x200B;列表中的字体仍将被完全取消嵌入。*
+   >*如果将此选项与&#x200B;**取消嵌入某些字体**一起使用，则&#x200B;**将字体添加到取消嵌入**列表中的字体仍将被完全取消嵌入。*
 
    >[!NOTE]
    >
@@ -319,7 +319,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 下表显示了常见的打印机类型及其以dpi测量的分辨率、以每英寸行数(lpi)测量的默认屏幕划线以及以每英寸像素数(ppi)测量的图像的重新取样分辨率。 例如，如果要打印到600 dpi激光打印机，则输入170作为图像重新取样的分辨率。
 
-**图像**&#x200B;选择图像以指定彩色、灰度和单色图像的压缩和重新取样选项。 您可能希望尝试使用这些选项，以在文件大小和图像质量之间找到合适的平衡。彩色和灰度图像的分辨率设置应该为打印文件时线网的1.5到2倍。 单色图像的分辨率应与输出设备相同，但是以高于1500 dpi的分辨率保存单色图像会增加文件大小，但不会显着改善图像质量。 要放大的图像（如地图）可能需要更高的分辨率。
+**图像**&#x200B;选择图像以指定彩色、灰度和单色图像的压缩和重新取样选项。 您可能希望尝试使用这些选项，以在文件大小和图像质量之间找到适当的平衡。彩色和灰度图像的分辨率设置应为打印文件时网线的1.5到2倍。 单色图像的分辨率应与输出设备相同，但是以高于1500 dpi的分辨率保存单色图像会增加文件大小，但不会显着改善图像质量。 要放大的图像（如地图）可能需要更高的分辨率。
 
 >[!NOTE]
 >
@@ -378,13 +378,13 @@ NOTE to WRITER: Unfinished sentence above.
 * **放弃所有对象数据**：从PDF中删除所有对象。
 * **放弃外部交叉引用**：删除指向其他文档的链接。 跳转到PDF内其他位置的链接不会被删除。
 * **放弃隐藏图层内容并拼合可见图层**：减小文件大小。 优化文档与原始PDF相似，但不包含图层信息。
-* **放弃文档信息和元数据**：删除文档信息字典和所有元数据流中的信息。 (使用另存为命令将元数据流还原到PDF的副本。)
-* **放弃文件附件**：删除所有文件附件，包括作为注释添加到PDF的附件。 (PDF Optimizer不优化附加文件。)
+* **放弃文档信息和元数据**：删除文档信息字典和所有元数据流中的信息。 （使用另存为命令将元数据流还原到PDF的副本。）
+* **放弃文件附件**：删除所有文件附件，包括作为注释添加到PDF的附件。 （PDF Optimizer不优化附加文件。）
 * **放弃其他应用程序的私有数据**：从PDF文档中剥离仅对创建该文档的应用程序有用的信息。 此设置不会影响PDF的功能，但会减小文件大小。
 
 ### 清理 {#clean-up}
 
-选择&#x200B;**清理**&#x200B;以从文档中删除不必要的项。
+选择&#x200B;**清理**以从文档中删除不必要的项。
 这些项目包括已过时或不需要用于文档预期用途的元素。 删除某些元素可能会严重影响PDF的功能。 默认情况下，只会选择不影响功能的元素。 如果不确定删除其他选项的影响，请使用默认选项。
 
 **压缩**
@@ -416,9 +416,9 @@ NOTE to WRITER: Unfinished sentence above.
 
 **尝试将OpenOffice作为回退转换器**：如果选择了此选项，并且使用Microsoft Excel的转换失败或达到指定的超时限制，则PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**文件扩展名**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认值为`xls,xlsx`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**文件扩展名**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `xls,xlsx`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
-**创建与PDF/A-1a兼容的文件**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
+**创建与PDF/A-1a兼容的文件**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
 
 **将书签添加到Adobe PDF**：将Excel工作表名称转换为书签。 默认情况下，该选项处于选中状态。
 
@@ -472,17 +472,17 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 将隐藏的幻灯片转换为PDF页面]**：转换隐藏的幻灯片。
 
-**[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。 在生成PDF文件时，有些PowerPoint功能未得到转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 转换页面过渡和项目符号飞入。
+**[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。 在生成PDF文件时，有些PowerPoint功能未得到转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 转换页面过渡和项目符号飞入。
 
 ## Microsoft项目设置（仅限Windows） {#microsoft-project-settings-windows-only}
 
 这些选项决定如何转换Microsoft项目文件。 有关访问这些选项的说明，请参阅[创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
-1. **[!UICONTROL 文件扩展名：]**&#x200B;指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认值为`mpp`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+1. **[!UICONTROL 文件扩展名：]**&#x200B;指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `mpp`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 1. **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 1. **[!UICONTROL 将Source文件附加到Adobe PDF]**：将源文件作为附件添加到PDF文件。
-1. **[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
+1. **[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
 1. **[!UICONTROL 自动运行宏]**：在转换文档之前运行Microsoft项目文档中的任何宏（例如插入当前时间的宏）。
 
 ## Microsoft Word设置（仅限Windows） {#microsoft-word-settings-windows-only}
@@ -491,7 +491,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 尝试将OpenOffice作为回退转换器]**：如果选中了此选项，并且使用Microsoft Word的转换失败或达到指定的超时限制，则PDF Generator将尝试使用OpenOffice进行转换。 如果使用OpenOffice的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认值为`doc,docx,rtf,txt`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `doc,docx,rtf,txt`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 
@@ -503,7 +503,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 启用带有标记的Adobe PDF的辅助功能并重排]**：将标记嵌入到PDF文件中。 默认情况下，该选项处于选中状态。
 
-**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：如果选定该选项，将强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
+**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：如果选定该项，将强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
 
 **[!UICONTROL 自动运行宏]**：在转换文档之前运行Word文档中的任何宏（例如插入当前时间的宏）。
 
@@ -545,7 +545,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **在Adobe Acrobat中查看时打开图层面板**：如果Visio图层未拼合，将打开一个窗口，您可以在其中指定使用Acrobat打开时保留在PDF文件中的图层。 默认情况下，该选项处于选中状态。
 
-**创建与PDF/A-1b兼容的文件**：强制使用Adobe PDF设置PDF/A-1b：2005 (RGB)。
+**创建符合PDF/A-1b的文件**：强制使用Adobe PDF设置PDF/A-1b:2005 (RGB)。
 
 **将注释转换为Adobe PDF注释**：将Visio注释转换为PDF注释。
 
@@ -553,13 +553,13 @@ NOTE to WRITER: Unfinished sentence above.
 
 这些选项决定如何转换Microsoft Publisher文件。 有关访问这些选项的说明，请参阅[创建或编辑文件类型设置](#create-or-edit-file-type-settings)。
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认值为`pub`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `pub`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 ## AutoCAD设置（仅限Windows） {#autocad-settings-windows-only}
 
 这些选项决定如何转换AutoCAD文件。 有关访问这些选项的说明，请参阅[创建或编辑文件类型设置](/help/forms/using/admin-help/configuring-file-type-settings.md#create-or-edit-file-type-settings)。
 
-**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认值为`dwg`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**[!UICONTROL 文件扩展名]**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `dwg`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 
@@ -593,7 +593,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **尝试将PDFMaker作为回退转换器**：如果选择了该选项，并且使用OpenOffice的转换失败或达到指定的超时限制时，PDF Generator将尝试使用PDFMaker进行转换。 如果使用PDFMaker的转换失败或达到指定的超时限制，则会将异常写入日志文件。
 
-**文件扩展名**：为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认值为`odt,odp,ods,odg,odf,sxw,sxi,sxd`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
+**文件扩展名**：为此应用程序接受的文件类型指定文件扩展名（以逗号分隔）。 默认为 `odt,odp,ods,odg,odf,sxw,sxi,sxd`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
 **范围**：转换所有页面，或指定特定页面或页面范围。 如果未定义页面范围，则会转换所有页面。 要导出一定范围的页面，请使用格式3-6。 要导出单个页面，请使用格式7；9；11。 您可以使用格式（如3-6；8；10；12）导出页面范围和单个页面的组合。
 

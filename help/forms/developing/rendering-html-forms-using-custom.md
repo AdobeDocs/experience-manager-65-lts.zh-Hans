@@ -1,5 +1,5 @@
 ---
-title: 使用自定义CSS文件呈现HTML Forms
+title: 使用自定义 CSS 文件渲染 HTML 表单
 description: 使用Forms服务引用自定义CSS文件来呈现HTML表单，以响应来自Web浏览器的HTTP请求。 您可以使用Java API和Web服务API呈现使用CSS文件的HTML表单。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: b70404ee-21dc-4c0b-a66f-c37a6f29f98e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1682'
-ht-degree: 0%
+source-wordcount: '1693'
+ht-degree: 2%
 
 ---
 
-# 使用自定义CSS文件呈现HTML Forms {#rendering-html-forms-using-custom-css-files}
+# 使用自定义 CSS 文件渲染 HTML 表单 {#rendering-html-forms-using-custom-css-files}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -39,7 +39,7 @@ Forms服务可静默解析自定义CSS文件。 也就是说，Forms服务不会
 
 >[!NOTE]
 >
->在呈现使用自定义CSS文件的HTML表单之前，请务必充分了解如何呈现HTML表单。 (请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。)
+>在呈现使用自定义CSS文件的HTML表单之前，请务必充分了解如何呈现HTML表单。 （请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。）
 
 >[!NOTE]
 >
@@ -85,11 +85,11 @@ Forms服务可静默解析自定义CSS文件。 也就是说，Forms服务不会
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
-[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)
+[将表单渲染为 HTML](/help/forms/developing/rendering-forms-html.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -137,9 +137,9 @@ Forms服务可静默解析自定义CSS文件。 也就是说，Forms服务不会
 
 **另请参阅**
 
-[使用自定义CSS文件呈现HTML Forms](#rendering-html-forms-using-custom-css-files)
+[使用自定义 CSS 文件渲染 HTML 表单](#rendering-html-forms-using-custom-css-files)
 
-[快速入门(SOAP模式)：渲染使用CSS文件的HTML表单（使用Java API）](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
+[快速入门（SOAP模式）：渲染使用CSS文件的HTML表单（使用Java API）](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -169,7 +169,7 @@ Forms服务可静默解析自定义CSS文件。 也就是说，Forms服务不会
 
    * 一个字符串值，它指定窗体设计名称，包括文件扩展名。 如果您引用的表单设计是Forms应用程序的一部分，请确保指定完整路径，如`Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`。
    * 指定HTML首选项类型的`TransformTo`枚举值。 例如，要渲染与Internet Explorer 5.0或更高版本的Dynamic HTML兼容的HTML表单，请指定`TransformTo.MSDHTML`。
-   * 包含要与表单合并的数据的`BLOB`对象。 如果不想合并数据，请传递`null`。 (请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
+   * 包含要与表单合并的数据的`BLOB`对象。 如果不想合并数据，请传递`null`。 （请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。）
    * 存储HTML运行时选项的`HTMLRenderSpec`对象。
    * 指定`HTTP_USER_AGENT`标头值的字符串值，如`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。 如果您不想设置此值，则可以传递空字符串。
    * 一个`URLSpec`对象，用于存储呈现HTML表单所需的URI值。
@@ -195,6 +195,6 @@ Forms服务可静默解析自定义CSS文件。 也就是说，Forms服务不会
 
 **另请参阅**
 
-[使用自定义CSS文件呈现HTML Forms](#rendering-html-forms-using-custom-css-files)
+[使用自定义 CSS 文件渲染 HTML 表单](#rendering-html-forms-using-custom-css-files)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

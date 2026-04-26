@@ -1,5 +1,5 @@
 ---
-title: 将Postscript转换为PDF文档
+title: 将 Postscript 转化为 PDF 文档
 description: 使用Distiller服务将PostScript®、Encapsulated PostScript (EPS)和PRN文件通过网络转换为紧凑、可靠且更安全的PDF文件。 Distiller服务使用Java API和Web服务API将大量打印文档转换为电子文档，如发票和报表。
 contentOwner: admin
 content-type: reference
@@ -11,20 +11,20 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 39d793ca-5909-428e-9f6e-08d587f828c0
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 0%
+source-wordcount: '1323'
+ht-degree: 1%
 
 ---
 
-# 将Postscript转换为PDF文档 {#converting-postscript-to-pdf-documents}
+# 将 Postscript 转化为 PDF 文档 {#converting-postscript-to-pdf-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
 ## 关于Distiller服务 {#about-the-distiller-service}
 
-Distiller®服务通过网络将PostScript®、封装的PostScript (EPS)和PRN文件转换为紧凑、可靠且更安全的PDF文件。 Distiller服务通常用于将大量打印文档转换为电子文档，如发票和报表。 将文档转换为PDF还允许企业向客户发送文档的纸质版本和电子版本。
+®服务通过网络将PostScript®、封装的PostScript (EPS)和PRN文件转换为紧凑、可靠且更安全的PDF文件。 Distiller服务通常用于将大量打印文档转换为电子文档，如发票和报表。 将文档转换为PDF还允许企业向客户发送文档的纸质版本和电子版本。
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ Distiller®服务通过网络将PostScript®、封装的PostScript (EPS)和PRN�
 
 [步骤摘要](converting-postscript-pdf-documents.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API将PostScript文件转换为PDF文档](/help/forms/developing/distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将PostScript文件转换为PDF文档](/help/forms/developing/distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -152,7 +152,7 @@ Distiller®服务通过网络将PostScript®、封装的PostScript (EPS)和PRN�
 1. 创建Distiller服务客户端。
 
    * 使用默认构造函数创建`DistillerServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`DistillerServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`DistillerServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
    * 通过获取`DistillerServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -194,7 +194,8 @@ Distiller®服务通过网络将PostScript®、封装的PostScript (EPS)和PRN�
 
 [步骤摘要](converting-postscript-pdf-documents.md#summary-of-steps)
 
-<!-- UNRESOLVED LINKS
+<!--
+UNRESOLVED LINKS
 [Quick Start (MTOM): Converting a PostScript file to a PDF document using the web service API](unresolvedlink-lc-qs-distiller-di.xml#ws624e3cba99b79e12e69a9941333732bac8-7f01.2)
 
 [Quick Start (SwaRef): Converting a PostScript file to a PDF document using the web service API](unresolvedlink-lc-qs-distiller-di.xml#ws624e3cba99b79e12e69a9941333732bac8-7eff.2)

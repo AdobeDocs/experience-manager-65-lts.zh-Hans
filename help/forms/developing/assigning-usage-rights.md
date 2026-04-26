@@ -11,9 +11,9 @@ feature: Adaptive Forms,Document Services, Reader Extensions
 hide: true
 hidefromtoc: true
 exl-id: d8027b43-10c7-435c-8fb5-059508966d42
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '3897'
+source-wordcount: '3973'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 关于Acrobat Reader DC扩展服务 {#about-the-acrobat-reader-dc-extensions-service}
 
-Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织可以轻松共享交互式PDF文档。 Acrobat Reader DC扩展服务完全支持任何PDF文档，最多可支持(包括PDF 1.7)。它适用于Adobe Reader 7.0和更高版本。 该服务向PDF文档添加使用权限，并激活在使用Adobe Reader打开PDF文档时通常不可用的功能。 第三方用户无需其他软件或插件即可使用启用了权限的文档。
+Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织可以轻松共享交互式PDF文档。 Acrobat Reader DC扩展服务完全支持任何PDF文档，最多可支持（包括PDF 1.7）。 它适用于Adobe Reader 7.0和更高版本。 该服务向PDF文档添加使用权限，并激活在使用Adobe Reader打开PDF文档时通常不可用的功能。 第三方用户无需其他软件或插件即可使用启用了权限的文档。
 
 您可以使用Acrobat Reader DC扩展服务完成这些任务：
 
@@ -81,7 +81,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 **将使用权限应用于PDF文档**
 
-要对PDF文档应用使用权限，请引用用于应用使用权限的凭据的别名(凭据通常在安装AEM Forms期间安装)。 此外，您必须指定应用了使用权限的PDF文档。 有关配置凭据的信息，请参阅应用程序服务器的安装和部署指南。
+要对PDF文档应用使用权限，请引用用于应用使用权限的凭据的别名（凭据通常在安装AEM Forms期间安装）。 此外，您必须指定应用了使用权限的PDF文档。 有关配置凭据的信息，请参阅应用程序服务器的安装和部署指南。
 
 **保存启用权限的PDF文档**
 
@@ -127,7 +127,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
    * 使用构造函数创建`ReaderExtensionsOptionSpec`对象。 此对象包含Acrobat Reader DC扩展服务所需的运行时选项。 调用此构造函数时，必须指定以下值：
 
       * 包含要应用于文档的使用权限的`UsageRights`对象。
-      * 一个字符串值，指定在Adobe Reader 7.x中打开启用了权限的PDF文档时用户看到的消息。Adobe Reader 8.0中未显示此消息。
+      * 一个字符串值，指定在Adobe Reader 7.x中打开启用了权限的PDF文档时用户看到的消息。 Adobe Reader 8.0中未显示此消息。
 
    * 通过调用`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法并传递以下值，将使用权限应用于PDF文档：
 
@@ -148,7 +148,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 [将使用权限应用于PDF文档](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API应用使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[使用Java API的快速入门（SOAP模式）:Applying使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -304,7 +304,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 [从PDF文档中删除使用权限](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API从PDF文档中删除使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API从PDF文档中删除使用权限](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -439,7 +439,7 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
 [正在检索凭据信息](assigning-usage-rights.md#retrieving-credential-information)
 
-[快速入门(SOAP模式)：使用Java API检索凭据信息](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索凭据信息](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

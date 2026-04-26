@@ -7,10 +7,10 @@ feature: DRM,Asset Management
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 5870209f-9e0c-4e60-a083-e46edb707ae7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 6%
+source-wordcount: '1440'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/drm.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 数字资产通常与指定使用条款和持续时间的许可证相关联。 由于[!DNL Adobe Experience Manager Assets]已与[!DNL Experience Manager]平台完全集成，因此您可以有效地管理资产到期信息和资产状态。 您还可以将许可信息与资产相关联。
@@ -76,7 +76,7 @@ ht-degree: 6%
 1. 打开[!DNL Experience Manager]配置管理器。
 1. 选择&#x200B;**[!UICONTROL Adobe CQ DAM到期通知]**。 默认情况下，已选择&#x200B;**[!UICONTROL 基于时间的计划程序]**，该计划程序将安排在特定时间检查某个资源是否具有过期的子资源。 作业完成后，具有过期子资产和引用资产的资产会在搜索结果中显示为已过期。
 
-1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。例如，示例表达式`0 0 0 * * ?`在00小时触发作业。
+1. 要定期运行该作业，请清除&#x200B;**[!UICONTROL 基于时间的计划程序规则]**&#x200B;字段，并在&#x200B;**[!UICONTROL 周期性计划程序]**&#x200B;字段中修改时间（以秒为单位）。 例如，示例表达式`0 0 0 * * ?`在00小时触发作业。
 1. 选择&#x200B;**[!UICONTROL 发送电子邮件]**&#x200B;以在资产过期时接收电子邮件。
 
    >[!NOTE]

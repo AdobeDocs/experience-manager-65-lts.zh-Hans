@@ -1,5 +1,5 @@
 ---
-title: 添加和删除用户名和密码凭据
+title: 添加和移除用户名和密码凭据
 description: 了解如何添加和删除用户名和密码凭据。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: d4809a55-aff5-41ac-b75e-81e3a6bf47ca
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 0%
+source-wordcount: '163'
+ht-degree: 9%
 
 ---
 
-# 添加和删除用户名和密码凭据 {#adding-and-removing-user-name-and-password-credentials}
+# 添加和移除用户名和密码凭据 {#adding-and-removing-user-name-and-password-credentials}
 
 >[!NOTE]
 > 

@@ -7,10 +7,10 @@ feature: Asset Management
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: e2b9b13b-c00c-4bfc-8512-84188e90c0ed
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '5466'
-ht-degree: 7%
+source-wordcount: '5596'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-video-assets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-video-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 视频格式是组织数字资产的重要组成部分。 [!DNL Adobe Experience Manager]提供了成熟的产品和功能，可在创建视频资产后管理其整个生命周期。
@@ -44,7 +44,7 @@ ht-degree: 7%
 除了[!DNL Assets]配置外，请更改以下配置以上传大型资产：
 
 * 增加令牌过期时间。 在`https://[aem_server]:[port]/system/console/configMgr`处的Web控制台中查看[!UICONTROL Adobe Granite CSRF Servlet]。 有关详细信息，请参阅[CSRF保护](/help/sites-developing/csrf-protection.md)。
-* 增加Dispatcher配置中的`receiveTimeout`。 有关详细信息，请参阅[Experience Manager Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#renders-options)。
+* 增加Dispatcher配置中的`receiveTimeout`。 有关详细信息，请参阅[Experience Manager Dispatcher配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#renders-options)。
 
 >[!NOTE]
 >
@@ -154,16 +154,16 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 在&#x200B;**[!UICONTROL 将凭据添加到项目]**&#x200B;页面的步骤1中，执行以下操作：
 
-   * 从&#x200B;**[!UICONTROL 您使用的是哪个API？]**&#x200B;下拉列表，选择&#x200B;**[!UICONTROL YouTube Data API v3]**。
+   * 从&#x200B;**[!UICONTROL 您使用的是哪个API？]** 从下拉列表中选择&#x200B;**[!UICONTROL YouTube Data API v3]**。
 
-   * 从&#x200B;**[!UICONTROL 您从何处调用API？]**&#x200B;下拉列表，选择&#x200B;**[!UICONTROL Web服务器（例如，node.js、Tomcat）]**
+   * 从&#x200B;**[!UICONTROL 您从何处调用API？]** 下拉列表，选择&#x200B;**[!UICONTROL Web服务器（例如，node.js、Tomcat）]**
 
-   * 从&#x200B;**[!UICONTROL 您访问哪些数据？]**&#x200B;下拉列表，选择&#x200B;**[!UICONTROL 用户数据]**。
+   * 从&#x200B;**[!UICONTROL 您正在访问哪些数据？]** 下拉列表，选择&#x200B;**[!UICONTROL 用户数据]**。
 
    ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
 
 1. 选择&#x200B;**[!UICONTROL 我需要什么凭据？]**
-1. 在&#x200B;**[!UICONTROL 将凭据添加到项目]**&#x200B;页面中步骤 2 的&#x200B;**[!UICONTROL 创建 OAuth 2.0 客户端 ID]** 标题下，根据需要在“名称”字段中输入唯一名称。或者，您也可以使用 Google 指定的默认名称。
+1. 在&#x200B;**[!UICONTROL 将凭据添加到项目]**&#x200B;页面中步骤 2 的&#x200B;**[!UICONTROL 创建 OAuth 2.0 客户端 ID]** 标题下，根据需要在“名称”字段中输入唯一名称。 或者，您也可以使用 Google 指定的默认名称。
 1. 在&#x200B;**[!UICONTROL 授权的JavaScript源]**&#x200B;标题下，在文本字段中输入以下路径，用您自己的域和端口号替代该路径，然后按&#x200B;**[!UICONTROL Enter]**&#x200B;将路径添加到列表中：
 
    `https://<servername.domain>:<port_number>`
@@ -192,7 +192,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
    在对Experience Manager进行身份验证后，会向YouTube管理员显示同意屏幕；Experience Manager会联系YouTube以获取权限。
 
 1. 单击&#x200B;**[!UICONTROL 继续]**。
-1. 在“将凭据添加到项目”页面的“下载凭据&#x200B;**”标题下，选择**&#x200B;[!UICONTROL &#x200B;下载&#x200B;]&#x200B;**，步骤4。**
+1. 在“将凭据添加到项目”页面的“下载凭据&#x200B;]**”标题下，选择**[!UICONTROL &#x200B;下载&#x200B;]**，步骤4。**[!UICONTROL 
 
    ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
 
@@ -210,7 +210,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 >[!WARNING]
 >
->请确保您之前已在YouTube *中设置了一个或多个渠道*，然后在Experience Manager的YouTube设置下添加渠道(请参阅下面的[在Experience Manager中设置YouTube](#setting-up-youtube-in-aem))。 如果未能设置一个或多个渠道，则不会警告您不存在渠道。 但是，在添加渠道时，Google身份验证仍会发生，但无法选择发送视频的渠道。
+>请确保您之前已在YouTube *中设置了一个或多个渠道*，然后在Experience Manager的YouTube设置下添加渠道（请参阅下面的[在Experience Manager中设置YouTube](#setting-up-youtube-in-aem)）。 如果未能设置一个或多个渠道，则不会警告您不存在渠道。 但是，在添加渠道时，Google身份验证仍会发生，但无法选择发送视频的渠道。
 
 **要创建YouTube频道：**
 
@@ -267,7 +267,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 使用纯文本编辑器，打开您之前在[配置Google云设置](/help/assets/video.md#configuring-google-cloud-settings)任务中下载并保存的JSON文件。
 1. 选择并复制整个JSON文本。
-1. 返回至“YouTube 帐户设置”对话框。在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
+1. 返回至“YouTube 帐户设置”对话框。 在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
 1. 在页面的右上角附近，选择&#x200B;**[!UICONTROL 保存]**。
 
    现在在Experience Manager中设置YouTube渠道。
@@ -313,7 +313,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 使用纯文本编辑器，打开您之前在配置Google云设置任务中下载并保存的JSON文件。
 1. 选择并复制整个JSON文本。
-1. 返回至“YouTube 帐户设置”对话框。在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
+1. 返回至“YouTube 帐户设置”对话框。 在 **[!UICONTROL JSON 配置]**&#x200B;字段中，粘贴 JSON 文本。
 1. 选择&#x200B;**[!UICONTROL 确定]**。
 
    现在在Experience Manager中设置YouTube渠道。
@@ -348,7 +348,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 您可以选择通过在YouTube中创建元数据处理配置文件来在上传视频时自动设置Experience Manager属性。
 
-要创建元数据处理轮廓，您首先需要从&#x200B;**[!UICONTROL 字段标签]**、**[!UICONTROL 映射到属性]**&#x200B;和&#x200B;**[!UICONTROL 选择]**&#x200B;字段中复制值，所有这些字段均位于视频的元数据架构中。然后，您可以通过向处理配置文件添加这些值来构建您的YouTube视频元数据处理配置文件。
+要创建元数据处理轮廓，您首先需要从&#x200B;**[!UICONTROL 字段标签]**、**[!UICONTROL 映射到属性]**&#x200B;和&#x200B;**[!UICONTROL 选择]**&#x200B;字段中复制值，所有这些字段均位于视频的元数据架构中。 然后，您可以通过向处理配置文件添加这些值来构建您的YouTube视频元数据处理配置文件。
 
 要为上传的视频自动设置默认YouTube属性，请执行以下操作：
 
@@ -359,19 +359,19 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 1. 在“YouTube 发布”标题下，单击 **[!UICONTROL YouTube 类别]**。
 1. 在页面右侧的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，执行以下操作：
 
-   * 在&#x200B;**[!UICONTROL 映射到属性]**&#x200B;文本字段中，选择并复制该值。
+   * 在&#x200B;**[!UICONTROL 映射到属性]**文本字段中，选择并复制该值。
 将复制的值粘贴到打开的文本编辑器中。 稍后在创建元数据处理配置文件时，您将需要此值。 保持文本编辑器处于打开状态。
 
-   * 在&#x200B;**[!UICONTROL 选择]**&#x200B;下，选择并复制您要使用的默认值（如“人员”和“博客”或“科学和技术”）。
+   * 在&#x200B;**[!UICONTROL 选择]**下，选择并复制您要使用的默认值（如“人员”和“博客”或“科学和技术”）。
 将复制的值粘贴到打开的文本编辑器中。 稍后在创建元数据处理配置文件时，您将需要此值。 保持文本编辑器处于打开状态。
 
 1. 在YouTube发布标题下，选择&#x200B;**[!UICONTROL YouTube隐私]**。
 1. 在页面右侧的&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡下，执行以下操作：
 
-   * 在&#x200B;**[!UICONTROL 映射到属性]**&#x200B;文本字段中，选择并复制该值。
+   * 在&#x200B;**[!UICONTROL 映射到属性]**文本字段中，选择并复制该值。
 将复制的值粘贴到打开的文本编辑器中。 稍后在创建元数据处理配置文件时，您将需要此值。 保持文本编辑器处于打开状态。
 
-   * 在&#x200B;**[!UICONTROL 选择]**&#x200B;下，选择并复制您要使用的默认值。 请注意，“选择”成对分组为两个组。 该对中的底部字段是您要复制的默认值，例如public、unlisted或private。
+   * 在&#x200B;**[!UICONTROL 选择]**下，选择并复制您要使用的默认值。 请注意，“选择”成对分组为两个组。 该对中的底部字段是您要复制的默认值，例如public、unlisted或private。
 将复制的值粘贴到打开的文本编辑器中。 稍后在创建元数据处理配置文件时，您将需要此值。 保持文本编辑器处于打开状态。
 
 1. 在元数据架构编辑器页面的右上角附近，单击&#x200B;**[!UICONTROL 取消]**。
@@ -439,7 +439,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 1. 在视频属性页面的右上角，单击&#x200B;**[!UICONTROL 保存并关闭]**。
 1. 在工具栏上，单击&#x200B;**[!UICONTROL 快速发布]**。
 
-   另请参阅[在Experience Manager Sites中使用发布管理](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html?lang=zh-Hans)。
+   另请参阅[在Experience Manager Sites中使用发布管理](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html)。
 
    您可以选择在YouTube渠道中验证已发布的视频。
 
@@ -489,7 +489,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
 1. 导航到要从YouTube渠道取消发布的视频资源。
 1. 在资源选择模式下，选择一个或多个已发布的视频资源。
-1. 在工具栏上，单击&#x200B;**[!UICONTROL 管理发布]**。 选择三个圆点图标(. ..)，因此将打开&#x200B;**[!UICONTROL 管理发布]**。
+1. 在工具栏上，单击&#x200B;**[!UICONTROL 管理发布]**。 选择三个圆点图标(. . .) 工具栏上，以便&#x200B;**[!UICONTROL 管理发布]**&#x200B;打开。
 1. 在“管理发布”页面上，选择&#x200B;**[!UICONTROL 取消发布]**。
 1. 在页面的右上角，选择&#x200B;**[!UICONTROL 下一步]**。
 1. 在页面的右上角，选择&#x200B;**[!UICONTROL 取消发布]**。
@@ -510,7 +510,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    ![chlimage_1-430](assets/chlimage_1-430.png)
 
-   默认情况下，此列不显示。若要启用该列，请从视图下拉菜单中选择&#x200B;**[!UICONTROL 查看设置]**，然后添加&#x200B;**[!UICONTROL 处理状态]**&#x200B;列，然后单击&#x200B;**[!UICONTROL 更新]**。
+   默认情况下，此列不显示。 若要启用该列，请从视图下拉菜单中选择&#x200B;**[!UICONTROL 查看设置]**，然后添加&#x200B;**[!UICONTROL 处理状态]**&#x200B;列，然后单击&#x200B;**[!UICONTROL 更新]**。
 
    ![chlimage_1-431](assets/chlimage_1-431.png)
 
@@ -544,7 +544,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    您还可以从“工作流实例”区域暂停、终止或重命名工作流。 有关详细信息，请参阅[管理工作流](/help/sites-administering/workflows-administering.md)。
 
-1. 有关失败的作业，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 失败]**&#x200B;中显示的“工作流失败”。**[!UICONTROL 工作流失败]**&#x200B;列出所有失败的工作流活动。
+1. 有关失败的作业，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 失败]**&#x200B;中显示的“工作流失败”。 **[!UICONTROL 工作流失败]**&#x200B;列出所有失败的工作流活动。
 
    >[!NOTE]
    >
@@ -554,7 +554,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    >[!NOTE]
    >
-   >由于[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)中的&#x200B;**[!UICONTROL 重试]**、**[!UICONTROL 重试延迟]**&#x200B;和&#x200B;**[!UICONTROL 超时]**&#x200B;存在多个工作流配置，最终记录错误消息会花费较长时间，例如：
+   >由于来自[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)的&#x200B;**[!UICONTROL 重试]**、**[!UICONTROL 重试延迟]**&#x200B;和&#x200B;**[!UICONTROL 超时]**&#x200B;的多个工作流配置，最终记录错误消息可能需要较长时间，例如：
    >
    >* Apache Sling作业队列配置
    >* Adobe Granite工作流外部进程作业处理程序
@@ -562,7 +562,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
    >
    >您可以调整这些配置中的&#x200B;**[!UICONTROL 重试]**、**[!UICONTROL 重试延迟]**&#x200B;和&#x200B;**[!UICONTROL 超时]**&#x200B;属性。
 
-1. 有关已完成的工作流，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 存档]**&#x200B;中的可用工作流存档。**[!UICONTROL 工作流存档]**&#x200B;列出了所有已完成的工作流活动。
+1. 有关已完成的工作流，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 工作流]** > **[!UICONTROL 存档]**&#x200B;中的可用工作流存档。 **[!UICONTROL 工作流存档]**&#x200B;列出了所有已完成的工作流活动。
 
    >[!NOTE]
    >
@@ -622,7 +622,7 @@ Google会定期更改其用户界面。 因此，将视频发布到YouTube的步
 
    ![在视频帧上绘制和添加批注](assets/annotate-video.png)
 
-1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。例如，要跳过视频的前 20 秒，请在文本字段中输入 20。
+1. 搜索到视频中的特定点，在&#x200B;**文本**&#x200B;字段中指定时间（以秒为单位），然后单击&#x200B;**跳转**。 例如，要跳过视频的前 20 秒，请在文本字段中输入 20。
 
    ![在视频中搜寻到要跳过指定秒的时间](assets/seek-in-video.png)
 

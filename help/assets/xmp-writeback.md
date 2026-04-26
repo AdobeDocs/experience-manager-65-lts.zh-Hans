@@ -1,34 +1,34 @@
 ---
-title: XMP写回到演绎版
+title: 将 XMP 写回演绎版
 description: 了解XMP写回功能如何将资源的元数据更改传播到该资源的所有或特定演绎版。
 role: User, Admin
 feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: e3972784-9ded-4da8-b90c-ec2da9c3297a
-source-git-commit: 863ec2b6d8a6e22705c2f48a4f7bbb76fa34f7c7
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 6%
+source-wordcount: '802'
+ht-degree: 7%
 
 ---
 
-# XMP写回到演绎版 {#xmp-writeback-to-renditions}
+# 将 XMP 写回演绎版 {#xmp-writeback-to-renditions}
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/xmp-metadata.html?lang=en) |
 | AEM 6.5 LTS | 本文 |
 
 [!DNL Adobe Experience Manager Assets]中的此XMP写回功能将元数据更改复制到原始资源的演绎版。 当您从Assets中更改资源的元数据或上传资源时，所做的更改最初存储在资源层次结构的元数据节点中。
 
 通过XMP写回功能，可将元数据更改传播到资源的所有或特定演绎版。 该功能仅写回那些使用已注册命名空间的元数据属性，即写回名为`dc:title`的属性，但不写回名为`mytitle`的属性。
 
-考虑将标题为[!UICONTROL 的资源的]Title`Classic Leather`属性修改为`Nylon`的方案。
+考虑将标题为`Classic Leather`的资源的[!UICONTROL Title]属性修改为`Nylon`的方案。
 
 ![元数据](assets/metadata.png)
 
-在本例中，[!DNL Experience Manager Assets]将更改保存到资源层次结构中存储的资源元数据的&#x200B;**[!UICONTROL 参数中的]** Title`dc:title`属性。
+在本例中，[!DNL Experience Manager Assets]将更改保存到资源层次结构中存储的资源元数据的`dc:title`参数中的&#x200B;**[!UICONTROL Title]**&#x200B;属性。
 
 ![元数据已存储](assets/metadata_stored.png)
 
@@ -81,11 +81,11 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->过滤仅适用于从资产二进制文件中的XMP源派生的属性。 对于从非XMP源(如EXIF和IPTC格式)派生的属性，筛选不起作用。 例如，资源创建日期存储在EXIF TIFF中名为`CreateDate`的属性中。 Experience Manager将此值存储在名为`exif:DateTimeOriginal`的元数据字段中。 由于源是非XMP源，因此对此资产无法进行筛选。
+>过滤仅适用于从资产二进制文件中的XMP源派生的属性。 对于从非XMP源（如EXIF和IPTC格式）派生的属性，筛选不起作用。 例如，资源创建日期存储在EXIF TIFF中名为`CreateDate`的属性中。 Experience Manager将此值存储在名为`exif:DateTimeOriginal`的元数据字段中。 由于源是非XMP源，因此对此资产无法进行筛选。
 
 1. 要打开配置管理器，请访问`https://[aem_server]:[port]/system/console/configMgr`。
 1. 打开&#x200B;**[!UICONTROL Adobe CQ DAM XmpFilter]**&#x200B;配置。
-1. 要通过允许列表列入允许列表应用筛选，请选择&#x200B;**[!UICONTROL 将应用于XMP属性]**，然后在&#x200B;**[!UICONTROL XMP筛选的XML名称允许]**&#x200B;框中指定要导入的属性。
+1. 要通过允许列表应用筛选，请选择&#x200B;**[!UICONTROL 将应用于XMP属性]**，然后在&#x200B;**[!UICONTROL XMP筛选的XML名称允许]**&#x200B;框中指定要导入的属性。
 
    ![chlimage_1-136](assets/chlimage_1-347.png)
 
@@ -93,6 +93,6 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >默认情况下已选中&#x200B;**[!UICONTROL 将阻止列表应用到XMP属性]**&#x200B;选项。 换言之，默认情况下启用使用阻止列表进行筛选。 列入阻止列表要禁用此类筛选，请取消选择&#x200B;**[!UICONTROL 将应用于XMP属性]**&#x200B;选项。
+   >默认情况下已选中&#x200B;**[!UICONTROL 将阻止列表应用到XMP属性]**&#x200B;选项。 换言之，默认情况下启用使用阻止列表进行筛选。 要禁用此类筛选，请取消选择&#x200B;**[!UICONTROL 将应用于XMP属性]**&#x200B;选项。
 
 1. 保存更改。

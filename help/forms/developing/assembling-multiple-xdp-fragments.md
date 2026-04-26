@@ -1,5 +1,5 @@
 ---
-title: 组装多个XDP片段
+title: 组装多个 XDP 片段
 description: 使用Java API和Web服务API将多个XDP片段组合为单个XDP文档。
 contentOwner: admin
 content-type: reference
@@ -13,14 +13,14 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: 2ba6faf9-7b30-42b1-854b-9fada1e12a4a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1886'
 ht-degree: 0%
 
 ---
 
-# 组装多个XDP片段{#assembling-multiple-xdp-fragments}
+# 组装多个 XDP 片段{#assembling-multiple-xdp-fragments}
 
 您可以将多个XDP片段组合到单个XDP文档中。 例如，考虑XDP片段，其中每个XDP文件都包含一个或多个用于创建健康表单的子表单。 下图显示了大纲视图（表示在&#x200B;*汇编多个XDP片段*&#x200B;快速入门中使用的tuc018_template_flowed.xdp文件）：
 
@@ -107,8 +107,8 @@ DDX文档包含指定结果名称的XDP `result`标记。 在这种情况下，�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 **创建PDF Assembler客户端**
 
@@ -150,7 +150,7 @@ DDX文档包含指定结果名称的XDP `result`标记。 在这种情况下，�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md#programmatically-assembling-pdf-documents)
 
 [使用片段创建PDF文档](/help/forms/developing/creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
@@ -206,8 +206,8 @@ DDX文档包含指定结果名称的XDP `result`标记。 在这种情况下，�
 
 **另请参阅**
 
-[组合多个XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[快速入门(SOAP模式)：使用Java API汇编多个XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[组装多个XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[快速入门（SOAP模式）：使用Java API汇编多个XDP片段](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 [正在设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
@@ -286,5 +286,5 @@ DDX文档包含指定结果名称的XDP `result`标记。 在这种情况下，�
 
 **另请参阅**
 
-[组合多个XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
+[组装多个XDP片段](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

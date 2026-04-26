@@ -1,5 +1,5 @@
 ---
-title: 处理停止的操作和分支
+title: 处理停滞的操作和分支
 description: “停止的操作”页面和“停止的分支”页面显示已停止的进程。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 35ad7804-be01-4ce9-8e68-22734b24d5a8
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '719'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 处理停止的操作和分支 {#working-with-stalled-operations-and-branches}
+# 处理停滞的操作和分支 {#working-with-stalled-operations-and-branches}
 
 >[!NOTE]
 > 

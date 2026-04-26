@@ -1,5 +1,5 @@
 ---
-title: 为IBM FileNet配置连接器
+title: 配置 IBM FileNet 连接器
 description: 了解如何配置IBM FileNet的连接器，以启用AEM Forms与IBM FileNet之间的通信。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 5cbb626c-fcd8-4936-acf8-95bac80d06b6
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 1%
+source-wordcount: '748'
+ht-degree: 2%
 
 ---
 
-# 为IBM FileNet配置连接器 {#configuring-connector-for-ibm-filenet}
+# 配置 IBM FileNet 连接器 {#configuring-connector-for-ibm-filenet}
 
 >[!NOTE]
 > 

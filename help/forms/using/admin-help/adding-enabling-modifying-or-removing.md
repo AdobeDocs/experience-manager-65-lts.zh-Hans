@@ -1,5 +1,5 @@
 ---
-title: 添加、启用、修改或删除端点
+title: 添加、启用、修改或移除端点
 description: 了解如何添加、启用、修改和删除端点。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 14264788-a05a-4a8d-b485-33ae1caac094
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 0%
+source-wordcount: '382'
+ht-degree: 4%
 
 ---
 
-# 添加、启用、修改或删除端点 {#adding-enabling-modifying-or-removing-endpoints}
+# 添加、启用、修改或移除端点 {#adding-enabling-modifying-or-removing-endpoints}
 
 >[!NOTE]
 > 
@@ -37,13 +37,13 @@ ht-degree: 0%
 1. 在“端点”选项卡的列表中，选择要添加的端点类型，然后单击“添加”。
 1. 根据端点类型，配置其他端点设置。
 
-[观察文件夹终结点设置](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
+   [观察文件夹终结点设置](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings)
 
-[电子邮件端点设置](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
+   [电子邮件端点设置](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings)
 
-[配置任务管理器端点](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
+   [配置任务管理器端点](/help/forms/using/admin-help/configuring-task-manager-endpoints.md#configuring-task-manager-endpoints)
 
-[远程端点设置](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
+   [远程端点设置](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings)
 
 1. 单击“添加”。
 

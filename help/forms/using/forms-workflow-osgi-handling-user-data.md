@@ -1,6 +1,6 @@
 ---
-title: OSGi上以Forms为中心的工作流 | 处理用户数据
-description: OSGi上以Forms为中心的工作流 | 处理用户数据
+title: OSGi上以Forms为中心的工作流|处理用户数据
+description: OSGi上以Forms为中心的工作流|处理用户数据
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin,User
@@ -9,14 +9,14 @@ feature: Adaptive Forms,AEM Forms on OSGi
 hide: true
 hidefromtoc: true
 exl-id: a817fa19-ae22-4c77-8a8e-6c4deed10d67
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1032'
 ht-degree: 1%
 
 ---
 
-# OSGi上以Forms为中心的工作流 | 处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
+# OSGi上以Forms为中心的工作流|处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
 
 以Forms为中心的AEM工作流使您能够自动执行以Forms为中心的真实业务流程。 工作流由一系列步骤组成，这些步骤按照关联工作流模型中指定的顺序执行。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 工作流可与存储库中的资产、用户帐户和服务进行交互。 因此，工作流可以协调涉及Experience Manager任何方面的复杂活动。
 
@@ -53,7 +53,7 @@ ht-degree: 1%
    <td>/etc/workflow/instances/[server_id]/[date]/[workflow-instance]/</td>
   </tr>
   <tr>
-   <td><strong>有效负荷</strong></td>
+   <td><strong>负载</strong></td>
    <td>/var/fd/dashboard/payload/[server_id]/[日期]/<br /> [payload-id]/</td>
    <td>/etc/fd/dashboard/payload/[server_id]/[日期]/<br /> [payload-id]/</td>
   </tr>
@@ -158,6 +158,6 @@ ht-degree: 1%
 
 您还可以使用API来访问和删除节点和属性。 有关更多信息，请参阅以下文档。
 
-* [如何以编程方式访问AEM JCR](/help/sites-developing/access-jcr.md)
-* [正在删除节点和属性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
-* [API引用](https://helpx.adobe.com/cn/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
+* [如何以编程方式访问 AEM JCR](/help/sites-developing/access-jcr.md)
+* [删除节点和属性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [API参考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

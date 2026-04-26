@@ -9,29 +9,30 @@ docset: aem65
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 2c0a5185-7759-447a-b4c6-36feaa4a23d3
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '6615'
+source-wordcount: '6822'
 ht-degree: 2%
 
 ---
 
 # 自适应表单规则编辑器{#adaptive-forms-rule-editor}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html)。
 
 ## 概述 {#overview}
 
 Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户和开发人员能够编写关于自适应表单对象的规则。 这些规则根据预设条件、用户输入和用户对表单的操作，定义要在表单对象上触发的操作。 它有助于进一步简化表单填写体验，确保准确性和速度。
 
 规则编辑器提供了用于编写规则的直观且简化的用户界面。 规则编辑器为所有用户提供可视编辑器。 此外，仅对于表单超级用户，规则编辑器提供用于编写规则和脚本的代码编辑器。
-<!-- Some of the key actions that you can perform on adaptive form objects using rules are:
+<!--
+Some of the key actions that you can perform on adaptive form objects using rules are:
 
 * Show or hide an object
 * Enable or disable an object
@@ -39,7 +40,8 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 * Validate the value of an object
 * Execute functions to compute the value of an object
 * Invoke a form data model service and perform an operation
-* Set property of an object -->
+* Set property of an object
+-->
 
 规则编辑器取代了AEM 6.1 Forms及更早版本中的脚本编写功能。 但是，现有脚本将保留在新规则编辑器中。 有关在规则编辑器中使用现有脚本的更多信息，请参阅[规则编辑器对现有脚本的影响](#impact-of-rule-editor-on-existing-scripts)。
 
@@ -119,7 +121,7 @@ Adobe Experience Manager Forms中的规则编辑器功能使表单业务用户�
 `Then, do the following:`
 
 对对象B采取行动2；
-和
+AND
 关于对象C的行动3；
 
 _
@@ -201,7 +203,7 @@ _
 
 ### 设置值 {#set-value-of}
 
-**[!UICONTROL 规则类型的]**&#x200B;设置值允许您根据是否满足指定的条件来设置表单对象的值。 该值可以设置为另一个对象的值、文本字符串、从数学表达式或函数派生的值、另一个对象的属性的值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
+]**规则类型的**[!UICONTROL &#x200B;设置值允许您根据是否满足指定的条件来设置表单对象的值。 该值可以设置为另一个对象的值、文本字符串、从数学表达式或函数派生的值、另一个对象的属性的值或表单数据模型服务的输出。 同样，您可以检查组件、字符串、属性或从函数或数学表达式派生的值的条件。
 
 “设置值”规则类型不适用于所有表单对象，例如面板和工具栏按钮。 标准的“设置值”规则具有以下结构：
 
@@ -221,7 +223,7 @@ _
 
 
 
-以下示例将`dependentid`字段中的值作为输入，并将`Relation`字段的值设置为`Relation`表单数据模型服务的`getDependent`参数的输出。
+以下示例将`dependentid`字段中的值作为输入，并将`Relation`字段的值设置为`getDependent`表单数据模型服务的`Relation`参数的输出。
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -411,7 +413,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
 ### F.完成和取消按钮 {#f-done-and-cancel-buttons}
 
-**[!UICONTROL 完成]**&#x200B;按钮用于保存规则。您可以保存不完整的规则。 但是，不完整部分无效，因此不会运行。 当您下次从同一表单对象启动规则编辑器时，会列出表单对象中已保存的规则。 您可以在该视图中管理现有规则。 有关详细信息，请参阅[管理规则](#manage-rules)。
+**[!UICONTROL 完成]**&#x200B;按钮用于保存规则。 您可以保存不完整的规则。 但是，不完整部分无效，因此不会运行。 当您下次从同一表单对象启动规则编辑器时，会列出表单对象中已保存的规则。 您可以在该视图中管理现有规则。 有关详细信息，请参阅[管理规则](#manage-rules)。
 
 使用&#x200B;**[!UICONTROL 取消]**&#x200B;按钮可放弃对规则所做的任何更改并关闭规则编辑器。
 
@@ -490,7 +492,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
    ![write-rules-visual-editor-10](assets/write-rules-visual-editor-10.png)
 
-1. 选择&#x200B;**[!UICONTROL 选择选项]**，并选择&#x200B;**[!UICONTROL 数学表达式]**。打开用于编写数学表达式的字段。
+1. 选择&#x200B;**[!UICONTROL 选择选项]**，并选择&#x200B;**[!UICONTROL 数学表达式]**。 打开用于编写数学表达式的字段。
 
    ![write-rules-visual-editor-11](assets/write-rules-visual-editor-11.png)
 
@@ -508,7 +510,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
    ![write-rules-visual-editor-13](assets/write-rules-visual-editor-13.png)
 
-   在扩展表达式字段中，从&#x200B;**选择运算符**&#x200B;字段中选择&#x200B;**除以**，并从&#x200B;**选择选项**&#x200B;字段中选择&#x200B;**数字**。然后在数字字段中指定&#x200B;**2**。
+   在扩展表达式字段中，从&#x200B;**选择运算符**&#x200B;字段中选择&#x200B;**除以**，并从&#x200B;**选择选项**&#x200B;字段中选择&#x200B;**数字**。 然后在数字字段中指定&#x200B;**2**。
 
    ![write-rules-visual-editor-14](assets/write-rules-visual-editor-14.png)
 
@@ -576,7 +578,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
 支持的`jsdoc`标记：
 
-* **专用**
+* **私有**
 语法： `@private`
 专用函数未作为自定义函数包含在内。
 
@@ -622,7 +624,7 @@ AEM Forms会跟踪您上次用于编写规则的规则编辑器模式。 当您�
 
   使用@this引用编写了规则的自适应表单组件。
 
-  以下示例基于字段值。 在以下示例中，规则隐藏了表单中的字段。 `this`的`this.value`部分引用了写入规则的基础自适应表单组件。
+  以下示例基于字段值。 在以下示例中，规则隐藏了表单中的字段。 `this.value`的`this`部分引用了写入规则的基础自适应表单组件。
 
   ```
      /**
@@ -845,7 +847,7 @@ var c = {
 
 在贷款申请表中，您要获取贷款申请人是否为现有客户。 根据用户提供的信息，客户ID字段应显示或隐藏。 此外，如果用户是现有客户，则还需要将焦点设置为“客户ID”字段。 贷款申请表包括以下组成部分：
 
-* 单选按钮&#x200B;**您是现有Geometrixx客户吗？**&#x200B;提供“是”和“否”选项。 “是”的值为&#x200B;**0**，“否”的值为&#x200B;**1**。
+* 单选按钮&#x200B;**您是现有Geometrixx客户吗？**，它提供了“是”和“否”选项。 “是”的值为&#x200B;**0**，“否”的值为&#x200B;**1**。
 
 * 用于指定客户ID的文本字段&#x200B;**Geometrixx客户ID**。
 

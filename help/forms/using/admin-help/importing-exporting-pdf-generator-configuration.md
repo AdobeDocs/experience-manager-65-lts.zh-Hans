@@ -1,5 +1,5 @@
 ---
-title: 导入和导出PDF Generator配置文件
+title: 导入和导出 PDF Generator 配置文件
 description: 了解如何导入和导出PDF Generator配置文件。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 3bd5ef75-7e35-4398-a7a3-0178a9c06db0
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 0%
+source-wordcount: '390'
+ht-degree: 3%
 
 ---
 
-# 导入和导出PDF Generator配置文件 {#importing-and-exporting-pdf-generator-configuration-files}
+# 导入和导出 PDF Generator 配置文件 {#importing-and-exporting-pdf-generator-configuration-files}
 
 >[!NOTE]
 > 

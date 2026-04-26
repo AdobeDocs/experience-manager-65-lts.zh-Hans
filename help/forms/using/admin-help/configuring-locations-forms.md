@@ -1,5 +1,5 @@
 ---
-title: 为Forms配置位置
+title: 配置表单位置
 description: 了解如何配置AEM表单的位置。 您可以指定属性的文件位置、表单的位置、种子PDF文件和缓存位置。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 49e815e9-2087-4a42-b481-dc66de787d67
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 1%
+source-wordcount: '838'
+ht-degree: 2%
 
 ---
 
-# 为Forms配置位置 {#configuring-locations-for-forms}
+# 配置表单位置 {#configuring-locations-for-forms}
 
 >[!NOTE]
 > 
@@ -88,7 +88,7 @@ font-mapping文件用于为表单中的HTML转换创建自定义字体映射，�
 
 **默认位置：**&#x200B;这是默认选项。 如果选择该选项，则会在依赖于您正在使用的应用程序服务器的位置创建缓存：
 
-* **JBoss：**&#x200B;[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
+* **JBoss：**[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
 * **WebLogic：** [WebLogic主页]\user_projects\domains\[aem-forms域名]\adobe\[Forms服务器名称]\FormServer\Cache
 * **WebSphere：** [IBM主页]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 

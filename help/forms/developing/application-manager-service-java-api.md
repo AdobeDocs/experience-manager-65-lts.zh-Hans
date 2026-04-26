@@ -1,6 +1,6 @@
 ---
-title: 应用程序管理器服务JavaAPI快速入门(SOAP)
-description: 应用程序管理器服务JavaAPI快速入门(SOAP)
+title: 应用程序管理器服务 Java API 快速入门（SOAP）
+description: 应用程序管理器服务 Java API 快速入门（SOAP）
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,10 +11,10 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 4b7d417f-6480-479e-9b8d-bcf2c9790a97
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '200'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 >
 >如果使用Unix等其他操作系统，请将Windows特定的路径替换为适用操作系统支持的路径，则“使用AEM进行编程”表单中的Java API(SOAP)快速入门将基于Forms。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入门(SOAP模式)：使用Java API部署应用程序 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API部署应用程序 {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
 以下Java代码示例基于名为&#x200B;*EncryptDocument.lca*&#x200B;的现有LCA文件导入应用程序。
 
@@ -138,7 +138,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门(SOAP模式)：使用Java API删除应用程序 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API删除应用程序 {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
 以下Java代码示例删除名为&#x200B;*EncryptDocument*&#x200B;的应用程序。
 

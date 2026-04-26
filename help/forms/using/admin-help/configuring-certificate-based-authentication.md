@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 56603735-959e-4460-b642-bba63fa20c02
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 0%
+source-wordcount: '739'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ User Management通常使用用户名和密码执行身份验证。 用户管理�
 1. 单击“新建证书映射”，在“颁发者”列表中，选择在“信任存储区管理”中配置的证书别名。
 1. 将证书的某个属性映射到用户的属性。 例如，可以将证书的一般名称映射到用户的登录ID。
 
-   如果证书中属性的内容与用户管理数据库中用户属性的内容不同，则可以使用Java正则表达式(regex)来匹配这两个属性。 例如，如果证书的通用名称是&#x200B;*Alex Pink（身份验证）*&#x200B;和&#x200B;*Alex Pink（签名）*&#x200B;之类的名称，并且用户管理数据库中的通用名称是&#x200B;*Alex Pink*，则使用正则表达式提取证书属性的必需部分（在此示例中为&#x200B;*Alex Pink*）。指定的正则表达式必须符合Java正则表达式规范。
+   如果证书中属性的内容与用户管理数据库中用户属性的内容不同，则可以使用Java正则表达式(regex)来匹配这两个属性。 例如，如果证书的通用名称是&#x200B;*Alex Pink（身份验证）*&#x200B;和&#x200B;*Alex Pink（签名）*&#x200B;之类的名称，并且用户管理数据库中的通用名称是&#x200B;*Alex Pink*，则可以使用正则表达式来提取证书属性的所需部分（在此示例中为&#x200B;*Alex Pink*）。 您指定的正则表达式必须符合Java正则表达式规范。
 
    可通过在“自定义顺序”框中指定组的顺序来转换表达式。 自定义顺序与`java.util.regex.Matcher.replaceAll()`方法一起使用。 看到的行为将与该方法的行为相对应，并且必须相应地指定输入字符串（自定义顺序）。
 
@@ -61,8 +61,8 @@ User Management通常使用用户名和密码执行身份验证。 用户管理�
 
    可以在正则表达式中使用以下字符：
 
-   * 。（任意字符）
-   * &amp;amp；ast；（0次或更多次）
+   * . （任意字符）
+   * &amp;ast；（0次或更多次）
    * () （用方括号指定组）
    * \（用于将正则表达式字符转义为常规字符）
    * $n（用于表示第n组）
@@ -71,21 +71,21 @@ User Management通常使用用户名和密码执行身份验证。 用户管理�
 
    * 从《亚历克斯·平克（身份验证）》中提取《亚历克斯·平克》
 
-     **正则表达式：** (.&amp;amp；ast；) \（身份验证\）
+     **正则表达式：** (.&amp;ast；) \（身份验证\）
 
    * 从“Alex（身份验证） Pink”提取“Alex Pink”
 
-     **正则表达式：** (.&amp;amp；ast；)\（身份验证\） (.&amp;amp；ast；)
+     **正则表达式：** (.&amp;ast；)\（身份验证\） (.&amp;ast；)
 
    * 从“Alex（身份验证） Pink”提取“Pink Alex”
 
-     **正则表达式：** (.&amp;amp；ast；)\（身份验证\） (.&amp;amp；ast；)
+     **正则表达式：** (.&amp;ast；)\（身份验证\） (.&amp;ast；)
 
      自定义顺序： $2 $1（返回第二个组，连接到第一个组，由空格字符捕获）
 
-   * 从“smtp：apink@sampleorg.com”中提取“apink@sampleorg.com”
+   * 从“smtp:apink@sampleorg.com”提取“apink@sampleorg.com”
 
-     **正则表达式：** smtp：(.&amp;amp；ast；)
+     **正则表达式：** smtp：(.&amp;ast；)
 
    有关使用正则表达式的详细信息，请参阅[有关正则表达式的Java教程](https://java.sun.com/docs/books/tutorial/essential/regex/)。
 

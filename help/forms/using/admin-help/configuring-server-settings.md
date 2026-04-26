@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: da8031f2-26ab-41e2-bf54-7032727ca192
-source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2643'
+source-wordcount: '2665'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 0%
 >
 >AEM Forms版本已弃用Flex Workspace。
 
-默认情况下，AEM表单发送的电子邮件包含指向(JEE上的AEM表单已弃用)Flex Workspace的链接。 您可以将AEM表单配置为发送包含指向AEM Forms Workspace的链接的电子邮件。 要详细了解AEM Forms Workspace与(JEE上的AEM Forms已弃用)Flex Workspace相比所具有的优势，请参阅[此](/help/forms/using/features-html-workspace-available-flex.md)文章。
+默认情况下，AEM表单发送的电子邮件包含指向（JEE上的AEM表单已弃用）Flex Workspace的链接。 您可以将AEM表单配置为发送包含指向AEM Forms Workspace的链接的电子邮件。 要详细了解AEM Forms Workspace与（JEE上的AEM Forms已弃用）Flex Workspace相比所具有的优势，请参阅[此](/help/forms/using/features-html-workspace-available-flex.md)文章。
 
 1. 在管理控制台中，单击主页>服务>表单工作流>服务器设置>任务通知。
 1. 打开任务分配模板。

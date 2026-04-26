@@ -1,5 +1,5 @@
 ---
-title: 创建呈现Forms的Web应用程序
+title: 创建渲染表单的 Web 应用程序
 description: 创建基于Web的应用程序，该应用程序使用Java Servlet调用Forms服务和渲染表单。 Java Servlet用作返回表单的Forms服务与客户端Web浏览器之间的链接。
 contentOwner: admin
 content-type: reference
@@ -12,9 +12,9 @@ feature: Adaptive Forms, Workbench, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 071781e8-990d-4d01-b46e-be1c57bdbe3a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1869'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本节介绍如何创建基于Web的应用程序，该应用程序使用Java servlet调用Forms服务并基于片段呈现表单。 (请参阅[根据片段渲染Forms](/help/forms/developing/rendering-forms-based-fragments.md)。)
+>本节介绍如何创建基于Web的应用程序，该应用程序使用Java servlet调用Forms服务并基于片段呈现表单。 （请参阅[根据片段渲染Forms](/help/forms/developing/rendering-forms-based-fragments.md)。）
 
 使用Java Servlet，您可以将表单写入客户端Web浏览器，以便客户查看表单并在表单中输入数据。 使用数据填充表单后，Web用户单击表单上的提交按钮以将信息发送回Java Servlet，从中可检索和处理数据。 例如，可以将数据发送到另一个进程。
 
@@ -53,15 +53,15 @@ ht-degree: 0%
 
 本节使用位于以下位置的示例文件：
 
-&lt;*Forms Designer安装目录*>/Samples/Forms/采购订单/表单片段
+&lt;*Forms Designer安装目录*>/Samples/Forms/Purchase Order/Form Fragments
 
-其中&lt;*install directory*>是安装路径。 出于客户端应用程序的目的，已从此安装位置复制了采购订单Dynamic.xdp文件，并将其部署到名为&#x200B;*Applications/FormsApplication*&#x200B;的Forms应用程序。 采购订单Dynamic.xdp文件放置在名为FormsFolder的文件夹中。 同样，片段放置在名为Fragments的文件夹中，如下图所示。
+其中&lt;*安装目录*>是安装路径。 出于客户端应用程序的目的，已从此安装位置复制了采购订单Dynamic.xdp文件，并将其部署到名为&#x200B;*Applications/FormsApplication*&#x200B;的Forms应用程序。 采购订单Dynamic.xdp文件放置在名为FormsFolder的文件夹中。 同样，片段放置在名为Fragments的文件夹中，如下图所示。
 
 ![cw_cw_fragmentsrepository](assets/cw_cw_fragmentsrepository.png)
 
 要访问采购订单Dynamic.xdp表单设计，请将`Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp`指定为表单名称（传递给`renderPDFForm`方法的第一个参数），并将`repository:///`指定为内容根URI值。
 
-Web应用程序使用的XML数据文件已从Data文件夹移至`C:\Adobe`(属于承载AEM Forms的J2EE应用程序服务器的文件系统)。 文件名是采购订单&#x200B;*Canada.xml*&#x200B;和采购订单&#x200B;*US.xml*。
+Web应用程序使用的XML数据文件已从Data文件夹移至`C:\Adobe`（属于承载AEM Forms的J2EE应用程序服务器的文件系统）。 文件名是采购订单&#x200B;*Canada.xml*&#x200B;和采购订单&#x200B;*US.xml*。
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Web应用程序使用的XML数据文件已从Data文件夹移至`C:\Adobe`(属�
 
 ### 创建Web项目 {#creating-a-web-project}
 
-创建包含可调用Forms服务的Java servlet的Web应用程序的第一步是创建一个Web项目。 本文档所基于的Java IDE是Eclipse 3.3。使用Eclipse IDE创建一个Web项目，并将所需的JAR文件添加到您的项目中。 最后，将名为&#x200B;*index.html*&#x200B;的HTML页面和Java Servlet添加到您的项目中。
+创建包含可调用Forms服务的Java servlet的Web应用程序的第一步是创建一个Web项目。 本文档所基于的Java IDE是Eclipse 3.3。 使用Eclipse IDE创建一个Web项目，并将所需的JAR文件添加到您的项目中。 最后，将名为&#x200B;*index.html*&#x200B;的HTML页面和Java Servlet添加到您的项目中。
 
 以下列表指定了必须添加到Web项目中的JAR文件：
 

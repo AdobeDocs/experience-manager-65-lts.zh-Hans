@@ -7,9 +7,9 @@ feature: Collaboration
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: adcf1276-f4c3-4c32-a830-cc968185dca3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '603'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/private-folder.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 您可以在[!DNL Adobe Experience Manager Assets]用户界面中创建一个专供您使用的专用文件夹。 您可以将此专用文件夹共享给其他用户，并为他们分配各种权限。 根据您分配的权限级别，用户可以在该文件夹上执行各种任务，例如，查看文件夹中的资源或编辑资源。
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 1. 在&#x200B;**[!UICONTROL 创建文件夹]**&#x200B;对话框中，输入文件夹的标题和名称（可选），然后选择&#x200B;**[!UICONTROL 专用]**&#x200B;选项。
 
-1. 单击&#x200B;**[!UICONTROL 创建]**。将创建一个专用文件夹。
+1. 单击&#x200B;**[!UICONTROL 创建]**。 将创建一个专用文件夹。
 
    ![chlimage_1-413](assets/chlimage_1-413.png)
 
@@ -61,7 +61,7 @@ ht-degree: 3%
    >
    >专用文件夹中至少有一个成员具有`Owner`角色。 因此，管理员无法从专用文件夹中删除所有所有者成员。 但是，要从专用文件夹中删除现有所有者（以及管理员本身），管理员必须添加其他用户作为所有者。
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。根据您分配的角色，当用户登录到[!DNL Assets]时，将为用户分配一组针对您的专用文件夹的权限。
+1. 单击&#x200B;**[!UICONTROL 保存]**。 根据您分配的角色，当用户登录到[!DNL Assets]时，将为用户分配一组针对您的专用文件夹的权限。
 1. 单击&#x200B;**[!UICONTROL 确定]**&#x200B;关闭确认消息。
 1. 与您共享文件夹的用户将收到共享通知。 使用用户的凭据登录[!DNL Assets]以查看通知。
 

@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 6bd234fb-28ad-405f-a018-bdf4fa412839
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1904'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ AEM forms使用AEM forms存储库作为其数据源。 AEM表单存储库存储�
 * 增加AEM表单的默认文档最大内联大小，使其大于大多数文档的大小。
 * 若要处理较大的文件，请指定位于高速磁盘系统或RAM磁盘上的存储目录。
 
-最大内联大小和存储目录(AEM表单临时文件目录和GDS目录)在管理控制台中进行配置。
+最大内联大小和存储目录（AEM表单临时文件目录和GDS目录）在管理控制台中进行配置。
 
 ### 文档大小和最大内联大小 {#document-size-and-maximum-inline-size}
 
@@ -120,7 +120,7 @@ AEM forms使用AEM forms存储库作为其数据源。 AEM表单存储库存储�
 
    >[!NOTE]
    >
-   >上述system属性将覆盖JEE环境上的AEM Forms和JEE环境上的OSGi捆绑包中包含的AEM FormsAEM Forms所设置的Document Max Inline Size属性的值。
+   >上述system属性将覆盖JEE环境上的AEM Forms和JEE环境上的OSGi捆绑包中包含的AEM Forms所设置的Document Max Inline Size属性的值。
 
 >[!NOTE]
 >

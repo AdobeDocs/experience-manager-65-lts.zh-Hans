@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: e8faf76e-5287-4b0c-b440-f348443287f3
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '4725'
+source-wordcount: '4769'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,9 @@ Document Security提供了以下类型的策略。
 
 首次安装Document Security时，它包含一个名为&#x200B;*Restrict to All Principals*&#x200B;的共享策略。 当将此策略应用于文档时，任何可以登录Document Security的用户都可以访问该文档。 此策略位于名为&#x200B;*全局策略集*&#x200B;的策略集中。 默认情况下，不启用此策略。 如果它适合您组织的需要，则可以启用它。
 
-**Microsoft® Outlook自动生成的策略**
+**® Outlook自动生成的策略**
 
-使用Acrobat，您可以将策略应用到在Microsoft® Outlook中作为电子邮件附件发送的文档。 在Outlook中，可以使用现有策略保护文档。 或者，您也可以使用Acrobat通过默认机密性设置生成的自动生成策略，该策略适用于附加到电子邮件的文档。 (请参阅&#x200B;*[Acrobat帮助](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*。)
+使用Acrobat，您可以将策略应用到在Microsoft® Outlook中作为电子邮件附件发送的文档。 在Outlook中，可以使用现有策略保护文档。 或者，您也可以使用Acrobat通过默认机密性设置生成的自动生成策略，该策略适用于附加到电子邮件的文档。 （请参阅&#x200B;*[Acrobat帮助](https://help.adobe.com/en_US/acrobat/pro/using/index.html)*。）
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ Document Security提供了以下类型的策略。
 
 >[!NOTE]
 >
->在Microsoft® Outlook中，Acrobat为附加到电子邮件的文档收件人自动生成的策略不会出现在策略列表中。 您只能通过打开关联文档的文档详情页面来查看这些策略。
+>在® Outlook中，Acrobat为附加到电子邮件的文档收件人自动生成的策略不会出现在策略列表中。 您只能通过打开关联文档的文档详情页面来查看这些策略。
 
 在编辑策略时，以下限制适用：
 
@@ -400,7 +400,7 @@ Document Security提供了以下类型的策略。
 
 >[!NOTE]
 >
->使用客户端应用程序从文档中删除策略。 (请参阅Acrobat帮助或相应的Acrobat Reader DC扩展帮助。)
+>使用客户端应用程序从文档中删除策略。 （请参阅Acrobat帮助或相应的Acrobat Reader DC扩展帮助。）
 
 ## 对策略列表进行排序 {#sort-the-policy-list}
 

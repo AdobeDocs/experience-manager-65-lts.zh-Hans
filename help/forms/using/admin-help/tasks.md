@@ -1,5 +1,5 @@
 ---
-title: 使用任务
+title: 处理任务
 description: 使用“任务搜索”页可以按用户名或任务ID搜索任务。 了解有关使用任务的更多信息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: d6a0caed-99fa-4121-ac2e-bc21626ff9e0
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 0%
 
 ---
 
-# 使用任务 {#working-with-tasks}
+# 处理任务 {#working-with-tasks}
 
 >[!NOTE]
 > 

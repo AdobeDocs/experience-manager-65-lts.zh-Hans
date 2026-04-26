@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 72c31f40-d1b0-47ae-bdeb-e9b92c3d27e1
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '10278'
+source-wordcount: '10334'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ AEM forms提供了一个示例配置，您可以为您的环境自定义该配�
 
 document security提供在没有Internet或网络连接的情况下离线使用受策略保护的文档的功能。 此功能要求策略允许脱机访问，如[为用户和组指定文档权限](/help/forms/using/admin-help/creating-policies.md#specify-the-document-permissions-for-users-and-groups)中所述。 在脱机使用具有此类策略的文档之前，收件人必须在联机时打开该文档，并在出现提示时单击“是”启用脱机访问。 还可以请求收件人验证其身份。 然后，收件人可以在策略中指定的离线租赁期的持续时间内离线使用文档。
 
-离线租赁期结束时，收件人必须重新与Document Security同步，方法是在线打开文档，或者使用Acrobat或Acrobat Reader DC扩展菜单命令进行同步。 (请参阅&#x200B;*Acrobat帮助*&#x200B;或相应的&#x200B;*Acrobat Reader DC扩展帮助*。)
+离线租赁期结束时，收件人必须重新与Document Security同步，方法是在线打开文档，或者使用Acrobat或Acrobat Reader DC扩展菜单命令进行同步。 （请参阅&#x200B;*Acrobat帮助*&#x200B;或相应的&#x200B;*Acrobat Reader DC扩展帮助*。）
 
 由于允许脱机访问的文档需要在脱机存储文件的计算机上缓存关键资料，因此，如果未经授权的用户可以获得关键资料，则文件可能会受到危害。 为了弥补这种可能性，提供了计划和手动密钥变换选项，您可以配置这些选项，以防止未经授权的人使用密钥访问文档。
 
@@ -361,28 +361,28 @@ Document Security可以审核和记录与与与受策略保护的文档、策略
 
 **已删除策略集：**&#x200B;管理员或策略集协调器删除策略集。
 
-**修改策略集：**&#x200B;管理员或策略集协调员更改策略集。
+**Modified Policy Set:** An administrator or policy set coordinator changes a policy set.
 
-**系统事件**
+**System events**
 
-**目录
-同步完成：**&#x200B;此信息在“事件”页面中不可用。 当前目录同步信息（包括当前同步状态和上次同步的时间）将显示在“域管理”页上。 要访问管理控制台中的“域管理”页面，请单击设置>用户管理>域管理。
+**Directory
+Synchronization Complete:** This information is not available from the Events page. The current directory synchronization information, including the current synchronization state and time of the last synchronization, is displayed on the Domain Management page. To access the Domain Management page in administration console, click Settings > User Management > Domain Management.
 
-**客户端启用脱机访问：**&#x200B;用户启用了对受用户计算机上服务器保护的文档的脱机访问。
+**Client Enable Offline Access:** A user enabled offline access to documents that are secured against the server on the user&#39;s computer.
 
-**已同步客户端**&#x200B;客户端应用程序必须与服务器同步信息以允许脱机访问。
+**Synchronized Client** Client application must synchronize information with the server to allow for offline access.
 
-**版本不匹配：**&#x200B;与服务器不兼容的AEM Forms SDK版本尝试连接到服务器。
+**Version Mismatch:** A version of the AEM forms SDK that is incompatible with the server attempted to connect to the server.
 
-**目录同步信息：**&#x200B;此信息在“事件”页面中不可用。 当前目录同步信息（包括当前同步状态和上次同步的时间）将显示在“域管理”页上。 要访问管理控制台中的“域管理”页面，请单击设置>用户管理>域管理。
+**Directory Synchronization Information:** This information is not available from the Events page. The current directory synchronization information, including the current synchronization state and time of the last synchronization, is displayed on the Domain Management page. To access the Domain Management page in administration console, click Settings > User Management > Domain Management.
 
-**服务器配置更改：**&#x200B;通过网页或通过导入config.xml文件手动完成的服务器配置更改。 这包括更改基本URL、会话超时、登录锁定、目录设置、密钥变换、用于外部注册的SMTP服务器设置、水印配置、显示选项等。
+**Server Configuration Change:** Changes to the server configuration that are done either through the web pages or manually by importing a config.xml file. This includes changes to the base URL, session time-outs, login lockouts, directory settings, key rollovers, SMTP server settings for external registration, watermark configuration, display options, and so on.
 
-## 配置扩展使用跟踪 {#configuring-extended-usage-tracking}
+## Configuring extended usage tracking {#configuring-extended-usage-tracking}
 
-Document Security可以跟踪可能在受保护文档上执行的各种自定义事件。 您可以在全局级别或策略级别启用Document Security Server中的事件跟踪。 然后，您可以设置JavaScript以捕获在受保护的PDF文档中执行的特定操作，例如单击按钮或保存文档。 此使用情况数据将作为XML文件以键值对的形式发送，您可以将其用于进一步分析。 访问受保护文档的最终用户可以允许或拒绝来自客户端应用程序的此类跟踪。
+Document security can track various custom events that may be performed on a protected document. You can enable the tracking of events from the document security server at the global level or at a policy level. You can then set up a JavaScript to capture specific actions performed within the protected PDF document such as clicking a button, or saving the document. This usage data is sent as an XML file in key-value pairs, which you can use for further analysis. End users who access the protected documents can allow or decline such tracking from the client application.
 
-如果在全局级别启用跟踪，则可以在策略级别覆盖此设置，并为特定策略禁用此设置。 如果在全局级别禁用跟踪，则无法进行策略级别的覆盖。 当事件计数达到25或文档关闭时，跟踪事件的列表将自动推送到服务器。 您还可以配置脚本，以根据需要明确推送事件列表。 您可以通过访问Document Security对象的属性和方法来自定义事件跟踪。
+If tracking is enabled at the global level, you can override this setting at the policy level and disable it for a particular policy. Policy-level overriding is not possible if tracking is disabled at the global level. The list of tracked events is automatically pushed to the server when the event count reaches 25 or when the document is closed. You can also configure your script to explicitly push the event list as per your requirements. You can customize the event tracking by accessing the document security object properties and methods.
 
 启用跟踪后，所有随后创建的策略都将默认启用跟踪。 在服务器上启用跟踪之前创建的策略将需要手动更新。
 
@@ -473,7 +473,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 * Acrobat和Adobe Reader 10之前的版本不支持以下水印功能：
 
    * PDF水印
-   * 水印中的多个元素(文本/PDF)
+   * 水印中的多个元素（文本/PDF）
    * 高级选项，例如页面范围或显示选项
    * 文本格式选项，例如指定的字体、字体名称和颜色。 但是，早期版本的Acrobat和Reader将以默认字体和颜色显示文本内容。
 
@@ -561,7 +561,7 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 注册电子邮件包含指向注册页面的链接以及有关如何注册的信息。 受邀用户注册后，Document Security会发出一封激活电子邮件，其中包含指向激活页面的链接。 激活后，帐户将保持有效，直至您停用或删除它。
 
-如果启用内置注册，则只需指定SMTP服务器、注册电子邮件详细信息、访问功能以及重置密码电子邮件信息一次。 在启用内置注册之前，请确保已在“用户管理”中创建了本地域，并将“Document Security邀请用户”角色分配给组织中的相应用户和组。 （请参阅[添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。）如果不使用内置注册，则必须使用AEM forms SDK创建自己的用户注册系统。 请参阅[使用AEM forms编程](/help/forms/developing/introducing-java-api-soap-quick.md)中有关“为AEM forms开发SPI”的帮助。 如果不使用“Built-in Registration（内置注册）”选项，建议在激活电子邮件和客户端登录屏幕上配置消息，以通知用户如何联系管理员以获取新密码或其他信息。
+如果启用内置注册，则只需指定SMTP服务器、注册电子邮件详细信息、访问功能以及重置密码电子邮件信息一次。 在启用内置注册之前，请确保已在“用户管理”中创建了本地域，并将“Document Security邀请用户”角色分配给组织中的相应用户和组。 （请参阅[添加本地域](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain)和[创建和配置角色](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles)。） 如果您不使用内置注册，则必须使用AEM forms SDK创建自己的用户注册系统。 请参阅[使用AEM forms编程](/help/forms/developing/introducing-java-api-soap-quick.md)中有关“为AEM forms开发SPI”的帮助。 如果不使用“Built-in Registration（内置注册）”选项，建议在激活电子邮件和客户端登录屏幕上配置消息，以通知用户如何联系管理员以获取新密码或其他信息。
 
 **启用并配置受邀用户注册**
 
@@ -586,9 +586,9 @@ Document Security可以跟踪可能在受保护文档上执行的各种自定义
 
 以下设置位于“受邀用户注册”页面的“电子邮件限制过滤器”区域。
 
-**排除项：**&#x200B;键入要排除的用户或组的电子邮件地址。 要排除多个用户或组，请在新行中输入每个电子邮件地址。 要排除属于特定域的所有用户，请输入通配符和域名。 例如，要排除example.com域中的所有用户，请输入&amp;amp；ast；.example.com。
+**排除项：**&#x200B;键入要排除的用户或组的电子邮件地址。 要排除多个用户或组，请在新行中输入每个电子邮件地址。 要排除属于特定域的所有用户，请输入通配符和域名。 例如，要排除example.com域中的所有用户，请输入&amp;ast；.example.com。
 
-**包含：**&#x200B;键入要包含的用户或组的电子邮件地址。 要包括多个用户或组，请在新行中输入每个电子邮件地址。 要包含属于特定域的所有用户，请输入通配符和域名。 例如，要在example.com域中包含所有用户，请输入&amp;amp；ast；.example.com。
+**包含：**&#x200B;键入要包含的用户或组的电子邮件地址。 要包括多个用户或组，请在新行中输入每个电子邮件地址。 要包含属于特定域的所有用户，请输入通配符和域名。 例如，要在example.com域中包含所有用户，请输入&amp;ast；.example.com。
 
 ### 服务器和注册帐户参数 {#server-and-registration-account-parameters}
 

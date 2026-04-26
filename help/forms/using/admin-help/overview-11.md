@@ -1,5 +1,5 @@
 ---
-title: 运行状况监视器概述
+title: 运行状况监控概述
 description: 本文档提供了运行状况监视器的概述以及有关访问方式的详细信息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: f187d4e4-7fe6-4f58-a2df-9d415dcff4aa
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 0%
+source-wordcount: '299'
+ht-degree: 2%
 
 ---
 
-# 运行状况监视器概述 {#overview-of-health-monitor}
+# 运行状况监控概述 {#overview-of-health-monitor}
 
 “运行状况监视器”提供有关AEM表单系统的关键信息，如服务器信息、内存使用情况和处理器使用情况。 还提供Work Manager统计数据，如队列中的工作项或作业数量及其状态。 您可以使用运行状况监视器执行以下任务：
 

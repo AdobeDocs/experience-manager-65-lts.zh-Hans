@@ -1,5 +1,5 @@
 ---
-title: 导入和管理应用程序
+title: 导入并管理应用程序
 description: 了解如何导入和管理应用程序。 应用程序是一个容器，用于存储实施AEM Forms解决方案所需的资源。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: e0984513-f70c-4409-885b-a2eb50757a7d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
 
-# 导入和管理应用程序{#import-and-manage-applications}
+# 导入并管理应用程序{#import-and-manage-applications}
 
 在AEM Forms中，*应用程序*&#x200B;是用于存储实施AEM Forms解决方案所需的资源的容器。 例如，表单设计、表单片段、图像、进程、DDX文件、表单指南、HTML页面和SWF文件。 在项目的开发阶段，Workbench用户可以直接从Workbench的“应用程序”视图中部署应用程序。 部署后，这些应用程序将显示在管理控制台的“应用程序管理”页面的“应用程序”选项卡上。
 

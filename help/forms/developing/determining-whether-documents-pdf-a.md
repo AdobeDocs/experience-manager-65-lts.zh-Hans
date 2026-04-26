@@ -1,5 +1,5 @@
 ---
-title: 确定文档是否符合PDF/A标准
+title: 确定文档是否符合 PDF/A 标准
 description: 使用Assembler服务通过Java API和Web服务API确定PDF文档是否符合PDF/A标准。
 contentOwner: admin
 content-type: reference
@@ -12,16 +12,16 @@ feature: Adaptive Forms,Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: bda74b30-28c4-490f-86c3-9c6fce14d79d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2118'
 ht-degree: 2%
 
 ---
 
-# 确定文档是否符合PDF/A标准 {#determining-whether-documents-are-pdf-a-compliant}
+# 确定文档是否符合 PDF/A 标准 {#determining-whether-documents-are-pdf-a-compliant}
 
-您可以使用Assembler服务确定PDF文档是否符合PDF/A标准。 PDF/A文档是一种用于长期保存文档内容的存档格式。 字体将嵌入到文档中，并且文件是未压缩的。因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/A 文档不包含音频和视频内容。
+您可以使用Assembler服务确定PDF文档是否符合PDF/A标准。 PDF/A文档是一种用于长期保存文档内容的存档格式。 字体将嵌入到文档中，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。 此外，PDF/A 文档不包含音频和视频内容。
 
 PDF/A-1规范包含两个一致性级别，即A和B。两个级别之间的主要区别在于逻辑结构（辅助功能）支持，合规性级别B不需要该支持。无论合规性级别如何，PDF/A-1都指示所有字体嵌入到生成的PDF/A文档中。 目前，验证（和转换）中仅支持PDF/A-1b。
 
@@ -73,8 +73,8 @@ Assembler服务返回指定输入PDF文档在包含`PDFAConformance`元素的XML
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果AEM Forms部署在除JBoss之外的受支持J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为JAR文件，这些文件特定于部署AEM Forms的J2EE应用程序服务器。 有关所有AEM Forms JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -118,7 +118,7 @@ Assembler服务返回的XML文档指定输入的PDF文档是否与PDF/A兼容。
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API确定文档是否符合PDF/A标准 {#determine-whether-a-document-is-pdf-a-compliant-using-the-java-api}
 
@@ -173,7 +173,7 @@ Assembler服务返回的XML文档指定输入的PDF文档是否与PDF/A兼容。
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API确定文档是否符合PDF/A](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)(SOAP模式)
+[快速入门（SOAP模式）：使用Java API确定文档是否符合PDF/A](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api)（SOAP模式）
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

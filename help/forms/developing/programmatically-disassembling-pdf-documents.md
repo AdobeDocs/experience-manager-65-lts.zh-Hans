@@ -1,5 +1,5 @@
 ---
-title: 以编程方式拆分PDF文档
+title: 以编程方式拆分 PDF 文档
 description: 使用Assembler服务通过Java API和Web服务API将单个PDF文档拆分为多个PDF文档。
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -11,14 +11,14 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: 04700c18-c5fe-45c3-b9ad-16d4b427d65e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 0%
+source-wordcount: '1779'
+ht-degree: 1%
 
 ---
 
-# 以编程方式拆分PDF文档 {#programmatically-disassembling-pdf-documents}
+# 以编程方式拆分 PDF 文档 {#programmatically-disassembling-pdf-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 (请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。)
+>在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 （请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -78,8 +78,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果将AEM Forms部署在受支持的J2EE应用程序服务器（不是JBoss）上，则必须将adobe-utilities.jar和jbossall-client.jar替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
 
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API拆分PDF文档 {#disassemble-a-pdf-document-using-the-java-api}
 
@@ -168,15 +168,15 @@ ht-degree: 0%
 
 **另请参阅**
 
-[以编程方式拆分PDF文档](#programmatically-disassembling-pdf-documents)
+[以编程方式拆分 PDF 文档](#programmatically-disassembling-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API反汇编PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API反汇编PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-disassembling-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服务API拆分PDF文档 {#disassemble-a-pdf-document-using-the-web-service-api}
+## 使用 Web 服务 API 拆分 PDF 文档 {#disassemble-a-pdf-document-using-the-web-service-api}
 
 使用Assembler服务API（Web服务）拆分PDF文档：
 
@@ -247,6 +247,6 @@ ht-degree: 0%
 
 **另请参阅**
 
-[以编程方式拆分PDF文档](#programmatically-disassembling-pdf-documents)
+[以编程方式拆分 PDF 文档](#programmatically-disassembling-pdf-documents)
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

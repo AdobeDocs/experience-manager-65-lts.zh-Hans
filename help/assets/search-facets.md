@@ -7,18 +7,18 @@ feature: Search
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 2645d78b-e678-4ade-b707-5301cc2b3e75
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2437'
 ht-degree: 15%
 
 ---
 
-# 搜索 Facet {#search-facets}
+# 搜索分面 {#search-facets}
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 [!DNL Adobe Experience Manager Assets]的企业范围部署具有存储许多资产的容量。 有时，如果只使用[!DNL Experience Manager]的通用搜索功能，则查找正确的资产可能会很费时费力。
@@ -55,7 +55,7 @@ ht-degree: 15%
 
 1. 在[!UICONTROL 设置]选项卡中，输入谓词的字段标签、占位符文本和描述。 为要与谓词关联的元数据属性指定有效名称。 [!UICONTROL 设置]选项卡中的标题标签标识所选谓词的类型。
 
-1. 在[!UICONTROL 属性名称]字段中，为要与谓词关联的元数据属性指定有效名称。该名称是执行搜索时所依据的名称。例如，输入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
+1. 在[!UICONTROL 属性名称]字段中，为要与谓词关联的元数据属性指定有效名称。 该名称是执行搜索时所依据的名称。 例如，输入 `jcr:content/metadata/dc:description` 或 `./jcr:content/metadata/dc:description`。
 
    也可以从选择对话框中选择现有节点。
 
@@ -85,13 +85,13 @@ ht-degree: 15%
 
 选择某个选项后，将根据选项节点及其子节点（如果有）的`value`属性执行搜索。 遍历选项节点下的整个树，并使用OR操作组合每个子节点的`value`属性以形成搜索查询。
 
-例如，如果您为文件类型选择“图像”，则资产的搜索查询将通过使用 OR 操作组合 `value` 属性来构建。**&#x200B;**&#x200B;**&#x200B;**&#x200B;**`jcr:content/metadata/dc:format`
+例如，如果您为文件类型选择“图像”，则资产的搜索查询将通过使用 OR 操作组合 `value` 属性来构建。 例如，图像搜索查询是通过将 *image/jpeg*、*image/gif*、*image/png*、*image/pjpeg* 和 *image/tiff* 这些通过属性`jcr:content/metadata/dc:format`匹配到的结果进行 OR 运算组合而生成的。
 
 ![文件类型的Value属性（如CRXDE中所示）用于搜索查询工作](assets/filetype-value-property.png)
 
 文件类型的Value属性（如CRXDE中所示）用于搜索查询运行
 
-您不必为CRXDE存储库中的选项手动创建节点结构，而是可以通过指定相应的键值对在JSON文件中定义选项。 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中指定 JSON 文件的路径。例如，您可以定义键值对、`image/bmp`、`image/gif`、`image/jpeg` 和 `image/png`，并指定它们的值，如以下示例 JSON 文件中所示。在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中，可以指定此文件的CRXDE路径。
+您不必为CRXDE存储库中的选项手动创建节点结构，而是可以通过指定相应的键值对在JSON文件中定义选项。 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中指定 JSON 文件的路径。 例如，您可以定义键值对、`image/bmp`、`image/gif`、`image/jpeg` 和 `image/png`，并指定它们的值，如以下示例 JSON 文件中所示。 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中，可以指定此文件的CRXDE路径。
 
 ```json
 {
@@ -113,14 +113,14 @@ ht-degree: 15%
 
 1. 单击[!DNL Experience Manager]徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索Forms]**。
 1. 从&#x200B;**[!UICONTROL 搜索Forms]**&#x200B;页面中，选择&#x200B;**[!UICONTROL Assets管理员搜索边栏]**，然后单击&#x200B;**[!UICONTROL 编辑]**。
-1. 在“编 **[!UICONTROL 辑搜索表单]** ”页中，将“选 **[!UICONTROL 项谓词]** ”从“选 **&#x200B;**&#x200B;择谓词”选项卡拖至主窗格。
-1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如&#x200B;**[!UICONTROL 文件类型]**。 指定在属性字段中执行搜索时所依据的属性，例如`jcr:content/metadata/dc:format.`
+1. 在“编 **[!UICONTROL 辑搜索表单]** ”页中，将“选 **[!UICONTROL 项谓词]** ”从“选 **** 择谓词”选项卡拖至主窗格。
+1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入属性的标签和名称。 例如，要根据资产的格式搜索资产，请为标签指定用户友好名称，例如&#x200B;**[!UICONTROL 文件类型]**。 指定在属性字段中执行搜索时所依据的属性，例如`jcr:content/metadata/dc:format.`
 1. 执行下列操作之一：
 
    * 在&#x200B;**[!UICONTROL 属性名称]**&#x200B;字段中，提及JSON文件的路径，在该路径中为选项定义节点并指定相应的键值对。
    * 单击“选项”字段旁边的`+`符号，为要在“筛选器”面板中提供的选项指定显示文本和值。 要添加其他选项，请单击`+`符号并重复该步骤。
 
-1. 确保取消选中&#x200B;**[!UICONTROL 单选]**，以允许用户一次为文件类型选择多个选项（例如，“图像”、“文档”、“多媒体”和“存档”）。如果选中&#x200B;**[!UICONTROL 单选]**，则用户一次只能为文件类型选择一个选项。
+1. 确保取消选中&#x200B;**[!UICONTROL 单选]**，以允许用户一次为文件类型选择多个选项（例如，“图像”、“文档”、“多媒体”和“存档”）。 如果选中&#x200B;**[!UICONTROL 单选]**，则用户一次只能为文件类型选择一个选项。
 
    ![选项谓词中的可用字段](assets/options_predicate.png)
 
@@ -137,7 +137,7 @@ ht-degree: 15%
 1. 在“搜索Forms”页面上，选择&#x200B;**[!UICONTROL Assets管理员搜索边栏]**，然后单击&#x200B;**[!UICONTROL 编辑]**![编辑图标](assets/do-not-localize/aemassets_edit.png)。
 1. 在“编辑搜索表单”页中，将&#x200B;**[!UICONTROL 多值属性谓词]**&#x200B;从&#x200B;**[!UICONTROL 选择谓词]**&#x200B;选项卡拖到主窗格。
 1. 在&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中，输入谓词的标签和占位符文本。 指定在属性字段中执行搜索时所依据的属性名称，例如`jcr:content/metadata/dc:value`。 也可以使用“选择”对话框选择节点。
-1. 确保选中&#x200B;**[!UICONTROL 分隔符支持]**。在&#x200B;**[!UICONTROL 输入分隔符]**&#x200B;字段中，指定要用于分隔各个值的分隔符。默认情况下，指定逗号为分隔符。您可以指定其他分隔符。
+1. 确保选中&#x200B;**[!UICONTROL 分隔符支持]**。 在&#x200B;**[!UICONTROL 输入分隔符]**&#x200B;字段中，指定要用于分隔各个值的分隔符。 默认情况下，指定逗号为分隔符。 您可以指定其他分隔符。
 1. 在&#x200B;**描述**&#x200B;字段中输入可选描述，然后单击&#x200B;**[!UICONTROL 完成]**。
 1. 导航到[!DNL Assets]用户界面中的“筛选器”面板。 **[!UICONTROL 多值属性]**&#x200B;谓词已添加到面板。
 1. 在用分隔符分隔的多值字段中指定多个值并执行搜索。 谓词会获取与指定值完全匹配的文本。
@@ -149,7 +149,7 @@ ht-degree: 15%
 1. 单击[!DNL Experience Manager]徽标，然后转到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL 搜索Forms]**。
 1. 从“搜索Forms”页面中，选择&#x200B;**[!UICONTROL Assets管理员搜索边栏]**，然后单击&#x200B;**[!UICONTROL 编辑]**![编辑图标](assets/do-not-localize/aemassets_edit.png)。
 1. 在“编辑搜索表单”页中，将&#x200B;**[!UICONTROL 标记谓词]**&#x200B;从“选择谓词”选项卡拖到主窗格。
-1. 在设置选项卡中，输入谓词的占位符文本。 指定在属性字段中执行搜索时所依据的属性名称，例如&#x200B;*jcr：content/metadata/cq：tags*。 或者，也可以从选择对话框中选择CRXDE中的节点。
+1. 在设置选项卡中，输入谓词的占位符文本。 指定在属性字段中执行搜索时所依据的属性名称，例如&#x200B;*jcr:content/metadata/cq:tags*。 或者，也可以从选择对话框中选择CRXDE中的节点。
 1. 配置此谓词的根标记路径属性，以填充“标记”列表中的各种标记。
 1. 选择&#x200B;**[!UICONTROL 显示“匹配所有标记”选项]**，以搜索包含您指定的所有标记的资产。
 
@@ -165,7 +165,7 @@ ht-degree: 15%
 
 | 谓词名称 | 描述 | 属性 |
 |---|---|---|
-| [!UICONTROL 全文] | 搜索谓词，对整个资产节点执行全文搜索。 该变量使用jcr：contains运算符进行映射。 如果要在资产节点的特定部分执行全文搜索，则可以指定相对路径。 | <ul><li>标签</li><li>占位符</li><li>属性名称</li><li>描述</li></ul> |
+| [!UICONTROL 全文] | 搜索谓词，对整个资产节点执行全文搜索。 它使用jcr:contains运算符进行映射。 如果要在资产节点的特定部分执行全文搜索，则可以指定相对路径。 | <ul><li>标签</li><li>占位符</li><li>属性名称</li><li>描述</li></ul> |
 | [!UICONTROL 路径浏览器] | 搜索谓词，以按预配置的根路径搜索文件夹和子文件夹中的资产 | <ul><li>占位符</li><li>根路径</li><li>描述</li></ul> |
 | [!UICONTROL 路径] | 使用它按位置筛选结果。 您可以将不同的路径指定为选项。 | <ul><li>标签</li><li>路径</li><li>描述</li></ul> |
 | [!UICONTROL 发布状态] | 搜索谓词，以基于资产的发布状态搜索资产 | <ul><li>标签</li><li>属性名称</li><li>描述</li></ul> |

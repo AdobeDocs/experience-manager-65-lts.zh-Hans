@@ -1,5 +1,5 @@
 ---
-title: AEM Forms常规设置
+title: AEM Forms 常规设置
 description: 了解如何在管理控制台中配置有助于提高系统性能的“核心配置”页面设置。
 contentOwner: admin
 content-type: reference
@@ -11,21 +11,21 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 54e7132d-3009-4a83-9f03-55bb2c41ae90
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 0%
+source-wordcount: '1801'
+ht-degree: 2%
 
 ---
 
-# AEM Forms常规设置 {#general-aem-forms-settings}
+# AEM Forms 常规设置 {#general-aem-forms-settings}
 
 管理控制台中的“核心配置”页面提供了有助于提高系统性能的设置。 配置或更新这些设置后，重新启动应用程序服务器。
 
 >[!NOTE]
 >
 > * 确保用户具有访问管理员控制台的管理员权限。
-> * 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> * 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 有关启用安全备份模式的信息，请参阅[启用和禁用安全备份模式](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode)。
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 **全局文档存储根目录** *ndash；全局文档存储(GDS)根目录用于以下目的：
 
-* 存储长期文档。 长效文档没有过期时间，并且会一直保留，直到被删除(例如，工作流流程中使用的PDF文件)。 长寿命文档是整个系统状态的重要组成部分。 如果其中的部分或全部文档丢失或损坏，Forms服务器可能会变得不稳定。 因此，将此目录存储在RAID设备上非常重要。
+* 存储长期文档。 长效文档没有过期时间，并且会一直保留，直到被删除（例如，工作流流程中使用的PDF文件）。 长寿命文档是整个系统状态的重要组成部分。 如果其中的部分或全部文档丢失或损坏，Forms服务器可能会变得不稳定。 因此，将此目录存储在RAID设备上非常重要。
 * 存储处理过程中所需的临时文档。
 
 >[!NOTE]
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 **启用FIPS** *ndash；选择此选项可启用FIPS模式。 联邦信息处理标准(FIPS) 140-2是美国政府定义的加密标准。 在FIPS模式下运行时，AEM Forms会使用RSA BSAFE Crypto-C 2.1加密模块限制对FIPS 140-2认可算法的数据保护。
 
-FIPS模式不支持Adobe Acrobat® 7.0之前的版本中使用的加密算法。如果启用了FIPS模式，并且您使用加密服务使用兼容性级别设置为Acrobat 5的密码来加密PDF，则加密尝试将失败，并出现错误。
+FIPS模式不支持® 7.0之前的版本中使用的加密算法。 如果启用了FIPS模式，并且您使用加密服务使用兼容性级别设置为Acrobat 5的密码来加密PDF，则加密尝试将失败，并出现错误。
 
 通常，启用FIPS时，Assembler服务不会对任何文档应用密码加密。 如果尝试此操作，则会引发FIPSModeException，指示“在FIPS模式下不允许密码加密”。 此外，当基础文档进行了密码加密时，FIPS模式中不支持文档描述XML (DDX) PDFsFromBookmarks元素。
 

@@ -12,9 +12,9 @@ feature: Adaptive Forms, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 071a6ccb-8204-4cbc-a39b-143da52c16f7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1870'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
 * 用户访问名为StartLoan.html的HTML页面，该页面用作Web应用程序的起始页面。 此页调用名为`GetLoanForm`的Java Servlet。
 * `GetLoanForm` servlet渲染贷款表单。 此表单包含脚本、交互式字段、计算按钮和提交按钮。
 * 用户在表单的字段中输入值并单击计算按钮。 该表单将发送到执行脚本的`CalculateData` Java Servlet。 该表单将发送回用户，并在表单中显示计算结果。
-* 用户继续输入和计算值，直到显示满意的结果。 满意后，用户单击“提交”按钮处理表单。 该表单将发送到另一个名为`ProcessForm`的Java Servlet，负责检索提交的数据。 (请参阅[处理提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。)
+* 用户继续输入和计算值，直到显示满意的结果。 满意后，用户单击“提交”按钮处理表单。 该表单将发送到另一个名为`ProcessForm`的Java Servlet，负责检索提交的数据。 （请参阅[处理提交的Forms](/help/forms/developing/rendering-forms.md#handling-submitted-forms)。）
 
 
 下图显示了应用程序的逻辑流。
@@ -78,7 +78,7 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
 
 ![cf_cf_caldata](assets/cf_cf_caldata.png)
 
-**A.**&#x200B;名为NumericField1 **B.**&#x200B;名为NumericField2 **C.**&#x200B;名为NumericField3的字段
+**A.** 名为NumericField1 **B.**&#x200B;的字段 名为NumericField2 **C.**&#x200B;的字段 名为NumericField3的字段
 
 此窗体设计中的脚本语法如下：
 
@@ -115,7 +115,7 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
 
 **检索包含计算脚本的表单**
 
-您可以使用Forms服务客户端API创建应用程序逻辑，该逻辑处理包含配置为在服务器上运行的脚本的表单。 该过程与处理提交的表单类似。 (请参阅[处理提交的Forms](/help/forms/developing/handling-submitted-forms.md)。)
+您可以使用Forms服务客户端API创建应用程序逻辑，该逻辑处理包含配置为在服务器上运行的脚本的表单。 该过程与处理提交的表单类似。 （请参阅[处理提交的Forms](/help/forms/developing/handling-submitted-forms.md)。）
 
 验证与已提交表单关联的处理状态为`1` `(Calculate)`，这意味着Forms服务正在对表单数据执行计算操作，并且必须将结果写回用户。 在这种情况下，将自动执行配置为在服务器上运行的脚本。
 

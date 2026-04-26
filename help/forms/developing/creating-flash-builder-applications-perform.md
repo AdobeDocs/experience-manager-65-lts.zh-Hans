@@ -11,24 +11,24 @@ feature: Adaptive Forms,Document Security
 hide: true
 hidefromtoc: true
 exl-id: 6c384e25-f53f-44aa-9043-b9f9f659f987
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1794'
 ht-degree: 0%
 
 ---
 
-# 创建使用HTTP令牌执行SSO身份验证的Flash Builder应用程序 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
+# 创建使用 HTTP 令牌执行 SSO 身份验证的 Flash Builder 应用程序 {#creating-flash-builder-applicationsthat-perform-sso-authentication-using-http-tokens}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
-您可以使用Flash Builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 例如，假设您使用Flash Builder创建了一个基于Web的应用程序。 接下来，假定应用程序包含不同的视图，其中每个视图调用不同的AEM Forms操作。 您可以创建一个登录页面，让用户只进行一次身份验证，而不是为每个Forms操作验证用户。 一旦验证，用户能够调用多个操作而无需再次验证。 例如，如果用户已登录Workspace(或其他Forms应用程序)，则无需再次进行身份验证。
+您可以使用Flash Builder创建客户端应用程序，该应用程序使用HTTP令牌执行单点登录(SSO)身份验证。 例如，假设您使用Flash Builder创建了一个基于Web的应用程序。 接下来，假定应用程序包含不同的视图，其中每个视图调用不同的AEM Forms操作。 您可以创建一个登录页面，让用户只进行一次身份验证，而不是为每个Forms操作验证用户。 一旦验证，用户能够调用多个操作而无需再次验证。 例如，如果用户已登录Workspace（或其他Forms应用程序），则无需再次进行身份验证。
 
 虽然客户端应用程序包含执行SSO身份验证所需的应用程序逻辑，但AEM forms user Management会执行实际的用户身份验证。 要使用HTTP令牌对用户进行身份验证，客户端应用程序将调用Authentication Manager服务的`authenticateWithHTTPToken`操作。 用户管理能够使用HTTP令牌对用户进行身份验证。 对于对AEM Forms的后续远程处理或Web服务调用，不必为身份验证传递凭据。
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉如何使用远程处理来调用AEM Forms。 (请参阅[使用AEM Forms Remoting调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。)
+>在阅读本节之前，建议您熟悉如何使用远程处理来调用AEM Forms。 （请参阅[使用AEM Forms Remoting调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)。）
 
 在使用SSO对用户进行身份验证后，将调用名为`MyApplication/EncryptDocument`的以下AEM Forms短期进程。 （有关此进程的信息，例如其输入和输出值，请参阅[短期进程示例](/help/forms/developing/aem-forms-processes.md)。）
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 **登录进程**
 
-当客户端应用程序启动时，您可以向`/um/login`安全servlet发出POST请求。 例如，`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`。当请求到达User Manager安全servlet时，它会执行以下步骤：
+当客户端应用程序启动时，您可以向`/um/login`安全servlet发出POST请求。 例如，`https://<your_serverhost>:<your_port>/um/login?um_no_redirect=true`。 当请求到达User Manager安全servlet时，它会执行以下步骤：
 
 1. 它查找名为`lcAuthToken`的Cookie。 如果用户已登录到另一个Forms应用程序，则此Cookie存在。 如果找到Cookie，则会验证其内容。
 1. 如果启用了基于标头的SSO，则servlet会查找已配置的标头以确定用户的身份。
@@ -130,7 +130,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->请注意，有两个名为um和views的程序包。 创建客户端应用程序时，请确保将文件放置到其正确的包中。 此外，请确保将adobe-remoting-provider.swc文件添加到项目的类路径中。 (请参阅[包含AEM Forms Flex库文件](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)。)
+>请注意，有两个名为um和views的程序包。 创建客户端应用程序时，请确保将文件放置到其正确的包中。 此外，请确保将adobe-remoting-provider.swc文件添加到项目的类路径中。 （请参阅[包含AEM Forms Flex库文件](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file)。）
 
 ### 创建SSOStandalone.mxml文件 {#creating-the-ssostandalone-mxml-file}
 

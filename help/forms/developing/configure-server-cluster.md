@@ -7,14 +7,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: f7279bba-b889-4431-9cfd-79e140d46e05
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '3943'
+source-wordcount: '3986'
 ht-degree: 0%
 
 ---
 
-# 在JEE服务器群集中配置AEM Forms并对其进行故障排除 {#configuring-troubleshooting-aem-forms-jee-server-cluster}
+# 配置和排查 JEE 上的 AEM Forms 服务器集群 {#configuring-troubleshooting-aem-forms-jee-server-cluster}
 
 ## 必备知识 {#prerequisites}
 
@@ -226,7 +226,7 @@ GDS访问和共享的验证最好通过以交互用户身份访问每个节点�
 
 引用：
 
-* 通过JBoss®群集的[高可用性企业服务](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
+* [通过JBoss®群集提供高可用性企业服务](https://docs.jboss.org/jbossas/jboss4guide/r4/html/cluster.chapt.html)
 
 * [Oracle WebLogic Server-Using群集](https://docs.oracle.com/cd/E12840_01/wls/docs103/pdf/cluster.pdf)
 
@@ -297,7 +297,7 @@ Caused by: java.sql.SQLException: ORA-00060: deadlock detected while waiting for
 
 为了使群集平稳运行，所有群集节点上的时钟必须密切同步。 手工操作是不够的，必须由定期运行的某种形式的时间同步服务来完成。 所有节点上的时钟必须彼此位于一秒内。 最佳实践要求不仅同步群集节点，还要同步负载平衡器、数据库服务器、 GDS NAS服务器以及任何其他组件。
 
-Windows时间同步倾向于到域控制器。 UNIX®系统可以使用NTP同步到不同的时间源。 如果可能，最好是所有系统(JEE节点上的AEM Forms和其他系统组件)都同步到同一源。
+Windows时间同步倾向于到域控制器。 UNIX®系统可以使用NTP同步到不同的时间源。 如果可能，最好是所有系统（JEE节点上的AEM Forms和其他系统组件）都同步到同一源。
 
 即使是在最暂时的测试环境中，手动设置节点上的时钟也不够。 手动设置时钟无法提供足够的精确同步，两个节点上的时钟不可避免地会相互漂移，甚至在一天的时间段内也是如此。 主动的时间同步机制是保证机群可靠运行的必要条件。
 

@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 8bb1dd68-51ec-4458-9ff8-bfe6fb0b67fd
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
+>® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 ## 启用增量目录同步 {#enable-delta-directory-synchronization}
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击设置>用户管理>配置>配置高级系统属性。
 1. 在Synch Finisher Cron表达式下，输入一个cron表达式，该表达式表示用户管理重试失败的同步的时间间隔。 cron表达式的使用基于Quartz开源作业调度系统1.4.0版。
 
-   默认值为0 0/13 &amp;amp；ast； ？ &amp;amp；ast； ，这意味着每13分钟进行一次检查。
+   缺省值为0 0/13 &amp;ast； ？ &amp;ast； ，这意味着每13分钟进行一次检查。
 
 ## 手动同步目录 {#manually-synchronize-directories}
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 1. 计划同步：
 
    * 要启用每日自动同步，请在Scheduler下，选择Occurs。 从列表中选择“每日”，并在相应的框中以24小时制键入时间。 保存设置时，此值将转换为Cron表达式，该表达式显示在Cron表达式框中。
-   * 要安排在一周或一个月中的某一天或某一特定月份进行同步，请选择Cron表达式，然后在框中键入相应的表达式。 例如，在每月最后一个星期五凌晨1:30同步。
+   * 要安排在一周或一个月中的某一天或某一特定月份进行同步，请选择Cron表达式，然后在框中键入相应的表达式。 例如，在每月最后一个星期五的凌晨1:30进行同步。
 
 cron表达式的使用基于Quartz开源作业调度系统1.4.0版。
 

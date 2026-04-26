@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Server数据库：微调配置
+title: Microsoft SQL Server 数据库：优化配置
 description: 了解如何微调Microsoft SQL Server数据库的配置。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: dab3ad11-d64a-4a13-a015-379a66e7f29d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '299'
+ht-degree: 5%
 
 ---
 
-# Microsoft SQL Server数据库：微调配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
+# Microsoft SQL Server 数据库：优化配置 {#microsoft-sql-server-database-fine-tuning-the-configuration}
 
 在使用Microsoft SQL Server时，您应该更改默认配置设置。 在Oracle Enterprise Manager中右键单击本地服务器以访问属性对话框。
 

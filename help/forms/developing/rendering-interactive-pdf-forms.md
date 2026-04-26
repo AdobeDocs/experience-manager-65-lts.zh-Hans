@@ -12,9 +12,9 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: de61c579-50ed-423b-adca-60329f3f0b89
-source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2471'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服务客户端API向客户端Web浏览器呈现贷款表单。 (请参阅<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API渲染交互式PDF表单</a>。)</p></td>
+   <td><p><code>GetLoanForm</code> Java Servlet使用Forms服务客户端API向客户端Web浏览器呈现贷款表单。 （请参阅<a href="#render-an-interactive-pdf-form-using-the-java-api">使用Java API渲染交互式PDF表单</a>。）</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
@@ -59,11 +59,11 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p><code>HandleData</code> Java Servlet使用Forms服务客户端API处理表单提交并检索表单数据。 然后，将数据存储在企业数据库中。 (请参阅<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">处理提交的Forms</a>。)</p></td>
+   <td><p><code>HandleData</code> Java Servlet使用Forms服务客户端API处理表单提交并检索表单数据。 然后，将数据存储在企业数据库中。 （请参阅<a href="/help/forms/developing/handling-submitted-forms.md#handling-submitted-forms">处理提交的Forms</a>。）</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
-   <td><p>确认表单将呈现回Web浏览器。 诸如用户名字和姓氏的数据在呈现之前将与表单合并。 (请参阅<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可流动布局预填充Forms</a>。)</p></td>
+   <td><p>确认表单将呈现回Web浏览器。 诸如用户名字和姓氏的数据在呈现之前将与表单合并。 （请参阅<a href="/help/forms/developing/prepopulating-forms-flowable-layouts.md">使用可流动布局预填充Forms</a>。）</p></td>
   </tr>
  </tbody>
 </table>
@@ -80,7 +80,7 @@ Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF forms
 
 ![ri_ri_confirm](assets/ri_ri_confirm.png)
 
-`HandleData` Java Servlet会使用用户的名字、姓氏和金额预填充此表单。 预填充表单后，该表单会被发送到客户端Web浏览器。 (请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md))
+`HandleData` Java Servlet会使用用户的名字、姓氏和金额预填充此表单。 预填充表单后，该表单会被发送到客户端Web浏览器。 （请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)）
 
 **Java Servlet**
 
@@ -158,11 +158,11 @@ Forms应用程序中资源的路径为：
 
 >[!NOTE]
 >
->您还可以将`com.adobe.idp.Document`实例传递到Forms服务，而不是指定URL值来引用XDP文件。 `com.adobe.idp.Document`实例包含表单设计。 (请参阅[将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)。)
+>您还可以将`com.adobe.idp.Document`实例传递到Forms服务，而不是指定URL值来引用XDP文件。 `com.adobe.idp.Document`实例包含表单设计。 （请参阅[将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)。）
 
 **将文件附加到表单**
 
-您可以将文件附加到表单。 渲染带有文件附件的PDF表单时，用户可以使用文件附件窗格在Acrobat中检索文件附件。 您可以将不同的文件类型附加到表单（如文本文件）或二进制文件(如JPG文件)。
+您可以将文件附加到表单。 渲染带有文件附件的PDF表单时，用户可以使用文件附件窗格在Acrobat中检索文件附件。 您可以将不同的文件类型附加到表单（如文本文件）或二进制文件（如JPG文件）。
 
 >[!NOTE]
 >
@@ -227,11 +227,11 @@ Forms应用程序中资源的路径为：
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过调用`com.adobe.idp.Document`对象的`FormsResult`方法创建`getOutputContent`对象。
-   * 通过调用其`com.adobe.idp.Document`方法获取`getContentType`对象的内容类型。
-   * 通过调用其`javax.servlet.http.HttpServletResponse`方法并传递`setContentType`对象的内容类型来设置`com.adobe.idp.Document`对象的内容类型。
-   * 通过调用`javax.servlet.ServletOutputStream`对象的`javax.servlet.http.HttpServletResponse`方法，创建用于将表单数据流写入客户端Web浏览器的`getOutputStream`对象。
-   * 通过调用`java.io.InputStream`对象的`com.adobe.idp.Document`方法创建`getInputStream`对象。
+   * 通过调用`FormsResult`对象的`getOutputContent`方法创建`com.adobe.idp.Document`对象。
+   * 通过调用其`getContentType`方法获取`com.adobe.idp.Document`对象的内容类型。
+   * 通过调用其`setContentType`方法并传递`com.adobe.idp.Document`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
+   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建用于将表单数据流写入客户端Web浏览器的`javax.servlet.ServletOutputStream`对象。
+   * 通过调用`com.adobe.idp.Document`对象的`getInputStream`方法创建`java.io.InputStream`对象。
    * 通过调用`InputStream`对象的`read`方法并将字节数组作为参数传递，创建字节数组并使用表单数据流填充该数组。
    * 调用`javax.servlet.ServletOutputStream`对象的`write`方法将表单数据流发送到客户端Web浏览器。 将字节数组传递给`write`方法。
 
@@ -286,11 +286,11 @@ Forms应用程序中资源的路径为：
 
 1. 将表单数据流写入客户端Web浏览器
 
-   * 通过获取`FormResult`对象的`com.adobe.idp.services.holders.FormsResultHolder`数据成员的值创建`value`对象。
-   * 通过调用`BLOB`对象的`FormsResult`方法，创建包含表单数据的`getOutputContent`对象。
-   * 通过调用其`BLOB`方法获取`getContentType`对象的内容类型。
-   * 通过调用其`javax.servlet.http.HttpServletResponse`方法并传递`setContentType`对象的内容类型来设置`BLOB`对象的内容类型。
-   * 通过调用`javax.servlet.ServletOutputStream`对象的`javax.servlet.http.HttpServletResponse`方法，创建用于将表单数据流写入客户端Web浏览器的`getOutputStream`对象。
+   * 通过获取`com.adobe.idp.services.holders.FormsResultHolder`对象的`value`数据成员的值创建`FormResult`对象。
+   * 通过调用`FormsResult`对象的`getOutputContent`方法，创建包含表单数据的`BLOB`对象。
+   * 通过调用其`getContentType`方法获取`BLOB`对象的内容类型。
+   * 通过调用其`setContentType`方法并传递`BLOB`对象的内容类型来设置`javax.servlet.http.HttpServletResponse`对象的内容类型。
+   * 通过调用`javax.servlet.http.HttpServletResponse`对象的`getOutputStream`方法，创建用于将表单数据流写入客户端Web浏览器的`javax.servlet.ServletOutputStream`对象。
    * 创建字节数组，并通过调用`BLOB`对象的`getBinaryData`方法填充该数组。 此任务将`FormsResult`对象的内容分配给字节数组。
    * 调用`javax.servlet.http.HttpServletResponse`对象的`write`方法将表单数据流发送到客户端Web浏览器。 将字节数组传递给`write`方法。
 

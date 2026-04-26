@@ -7,22 +7,24 @@ solution: Experience Manager, Experience Manager Forms
 hide: true
 hidefromtoc: true
 exl-id: f2703820-8701-4b48-be9c-12daa73d5408
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 0%
+source-wordcount: '535'
+ht-degree: 2%
 
 ---
 
 # 在JEE上启用和查看AEM Forms的交易报表 {#transaction-reports-overview}
 
-<!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
+<!--
+Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
 * Submission of a document
 * Rendition of a document
 * Conversion of a document from one file format to another 
 
-For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.-->
+For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.
+-->
 
 ## 启用交易报告 {#enable-transaction-reporting}
 
@@ -46,7 +48,7 @@ For more information on what is considered a transaction, see [Billable APIs](..
 
 ## 查看事务报告 {#view-transaction-report}
 
-启用事务报告后，有关事务计数的信息将可通过仪表板[&#128279;](#transaction-report-dashboard)的[事务报告以及日志文件](#transaction-report-logfile)的详细事务报告访问。 两者均说明如下：
+启用事务报告后，有关事务计数的信息将可通过仪表板](#transaction-report-dashboard)的[事务报告以及日志文件](#transaction-report-logfile)的详细[事务报告访问。 两者均说明如下：
 
 ### 通过仪表板的交易报告 {#transaction-report-dashboard}
 
@@ -134,7 +136,8 @@ TransactionRecord
 
 * 在&#x200B;**事务日志**&#x200B;中，当表单成功提交、渲染或转换时，每个事务的更新都会立即发生。
 
-<!-- A transaction remains in the buffer for a specified period (Flush Buffer time + Reverse replication time). By default, it takes approximately 90 seconds for the transaction count to reflect in the transaction report.
+<!--
+A transaction remains in the buffer for a specified period (Flush Buffer time + Reverse replication time). By default, it takes approximately 90 seconds for the transaction count to reflect in the transaction report.
 
 Actions like submitting a PDF Form, using Agent UI to preview an interactive communication, or using non-standard form submission methods are not accounted as transactions. AEM Forms provides an API to record such transactions. Call the API from your custom implementations to record a transaction.
 
@@ -156,9 +159,10 @@ The transaction count is reverse replicated from publish instances to author or 
 * Enable the **Show transactions from publish only** option on the author instance to view cumulative transactions from all publish instances. You can also view transaction reports on each publish instance for actual transactions on that particular publish instance only.
 * Do not use author instances to run workflows and process documents.
 * Before using transaction reporting, if you are have a toplogy with publish servers, ensure that the reverse replication is enabled for all the publish instances.
-* Transaction data is reverse-replicated from a publish instance to only corresponding author or processing instance. The author or processing instance cannot further replicate data to another instance. For example, if you have author-processing-publish topology, aggregated transaction data is replicated only to the processing instance.-->
+* Transaction data is reverse-replicated from a publish instance to only corresponding author or processing instance. The author or processing instance cannot further replicate data to another instance. For example, if you have author-processing-publish topology, aggregated transaction data is replicated only to the processing instance.
+-->
 
 ## 相关文章 {#related-articles}
 
-* [适用于AEM Forms on JEE的可计费API列表](../../forms/using/transaction-reports-billable-apis-jee.md)
+* [JEE 上的 AEM Forms 的可计费 API 列表](../../forms/using/transaction-reports-billable-apis-jee.md)
 * [为JEE上的AEM Forms的自定义组件API记录事务](/help/forms/using/record-transaction-custom-component-jee.md)

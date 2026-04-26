@@ -10,9 +10,9 @@ feature: Adaptive Forms,Reader Extensions,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: a8ec523c-b304-41ba-9980-8ba84e076c7d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Acrobat Reader DC Extensions服务提供以下快速启动功能。
 
-[快速入门(SOAP模式)：使用Java API应用使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[使用Java API的快速入门（SOAP模式）:Applying使用权限](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [从PDF文档中删除使用权限](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[快速入门(SOAP模式)：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索凭据信息](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
@@ -33,9 +33,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 >
 >《使用AEM Forms进行编程快速入门》基于Forms服务器操作系统。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入门(SOAP模式)：使用Java API应用使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## 使用Java API的快速入门（SOAP模式）:Applying使用权限 {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
-以下Java代码示例将使用权限应用于名为&#x200B;*Loan.pdf*&#x200B;的PDF文档。 启用了权限的PDF文档保存为名为&#x200B;*LoanUsageRights.pdf*&#x200B;的PDF文件。 以下使用权限应用于此PDF文档： `enabledComments`、`enabledFormFillIn`和`enabledDigitalSignatures`。 (请参阅[将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例将使用权限应用于名为&#x200B;*Loan.pdf*&#x200B;的PDF文档。 启用了权限的PDF文档保存为名为&#x200B;*LoanUsageRights.pdf*&#x200B;的PDF文件。 以下使用权限应用于此PDF文档： `enabledComments`、`enabledFormFillIn`和`enabledDigitalSignatures`。 （请参阅[将使用权限应用于PDF文档](/help/forms/developing/assigning-usage-rights.md)。）
 
 
 ```java
@@ -145,9 +145,9 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
   
 ```
 
-## 快速入门(SOAP模式)：使用Java API从PDF文档中删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API从PDF文档中删除使用权限 {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
-以下Java代码示例从名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档中删除使用权限。 (请参阅[从PDF文档中删除使用权限](/help/forms/developing/assigning-usage-rights.md)。)
+以下Java代码示例从名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档中删除使用权限。 （请参阅[从PDF文档中删除使用权限](/help/forms/developing/assigning-usage-rights.md)。）
 
 ```java
  /* 
@@ -245,7 +245,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门(SOAP模式)：使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API检索凭据信息 {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
 以下Java代码示例检索有关凭据的信息，该凭据用于对名为&#x200B;*LoanUsageRights.pdf*&#x200B;的启用权限的PDF文档应用使用权限。 （请参阅[检索凭据信息](/help/forms/developing/assigning-usage-rights.md)。）
 

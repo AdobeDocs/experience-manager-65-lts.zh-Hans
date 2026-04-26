@@ -1,5 +1,5 @@
 ---
-title: 使用PDF实用程序
+title: 使用 PDF 实用程序
 description: 使用PDF实用工具服务在PDF和XDP文件格式之间进行转换，设置和检索PDF文档属性，以及处理XMP元数据。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 06869949-4a71-4d8a-9431-b94df13985e9
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2549'
+source-wordcount: '2577'
 ht-degree: 1%
 
 ---
 
-# 使用PDF实用程序 {#working-with-pdf-utilities}
+# 使用 PDF 实用程序 {#working-with-pdf-utilities}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -29,9 +29,9 @@ PDF实用程序服务可以在PDF和XDP文件格式之间转换，设置和检�
 您可以使用PDF Utilities服务完成这些任务：
 
 * 将PDF文档转换为XDP文档。
-* 将XDP文档转换为PDF文档。 (请参阅[将XDP文档转换为PDF文档](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)。)
-* 检索PDF文档属性。 (请参阅[检索PDF文档属性](pdf-utilities.md#retrieving-pdf-document-properties)。)
-* 保存PDF文档并优化该文档，以便快速进行Web查看。 (请参阅[设置PDF文档保存模式](pdf-utilities.md#setting-pdf-document-save-modes)。)
+* 将XDP文档转换为PDF文档。 （请参阅[将XDP文档转换为PDF文档](pdf-utilities.md#converting-xdp-documents-into-pdf-documents)。）
+* 检索PDF文档属性。 （请参阅[检索PDF文档属性](pdf-utilities.md#retrieving-pdf-document-properties)。）
+* 保存PDF文档并优化该文档，以便快速进行Web查看。 （请参阅[设置PDF文档保存模式](pdf-utilities.md#setting-pdf-document-save-modes)。）
 
 >[!NOTE]
 >

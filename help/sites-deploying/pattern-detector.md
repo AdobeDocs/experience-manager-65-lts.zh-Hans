@@ -7,10 +7,10 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: c499432d-6aa4-481f-821d-bd2f9b7a911d
-source-git-commit: 90f1b2ca07bec5a3be6c312a5f048abaa088df16
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 1%
+source-wordcount: '532'
+ht-degree: 4%
 
 ---
 
@@ -44,13 +44,13 @@ ht-degree: 1%
 
 * **通过Felix清单控制台：**
 
-1. 通过浏览到&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;转到AEM Web Console
+1. 通过浏览到&#x200B;*https://serveraddress:serverport/system/console/configMgr*&#x200B;转到AEM Web控制台
 1. 选择&#x200B;**状态 — 模式检测器**，如下图所示：
 
    ![屏幕快照–2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **通过基于反应文本或常规JSON接口**
-* **通过反应式JSON行接口，**&#x200B;可在每行中生成单独的JSON文档。
+* **通过反应式JSON行接口，**可在每行中生成单独的JSON文档。
 
 这两种方法详述如下：
 
@@ -111,7 +111,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
     "code": "ECU",
     "type": "extraneous.content.usage",
     "detective": "ContentAccessDetector",
-    "moreInfo": "https://www.adobe.com/go/aem6_ECU_cn"
+    "moreInfo": "https://www.adobe.com/go/aem6_ECU"
   },
   "item": {
     "id": "a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f",
@@ -215,7 +215,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 * Sling资源类型和超级类型（具有搜索路径内容叠加）的使用情况
 * Oak索引的定义（兼容性）
 * VLT包（过度使用）
-* rep：用户节点兼容性（在OAuth配置的上下文中）
+* rep:User节点兼容性（在OAuth配置的上下文中）
 
 >[!NOTE]
 >

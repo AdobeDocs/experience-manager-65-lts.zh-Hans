@@ -1,5 +1,5 @@
 ---
-title: 指定XCI配置选项
+title: 指定 XCI 配置选项
 description: 了解如何指定XCI配置选项 您可以为自适应表单指定自定义XCI文件值，以便在表单渲染时使用该值。
 contentOwner: admin
 content-type: reference
@@ -11,20 +11,20 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 198016d7-0fb5-47e6-91ed-f2f0c98b2224
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
-# 指定XCI配置选项 {#specifying-xci-configuration-options}
+# 指定 XCI 配置选项 {#specifying-xci-configuration-options}
 
 >[!NOTE]
 > 
 > 确保用户具有访问管理员控制台的管理员权限。
 
-Forms允许您指定可用于呈现的自定义XCI文件。 (请参阅[为Forms配置位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。)默认情况下，Forms会覆盖XCI文件中指定的某些选项，包括：
+Forms允许您指定可用于呈现的自定义XCI文件。 （请参阅[为Forms配置位置](/help/forms/using/admin-help/configuring-locations-forms.md#configuring-locations-for-forms)。） 默认情况下，Forms会覆盖XCI文件中指定的某些选项，其中包括以下选项：
 
 * `config/present/xdp/packets`
 * `config/present/pdf/creator`

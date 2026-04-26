@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 83dbd00e-28ad-4a2e-ac22-3658fb6f639b
-source-git-commit: 7a1bbcb84a0be301bba4473f30ca4a8d9ea3f906
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 0%
+source-wordcount: '1152'
+ht-degree: 2%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 具有Adobe Experience Manager Forms Managed Services或内部部署企业版许可证的Adobe (AEM Forms)客户有权使用Acrobat Reader DC扩展服务。 该服务通过扩展具有其他使用权限的PDF的功能，使企业能够轻松共享交互式Acrobat Reader文档。 该服务向PDF文档添加使用权限，并激活在使用Adobe Acrobat Reader打开PDF文档时不可用的功能，例如向文档添加注释、填写表单和保存文档。 第三方用户无需其他软件或插件即可使用启用了权限的文档。 已添加使用权限的PDF文档称为启用权限的文档。 在Acrobat Reader中打开启用了权限的PDF文档的用户可以执行为该文档启用的操作。
 
-Adobe使用公钥基础设施(PKI)颁发数字证书，用于许可和功能启用。 Adobe已在证书颁发机构&#x200B;**Adobe根CA**&#x200B;下颁发证书，该证书将于2023年1月7日过期。 证书的过期不会影响使用基于&#x200B;**Adobe根CA**&#x200B;的证书（旧证书）颁发的生产证书扩展的PDF文档。 在2023年1月7日之前使用旧证书扩展的所有PDFReader文档（包括您的客户下载的文档），将继续使用应用于它们的所有使用权限，并且不需要任何更新。
+Adobe使用公钥基础设施(PKI)颁发数字证书，用于许可和功能启用。 Adobe已在证书颁发机构&#x200B;**Adobe根CA**&#x200B;下颁发证书，该证书将于2023年1月7日过期。 证书的过期不会影响使用基于&#x200B;**Adobe根CA**&#x200B;的证书（旧证书）颁发的生产证书扩展的PDF文档。 在2023年1月7日之前使用旧证书扩展的所有PDF文档（包括您的客户下载的文档），将继续使用应用于它们的所有使用权限，并且不需要任何更新。
 
-新证书颁发机构&#x200B;**Adobe根CA G2**&#x200B;和基于新证书颁发机构的证书现已可用。 在2023年1月7日或之前，开始使用新证书(基于&#x200B;**Adobe根CA G2**&#x200B;的证书)来Reader扩展您的新PDF文档。  您可以[从Adobe授权网站](https://licensing.adobe.com/)或Adobe支持部门获取新证书。
+新证书颁发机构&#x200B;**Adobe根CA G2**&#x200B;和基于新证书颁发机构的证书现已可用。 在2023年1月7日或之前，开始使用新证书（基于&#x200B;**Adobe根CA G2**&#x200B;的证书）来Reader扩展您的新PDF文档。  您可以[从Adobe授权网站](https://licensing.adobe.com/)或Adobe支持部门获取新证书。
 
 ## 常见问题解答
 
@@ -34,7 +34,7 @@ A.根据对情况的重新评估，所有使用旧“PDF根CA”在2023年1月7�
 
 **Q.如果我有其他问题，我应该联系谁？**
 
-A.您可以联系[Adobe支持](https://experienceleague.adobe.com/zh-hans?support-solution=Experience+Manager#support)或提出支持票证。
+A.您可以联系[Adobe支持](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support)或提出支持票证。
 
 **Q.如果在2023年1月7日之前不更新证书，会发生什么情况？**
 
@@ -42,11 +42,11 @@ A. 2023年1月7日之前使用旧“PDF根CA”颁发的生产证书扩展的所
 
 **Q.新证书的描述是否与旧证书不同？**
 
-A.新的Acrobat Reader扩展证书说明将&#x200B;**G3-P24**&#x200B;作为程序名。 在旧证书(基于“Adobe根CA”的证书)的描述中，**P24**&#x200B;被作为程序名称提及。
+A.新的Acrobat Reader扩展证书说明将&#x200B;**G3-P24**&#x200B;作为程序名。 在旧证书（基于“Adobe根CA”的证书）的描述中，**P24**&#x200B;被作为程序名称提及。
 
 **Q.如何获取最新的证书？**
 
-A.所有授权的Forms客户（具有有效许可证）都可以从[Adobe授权网站](https://licensing.adobe.com/)下载新证书(基于“Adobe根CA G2”的证书)。 如果您在Adobe授权网站上找不到证书，请联系[Adobe支持](https://experienceleague.adobe.com/zh-hans?support-solution=Experience+Manager&lang=en#support)或提出支持票证。
+A.所有授权的Forms客户（具有有效许可证）都可以从[Adobe授权网站](https://licensing.adobe.com/)下载新证书（基于“Adobe根CA G2”的证书）。 如果您在Adobe授权网站上找不到证书，请联系[Adobe支持](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=en#support)或提出支持票证。
 
 **Q.使用从“PDF根CA”（旧证书颁发机构）颁发的证书扩展的Adobe文档在2023年1月7日之后是否继续工作？**
 
@@ -81,7 +81,7 @@ A.您可以使用[getDocumentUsageRights](/help/forms/developing/acrobat-reader-
 A.在Microsoft Windows上，要更改证书密码，请使用Microsoft管理控制台(MMC)安装证书，然后选择&#x200B;**将密钥标记为可导出**。 安装后，使用私钥导出证书，然后为PFX文件使用其他密码。
 
 
-<!-- 
+<!--
 ## Applying the certificates {#obtaning-and-applying-the-certificates} 
 
 You can choose one of the following paths to apply latest certificates:
@@ -190,4 +190,5 @@ Remove usage rights from existing rights-enabled PDF documents before applying u
 
 #### Apply the usage rights to PDF documents 
 
-To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html?lang=zh-Hans).  -->
+To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html).
+-->

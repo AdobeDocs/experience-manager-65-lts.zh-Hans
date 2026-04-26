@@ -1,5 +1,5 @@
 ---
-title: 版本清除
+title: 版本清理
 description: 本文介绍了用于版本清除的可用选项。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,14 +12,14 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: e3ef1435-d405-482f-9eb5-f9a64ff03322
-source-git-commit: f145e5f0d70662aa2cbe6c8c09795ba112e896ea
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 0%
+source-wordcount: '727'
+ht-degree: 1%
 
 ---
 
-# 版本清除{#version-purging}
+# 版本清理{#version-purging}
 
 在标准安装中，当您在更新内容后激活页面时，Adobe Experience Manager (AEM)会创建页面或节点的版本。
 

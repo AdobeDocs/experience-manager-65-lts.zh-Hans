@@ -1,5 +1,5 @@
 ---
-title: 进程报告简介
+title: 流程报告简介
 description: AEM Forms on JEE Process Reporting的简介和主要功能
 content-type: reference
 topic-tags: process-reporting
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 755df7e2-3603-4c0d-ad07-ec6f27de8c64
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 0%
+source-wordcount: '305'
+ht-degree: 3%
 
 ---
 
-# 进程报告简介{#introduction-to-process-reporting}
+# 流程报告简介{#introduction-to-process-reporting}
 
 ![进程报告](assets/process-reporting.png)
 

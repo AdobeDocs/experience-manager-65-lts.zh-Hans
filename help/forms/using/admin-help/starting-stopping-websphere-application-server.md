@@ -1,5 +1,5 @@
 ---
-title: 启动和停止WebSphere应用程序服务器
+title: 启动和停止 WebSphere 应用程序服务器
 description: 多个过程要求您停止或启动要部署AEM表单产品的WebSphere实例。 本文档介绍如何启动和停止WebSphere应用程序服务器。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 20cd6efb-edcf-4c87-b0f5-bdec5a0f6280
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
-# 启动和停止WebSphere应用程序服务器 {#starting-and-stopping-websphere-application-server}
+# 启动和停止 WebSphere 应用程序服务器 {#starting-and-stopping-websphere-application-server}
 
 多个过程要求您停止或启动要部署AEM表单产品的WebSphere实例。 如果不确定应用程序服务器是否已启动，可以首先查看WebSphere应用程序服务器的状态。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 1. 输入以下命令，将&#x200B;*server_name*&#x200B;替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `serverStatus.bat`*服务器名称*
-   * (Linux、UNIX) 。/ `serverStatus.sh`*服务器名称*
+   * (Linux， UNIX) ./ `serverStatus.sh`*服务器名称*
 
 ## 启动WebSphere应用程序服务器 {#start-websphere-application-server}
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 1. 输入以下命令，将&#x200B;*server_name*&#x200B;替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `startServer.bat`*服务器名称*
-   * (Linux、UNIX) 。/ `startServer.sh`*服务器名称*
+   * (Linux， UNIX) ./ `startServer.sh`*服务器名称*
 
 ## 停止WebSphere应用程序服务器 {#stop-websphere-application-server}
 
@@ -44,4 +44,4 @@ ht-degree: 0%
 1. 输入以下命令，将&#x200B;*server_name*&#x200B;替换为WebSphere应用程序服务器的名称：
 
    * (Windows) `stopServer.bat`*服务器名称*
-   * (Linux、UNIX) 。/ `stopServer.sh`*服务器名称*
+   * (Linux， UNIX) ./ `stopServer.sh`*服务器名称*

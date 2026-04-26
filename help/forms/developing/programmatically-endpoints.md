@@ -11,9 +11,9 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 6a0c7dbf-02ae-4211-a5c7-941eb353a403
-source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '10799'
+source-wordcount: '10888'
 ht-degree: 1%
 
 ---
@@ -146,7 +146,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的enable方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的enable方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -251,7 +251,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的enable方法启用终结点，并传递`Endpoint`方法返回的`createEndpoint`对象。
+   通过调用`EndpointRegistryClient`对象的enable方法启用终结点，并传递`createEndpoint`方法返回的`Endpoint`对象。
 
 **另请参阅**
 
@@ -333,10 +333,10 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * **userName**：从Watched文件夹调用目标服务时使用的用户名。 此值是必需的。 默认值为SuperAdmin。
 * **domainName**：用户的域。 此值是必需的。 默认值为DefaultDom。
 * **batchSize**：每次扫描要提取的文件或文件夹数。 使用此值可防止系统过载；一次扫描太多文件可能会导致崩溃。 默认值为 2。
-* **waitTime**：创建文件夹或文件后，在扫描文件夹或文件之前等待的时间（以毫秒为单位）。 例如，如果等待时间为36,000,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 此属性对于确保文件或文件夹完全复制到输入文件夹非常有用。 例如，如果处理的文件很大，且下载文件需要10分钟，则将等待时间设置为10&amp;amp；ast；60&amp;amp；ast；1000毫秒。 如果观察文件夹未等待10分钟，则此设置将阻止该文件夹扫描文件。 默认值为 0。
+* **waitTime**：创建文件夹或文件后，在扫描文件夹或文件之前等待的时间（以毫秒为单位）。 例如，如果等待时间为36,000,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 此属性对于确保文件或文件夹完全复制到输入文件夹非常有用。 例如，如果处理的文件很大，且下载文件需要10分钟，则将等待时间设置为10&amp;ast；60 &amp;ast；1000毫秒。 如果观察文件夹未等待10分钟，则此设置将阻止该文件夹扫描文件。 默认值为 0。
 * **excludeFilePattern**： Watched文件夹用于确定要扫描和选取的文件和文件夹的模式。 将不会扫描任何具有此模式的文件或文件夹以进行处理。 当输入是包含多个文件的文件夹时，此设置非常有用。 文件夹的内容可以复制到一个文件夹，该文件夹具有将被监视文件夹拾取的名称。 此步骤可防止观察文件夹在文件夹完全复制到输入文件夹之前拾取文件夹进行处理。 例如，如果excludeFilePattern值为`data*`，则不会选取与`data*`匹配的所有文件和文件夹。 这包括名为`data1`、`data2`等的文件和文件夹。 此外，还可以使用通配符模式对模式进行补充，以指定文件模式。 观察文件夹修改正则表达式以支持通配符模式，如`*.*`和`*.pdf`。 正则表达式不支持这些通配符模式。
-* **includeFilePattern**： watched文件夹用于确定扫描和选取哪些文件夹和文件的模式。 例如，如果此值为`*`，则选取与`input*`匹配的所有文件和文件夹。 这包括名为`input1`、`input2`等的文件和文件夹。 默认值为`*`。 此值指示所有文件和文件夹。 此外，还可以使用通配符模式对模式进行补充，以指定文件模式。 观察文件夹修改正则表达式以支持通配符模式，如`*.*`和`*.pdf`。 正则表达式不支持这些通配符模式。 此值为必填项。
-* **resultFolderName**：保存结果的文件夹。 此位置可以是绝对或相对目录路径。 如果结果未出现在此文件夹中，请检查失败文件夹。 只读文件不会得到处理，将保存在故障文件夹中。 默认值为`result/%Y/%M/%D/`。 这是watched文件夹中的结果文件夹。
+* **includeFilePattern**： watched文件夹用于确定扫描和选取哪些文件夹和文件的模式。 例如，如果此值为`*`，则选取与`input*`匹配的所有文件和文件夹。 这包括名为`input1`、`input2`等的文件和文件夹。 默认值为 `*`。 此值指示所有文件和文件夹。 此外，还可以使用通配符模式对模式进行补充，以指定文件模式。 观察文件夹修改正则表达式以支持通配符模式，如`*.*`和`*.pdf`。 正则表达式不支持这些通配符模式。 此值为必填项。
+* **resultFolderName**：保存结果的文件夹。 此位置可以是绝对或相对目录路径。 如果结果未出现在此文件夹中，请检查失败文件夹。 只读文件不会得到处理，将保存在故障文件夹中。 默认值为 `result/%Y/%M/%D/`。 这是watched文件夹中的结果文件夹。
 * **preserveFolderName**：成功扫描和提取后存储文件的位置。 此位置可以是绝对、相对或空目录路径。 默认值为 `preserve/%Y/%M/%D/`。
 * **failureFolderName**：保存失败文件的文件夹。 此位置始终相对于观察文件夹。 只读文件不会得到处理，将保存在故障文件夹中。 默认值为 `failure/%Y/%M/%D/`。
 * **preserveOnFailure**：如果无法对服务运行操作，则保留输入文件。 默认值为true。
@@ -431,7 +431,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
    * 一个字符串值，它指定输入参数的名称。 例如，EncryptDocument服务的输入参数的名称是`InDoc`。
    * 指定输入参数的数据类型的字符串值。 例如，`InDoc`输入参数的数据类型是`com.adobe.idp.Document`。
    * 指定映射类型的字符串值。 例如，您可以指定`variable`。
-   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;amp；ast；.pdf作为文件模式。
+   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;ast；.pdf作为文件模式。
 
    >[!NOTE]
    >
@@ -451,7 +451,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -568,7 +568,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * **userName**：从电子邮件调用目标服务时使用的用户名。 默认值为 `SuperAdmin`。
 * **domainName**：必需的配置值。 默认值为 `DefaultDom`。
 * **domainPattern**：指定提供程序接受的传入电子邮件的域模式。 例如，如果使用`adobe.com`，则仅处理来自adobe.com的电子邮件，而忽略来自其他域的电子邮件。
-* **filePattern**：指定提供程序接受的传入文件附件模式。 这包括具有特定文件扩展名(&amp;amp；ast；.dat、&amp;amp；ast；.xml)的文件、具有特定名称（数据）的文件以及名称和扩展名中包含复合表达式的文件(&amp;amp；ast；)。`[dD][aA]`&#39;端口&#39;)。 默认值为 `*`。
+* **filePattern**：指定提供程序接受的传入文件附件模式。 这包括具有特定文件扩展名(&amp;ast；.dat、&amp;ast；.xml)的文件、具有特定名称（数据）的文件，以及具有名称和扩展名(&amp;ast；.`[dD][aA]`&#39;port&#39;)的复合表达式的文件。 默认值为 `*`。
 * **recipientSuccessfulJob**：发送消息以指示作业成功的电子邮件地址。 默认情况下，成功的工作消息将始终发送给发件人。 如果键入`sender`，则将电子邮件结果发送给发件人。 最多支持100个收件人。 指定具有电子邮件地址的其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 在某些情况下，您可能希望触发一个进程，而不希望收到关于结果的电子邮件通知。 默认值为 `sender`。
 * **recipientFailedJob**：发送消息以指示失败的作业的电子邮件地址。 默认情况下，始终将失败的作业消息发送给发件人。 如果键入`sender`，则将电子邮件结果发送给发件人。 最多支持100个收件人。 指定具有电子邮件地址的其他收件人，每个收件人之间用逗号分隔。 要关闭此选项，请将此值留空。 默认值为 `sender`。
 * **inboxHost**：要扫描的电子邮件提供程序的收件箱主机名或IP地址。
@@ -676,7 +676,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
    * 一个字符串值，它指定输入参数的名称。 例如，EncryptDocument服务的输入参数的名称是`InDoc`。
    * 指定输入参数的数据类型的字符串值。 例如，`InDoc`输入参数的数据类型是`com.adobe.idp.Document`。
    * 指定映射类型的字符串值。 例如，您可以指定`variable`。
-   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;amp；ast；.pdf作为文件模式。
+   * 一个字符串值，它指定映射类型值。 例如，您可以指定&amp;ast；.pdf作为文件模式。
 
    >[!NOTE]
    >
@@ -696,7 +696,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -803,7 +803,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 * **描述**：指定终结点的描述。
 * **名称**：指定终结点的名称。
 * **服务标识符值**：指定终结点所属的服务。 例如，要将Remoting端点添加到此部分引入的进程（在Workbench中激活进程时，该进程将成为服务），请指定`EncryptDocument`。
-* **操作名称**：指定使用终结点调用的操作的名称。 创建远程端点时，请指定通配符(&amp;amp；ast；)。
+* **操作名称**：指定使用终结点调用的操作的名称。 创建远程端点时，请指定通配符(&amp;ast；)。
 
 **创建远程终结点**
 
@@ -841,7 +841,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
    * 通过调用`CreateEndpointInfo`对象的`setDescription`方法并传递描述端点的字符串值来指定端点的描述。
    * 通过调用`CreateEndpointInfo`对象的`setName`方法并传递指定该名称的字符串值来指定终结点的名称。
    * 通过调用`CreateEndpointInfo`对象的`setServiceId`方法并传递指定服务名称的字符串值，指定终结点所属的服务。
-   * 指定由`CreateEndpointInfo`对象的`setOperationName`方法调用并传递指定操作名称的字符串值的操作。 对于远程端点，请指定通配符(&amp;amp；ast；)。
+   * 指定由`CreateEndpointInfo`对象的`setOperationName`方法调用并传递指定操作名称的字符串值的操作。 对于远程端点，请指定通配符(&amp;ast；)。
 
 1. 创建远程端点。
 
@@ -849,7 +849,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
 
 **另请参阅**
 
@@ -970,7 +970,7 @@ Endpoint Registry服务提供了以编程方式管理端点的功能。 例如�
 
 1. 启用端点。
 
-   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`Endpoint`方法返回的`createEndpoint`对象来启用终结点。
+   通过调用`EndpointRegistryClient`对象的`enable`方法并传递`createEndpoint`方法返回的`Endpoint`对象来启用终结点。
 
 **另请参阅**
 

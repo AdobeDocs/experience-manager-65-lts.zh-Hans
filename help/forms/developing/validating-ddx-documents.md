@@ -1,5 +1,5 @@
 ---
-title: 验证DDX文档
+title: 验证 DDX 文档
 description: 使用Java API和Web服务API以编程方式验证DDX文档。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 4efc6e82-f577-4881-9c9d-30e1fe2cdb9d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1507'
-ht-degree: 0%
+source-wordcount: '1542'
+ht-degree: 2%
 
 ---
 
-# 验证DDX文档 {#validating-ddx-documents}
+# 验证 DDX 文档 {#validating-ddx-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -53,8 +53,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果AEM Forms部署在除JBoss之外的受支持J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为JAR文件，这些文件特定于部署AEM Forms的J2EE应用程序服务器。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 **执行验证**
 
-创建Assembler服务客户端、引用DDX文档并设置运行时选项后，可以调用`invokeDDX`操作来验证DDX文档。 验证DDX文档时，您可以将`null`作为映射参数传递(此参数通常存储汇编程序执行DDX文档中指定的操作所需的PDF文档)。
+创建Assembler服务客户端、引用DDX文档并设置运行时选项后，可以调用`invokeDDX`操作来验证DDX文档。 验证DDX文档时，您可以将`null`作为映射参数传递（此参数通常存储汇编程序执行DDX文档中指定的操作所需的PDF文档）。
 
 如果验证失败，则会引发异常，并且日志文件包含详细信息，说明为何可从`OperationException`实例获取DDX文档无效。 一旦通过了基本的XML解析和模式检查，就会执行针对DDX规范的验证。 DDX文档中的所有错误都在日志中指定。
 
@@ -84,13 +84,13 @@ Assembler服务返回可以写入XML日志文件的验证结果。 Assembler服�
 
 [使用Java API验证DDX文档](#validate-a-ddx-document-using-the-java-api)
 
-[使用Web服务API验证DDX文档](#validate-a-ddx-document-using-the-web-service-api)
+[使用 Web 服务 API 验证 DDX 文档](#validate-a-ddx-document-using-the-web-service-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API验证DDX文档 {#validate-a-ddx-document-using-the-java-api}
 
@@ -121,7 +121,7 @@ Assembler服务返回可以写入XML日志文件的验证结果。 Assembler服�
    调用`AssemblerServiceClient`对象的`invokeDDX`方法并传递以下值：
 
    * 表示DDX文档的`com.adobe.idp.Document`对象。
-   * java.io.Map对象(通常存储PDF文档)的值`null`。
+   * java.io.Map对象（通常存储PDF文档）的值`null`。
    * 指定运行时选项的`com.adobe.livecycle.assembler.client.AssemblerOptionSpec`对象。
 
    `invokeDDX`方法返回包含指定DDX文档是否有效的信息的`AssemblerResult`对象。
@@ -138,15 +138,15 @@ Assembler服务返回可以写入XML日志文件的验证结果。 Assembler服�
 
 **另请参阅**
 
-[验证DDX文档](#validating-ddx-documents)
+[验证 DDX 文档](#validating-ddx-documents)
 
-[快速入门(SOAP模式)：使用Java API验证DDX文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)(SOAP模式)
+[快速入门（SOAP模式）：使用Java API验证DDX文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api)（SOAP模式）
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## 使用Web服务API验证DDX文档 {#validate-a-ddx-document-using-the-web-service-api}
+## 使用 Web 服务 API 验证 DDX 文档 {#validate-a-ddx-document-using-the-web-service-api}
 
 使用Assembler服务API（Web服务）验证DDX文档：
 
@@ -209,6 +209,6 @@ Assembler服务返回可以写入XML日志文件的验证结果。 Assembler服�
 
 **另请参阅**
 
-[验证DDX文档](#validating-ddx-documents)
+[验证 DDX 文档](#validating-ddx-documents)
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

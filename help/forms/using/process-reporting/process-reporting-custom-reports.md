@@ -1,5 +1,5 @@
 ---
-title: 正在报告中的自定义报表
+title: 流程报告中的自定义报告
 description: 您可以创建自定义报表并将这些报表添加到AEM Forms on JEE流程报表UI。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
@@ -7,14 +7,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5670fede-4567-445e-8eeb-84349405db0e
-source-git-commit: 7e7c9f2414504ade45d6695641e08108afed0bd2
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1021'
+ht-degree: 16%
 
 ---
 
-# 正在报告中的自定义报表{#custom-reports-in-process-reporting}
+# 流程报告中的自定义报告{#custom-reports-in-process-reporting}
 
 您可以使用QueryBuilder的REST接口，或使用QueryBuilder API创建OSGi服务以创建自定义报表。
 
@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## 使用QueryBuilder的REST接口 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生成器的功能。 了解如何在执行以下步骤之前使用[CRX QueryBuilder REST接口](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=zh-Hans)：
+CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生成器的功能。 了解如何在执行以下步骤之前使用[CRX QueryBuilder REST接口](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)：
 
 1. 浏览到URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根据Process Reporting存储节点结构和节点属性创建查询。
@@ -46,7 +46,7 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
 
 ## 使用查询生成器API创建服务  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查询生成器API创建服务的先决条件是[使用查询生成器API创建和部署CQ OSGI捆绑包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)和[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=zh-Hans)。
+使用查询生成器API创建服务的先决条件是[使用查询生成器API创建和部署CQ OSGI捆绑包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)和[](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)。
 
 1. 创建包含相应注释的OSGi服务。 要访问QueryBuilder，请使用：
 
@@ -632,7 +632,7 @@ response.setCharacterEncoding("utf-8");
 创建单独的UI以显示结果的先决条件是[Sling基础知识](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html)、[创建CRX节点](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node)并提供适当的[访问权限](/help/sites-developing/developing-with-crxde-lite.md#access-control)。
 
 1. 创建单独的UI。
-1. 在每个可插拔报表的`nt:unstructured`节点处创建一个子`/content/process-reporting-runtime/custom-reports`节点。
+1. 在每个可插拔报表的`/content/process-reporting-runtime/custom-reports`节点处创建一个子`nt:unstructured`节点。
 
    * **id** — 指定报表的唯一标识号。
    * **name** — 指定报告的名称。 该名称会显示在UI中。

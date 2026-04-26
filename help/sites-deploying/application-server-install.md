@@ -9,9 +9,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 09d54b52-485a-453c-a2d0-535adead9e6c
-source-git-commit: 1d0fe9ee81a2e38f7887b6f884a13d1ba1462304
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '852'
 ht-degree: 1%
 
 ---
@@ -27,15 +27,17 @@ ht-degree: 1%
 
 以下应用程序服务器的安装步骤已说明：
 
-* [WebSphere](#websphere)
+* [WebSphere® 24.0.0.7](#websphere)
 * [Tomcat 10.0.x/10.1.x](#tomcat)
 * [JBoss EAP 8](/help/forms/using/upgrade-forms-osgi.md)
 
 有关安装Web应用程序、服务器配置以及如何启动和停止服务器的详细信息，请参阅相应的应用程序服务器文档。
 
-<!-- >[!NOTE]
+<!--
+>[!NOTE]
 >
->If you are using Dynamic Media in a WAR deployment, see [Dynamic Media documentation](/help/assets/config-dynamic.md#enabling-dynamic-media). -->
+>If you are using Dynamic Media in a WAR deployment, see [Dynamic Media documentation](/help/assets/config-dynamic.md#enabling-dynamic-media).
+-->
 
 ## 常规描述 {#general-description}
 
@@ -54,9 +56,9 @@ AEM提供单个war文件来进行部署。
 
 您可以通过以下方式更改默认行为：
 
-* 运行模式：在部署之前在AEM war文件的`sling.run.modes`文件中配置`WEB-INF/web.xml`参数
+* 运行模式：在部署之前在AEM war文件的`WEB-INF/web.xml`文件中配置`sling.run.modes`参数
 
-* sling.home：在部署之前在AEM war文件的`sling.home`文件中配置`WEB-INF/web.xml`参数
+* sling.home：在部署之前在AEM war文件的`WEB-INF/web.xml`文件中配置`sling.home`参数
 
 * 上下文根：重命名AEM war文件
 
@@ -131,7 +133,7 @@ AEM提供单个war文件来进行部署。
 
    * 增加VM内存设置：
 
-      * 在`bin/catalina.bat`中(在UNIX®上为`catalina.sh`)添加以下设置：
+      * 在`bin/catalina.bat`中（在UNIX®上为`catalina.sh`）添加以下设置：
 
         ```
         set "JAVA_OPTS= -Xmx2048m`
@@ -166,7 +168,7 @@ AEM提供单个war文件来进行部署。
 
      `webapps/manager/WEB-INF/web.xml`
 
-     并将`max-file-size`和`max-request-size`增加到至少500MB。 在下面的`multipart-config`示例文件中查看以下`web.xml`：
+     并将`max-file-size`和`max-request-size`增加到至少500MB。 在下面的`web.xml`示例文件中查看以下`multipart-config`：
 
      ```xml
      <multipart-config>
@@ -187,6 +189,6 @@ AEM提供单个war文件来进行部署。
       * 取消注释初始`sling.home`参数，并根据需要设置此路径
       * 重新打包`web.xml`文件。
 
-   * 如果要将AEM war文件部署为根Web应用程序，请将其重命名为`ROOT.war`。 如果要将`aemauthor.war`作为上下文根目录，请将其重命名为`aemauthor`。
+   * 如果要将AEM war文件部署为根Web应用程序，请将其重命名为`ROOT.war`。 如果要将`aemauthor`作为上下文根目录，请将其重命名为`aemauthor.war`。
    * 将其复制到Tomcat的Webapps文件夹中
    * 等待安装AEM。

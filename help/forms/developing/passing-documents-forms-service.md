@@ -1,5 +1,5 @@
 ---
-title: 将文档传递到FormsService
+title: 将文档传递给表单服务
 description: 将包含表单设计的com.adobe.idp.Document对象传递到Forms服务。 Forms服务渲染com.adobe.idp.Document对象中的表单设计。
 contentOwner: admin
 content-type: reference
@@ -12,9 +12,9 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 78d72100-b67b-48ac-9479-706fdccbd3cd
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1677'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ AEM Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF f
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 ## 使用Java API将文档传递到Forms服务 {#pass-documents-to-the-forms-service-using-the-java-api}
 
@@ -123,7 +123,7 @@ AEM Forms服务向客户端设备（通常是Web浏览器）呈现交互式PDF f
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API将文档传递到Forms服务](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将文档传递到Forms服务](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-passing-documents-to-the-forms-service-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

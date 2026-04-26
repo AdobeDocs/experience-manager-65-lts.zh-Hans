@@ -10,10 +10,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 60307c55-50b2-4f23-bc46-58732fee19fc
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '695'
-ht-degree: 3%
+source-wordcount: '706'
+ht-degree: 7%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 3%
 如果您是受邀用户，并且从document security收到了电子邮件注册消息，则可以使用消息中的URL打开在线注册页面进行注册。 在注册之后，您将收到有关激活帐户的第二个通知。
 
 1. 打开Document Security注册电子邮件。 邮件包含的URL是Document Security中指向“外部用户注册”页面的链接。
-1. 单击URL，或复制该URL并将其粘贴到浏览器中。 此时将显示“外部用户注册”页面。
+1. 单击 URL 或者复制并将其粘贴到浏览器中。 此时将显示“外部用户注册”页面。
 1. 在相应的框中键入您的姓名、电话号码、地址、组织和密码，然后在“确认密码”框中重新键入您的密码。 您的密码可以是任意八个字符的组合。
 1. 单击“保存”。 此时会显示一条感谢消息，通知您检查电子邮件中的激活电子邮件消息。 现在激活您的帐户以完成注册过程。
 
@@ -52,7 +52,7 @@ ht-degree: 3%
 在管理员停用或删除帐户之前，该帐户保持活动状态。
 
 1. 打开Document Security注册确认电子邮件。
-1. 单击消息中显示的URL。 此时将显示Document Security激活页面。
+1. 单击邮件中显示的 URL。 此时将显示Document Security激活页面。
 1. 单击“Here（此处）”以转到登录页面。
 1. 在用户名框中，键入您在Document Security下注册的电子邮件地址。 此电子邮件地址是您的默认Document Security用户名。
 1. 在“密码”框中，键入注册时创建的密码，然后单击“登录”。

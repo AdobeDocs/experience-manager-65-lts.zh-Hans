@@ -1,5 +1,5 @@
 ---
-title: AEM Forms的备份和恢复策略
+title: AEM Forms 的备份与恢复策略
 description: 了解如何实施策略以备份数据并确保数据与AEM表单数据保持同步。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2f34b48a-0b95-4994-ac4f-616620a5b211
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 0%
+source-wordcount: '1523'
+ht-degree: 3%
 
 ---
 
-# AEM Forms的备份和恢复策略{#backup-and-recovery-strategy-for-aem-forms}
+# AEM Forms 的备份与恢复策略{#backup-and-recovery-strategy-for-aem-forms}
 
 如果您的AEM表单实施将其他自定义数据存储在其他数据库中，则您负责实施策略以备份此数据，并确保其与AEM表单数据保持同步。 此外，应用程序必须设计得足够强健，能够处理其他数据库不同步的情况。 强烈建议在事务上下文中执行任何数据库操作，以帮助保持一致状态。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 >
 >与AEM forms实施的任何其他方面一样，您的备份和恢复策略必须在开发或暂存环境中开发和测试，然后才能用于生产，以确保整个解决方案按预期工作，且不会丢失数据。
 
-Adobe Experience Manager (AEM)是AEM表单必不可少的组成部分。 因此，您需要备份AEM以及与AEM Forms同步备份，因为通信管理解决方案和服务（如表单管理器）都基于AEM Forms的AEM部分存储的数据。为了防止任何数据丢失，AEM Forms特定数据必须备份，以确保GDS和AEM （存储库）与数据库引用关联。数据库、GDS、AEM和内容存储根目录必须还原到与原始数据库具有相同DNS名称的计算机。
+Adobe Experience Manager (AEM)是AEM表单必不可少的组成部分。 因此，您需要备份AEM以及与AEM表单同步备份，因为通信管理解决方案和服务（例如表单管理器）均基于AEM表单的AEM部分中存储的数据。为了防止任何数据丢失，必须对AEM表单特定数据进行备份，以确保GDS和AEM （存储库）与数据库引用相关联。必须将数据库、 GDS 、 AEM和Content Storage Root目录还原到与原始目录具有相同DNS名称的计算机。
 
 ## 备份类型 {#types-of-backups}
 
@@ -83,19 +83,19 @@ AEM Forms备份策略涉及两种类型的备份：
 1. 在维护模式下启动系统。
 1. 执行以下操作以确保在维护模式下将表单管理器与AEM表单同步：
 
-   1. 转到https://&lt;*server*>：&lt;*port*>/lc/fm并使用管理员/密码凭据登录。
+   1. 转到https://&lt;*服务器*>：&lt;*端口*>/lc/fm并使用管理员/密码凭据登录。
    1. 单击右上角的用户（在此例中为“超级管理员”）名称。
    1. 单击&#x200B;**管理选项**。
    1. 单击&#x200B;**开始**&#x200B;从存储库同步资产。
 
-1. 在群集环境中，主节点(对于AEM)应在辅助节点之前启动。
-1. 在验证系统的正常运行之前，请确保不从内部或外部源(如Web、SOAP或EJB进程启动器)启动任何进程。
+1. 在群集环境中，主节点（对于AEM）应在辅助节点之前启动。
+1. 在验证系统的正常运行之前，请确保不从内部或外部源（如Web、SOAP或EJB进程启动器）启动任何进程。
 
 如果移动或更改了主AEM表单数据库，请查看与您的应用程序服务器相关的安装指南，以了解有关更新AEM表单数据源IDP_DS和EDC_DS的数据库连接信息的信息。
 
 >[!NOTE]
 > 
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ### 更改AEM表单主机名或IP地址 {#changing-the-aem-forms-hostname-or-ip-address}
 
@@ -111,6 +111,6 @@ AEM Forms备份策略涉及两种类型的备份：
 
 >[!NOTE]
 >
->只有在这种情况下，您才应使用此脚本来更改GDS位置。 要在AEM表单运行时更改GDS位置，请使用Administration Console。 (请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*。)*
+>只有在这种情况下，您才应使用此脚本来更改GDS位置。 要在AEM表单运行时更改GDS位置，请使用Administration Console。 （请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)*。） *
 
 设置GDS路径后，以维护模式启动Forms服务器，然后使用管理控制台更新新节点的剩余文件系统路径。 验证所有必需的配置均已更新后，请重新启动并测试AEM表单。

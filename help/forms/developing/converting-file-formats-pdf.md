@@ -1,5 +1,5 @@
 ---
-title: 在文件格式和PDF之间转换
+title: 在文件格式与 PDF 之间转化
 description: 使用生成PDF服务将本机文件格式转换为PDF。 生成PDF服务还将PDF转换为其他文件格式并优化PDF文档的大小。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms, Document Services
 hide: true
 hidefromtoc: true
 exl-id: c6e007e9-6050-4d86-a32e-0bd942d48f27
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '7848'
+source-wordcount: '7942'
 ht-degree: 0%
 
 ---
 
-# 在文件格式和PDF之间转换 {#converting-between-file-formatsand-pdf}
+# 在文件格式与 PDF 之间转化 {#converting-between-file-formatsand-pdf}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -42,13 +42,13 @@ ht-degree: 0%
 >
 >生成PDF服务不支持64位版本的OpenOffice。
 
-* Adobe Photoshop® CS2转换PSD（仅限Windows）
+* ® CS2转换PSD（仅限Windows）
 
 >[!NOTE]
 >
 >不支持Photoshop CS3和CS4，因为它们不支持Windows Server 2003或Windows Server 2008。
 
-* Adobe FrameMaker® 7.2和8用于转换FM（仅限Windows）
+* ® 7.2和8用于转换FM（仅限Windows）
 * Adobe PageMaker® 7.0用于转换PMD、PM6、P65和PM（仅限Windows）
 * 第三方应用程序支持的本机格式（需要开发特定于应用程序的设置文件）（仅限Windows）
 
@@ -56,14 +56,14 @@ ht-degree: 0%
 
 * 视频格式：SWF、FLV（仅限Windows）
 * 图像格式：JPEG、JPG、JP2、J2Kí、JPC、J2C、GIF、BMP、TIFF、TIF、PNG、JPF
-* HTML (Windows™Sun™Solaris和Linux®)
+* HTML （Windows™Sun™Solaris和Linux®）
 
 生成PDF服务将PDF转换为以下文件格式（仅限Windows）：
 
 * 封装式PostScript (EPS)
 * HTML 3.2
 * 带CSS 1.0的HTML 4.01
-* DOC(Microsoft Word格式)
+* DOC（Microsoft Word格式）
 * RTF
 * 文本（可访问和纯文本）
 * XML
@@ -181,7 +181,7 @@ ht-degree: 0%
    * 调用`CreatePDFResult`对象的`getCreatedDocument`方法，该方法返回`com.adobe.idp.Document`对象。
    * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以从上一步中创建的对象提取PDF文档。
 
-   如果使用`createPDF2`方法获取日志文件(不适用于HTML转换)，请执行以下操作：
+   如果使用`createPDF2`方法获取日志文件（不适用于HTML转换），请执行以下操作：
 
    * 调用`CreatePDFResult`对象的`getLogDocument`方法。 这将返回`com.adobe.idp.Document`对象。
    * 调用`com.adobe.idp.Document`对象的`copyToFile`方法来提取日志文档。
@@ -190,7 +190,7 @@ ht-degree: 0%
 
 [步骤摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API将Microsoft Word文档转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将Microsoft Word文档转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -211,7 +211,7 @@ ht-degree: 0%
 1. 创建生成PDF客户端。
 
    * 使用默认构造函数创建`GeneratePDFServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
    * 通过获取`GeneratePDFServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -345,9 +345,9 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 
 [将HTML文档转换为PDF文档](converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
-[快速入门(SOAP模式)：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -368,7 +368,7 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 1. 创建生成PDF客户端。
 
    * 使用默认构造函数创建`GeneratePDFServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
    * 通过获取`GeneratePDFServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -498,7 +498,7 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 
 [步骤摘要](converting-file-formats-pdf.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将HTML内容转换为PDF文档](/help/forms/developing/generate-pdf-service-java-api.md#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -519,7 +519,7 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 1. 创建“生成PDf”客户端。
 
    * 使用默认构造函数创建`GeneratePDFServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`GeneratePDFServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/GeneratePDFService?blob=mtom`）。 您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
    * 通过获取`GeneratePDFServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -570,7 +570,7 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 本节还介绍以下内容：
 
 * 如何修改生成PDF服务向本机应用程序提供的响应，该产品已使用该响应将本机文件格式转换为PDF
-* 生成PDF服务、生成PDF服务应用程序监视器(AppMon)组件与本机应用程序(如Microsoft Word)之间的交互
+* 生成PDF服务、生成PDF服务应用程序监视器(AppMon)组件与本机应用程序（如Microsoft Word）之间的交互
 * XML语法在这些交互中所扮演的角色
 
 ### 组件交互 {#component-interactions}
@@ -583,7 +583,7 @@ HTML内容转换为PDF文档后，您可以检索结果并保存PDF文档。
 
 本文档使用术语&#x200B;*本机应用程序*&#x200B;来表示用于生成本机文件格式的应用程序，如Microsoft Word。
 
-*AppMon*&#x200B;是一个企业组件，该组件与本机应用程序交互的方式与用户浏览该应用程序提供的对话框的方式相同。 AppMon用于指示应用程序(如Microsoft Word)打开和打印文件的XML语法涉及以下顺序任务：
+*AppMon*&#x200B;是一个企业组件，该组件与本机应用程序交互的方式与用户浏览该应用程序提供的对话框的方式相同。 AppMon用于指示应用程序（如Microsoft Word）打开和打印文件的XML语法涉及以下顺序任务：
 
 1. 通过选择“文件”>“打开”打开文件
 1. 确保显示“打开”对话框；如果没有，则处理错误
@@ -596,7 +596,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
 
 由于这些Win32 API的限制，AppMon无法将这些UI事件调度到某些特定类型的窗口，例如浮动菜单栏（可在某些应用程序，如TextPad中找到）和某些无法使用Win32 API检索其内容的对话框。
 
-直观地识别浮动菜单栏很容易；但仅仅通过视觉检查不可能识别特殊类型的对话框。 您需要使用第三方应用程序(例如Microsoft Spy++(Microsoft Visual C++开发环境的一部分)或其等效的WinID(可从[https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免费下载)来检查对话框，以确定AppMon是否能够使用标准Win32 API与其交互。
+直观地识别浮动菜单栏很容易；但仅仅通过视觉检查不可能识别特殊类型的对话框。 您需要使用第三方应用程序(例如Microsoft Spy++（Microsoft Visual C++开发环境的一部分）或其等效的WinID（可从[https://www.dennisbabkin.com/php/download.php?what=WinID](https://www.dennisbabkin.com/php/download.php?what=WinID)免费下载）来检查对话框，以确定AppMon是否能够使用标准Win32 API与其交互。
 
 如果WinID能够提取对话框内容（如文本、子窗口、窗口类ID等），则AppMon也能够提取对话框内容。
 
@@ -628,12 +628,12 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
   </tr>
   <tr>
    <td><p>特定于应用程序的对话框说明</p></td>
-   <td><p>指定如何响应特定于应用程序的对话框。 </p><p>包含此信息的文件为appmon。<i>'[appname]'</i>.dialog。<i>'[locale]'</i>.xml（例如，appmon.word.en_US.xml）。</p></td>
+   <td><p>指定如何响应特定于应用程序的对话框。 </p><p>包含此信息的文件是appmon.<i>'[appname]'</i>.dialog.<i>'[locale]'</i>.xml（例如，appmon.word.en_US.xml）。</p></td>
    <td><p>请勿修改此文件。 </p><p>要为新的本机应用程序添加对话框说明，请参阅<a href="converting-file-formats-pdf.md#creating_or_modifying_an_additional_dialog_xml_file_for_a_native_application">为本机应用程序创建或修改其他对话框XML文件</a>。</p></td>
   </tr>
   <tr>
    <td><p>其他特定于应用程序的对话框说明 </p></td>
-   <td><p>指定特定于应用程序的对话框说明的覆盖和添加。 部分介绍了此类信息的示例。 </p><p>包含此信息的文件为appmon。<i>“[appname]”</i>.addition.<i>'[区域设置]'</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
+   <td><p>指定特定于应用程序的对话框说明的覆盖和添加。 部分介绍了此类信息的示例。 </p><p>包含此信息的文件是appmon.<i>'[appname]'</i>.addition.<i>'[locale]'</i>.xml。 例如appmon.addition.en_US.xml。</p></td>
    <td><p>可以使用XML编辑应用程序创建和修改此类型的文件。 （请参阅<a href="converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application">为本机应用程序创建或修改其他对话框XML文件</a>。） </p><p><strong>重要信息</strong>：为服务器将支持的每个本机应用程序创建其他特定于应用程序的对话框说明。 </p></td>
   </tr>
  </tbody>
@@ -685,8 +685,8 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
 
 当系统或本机应用程序显示当前执行的脚本XML文件未处理的对话框时，生成PDF服务将按此顺序搜索对话框XML文件，并在找到匹配项时停止：
 
-* 阿普蒙。`[appname]`.其他。`[locale]`.xml
-* 阿普蒙。`[appname]`。`[locale]`.xml （不修改此文件。）
+* appmon.`[appname]`.additional.`[locale]`.xml
+* appmon.`[appname]`.`[locale]`.xml （不修改此文件。）
 * appmon.global.`[locale]`.xml （不修改此文件。）
 
 如果生成PDF服务找到对话框的匹配项，它将通过向对话框发送键击或为该对话框指定的其他操作来解除该匹配项。 如果对话框的说明指定中止消息，则生成PDF服务将终止当前正在执行的作业并生成错误消息。 将在脚本XML语法的`abortMessage`元素中指定此类中止消息。
@@ -725,7 +725,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
 
 对话框和脚本文件位于appmondata.jar文件中。 在修改任何这些文件或者添加新脚本或对话框之前，必须取消封装此JAR文件。 例如，假设您要添加对EditPlus应用程序的支持。 创建两个XML文件，名为appmon.editplus.script.en_US.xml和appmon.editplus.script.addition.en_US.xml。 必须将这些XML脚本添加到位于以下两个位置的adobe-appmondata.jar文件中：
 
-* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. adobe-livecycle-native-jboss-x86_win32.ear文件位于`[AEM forms install directory]\configurationManager`的导出文件夹中。 (如果AEM Forms部署在另一个J2EE应用程序服务器上，请将adobe-livecycle-native-jboss-x86_win32.ear文件替换为与您的J2EE应用程序服务器对应的EAR文件。)
+* adobe-livecycle-native-jboss-x86_win32.ear > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar\com\adobe\appmon. adobe-livecycle-native-jboss-x86_win32.ear文件位于`[AEM forms install directory]\configurationManager`的导出文件夹中。 （如果AEM Forms部署在另一个J2EE应用程序服务器上，请将adobe-livecycle-native-jboss-x86_win32.ear文件替换为与您的J2EE应用程序服务器对应的EAR文件。）
 * adobe-generatepdf-dsc.jar > adobe-appmondata.jar\com\adobe\appmon （adobe-appmondata.jar文件位于adobe-generatepdf-dsc.jar文件中）。 adobe-generatepdf-dsc.jar文件位于`[AEM forms install directory]\deploy`文件夹中。
 
 将这些XML文件添加到adobe-appmondata.jar文件后，必须重新部署GeneratePDF组件。 要将对话框和脚本XML文件添加到adobe-appmondata.jar文件中，请执行以下任务：
@@ -733,7 +733,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
 1. 使用WinZip或WinRAR之类的工具，打开adobe-livecycle-native-jboss-x86_win32.earfile > adobe-Native2PDFSvc.war\WEB-INF\lib > adobe-native.jar > Native2PDFSvc-native.jar\bin > adobe-appmondata.jar文件。
 1. 将对话框和脚本XML文件添加到appmondata.jar文件中，或修改此文件中的现有XML文件。 （请参阅[为本机应用程序创建或修改脚本XML文件](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和[为本机应用程序创建或修改其他对话框XML文件](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。）
 1. 使用WinZip或WinRAR等工具，打开adobe-generatepdf-dsc.jar > adobe-appmondata.jar 。
-1. 将对话框和脚本XML文件添加到appmondata.jar文件中，或修改此文件中的现有XML文件。 （请参阅[为本机应用程序创建或修改脚本XML文件](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和[为本机应用程序创建或修改其他对话框XML文件](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。）将XML文件添加到adobe-appmondata.jar文件中后，将新的adobe-appmondata.jar文件放入adobe-generatepdf-dsc.jar文件中。
+1. 将对话框和脚本XML文件添加到appmondata.jar文件中，或修改此文件中的现有XML文件。 （请参阅[为本机应用程序创建或修改脚本XML文件](converting-file-formats-pdf.md#creating-or-modifying-a-script-xml-file-for-a-native-application)和[为本机应用程序创建或修改其他对话框XML文件](converting-file-formats-pdf.md#creating-or-modifying-an-additional-dialog-xml-file-for-a-native-application)。） 将XML文件添加到adobe-appmondata.jar文件后，将新的adobe-appmondata.jar文件放置到adobe-generatepdf-dsc.jar文件中。
 1. 如果您添加了对其他本机文件格式的支持，请创建一个提供应用程序路径的系统环境变量（请参阅[创建环境变量以定位本机应用程序](converting-file-formats-pdf.md#creating-an-environment-variable-to-locate-the-native-application)）。
 
 **重新部署GeneratePDF组件**
@@ -884,7 +884,7 @@ AppMon使用标准的Win32 API与第三方应用程序进行交互，以传输UI
 >
 >应用程序的名称被指定为`GenericApp`元素的`name`属性的值。 此值必须与您为该应用程序开发的脚本中指定的相应名称完全匹配。 同样，`GenericApp`元素的`displayName`属性应与相应脚本的`expectedWindow`窗口标题完全匹配。 在解析`displayName`或`caption`属性中出现的任何正则表达式后，将计算此类等价。
 
-在此示例中，修改了生成PDF服务提供的默认配置数据，以指定应使用记事本(而不是Microsoft Word)处理文件扩展名为.txt的文件。 在此修改之前，已将Microsoft Word指定为应该处理此类文件的本机应用程序。
+在此示例中，修改了生成PDF服务提供的默认配置数据，以指定应使用记事本（而不是Microsoft Word）处理文件扩展名为.txt的文件。 在此修改之前，已将Microsoft Word指定为应该处理此类文件的本机应用程序。
 
 **用于将文本文件定向到记事本(native2pdfconfig.xml)的修改**
 

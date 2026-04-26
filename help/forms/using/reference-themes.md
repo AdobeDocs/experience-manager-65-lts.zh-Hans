@@ -8,16 +8,16 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 exl-id: 2a80a7f6-3907-45f3-8945-c3bfba018580
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
 # 参考主题{#reference-themes}
 
-[主题](../../forms/using/themes.md)允许您在不了解CSS的情况下设置表单样式。 除了默认主题之外，您还可以通过安装[AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)获取以下主题：
+[主题](../../forms/using/themes.md)允许您在不了解CSS的情况下设置表单样式。 除了默认主题之外，您还可以通过安装[AEM Forms附加组件包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)获取以下主题：
 
 * 贝里尔
 * 执行
@@ -42,9 +42,11 @@ We.Gov自适应表单使用Beryl主题，并强调使用背景图像、透明度
 
 ![贝里尔主题](assets/beryl.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/beryl-1.png)-->
+](assets/beryl-1.png)
+-->
 
 ## 执行 {#exec}
 
@@ -52,9 +54,11 @@ We.Gov自适应表单使用Beryl主题，并强调使用背景图像、透明度
 
 ![执行主题](assets/exec.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/exec-1.png)-->
+](assets/exec-1.png)
+-->
 
 ## Exec指示灯 {#exec-light}
 
@@ -62,9 +66,11 @@ Exec Light主题使用空格创建无缝体验。 “下一个”和“提交”
 
 ![执行浅色主题](assets/exec-light.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/exec-light-1.png)-->
+](assets/exec-light-1.png)
+-->
 
 ## 自由 {#liberty}
 
@@ -72,9 +78,11 @@ Exec Light主题使用空格创建无缝体验。 “下一个”和“提交”
 
 ![自由主题](assets/liberty.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/liberty-1.png)-->
+](assets/liberty-1.png)
+-->
 
 ## 宁静 {#tranquil}
 
@@ -82,9 +90,11 @@ Exec Light主题使用空格创建无缝体验。 “下一个”和“提交”
 
 ![宁静的主题](assets/tranquil.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/tranquil-1.png)-->
+](assets/tranquil-1.png)
+-->
 
 ## 超海洋 {#ultramarine}
 
@@ -100,9 +110,11 @@ Ultraminary主题使用深蓝色阴影突出显示选项卡、面板、文本框
 
 ![城市主题](assets/urbane.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/urbane-1.png)-->
+](assets/urbane-1.png)
+-->
 
 ## 美国Web设计标准 {#u-s-web-design-standards}
 
@@ -110,6 +122,8 @@ Ultraminary主题使用深蓝色阴影突出显示选项卡、面板、文本框
 
 ![美国Web设计标准主题](assets/us-web-standards.png)
 
-<!--[Click to enlarge
+<!--
+[Click to enlarge
 
-](assets/usgov.png)-->
+](assets/usgov.png)
+-->

@@ -1,5 +1,5 @@
 ---
-title: 微调运行状况监视器性能
+title: 优化运行状况监控性能
 description: 了解如何微调运行状况监视器性能。 使用JAVA设置选项控制影响表单环境性能的系统统计信息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 62d31b00-be95-4502-9e97-3ce563192de2
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 1%
+source-wordcount: '436'
+ht-degree: 4%
 
 ---
 
-# 微调运行状况监视器性能{#fine-tuning-health-monitor-performance}
+# 优化运行状况监控性能{#fine-tuning-health-monitor-performance}
 
 收集填充了运行状况监视器的系统统计信息对AEM Forms环境的性能产生一些影响。 可以通过在应用程序服务器中设置下面列出的Java选项来控制此影响。
 
@@ -37,7 +37,7 @@ ht-degree: 1%
    <td><p>true</p></td>
   </tr>
   <tr>
-   <td><p>adobe.cache.statistics-enabled</p></td>
+   <td><p>启用adobe.cache.statistics</p></td>
    <td><p>打开或关闭Gemfire缓存</p></td>
    <td><p>true</p></td>
   </tr>

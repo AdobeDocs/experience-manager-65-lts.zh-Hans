@@ -1,5 +1,5 @@
 ---
-title: 渲染启用权限的Forms
+title: 渲染已启用权限的表单
 description: 使用Forms服务呈现应用了使用权限的表单。 您可以使用Java API和Web服务API呈现启用权限的表单。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 70b2d1aa-6fcd-461d-b628-e82ddf266f48
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1447'
-ht-degree: 0%
+source-wordcount: '1488'
+ht-degree: 1%
 
 ---
 
-# 渲染启用权限的Forms {#rendering-rights-enabled-forms}
+# 渲染已启用权限的表单 {#rendering-rights-enabled-forms}
 
 Forms服务可以呈现已应用了使用权限的表单。 使用权限与默认在Acrobat中可用，但在Adobe Reader中不可用的功能相关，例如向表单添加注释或填写表单字段并保存表单的功能。 对其应用了使用权限的Forms称为启用权限的表单。 在Adobe Reader中打开启用了权限的表单的用户可以执行为该表单启用的操作。
 
@@ -31,7 +31,7 @@ Forms服务可以呈现已应用了使用权限的表单。 使用权限与默�
 
 >[!NOTE]
 >
->指定以下使用权限时，不能使用XML数据预填充表单： `enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles`或`enableDigitalSignatures`。 (请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。)
+>指定以下使用权限时，不能使用XML数据预填充表单： `enableComments`、`enableCommentsOnline`、`enableEmbeddedFiles`或`enableDigitalSignatures`。 （请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。）
 
 >[!NOTE]
 >
@@ -81,9 +81,9 @@ Forms服务可以呈现已应用了使用权限的表单。 使用权限与默�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -134,7 +134,7 @@ Forms服务可以呈现已应用了使用权限的表单。 使用权限与默�
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API呈现启用权限的表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API呈现启用权限的表单](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -182,6 +182,6 @@ Forms服务可以呈现已应用了使用权限的表单。 使用权限与默�
 
 **另请参阅**
 
-[渲染启用权限的Forms](#rendering-rights-enabled-forms)
+[渲染已启用权限的表单](#rendering-rights-enabled-forms)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

@@ -11,9 +11,9 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 2e8b73eb-7070-4b7b-b14b-bfcca6175afb
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2784'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 0%
 
 表单数据集成服务可以将数据导入PDF表单并从PDF表单导出数据。 导入和导出操作支持两种类型的PDF forms：
 
-* Acrobat表单(在Acrobat中创建)是包含表单字段的PDF文档。
-* Adobe XML表单(在Designer中创建)是符合XML Adobe XML Forms架构(XFA)的PDF文档。
+* Acrobat表单（在Acrobat中创建）是包含表单字段的PDF文档。
+* Adobe XML表单（在Designer中创建）是符合XML Adobe XML Forms架构(XFA)的PDF文档。
 
 根据PDF表单的类型，表单数据可以以下列格式之一存在：
 
@@ -108,8 +108,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-formdataintegration-client.jar
-* adobe-utilities.jar (如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar （如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 [步骤摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API导入表单数据](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导入表单数据](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -209,7 +209,7 @@ ht-degree: 0%
 1. 创建表单数据集成服务客户端。
 
    * 使用默认构造函数创建`FormDataIntegrationClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`FormDataIntegrationClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`FormDataIntegrationClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
    * 通过获取`FormDataIntegrationClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -284,8 +284,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-formdataintegration-client.jar
-* adobe-utilities.jar (如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar （如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 **创建表单数据集成服务客户端**
 
@@ -348,7 +348,7 @@ ht-degree: 0%
 
 [步骤摘要](importing-exporting-data.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API导出表单数据](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导出表单数据](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -367,7 +367,7 @@ ht-degree: 0%
 1. 创建表单数据集成服务客户端。
 
    * 使用默认构造函数创建`FormDataIntegrationClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`FormDataIntegrationClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`FormDataIntegrationClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。 但是，指定`?blob=mtom`以使用MTOM。
    * 通过获取`FormDataIntegrationClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：

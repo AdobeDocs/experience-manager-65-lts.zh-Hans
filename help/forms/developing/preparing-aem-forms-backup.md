@@ -1,5 +1,5 @@
 ---
-title: 正在准备AEM Forms以进行备份
+title: 为 AEM Forms 备份做准备
 description: 了解如何使用Backup and Restore服务通过Java API和Web服务API进入和离开AEM Forms服务器的备份模式。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 0fe1aef7-f607-4c40-bfa9-9ec9ebd8abeb
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2536'
 ht-degree: 0%
 
 ---
 
-# 正在准备AEM Forms以进行备份 {#preparing-aem-forms-for-backup}
+# 为 AEM Forms 备份做准备 {#preparing-aem-forms-for-backup}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -113,8 +113,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-   * jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+   * adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+   * jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 1. 创建BackupService客户端API对象
 
@@ -228,8 +228,8 @@ ht-degree: 0%
    * adobe-backup-restore-client-sdk.jar
    * adobe-livecycle-client.jar
    * adobe-usermanager-client.jar
-   * adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-   * jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+   * adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+   * jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 1. 创建BackupService客户端API对象
 

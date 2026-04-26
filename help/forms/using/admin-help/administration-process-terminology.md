@@ -1,5 +1,5 @@
 ---
-title: 关于管理和过程术语
+title: 关于管理和流程术语
 description: 了解管理和流程术语，如流程实例、流程图和操作。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2d3f74b6-ecc4-4c5e-906f-3ded1a1bfd3b
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 0%
+source-wordcount: '190'
+ht-degree: 5%
 
 ---
 
-# 关于管理和过程术语 {#about-administration-and-process-terminology}
+# 关于管理和流程术语 {#about-administration-and-process-terminology}
 
 >[!NOTE]
 > 

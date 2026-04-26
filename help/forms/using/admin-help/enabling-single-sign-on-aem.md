@@ -1,5 +1,5 @@
 ---
-title: 在AEM表单中启用单点登录
+title: 在 AEM Forms 中启用单点登录
 description: 了解如何使用HTTP标头和SPNEGO启用单点登录(SSO)。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ba02f9b1-209e-42f2-b1df-2ed64fc9fdbc
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
 
-# 在AEM表单中启用单点登录{#enabling-single-sign-on-in-aem-forms}
+# 在 AEM Forms 中启用单点登录{#enabling-single-sign-on-in-aem-forms}
 
 >[!NOTE]
 > 
@@ -77,7 +77,7 @@ AEM表单提供两种启用单点登录(SSO)的方法 — HTTP标头和SPNEGO。
 >JEE上的AEM Forms不支持在多个子域环境中使用Kerberos/SPNEGO配置SSO。
 
 1. 决定使用哪个域来启用SSO。 AEM Forms Server和用户必须是同一Windows域或受信任域的一部分。
-1. 在Active Directory中，创建一个代表AEM Forms Server的用户。 （请参阅[创建用户帐户](enabling-single-sign-on-aem.md#create-a-user-account)。）如果您要将多个域配置为使用SPNEGO，请确保每个用户的密码不同。 如果密码不同，则SPNEGO SSO不起作用。
+1. 在Active Directory中，创建一个代表AEM Forms Server的用户。 （请参阅[创建用户帐户](enabling-single-sign-on-aem.md#create-a-user-account)。） 如果要将多个域配置为使用SPNEGO，请确保每个用户的密码不同。 如果密码不同，则SPNEGO SSO不起作用。
 1. 映射服务主体名称。 (请参阅[映射服务主体名称(SPN)](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn)。)
 1. 配置域控制器。 （请参阅[防止Kerberos完整性检查失败](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures)。）
 1. 添加或编辑企业域，如[添加域](/help/forms/using/admin-help/adding-domains.md#adding-domains)或[编辑和转换现有域](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)中所述。 创建或编辑企业域时，请执行以下任务：
@@ -157,7 +157,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 要使基于SPNEGO的身份验证正常工作，客户端计算机必须是创建用户帐户的域的一部分。 您还必须将客户端浏览器配置为允许基于SPNEGO的身份验证。 此外，需要基于SPNEGO的身份验证的站点必须是受信任的站点。
 
-如果使用计算机名(如https://lcserver:8080 )访问服务器，则Internet Explorer不需要任何设置。 如果您输入的URL不包含任何点(“。”)，则Internet Explorer会将该站点视为本地Intranet站点。 如果站点使用了完全限定的名称，则必须将该站点添加为受信任的站点。
+如果使用计算机名（如https://lcserver:8080）访问服务器，则Internet Explorer不需要任何设置。 如果您输入的URL不包含任何点(“。”)，则Internet Explorer会将该站点视为本地Intranet站点。 如果站点使用了完全限定的名称，则必须将该站点添加为受信任的站点。
 
 **配置Internet Explorer 6.x**
 
@@ -171,7 +171,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在浏览器URL框中，键入`about:config`
 
-   出现about：config - Mozilla Firefox对话框。
+   出现about:config - Mozilla Firefox对话框。
 
 1. 在“筛选器”框中，键入`negotiate`
 1. 在显示的列表中，单击network.negotiate-auth.trusted-uri ，然后键入以下适合您环境的命令之一：

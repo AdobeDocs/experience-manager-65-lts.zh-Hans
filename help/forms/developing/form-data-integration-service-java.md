@@ -1,5 +1,5 @@
 ---
-title: 表单数据集成服务JavaAPI快速入门(SOAP)
+title: 表单数据集成服务 Java API 快速入门（SOAP）
 description: 使用表单数据集成服务将数据导入PDF表单，并使用Java API从PDF表单导出数据。
 contentOwner: admin
 content-type: reference
@@ -11,10 +11,10 @@ feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 hide: true
 hidefromtoc: true
 exl-id: 1f67fad6-263c-4ee4-9986-1b3df53e1a16
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 0%
+source-wordcount: '251'
+ht-degree: 3%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 以下快速入门适用于表单数据集成服务。
 
-[快速入门(SOAP模式)：使用Java API导入表单数据](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导入表单数据](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[快速入门(SOAP模式)：使用Java API导出表单数据](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API导出表单数据](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
@@ -32,7 +32,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 >
 >《使用AEM进行编程快速入门》表单基于在JBoss Application Server和Microsoft Windows操作系统上部署的Forms Server。 但是，如果您使用的是其他操作系统（如UNIX），请将特定于Windows的路径替换为适用的操作系统支持的路径。 同样，如果您使用的是其他J2EE应用程序服务器，请确保指定有效的连接属性。 请参阅[设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)。
 
-## 快速入门(SOAP模式)：使用Java API导入表单数据 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API导入表单数据 {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
 以下Java代码示例将数据导入PDF表单。 该数据位于名为&#x200B;*Loan_data.xml*&#x200B;的XML文件中，并且PDF表单将保存为名为&#x200B;*ResultLoanForm.pdf*&#x200B;的PDF文件。 （请参阅[导入表单数据](/help/forms/developing/importing-exporting-data.md#importing-form-data)。）
 
@@ -134,7 +134,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
  
 ```
 
-## 快速入门(SOAP模式)：使用Java API导出表单数据 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## 快速入门（SOAP模式）：使用Java API导出表单数据 {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
 以下Java代码示例从PDF表单中导出数据。 表单数据保存为名为&#x200B;*Loan_data.xml*&#x200B;的XML文件。 （请参阅[导出表单数据](/help/forms/developing/importing-exporting-data.md#exporting-form-data)。）
 

@@ -11,14 +11,14 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 35802b50-71ca-4bb2-8f2c-7452b81a6b1f
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 0%
+source-wordcount: '722'
+ht-degree: 2%
 
 ---
 
-# 使用Web服务API拆分PDF文档 {#disassemble-a-pdf-document-usingthe-web-service-api}
+# 使用 Web 服务 API 拆分 PDF 文档 {#disassemble-a-pdf-document-usingthe-web-service-api}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -91,6 +91,6 @@ ht-degree: 0%
 
 **另请参阅**
 
-[以编程方式拆分PDF文档](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
+[以编程方式拆分 PDF 文档](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
 [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)

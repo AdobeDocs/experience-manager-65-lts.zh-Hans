@@ -1,5 +1,5 @@
 ---
-title: 查看PDF文件的使用权限
+title: 查看 PDF 文件的使用权限
 description: 了解如何查看PDF文件的使用权限。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms,Document Services,Reader Extensions
 hide: true
 hidefromtoc: true
 exl-id: 0140d0a1-9a8f-4e77-8053-fd03592e967a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '110'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
-# 查看PDF文件的使用权限 {#review-the-usage-rights-of-a-pdf-file}
+# 查看 PDF 文件的使用权限 {#review-the-usage-rights-of-a-pdf-file}
 
 将PDF文件上传到Acrobat Reader DC Extensions Web应用程序时，您可以查看此信息以确定它是否是Reader扩展的、应用的任何使用权限及其到期日期。
 

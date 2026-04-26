@@ -1,5 +1,5 @@
 ---
-title: 在维护模式下运行AEM表单
+title: 在维护模式下运行 AEM Forms
 description: 在执行诸如为DSC打补丁、升级AEM表单或应用Service Pack等任务时，维护模式很有用。 了解有关在维护模式下运行AEM表单的更多信息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: d4cfe1c1-8b44-4bd5-b6ec-29e5f70f0674
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 0%
+source-wordcount: '259'
+ht-degree: 4%
 
 ---
 
-# 在维护模式下运行AEM表单 {#running-aem-forms-in-maintenance-mode}
+# 在维护模式下运行 AEM Forms {#running-aem-forms-in-maintenance-mode}
 
 在执行诸如为DSC打补丁、升级AEM表单或应用Service Pack等任务时，维护模式很有用。
 

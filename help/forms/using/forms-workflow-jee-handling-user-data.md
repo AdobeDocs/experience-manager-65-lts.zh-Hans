@@ -1,5 +1,5 @@
 ---
-title: Forms JEE工作流 | 处理用户数据
+title: Forms JEE工作流|处理用户数据
 description: 了解如何使用AEM Forms JEE工作流设计、创建和管理业务流程。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 622c4899-f75f-4b47-a6c0-f94c8427e977
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
 
-# Forms JEE工作流 | 处理用户数据 {#forms-jee-workflows-handling-user-data}
+# Forms JEE工作流|处理用户数据 {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工具。 工作流进程包含一系列按指定顺序执行的步骤。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 进程可与资产、用户帐户和服务进行交互，并且可以使用以下任意方法触发：
 
@@ -26,7 +26,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 * 使用观察文件夹
 * 使用电子邮件
 
-有关创建AEM Forms JEE工作流进程的更多信息，请参阅[Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65_cn)。
+有关创建AEM Forms JEE工作流进程的更多信息，请参阅[Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65)。
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
@@ -129,7 +129,7 @@ AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工�
 
 1. 使用具有正确连接设置的`ServiceClientFactory`实例创建公共`ProcessManager`客户端(`com.adobe.idp.workflow.client.ProcessManager`)的实例。
 
-   有关详细信息，请参阅[类ProcessManager](https://helpx.adobe.com/cn/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API引用。
+   有关详细信息，请参阅[类ProcessManager](https://helpx.adobe.com/experience-manager/6-3/forms/ProgramLC/javadoc/com/adobe/idp/workflow/client/ProcessManager.html)的Java™ API引用。
 
 1. 检查工作流实例的状态。 如果状态不是2 (COMPLETE)或4 (TERMINATED)，请首先通过调用以下方法终止实例：
 

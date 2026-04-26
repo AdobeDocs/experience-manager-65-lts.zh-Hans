@@ -9,10 +9,10 @@ feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 114a77bc-0b7e-49ce-bca1-e5195b4884dc
-source-git-commit: 3cbc2ddd4ff448278e678d1a73c4ee7ba3af56f4
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '5139'
-ht-degree: 0%
+source-wordcount: '5313'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 在AEM 6.3及更高版本中，引入了此功能的在线版本，称为“在线修订清理”。 与必须关闭AEM实例的脱机修订清理相比，在AEM实例处于联机状态时，可以运行联机修订清理。 默认情况下，“联机修订清理”处于打开状态，建议使用此方式执行修订清理。
 
-**注意**： [观看视频](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html?lang=zh-Hans)，了解如何使用联机修订清理。
+**注意**： [观看视频](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/use-online-revision-clean-up.html)，了解如何使用联机修订清理。
 
 修订清理过程包括三个阶段：**估计**、**压缩**&#x200B;和&#x200B;**清理**。 估算根据可能收集到的垃圾量来确定是否运行下一阶段（压缩）。 在压缩阶段，区段和tar文件被重写，而没有任何未使用的内容。 然后，清理阶段将删除旧区段，包括这些区段可能包含的任何垃圾。 离线模式通常可以回收更多空间，因为在线模式必须考虑AEM的工作集，该工作集保留着不可收集的额外区段。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ### 何时使用联机修订版清理，而不是脱机修订版清理？ {#when-to-use-online-revision-cleanup-as-opposed-to-offline-revision-cleanup}
 
-**建议使用“联机修订清理”来执行修订清理。**&#x200B;离线修订清理只能在例外情况下使用，例如，在迁移到新存储格式之前，或者Adobe客户关怀部门要求您这样做时。
+**建议使用“联机修订清理”来执行修订清理。** 脱机修订清理只能在特殊情况下使用，例如，在迁移到新存储格式之前，或者Adobe客户关怀部门要求您这样做时。
 
 ## 如何运行联机修订清理 {#how-to-run-online-revision-cleanup}
 
@@ -167,12 +167,12 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>哪些因素决定了联机修订版清理的持续时间？</strong></td>
-   <td>因素为：<br />
+   <td>这些因素包括：<br />
     <ul>
      <li>存储库大小</li>
      <li>在系统上加载（每分钟请求数，特别是写操作）</li>
      <li>活动模式（读取与写入）</li>
-     <li>硬件规格(CPU性能、内存、IOPS)</li>
+     <li>硬件规格（CPU性能、内存、IOPS）</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -183,7 +183,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>运行联机修订清理时，对磁盘空间和栈内存的最低要求是什么？</strong></td>
-   <td><p>在联机修订清理期间，会持续监视磁盘空间。 如果可用磁盘空间下降到临界值以下，则该过程将取消。 关键值是存储库当前磁盘占用空间的25%，无法对其进行配置。</p> <p><strong>Adobe建议磁盘大小至少比最初估计的存储库大小大两到三倍。</strong></p> <p>在清理过程中，会持续监控可用栈空间。 如果可用栈空间下降到临界值以下，则取消该进程。 临界值通过org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD配置。 默认值为15%。</p> <p>最小压缩栈大小的建议与AEM内存大小调整建议没有区分。 通常： <strong>如果AEM实例的大小足以处理用例及其预期的有效负载，则清理过程将获得足够的内存。</strong></p> </td>
+   <td><p>在联机修订清理期间，会持续监视磁盘空间。 如果可用磁盘空间低于临界值，整理过程将被取消。 临界值为存储库当前磁盘占用量的 25%，且不可配置。</p> <p><strong>Adobe建议磁盘大小至少比最初估计的存储库大小大两到三倍。</strong></p> <p>在清理过程中，会持续监控可用栈空间。 如果可用栈空间下降到临界值以下，则取消该进程。 临界值通过org.apache.jackrabbit.oak.segment.SegmentNodeStoreService#MEMORY_THRESHOLD配置。 默认值为15%。</p> <p>最小压缩栈大小的建议与AEM内存大小调整建议没有区分。 通常： <strong>如果AEM实例的大小足以处理用例及其预期的有效负载，则清理过程将获得足够的内存。</strong></p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -202,7 +202,7 @@ TarMK GC: no base state available, running full compaction instead
     <ul>
      <li>确保每天执行该操作。<br /> </li>
      <li>通过相应地配置操作仪表板中的维护窗口，确保在最小的存储库活动期间执行该操作。</li>
-     <li>扩展系统资源(CPU、内存、I/O)。</li>
+     <li>扩展系统资源（CPU、内存、I/O）。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -222,7 +222,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>如果性能影响太大，是否可以安全地中止自动压缩？</strong></td>
-   <td>是。自AEM 6.3起，可通过“操作功能板”中的“维护任务窗口”或通过JMX安全地停止它。</td>
+   <td>是。 自AEM 6.3起，可通过“操作功能板”中的“维护任务窗口”或通过JMX安全地停止它。</td>
    <td> </td>
   </tr>
   <tr>
@@ -268,7 +268,7 @@ TarMK GC: no base state available, running full compaction instead
    <td>有关内存映射文件操作的任何注意事项？</td>
    <td>
     <ul>
-     <li><strong>在Windows环境</strong>上，始终强制定期文件访问，因此不使用内存映射访问。 作为一般建议，应将所有可用的RAM分配给栈，并增加segmentCache大小。 您可以通过将segmentCache.size选项添加到org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config来增加segmentCache(例如，segmentCache.size=20480)。 切记不要为操作系统和其他进程留出一些RAM。</li>
+     <li><strong>在Windows环境</strong>上，始终强制定期文件访问，因此不使用内存映射访问。 作为一般建议，应将所有可用的RAM分配给栈，并增加segmentCache大小。 您可以通过将segmentCache.size选项添加到org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config来增加segmentCache（例如，segmentCache.size=20480）。 切记不要为操作系统和其他进程留出一些RAM。</li>
      <li><strong>在非Windows环境中</strong>，增加物理内存的大小以改进存储库的内存映射。</li>
     </ul> </td>
    <td>
@@ -332,7 +332,7 @@ TarMK GC: no base state available, running full compaction instead
    <td><p>联机修订清理后不需要存储库完整性检查。 </p> <p>但是，您可以执行以下操作来检查清理后的存储库状态：</p>
     <ul>
      <li>存储库<a href="/help/sites-deploying/consistency-check.md" target="_blank">遍历检查</a></li>
-     <li>在清理过程完成后使用oak-run工具检查是否存在不一致。 有关如何执行此操作的更多信息，请查看<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache文档。</a>您无需关闭AEM即可运行该工具。</li>
+     <li>在清理过程完成后使用oak-run工具检查是否存在不一致。 有关如何执行此操作的更多信息，请查看<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache文档。</a> 您无需关闭AEM即可运行该工具。</li>
     </ul> </td>
    <td> </td>
   </tr>
@@ -380,7 +380,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>根据运行状况检查和日志条目，联机修订清理连续三次未成功完成。 成功完成联机修订清理需要什么条件？</strong></td>
-   <td>您可以执行几个步骤来查找并修复问题：<br />
+   <td>您可以采取几个步骤来查找并修复问题：<br />
     <ul>
      <li>首先，检查日志条目<br /> </li>
      <li>根据日志中的信息，采取适当措施：
@@ -409,7 +409,7 @@ TarMK GC: no base state available, running full compaction instead
     <ol>
      <li>一种应用程序，可绕过建议的访问机制（如Sling和JCR API），使用较低级别的API/SPI访问存储库，然后超过区段的保留时间。 也就是说，它保留对实体的引用，保留时间超过在线修订版清理所允许的保留时间（默认为24小时）。 此案例是暂时性的，不会导致数据损坏。 要恢复，应使用oak-run工具确认异常的瞬态性质（oak-run检查不应报告任何错误）。 为此，实例必须离线并在之后重新启动。</li>
      <li>外部事件导致磁盘上的数据损坏。 这可以是磁盘故障、磁盘空间不足或意外修改所需的数据文件。 在这种情况下，实例必须离线并使用oak-run检查进行修复。 有关如何执行Oak-run检查的更多详细信息，请阅读以下<a href="https://github.com/apache/jackrabbit-oak/blob/trunk/oak-doc/src/site/markdown/nodestore/segment/overview.md#check" target="_blank">Apache文档</a>。</li>
-     <li>通过<a href="https://experienceleague.adobe.com/zh-hans?support-solution=General&support-tab=home#support" target="_blank">Adobe客户关怀</a>解决所有其他问题。</li>
+     <li>通过<a href="https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support" target="_blank">Adobe客户关怀</a>解决所有其他问题。</li>
     </ol> </td>
    <td> </td>
   </tr>
@@ -420,7 +420,8 @@ TarMK GC: no base state available, running full compaction instead
 
 如果在联机修订清理过程中发生事件，则error.log为详细。 以下列表旨在解释最常见的报文并提供可能的解决方案：
 
-<!---| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
+<!--
+| **Phase** |**Log Messages** |**Explanation** |**Next Steps** |
 |---|---|---|---|
 |   |  |  |  |
 | Estimation |TarMK GC #2: estimation skipped because compaction is paused |The estimation phase is skipped when compaction is disabled on the system by configuration. |Enable Online Revision Cleanup. |
@@ -428,7 +429,8 @@ TarMK GC: no base state available, running full compaction instead
 | Compaction |TarMK GC #2: compaction paused |As long as the compaction phase is paused by configuration, neither the estimation phase nor the compaction phase will be executed. |Enable online revision cleanup. |
 |   |TarMK GC #2: compaction cancelled: ${REASON}. |The compaction phase terminated prematurely. Some examples of events that could interrupt the compaction phase: not enough memory or disk space on the host system. Moreover, compaction can also be cancelled by shutting down the system or by explicitly cancelling it via administrative interfaces such as the Maintenance Window within the Operations Dashobard. |Depends on the given reason. |
 |   |TarMK GC #2: compaction failed in 32.902 min (1974140 ms), after 5 cycles |This message does not mean that there was an unrecoverable error, but only that compaction was terminated after a certain amount of attempts. Also, read the [following paragraph](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes). |Read the following [Oak documentation](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html#how-does-compaction-works-with-concurrent-writes), and the last question of the [Running Online Revision Cleanup](/help/sites-deploying/revision-cleanup.md#running-online-revision-cleanup) section. |
-| Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |-->
+| Cleanup |TarMK GC #2: cleanup interrupted |Cleanup has been cancelled by shutting down the repository. No impact on consistency is expected. Also, disk space is most likely not reclaimed to full extent. It will be reclaimed during next revision cleanup cycle. |Investigate why repository has been shut down and going forward try to avoid shutting down the repository during maintenance windows. |
+-->
 
 <table style="table-layout:auto">
  <tbody>
@@ -461,7 +463,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
    <tr>
     <td>不适用</td>
-    <td>TarMK GC #2：压缩已取消： ${REASON}。</td>
+    <td>TarMK GC #2：压缩已取消：${REASON}。</td>
     <td>压缩阶段提前结束。 可能中断压缩阶段的一些事件示例：主机系统上的内存或磁盘空间不足。 此外，还可以通过关闭系统或通过管理界面（如操作仪表板中的维护窗口）显式取消系统来取消压缩。</td>
     <td>这取决于具体的原因。</td>
   </td>
@@ -529,7 +531,7 @@ oak-run工具引入了多种功能，旨在提高修订清理过程的性能，�
 
 该列表包括几个命令行参数，如下所述：
 
-* **-mmap**&#x200B;您可以将其设置为true或false。 如果设置为true，则使用内存映射访问。 如果设置为false，则使用文件访问权限。 如果未指定，则在64位系统上使用内存映射访问，在32位系统上使用文件访问。 在Windows上，始终强制定期访问文件，并且此选项被忽略。 **此参数已替换 — Dtar.memoryMapped参数。**
+* **-mmap.** 您可以将此参数设置为true或false。 如果设置为true，则使用内存映射访问。 如果设置为false，则使用文件访问权限。 如果未指定，则在64位系统上使用内存映射访问，在32位系统上使用文件访问。 在Windows上，始终强制定期访问文件，并且此选项被忽略。 **此参数已替换 — Dtar.memoryMapped参数。**
 
 * **-Dupdate.limit**。 定义将临时事务刷新到磁盘的阈值。 默认值为 10000。
 
@@ -537,9 +539,9 @@ oak-run工具引入了多种功能，旨在提高修订清理过程的性能，�
 
 * **-Dcompaction-progress-log**。 记录的压缩节点数。 默认值为150000，这意味着在操作期间记录前150000个压缩节点。 将此参数和下面记录的下一个参数一起使用。
 
-* **-Dtar.PersistCompactionMap。**&#x200B;将此参数设置为true可使用磁盘空间而不是栈内存来保持压缩映射持久性。 需要Oak-run工具&#x200B;**版本1.4**&#x200B;及更高版本。 有关详细信息，请参阅[脱机修订清理常见问题](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)部分中的问题3。 **此参数已在Oak版本1.6中删除，没有任何效果。**
+* **-Dtar.PersistCompactionMap.** 将此参数设置为true可使用磁盘空间而不是栈内存来保持压缩映射持久性。 需要Oak-run工具&#x200B;**版本1.4**&#x200B;及更高版本。 有关详细信息，请参阅[脱机修订清理常见问题](/help/sites-deploying/revision-cleanup.md#offline-revision-cleanup-frequently-asked-questions)部分中的问题3。 **此参数已在Oak版本1.6中删除，没有任何效果。**
 
-* **— 强制。**&#x200B;强制压缩并忽略不匹配的区段存储版本。
+* **— 强制** 强制压缩并忽略不匹配的区段存储版本。
 
 >[!CAUTION]
 >

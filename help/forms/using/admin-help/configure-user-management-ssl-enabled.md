@@ -1,5 +1,5 @@
 ---
-title: 为启用了SSL的LDAP服务器配置用户管理
+title: 为启用 SSL 的 LDAP 服务器配置用户管理
 description: 了解如何为启用了SSL的LDAP服务器配置用户管理，以使同步能够通过LDAPS正常工作。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a97cb5a6-4097-4f2e-b932-cb858bd5681a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 6%
 
 ---
 
-# 为启用了SSL的LDAP服务器配置用户管理 {#configure-user-management-for-an-ssl-enabled-ldap-server}
+# 为启用 SSL 的 LDAP 服务器配置用户管理 {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
 要使同步通过LDAPS正常工作，应用程序服务器的Java运行时环境(JRE)中必须存在证书颁发机构(CA)颁发的LDAP证书。 将证书导入应用服务器的JRE cacerts文件，该文件通常位于&#x200B;*[JAVA_HOME]*/jre/lib/security/cacerts目录中。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
    `keytool -import -alias`*别名* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
-1. 出现提示时，键入密码。 （对于Java，默认密码为`changeit`。）将显示一条消息，说明已成功导入证书。
+1. 出现提示时，键入密码。 （对于Java，默认密码为`changeit`。） 将显示一条消息，说明已成功导入证书。
 1. 出现提示时，键入`Yes`以信任证书。
 1. 在“用户管理”中启用SSL，并在配置目录设置时，为SSL选项选择“是”，然后相应地更改端口设置。 默认端口号为636。
 

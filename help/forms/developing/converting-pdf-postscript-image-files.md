@@ -1,6 +1,6 @@
 ---
-title: 将PDF转换为Postscript和Image文件
-description: 使用转换PDF服务，通过Java API和Web服务API将PDF文档转换为PostScript以及多种图像格式(JPEG、JPEG 2000、PNG和TIFF)。
+title: 将 PDF 转化为 Postscript 和图像文件
+description: 使用转换PDF服务，通过Java API和Web服务API将PDF文档转换为PostScript以及多种图像格式（JPEG、JPEG 2000、PNG和TIFF）。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 509b9e53-9af4-4916-afba-2db358ec0764
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 **关于转换PDF服务**
 
-转换PDF服务将PDF文档转换为PostScript和多种图像格式(JPEG、JPEG 2000、PNG和TIFF)。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
+转换PDF服务将PDF文档转换为PostScript和多种图像格式（JPEG、JPEG 2000、PNG和TIFF）。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
 
 您可以使用Convert PDF服务完成以下任务：
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 您必须先创建转化PDF服务客户端，然后才能以编程方式执行转化PDF服务操作。 如果您使用的是Java API，请创建一个`ConvertPdfServiceClient`对象。 如果您使用的是Web服务API，请创建一个`ConvertPDFServiceService`对象。
 
-本节使用AEM Forms中引入的Web服务功能。 要访问新功能，您必须使用`lc_version`属性构建代理对象。 (请参阅[使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)中的“使用Web服务访问新功能”。)
+本节使用AEM Forms中引入的Web服务功能。 要访问新功能，您必须使用`lc_version`属性构建代理对象。 （请参阅[使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)中的“使用Web服务访问新功能”。）
 
 **引用要转换为PostScript文件的PDF文档**
 
@@ -72,9 +72,9 @@ ht-degree: 0%
 
 将PDF文档转换为PostScript文件时，您可以定义运行时选项，以指定创建的PostScript类型。 例如，您可以定义一个级别3的PostScript文件。
 
-通常，生成的PostScript文件将反映输入PDF文档的大小。 如果选择`ShrinkToFit`选项(收缩PostScript文件的输出以适合页面)，您将不会看到输入PDF文档与生成的PostScript文件之间存在差异。 `ShrinkToFit`选项仅在您选择在小于输入PDF文档的页面大小上进行打印时生效。 要选择较小的页面大小，请定义`PageSize`选项。 此外，建议将`RotateAndCenter`选项设置为`true`以获取正确的PostScript输出。
+通常，生成的PostScript文件将反映输入PDF文档的大小。 如果选择`ShrinkToFit`选项（收缩PostScript文件的输出以适合页面），您将不会看到输入PDF文档与生成的PostScript文件之间存在差异。 `ShrinkToFit`选项仅在您选择在小于输入PDF文档的页面大小上进行打印时生效。 要选择较小的页面大小，请定义`PageSize`选项。 此外，建议将`RotateAndCenter`选项设置为`true`以获取正确的PostScript输出。
 
-同样，如果选择`ExpandToFit`选项(该选项会扩展PostScript文件的输出以适合页面)，则只有在选择打印的页面大小大于输入PDF文档的大小时，它才会生效。 要选择更大的页面大小，请定义`PageSize`选项。 此外，建议将`RotateAndCenter`选项设置为`true`以获取正确的PostScript输出。
+同样，如果选择`ExpandToFit`选项（该选项会扩展PostScript文件的输出以适合页面），则只有在选择打印的页面大小大于输入PDF文档的大小时，它才会生效。 要选择更大的页面大小，请定义`PageSize`选项。 此外，建议将`RotateAndCenter`选项设置为`true`以获取正确的PostScript输出。
 
 >[!NOTE]
 >
@@ -141,7 +141,7 @@ ht-degree: 0%
 
 [步骤摘要](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[快速入门(SOAP模式)：使用Java API将PDF文档转换为PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将PDF文档转换为PostScript](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -162,7 +162,7 @@ ht-degree: 0%
 1. 创建转换PDF客户端。
 
    * 使用默认构造函数创建`ConvertPdfServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`ConvertPdfServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`ConvertPdfServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。 您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
    * 通过获取`ConvertPdfServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
@@ -240,7 +240,7 @@ ht-degree: 0%
 
 **检索要转换的PDF文档**
 
-检索PDF文档以转换为图像。 无法将交互式PDF文档转换为图像。 如果尝试这样做，则会引发异常。 要将交互式PDF文档转换为图像文件，必须先拼合PDF文档，然后才能将其转换。 (请参阅[拼合PDF文档](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。)
+检索PDF文档以转换为图像。 无法将交互式PDF文档转换为图像。 如果尝试这样做，则会引发异常。 要将交互式PDF文档转换为图像文件，必须先拼合PDF文档，然后才能将其转换。 （请参阅[拼合PDF文档](/help/forms/developing/creating-document-output-streams.md#flattening-pdf-documents)。）
 
 **设置运行时选项**
 
@@ -252,7 +252,7 @@ ht-degree: 0%
 
 **从收藏集中检索图像文件**
 
-您可以从Convert PDF服务返回的收藏集对象中检索图像文件。 集合中的每个元素都是可另存为图像文件(如JPG文件)的`com.adobe.idp.Document`实例（如果您使用的是Web服务，则是`BLOB`实例）。
+您可以从Convert PDF服务返回的收藏集对象中检索图像文件。 集合中的每个元素都是可另存为图像文件（如JPG文件）的`com.adobe.idp.Document`实例（如果您使用的是Web服务，则是`BLOB`实例）。
 
 图像文件的格式依赖于`ImageConvertFormat`运行时选项。 也就是说，如果将`ImageConvertFormat`运行时选项设置为`ImageConvertFormat.JPEG`，则可以将图像文件另存为JPG文件。
 
@@ -306,7 +306,7 @@ ht-degree: 0%
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API将PDF文档转换为JPEG文件](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将PDF文档转换为JPEG文件](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
 ### 使用Web服务API将PDF文档转换为图像文件 {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
 
@@ -323,7 +323,7 @@ ht-degree: 0%
 1. 创建转换PDF客户端。
 
    * 使用默认构造函数创建`ConvertPdfServiceClient`对象。
-   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`ConvertPdfServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`ConvertPdfServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/ConvertPDFService?blob=mtom`）。 您无需使用`lc_version`属性。 但是，请指定`?blob=mtom`。
    * 通过获取`ConvertPdfServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：

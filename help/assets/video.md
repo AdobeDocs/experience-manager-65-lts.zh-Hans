@@ -5,9 +5,9 @@ feature: Asset Management
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 5dc734b3-22e3-4839-bc72-b96fa6dd8bd2
-source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '10480'
+source-wordcount: '10812'
 ht-degree: 2%
 
 ---
@@ -140,7 +140,7 @@ Dynamic Media中的视频是一款端到端解决方案，可让您轻松发布�
 * 使用完整的元数据支持来组织、浏览和搜索视频，从而高效管理视频资产。
 * 将自适应视频集交付到Web以及桌面和移动设备，包括iPhone、iPad、Android™、BlackBerry®和Windows Phone。
 
-各种iOS平台支持自适应视频流。 请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference#video)。
+各种iOS平台支持自适应视频流。 请参阅[Dynamic Media查看器参考指南](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference#video)。
 
 Dynamic Media支持MP4 H.264视频的移动视频播放。<!-- LINK IS 404 WITH NO SUITABLE REPLACEMENT You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482). -->
 
@@ -156,7 +156,7 @@ Dynamic Media支持MP4 H.264视频的移动视频播放。<!-- LINK IS 404 WITH 
 
 <!-- See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-另请参阅[仅适用于Experience Manager Assets和Dynamic Media Classic的查看器](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc)和[仅适用于Experience Manager资源的查看器](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
+另请参阅[仅适用于Experience Manager Assets和Dynamic Media Classic的查看器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc)和[仅适用于Experience Manager资源的查看器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
 
 ## 最佳实践：使用HTML5视频查看器 {#best-practice-using-the-html-video-viewer}
 
@@ -174,7 +174,7 @@ Dynamic Media HTML5视频查看器预设是可靠的视频播放器。 您可以
 
 您可以将富媒体内容的范围扩展到桌面和移动设备用户，并确保提供简化的视频体验。
 
-另请参阅[关于HTML5查看器](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
+另请参阅[关于HTML5查看器](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only)。
 
 ### 使用HTML5视频查看器在台式计算机和移动设备上播放视频 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
 
@@ -275,13 +275,15 @@ DASH是国际标准，HLS是Apple标准。 两者都用于自适应视频流。 
 
 ## 视频编码最佳实践 {#best-practices-for-encoding-videos}
 
-如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**Dynamic Media编码视频**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 （如果您未使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。）
+如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**Dynamic Media编码视频**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。 如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 （如果您未使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。）
 
-<!-- DEAD The following are best-practice tips for encoding source video files.
+<!--
+DEAD The following are best-practice tips for encoding source video files.
 
 For advice about video encoding, see [Video Encoding Basics](https://www.adobe.com/go/learn_s7_encoding_en).
 
-* [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en). -->
+* [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en).
+-->
 
 ### Source视频文件 {#source-video-files}
 
@@ -323,7 +325,7 @@ For advice about video encoding, see [Video Encoding Basics](https://www.adobe.c
 | 1.78 | 16:9 |
 | 0.56 | 9:16 |
 
-例如，宽度为1440×高度为1080的视频的长宽比为1440/1080，即1.33。在这种情况下，您可以选择宽高比为4:3的视频编码预设来编码视频文件。
+例如，宽度为1440×高度为1080的视频的长宽比为1440/1080，即1.33。 在这种情况下，您可以选择宽高比为4:3的视频编码预设来编码视频文件。
 
 ### 比特率 {#bitrate}
 
@@ -450,11 +452,11 @@ Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.2
 1. 选择Experience Manager左上角的Experience Manager徽标，然后在左边栏中，单击&#x200B;**[!UICONTROL 工具]** （锤子图标）> **[!UICONTROL Assets]** > **[!UICONTROL 视频报表]**。
 1. 在“视频报表”页面上，执行以下操作之一：
 
-   * 在右上角附近，选择&#x200B;**刷新视频报告**&#x200B;图标。
+   * 在右上角附近，选择&#x200B;**刷新视频报告**图标。
 仅当报表的结束日期为当天时，才使用刷新。 这样做可确保您看到自上次运行报表以来发生的视频跟踪。
 
-   * 在右上角附近，选择&#x200B;**日期选取器**&#x200B;图标。
-指定要获取其视频数据的开始和结束日期范围，然后选择&#x200B;**[!UICONTROL 运行报表]**。
+   * 在右上角附近，选择&#x200B;**日期选取器**图标。
+指定要获取其视频数据的开始和结束日期范围，然后选择**[!UICONTROL 运行报表]**。
 
    “排名最前的量度”组框标识了您网站上所有&#x200B;*已发布*&#x200B;视频的各种聚合量度。
 
@@ -464,7 +466,7 @@ Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.2
 
 如果您使用Dynamic Media提供的开箱即用视频查看器，或者您基于开箱即用视频查看器创建了自定义查看器预设，则无需执行其他步骤即可查看视频报表。 但是，如果您已基于HTML5 Viewer SDK API创建自己的视频查看器，请使用以下步骤确保视频查看器向Dynamic Media视频报表发送跟踪事件。
 
-使用[Adobe Dynamic Media查看器参考指南](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources)和[HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)创建您自己的视频查看器。
+使用[Adobe Dynamic Media查看器参考指南](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources)和[HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)创建您自己的视频查看器。
 
 **要查看基于使用Dynamic Media HTML5查看器SDK创建的视频查看器的视频报表，请执行以下操作：**
 
@@ -528,7 +530,7 @@ Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.2
 
 ## 关于Dynamic Media中对视频的多个字幕和音频轨道支持{#about-msma}
 
-借助Dynamic Media中的多个字幕和音轨功能，您可以轻松地将多个字幕和音轨添加到主视频中。 此功能意味着全球观众都能看懂您的视频。只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的无障碍功能准则。此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
+借助Dynamic Media中的多个字幕和音轨功能，您可以轻松地将多个字幕和音轨添加到主视频中。 此功能意味着全球观众都能看懂您的视频。 只需自定义一个主视频，即可发布到多种语言的全球观众，并遵循不同地区的辅助功能准则。 此外，作者从用户界面中的一个选项卡即可管理字幕和音轨。
 
 ![Dynamic Media中的“字幕和音轨”选项卡，以及显示视频已上传`.vtt`个字幕文件以及已上传.MP3音轨文件的表。](assets-dm/msma-subtitle-audiotracks-tab2.png)
 
@@ -542,7 +544,7 @@ Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.2
 |  | 评论轨道 |
 |  | 描述性音频 |
 
-Dynamic Media [和所有Dynamic Media视频查看器支持的所有](/help/assets/assets-formats.md)视频格式（Dynamic Media *Video_360*&#x200B;查看器除外）都支持与多个字幕和音轨一起使用。
+Dynamic Media ](/help/assets/assets-formats.md)和所有Dynamic Media视频查看器支持的所有[视频格式（Dynamic Media *Video_360*&#x200B;查看器除外）都支持与多个字幕和音轨一起使用。
 
 通过必须由Adobe客户支持启用（打开）的功能切换，您的Dynamic Media帐户可以使用多个字幕和音频跟踪功能。
 
@@ -585,7 +587,7 @@ WebVTT和Adobe `.vtt`格式支持添加的字幕和字幕。 此外，添加的M
 
      | 题注元数据 | 描述 |
      |--- |--- |
-     | 文件名 | 默认文件名是从原始文件名派生的。 只能在上传时更改文件名，以后不能更改。 文件名字符要求与AEM Assets相同。<br>不能将同一文件名用于其他字幕文件和音轨文件。 |
+     | 文件名 | 默认文件名是从原始文件名派生的。 只能在上传时更改文件名，以后不能更改。 文件名字符要求与AEM Assets相同。<br>其他字幕文件和音轨文件不能使用相同的文件名。 |
      | 语言 | 选择题注的语言。 |
      | 类型 | 选择您正在使用的字幕类型。<br>**子标题** — 与翻译或转录此对话框的视频一起显示的标题文本。<br>**字幕** — 字幕文本包含背景噪音、说话人辨别及其他相关详细信息。 它还提供对话框的翻译或转录。 所有这些方面使耳聋或听力缺佳的个人更容易访问这些内容。 |
      | 标签 | 在媒体播放器的&#x200B;**[!UICONTROL 选择音频或字幕]**&#x200B;弹出列表中为字幕名称显示的文本。 标签是客户看到的与字幕或描述跟踪对应的内容。 例如 `English (CC)`。 |
@@ -599,10 +601,10 @@ WebVTT和Adobe `.vtt`格式支持添加的字幕和字幕。 此外，添加的M
 
      | 音轨元数据 | 描述 |
      |--- |--- |
-     | 文件名 | 默认文件名是从原始文件名派生的。 只能在上传时更改文件名，以后不能更改。 文件名字符要求与AEM Assets相同。<br>不能对附加的音轨文件或字幕文件使用相同的文件名。 |
+     | 文件名 | 默认文件名是从原始文件名派生的。 只能在上传时更改文件名，以后不能更改。 文件名字符要求与AEM Assets相同。<br>其他音轨文件或字幕文件不能使用相同的文件名。 |
      | 语言 | 选择音轨的语言。 |
      | 类型 | 选择您正在使用的音轨类型。<br>**原始** — 音频曲目最初附加到视频，并在标签中以`[Original]`形式表示，默认情况下选择`English`语言。 虽然&#x200B;**[!UICONTROL 标签]**&#x200B;和&#x200B;**[!UICONTROL 语言]**&#x200B;可以在&#x200B;**[!UICONTROL 编辑音轨]**&#x200B;对话框中更改，但如果重新处理主视频，则默认为原始值。<br>**标准** — 用于原始语言以外的语言的附加音频轨道。<br>**音频描述** — 一个音频轨道，其中还包括视频中非语言操作和手势的描述性叙述，使视障人士更容易访问内容。 |
-     | 标签 | 在媒体播放器的&#x200B;**[!UICONTROL 选择音频或子标题]**&#x200B;弹出列表中显示为音频轨道名称的文本。 该标签是客户看到的与音轨对应的内容。 例如，`English [Original]`。默认情况下，附加到视频的音频标签设置为`[Original]`。 |
+     | 标签 | 在媒体播放器的&#x200B;**[!UICONTROL 选择音频或子标题]**&#x200B;弹出列表中显示为音频轨道名称的文本。 该标签是客户看到的与音轨对应的内容。 例如，`English [Original]`。 默认情况下，附加到视频的音频标签设置为`[Original]`。 |
 
      您可以稍后更改或编辑此音频轨道元数据（如有必要）。 发布视频时，这些详细信息会反映在已发布视频的公共URL上。
 
@@ -687,7 +689,7 @@ Dynamic Media支持通过URL修饰符将单个字幕与视频相加。 请参阅
 1. 在“属性”页面上，选择&#x200B;**[!UICONTROL 字幕和音轨]**&#x200B;选项卡。
 1. 在&#x200B;**音轨**&#x200B;标题下，选择要设置为视频的默认音轨文件。
 1. 选择&#x200B;**[!UICONTROL 设置为默认值]**。
-在&#x200B;**设置为默认值**&#x200B;对话框中，选择&#x200B;**[!UICONTROL 替换]**。
+在**设置为默认值**&#x200B;对话框中，选择&#x200B;**[!UICONTROL 替换]**。
 
    ![声道标题具有选定的声道文件名并突出显示“设置为默认值”按钮。](assets-dm/msma-defaultaudiotrack2.png)*正在设置视频的默认音轨。*
 
@@ -724,8 +726,8 @@ Dynamic Media支持通过URL修饰符将单个字幕与视频相加。 请参阅
 
    ![视频查看器中的“音频和字幕”弹出列表。](assets-dm/msma-selectaudiosubtitle.png)*模拟用户选择音频和字幕进行视频播放。*
 
-1. 要开始播放，请选择视频的&#x200B;**[!UICONTROL 播放]**&#x200B;按钮。
-请注意左下角的&#x200B;**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL 嵌入]**&#x200B;按钮。 使用这些按钮分别[将视频的URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)或[将视频嵌入网页](/help/assets/embed-code.md)。
+1. 要开始播放，请选择视频的&#x200B;**[!UICONTROL 播放]**按钮。
+请注意左下角的**[!UICONTROL URL]**&#x200B;和&#x200B;**[!UICONTROL 嵌入]**&#x200B;按钮。 使用这些按钮分别[将视频的URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)或[将视频嵌入网页](/help/assets/embed-code.md)。
 1. 在预览页面的右上角附近，选择&#x200B;**[!UICONTROL 关闭]**。
 
 ### 从视频中删除字幕或音频跟踪文件
@@ -796,7 +798,7 @@ Dynamic Media支持通过URL修饰符将单个字幕与视频相加。 请参阅
 
 Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式。 这种转换意味着，您可以将JSON文本作为隐藏但完整的视频转录内容嵌入到网页中。 然后，搜索引擎可以抓取和索引内容，以使视频更易于被发现，并为客户提供有关视频内容的更多详细信息。
 
-有关在URL中使用JSON函数的更多信息，请参阅[提供静态（非图像）内容](https://experienceleague.adobe.com/zh-hans/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents#image-serving-api)。
+有关在URL中使用JSON函数的更多信息，请参阅[提供静态（非图像）内容](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents#image-serving-api)。
 
 **向视频添加隐藏式字幕：**
 
@@ -808,19 +810,21 @@ Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式�
 
    有许多网站同时提供免费和高级的工具和服务，可用于在Dynamic Media之外创作WebVTT描述/描述文件。<!-- THE FOLLOWING LINK IS NO LONGER LIVE. CHECKED DECEMBER 13, 2023 For example, to create a simple video caption file with no styling, you can use the following free online caption authoring and editing tool: -->
 
-   <!--[WebVTT Caption Maker](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
+   <!--
+[WebVTT题注生成器](https://testdrive-archive.azurewebsites.net/Graphics/CaptionMaker/Default.html)
 
-   For best results, use the tool in Internet Explorer 9 or above, Google Chrome, or Safari.
+要获得最佳结果，请在Internet Explorer 9或更高版本、Google Chrome或Safari中使用该工具。
 
-   In the tool, in the **[!UICONTROL Enter URL of video file]** field, paste the copied URL of your video file and then click **[!UICONTROL Load]**. See [Obtain a URL for an Asset](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset) to get the URL to the video file itself which you can then paste into the **[!UICONTROL Enter URL of video file field]**. Internet Explorer, Chrome, or Safari can then natively play back the video. -->
+在该工具的&#x200B;**[!UICONTROL 输入视频文件的URL]**&#x200B;字段中，粘贴复制的视频文件的URL，然后单击&#x200B;**[!UICONTROL 加载]**。 请参阅[获取资产的URL](/help/assets/linking-urls-to-yourwebapplication.md#obtaining-a-url-for-an-asset)，以获取视频文件的URL，然后您可以将该URL粘贴到&#x200B;**[!UICONTROL 输入视频文件的URL字段]**中。 然后，Internet Explorer、Chrome或Safari可以本机播放视频。
+-->
 
-   按照站点中的屏幕说明创作和保存WebVTT文件。 完成后，复制字幕文件内容并将其粘贴到纯文本编辑器中，并以`.vtt`文件扩展名保存。
+按照站点中的屏幕说明创作和保存WebVTT文件。 完成后，复制字幕文件内容并将其粘贴到纯文本编辑器中，并以`.vtt`文件扩展名保存。
 
-   >[!NOTE]
-   >
-   >为了全局支持多种语言的视频字幕，WebVTT标准要求您为要支持的每种语言创建单独的`.vtt`文件和调用。
+>[!NOTE]
+>
+>为了全局支持多种语言的视频字幕，WebVTT标准要求您为要支持的每种语言创建单独的`.vtt`文件和调用。
 
-   通常，您希望将标题`.vtt`文件命名为与视频文件相同的名称，并将其附加到语言区域设置，如 — EN、-FR或 — DE。 这样，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
+通常，您希望将标题`.vtt`文件命名为与视频文件相同的名称，并将其附加到语言区域设置，如 — EN、-FR或 — DE。 这样，它可以帮助您使用现有Web内容管理系统自动生成视频URL。
 
 1. 在Experience Manager中，将WebVTT描述文件上传到DAM。
 1. 导航到&#x200B;*已发布*&#x200B;视频资产，您要将其与您上传的字幕文件相关联。
@@ -900,7 +904,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>对于弹出视频查看器体验，</td>
        <td>
        <ol>
-       <li>导航到<i>已发布的</i>视频资产，您要将其与上载的章节文件关联。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。请参阅<a href="/help/assets/publishing-dynamicmedia-assets.md">发布Assets。</a></li>
+       <li>导航到<i>已发布的</i>视频资产，您要将其与上载的章节文件关联。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。 请参阅<a href="/help/assets/publishing-dynamicmedia-assets.md">发布Assets。</a></li>
        <li>从下拉菜单中，单击<strong>查看器</strong>。</li>
        <li>在左边栏中，单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
        <li>在左边栏的底部，单击<strong>URL</strong>。</li>
@@ -912,7 +916,7 @@ Cost-efficient access to rapidly evolving technology.
        <td>对于嵌入的视频查看器体验，<br /> </td>
        <td>
        <ol>
-       <li>导航到<i>已发布的</i>视频资产，您要将其与上载的章节文件关联。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。请参阅<a href="/help/assets/publishing-dynamicmedia-assets.md">发布Assets。</a></li>
+       <li>导航到<i>已发布的</i>视频资产，您要将其与上载的章节文件关联。 请注意，只有在首次<i>发布</i>资产<i>后</i>，才可复制 URL。 请参阅<a href="/help/assets/publishing-dynamicmedia-assets.md">发布Assets。</a></li>
        <li>从下拉菜单中，单击<strong>查看器</strong>。</li>
        <li>在左边栏中，单击视频查看器预设名称。 视频预览会在单独的页面中打开。</li>
        <li>在左边栏的底部，单击<strong>嵌入</strong>。</li>
@@ -1108,7 +1112,7 @@ String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean
    * 未使用Dynamic Media中的自适应视频集摄取视频。
 
 * 在连接到Dynamic Media时出现问题时记录`IOException`。
-* 当传递的`UnsupportedOperationException`参数为`manifestType`且未使用DASH格式处理视频时，将记录`ManifestType.DASH`。
+* 当传递的`manifestType`参数为`ManifestType.DASH`且未使用DASH格式处理视频时，将记录`UnsupportedOperationException`。
 
 以下是使用在&#x200B;*HTTPWhiteBoard*&#x200B;规范中编写的Servlet的上述API示例。 选择每个选项卡以获取代码语法。
 
@@ -1208,7 +1212,7 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
->[!TAB servlet的 响应类]
+>servlet的[!TAB 响应类]
 
 +++servlet的&#x200B;**响应类** 
 
@@ -1238,7 +1242,7 @@ public abstract class VideoResponse {
 
 +++
 
->[!TAB 在servlet 中引用的常量文件]
+>在servlet]中引用的[!TAB 常量文件
 
 +++在servlet **中引用的**&#x200B;常量文件 
 
@@ -1371,13 +1375,13 @@ public class DMSampleApiHttpContext extends ServletContextHelper {
 
 ### 使用示例servlet
 
-通过在`GET`上执行`/dmSample/dynamicmedia/video/manifestUrl`操作来调用该servlet。 传递以下查询参数：
+通过在`/dmSample/dynamicmedia/video/manifestUrl`上执行`GET`操作来调用该servlet。 传递以下查询参数：
 
 | 查询参数 | 描述 |
 | --- | --- |
 | `assetPath` | 必填。 生成`manifestUrl`的视频路径。 |
-| `manifestType` | 可选。参数可以是DASH或HLS。 如果未传递，则默认为DASH。 |
-| `onlyIfPublished` | 可选。如果通过，则仅在发布视频时返回`manifestUrl`。 |
+| `manifestType` | 可选。 参数可以是DASH或HLS。 如果未传递，则默认为DASH。 |
+| `onlyIfPublished` | 可选。 如果通过，则仅在发布视频时返回`manifestUrl`。 |
 
 在本例中，我们假定进行以下设置：
 

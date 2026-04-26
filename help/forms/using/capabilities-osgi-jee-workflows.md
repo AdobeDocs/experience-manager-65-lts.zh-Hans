@@ -1,6 +1,6 @@
 ---
-title: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
-description: OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能
+title: OSGi 上以 AEM Forms 为中心的工作流以及 AEM Forms JEE 工作流的操作和功能
+description: OSGi 上以 AEM Forms 为中心的工作流以及 AEM Forms JEE 工作流的操作和功能
 contentOwner: khsingh
 solution: Experience Manager, Experience Manager Forms
 hide: true
@@ -8,14 +8,14 @@ hidefromtoc: true
 feature: Adaptive Forms,AEM Forms on OSGi
 role: User, Developer
 exl-id: d0f54236-5dc2-4c64-87c5-85e5e85e8cf7
-source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 20%
+source-wordcount: '959'
+ht-degree: 24%
 
 ---
 
-# OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流的操作和功能 {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
+# OSGi 上以 AEM Forms 为中心的工作流以及 AEM Forms JEE 工作流的操作和功能 {#actions-and-capabilities-of-form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
 ## AEM收件箱和HTML Workspace {#aem-inbox-and-html-workspace}
 
@@ -103,7 +103,7 @@ ht-degree: 20%
 
 ## OSGi和AEM Forms JEE工作流中以表单为中心的AEM工作流 {#form-centric-aem-workflows-on-osgi-and-aem-forms-jee-workflows}
 
-OSGi和AEM Forms JEE工作流上以表单为中心的AEM工作流(JEE流程管理上的AEM Forms)具有一组不同的功能。 下表可帮助您了解OSGi上以表单为中心的AEM工作流和JEE工作流上以AEM Forms为中心的工作流中提供的重要功能：
+OSGi和AEM Forms JEE工作流上以表单为中心的AEM工作流（JEE流程管理上的AEM Forms）具有一组不同的功能。 下表可帮助您了解OSGi上以表单为中心的AEM工作流和JEE工作流上以AEM Forms为中心的工作流中提供的重要功能：
 
 <table>
  <tbody>
@@ -293,7 +293,7 @@ OSGi和AEM Forms JEE工作流上以表单为中心的AEM工作流(JEE流程管�
    <td>支持</td>
   </tr>
   <tr>
-   <td>进程报告</td>
+   <td>流程报告</td>
    <td>不支持</td>
    <td>支持</td>
   </tr>

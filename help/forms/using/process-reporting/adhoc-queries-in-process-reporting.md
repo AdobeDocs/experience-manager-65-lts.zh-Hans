@@ -1,5 +1,5 @@
 ---
-title: 进程报告中的临时查询
+title: 流程报告中的临时查询
 description: 创建自定义查询以在Process Reporting中搜索AEM Forms on JEE流程和任务详细信息
 content-type: reference
 topic-tags: process-reporting
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 7380be9a-7f5c-46df-97f8-6309daa2a566
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
 
-# 进程报告中的临时查询{#ad-hoc-queries-in-process-reporting}
+# 流程报告中的临时查询{#ad-hoc-queries-in-process-reporting}
 
 ## 进程报告中的临时查询 {#ad-hoc-queries-in-process-reporting-1}
 
@@ -151,7 +151,7 @@ ht-degree: 0%
    ![task_search_result](assets/task_search_result.png)
 
 1. 单击左上角的边栏按钮![lc_pr_rail_button](assets/lc_pr_rail_button.png)以折叠&#x200B;**我的筛选器**&#x200B;窗格并展开&#x200B;**报表**&#x200B;面板的可用空间。
-1. 使用&#x200B;**报表**&#x200B;面板右上角的选项对查询结果执行操作。
+1. 使用**报表**面板右上角的选项对查询结果执行操作。
 
    * **刷新**：使用存储中的最新数据刷新报告
 

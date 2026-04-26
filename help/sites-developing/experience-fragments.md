@@ -10,10 +10,10 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: bc621086-8128-4836-a580-dca99f61c439
-source-git-commit: d894bb145d70fba819cc8452056e9e46112e69d9
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 0%
+source-wordcount: '1767'
+ht-degree: 1%
 
 ---
 
@@ -25,11 +25,11 @@ ht-degree: 0%
 
 主体验片段或变体体验片段（或两者）使用以下内容：
 
-* `sling:resourceType` ： `/libs/cq/experience-fragments/components/xfpage`
+* `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
 
 由于没有`/libs/cq/experience-fragments/components/xfpage/xfpage.html`，因此它将还原为以下内容：
 
-* `sling:resourceSuperType` ： `wcm/foundation/components/page`
+* `sling:resourceSuperType` : `wcm/foundation/components/page`
 
 ## 普通HTML演绎版 {#the-plain-html-rendition}
 
@@ -99,7 +99,7 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 
 >[!CAUTION]
 >
->体验片段仅支持&#x200B;***1&rbrace;***&#x200B;可编辑模板[。](/help/sites-developing/page-templates-editable.md)
+>体验片段仅支持&#x200B;***1} [可编辑模板](/help/sites-developing/page-templates-editable.md)。***
 >
 >体验片段只能在基于可编辑模板的页面上使用。
 
@@ -121,7 +121,8 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 1. Add the template details manually in `cq:allowedTemplates` on the `/content/experience-fragment` node.
 -->
 
-<!-- >[!NOTE]
+<!--
+>[!NOTE]
 >
 >[Allowed templates](/help/sites-authoring/experience-fragments.md#configuring-allowed-templates) can be configured in the Experience Fragments console.
 -->
@@ -149,9 +150,9 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 * 向其中添加组件，
 * 然后以HTML格式或JSON格式将其导出为Adobe Target选件。
 
-可在AEM[的创作实例上](/help/sites-administering/experience-fragments-target.md#Prerequisites)启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
+可在AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites)的创作实例上[启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
 
-链接外部化器用于确定在创建Target选件的HTML版本(随后将发送到Adobe Target)时所需的正确URL。 Adobe Target需要拥有Target HTML选件中所有链接的公共访问权限。 在使用体验片段和这些链接引用的任何资源之前，先发布它们。
+链接外部化器用于确定在创建Target选件的HTML版本（随后将发送到Adobe Target）时所需的正确URL。 Adobe Target需要拥有Target HTML选件中所有链接的公共访问权限。 在使用体验片段和这些链接引用的任何资源之前，先发布它们。
 
 
 默认情况下，构造Target HTML选件时，会向AEM中的自定义Sling选择器发送请求。 此选择器名为`.nocloudconfigs.html`。 顾名思义，它创建了体验片段的纯HTML渲染，但不包括云配置（这会是多余的信息）。

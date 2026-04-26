@@ -1,5 +1,5 @@
 ---
-title: 进程报告中的预定义报告
+title: 流程报告中的预定义报告
 description: 查询AEM Forms on JEE流程数据以创建长时间运行的流程、流程持续时间和工作流量的报告
 content-type: reference
 topic-tags: process-reporting
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 3bf65798-a8ce-4864-9d77-952bb8d8da43
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 0%
+source-wordcount: '703'
+ht-degree: 1%
 
 ---
 
-# 进程报告中的预定义报告 {#pre-defined-reports-in-process-reporting}
+# 流程报告中的预定义报告 {#pre-defined-reports-in-process-reporting}
 
 ## 正在报告的预定义报告 {#pre-defined-reports-in-process-reporting-1}
 

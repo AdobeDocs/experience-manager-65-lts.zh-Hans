@@ -9,14 +9,13 @@ docset: aem65
 role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: AEM Forms on JEE,AEM Forms Upgrade
-exl-id: 6d8c0e24-7f08-4e66-bb12-2cf1cfe1d5d3
-source-git-commit: fb9f6ef794da7f3b242e9e81a6c2505692c16cd8
+exl-id: 67a96376-412e-4065-b7af-fbb720a4720a
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
-
 
 # 适用于AEM Forms on JEE的安装和升级工作流 {#aem-forms-jee-installation-upgrade-documentation}
 
@@ -53,7 +52,7 @@ ht-degree: 2%
 | 指南 | 描述 |
 | --- | --- |
 | [准备安装AEM Forms （单服务器） (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/prepare-install-single-server.pdf) | 在&#x200B;**之前**&#x200B;使用&#x200B;**全新单服务器（非全包安装）安装**。 本文档列出了在单服务器拓扑中在JEE上安装AEM Forms的先决条件和环境准备步骤。 |
-| [在JEE for JBoss (PDF)上安装和部署AEM Forms &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成**&#x200B;准备安装AEM Forms （单服务器）*后*&#x200B;遵循本指南。 |
+| [在JEE for JBoss (PDF)上安装和部署AEM Forms ](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成&#x200B;*准备安装AEM Forms （单服务器）*后**&#x200B;遵循本指南。 |
 
 <!--
 | Preparing to Install AEM Forms (Server Cluster) (PDF) (**TBD**) | Use **before** a **fresh cluster installation**. Describes prerequisites and environment preparation steps for installing AEM Forms on JEE in a server cluster topology. *(Link will be added once the PDF is available.)* |
@@ -73,9 +72,9 @@ ht-degree: 2%
 | 指南 | 描述 |
 | --- | --- |
 | [准备升级AEM Forms (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/prepare-upgrade.pdf) | 在&#x200B;**之前使用**&#x200B;进行&#x200B;**单服务器升级**。 介绍在升级到AEM 6.5 LTS Forms之前如何准备环境。 它适用于以单服务器安装模式在JEE上运行AEM Forms的环境。 |
-| [在JEE上升级到AEM Forms for JBoss (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/upgrade-jboss.pdf) | 在&#x200B;**单服务器**&#x200B;安装模式下，用于JBoss上的&#x200B;**逐步升级过程**。 在&#x200B;**完成**&#x200B;准备升级AEM Forms *后，请遵循本指南*。 |
+| [在JEE上升级到AEM Forms for JBoss (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/upgrade-jboss.pdf) | 在&#x200B;**单服务器**&#x200B;安装模式下，用于JBoss上的&#x200B;**逐步升级过程**。 在&#x200B;**完成&#x200B;*准备升级AEM Forms*后，请遵循本指南**。 |
 
 <!--
 | Preparing to Install AEM Forms (Server Cluster) (PDF) (**TBD**) | Use **before** a **cluster upgrade**. Describes how to prepare the environment for a server cluster before upgrading to AEM 6.5 LTS Forms. It applies to environments running AEM Forms on JEE in a server cluster installation mode. *(Link will be added once the PDF is available.)* |
-| Upgrading to AEM Forms on JEE for JBoss (Cluster) (PDF) (**TBD**) | Use for the **step-by-step upgrade procedure** on JBoss in a **clustered** installation mode. Follow this guide **after** completing *Preparing to Install AEM Forms (Server Cluster)*. *(Link will be added once the PDF is available.)* | -->
-
+| Upgrading to AEM Forms on JEE for JBoss (Cluster) (PDF) (**TBD**) | Use for the **step-by-step upgrade procedure** on JBoss in a **clustered** installation mode. Follow this guide **after** completing *Preparing to Install AEM Forms (Server Cluster)*. *(Link will be added once the PDF is available.)* |
+-->

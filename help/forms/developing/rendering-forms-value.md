@@ -1,5 +1,5 @@
 ---
-title: 按值呈现Forms
+title: 按值渲染表单
 description: 使用Forms API (Java)通过Java API和Web服务API按值呈现表单。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 8ad8cf67-3e90-4790-a063-099134b377a3
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1822'
-ht-degree: 0%
+source-wordcount: '1848'
+ht-degree: 1%
 
 ---
 
-# 按值呈现Forms {#rendering-forms-by-value}
+# 按值渲染表单 {#rendering-forms-by-value}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -41,7 +41,7 @@ Forms服务还可以解决表单设计中链接内容的位置。 例如，从�
 
 >[!NOTE]
 >
->虽然您可以按值呈现不同类型的表单(例如，包含使用权限的HTML表单或表单)，但本节将讨论如何呈现交互式PDF forms。
+>虽然您可以按值呈现不同类型的表单（例如，包含使用权限的HTML表单或表单），但本节将讨论如何呈现交互式PDF forms。
 
 >[!NOTE]
 >
@@ -95,7 +95,7 @@ Forms服务还可以解决表单设计中链接内容的位置。 例如，从�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
 [将文档传递到Forms服务](/help/forms/developing/passing-documents-forms-service.md)
 
@@ -144,9 +144,9 @@ Forms服务还可以解决表单设计中链接内容的位置。 例如，从�
 
 **另请参阅**
 
-[按值呈现Forms](/help/forms/developing/rendering-forms.md)
+[按值渲染表单](/help/forms/developing/rendering-forms.md)
 
-[快速入门(SOAP模式)：使用Java API按值渲染](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API按值渲染](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -201,6 +201,6 @@ Forms服务还可以解决表单设计中链接内容的位置。 例如，从�
 
 **另请参阅**
 
-[按值呈现Forms](#rendering-forms-by-value)
+[按值渲染表单](#rendering-forms-by-value)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)

@@ -1,5 +1,5 @@
 ---
-title: 即时用户配置
+title: 即时用户设置
 description: 在成功进行身份验证后，使用及时设置将用户添加到“用户管理”，并动态地将相关角色和组分配给新用户。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a7c566f0-ec89-4e98-b31d-e3f23f7e3524
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 0%
+source-wordcount: '612'
+ht-degree: 1%
 
 ---
 
-# 即时用户配置 {#just-in-time-user-provisioning}
+# 即时用户设置 {#just-in-time-user-provisioning}
 
 AEM Forms支持对User Management中尚不存在的用户进行实时配置。 利用及时配置，用户在其凭据成功进行身份验证后会自动添加到“用户管理”中。 此外，相关的角色和组会动态分配给新用户。
 

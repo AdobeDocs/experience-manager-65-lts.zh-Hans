@@ -8,9 +8,9 @@ role: User
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 88dc81aa-f8b2-403e-bd87-ea224ac2d0c2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '595'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/previewing-3d-assets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/previewing-3d-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 Experience Manager支持在创作过程中上传、交付和以交互式方式预览3D资产。
@@ -68,16 +68,16 @@ Experience Manager支持在创作过程中上传、交付和以交互式方式�
 
 1. 在页面的右上角附近，从“视图”下拉列表中选择&#x200B;**[!UICONTROL 卡片视图]**，然后导航到要预览的3D资源。
 
-   ![3D卡选择](/help/assets/assets-dm/3d-card-select.png)
+   ![3D卡片选择](/help/assets/assets-dm/3d-card-select.png)
    _在卡片视图中，选择要预览的3D资源的卡片。_
 
 1. 选择3D资产的卡。
 
-   ![交互式3D预览](/help/assets/assets-dm/3d-preview.png)
+   ![交互式三维预览](/help/assets/assets-dm/3d-preview.png)
    _在资源详细信息视图页面中交互式预览3D资源。_
 1. 在3D资产的资产详细信息视图页面上，执行以下任一操作：
 
-   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | 视图 | 描述 | 鼠标操作 | 触摸屏操作 |
    | --- | --- | --- | --- |
    | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 左键单击+拖动。 | 单指按下+拖动。 |
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 双指按下+拖动。 |

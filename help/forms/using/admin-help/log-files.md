@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ff4dce07-725e-4750-9e95-4261b50580bd
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 (JBoss)以下日志文件位于`[appserver root]/server/'server'/log`目录中：
 
-* boot.log
+* 启动日志
 * server.log.*[yyyy-mm-dd]*
 * server.log
 
@@ -36,6 +36,6 @@ ht-degree: 0%
 
 (WebSphere)以下日志文件位于`[appserver root]/profiles/default/logs/[appserver name]`目录中：
 
-* SystemErr.log
+* 系统错误日志
 * SystemOut.log
 * StartServer.log

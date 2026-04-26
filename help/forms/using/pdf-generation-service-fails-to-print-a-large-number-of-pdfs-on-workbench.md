@@ -7,9 +7,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 80a4e5c0-d68f-4591-a43d-ab75b5f0764c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,10 @@ ht-degree: 0%
 
 `ALC-OUT-002-013: XMLFormFactory, PAexecute failure: "0: Out of Memory"`
 
-<!-- Attached is a simplified template (BollatoRiservatiLandscape_table_simple.xdp) that simulates the problem.
-Using the Designer, if we associate the template "BollatoRiservatiLandscape_table_semplice.xdp" with the XML file "BollatoRiservati.xml" during the generation of the pdf, the process comes to occupy 1.6 Gb of RAM. On the server side, with the complete template, the pdf generation process breaks down, occupying 2 GB of RAM.-->
+<!--
+Attached is a simplified template (BollatoRiservatiLandscape_table_simple.xdp) that simulates the problem.
+Using the Designer, if we associate the template "BollatoRiservatiLandscape_table_semplice.xdp" with the XML file "BollatoRiservati.xml" during the generation of the pdf, the process comes to occupy 1.6 Gb of RAM. On the server side, with the complete template, the pdf generation process breaks down, occupying 2 GB of RAM.
+-->
 
 这是因为在Windows上，打印请求中的最大页数限制为大约1000页。 当生成打印输出时，模板和数据需要加载到内存中，并且生成的布局构建在内存中。 这意味着最终输出的大小存在限制。 生成打印输出的进程是32位任务，这意味着它在Windows <!--and 4 GB on UNIX-->上限制为2 GB的RAM。
 
@@ -31,7 +33,7 @@ Using the Designer, if we associate the template "BollatoRiservatiLandscape_tabl
 
 此解决方案适用于x86_win32 XMLFM的AEM Forms <!--JEE Server and AEM Forms on OSGi Server-->。
 
-## 解决方案 {#solution}
+## 解决办法 {#solution}
 
 影响内存使用率的最大因素是表单上的数据量。 但是，在形状设计中存在其它因素，它们对内存使用的影响较小。 当您意识到这些因素时，可以设计一个表单以获得更大的打印输出。 以下部分按优先级顺序指示影响内存占用空间的因素：
 
@@ -58,7 +60,7 @@ Using the Designer, if we associate the template "BollatoRiservatiLandscape_tabl
 
 如果表单有许多小节点，但数据很小，则该过程会消耗更多的内存（因此内存耗尽的速度会更快），而不是具有更少节点（即使）且数据较大的表单。
 
-阅读以下[附录](#appendix)以了解更多信息，其中测试结果基于打印表单(未标记的PDF)。 使用标记的PDF进程内存需求增加。 它还取决于表单中的字段数 — 大约流程内存需求是未标记PDF的1.5倍多。
+阅读以下[附录](#appendix)以了解更多信息，其中测试结果基于打印表单（未标记的PDF）。 使用标记的PDF进程内存需求增加。 它还取决于表单中的字段数 — 大约流程内存需求是未标记PDF的1.5倍多。
 
 ### 交互式Forms {#interactive-forms}
 

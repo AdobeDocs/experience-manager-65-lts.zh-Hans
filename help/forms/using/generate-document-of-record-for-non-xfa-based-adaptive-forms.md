@@ -5,22 +5,22 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 2d9ec8c4-330e-4474-97f4-1f434025683f
-source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
+source-git-commit: e91f40d1af626b3aa42c9ddb8381d73ef9a69273
 workflow-type: tm+mt
-source-wordcount: '4292'
-ht-degree: 3%
+source-wordcount: '4354'
+ht-degree: 4%
 
 ---
 
 # 为自适应表单或自适应表单片段生成记录文档 {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
 
 ## 概述 {#overview}
@@ -232,7 +232,7 @@ ht-degree: 3%
 
 **字段的样式约定**
 
-* 要对记录文档中的字段应用样式，基础模板在`AF_FIELDSSUBFORM`根子表单下的`AF_METATEMPLATE`子表单中提供字段。
+* 要对记录文档中的字段应用样式，基础模板在`AF_METATEMPLATE`根子表单下的`AF_FIELDSSUBFORM`子表单中提供字段。
 
 * 这些字段的属性应用于记录文档中的字段。 这些字段应遵循`AF_<name of field in all caps>_XFO`命名约定。 例如，复选框的字段名称应为`AF_CHECKBOX_XFO`。
 
@@ -392,7 +392,7 @@ ht-degree: 3%
    * **[!UICONTROL 放置]** > **[!UICONTROL 在页面上]** >母版页的名称：将面板放置在指定的页面上。 如果未自动插入分页符，[!DNL AEM Forms]将添加分页符。
    * **[!UICONTROL 置入]** > **[!UICONTROL 下一页顶部]**：将面板置于下一页顶部。 如果未自动插入分页符，[!DNL AEM Forms]将添加分页符。
    * **[!UICONTROL 置入]** > **[!UICONTROL 页面顶部]** >母版页的名称：呈现指定的页面时，将面板置于页面顶部。 如果未自动插入分页符，[!DNL AEM Forms]将添加分页符。
-* **[!UICONTROL 分页]** > **[!UICONTROL After]**：确定放置面板后要填充的区域。**[!UICONTROL After]**&#x200B;部分中有以下字段：
+* **[!UICONTROL 分页]** > **[!UICONTROL After]**：确定放置面板后要填充的区域。**[!UICONTROL After]**&#x200B;部分中有以下字段可用：
    * **[!UICONTROL After]** > **[!UICONTROL 继续填充父项]**：继续合并父面板中剩余要填充的所有对象的数据。
    * **[!UICONTROL After]** > **[!UICONTROL 转到下一个内容区域]**：在放置面板后开始填充下一个内容区域。
    * **[!UICONTROL After]** > **[!UICONTROL 转到内容区域]** >内容区域名称：在放置面板后开始填充指定的内容区域。
@@ -412,12 +412,12 @@ ht-degree: 3%
 **表单级别设置**
 
 * **[!UICONTROL 基本]**
-   * **模板：**&#x200B;您可以选择“默认”或“自定义”模板。
+   * **模板：**您可以选择“默认”或“自定义”模板。
      ![替换文本](image.png)
    * **个性色：**&#x200B;您可以预定义[!UICONTROL 记录文档]的模板颜色。
    * **字体系列：**&#x200B;为[!UICONTROL 记录文档]文本选择字体类型。
    * **包括DoR中未绑定的字段：**&#x200B;设置属性包括来自[!UICONTROL 记录文档]中基于架构的自适应表单的未绑定字段。 默认情况下，它为true。
-   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器[上启用](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
+   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上启用[重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
 * **[!UICONTROL 表单字段属性]**
    * 如果勾选选项&#x200B;**对于复选框和单选按钮组件，则仅显示选定的值**，它将生成仅具有选定值的DoR输出。
    * 可以为多个选定值选择分隔符，也可以选择任何其他分隔符类型。
@@ -438,7 +438,7 @@ ht-degree: 3%
 1. 选择面板并选择![配置](/help/forms/using/assets/configure.png)
 1. 展开&#x200B;**[!UICONTROL 记录文档]**&#x200B;以查看属性。
 
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![放置](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL 放置]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
 1. 选择&#x200B;**[!UICONTROL 下一页顶部]**&#x200B;并选择&#x200B;**[!UICONTROL 选择]**。 您还可以选择&#x200B;**[!UICONTROL 页面顶部]**，选择母版页，然后选择&#x200B;**[!UICONTROL 选择]**&#x200B;以应用分页符。
 1. 选择![保存](/help/forms/using/assets/save_icon.png)以保存属性。
 
@@ -456,10 +456,10 @@ ht-degree: 3%
 要将第二个母版页属性应用于面板，而将第三个母版页属性应用于后续面板，请执行以下步骤：
 
 1. 选择要应用第二个母版页的面板，然后选择![配置](assets/cmppr.png)。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![放置](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL 放置]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
 1. 选择&#x200B;**[!UICONTROL 在页面]**&#x200B;上，选择第二个母版页并选择&#x200B;**[!UICONTROL 选择]**。
 AEM Forms将第二个母版页应用于自适应表单中的面板和所有后续面板。
-1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在![After](/help/forms/using/assets/folder-icon.png)字段中选择&#x200B;**[!UICONTROL 文件夹]**。
+1. 在&#x200B;**[!UICONTROL 分页]**&#x200B;分区中，在&#x200B;**[!UICONTROL After]**&#x200B;字段中选择![文件夹](/help/forms/using/assets/folder-icon.png)。
 1. 选择&#x200B;**[!UICONTROL 转到页面]**，选择第三个母版页，然后选择&#x200B;**[!UICONTROL 选择]**。
 1. 选择![保存](/help/forms/using/assets/save_icon.png)以保存属性。
 AEM Forms将第三个母版页应用于自适应表单中的面板和所有后续面板。
@@ -479,7 +479,7 @@ AEM Forms将第三个母版页应用于自适应表单中的面板和所有后�
 
 ## 使用自定义XCI文件
 
-XCI文件可帮助您设置文档的各种属性。 <!-- Forms as a Cloud Service has a master XCI file.-->您可以使用自定义XCI文件覆盖在现有XCI文件中指定的一个或多个默认属性。 例如，您可以选择将字体嵌入文档，或者为所有文档启用标记属性。 下表指定了XCI选项：
+XCI文件可帮助您设置文档的各种属性。<!-- Forms as a Cloud Service has a master XCI file.--> 您可以使用自定义XCI文件覆盖现有XCI文件中指定的一个或多个默认属性。 例如，您可以选择将字体嵌入文档，或者为所有文档启用标记属性。 下表指定了XCI选项：
 
 | XCI选项 | 描述 |
 |--- |--- |
@@ -519,12 +519,14 @@ XCI文件可帮助您设置文档的各种属性。 <!-- Forms as a Cloud Servic
   1. Add the custom XCI file to your development project.
   1. Specify the following inline property:(/help/implementing/deploying/configuring-osgi.md)
   1. Deploy the project to your AEM Forms environment. <!--Cloud Service environment
-  
 -->
 
 ### 在本地Forms开发环境中使用自定义XCI文件
 
 1. 将XCI文件上传到本地开发环境。
-1. 打开<!--Cloud Service SDK-->配置管理器。<!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+1. 打开<!--Cloud Service SDK-->配置管理器。
+
+   <!--The default URL is: <http://localhost:4502/system/console/configMgr>.-->
+
 1. 找到并打开&#x200B;**[!UICONTROL 自适应Forms和交互式通信Web渠道]**&#x200B;配置。
 1. 指定XCI文件的路径，然后单击&#x200B;**[!UICONTROL 保存]**。

@@ -1,5 +1,5 @@
 ---
-title: 使用Web服务调用AEM Forms
+title: 使用 Web 服务调用 AEM Forms
 description: 使用Web服务调用AEM Forms进程，并完全支持WSDL生成。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms, APIs & Integrations, AEM Forms on JEE
 hide: true
 hidefromtoc: true
 exl-id: ca620313-8c2c-44e6-9f29-0d91dc9f6e03
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '9814'
+source-wordcount: '9975'
 ht-degree: 0%
 
 ---
 
-# 使用Web服务调用AEM Forms {#invoking-aem-forms-using-web-services}
+# 使用 Web 服务调用 AEM Forms {#invoking-aem-forms-using-web-services}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -33,10 +33,10 @@ AEM Forms服务通过SOAP协议公开，并符合WSI Basic Profile 1.1。 Web服
 
 AEM Forms支持以下Web服务标准：
 
-* **编码**：仅支持文档和文本编码（根据WSI基本配置文件，这是首选的编码）。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **MTOM**：表示一种使用SOAP请求对附件进行编码的方法。 (请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。)
-* **SwaRef**：表示使用SOAP请求对附件进行编码的其他方式。 (请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
-* 带有附件的&#x200B;**SOAP**：支持MIME和DIME（直接Internet邮件封装）。 这些协议是通过SOAP发送附件的标准方式。 Microsoft Visual Studio .NET应用程序使用DIME。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
+* **编码**：仅支持文档和文本编码（根据WSI基本配置文件，这是首选的编码）。 （请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。）
+* **MTOM**：表示一种使用SOAP请求对附件进行编码的方法。 （请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。）
+* **SwaRef**：表示使用SOAP请求对附件进行编码的其他方式。 （请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。）
+* 带有附件的&#x200B;**SOAP**：支持MIME和DIME（直接Internet邮件封装）。 这些协议是通过SOAP发送附件的标准方式。 Microsoft Visual Studio .NET应用程序使用DIME。 （请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。）
 * **WS-Security**：支持用户名密码令牌配置文件，这是作为WS Security SOAP标头的一部分发送用户名和密码的标准方法。 AEM Forms还支持HTTP基本身份验证。 s
 
 要使用Web服务调用AEM Forms服务，通常需要创建一个使用服务WSDL的代理库。 *使用Web服务调用AEM Forms*&#x200B;部分使用JAX-WS创建Java代理类以调用服务。 （请参阅[使用JAX-WS创建Java代理类](#creating-java-proxy-classes-using-jax-ws)。）
@@ -56,7 +56,7 @@ AEM Forms支持以下Web服务标准：
 * `async`指定值`true`以启用异步调用的其他操作（默认为`false`）。
 * *lc_version*&#x200B;表示要调用的AEM Forms版本。
 
-下表列出了服务WSDL定义(假设AEM Forms部署在本地主机上并且帖子为8080)。
+下表列出了服务WSDL定义（假设AEM Forms部署在本地主机上并且帖子为8080）。
 
 <table>
  <thead>
@@ -107,7 +107,7 @@ AEM Forms支持以下Web服务标准：
    <td><p><code>http://localhost:8080/soap/services/FormDataIntegration?wsdl</code></p></td>
   </tr>
   <tr>
-   <td><p>生成PDF</p></td>
+   <td><p>生成 PDF</p></td>
    <td><p><code>http://localhost:8080/soap/services/ GeneratePDFService?wsdl</code></p></td>
   </tr>
   <tr>
@@ -167,7 +167,7 @@ AEM Forms支持以下Web服务标准：
 
 **使用Web服务访问新功能**
 
-可使用Web服务访问新的AEM Forms服务功能。 例如，在AEM Forms中，引入了使用MTOM对附件进行编码的功能。 (请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。)
+可使用Web服务访问新的AEM Forms服务功能。 例如，在AEM Forms中，引入了使用MTOM对附件进行编码的功能。 （请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。）
 
 要访问AEM Forms中引入的新功能，请在WSDL定义中指定`lc_version`属性。 例如，要访问新的服务功能（包括MTOM支持），请指定以下WSDL定义：
 
@@ -181,9 +181,9 @@ AEM Forms支持以下Web服务标准：
 
 **Web服务BLOB数据类型**
 
-AEM Forms服务WSDL定义了多种数据类型。 Web服务中公开的最重要数据类型之一是`BLOB`类型。 使用AEM Forms Java API时，此数据类型映射到`com.adobe.idp.Document`类。 (请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。)
+AEM Forms服务WSDL定义了多种数据类型。 Web服务中公开的最重要数据类型之一是`BLOB`类型。 使用AEM Forms Java API时，此数据类型映射到`com.adobe.idp.Document`类。 （请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。）
 
-`BLOB`对象向和从AEM Forms服务发送二进制数据(例如，PDF文件、XML数据等)，或从中检索二进制数据。 `BLOB`类型在服务WSDL中定义如下：
+`BLOB`对象向和从AEM Forms服务发送二进制数据（例如，PDF文件、XML数据等），或从中检索二进制数据。 `BLOB`类型在服务WSDL中定义如下：
 
 ```xml
  <complexType name="BLOB">
@@ -212,15 +212,15 @@ AEM Forms服务WSDL定义了多种数据类型。 Web服务中公开的最重要
 
 **在服务请求中提供BLOB对象**
 
-如果AEM Forms服务操作需要`BLOB`类型作为输入值，请在应用程序逻辑中创建`BLOB`类型的实例。 (*使用AEM表单*&#x200B;编程中的许多Web服务快速启动说明了如何使用BLOB数据类型。)
+如果AEM Forms服务操作需要`BLOB`类型作为输入值，请在应用程序逻辑中创建`BLOB`类型的实例。 （*使用AEM表单*&#x200B;编程中的许多Web服务快速启动说明了如何使用BLOB数据类型。）
 
 将值分配给属于`BLOB`实例的字段，如下所示：
 
-* **Base64**：若要以Base64格式编码的文本形式传递数据，请在`BLOB.binaryData`字段中设置数据，并在`BLOB.contentType`字段中设置MIME格式的数据类型（例如，`application/pdf`）。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **MTOM**：若要在MTOM附件中传递二进制数据，请在`BLOB.MTOM`字段中设置该数据。 此设置会使用Java JAX-WS Framework或SOAP Framework的本机API将数据附加到SOAP请求。 (请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。)
-* **SwaRef**：若要在WS-I SwaRef附件中传递二进制数据，请在`BLOB.swaRef`字段中设置该数据。 此设置使用Java JAX-WS框架将数据附加到SOAP请求。 (请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
-* **MIME或DIME附件**：若要在MIME或DIME附件中传递数据，请使用SOAP Framework的本机API将数据附加到SOAP请求。 在`BLOB.attachmentID`字段中设置附件标识符。 (请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。)
-* **远程URL**：如果数据托管在Web服务器上并可通过HTTP URL访问，请在`BLOB.remoteURL`字段中设置HTTP URL。 (请参阅[通过HTTP使用BLOB数据调用AEM Forms](#invoking-aem-forms-using-blob-data-over-http)。)
+* **Base64**：若要以Base64格式编码的文本形式传递数据，请在`BLOB.binaryData`字段中设置数据，并在`BLOB.contentType`字段中设置MIME格式的数据类型（例如，`application/pdf`）。 （请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。）
+* **MTOM**：若要在MTOM附件中传递二进制数据，请在`BLOB.MTOM`字段中设置该数据。 此设置会使用Java JAX-WS Framework或SOAP Framework的本机API将数据附加到SOAP请求。 （请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。）
+* **SwaRef**：若要在WS-I SwaRef附件中传递二进制数据，请在`BLOB.swaRef`字段中设置该数据。 此设置使用Java JAX-WS框架将数据附加到SOAP请求。 （请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。）
+* **MIME或DIME附件**：若要在MIME或DIME附件中传递数据，请使用SOAP Framework的本机API将数据附加到SOAP请求。 在`BLOB.attachmentID`字段中设置附件标识符。 （请参阅[使用Base64编码调用AEM Forms](#invoking-aem-forms-using-base64-encoding)。）
+* **远程URL**：如果数据托管在Web服务器上并可通过HTTP URL访问，请在`BLOB.remoteURL`字段中设置HTTP URL。 （请参阅[通过HTTP使用BLOB数据调用AEM Forms](#invoking-aem-forms-using-blob-data-over-http)。）
 
 **访问从服务返回的BLOB对象中的数据**
 
@@ -353,7 +353,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 您可以使用JAX-WS将Forms服务WSDL转换为Java代理类。 利用这些类，可调用AEM Forms服务操作。 Apache Ant允许您创建一个生成脚本，该脚本通过引用AEM Forms服务WSDL来生成Java代理类。 可通过执行以下步骤来生成JAX-WS代理文件：
 
-1. 在客户端计算机上安装Apache Ant。 (请参阅[https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi)。)
+1. 在客户端计算机上安装Apache Ant。 （请参阅[https://ant.apache.org/bindownload.cgi](https://ant.apache.org/bindownload.cgi)。）
 
    * 将bin目录添加到类路径中。
    * 将`ANT_HOME`环境变量设置为安装Ant的目录。
@@ -448,7 +448,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
    >[!NOTE]
    >
-   >使用AEM窗体编程中的所有Java Web服务快速启动(Forms服务除外)使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都快速启动，使用SwaRef。 (请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。)
+   >使用AEM窗体编程中的所有Java Web服务快速启动（Forms服务除外）使用JAX-WS创建Java代理文件。 此外，所有Java Web服务都快速启动，使用SwaRef。 （请参阅[使用SwaRef调用AEM Forms](#invoking-aem-forms-using-swaref)。）
 
 **另请参阅**
 
@@ -466,7 +466,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 >[!NOTE]
 >
->与Forms服务关联的Web服务快速启动使用使用Apache Axis创建的Java代理类。 Forms Web服务快速启动还使用Base64作为编码类型。 (请参阅[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)。)
+>与Forms服务关联的Web服务快速启动使用使用Apache Axis创建的Java代理类。 Forms Web服务快速启动还使用Base64作为编码类型。 （请参阅[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)。）
 
 可通过执行以下步骤来生成Axis Java库文件：
 
@@ -932,7 +932,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 >[!NOTE]
 >
->建议您熟悉如何使用SOAP调用AEM Forms。 (请参阅[使用Web服务调用AEM Forms](#invoking-aem-forms-using-web-services)。)
+>建议您熟悉如何使用SOAP调用AEM Forms。 （请参阅[使用Web服务调用AEM Forms](#invoking-aem-forms-using-web-services)。）
 
 ### 创建通过HTTP使用数据的.NET客户端程序集 {#creating-a-net-client-assembly-that-uses-data-over-http}
 
@@ -1030,7 +1030,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 ## 使用DIME调用AEM Forms {#invoking-aem-forms-using-dime}
 
-您可以使用带有附件的SOAP调用AEM Forms服务。 AEM Forms支持MIME和DIME Web服务标准。 DIME允许您发送二进制附件(如PDF文档)以及调用请求，而不是对附件进行编码。 *使用DIME调用AEM Forms*&#x200B;部分讨论了使用DIME调用以下名为`MyApplication/EncryptDocument`的AEM Forms短期进程。
+您可以使用带有附件的SOAP调用AEM Forms服务。 AEM Forms支持MIME和DIME Web服务标准。 DIME允许您发送二进制附件（如PDF文档）以及调用请求，而不是对附件进行编码。 *使用DIME调用AEM Forms*&#x200B;部分讨论了使用DIME调用以下名为`MyApplication/EncryptDocument`的AEM Forms短期进程。
 
 调用此进程时，将执行以下操作：
 
@@ -1041,7 +1041,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 >[!NOTE]
 >
->不建议使用DIME调用AEM Forms服务操作。 建议您使用MTOM。 (请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。)
+>不建议使用DIME调用AEM Forms服务操作。 建议您使用MTOM。 （请参阅[使用MTOM调用AEM Forms](#invoking-aem-forms-using-mtom)。）
 
 ### 创建使用DIME的.NET项目 {#creating-a-net-project-that-uses-dime}
 
@@ -1058,7 +1058,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 >[!NOTE]
 >
->Web服务增强功能2.0支持DIME。 使用Web服务增强功能2.0时，支持的Microsoft Visual Studio版本是2003。Web服务增强功能3.0不支持DIME；但是，它支持MTOM。
+>Web服务增强功能2.0支持DIME。 使用Web服务增强功能2.0时，支持的Microsoft Visual Studio版本是2003。 Web服务增强功能3.0不支持DIME；但是，它支持MTOM。
 
 **创建对AEM Forms服务的Web引用**
 
@@ -1089,7 +1089,7 @@ base64编码的字节数组的&#x200B;**MTOM传输**
 
 >[!NOTE]
 >
->确保启用.NET项目以使用WSE库。 在项目资源管理器中，右键单击项目名称并选择启用WSE 2.0。确保已选中出现的对话框上的复选框。
+>确保启用.NET项目以使用WSE库。 在项目资源管理器中，右键单击项目名称并选择启用WSE 2.0。 确保已选中出现的对话框上的复选框。
 
 **在.NET项目中使用DIME调用服务**
 
@@ -1335,7 +1335,7 @@ AEM表单用户的身份可以通过使用密钥签名的SAML断言来表示。 
 
 >[!NOTE]
 >
->DIME部分使用WSE 2.0。要使用基于SAML的身份验证，请按照DIME主题中指定的相同说明进行操作。 但是，请将WSE 2.0替换为WSE 3.0。在开发计算机上安装Web服务增强功能3.0，并将其与Microsoft Visual Studio .NET集成。 您可以从[Microsoft下载中心](https://www.microsoft.com/downloads/search.aspx)下载Web服务增强功能3.0。
+>DIME部分使用WSE 2.0。 要使用基于SAML的身份验证，请按照DIME主题中指定的相同说明进行操作。 但是，请将WSE 2.0替换为WSE 3.0。 在开发计算机上安装Web服务增强功能3.0，并将其与Microsoft Visual Studio .NET集成。 您可以从[Microsoft下载中心](https://www.microsoft.com/downloads/search.aspx)下载Web服务增强功能3.0。
 
 WSE体系结构使用策略、声明和SecurityToken数据类型。 简言之，对于Web服务调用，请指定策略。 一个策略可以有多个断言。 每个断言都可以包含过滤器。 过滤器在Web服务调用的某些阶段调用，那时可以修改SOAP请求。 有关完整的详细信息，请参阅Web服务增强功能3.0文档。
 
@@ -1451,7 +1451,7 @@ WSE体系结构使用策略、声明和SecurityToken数据类型。 简言之，
 
 ### 异步调用服务操作 {#invoking-service-operations-asynchronously}
 
-如果尝试异步调用AEM Forms服务操作(如生成PDF的`htmlToPDF`操作)，则会出现`SoapFaultException`。 要解决此问题，请创建将`ExportPDF_Result`元素和其他元素映射到不同类的自定义绑定XML文件。 以下XML表示自定义绑定文件。
+如果尝试异步调用AEM Forms服务操作（如生成PDF的`htmlToPDF`操作），则会出现`SoapFaultException`。 要解决此问题，请创建将`ExportPDF_Result`元素和其他元素映射到不同类的自定义绑定XML文件。 以下XML表示自定义绑定文件。
 
 ```xml
  <bindings

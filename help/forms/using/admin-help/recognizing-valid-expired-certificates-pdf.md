@@ -1,5 +1,5 @@
 ---
-title: 识别PDF文档中的有效证书和过期证书
+title: 识别 PDF 文档中的有效证书和过期证书
 description: 了解如何在PDF文档中识别有效证书和过期的证书。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: f7402f0d-7c19-4a56-8630-208faa197f94
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 0%
+source-wordcount: '198'
+ht-degree: 8%
 
 ---
 
-# 识别PDF文档中的有效证书和过期证书 {#recognizing-valid-and-expired-certificates-in-pdf-documents}
+# 识别 PDF 文档中的有效证书和过期证书 {#recognizing-valid-and-expired-certificates-in-pdf-documents}
 
 在Adobe Reader中打开具有Reader扩展应用的使用权限的PDF文档时，将显示一个状态栏，其中描述在PDF文档中启用的特定使用权限。
 

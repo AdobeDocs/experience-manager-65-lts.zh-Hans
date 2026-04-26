@@ -8,9 +8,9 @@ mini-toc-levels: 4
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 7398b95b-e82d-4241-8f32-13b8d20caad9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '10038'
+source-wordcount: '10234'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-digital-assets.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 在[!DNL Adobe Experience Manager Assets]中，您可以执行除存储和管理资源之外的其他操作。 [!DNL Experience Manager]提供企业级资产管理功能。 您可以编辑和共享资源、运行高级搜索以及创建数十种受支持的文件格式的多个演绎版。 您还可以管理版本和数字权限、自动处理资源、管理和控制元数据、使用注释进行协作等等。
@@ -37,7 +37,7 @@ ht-degree: 3%
 
 1. 导航到数字资产文件夹中要创建文件夹的位置。 在菜单中，单击&#x200B;**[!UICONTROL 创建]**。 选择&#x200B;**[!UICONTROL 新文件夹]**。
 1. 在&#x200B;**[!UICONTROL 标题]**&#x200B;字段中，提供文件夹名称。 默认情况下，DAM使用您提供的标题作为文件夹名称。 创建文件夹后，您可以覆盖默认文件夹名称并指定其他文件夹名称。
-1. 单击&#x200B;**[!UICONTROL 创建]**。您的文件夹会显示在数字资产文件夹中。
+1. 单击&#x200B;**[!UICONTROL 创建]**。 您的文件夹会显示在数字资产文件夹中。
 
 不支持以下（以空格分隔的）字符：
 
@@ -48,12 +48,13 @@ ht-degree: 3%
 
 ## 上传资产 {#uploading-assets}
 
-<!-- TBD the following:
+<!--
+TBD the following:
 Move this section into a new article. CQDOC-14874 ticket is created for this.
 In this complete article, replace emphasis with UICONTROL where appropriate.
 -->
 
-您可以从本地文件夹或网络驱动器将各种类型的资源(包括图像、PDF文件、RAW文件等)上传到[!DNL Experience Manager Assets]。
+您可以从本地文件夹或网络驱动器将各种类型的资源（包括图像、PDF文件、RAW文件等）上传到[!DNL Experience Manager Assets]。
 
 >[!NOTE]
 >
@@ -103,7 +104,7 @@ In this complete article, replace emphasis with UICONTROL where appropriate.
 
 >[!CAUTION]
 >
->当默认值为500 MB且区块大小为50 MB时，将触发区块上载。 如果您编辑[Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html?lang=zh-Hans)并将`timeout configuration`设置为小于资源上传所花费的时间，则在资源上传过程中会遇到会话超时情况。 因此，请更改`chunkUploadMinFileSize`和`chunksize`，以便每个区块请求都刷新会话。
+>当默认值为500 MB且区块大小为50 MB时，将触发区块上载。 如果您编辑[Apache Jackrabbit Oak TokenConfiguration](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16464.html)并将`timeout configuration`设置为小于资源上传所花费的时间，则在资源上传过程中会遇到会话超时情况。 因此，请更改`chunkUploadMinFileSize`和`chunksize`，以便每个区块请求都刷新会话。
 >
 >给定凭据过期超时、延迟、带宽和预期并发上传数，可让您确保选择以下内容的最大值：
 >
@@ -170,7 +171,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上载
 
 >[!NOTE]
 >
->要在Dynamic Media - Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户支持](https://experienceleague.adobe.com/zh-hans?support-solution=General#support)以访问FP-18912并完成FTP帐户的设置。 有关详细信息，请参阅[安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
+>要在Dynamic Media - Scene7模式下通过FTP上传资产，请在[!DNL Experience Manager]创作实例上安装功能包18912。 联系[Adobe客户支持](https://experienceleague.adobe.com/?support-solution=General#support)以访问FP-18912并完成FTP帐户的设置。 有关详细信息，请参阅[安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 >
 >如果您使用FTP上传资产，则会忽略[!DNL Experience Manager]中指定的上传设置。 而是使用Dynamic Media Classic中定义的文件处理规则。
 
@@ -178,7 +179,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上载
 
 1. 使用您选择的FTP客户端，使用从预配电子邮件收到的FTP用户名和密码登录到FTP服务器。 在FTP客户端中，将文件或文件夹上传到FTP服务器。
 
-1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=zh-Hans#system-requirements-dmc-app)，然后登录到您的帐户。
+1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html#system-requirements-dmc-app)，然后登录到您的帐户。
 
    在配置时，您的凭据和登录由Adobe提供。 如果您没有此信息，请联系Adobe客户支持。
 
@@ -197,7 +198,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上载
 1. 在上传页面的右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
 
    要查看上载进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页显示上载的进度。 您可以随时在[!DNL Experience Manager]中继续工作并返回Dynamic Media Classic中的“作业”页面以查看正在进行的作业。
-若要取消正在进行的上载作业，请单击“持续时间”时间旁边的&#x200B;**[!UICONTROL 取消]**。
+若要取消正在进行的上载作业，请单击“持续时间”时间旁边的**[!UICONTROL 取消]**。
 
 #### 上载作业选项 {#upload-job-options}
 
@@ -210,19 +211,19 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上载
 | 作业选项 | | 单击&#x200B;**[!UICONTROL 作业选项]**，以便打开[!UICONTROL 上载作业选项]对话框并选择影响整个上载作业的选项。 对于所有文件类型，这些选项都相同。<br>您可以从“应用程序常规设置”页面开始选择用于上载文件的默认选项。 若要打开此页面，请选择&#x200B;**[!UICONTROL 设置]** > **[!UICONTROL 应用程序设置]**。 选择&#x200B;**[!UICONTROL 默认上载选项]**&#x200B;选项以打开[!UICONTROL 上载作业选项]对话框。 |
 | | 时间 | 选择“一次性”或“循环”。 要设置循环作业，请选择重复选项（每日、每周、每月或自定义）以指定希望FTP上载作业重复的时间。 然后，根据需要指定计划选项。 |
 | | 包括子文件夹 | 上传要上传的文件夹中的所有子文件夹。 您上传的文件夹及其子文件夹的名称自动输入到[!DNL Experience Manager Assets]中。 |
-| | 裁剪选项 | 若要从图像的侧面手动裁切，请选择“裁切”菜单，然后选择“手动”。 然后输入要从图像的任意一侧或每侧裁切的像素数。 裁切图像的数量取决于图像文件中的ppi（每英寸像素数）设置。 例如，如果图像显示150 ppi，并且您在“顶部”、“右侧”、“底部”和“左侧”文本框中输入75，则每侧将裁剪半英寸。<br>要从图像自动裁切空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右侧”、“底部”和“左侧”字段中输入像素度量以从侧面裁切。 您还可以选择“裁切”菜单上的“裁剪”，然后选择以下选项：<br> **修剪基于** <ul><li>**颜色** — 选择“颜色”选项。 然后选择“边角”菜单，然后选择图像的边角，其颜色最能代表要裁切的空白颜色。</li><li>**透明度** — 选择“透明度”选项。<br> **容差** — 拖动滑块以指定从0到1的容差。对于基于颜色的裁剪，请指定0以裁剪像素，前提是它们与您在图像角落选择的颜色完全匹配。 数字越接近1，则颜色差异越大。<br>对于基于透明度的裁剪，请指定0以仅裁切透明像素。 数字靠近1可以提高透明度。</li></ul><br>这些裁切选项不具有破坏性。 |
+| | 裁剪选项 | 若要从图像的侧面手动裁切，请选择“裁切”菜单，然后选择“手动”。 然后输入要从图像的任意一侧或每侧裁切的像素数。 裁切图像的数量取决于图像文件中的ppi（每英寸像素数）设置。 例如，如果图像显示150 ppi，并且您在“顶部”、“右侧”、“底部”和“左侧”文本框中输入75，则将从每侧裁剪半英寸。<br> 若要自动裁切图像中的空白像素，请打开“裁切”菜单，选择“手动”，然后在“顶部”、“右侧”、“底部”和“左侧”字段中输入像素度量以从侧面裁切。 您还可以选择“裁切”菜单上的“裁剪”，然后选择以下选项：<br> **修剪基于** <ul><li>**颜色** — 选择“颜色”选项。 然后选择“边角”菜单，然后选择图像的边角，其颜色最能代表要裁切的空白颜色。</li><li>**透明度** — 选择“透明度”选项。<br> **容差** — 拖动滑块以指定从0到1的容差。对于基于颜色的裁剪，请指定0以裁剪像素，前提是它们与您在图像角落选择的颜色完全匹配。 数字越接近1，则颜色差异越大。<br>对于基于透明度的裁剪，请指定0以仅裁切透明像素。 数字靠近1可以提高透明度。</li></ul><br>这些裁切选项不具有破坏性。 |
 | | 颜色配置文件选项 | 在创建用于交付的优化文件时选择颜色转换：<ul><li>默认色彩保存：当图像包含色彩空间信息时，保留源图像颜色；不进行色彩转换。 目前几乎所有图像都已嵌入相应的颜色配置文件。 但是，如果CMYK源图像不包含嵌入的颜色配置文件，则颜色将转换为sRGB（标准红绿蓝）颜色空间。 sRGB是在网页上显示图像的推荐颜色空间。</li><li>保留原始颜色空间：保留原始颜色而不进行任何颜色转换。 对于没有嵌入颜色配置文件的图像，使用在“发布”设置中配置的默认颜色配置文件完成任何颜色转换。 颜色配置文件可能与使用此选项创建的文件中的颜色不一致。 因此，建议您使用“默认颜色保留”选项。</li><li>自定义从>至<br>打开菜单，以便您选择“转换自”和“转换至”颜色空间。 此高级选项会覆盖嵌入到源文件中的任何颜色信息。 当您提交的所有图像包含不正确或缺少颜色配置文件数据时，请选择此选项。</li></ul> |
-| | 图像编辑选项 | 您可以保留图像中的剪贴蒙版，并选择颜色配置文件。<br>查看[在上传](#setting-image-editing-options-at-upload)时设置图像编辑的选项。 |
-| | Postscript选项 | 可以栅格化PostScript®文件、裁切文件、保持透明背景、选择分辨率以及选择颜色空间。<br>请参阅[设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
-| | Photoshop选项 | 您可以从Adobe® Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定如何将图像锚定到模板中。[!DNL Experience Manager]不支持<br>模板。<br>请参阅[设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
-| | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成eCatalog、设置分辨率以及选择颜色空间。[!DNL Experience Manager]不支持<br>eCatalog。 <br>请参阅[设置PDF上传选项](#setting-pdf-upload-options)。<br>**注意**：对于新上传，PDF要考虑进行提取的最大页数为5000。 2022年12月31日，此限制将更改为100页（对于所有PDF）。 另请参阅[Dynamic Media限制](/help/assets/limitations.md)。 |
-| | Illustrator选项 | 可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率以及选择颜色空间。<br>请参阅[设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
-| | EVideo选项 | 您可以通过选择视频预设来转码视频文件。<br>请参阅[设置eVideo上传选项](#setting-evideo-upload-options)。 |
-| | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的“活动”列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置/批量集预设”页中创建预设。<br>请参阅[配置批次集预设以自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)，了解有关创建批次集预设的更多信息。<br>查看[在上传](#setting-batch-set-presets-at-upload)时设置批次集预设。 |
+| | 图像编辑选项 | 您可以保留图像中的剪切蒙版，并选择颜色配置文件。<br> 查看[在上传](#setting-image-editing-options-at-upload)时设置图像编辑的选项。 |
+| | Postscript选项 | 您可以栅格化PostScript®文件、裁切文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 请参阅[设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
+| | Photoshop选项 | 您可以从® Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定如何将图像锚定到模板中。<br> [!DNL Experience Manager].<br>不支持模板 请参阅[设置Photoshop上传选项](#setting-photoshop-upload-options)。 |
+| | PDF选项 | 您可以栅格化文件、提取搜索词和链接、自动生成eCatalog、设置分辨率以及选择颜色空间。[!DNL Experience Manager]不支持<br>eCatalog。<br> 请参阅[设置PDF上传选项](#setting-pdf-upload-options)。<br>**注意**：对于新上传，PDF要考虑进行提取的最大页数为5000。 2022年12月31日，此限制将更改为100页（对于所有PDF）。 另请参阅[Dynamic Media限制](/help/assets/limitations.md)。 |
+| | Illustrator选项 | 您可以栅格化®文件、保持透明背景、选择分辨率以及选择颜色空间。<br> 请参阅[设置PostScript和Illustrator上传选项](#setting-postscript-and-illustrator-upload-options)。 |
+| | EVideo选项 | 您可以通过选择视频预设来转码视频文件。<br> 请参阅[设置eVideo上传选项](#setting-evideo-upload-options)。 |
+| | 批次集预设 | 要从上传的文件创建图像集或旋转集，请单击要使用的预设的“活动”列。 您可以选择多个预设。 您可以在Dynamic Media Classic的“应用程序设置/批次集预设”页面中创建预设。<br> 请参阅[将批次集预设配置为自动生成图像集和旋转集](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)，了解有关创建批次集预设的更多信息。<br> 请参阅[在上传](#setting-batch-set-presets-at-upload)时设置批次集预设。 |
 
 #### 设置上传时图像编辑的选项 {#setting-image-editing-options-at-upload}
 
-上传图像文件(包括AI、EPS和PSD文件)时，您可以在[!UICONTROL 上传作业选项]对话框中执行以下编辑操作：
+上传图像文件（包括AI、EPS和PSD文件）时，您可以在[!UICONTROL 上传作业选项]对话框中执行以下编辑操作：
 
 * 从图像边缘裁切空格（请参阅上表中的描述）。
 * 从图像的侧面手动裁切（请参阅上表中的描述）。
@@ -302,7 +303,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 | 正在处理 | 栅格化 | （默认）翻录PDF文件中的页面，并将矢量图形转换为位图图像。 如果要创建eCatalog，请选择此选项。 |
 | 提取 | 搜索词 | 从PDF文件中提取单词，以便在eCatalog查看器中按关键字搜索该文件。 |
 | | 链接 | 从PDF文件中提取链接，并将其转换为在eCatalog查看器中使用的图像映射。 |
-| 从多页PDF自动生成eCatalog | | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 (仅当在上传PDF文件时栅格化该文件时，此选项才可用。) |
+| 从多页PDF自动生成eCatalog | | 自动从PDF文件创建eCatalog。 eCatalog以您上传的PDF文件命名。 （仅当在上传PDF文件时栅格化该文件时，此选项才可用。） |
 | 解决方法 | | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认值为150。 |
 | 色彩空间 | | 选择“色彩空间”菜单，并为PDF文件选择一个色彩空间。 大多数PDF文件都具有RGB和CMYK彩色图像。 RGB色彩空间更适合在线查看。 |
 | | 自动检测 | 保留PDF文件的色彩空间。 |
@@ -353,7 +354,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 * 您不能同时选择两个ZIP文件并对其进行解压缩。 您一次只能提取一个ZIP存档。
 * 上传ZIP存档时，如果上传对话框显示500服务器错误，请在安装[最新的Service Pack](/help/release-notes/release-notes.md)后重试。
 
-## 预览资源 {#previewing-assets}
+## 预览资产 {#previewing-assets}
 
 要预览资源，请执行以下步骤。
 
@@ -407,7 +408,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    *图：使用日期选择器计划资产激活。*
 
-1. 如果要更新元数据属性中的复制代理触发器，请选中&#x200B;**[!UICONTROL 已达到打开/关闭时间]**&#x200B;选项。
+1. 如果要更新元数据属性中的复制代理触发器，请选中&#x200B;**[!UICONTROL 已达到打开/关闭时间]**选项。
    ![代理设置](assets-dm/Agent-settings.png)
 
 1. 要在特定持续时间后停用资产，请从&#x200B;**[!UICONTROL 关闭时间]**&#x200B;字段旁边的日期选取器中选择停用日期/时间。 停用日期应晚于资源的激活日期。 在[!UICONTROL 结束时间]后，无法通过[!DNL Assets] Web界面或HTTP API使用资产及其演绎版。
@@ -430,7 +431,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    * 查看或下载资源的次数
    * 用于使用资产的渠道/设备
-   * 最近使用过资产的创意解决方案
+   * 最近使用资产的Creative解决方案
 
    有关更多详细信息，请参阅[Assets分析](/help/assets/asset-insights.md)。
 
@@ -478,7 +479,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 导航到要移动的资源的位置。
 
-1. 选择资源，然后单击工具栏中的&#x200B;**[!UICONTROL 移动]**&#x200B;选项。
+1. 选择资源，然后单击工具栏中的&#x200B;**[!UICONTROL 移动]**选项。
    ![在Assets工具栏中移动选项](assets/do-not-localize/move.png)
 
 1. 在[!UICONTROL 移动Assets]向导中，执行以下操作之一：
@@ -545,11 +546,11 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
    >[!NOTE]
    >
-   >如果从&#x200B;**[!UICONTROL “演绎版”]**&#x200B;面板选择演绎版，则工具栏更改上下文并仅显示与该演绎版相关的那些操作。不显示[!UICONTROL 上传演绎版]等选项。 要在工具栏中查看这些选项，请导航到资产的详细信息页面。
+   >如果从&#x200B;**[!UICONTROL “演绎版”]**&#x200B;面板选择演绎版，则工具栏更改上下文并仅显示与该演绎版相关的那些操作。 不显示[!UICONTROL 上传演绎版]等选项。 要在工具栏中查看这些选项，请导航到资产的详细信息页面。
 
    您可以为希望在图像或视频资源的详细信息页面中显示的演绎版配置尺寸。 根据您指定的维度，[!DNL Assets]显示具有精确或最接近维度的演绎版。
 
-   要在资源详细信息级别配置图像的演绎版尺寸，请叠加 `renditionpicker` 节点 (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) 并配置宽度属性的值。配置属性&#x200B;**[!UICONTROL 大小（长）（以KB]**&#x200B;为单位）以代替宽度，以便可以根据图像大小在资源详细信息页面上自定义演绎版。 对于基于大小的自定义，如果匹配的演绎版的大小大于原始演绎版，则属性 `preferOriginal` 将首选项分配给原始演绎版。
+   要在资源详细信息级别配置图像的演绎版尺寸，请叠加 `renditionpicker` 节点 (`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`) 并配置宽度属性的值。 配置属性&#x200B;**[!UICONTROL 大小（长）（以KB]**&#x200B;为单位）以代替宽度，以便可以根据图像大小在资源详细信息页面上自定义演绎版。 对于基于大小的自定义，如果匹配的演绎版的大小大于原始演绎版，则属性 `preferOriginal` 将首选项分配给原始演绎版。
 
    同样，您可以通过叠加`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`来自定义注释页面图像。
 
@@ -615,7 +616,7 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 1. 发布时，如果资产引用了其他资产，则向导中会列出其引用。 仅显示自上次发布以来未发布或修改的引用。 选择要发布的引用。
 
-1. 取消发布时，如果资产引用了其他资产，请选择要取消发布的引用。 单击&#x200B;**[!UICONTROL 取消发布]**。在确认对话框中，单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止操作，或单击&#x200B;**[!UICONTROL 取消发布]**&#x200B;以确认在指定日期取消发布资源。
+1. 取消发布时，如果资产引用了其他资产，请选择要取消发布的引用。 单击&#x200B;**[!UICONTROL 取消发布]**。 在确认对话框中，单击&#x200B;**[!UICONTROL 取消]**&#x200B;以停止操作，或单击&#x200B;**[!UICONTROL 取消发布]**&#x200B;以确认在指定日期取消发布资源。
 
 了解以下与发布或取消发布资产或文件夹相关的限制和提示：
 
@@ -687,7 +688,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 
 1. 若要裁切图像，请单击&#x200B;**[!UICONTROL 裁切]** ![选项以裁切图像](assets/do-not-localize/crop.png)。
 
-1. 从列表中选择所需的选项。裁切区域会根据您选择的选项显示在图像上。 利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
+1. 从列表中选择所需的选项。 裁切区域会根据您选择的选项显示在图像上。 利用&#x200B;**手绘**&#x200B;选项，您可以不受纵横比限制裁剪图像。
 
 1. 选择要裁剪的区域，并在图像上调整其大小或重新定位。
 
@@ -724,7 +725,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 
 >[!NOTE]
 >
->时间轴包含多个特定于内容片段[&#128279;](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)的选项。
+>时间轴包含多个特定于内容片段](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments)的[选项。
 
 ## 为资源作批注 {#annotating}
 
@@ -734,7 +735,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 
 >[!NOTE]
 >
->对于内容片段，在片段编辑器[&#128279;](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)中创建注释。
+>对于内容片段，在片段编辑器](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)中创建[注释。
 
 1. 导航到要将注释添加到的资源的位置。
 1. 从以下选项之一单击&#x200B;**[!UICONTROL 注释]**&#x200B;选项：
@@ -742,7 +743,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
    * [快速操作](/help/assets/manage-assets.md#quick-actions)
    * 选择资产或导航到资产页面后，从工具栏中选择资产。
 
-1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
+1. 在时间轴底部的&#x200B;**[!UICONTROL 注释]**&#x200B;框中添加注释。 或者，在图像上标出一个区域，然后在&#x200B;**[!UICONTROL 添加批注]**&#x200B;对话框中添加批注。
 
 1. 要通知用户有关批注的信息，请指定用户的电子邮件地址并添加批注。 例如，要通知Aaron MacDonald有关注释，请输入@aa。 所有匹配用户的提示都会显示在列表中。 从列表中选择Aaron的电子邮件地址，以便可以使用评论为人员添加标签。 同样，您可以在注释内的任何位置或在注释之前或之后标记更多用户。
 
@@ -828,13 +829,13 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 
 1. 从“打印”对话框中，选择您希望批注/审阅状态显示在PDF上的位置。 例如，如果希望批注/状态在包含已打印图像的页面的右上角打印，则使用&#x200B;**左上**&#x200B;设置。 默认情况下，该复选框处于选中状态。
 
-   您可以根据希望在打印的 PDF 中显示批注/状态的位置选择其他设置。如果希望批注/状态显示在与打印资产不同的页面中，请选择&#x200B;**[!UICONTROL 下一页]**。
+   您可以根据希望在打印的 PDF 中显示批注/状态的位置选择其他设置。 如果希望批注/状态显示在与打印资产不同的页面中，请选择&#x200B;**[!UICONTROL 下一页]**。
 
-1. 单击&#x200B;**[!UICONTROL 打印]**。 根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
+1. 单击&#x200B;**[!UICONTROL 打印]**。 根据您在步骤 2 中选择的选项，生成的 PDF 会在指定位置显示批注/状态。 例如，如果您选择使用&#x200B;**左上角**&#x200B;设置打印批注和审阅状态，则生成的输出将类似于此处描述的 PDF 文件。
 
    已生成PDF上的![批注和审阅状态](assets/annotation-status-pdf.png)
 
-1. 使用右上方的选项下载PDF![&#128279;](assets/do-not-localize/download.png)的![下载选项，或在PDF](assets/do-not-localize/print.png)PDF上打印打印选项。
+1. 使用右上方的选项下载PDF](assets/do-not-localize/download.png)的![下载选项，或在PDF](assets/do-not-localize/print.png)PDF上打印![打印选项。
 
    >[!NOTE]
    >
@@ -883,7 +884,7 @@ CUG是限制对资源的访问权限的额外方法。 您还可以配置文件�
 * 使用同一位置中存在的相同文件名上传资源。 它可以是新资产，也可以是同一资产的修改版本。
 * 编辑[!DNL Experience Manager]中的图像并保存更改。
 * 编辑资源的元数据。
-* 使用[!DNL Experience Manager]桌面应用签出现有资产，编辑它，然后[上载更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hans#edit-assets-upload-updated-assets)。
+* 使用[!DNL Experience Manager]桌面应用签出现有资产，编辑它，然后[上载更改](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#edit-assets-upload-updated-assets)。
 
 您还可以通过工作流启用自动版本控制。 在为资源创建版本时，元数据和演绎版与版本一起保存。 呈现版本是相同图像的替代版本，例如，上传的JPEG文件的PNG呈现版本。
 
@@ -958,4 +959,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-要了解更多信息，请参阅如何[使用桌面应用程序浏览DAM资源](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=zh-Hans#browse-search-preview-assets)和[如何使用Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)。
+要了解更多信息，请参阅如何[使用桌面应用程序浏览DAM资源](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets)和[如何使用Adobe Asset Link](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)。

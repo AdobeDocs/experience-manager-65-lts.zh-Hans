@@ -11,10 +11,10 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: fea20b34-2f66-460e-8b1c-4e55842bc789
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 0%
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -36,19 +36,19 @@ ht-degree: 0%
  <tbody>
   <tr>
    <td><p>远程集成</p></td>
-   <td><p>远程集成让Flex客户端能够调用服务操作。 (请参阅<a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理</a>。)</p></td>
+   <td><p>远程集成让Flex客户端能够调用服务操作。 (请参阅<a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting">使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理</a>。)</p></td>
   </tr>
   <tr>
    <td><p>Java API</p></td>
-   <td><p>Java API可以调用AEM Forms服务。 Java API分为客户端库和Java调用API。 (请参阅<a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">使用Java API调用AEM Forms</a>。)</p></td>
+   <td><p>Java API可以调用AEM Forms服务。 Java API分为客户端库和Java调用API。 （请参阅<a href="/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api">使用Java API调用AEM Forms</a>。）</p></td>
   </tr>
   <tr>
    <td><p>Web服务</p></td>
-   <td><p>AEM Forms支持SOAP/HTTP等Web服务标准。 服务可以公开为Web服务，WSDL遵循W3C定义的Web服务标准。</p><p>可以从任何Web服务栈栈调用服务，包括.NET Framework和Sun™ Web服务SDK。 (请参阅<a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">使用Web服务调用AEM Forms</a>。)</p></td>
+   <td><p>AEM Forms支持SOAP/HTTP等Web服务标准。 服务可以公开为Web服务，WSDL遵循W3C定义的Web服务标准。</p><p>可以从任何Web服务栈栈调用服务，包括.NET Framework和Sun™ Web服务SDK。 （请参阅<a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services">使用Web服务调用AEM Forms</a>。）</p></td>
   </tr>
   <tr>
    <td><p>REST请求</p></td>
-   <td><p>AEM Forms支持REST请求。 可以直接从HTML页面调用服务。 (请参阅<a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">使用REST请求调用AEM Forms</a>。)</p></td>
+   <td><p>AEM Forms支持REST请求。 可以直接从HTML页面调用服务。 （请参阅<a href="/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests">使用REST请求调用AEM Forms</a>。）</p></td>
   </tr>
  </tbody>
 </table>
@@ -66,7 +66,7 @@ ht-degree: 0%
 * 将调用请求路由到适当的服务（要调用的服务的名称是调用请求的一部分）。
 * 执行诸如确定调用方是否具有调用指定服务操作的权限之类的任务。 调用请求必须包含有效的AEM表单用户名和密码。
 
-  有多种不同的方法可以将调用请求发送到服务。 此外，还有不同的方法可以将所需的输入值发送到服务。 例如，假设您使用Java API来调用需要PDF文档的服务。 相应的Java方法包含一个接受PDF文档的参数。 在这种情况下，参数的数据类型为`com.adobe.idp.Document`。 (请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。)
+  有多种不同的方法可以将调用请求发送到服务。 此外，还有不同的方法可以将所需的输入值发送到服务。 例如，假设您使用Java API来调用需要PDF文档的服务。 相应的Java方法包含一个接受PDF文档的参数。 在这种情况下，参数的数据类型为`com.adobe.idp.Document`。 （请参阅[使用Java API将数据传递到AEM Forms服务](/help/forms/developing/invoking-aem-forms-using-java.md#passing-data-to-aem-forms-services-using-the-java-api)。）
 
   如果您使用watched文件夹调用服务，则当您将文件置于配置的watched文件夹中时，会发送调用请求。 如果使用电子邮件调用服务，则当电子邮件到达配置的收件箱时，会向服务发送调用请求。
 
@@ -86,14 +86,14 @@ ht-degree: 0%
 
 **另请参阅**
 
-[了解AEM Forms流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
+[理解 AEM Forms 流程](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes)
 
-[使用AEM Forms调用(AEM表单已弃用) AEM Forms远程处理](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
+[使用AEM Forms调用（AEM表单已弃用） AEM Forms远程处理](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)
 
 [使用Java API调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api)
 
-[使用Web服务调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
+[使用 Web 服务调用 AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services)
 
 [调用以人为中心的长期进程](/help/forms/developing/invoking-human-centric-long-lived.md#invoking-human-centric-long-lived-processes)
 
-[使用REST请求调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests)
+[使用 REST 请求调用 AEM Forms](/help/forms/developing/invoking-aem-forms-using-rest.md#invoking-aem-forms-using-rest-requests)

@@ -1,5 +1,5 @@
 ---
-title: 使用REST请求调用AEM Forms
+title: 使用 REST 请求调用 AEM Forms
 description: 使用REST请求调用在Workbench中创建的流程。
 contentOwner: admin
 content-type: reference
@@ -11,20 +11,20 @@ feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 hide: true
 hidefromtoc: true
 exl-id: 11a7278e-efaa-402c-8add-5280bf5a156a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2481'
+source-wordcount: '2507'
 ht-degree: 0%
 
 ---
 
-# 使用REST请求调用AEM Forms {#invoking-aem-forms-using-rest-requests}
+# 使用 REST 请求调用 AEM Forms {#invoking-aem-forms-using-rest-requests}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
 可以配置在Workbench中创建的进程，以便您可以通过代表性状态传输(REST)请求来调用它们。 从HTML页面发送REST请求。 即，您可以使用REST请求直接从网页调用Forms进程。 例如，您可以打开网页的新实例。 然后，您可以调用Forms进程，并加载渲染的PDF文档，其中包含HTTP POST请求中发送的数据。
 
-存在两种类型的HTML客户端。 第一个HTML客户端是使用JavaScript编写的AJAX客户端。 第二个客户端是包含提交按钮的HTML表单。 基于HTML的客户端应用程序不是唯一可能的REST客户端。 任何支持HTTP请求的客户端应用程序都可以使用REST调用调用来调用服务。 例如，您可以使用PDF表单中的REST调用来调用服务。 (请参阅[从Acrobat调用MyApplication/EncryptDocument进程](#rest-invocation-examples)。)
+存在两种类型的HTML客户端。 第一个HTML客户端是使用JavaScript编写的AJAX客户端。 第二个客户端是包含提交按钮的HTML表单。 基于HTML的客户端应用程序不是唯一可能的REST客户端。 任何支持HTTP请求的客户端应用程序都可以使用REST调用调用来调用服务。 例如，您可以使用PDF表单中的REST调用来调用服务。 （请参阅[从Acrobat调用MyApplication/EncryptDocument进程](#rest-invocation-examples)。）
 
 在使用REST请求时，建议您不要直接调用Forms服务。 而是调用在Workbench中创建的流程。 在创建用于REST调用的进程时，请使用程序化起点。 在这种情况下，将自动添加REST端点。 有关在Workbench中创建进程的信息，请参阅[使用Workbench](https://www.adobe.com/go/learn_aemforms_workbench_63)。
 
@@ -187,7 +187,7 @@ ht-degree: 0%
 
 **将布尔值传递给进程**
 
-以下HTML示例将两个`Boolean`值传递到名为`RestTest2`的AEM Forms进程。 调用方法的名称为`invoke`，版本为1.0。请注意，使用的是HTML Post方法。
+以下HTML示例将两个`Boolean`值传递到名为`RestTest2`的AEM Forms进程。 调用方法的名称为`invoke`，版本为1.0。 请注意，使用的是HTML Post方法。
 
 ```html
  <html>
@@ -317,7 +317,7 @@ ht-degree: 0%
 
 **从Acrobat调用MyApplication/EncryptDocument进程** {#invoke-process-acrobat}
 
-您可以使用REST请求从Acrobat调用Forms进程。 例如，您可以调用&#x200B;*MyApplication/EncryptDocument*&#x200B;进程。 要从Acrobat调用Forms进程，请在Designer中的XDP文件上放置提交按钮。 (请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。)
+您可以使用REST请求从Acrobat调用Forms进程。 例如，您可以调用&#x200B;*MyApplication/EncryptDocument*&#x200B;进程。 要从Acrobat调用Forms进程，请在Designer中的XDP文件上放置提交按钮。 （请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。）
 
 在按钮的&#x200B;*提交到URL*&#x200B;字段中指定用于调用进程的URL，如下图所示。
 

@@ -7,9 +7,9 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: b3f8e1d6-3e6e-4b2c-8528-3346bbda3396
-source-git-commit: 9dcdf84b70a3b0ea6fb332cd2cf8ccf1d4476489
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -156,7 +156,7 @@ AEM表单无法区分用户ID和密码相同但属于不同域的用户帐户。
 
 >[!NOTE]
 >
->JEE上的AEM Forms还允许在OSGi上运行的AEM forms加载项的用户被识别为AEM用户。 在以下情形中，需要在JEE上的AEM Forms与在OSGi上运行的AEM Forms加载项(例如HTML工作区)之间进行单点登录，则需要此项。 上述删除操作仅会从JEE上的AEM Forms中删除用户。 用户不会从在OSGi环境中运行的AEM Forms加载项中删除。 但是在删除用户后所做的任何登录尝试(登录AEM Forms附加组件JEE服务器或AEM Forms附加组件OSGi环境)都将被拒绝。
+>JEE上的AEM Forms还允许在OSGi上运行的AEM forms加载项的用户被识别为AEM用户。 在以下情形中，需要在JEE上的AEM Forms与在OSGi上运行的AEM Forms加载项（例如HTML工作区）之间进行单点登录，则需要此项。 上述删除操作仅会从JEE上的AEM Forms中删除用户。 用户不会从在OSGi环境中运行的AEM Forms加载项中删除。 但是在删除用户后所做的任何登录尝试（登录AEM Forms附加组件JEE服务器或AEM Forms附加组件OSGi环境）都将被拒绝。
 
 ## 创建自定义登录错误处理程序 {#create-custom-login-error-handler}
 
@@ -168,7 +168,7 @@ AEM表单无法区分用户ID和密码相同但属于不同域的用户帐户。
   ***注意&#x200B;**：已为AEM Forms版本弃用Flex Workspace。*
 
 * 表单管理器
-* 进程报告
+* 流程报告
 
 CQ提供了一种机制来覆盖默认的404处理程序jsp。
 

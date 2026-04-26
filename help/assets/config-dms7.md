@@ -6,10 +6,10 @@ mini-toc-levels: 4
 feature: Configuration,Scene7 Mode
 solution: Experience Manager, Experience Manager Assets
 exl-id: 98bd0c24-6c5e-4b96-a3aa-a3e4ef802baf
-source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '6494'
-ht-degree: 3%
+source-wordcount: '6659'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 1. 将主源资产上传到Experience Manager后，会将其复制到Dynamic Media。 届时，Dynamic Media将处理所有资源处理和演绎版生成，例如视频编码和图像的动态变量。
 (在Dynamic Media - Scene7模式下，默认上传文件大小为2 GB或更小。 要启用大小为2 GB（最大为15 GB）的上传文件，请参阅[（可选）配置Dynamic Media - Scene7模式以上传大于2 GB](#optional-config-dms7-assets-larger-than-2gb)的资产。)
-1. 生成呈现版本后，Experience Manager可以安全地访问和预览远程Dynamic Media呈现版本(不会将二进制文件发送回Experience Manager实例)。
+1. 生成呈现版本后，Experience Manager可以安全地访问和预览远程Dynamic Media呈现版本（不会将二进制文件发送回Experience Manager实例）。
 1. 在内容准备好发布并批准后，它会触发Dynamic Media服务将内容推出到Delivery Server，并在CDN（内容分发网络）处缓存内容。
 
 ![chlimage_1-550](assets/chlimage_1-550.png)
@@ -43,7 +43,7 @@ ht-degree: 3%
 
 ## 在Scene7模式下启用Dynamic Media {#enabling-dynamic-media-in-scene-mode}
 
-默认情况下已禁用[Dynamic Media](https://business.adobe.com/cn/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须启用它。
+默认情况下已禁用[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须启用它。
 
 >[!WARNING]
 >
@@ -75,17 +75,19 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 功能包18912的安装是&#x200B;*可选*。
 
-功能包18912允许您通过FTP批量引入资源，或在Experience Manager上将资源从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 它可从[Adobe Professional Services](https://business.adobe.com/cn/customers/consulting-services/main.html)获得。
+功能包18912允许您通过FTP批量引入资源，或在Experience Manager上将资源从Dynamic Media — 混合模式或Dynamic Media Classic迁移到Dynamic Media - Scene7模式。 它可从[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)获得。
 
 有关详细信息，请参阅[安装功能包18912以进行批量资源迁移](/help/assets/bulk-ingest-migrate.md)。
 
 ## 在Cloud Services中创建Dynamic Media配置 {#configuring-dynamic-media-cloud-services}
 
-<!-- **Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
+<!--
+**Before you configure Dynamic Media** - After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials.
 
    ![dynamicmediaconfiguration2updated](assets/dynamicmediaconfiguration2updated.png)
 
-**To create a Dynamic Media Configuration in Cloud Services:** -->
+**To create a Dynamic Media Configuration in Cloud Services:**
+-->
 
 1. 在Experience Manager创作模式下，选择Experience Manager徽标以访问全局导航控制台并选择“工具”图标，然后转到&#x200B;**[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media配置]**。
 1. 在“Dynamic Media配置浏览器”页面的左侧窗格中，选择&#x200B;**[!UICONTROL 全局]** （不要选择&#x200B;**[!UICONTROL 全局]**&#x200B;左侧的文件夹图标），然后选择&#x200B;**[!UICONTROL 创建]**。
@@ -127,13 +129,13 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
    * **[!UICONTROL 正在发布Assets]** — 您可以从以下三个选项中进行选择：
       * **[!UICONTROL 立即]**&#x200B;表示上传资产时，系统会摄取资产并立即提供URL/嵌入。 发布资产无需用户干预。
-      * **[!UICONTROL 激活时]**&#x200B;意味着必须先明确发布资产，然后才能提供URL/嵌入链接。<br><!-- CQDOC-17478, Added March 9, 2021-->从Experience Manager 6.5.8开始，Experience Manager发布实例仅在`dam:scene7Domain`激活时`dam:scene7FileStatus`发布模式下反映准确的Dynamic Media元数据值，如&#x200B;**[!UICONTROL 和]**。 转到Sling配置管理器。 查找`Scene7ActivationJobConsumer Component`的配置或创建新配置)。 选中&#x200B;**[!UICONTROL Dynamic Media发布后复制元数据]**&#x200B;复选框，然后选择&#x200B;**[!UICONTROL 保存]**。
+      * **[!UICONTROL 激活时]**&#x200B;意味着必须先明确发布资产，然后才能提供URL/嵌入链接。<br><!-- CQDOC-17478, Added March 9, 2021-->从Experience Manager 6.5.8开始，Experience Manager发布实例仅在&#x200B;**[!UICONTROL 激活时]**&#x200B;发布模式下反映准确的Dynamic Media元数据值，如`dam:scene7Domain`和`dam:scene7FileStatus`。 转到Sling配置管理器。 查找`Scene7ActivationJobConsumer Component`的配置或创建新配置)。 选中&#x200B;**[!UICONTROL Dynamic Media发布后复制元数据]**&#x200B;复选框，然后选择&#x200B;**[!UICONTROL 保存]**。
 
         ![在Dynamic Media发布后复制元数据复选框](assets-dm/replicate-metadata-setting.png)
 
-      * **[!UICONTROL 选择性发布]**&#x200B;此选项允许您控制Dynamic Media中发布哪些文件夹。 它可让您使用智能裁切或动态呈现版本等功能，或决定哪些文件夹在Experience Manager中专门发布以供预览。 这些相同的资产&#x200B;*不是*&#x200B;发布在Dynamic Media中以便在公共域中交付。<br>您可以在&#x200B;**[!UICONTROL Dynamic Media云配置]**&#x200B;中设置此选项，或者，如果您愿意，也可以选择在文件夹的&#x200B;**[!UICONTROL 属性]**&#x200B;的文件夹级别设置此选项。<br>请参阅[在Dynamic Media中使用选择性发布](/help/assets/selective-publishing.md)。<br>如果您稍后更改此配置，或稍后在文件夹级别更改此配置，则这些更改只会影响您从此点以后上传的新资源。 文件夹中现有资源的发布状态保持不变，直到您从&#x200B;**[!UICONTROL 快速发布]**&#x200B;或&#x200B;**[!UICONTROL 管理发布]**&#x200B;对话框手动更改它们。
+      * **[!UICONTROL 选择性发布]**&#x200B;此选项允许您控制Dynamic Media中发布哪些文件夹。 它可让您使用智能裁切或动态呈现版本等功能，或决定哪些文件夹在Experience Manager中专门发布以供预览。 这些相同的资产&#x200B;*不是*&#x200B;发布在Dynamic Media中以便在公共域中交付。<br>您可以在&#x200B;**[!UICONTROL Dynamic Media云配置]**&#x200B;中设置此选项，或者，如果您愿意，也可以选择在文件夹的&#x200B;**[!UICONTROL 属性]**&#x200B;中的文件夹级别设置此选项。<br>请参阅[在Dynamic Media中使用选择性发布](/help/assets/selective-publishing.md)。<br>如果您稍后更改此配置，或稍后在文件夹级别更改此配置，则这些更改只会影响您从那时起上传的新资产。 文件夹中现有资源的发布状态保持不变，直到您从&#x200B;**[!UICONTROL 快速发布]**&#x200B;或&#x200B;**[!UICONTROL 管理发布]**&#x200B;对话框手动更改它们。
 
-   * **[!UICONTROL 安全预览服务器]** — 允许您指定安全呈现版本预览服务器的URL路径。 也就是说，在生成演绎版之后，Experience Manager可以安全地访问和预览远程Dynamic Media演绎版(不会将二进制文件发送回Experience Manager实例)。
+   * **[!UICONTROL 安全预览服务器]** — 允许您指定安全呈现版本预览服务器的URL路径。 也就是说，在生成演绎版之后，Experience Manager可以安全地访问和预览远程Dynamic Media演绎版（不会将二进制文件发送回Experience Manager实例）。
 除非您有特殊安排使用您自己公司的服务器或特殊服务器，否则Adobe建议您保留指定的此设置。
 
    * **[!UICONTROL 同步所有内容]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->默认选定。 如果要有选择地包含或排除同步到Dynamic Media的资产，请取消选择此选项。 取消选择此选项可以从以下两种Dynamic Media同步模式中进行选择：
@@ -141,7 +143,7 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
    * **[!UICONTROL Dynamic Media同步模式]**
       * **[!UICONTROL 默认启用]** — 除非您特别将文件夹标记为排除，否则默认情况下该配置将应用于所有文件夹。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
       * **[!UICONTROL 默认情况下已禁用]** — 在您明确将选定文件夹标记为同步到Dynamic Media之前，该配置不会应用于任何文件夹。
-要将选定的文件夹标记为同步到Dynamic Media，请选择一个资产文件夹，然后在工具栏上选择&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉列表中选择以下三个选项。 完成后，选择&#x200B;**[!UICONTROL 保存]**。 *请记住：如果您选择了更早的&#x200B;**[!UICONTROL 同步所有内容]**，则这三个选项将不可用。*&#x200B;另请参阅[在Dynamic Media中使用文件夹级别的选择性发布](/help/assets/selective-publishing.md)。
+要将选定的文件夹标记为同步到Dynamic Media，请选择一个资产文件夹，然后在工具栏上选择**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 详细信息]**&#x200B;选项卡的&#x200B;**[!UICONTROL Dynamic Media同步模式]**&#x200B;下拉列表中选择以下三个选项。 完成后，选择&#x200B;**[!UICONTROL 保存]**。 *请记住：如果您选择了更早的&#x200B;**[!UICONTROL 同步所有内容]**，则这三个选项将不可用。* 另请参阅[在Dynamic Media中使用文件夹级别的选择性发布](/help/assets/selective-publishing.md)。
          * **[!UICONTROL 已继承]** — 文件夹中没有显式同步值；相反，该文件夹会从其上级文件夹之一或云配置中的默认模式继承同步值。 继承的详细状态通过工具提示显示。
          * **[!UICONTROL 为子文件夹启用]** — 包含此子树中的所有内容，以便同步到Dynamic Media。 文件夹特定的设置会覆盖云配置中的默认模式。
          * **[!UICONTROL 已对子文件夹禁用]** — 排除此子树中的所有内容，禁止同步到Dynamic Media。
@@ -157,13 +159,15 @@ java -Xms4096m -Xmx4096m -Doak.queryLimitInMemory=500000 -Doak.queryLimitReads=5
 
 如果要进一步自定义配置，例如启用ACL（访问控制列表）权限，您可以选择在Dynamic Media - Scene7模式下[（可选）配置高级设置](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode)下完成任何任务。
 
-<!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
+<!--
+1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.
     * On the Dynamic Media Image Server page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
     * Select the **[!UICONTROL Security]** tab.
     * For the **[!UICONTROL Client address]**, select **[!UICONTROL Add]**.
     * Enter the IP address of the Experience Manager Author instance (not Dispatcher IP).
-    * In the upper-right corner of the page, select **[!UICONTROL Save]**. -->
+    * In the upper-right corner of the page, select **[!UICONTROL Save]**.
+-->
 
 您现在已完成基本配置；可以开始使用Dynamic Media - Scene7模式。
 
@@ -246,14 +250,14 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 如果您打算使用此功能，请注意以下先决条件和要点：
 
 * 您必须以Dynamic Media - Scene7模式运行Experience Manager 6.5 LTS。
-* 仅&#x200B;[*Managed Services*](https://business.adobe.com/cn/products/experience-manager/managed-services.html)客户支持此大型上传功能。
+* 仅&#x200B;[*Managed Services*](https://business.adobe.com/products/experience-manager/managed-services.html)客户支持此大型上传功能。
 * 确保您的Experience Manager实例配置了Amazon S3或Microsoft® Azure Blob存储。
 
   >[!NOTE]
   >
   >使用访问密钥和密钥配置Azure Blob存储，因为Blob存储配置中的AzureSas不支持此大型上传功能。
 
-* Oak的[直接二进制访问下载](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)已启用(不需要Oak的&#x200B;*直接二进制访问上载*)。
+* Oak的[直接二进制访问下载](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)已启用（不需要Oak的&#x200B;*直接二进制访问上载*）。
 
   要启用直接二进制访问下载，请在数据存储配置中设置属性`presignedHttpDownloadURIExpirySeconds > 0`。 该值应足够长，以便下载更大的二进制文件，并可能重试。
 
@@ -335,7 +339,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 * [配置颜色管理](#configuring-color-management)
 * [编辑所支持格式的MIME类型](#editing-mime-types-for-supported-formats)
 * [为不支持的格式添加MIME类型](#adding-mime-types-for-unsupported-formats)
-* [创建批次集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)(在Dynamic Media Classic用户界面中完成)
+* [创建批次集预设以自动生成图像集和旋转集](#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)（在Dynamic Media Classic用户界面中完成）
 
 #### 为图像服务器配置Dynamic Media发布设置 {#publishing-setup-for-image-server}
 
@@ -351,13 +355,13 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
 #### 配置颜色管理 {#configuring-color-management}
 
-通过Dynamic Media色彩管理，您可以对资源进行色彩校正。 通过颜色校正，摄取的资产可保留其颜色空间(RGB、CMYK、灰色)和嵌入的颜色配置文件。 请求动态演绎版时，会使用CMYK、RGB或灰度输出将图像颜色校正到目标颜色空间中。
+通过Dynamic Media色彩管理，您可以对资源进行色彩校正。 通过颜色校正，摄取的资产可保留其颜色空间（RGB、CMYK、灰色）和嵌入的颜色配置文件。 请求动态演绎版时，会使用CMYK、RGB或灰度输出将图像颜色校正到目标颜色空间中。
 
 请参阅[配置图像预设](/help/assets/managing-image-presets.md)。
 
 >[!NOTE]
 >
->默认情况下，当您选择&#x200B;**[!UICONTROL 呈现版本]**&#x200B;时，系统会显示15个呈现版本，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示15个查看器预设。 您可以提高此限制。请参阅[增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
+>默认情况下，当您选择&#x200B;**[!UICONTROL 呈现版本]**&#x200B;时，系统会显示15个呈现版本，当您在资产的详细信息视图中选择&#x200B;**[!UICONTROL 查看器]**&#x200B;时，系统会显示15个查看器预设。 您可以提高此限制。 请参阅[增加显示的图像预设数](/help/assets/managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)或[增加显示的查看器预设数](/help/assets/managing-viewer-presets.md#increasing-the-number-of-viewer-presets-that-display)。
 
 #### 编辑所支持格式的MIME类型 {#editing-mime-types-for-supported-formats}
 
@@ -407,7 +411,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. 在页面上，向下滚动到名称 *Adobe CQ Scene7 Asset MIME 类型服务*，如下面的屏幕截图所示。在名称的右侧，选择&#x200B;**[!UICONTROL 编辑配置值]** （铅笔图标）。
+1. 在页面上，向下滚动到名称 *Adobe CQ Scene7 Asset MIME 类型服务*，如下面的屏幕截图所示。 在名称的右侧，选择&#x200B;**[!UICONTROL 编辑配置值]** （铅笔图标）。
 
    ![2019-08-02_16-44-56](assets/2019-08-02_16-44-56.png)
 
@@ -465,7 +469,7 @@ Dynamic Media中的密码过期时间设置为自当前系统日期起100年。
 
 **要配置默认命名：**
 
-1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#getting-started)，然后登录到您的帐户。
+1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
    配置时，Adobe已提供您的凭据和登录详细信息。 如果您没有此信息，请联系Adobe客户支持。
 
@@ -499,7 +503,7 @@ Dynamic Media使用批次集预设将资产组织到图像集（替代图像、�
 
 **创建批次集预设：**
 
-1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#getting-started)，然后登录到您的帐户。
+1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
    配置时，Adobe已提供您的凭据和登录详细信息。 如果您没有此信息，请联系Adobe客户支持。
 
@@ -555,7 +559,7 @@ spin-01-01
 
 **为自动生成2D旋转集创建批次集预设：**
 
-1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=zh-Hans#getting-started)，然后登录到您的帐户。
+1. 打开[Dynamic Media Classic桌面应用程序](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)，然后登录到您的帐户。
 
    配置时，Adobe已提供您的凭据和登录详细信息。 如果您没有此信息，请联系Adobe客户支持。
 
@@ -660,9 +664,11 @@ Granite传输工作流队列用于&#x200B;**[!UICONTROL DAM更新资产]**&#x200
 
    您可以增加&#x200B;**[!UICONTROL 个最大并行作业]**，以充分支持将文件大量上传到Dynamic Media。 具体值取决于硬件容量。 在某些情况下（即初始迁移或一次性批量上传），您可以使用较大的值。 但是，请注意，使用较大的值（例如内核数量的两倍）可能会对其他并发活动产生负面影响。 因此，请根据特定用例测试和调整值。
 
-<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0&ndash;1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
+<!--
+By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0&ndash;1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic (Scene7). -->
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic (Scene7).
+-->
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -743,7 +749,7 @@ Scene7上传连接设置将Experience Manager资源同步到Dynamic Media Classi
 
    ![chlimage_1-18](assets/chlimage_1-3.png)
 
-   请注意，资源`dc:format`的`Fiji Red.jpg`是`image/jpeg`。
+   请注意，资源`Fiji Red.jpg`的`dc:format`是`image/jpeg`。
 
    若要将此筛选器应用于所有图像，而不管其格式如何，请将该值设置为`image/*`，其中`*`是应用于任何格式的所有图像的正则表达式。
 

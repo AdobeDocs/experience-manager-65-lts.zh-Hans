@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5ac3350d-8819-4b33-b1a1-9e686b6abd9e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '455'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 **任务管理器：**&#x200B;允许Workspace用户调用该服务。
 
-**远程处理：**&#x200B;使使用Flex构建的应用程序能够使用(不推荐用于AEM表单)AEM表单远程处理来调用该服务。 将为每个激活的服务自动创建远程端点。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的远程对象，以调用对相关服务的操作。
+**远程处理：**&#x200B;使使用Flex构建的应用程序能够使用（不推荐用于AEM表单）AEM表单远程处理来调用该服务。 将为每个激活的服务自动创建远程端点。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的远程对象，以调用对相关服务的操作。
 
 **SOAP：**&#x200B;允许使用AEM表单编程API开发的客户端应用程序使用SOAP模式调用该服务。 将为每个激活的服务自动创建SOAP端点。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 **EJB：**&#x200B;允许使用AEM表单编程API开发的客户端应用程序使用Enterprise JavaBeans (EJB)模式调用该服务。 将为每个激活的服务自动创建EJB端点。
 
-**WSDL：**&#x200B;使使用AEM表单编程API开发的客户端应用程序能够使用Web服务定义语言(WSDL)调用该服务。 “核心配置”页包含一个选项，用于为AEM表单中的所有服务启用WSDL生成。 (请参阅配置常规AEM表单设置。)
+**WSDL：**&#x200B;使使用AEM表单编程API开发的客户端应用程序能够使用Web服务定义语言(WSDL)调用该服务。 “核心配置”页包含一个选项，用于为AEM表单中的所有服务启用WSDL生成。 （请参阅配置常规AEM表单设置。）
 
 可以配置在Workbench中创建的&#x200B;**REST：**&#x200B;进程，以便您可以通过代表性状态传输(REST)请求调用它们。 从HTML页面发送REST请求。 即，您可以使用REST请求直接从网页调用AEM表单进程。
 

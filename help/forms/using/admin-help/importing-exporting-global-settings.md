@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: f5b45667-87df-4069-8f08-2b6daf4bad1e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 
 **server_debugLevel：**&#x200B;不更改此设置。
 
-**client_pollingInterval：**&#x200B;设置(JEE上的AEM表单已弃用) Flex Workspace上使用的轮询间隔（以秒为单位）以检测新任务和修改的任务。 默认值为3秒。 这在AEM Forms Workspace中不起作用。
+**client_pollingInterval：**&#x200B;设置（JEE上的AEM表单已弃用） Flex Workspace上使用的轮询间隔（以秒为单位）以检测新任务和修改的任务。 默认值为3秒。 这在AEM Forms Workspace中不起作用。
 
 **client_systemContext_name：**&#x200B;指定要在AEM Forms Workspace中任务附件的“添加者”字段（在“附件”选项卡中）中显示的自定义名称（例如“公民”）。
 

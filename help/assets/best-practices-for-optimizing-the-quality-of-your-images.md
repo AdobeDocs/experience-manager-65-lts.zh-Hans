@@ -9,9 +9,9 @@ feature: Asset Management
 role: User, Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: 30038003-e307-46d1-b5f9-624d98a672a7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1504'
 ht-degree: 4%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Manager包含100多条Dynamic Media图像投放命令，可用�
 
 * JPG或PNG是提供高品质且大小和重量可控的图像的最佳选择。
 * 如果未在URL中提供任何格式命令，则Dynamic Media图像投放默认为JPG进行投放。
-* JPG按10:1的比例压缩，通常生成的图像文件较小。 PNG压缩的比例约为2:1，除非有时，例如当图像包含白色背景时。 但是，PNG文件通常比JPG文件大。
+* JPG压缩的比率为10:1，通常生成的图像文件较小。 PNG压缩的比率约为2:1，除非有时（如图像包含白色背景时）。 但是，PNG文件通常比JPG文件大。
 * JPG使用有损压缩，这意味着压缩期间会丢弃图片元素（像素）。 另一方面，PNG使用无损压缩。
 * JPG压缩照片图像时通常比具有锐边和对比度的合成图像更加逼真。
 * 如果图像包含透明度，请使用PNG，因为JPG不支持透明度。
@@ -48,8 +48,10 @@ Adobe Experience Manager包含100多条Dynamic Media图像投放命令，可用�
 
 最佳实践白皮书[在Adobe Dynamic Media Classic中锐化图像](/help/assets/assets/sharpening_images.pdf)也适用于Experience Manager。
 
-<!-- To be reviewed and updated: Broken link.
-See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html). -->
+<!--
+To be reviewed and updated: Broken link.
+See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photoshop/atv/cs6-tutorials/sharpening-an-image-with-unsharp-mask.html).
+-->
 
 借助Experience Manager，您可以在摄取和/或交付时锐化图像。 但是，通常只使用一种方法或另一种方法来锐化图像，但不能同时使用这两种方法来锐化。 通常，在交付、URL上锐化图像可产生最佳效果。
 
@@ -67,7 +69,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
       * **[!UICONTROL *阈值&#x200B;*]**（0-255，效果敏感度。）
 
-            此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**&#x200B;参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
+            此参数确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素，而滤镜会锐化这些像素。 **[!UICONTROL threshold]**参数有助于避免过度锐化颜色相似的区域，如肤色。 例如，阈值为12时，会忽略肤色亮度的细微变化，以避免添加“杂色”，同时仍会为高对比度区域添加边缘对比度，如睫毛与皮肤相遇的地方。
         
         有关如何设置这三个参数的更多信息（包括要与过滤器一起使用的最佳实践），请参阅以下资源：
 
@@ -88,7 +90,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 将单色参数设置保留为0。
 
-### JPEG压缩(`&qlt=`)的最佳实践{#best-practices-for-jpeg-compression-qlt}
+### JPEG压缩的最佳实践(`&qlt=`) {#best-practices-for-jpeg-compression-qlt}
 
 * 此参数可控制JPG编码质量。 较高的值意味着较高质量的图像但文件大小较大；或者，较低的值意味着较低质量的图像但文件大小较小。 此参数的范围为0至100。
 * 要优化质量，请勿将参数值设置为100。 设置90或95与100之间的差异几乎不可感知，但100却不必要地增加了图像文件的大小。 因此，要优化质量但避免图像文件过大，请将`qlt= value`设置为90或95。
@@ -118,7 +120,7 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 这种设置组合可在大多数情况下产生卓越的效果。
 
-如果图像需要进一步优化，请从设置为0.2或0.3的半径开始逐步微调锐化（钝化蒙版）参数。然后，逐渐将数量从1.75增加到最大值4(相当于Photoshop中的400%)。 检查是否达到了预期效果。
+如果图像需要进一步优化，请从设置为0.2或0.3的半径开始逐步微调锐化（钝化蒙版）参数。 然后，逐渐将数量从1.75增加到最大值4（相当于Photoshop中的400%）。 检查是否达到了预期效果。
 
 如果锐化结果仍然不令人满意，请以小数增量增加半径。 对于每增加一个小数，将数量重新调整为1.75，然后逐渐增加到4。 重复此过程，直到获得所需的结果。 虽然上述价值观是创意工作室已经验证的方法，但请记住，您可以从其他价值观开始，并遵循其他策略。 因此，结构化试验是关键，其结果是否满意是主观问题。
 
@@ -126,4 +128,4 @@ See also [Sharpening an image with unsharp mask](https://helpx.adobe.com/photosh
 
 * 尝试直接在URL上实时测试不同的参数。
 * 作为最佳实践，请记住，您可以将Dynamic Media图像服务命令分组到图像预设中。 图像预设基本上是带有自定义预设名称（如`$thumb_low$`和`&product_high$`）的URL命令宏。 URL路径中的自定义预设名称将调用这些预设。 此功能可帮助您管理网站上图像不同使用模式的命令和质量设置，并缩短URL的总长度。
-* Experience Manager还提供了更高级的方法来调整图像质量，例如，在摄取时应用锐化图像。 对于有选项可调整和优化渲染结果的高级用例，[Adobe Professional Services](https://business.adobe.com/cn/customers/consulting-services/main.html)可以帮助您提供自定义的洞察信息和最佳实践。
+* Experience Manager还提供了更高级的方法来调整图像质量，例如，在摄取时应用锐化图像。 对于有选项可调整和优化渲染结果的高级用例，[Adobe Professional Services](https://business.adobe.com/customers/consulting-services/main.html)可以帮助您使用自定义的insight和最佳实践。

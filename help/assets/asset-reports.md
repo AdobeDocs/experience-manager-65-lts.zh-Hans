@@ -7,9 +7,9 @@ feature: Asset Reports,Asset Management
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 434a081a-f9e4-4a0d-8468-55b4ab5a6287
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 8%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/asset-reports.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 通过资产报告，您可以评估[!DNL Adobe Experience Manager Assets]部署的实用程序。 通过[!DNL Assets]，您可以为数字资源生成各种报告。 这些报表提供关于系统使用情况、用户如何与资源交互以及下载和共享哪些资源的有用信息。
@@ -97,7 +97,7 @@ ht-degree: 8%
 
    ![文件报告的详细信息页面](assets/files_report.png)
 
-   **[!UICONTROL 链接共享]**&#x200B;报表显示从[!DNL Assets]内与外部用户共享的资产的URL。 其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和过期日期。列不可自定义。
+   **[!UICONTROL 链接共享]**&#x200B;报表显示从[!DNL Assets]内与外部用户共享的资产的URL。 其中包括共享资产的用户的电子邮件 ID、接受共享资产的用户的电子邮件 ID、链接的共享日期和过期日期。 列不可自定义。
 
    **[!UICONTROL 链接共享]**&#x200B;报告不包含子文件夹和呈现形式的选项，因为它仅发布显示在`/var/dam/share`下的共享URL。
 
@@ -114,7 +114,7 @@ ht-degree: 8%
    ![选择或取消选择的报表列](assets/custom_columns.png)
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 创建]**。 此时将显示一条消息，通知已启动报表生成。
-1. 在[!UICONTROL 资产报表]页面上，报表生成状态基于报表作业的当前状态，例如[!UICONTROL 成功]、[!UICONTROL 失败]、[!UICONTROL 已排队]或[!UICONTROL 已计划]。 通知收件箱中将显示相同的状态。要查看报告页面，请单击报告链接。 或者，选择报告，然后单击工具栏中的&#x200B;**[!UICONTROL 查看]**。
+1. 在[!UICONTROL 资产报表]页面上，报表生成状态基于报表作业的当前状态，例如[!UICONTROL 成功]、[!UICONTROL 失败]、[!UICONTROL 已排队]或[!UICONTROL 已计划]。 通知收件箱中将显示相同的状态。要查看报表页面，请单击报表链接。 或者，选择报告，然后单击工具栏中的&#x200B;**[!UICONTROL 查看]**。
 
    <!--![A generated report](assets/report_page.png)-->
    [报告状态](assets/report-status.JPG)
@@ -147,9 +147,9 @@ ht-degree: 8%
 
 1. 使用属性路径选取器在CRXDE中的`jcr:content`节点下添加属性路径。 或者，在属性路径字段中键入路径。
 
-   ![从jcr：content中的路径映射属性路径](assets/property_picker.png)
+   ![从jcr:content](assets/property_picker.png)中的路径映射属性路径
 
-   要添加更多自定义列，请单击“添加”**&#x200B;**&#x200B;并重复步骤5和6。
+   要添加更多自定义列，请单击“添加”****&#x200B;并重复步骤5和6。
 
 1. 单击工具栏中的&#x200B;**[!UICONTROL 创建]**。 此时将显示一条消息，通知已启动报表生成。
 

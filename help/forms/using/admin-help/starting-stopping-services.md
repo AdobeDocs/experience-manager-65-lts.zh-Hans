@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a4ff69d2-a429-49b9-ba48-9dd56ccdf23e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 0%
+ht-degree: 13%
 
 ---
 
@@ -31,11 +31,11 @@ AEM表单中包含两种类型的服务：
 
 ## 启动或停止与AEM表单模块关联的服务 {#start-or-stop-the-services-associated-with-aem-forms-modules}
 
-AEM表单模块(例如Forms、Rights Management、输出)作为服务运行。 有时，您可能需要停止或启动这些AEM表单模块的服务。 例如，在更改服务的设置后，必须停止AEM表单服务，然后重新启动该服务。
+AEM表单模块（例如Forms、Rights Management、输出）作为服务运行。 有时，您可能需要停止或启动这些AEM表单模块的服务。 例如，在更改服务的设置后，必须停止AEM表单服务，然后重新启动该服务。
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 在管理控制台中，单击&#x200B;**服务** > **应用程序和服务** > **服务管理**。
 1. 在“服务管理”页上，选中要停止或启动的服务旁边的复选框，然后单击停止或启动。

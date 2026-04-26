@@ -5,10 +5,10 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 338ea82e-c248-4118-9d42-e268d6396e65
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '2085'
-ht-degree: 0%
+source-wordcount: '2116'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 AEM有许多方面可以进行配置：
 
-* 某些组件通常针对每个项目安装[&#128279;](#primary-configuration-considerations)进行配置，必须对其进行查看以确认它们是否适用于您的项目。
+* 某些组件通常针对每个项目安装](#primary-configuration-considerations)进行[配置，必须对其进行查看以确认它们是否适用于您的项目。
 * [其他配置](#further-configuration-considerations)可能是通用的，但不是必需的；与功能或系统性能和稳定性相关。
 * 只有AEM的某些可选功能才需要其他功能（这些功能与相应的功能一起进行记录）。
 
@@ -60,7 +60,7 @@ AEM有许多方面可以进行配置：
 
 该列表简要概述了每个配置方面，并提供了指向提供完整详细信息的页面的链接。
 
-### 安全核对清单 {#security-checklist}
+### 安全清单 {#security-checklist}
 
 [安全核对清单](/help/sites-administering/security-checklist.md)中列出了几个关键配置问题。 请务必阅读本文，并采取安装所需的任何措施。
 
@@ -79,7 +79,7 @@ AEM有许多方面可以进行配置：
 
 ### IPv4和IPv6 {#ipv-and-ipv}
 
-AEM的所有元素(例如存储库和Dispatcher)都可以安装在IPv4和IPv6网络中。
+AEM的所有元素（例如存储库和Dispatcher）都可以安装在IPv4和IPv6网络中。
 
 操作是无缝的，无需特殊配置，需要时您只需使用适合您网络类型的格式指定IP地址即可。
 
@@ -101,7 +101,7 @@ AEM的所有元素(例如存储库和Dispatcher)都可以安装在IPv4和IPv6网
 
   例如，`http://localhost:4502`
 
-### 版本清除 {#version-purging}
+### 版本清理 {#version-purging}
 
 在标准安装中，每当激活页面时（更新内容后），AEM都会创建页面或节点的版本。 您还可以使用sidekick的&#x200B;**版本控制**&#x200B;选项卡根据请求创建其他版本。 所有这些版本都存储在存储库中，如有必要，可以恢复。
 
@@ -109,7 +109,7 @@ AEM的所有元素(例如存储库和Dispatcher)都可以安装在IPv4和IPv6网
 
 有关如何在创建新版本时配置AEM以清除旧版本的详细信息，请参阅[版本清除](/help/sites-deploying/version-purging.md)，特别是[版本管理器](/help/sites-deploying/version-purging.md#version-manager)。
 
-### 日志记录 {#logging}
+### 记录 {#logging}
 
 通过AEM，您可以配置：
 
@@ -135,7 +135,7 @@ AEM的所有元素(例如存储库和Dispatcher)都可以安装在IPv4和IPv6网
 
 有关更多详细信息，请参阅[单点登录](/help/sites-deploying/single-sign-on.md)。
 
-### 资产映射 {#resource-mapping}
+### 资源映射 {#resource-mapping}
 
 资源映射用于为AEM定义重定向、虚URL和虚拟主机。
 
@@ -156,13 +156,13 @@ AEM的所有元素(例如存储库和Dispatcher)都可以安装在IPv4和IPv6网
 
 有关详细信息，请参阅[复制](/help/sites-deploying/replication.md)。
 
-### osgi配置设置 {#osgi-configuration-settings}
+### OSGi 配置设置 {#osgi-configuration-settings}
 
 [OSGi](https://www.osgi.org/)是AEM技术栈栈中的基本元素。 它用于控制AEM的复合捆绑包及其配置。
 
 查看[OSGi配置设置](/help/sites-deploying/osgi-configuration-settings.md)以获取与项目实施相关的各种捆绑包的列表（根据捆绑包列出）。 并非列出的所有设置都需要调整，这里提到了一些设置以帮助您了解AEM的运行方式。
 
-使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 ### 配置LDAP {#configuring-ldap}
 
@@ -176,7 +176,7 @@ LDAP身份验证在存储库级别进行，因此它直接由存储库处理。 
 
 Dispatcher是Adobe Experience Manager用于缓存和/或负载平衡的工具。 它可以与企业级Web服务器一起使用。
 
-有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)以了解更多配置详细信息。
+有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)以了解更多配置详细信息。
 
 ### 配置AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 
@@ -202,9 +202,11 @@ Dispatcher是Adobe Experience Manager用于缓存和/或负载平衡的工具。
 
 有关详细信息，请参阅[配置性能](/help/sites-deploying/configuring-performance.md#configuring-for-performance)。
 
-<!--delete ### Scaling {#scaling}
+<!--
+delete ### Scaling {#scaling}
 
-Scaling a CQ installation correctly depends greatly on the details of your particular use case. A detailed discussion of solution patterns for various situations can be found in [Scaling CQ](/help/sites-deploying/scaling.md).-->
+Scaling a CQ installation correctly depends greatly on the details of your particular use case. A detailed discussion of solution patterns for various situations can be found in [Scaling CQ](/help/sites-deploying/scaling.md).
+-->
 
 ### 共享数据存储 {#shared-data-store}
 
@@ -224,7 +226,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 有关详细信息，请参阅[启用HTTP over SSL](/help/sites-administering/ssl-by-default.md)。
 
-### AEM Portals和Portlet {#aem-portals-and-portlets}
+### AEM 门户和 Portlet {#aem-portals-and-portlets}
 
 门户是一种Web应用程序，它提供个性化、单点登录、来自不同来源的内容集成，并承载信息系统的表示层。 利用portlet组件，还可以在页面上嵌入portlet。 要访问CQ5 WCM提供的内容，可以为Portal Server安装CQ5 Portal Director Portlet。 为此，您可以安装、配置Portlet并将其添加到门户页面。
 
@@ -265,7 +267,7 @@ Scaling a CQ installation correctly depends greatly on the details of your parti
 
 有关详细信息，请参阅[配置富文本编辑器](/help/sites-administering/rich-text-editor.md)。
 
-### 配置撤消以进行页面编辑 {#configuring-undo-for-page-editing}
+### 为页面编辑配置撤销功能 {#configuring-undo-for-page-editing}
 
 有几个属性控制用于编辑页面的撤消和重做命令的行为。 这些项可以配置，有关更多详细信息，请参阅[为页面编辑配置撤消](/help/sites-administering/config-undo.md)。
 

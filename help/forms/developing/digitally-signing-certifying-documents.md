@@ -1,30 +1,30 @@
 ---
-title: 数字签名和认证文档
-description: 使用签名服务向PDF文档添加和删除数字签名字段，检索PDF文档中的签名字段名称，修改签名字段，对PDF文档进行数字签名，验证PDF文档中的数字签名，验证PDFPDF文档中的所有数字签名，以及从签名字段删除数字签名。
+title: 对文档进行数字签名和认证
+description: 使用签名服务向PDF文档添加和删除数字签名字段，检索PDF文档中的签名字段名称，修改签名字段，对PDF文档进行数字签名，验证PDF文档中的数字签名，验证PDF文档中的所有数字签名，以及从签名字段删除数字签名。
 role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 30ed51ad-4f69-41eb-9fca-d29d644aa4ba
-source-git-commit: 9a11887b6bb8446772e5a41246da1023f40ce507
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '16909'
+source-wordcount: '17116'
 ht-degree: 0%
 
 ---
 
-# 数字签名和认证文档 {#digitally-signing-and-certifying-documents}
+# 对文档进行数字签名和认证 {#digitally-signing-and-certifying-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
 **关于签名服务**
 
-签名服务允许贵组织保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证，确保只有目标收件人才能更改文档。 因为安全功能应用于文档本身，所以文档在整个生命周期中保持安全和受控制。 在防火墙之外，当文档离线下载以及提交回组织时，文档将保持安全。
+签名服务允许贵组织保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证确保只有预期的接收者可更改文档。 因为安全功能应用于文档本身，所以文档在整个生命周期中保持安全和受控制。 在防火墙之外，当文档离线下载以及提交回组织时，文档将保持安全。
 
 >[!NOTE]
 >
->您可以为签名服务创建自定义签名处理程序，在调用某些操作(如签署PDF文档)时会调用该签名服务。
+>您可以为签名服务创建自定义签名处理程序，在调用某些操作（如签署PDF文档）时会调用该签名服务。
 
 **签名字段名称**
 
@@ -39,8 +39,8 @@ ht-degree: 0%
 * 向PDF文档添加和删除数字签名字段。 （请参阅[添加签名字段](digitally-signing-certifying-documents.md#adding-signature-fields)。）
 * 检索PDF文档中签名字段的名称。 （请参阅[检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names)。）
 * 修改签名字段。 （请参阅[修改签名字段](digitally-signing-certifying-documents.md#modifying-signature-fields)。）
-* 对PDF文档进行数字签名。 (请参阅[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。)
-* 认证PDF文档。 (请参阅[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)。)
+* 对PDF文档进行数字签名。 （请参阅[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。）
+* 认证PDF文档。 （请参阅[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)。）
 * 验证PDF文档中的数字签名。 （请参阅[验证数字签名](digitally-signing-certifying-documents.md#verifying-digital-signatures)。）
 * 验证PDF文档中的所有数字签名。 （请参阅[验证多个数字签名](digitally-signing-certifying-documents.md#verifying-digital-signatures)。）
 * 从签名字段中移除数字签名。 （请参阅[删除数字签名](digitally-signing-certifying-documents.md#removing-digital-signatures)。）
@@ -78,8 +78,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 **创建签名客户端**
 
@@ -146,7 +146,7 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp`。 `Document`对象的`copyToFile`方法，用于将`Document`对象的内容复制到文件中。 确保您使用`com.adobe.idp`。 `Document`方法返回的`addSignatureField`对象。
+   * 调用`com.adobe.idp`。 `Document`对象的`copyToFile`方法，用于将`Document`对象的内容复制到文件中。 确保您使用`com.adobe.idp`。 `addSignatureField`方法返回的`Document`对象。
 
 **另请参阅**
 
@@ -167,8 +167,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -183,7 +183,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递表示PDF文档文件位置和文件打开模式的字符串值，创建`System.IO.FileStream`对象。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 使用字节数组的内容指定其`BLOB`属性以填充`MTOM`对象。
+   * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
 
 1. 添加签名字段
 
@@ -201,8 +201,8 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示将包含签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`addSignatureField`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 创建一个字节数组，用于存储`addSignatureField`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -237,8 +237,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -293,7 +293,7 @@ ht-degree: 0%
 
 [正在检索签名字段名称](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-[快速入门(SOAP模式)：使用Java API检索签名字段名称](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API检索签名字段名称](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -314,8 +314,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -330,7 +330,7 @@ ht-degree: 0%
    * 通过调用其构造函数并传递表示PDF文档文件位置和文件打开模式的字符串值，创建`System.IO.FileStream`对象。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法并传递要读取的字节数组、起始位置和流长度，使用流数据填充字节数组。
-   * 通过将`BLOB`字段分配给字节数组内容来填充`MTOM`对象。
+   * 通过将`MTOM`字段分配给字节数组内容来填充`BLOB`对象。
 
 1. 检索签名字段名称
 
@@ -379,8 +379,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括LiveCycle Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -464,7 +464,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >要查看可以设置的所有种子值字典值，请参阅`PDFSeedValueOptionSpec`类引用。 (请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+   >要查看可以设置的所有种子值字典值，请参阅`PDFSeedValueOptionSpec`类引用。 （请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。）
 
 1. 修改签名字段
 
@@ -479,7 +479,7 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`modifySignatureField`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`modifySignatureField`方法返回的`com.adobe.idp.Document`对象。
 
 ### 使用Web服务API修改签名字段 {#modify-signature-fields-using-the-web-service-api}
 
@@ -496,8 +496,8 @@ ht-degree: 0%
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -526,7 +526,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >要查看可以设置的所有种子值字典值，请参阅`PDFSeedValueOptionSpec`类引用。 (请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en))。
+   >要查看可以设置的所有种子值字典值，请参阅`PDFSeedValueOptionSpec`类引用。 （请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)）。
 
 1. 修改签名字段
 
@@ -541,8 +541,8 @@ ht-degree: 0%
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示将包含签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`addSignatureField`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 创建一个字节数组，用于存储`addSignatureField`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -573,7 +573,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 >[!NOTE]
 >
->签名和认证文档之间存在差异。 (请参阅[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)。)
+>签名和认证文档之间存在差异。 （请参阅[认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)。）
 
 >[!NOTE]
 >
@@ -581,7 +581,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 >[!NOTE]
 >
->签名服务不支持嵌入了PDF数据作为操作输入的XDP文件，例如证书文档。 此操作导致签名服务抛出`PDFOperationException`。 要解决此问题，请使用PDF实用程序服务将XDP文件转换为PDF文件，然后将转换的PDF文件传递到签名服务操作。 (请参阅[使用PDF实用工具](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities)。)
+>签名服务不支持嵌入了PDF数据作为操作输入的XDP文件，例如证书文档。 此操作导致签名服务抛出`PDFOperationException`。 要解决此问题，请使用PDF实用程序服务将XDP文件转换为PDF文件，然后将转换的PDF文件传递到签名服务操作。 （请参阅[使用PDF实用工具](/help/forms/developing/pdf-utilities.md#working-with-pdf-utilities)。）
 
 **nCipher nShield HSM凭据**
 
@@ -629,8 +629,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 **创建签名客户端**
 
@@ -659,7 +659,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 要对证书执行吊销检查，可以使用`CRLOptionSpec`对象指定指向证书吊销列表(CRL)服务器的URL。 但是，如果您要执行吊销检查但未指定CRL服务器的URL，则签名服务将从证书中获取该URL。
 
-在执行吊销检查时，可以使用联机证书状态协议(OCSP)服务器，而不是使用CRL服务器。 通常，在使用OCSP服务器而不是CRL服务器时，执行吊销检查的速度会更快。 (请参阅[https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560)上的“在线证书状态协议”。)
+在执行吊销检查时，可以使用联机证书状态协议(OCSP)服务器，而不是使用CRL服务器。 通常，在使用OCSP服务器而不是CRL服务器时，执行吊销检查的速度会更快。 （请参阅[https://tools.ietf.org/html/rfc2560](https://tools.ietf.org/html/rfc2560)上的“在线证书状态协议”。）
 
 您可以使用Adobe应用程序和服务设置签名服务使用的CRL和OCSP服务器顺序。 例如，如果首先在Adobe应用程序和服务中设置了OCSP服务器，则会检查OCSP服务器，然后检查CRL服务器。 （请参阅AAC帮助中的“使用信任存储区管理证书和凭据”）。
 
@@ -721,7 +721,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要签名的PDF文档的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示将包含数字签名的签名字段的名称。
-   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`Credential`方法并传递指定与安全凭据对应的别名值的字符串值，创建`getInstance`对象。
+   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`getInstance`方法并传递指定与安全凭据对应的别名值的字符串值，创建`Credential`对象。
    * 一个`HashAlgorithm`对象，它指定一个静态数据成员，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，它表示PDF文档进行数字签名的原因。
    * 表示签名者联系信息的字符串值。
@@ -736,13 +736,13 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`sign`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`sign`方法返回的`com.adobe.idp.Document`对象。
 
 **另请参阅**
 
 [对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -763,8 +763,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -804,8 +804,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 通过调用其构造函数创建`System.IO.FileStream`对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -833,7 +833,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 >[!NOTE]
 >
->在阅读对交互式Forms进行数字签名之前，建议您先熟悉如何对PDF文档进行签名。 (请参阅[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。)
+>在阅读对交互式Forms进行数字签名之前，建议您先熟悉如何对PDF文档进行签名。 （请参阅[对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)。）
 
 ### 步骤摘要 {#summary_of_steps-4}
 
@@ -855,8 +855,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
 * adobe-forms-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -900,7 +900,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 [对PDF文档进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms)
 
 ### 使用Java API对交互式表单进行数字签名 {#digitally-sign-an-interactive-form-using-the-java-api}
 
@@ -941,7 +941,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要签名的PDF文档的`com.adobe.idp.Document`对象。 确保此对象是从Forms服务获得的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示已签名的签名字段的名称。
-   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`Credential`方法创建`getInstance`对象。 传递一个字符串值，该值指定与安全凭据对应的别名值。
+   * `Credential`对象，表示用于对PDF文档进行数字签名的凭据。 通过调用`Credential`对象的静态`getInstance`方法创建`Credential`对象。 传递一个字符串值，该值指定与安全凭据对应的别名值。
    * 一个`HashAlgorithm`对象，它指定一个静态数据成员，该成员表示用于摘要PDF文档的哈希算法。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，它表示PDF文档进行数字签名的原因。
    * 表示签名者联系信息的字符串值。
@@ -956,13 +956,13 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`com.adobe.idp.Document`方法返回的`sign`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法并传递`java.io.File`以将`Document`对象的内容复制到文件中。 确保使用`sign`方法返回的`com.adobe.idp.Document`对象。
 
 **另请参阅**
 
 [对交互式Forms进行数字签名](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
 
-[快速入门(SOAP模式)：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API对PDF文档进行数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -987,8 +987,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建Forms和签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1051,8 +1051,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 保存已签名的PDF文档
 
    * 通过调用其构造函数创建`System.IO.FileStream`对象。 传递一个字符串值，该值表示已签名PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -1110,8 +1110,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1182,7 +1182,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
    * 表示要认证的PDF文档的`com.adobe.idp.Document`对象。
    * 一个字符串值，表示将包含该签名的签名字段的名称。
-   * `Credential`对象，表示用于认证PDF文档的凭据。 通过调用`Credential`对象的静态`Credential`方法并传递指定与安全凭据对应的别名值的字符串值，创建`getInstance`对象。
+   * `Credential`对象，表示用于认证PDF文档的凭据。 通过调用`Credential`对象的静态`getInstance`方法并传递指定与安全凭据对应的别名值的字符串值，创建`Credential`对象。
    * 一个`HashAlgorithm`对象，它指定代表用于摘要PDF文档的哈希算法的静态数据成员。 例如，您可以指定`HashAlgorithm.SHA1`以使用SHA1算法。
    * 一个字符串值，表示对PDF文档进行认证的原因。
    * 表示签名者联系信息的字符串值。
@@ -1206,7 +1206,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 [认证PDF文档](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[快速入门(SOAP模式)：使用Java API验证PDF文档](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API验证PDF文档](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1227,8 +1227,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1272,9 +1272,9 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 1. 将认证的PDF文档另存为PDF文件
 
-   * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示PDF文档(将包含已认证的PDF文档)的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`certify`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示PDF文档（将包含已认证的PDF文档）的文件位置以及打开文件的模式。
+   * 创建一个字节数组，用于存储`certify`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`binaryData`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**
@@ -1320,8 +1320,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1341,9 +1341,9 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 * 吊销检查
 * 时间戳值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅`VerificationTime`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
+在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`VerificationTime`枚举值。
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅`RevocationCheckStyle`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
+您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`RevocationCheckStyle`枚举值。
 
 要对证书执行吊销检查，请使用`CRLOptionSpec`对象指定指向证书吊销列表(CRL)服务器的URL。 但是，如果您没有指定CRL服务器的URL，则签名服务会从证书中获取该URL。
 
@@ -1443,7 +1443,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 [验证数字签名](#verify-digital-signatures-using-the-java-api)
 
-[快速入门(SOAP模式)：使用Java API验证数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API验证数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1464,8 +1464,8 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1544,8 +1544,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1565,9 +1565,9 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 * 吊销检查
 * 时间戳值
 
-在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅`VerificationTime`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
+在设置这些选项时，您可以指定验证时间。 例如，您可以选择当前时间（验证器计算机上的时间），以指示使用当前时间。 有关不同时间值的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`VerificationTime`枚举值。
 
-您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅`RevocationCheckStyle`AEM Forms API引用[中的](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)枚举值。
+您还可以指定是否在验证过程中执行吊销检查。 例如，您可以执行吊销检查以确定证书是否被吊销。 有关吊销检查选项的信息，请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)中的`RevocationCheckStyle`枚举值。
 
 要对证书执行吊销检查，请使用`CRLOptionSpec`对象指定指向证书吊销列表(CRL)服务器的URL。 但是，如果您没有指定CRL服务器的URL，则签名服务会从证书中获取该URL。
 
@@ -1656,7 +1656,7 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 
 [验证多个数字签名](#verifying-multiple-digital-signatures)
 
-[快速入门(SOAP模式)：使用Java API验证多个数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API验证多个数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1679,8 +1679,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1753,8 +1753,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-signatures-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -1816,13 +1816,13 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 将PDF文档另存为PDF文件
 
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
-   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法。 传递`java.io.File`对象以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`Document`方法返回的`clearSignatureField`对象。
+   * 调用`com.adobe.idp.Document`对象的`copyToFile`方法。 传递`java.io.File`对象以将`com.adobe.idp.Document`对象的内容复制到文件中。 确保使用`clearSignatureField`方法返回的`Document`对象。
 
 **另请参阅**
 
 [删除数字签名](digitally-signing-certifying-documents.md#removing-digital-signatures)
 
-[快速入门(SOAP模式)：使用Java API删除数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API删除数字签名](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1843,8 +1843,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 创建签名客户端
 
    * 使用默认构造函数创建`SignatureServiceClient`对象。
-   * 使用`SignatureServiceClient.Endpoint.Address`构造函数创建`System.ServiceModel.EndpointAddress`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
-   * 通过获取`System.ServiceModel.BasicHttpBinding`字段的值创建一个`SignatureServiceClient.Endpoint.Binding`对象。 将返回值强制转换为`BasicHttpBinding`。
+   * 使用`System.ServiceModel.EndpointAddress`构造函数创建`SignatureServiceClient.Endpoint.Address`对象。 将指定WSDL的字符串值传递给AEM Forms服务（例如，`http://localhost:8080/soap/services/SignatureService?WSDL`）。 您无需使用`lc_version`属性。 此属性在创建服务引用时使用。)
+   * 通过获取`SignatureServiceClient.Endpoint.Binding`字段的值创建一个`System.ServiceModel.BasicHttpBinding`对象。 将返回值强制转换为`BasicHttpBinding`。
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
@@ -1859,7 +1859,7 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示已签名PDF文档的文件位置以及打开文件的模式。
    * 创建用于存储`System.IO.FileStream`对象的内容的字节数组。 您可以通过获取`System.IO.FileStream`对象的`Length`属性来确定字节数组的大小。
    * 通过调用`System.IO.FileStream`对象的`Read`方法，使用流数据填充字节数组。 传递字节数组、起始位置和要读取的流长度。
-   * 使用字节数组的内容指定其`BLOB`属性以填充`MTOM`对象。
+   * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
 
 1. 从签名字段中移除数字签名
 
@@ -1873,8 +1873,8 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
 1. 将PDF文档另存为PDF文件
 
    * 通过调用其构造函数并传递一个字符串值来创建一个`System.IO.FileStream`对象，该字符串值表示包含空签名字段的PDF文档的文件位置以及打开文件的模式。
-   * 创建一个字节数组，用于存储`BLOB`方法返回的`sign`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
-   * 通过调用其构造函数并传递`System.IO.BinaryWriter`对象来创建`System.IO.FileStream`对象。
+   * 创建一个字节数组，用于存储`sign`方法返回的`BLOB`对象的内容。 通过获取`BLOB`对象的`MTOM`数据成员的值填充字节数组。
+   * 通过调用其构造函数并传递`System.IO.FileStream`对象来创建`System.IO.BinaryWriter`对象。
    * 通过调用`System.IO.BinaryWriter`对象的`Write`方法并传递字节数组，将字节数组的内容写入PDF文件。
 
 **另请参阅**

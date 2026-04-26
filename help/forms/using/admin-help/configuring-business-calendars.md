@@ -1,5 +1,5 @@
 ---
-title: 配置商业日历
+title: 配置业务日程表
 description: 业务日历为您的组织定义业务日和非业务日。 了解如何配置业务日历。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 23fab14d-3658-4fd3-88c1-fc71f1ac0400
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1938'
 ht-degree: 0%
 
 ---
 
-# 配置商业日历 {#configuring-business-calendars}
+# 配置业务日程表 {#configuring-business-calendars}
 
 *工作日历*&#x200B;为您的组织定义工作日和非工作日（例如，法定假日、周末和公司停业日）。 使用业务日历时，AEM表单在执行某些日期计算时会跳过非业务日。 在Workbench中，您可以指定是将业务日历用于与用户相关的事件（如任务提醒、截止日期和升级），还是用于与用户无关的操作（如计时器事件和等待服务）。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用业务日历计算日期和时间时，AEM Forms会使用运行服务器的日期和时间，但不会调整时区之间的差异。 例如，如果任务提醒安排在伦敦运行的服务器上于上午10:00发生，但接收提醒的用户位于纽约市，则用户将在本地时间上午5:00收到提醒。
+>使用业务日历计算日期和时间时，AEM Forms会使用运行服务器的日期和时间，但不会调整时区之间的差异。 例如，如果任务提醒安排在伦敦运行的服务器上在上午10:00发生，但接收提醒的用户位于纽约市，则用户将在本地时间上午5:00收到提醒。
 
 ## 使用默认业务日历 {#using-the-default-business-calendar}
 
@@ -48,9 +48,9 @@ AEM Forms提供了一个默认的业务日历（名为&#x200B;*内置日历*）�
 
    为用户分配业务日历键的方式取决于您使用的是企业域、本地域还是混合域。 有关设置域的详细信息，请参阅[添加域](/help/forms/using/admin-help/adding-domains.md#adding-domains)。
 
-   如果使用本地域或混合域，则有关用户的信息仅存储在User Management数据库中。 要为这些用户设置业务日历键，请在“用户管理”中添加或编辑用户时，在“业务日历键”字段中输入字符串。 （请参阅[添加和配置用户](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)。）然后，将业务日历键（字符串）映射到表单工作流中的业务日历。 （请参阅[将用户和组映射到业务日历](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
+   如果使用本地域或混合域，则有关用户的信息仅存储在User Management数据库中。 要为这些用户设置业务日历键，请在“用户管理”中添加或编辑用户时，在“业务日历键”字段中输入字符串。 （请参阅[添加和配置用户](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)。） 然后，将业务日历键（字符串）映射到表单工作流中的业务日历。 （请参阅[将用户和组映射到业务日历](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
 
-   如果您使用的是企业域，则有关用户的信息驻留在第三方存储系统中，例如LDAP目录，用户管理将该目录与用户管理数据库同步。 这样，您可以将业务日历键映射到LDAP目录中的字段。 例如，如果目录中的每个用户记录都包含“国家/地区”字段，并且要根据用户所在的国家/地区分配业务日历，请在指定目录的用户设置时，在“业务日历键”字段中指定“国家/地区”字段名称。 （请参阅[配置目录](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)。）然后，您可以将业务日历键（为LDAP目录中的“国家/地区”字段定义的值）映射到表单工作流中的业务日历。 （请参阅[将用户和组映射到业务日历](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
+   如果您使用的是企业域，则有关用户的信息驻留在第三方存储系统中，例如LDAP目录，用户管理将该目录与用户管理数据库同步。 这样，您可以将业务日历键映射到LDAP目录中的字段。 例如，如果目录中的每个用户记录都包含“国家/地区”字段，并且要根据用户所在的国家/地区分配业务日历，请在指定目录的用户设置时，在“业务日历键”字段中指定“国家/地区”字段名称。 （请参阅[配置目录](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)。） 然后，您可以将业务日历键（为LDAP目录中的“国家/地区”字段定义的值）映射到表单工作流中的业务日历。 （请参阅[将用户和组映射到业务日历](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
 
 1. 在表单工作流中，为共享相同非工作日的每组用户定义一个日历。 （请参阅[创建或更新业务日历](configuring-business-calendars.md#create-or-update-a-business-calendar)。）
 1. 在表单工作流中，映射每个日历的业务日历键或组成员资格。 （请参阅[将用户和组映射到业务日历](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)。）
@@ -79,7 +79,7 @@ AEM Forms提供了一个默认的业务日历（名为&#x200B;*内置日历*）�
 
    如果选择此选项，则发生在指定时间范围之前的事件将被移动到时间范围的开始，而发生在时间范围之后的事件将被移动到下一个工作日的开始时间。
 
-   例如，假定用户在星期二凌晨2:00分配了任务，并且该任务的提醒设置为两个工作日。 如果没有上班时间，提醒将会在周四凌晨2点进行。 如果工作时间设置为上午8:00到下午5:00，则提醒将被推送到星期四上午8:00。 如果没有工作时间，如果提醒事件是在星期二下午6:00创建的，则提醒将在星期四工作时间之后进行。 如果工作时间设置为上午8:00到下午5:00，则提醒将在星期五上午8:00进行。
+   例如，考虑这样一个情况：在星期二凌晨2:00为用户分配了任务，并且该任务的提醒被设置为两个工作日。 如果没有工作时间，提醒将会在星期四凌晨2:00时发生。 如果营业时间设置为上午8:00至下午5:00，则提醒将被推送到星期四上午8:00。 如果没有营业时间，如果提醒事件是在星期二下午6:00创建的，则提醒将在星期四营业时间之后进行。 如果营业时间设置为上午8:00至下午5:00，则提醒将在星期五上午8:00进行。
 
 1. 在左侧的日历中，双击任何其他非工作日，例如假日。 您不能选择过去的天数。 您选择的非工作日会显示在右侧的列表中，其中日期在一行中显示两次。 选择左侧的日期以键入非工作日的名称或描述。
 

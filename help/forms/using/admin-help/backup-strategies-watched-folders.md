@@ -1,5 +1,5 @@
 ---
-title: 监视文件夹的备份策略
+title: 观察文件夹的备份策略
 description: 本文档介绍了受监视的文件夹如何受不同的备份和恢复方案的影响，这些方案的局限性和结果，以及如何最大限度地减少数据丢失。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 5955deb0-9d1c-4b61-a202-41ef03a23cf8
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 0%
+source-wordcount: '1082'
+ht-degree: 1%
 
 ---
 
-# 监视文件夹的备份策略 {#backup-strategies-for-watched-folders}
+# 观察文件夹的备份策略 {#backup-strategies-for-watched-folders}
 
 本内容将介绍监视的文件夹如何受不同的备份和恢复方案的影响，这些方案的局限性和结果，以及如何最大限度地减少数据丢失。
 

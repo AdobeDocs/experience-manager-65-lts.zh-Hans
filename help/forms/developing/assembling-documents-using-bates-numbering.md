@@ -1,5 +1,5 @@
 ---
-title: 使用Bates编号汇编文档
+title: 使用 Bates 编号组装文档
 description: 使用Bates编号功能，通过Java和Web服务API组合PDF文档。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: 310d0566-673a-4b78-9f0d-86f56c495105
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1910'
-ht-degree: 0%
+source-wordcount: '1934'
+ht-degree: 1%
 
 ---
 
-# 使用Bates编号汇编文档 {#assembling-documents-using-bates-numbering}
+# 使用 Bates 编号组装文档 {#assembling-documents-using-bates-numbering}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 本节不讨论相关概念，例如创建包含输入文档的收藏集对象，或从返回的收藏集对象中提取结果。 (请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。)
+>在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 本节不讨论相关概念，例如创建包含输入文档的收藏集对象，或从返回的收藏集对象中提取结果。 （请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -83,8 +83,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果将AEM Forms部署在除JBoss之外的受支持J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。 有关所有AEM Forms JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -122,7 +122,7 @@ Assembler服务返回包含作业结果的集合对象。 您可以提取生成�
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API组合具有Bates编号的文档 {#assemble-documents-with-bates-numbering-using-the-java-api}
 
@@ -177,7 +177,7 @@ Assembler服务返回包含作业结果的集合对象。 您可以提取生成�
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API汇编具有Bates编号的PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API汇编具有Bates编号的PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -225,9 +225,9 @@ Assembler服务返回包含作业结果的集合对象。 您可以提取生成�
    * 使用字节数组的内容指定其`MTOM`属性以填充`BLOB`对象。
    * 创建`MyMapOf_xsd_string_To_xsd_anyType`对象。 此收藏集对象用于存储输入的PDF文档。
    * 对于每个输入PDF文档，创建一个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。 例如，如果使用两个输入PDF文档，则创建两个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。
-   * 将表示键名的字符串值分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段。 此值必须匹配DDX文档中指定的PDF源元素的值。 (为每个输入的PDF文档执行此任务。)
-   * 将存储PDF文档的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 (为每个输入的PDF文档执行此任务。)
-   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 (为每个输入的PDF文档执行此任务。)
+   * 将表示键名的字符串值分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段。 此值必须匹配DDX文档中指定的PDF源元素的值。 （为每个输入的PDF文档执行此任务。）
+   * 将存储PDF文档的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 （为每个输入的PDF文档执行此任务。）
+   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 （为每个输入的PDF文档执行此任务。）
 
 1. 设置初始Bates编号值。
 

@@ -1,5 +1,5 @@
 ---
-title: 配置回退字体
+title: 配置后备字体
 description: 了解如何为AEM Forms配置后备字体。 可以使用FontManagerResources.properties文件将默认字体手动映射到回退字体。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: d11bb8dc-d0fe-4182-88dd-9ef1ecf687db
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 0%
+source-wordcount: '271'
+ht-degree: 2%
 
 ---
 
-# 配置回退字体 {#configuring-fallback-fonts}
+# 配置后备字体 {#configuring-fallback-fonts}
 
 您可以手动配置FontManagerResources.properties文件，以便在服务器上没有默认字体时，将默认的AEM Forms字体映射到回退（或替换）。 此属性文件位于adobe-fontmanager.jar文件中。
 

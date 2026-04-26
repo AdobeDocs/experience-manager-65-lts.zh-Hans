@@ -1,5 +1,5 @@
 ---
-title: JEE上AEM Forms的一般安全注意事项
+title: JEE 上的 AEM Forms 的通用安全注意事项
 description: 了解如何准备在JEE环境中强化AEM Forms。
 content-type: reference
 topic-tags: Security
@@ -11,14 +11,14 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
 exl-id: 5d0ba475-06be-47fd-8ea2-9160c2d86b07
-source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 1%
+source-wordcount: '1135'
+ht-degree: 6%
 
 ---
 
-# JEE上AEM Forms的一般安全注意事项{#general-security-considerations-for-aem-forms-on-jee}
+# JEE 上的 AEM Forms 的通用安全注意事项{#general-security-considerations-for-aem-forms-on-jee}
 
 本文提供了可帮助您准备强化AEM Forms环境的介绍性信息。 其中包括有关JEE上的AEM Forms、操作系统、应用程序服务器和数据库安全的先决条件信息。 在继续锁定环境之前，请查看此信息。
 
@@ -48,11 +48,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM® AIX® 7.2</p> </td>
-   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">IBM® AIX®安全优势</a></p> </td>
+   <td><p>® AIX® 7.2</p> </td>
+   <td><p><a href="https://www.ibm.com/support/knowledgecenter/ssw_aix_72/com.ibm.aix.security/security-kickoff.htm" target="_blank">® AIX®安全优势</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft® Windows Server® 2016 </p> </td>
+   <td><p>® Windows Server® 2016 </p> </td>
    <td><p><a href="https://cloudblogs.microsoft.com/windowsserver/2017/08/22/now-available-windows-server-2016-security-guide/">Windows Server 2016安全指南</a></p> </td>
   </tr>
   <tr>
@@ -101,7 +101,7 @@ ht-degree: 1%
    <td><p>在<a href="https://docs.oracle.com/">https://docs.oracle.com/</a>处搜索了解WebLogic安全性。</p> </td>
   </tr>
   <tr>
-   <td><p>IBM® WebSphere®</p> </td>
+   <td><p>® WebSphere®</p> </td>
    <td><p><a href="https://www.ibm.com/developerworks/websphere/zones/was/security/" target="_blank">保护应用程序及其环境</a></p> </td>
   </tr>
   <tr>
@@ -131,11 +131,11 @@ ht-degree: 1%
  </thead>
  <tbody>
   <tr>
-   <td><p>IBM® DB2® 11.1</p> </td>
+   <td><p>® DB2® 11.1</p> </td>
    <td><p><a href="https://www-01.ibm.com/software/data/db2/library/">DB2®产品系列库</a></p> </td>
   </tr>
   <tr>
-   <td><p>Microsoft® SQL Server 2016</p> </td>
+   <td><p>Microsoft® SQL 服务器 2016</p> </td>
    <td>在Web中搜索“SQL Server 2016：安全性”</td>
   </tr>
   <tr>
@@ -143,7 +143,7 @@ ht-degree: 1%
    <td><p><a href="https://dev.mysql.com/doc/refman/5.0/en/security.html">MySQL 5.0一般安全问题</a></p> <p><a href="https://dev.mysql.com/doc/refman/5.1/en/security.html">MySQL 5.1一般安全问题</a></p> </td>
   </tr>
   <tr>
-   <td><p>Oracle® 12c</p> </td>
+   <td><p>® 12c</p> </td>
    <td><p>请参阅<a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oracle 12g文档</a>中的“安全”一章</p> </td>
   </tr>
  </tbody>
@@ -225,7 +225,7 @@ JBoss®应用程序服务器使用8080作为默认HTTP端口。 JBoss®还具有
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ## AEM Forms on JEE安全注意事项 {#aem-forms-on-jee-security-considerations}
 
@@ -249,7 +249,7 @@ lc_[database].xml文件不应包含明文格式的密码。 有关如何为应�
 >
 >JEE JBoss®上的AEM Forms统包安装程序加密数据库密码。
 
-默认情况下，IBM® WebSphere® Application Server和Oracle WebLogic Server可能会加密数据源密码。 但是，您应该通过应用程序服务器文档进行确认，以确保发生这种情况。
+默认情况下，® WebSphere® Application Server和Oracle WebLogic Server可能会加密数据源密码。 但是，您应该通过应用程序服务器文档进行确认，以确保发生这种情况。
 
 ### 保护存储在信任存储区中的私钥 {#protecting-the-private-key-stored-in-trust-store}
 

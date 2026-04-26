@@ -11,16 +11,16 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: d19b7265-42cc-41d9-9897-e7b044c4529c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '139'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
 # 配置远程端点 {#configuring-remoting-endpoints}
 
-通过远程端点，使用Flex构建的应用程序可以使用(不推荐用于AEM表单)AEM Forms Remoting调用服务。 将为每个激活的服务自动创建远程端点。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的远程对象，以调用对相关服务的操作。
+通过远程端点，使用Flex构建的应用程序可以使用（不推荐用于AEM表单）AEM Forms Remoting调用服务。 将为每个激活的服务自动创建远程端点。 将创建与端点同名的Flex目标，并且Flex客户端可以创建指向此目标的远程对象，以调用对相关服务的操作。
 
 ## 远程端点设置 {#remoting-endpoint-settings}
 

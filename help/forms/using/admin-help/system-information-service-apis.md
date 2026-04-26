@@ -1,5 +1,5 @@
 ---
-title: 系统信息服务API
+title: 系统信息服务 API
 description: 本文档提供有关System Information Service提供的API的详细信息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 93124f35-0323-4f51-9167-9bfcadc819e2
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 0%
+source-wordcount: '336'
+ht-degree: 2%
 
 ---
 
-# 系统信息服务API {#system-information-service-apis}
+# 系统信息服务 API {#system-information-service-apis}
 
 系统信息服务提供一组用于检索信息的REST API。 下表提供了有关API的详细信息：
 
@@ -32,7 +32,7 @@ ht-degree: 0%
  </thead>
  <tbody>
   <tr>
-   <td><p>SystemInfo.properties</p></td>
+   <td><p>系统信息。属性</p></td>
    <td><p>https://'[server]：[port]'/rest/services/SystemInfo.properties'</p></td>
    <td><p>此API是<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API的包装器。 它会检索当前工作环境的配置。 </p></td>
   </tr>
@@ -52,7 +52,7 @@ ht-degree: 0%
    <td><p>检索config.xml文件的所有内容。 </p></td>
   </tr>
   <tr>
-   <td><p>SystemInfo.services</p></td>
+   <td><p>系统信息。服务</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.services</p></td>
    <td><p>检索AEM表单服务的状态和配置参数。</p></td>
   </tr>
@@ -81,7 +81,7 @@ ht-degree: 0%
     </ul><p></p></td>
   </tr>
   <tr>
-   <td><p>SystemInfo.database</p></td>
+   <td><p>系统信息。数据库</p></td>
    <td><p>https://'[server]：[port]'/rest/services/ SystemInfo.database</p></td>
    <td><p>检索有关数据库的详细信息。</p></td>
   </tr>

@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: de3cd0ad-0b18-4d9a-8c6b-72cc16149cfc
-source-git-commit: eb6f6b994fdd3b2b01e77700d2deb7bd2830ac8f
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 23%
+source-wordcount: '247'
+ht-degree: 46%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 23%
 
 ## 问题
 
-在升级到 AEM Forms 服务包 6.5.21.0 后，`PaperCapture` 服务无法对 PDF 执行 OCR（光学字符识别）操作。该服务不会以PDF或日志文件的形式生成输出。
+在升级到 AEM Forms 服务包 6.5.21.0 后，`PaperCapture` 服务无法对 PDF 执行 OCR（光学字符识别）操作。 该服务不会生成 PDF 输出文件或日志文件。
 
 ## 应用到
 

@@ -7,10 +7,10 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 5e1f1f3c-a2f3-4bf1-ba96-a02f8b16c180
-source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 3%
+source-wordcount: '1165'
+ht-degree: 4%
 
 ---
 
@@ -217,7 +217,7 @@ public class InviteExternalUsersSample implements InvitedUserProvider
 
 ![邀请用户](assets/ci_ci_InviteUsers.png)
 
-A.组件所需的外部JAR文件B. JAVA文件
+A.组件B所需的外部JAR文件。 JAVA文件
 
 将邀请外部用户处理程序打包到JAR文件中。 在上图中，请注意列出了.JAVA文件。 打包到JAR文件后，还必须指定相应的.CLASS文件。 如果没有.CLASS文件，授权处理程序将无法工作。
 
@@ -240,7 +240,7 @@ A.组件所需的外部JAR文件B. JAVA文件
 
    >[!NOTE]
    >
-   > 建议使用 “Ctrl + C” 命令重新启动 SDK。如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
+   > 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 登录到管理控制台。
 1. 单击&#x200B;**[!UICONTROL 服务]** > **[!UICONTROL Rights Management]** > **[!UICONTROL 配置]** >已邀请的&#x200B;**[!UICONTROL 用户注册]**。

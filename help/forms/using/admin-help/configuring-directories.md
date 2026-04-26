@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2c0dd472-9697-4b96-b3fa-3c50883bf425
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '3253'
+source-wordcount: '3275'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ ht-degree: 0%
 >
 >请勿在此设置中包含用户的DN。 要同步特定用户，请使用“搜索过滤器”设置。
 
-虽然Base DN是Administration Console中的强制设置，但某些目录服务器(如IBM Domino Enterprise Server)可能需要空的BaseDN。 要指定空的基本DN，请导出config.xml文件，编辑config.xml文件中的设置，然后重新导入它。 （请参阅[导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
+虽然Base DN是Administration Console中的强制设置，但某些目录服务器（如IBM Domino Enterprise Server）可能需要空的BaseDN。 要指定空的基本DN，请导出config.xml文件，编辑config.xml文件中的设置，然后重新导入它。 （请参阅[导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
 
 **搜索筛选器：** （必需）用于查找与用户关联的记录的搜索筛选器。 您可以执行一级搜索或子级搜索。 （请参阅搜索筛选器语法或RFC 2254。） 有关Microsoft AD架构的其他信息，请参阅Active Directory架构。
 
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 **基本DN：** （必需）目录的基本可分辨名称。
 
-虽然Base DN是Administration Console中的强制设置，但某些目录服务器(如IBM Domino Enterprise Server)需要空的BaseDN。 要指定空的基本DN，请导出config.xml文件，编辑config.xml文件中的设置，然后重新导入它。 （请参阅[导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
+虽然Base DN是Administration Console中的强制设置，但某些目录服务器（如IBM Domino Enterprise Server）需要空的BaseDN。 要指定空的基本DN，请导出config.xml文件，编辑config.xml文件中的设置，然后重新导入它。 （请参阅[导入和导出配置文件](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file)。）
 
 **搜索筛选器：** （必需）用于查找与组关联的记录的搜索筛选器。 您可以执行一级搜索或子级搜索。
 

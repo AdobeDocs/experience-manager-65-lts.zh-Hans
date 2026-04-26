@@ -7,9 +7,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 70b0472e-2547-4887-b761-b200dc7b714a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击设置>用户管理>域管理。
 1. 单击新建企业域。
 1. 在ID框中，键入域的唯一标识符，然后在“名称”框中，键入域的描述性名称。 （请参阅[有关域名和ID的重要注意事项](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否启用帐户锁定。 （请参阅[配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）默认情况下，“启用帐户锁定”处于选中状态。
+1. 指定是否启用帐户锁定。 （请参阅[配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 默认情况下，“启用帐户锁定”处于选中状态。
 1. 单击添加验证，然后在“验证提供方”列表中选择提供方，具体取决于您的组织使用的验证机制。 可能的值包括LDAP、Kerberos、SAML或自定义身份验证提供程序。
 
    如果选择LDAP，则可以使用在目录配置中指定的LDAP服务器，也可以选择其他LDAP服务器用于身份验证。 如果选择其他服务器，则您的用户必须存在于两个LDAP服务器上。
@@ -41,7 +41,7 @@ ht-degree: 0%
 1. 在管理控制台中，单击设置>用户管理>域管理。
 1. 单击“新建本地域”。
 1. 在ID框中，键入域的唯一标识符，然后在“名称”框中，键入域的描述性名称。 （请参阅[有关域名和ID的重要注意事项](adding-domains.md#important-considerations-for-domain-names-and-ids)。）
-1. 指定是否启用帐户锁定，然后单击“确定”。 （请参阅[配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。）默认情况下，“启用帐户锁定”处于选中状态。
+1. 指定是否启用帐户锁定，然后单击“确定”。 （请参阅[配置帐户锁定设置](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings)。） 默认情况下，“启用帐户锁定”处于选中状态。
 
 ## 添加混合域 {#add-a-hybrid-domain}
 

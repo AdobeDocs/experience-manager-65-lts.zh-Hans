@@ -1,5 +1,5 @@
 ---
-title: 配置输出的缓存
+title: 为输出配置缓存
 description: 输出服务缓存表单设计、片段和图像。 了解如何为输出配置缓存。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: d6390e32-d348-42f2-84d0-9c83aff9ee3a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 0%
+source-wordcount: '1463'
+ht-degree: 1%
 
 ---
 
-# 配置输出的缓存  {#configuring-caching-for-output}
+# 为输出配置缓存  {#configuring-caching-for-output}
 
 >[!NOTE]
 > 
@@ -107,9 +107,9 @@ Output服务缓存以下项目：
 
 Output服务始终在磁盘上缓存表单设计。 如果表单设计存储在服务器上，则这些文件被视为磁盘缓存。 输出服务还根据&#x200B;**内存中模板缓存**&#x200B;区域中的设置，在内存中缓存表单设计。 如果更改其中任何设置，请重新启动Output服务以使更改生效。 要重新启动此服务，请使用Workbench或参阅[启动或停止与AEM表单模块](/help/forms/using/admin-help/starting-stopping-services.md#start-or-stop-the-services-associated-with-aem-forms-modules)关联的服务以获取说明。
 
-**模板配置缓存大小：**&#x200B;要保留在内存中的模板配置对象的最大数目。 默认值为 100。建议将此值设置为大于或等于模板缓存大小值。 此设置不会影响磁盘缓存。
+**模板配置缓存大小：**&#x200B;要保留在内存中的模板配置对象的最大数目。 默认值为 100。 建议将此值设置为大于或等于模板缓存大小值。 此设置不会影响磁盘缓存。
 
-**模板缓存大小：**&#x200B;要保留在内存中的模板内容对象的最大数目。 默认值为 100。此设置不会影响磁盘缓存。
+**模板缓存大小：**&#x200B;要保留在内存中的模板内容对象的最大数目。 默认值为 100。 此设置不会影响磁盘缓存。
 
 **已启用：**&#x200B;默认情况下，此复选框处于选中状态，这意味着表单模板已缓存到内存中。 如果未选择此选项，则仅在磁盘上缓存表单模板。
 

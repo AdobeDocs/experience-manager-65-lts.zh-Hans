@@ -1,5 +1,5 @@
 ---
-title: 要备份和恢复的文件
+title: 需要备份和恢复的文件
 description: 本文档介绍了必须备份的应用程序和数据文件。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2938a1c6-c8fc-420a-8fad-bb39e5a7936b
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2131'
 ht-degree: 0%
 
 ---
 
-# 要备份和恢复的文件 {#files-to-back-up-and-recover}
+# 需要备份和恢复的文件 {#files-to-back-up-and-recover}
 
 >[!NOTE]
 > 
@@ -38,7 +38,7 @@ GDS是用于存储进程中使用的长期文件的目录。 长生命周期文�
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，一定要考虑承载GDS的文件系统的可靠性，并采用独立磁盘冗余阵列(RAID)或其他适合您的质量和服务级别要求的技术。
 
-GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储[&#128279;](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的备份选项。
+GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的[备份选项。
 
 ### GDS位置 {#gds-location}
 
@@ -77,9 +77,9 @@ GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理�
 
 forms manager简化了更新、管理和报废表单的过程。
 
-### AEM Forms Workspace {#html-workspace}
+### AEM Forms 工作区 {#html-workspace}
 
-AEM Forms Workspace与(已为JEE上的AEM Forms弃用)Flex Workspace的功能相匹配，并添加了扩展和集成Workspace的新功能，使其更加用户友好。
+AEM Forms Workspace与（已为JEE上的AEM Forms弃用）Flex Workspace的功能相匹配，并添加了扩展和集成Workspace的新功能，使其更加用户友好。
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ AEM Forms数据库将表单对象、服务配置、流程状态等内容存储�
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
+>® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 ### DB2 {#db2}
 
@@ -116,7 +116,7 @@ DB2具有将数据库备份到Tivoli Storage Manager的内置功能。 通过使
 
 ### Oracle {#oracle}
 
-使用快照备份或将Oracle数据库配置为在归档日志模式下运行。 (请参阅[Oracle备份：简介](https://www.databasedesign-resource.com/oracle-backup.md)。)有关备份和恢复Oracle数据库的详细信息，请转到以下站点：
+使用快照备份或将Oracle数据库配置为在归档日志模式下运行。 （请参阅[Oracle备份：简介](https://www.databasedesign-resource.com/oracle-backup.md)。） 有关备份和恢复Oracle数据库的详细信息，请转到以下站点：
 
 [Oracle备份和恢复：](https://www.oracle.com/technetwork/database/features/availability/br-overview-097160.html)更详细地介绍备份和恢复的概念以及使用Recovery Manager (RMAN)进行备份、恢复和报告的最常用技术，并提供有关如何规划备份和恢复策略的更多信息。
 
@@ -137,7 +137,7 @@ SQL Server还提供了两种备份和恢复工具：
 
 ### MySQL {#mysql}
 
-在Windows中使用MySQLAdmin或修改INI文件，将MySQL数据库配置为以二进制日志模式运行。 （请参阅[MySQL二进制日志记录](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。）InnoBase软件中还提供了MySQL的热备份工具。 （请参阅[Innobase热备份](https://www.innodb.com/hot-backup/features.md)。）
+在Windows中使用MySQLAdmin或修改INI文件，将MySQL数据库配置为以二进制日志模式运行。 （请参阅[MySQL二进制日志记录](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html)。） InnoBase软件也提供了用于MySQL的热备份工具。 （请参阅[Innobase热备份](https://www.innodb.com/hot-backup/features.md)。）
 
 >[!NOTE]
 >

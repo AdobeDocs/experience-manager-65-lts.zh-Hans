@@ -1,5 +1,5 @@
 ---
-title: 在JEE环境中强化AEM Forms
+title: 强化 JEE 环境下的 AEM Forms
 description: 了解各种安全强化设置，以增强在公司内联网中运行的JEE上的AEM Forms的安全性。
 content-type: reference
 topic-tags: Security
@@ -10,14 +10,14 @@ hidefromtoc: true
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
 exl-id: 3de38e4d-6a12-470e-aded-7eb75a9cdcd8
-source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '7605'
+source-wordcount: '7800'
 ht-degree: 1%
 
 ---
 
-# 在JEE环境中强化AEM Forms {#hardening-your-aem-forms-on-jee-environment}
+# 强化 JEE 环境下的 AEM Forms {#hardening-your-aem-forms-on-jee-environment}
 
 了解各种安全强化设置，以增强在公司内联网中运行的JEE上的AEM Forms的安全性。
 
@@ -63,7 +63,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
   </tr> 
   <tr> 
    <td><p>私有IP地址</p> </td> 
-   <td><p>在AEM Forms应用程序服务器上将网络地址转换(NAT)与RFC 1918专用IP地址结合使用。 分配私有IP地址(10.0.0.0/8、172.16.0.0/12和192.168.0.0/16)，使攻击者更难以通过Internet在NAT的内部主机之间路由流量。</p> </td> 
+   <td><p>在AEM Forms应用程序服务器上将网络地址转换(NAT)与RFC 1918专用IP地址结合使用。 分配私有IP地址（10.0.0.0/8、172.16.0.0/12和192.168.0.0/16），使攻击者更难以通过Internet在NAT的内部主机之间路由流量。</p> </td> 
   </tr> 
   <tr> 
    <td><p>防火墙</p> </td> 
@@ -76,7 +76,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
   </tr> 
   <tr> 
    <td><p>数据库端口</p> </td> 
-   <td><p>请勿使用数据库的默认侦听端口(MySQL - 3306、Oracle - 1521、MS SQL - 1433)。 有关更改数据库端口的信息，请参阅数据库文档。</p> <p>使用其他数据库端口会影响JEE上的整个AEM Forms。 如果更改默认端口，则必须在配置的其他方面(例如JEE上的AEM Forms的数据源)进行相应的修改。</p> <p>有关在JEE上的AEM Forms中配置数据源的信息，请参阅<a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms用户指南</a>中的在JEE上安装和升级AEM Forms或在JEE上升级到应用程序服务器上的AEM Forms 。</p> </td> 
+   <td><p>请勿使用数据库的默认侦听端口(MySQL - 3306、Oracle - 1521、MS SQL - 1433)。 有关更改数据库端口的信息，请参阅数据库文档。</p> <p>使用其他数据库端口会影响JEE上的整个AEM Forms。 如果更改默认端口，则必须在配置的其他方面（例如JEE上的AEM Forms的数据源）进行相应的修改。</p> <p>有关在JEE上的AEM Forms中配置数据源的信息，请参阅<a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms用户指南</a>中的在JEE上安装和升级AEM Forms或在JEE上升级到应用程序服务器上的AEM Forms 。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -108,7 +108,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
  </tbody> 
 </table>
 
-有关操作系统的其他安全信息，请参阅[“操作系统安全信息”](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
+有关操作系统的其他安全信息，请参阅[“操作系统安全信息”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
 
 ## 安装 {#installation}
 
@@ -123,7 +123,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>特权</p> </td> 
+   <td><p>权限</p> </td> 
    <td><p>使用安装软件所需的最少权限。 使用不在Administrators组中的帐户登录到计算机。 在Windows上，您可以使用“运行方式”命令以管理用户的身份运行AEM Forms on JEE安装程序。 在UNIX和Linux系统上，使用诸如<code>sudo</code>之类的命令安装软件。</p> </td> 
   </tr> 
   <tr> 
@@ -264,17 +264,17 @@ Configuration Manager使用部署在您的应用程序服务器上的servlet对J
 1. 启动AEM Forms服务器。
 1. 在浏览器中键入以下URL以测试更改并确保其不再有效。
 
-   https://&lt;localhost>：&lt;port>/adobe-bootstrapper/bootstrap
+   https://<localhost>：<port>/adobe-bootstrapper/bootstrap
 
 **锁定对信任存储区的远程访问**
 
-Configuration Manager允许您将Acrobat Reader DC扩展凭据上传到JEE信任存储区上的AEM Forms。 这意味着默认情况下已启用通过远程协议(SOAP和EJB)访问Trust Store Credential Service。 在使用Configuration Manager上载权限凭据或决定稍后使用管理控制台管理凭据后，不再需要此访问。
+Configuration Manager允许您将Acrobat Reader DC扩展凭据上传到JEE信任存储区上的AEM Forms。 这意味着默认情况下已启用通过远程协议（SOAP和EJB）访问Trust Store Credential Service。 在使用Configuration Manager上载权限凭据或决定稍后使用管理控制台管理凭据后，不再需要此访问。
 
-您可以按照[禁用对服务的非必要远程访问](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一节中的步骤来禁用对所有信任存储区服务的远程访问。
+您可以按照[禁用对服务的非必要远程访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一节中的步骤来禁用对所有信任存储区服务的远程访问。
 
 **禁用所有非必要的匿名访问**
 
-某些Forms Server服务具有可能被匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照[禁用对服务的非必要匿名访问](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步骤禁用它。
+某些Forms Server服务具有可能被匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照[禁用对服务的非必要匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步骤禁用它。
 
 #### 更改默认管理员密码 {#change-the-default-administrator-password}
 
@@ -353,7 +353,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
 
 保护数据库时，您应该实施数据库供应商所述的措施。 您应该分配一个数据库用户，该用户具有最低所需的数据库权限，可供AEM Forms on JEE使用。 例如，不要使用具有数据库管理员权限的帐户。
 
-在Oracle上，您使用的数据库帐户只需要CONNECT、RESOURCE和CREATE VIEW权限。 有关其他数据库上的类似要求，请参阅[准备在JEE （单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_cn)。
+在Oracle上，您使用的数据库帐户只需要CONNECT、RESOURCE和CREATE VIEW权限。 有关其他数据库上的类似要求，请参阅[准备在JEE （单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
 
 #### 为Windows上的SQL Server for JBoss配置集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
@@ -364,7 +364,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
    ```
 
 1. 将sqljdbc_auth.dll文件添加到运行应用程序服务器的计算机上的Windows系统路径中。 sqljdbc_auth.dll文件位于Microsoft SQL JDBC 6.2.1.0驱动程序安装中。
-1. 将本地系统登录身份的JBoss Windows服务(JEE上的AEM Forms的JBoss)属性修改为具有AEM Forms数据库和最小权限集的登录帐户。 如果是从命令行运行JBoss而不是作为Windows服务运行，则无需执行此步骤。
+1. 将本地系统登录身份的JBoss Windows服务（JEE上的AEM Forms的JBoss）属性修改为具有AEM Forms数据库和最小权限集的登录帐户。 如果是从命令行运行JBoss而不是作为Windows服务运行，则无需执行此步骤。
 1. 将SQL Server的安全性从&#x200B;**混合**&#x200B;模式设置为&#x200B;**仅Windows身份验证**。
 
 #### 为Windows for WebLogic上的SQL Server配置集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
@@ -395,7 +395,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
 1. 在右侧窗格中的“其他属性”下，单击“**自定义属性”**，然后单击“**新建”**。
 1. 在&#x200B;**名称**&#x200B;框中，键入`integratedSecurity`，在&#x200B;**值**&#x200B;框中，键入`true`。
 1. 在安装了WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位于同一位置（默认为&#x200B;*[InstallDir]*/sqljdbc_1.2/enu/auth/x86）。
-1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击Windows的WebSphere服务(IBM WebSphere Application Server &lt;version> - &lt;node>)，然后选择&#x200B;**属性**。
+1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击用于WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>)的Windows服务并选择&#x200B;**属性**。
 1. 在“属性”对话框中，单击&#x200B;**登录**&#x200B;选项卡。
 1. 选择&#x200B;**此帐户**&#x200B;并提供设置要使用的登录帐户所需的信息。
 1. 将SQL Server上的安全性从&#x200B;**混合**&#x200B;模式设置为&#x200B;**仅限Windows身份验证**。
@@ -410,7 +410,7 @@ AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息�
 * 信任存储区HSM PIN加密密钥
 * 本地用户密码散列
 
-有关特定于供应商的工具的信息，请参阅[“数据库安全信息”](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
+有关特定于供应商的工具的信息，请参阅[“数据库安全信息”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
 
 ### LDAP安全 {#ldap-security}
 
@@ -472,7 +472,7 @@ AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息�
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ## 在JEE上配置AEM Forms以实现企业以外的访问 {#configuring-aem-forms-on-jee-for-access-beyond-the-enterprise}
 
@@ -709,9 +709,9 @@ JEE上的AEM Forms使用反向链接筛选条件功能来阻止CSRF攻击。 此
 
 ### 管理反向链接筛选 {#managing-referer-filtering}
 
-JEE上的AEM Forms提供了一个反向链接筛选条件，用于指定允许访问您的服务器资源的反向链接。 默认情况下，反向链接筛选条件不会筛选使用安全HTTP方法(例如GET)的请求，除非&#x200B;*CSRF_CHECK_GETS*&#x200B;设置为true。 如果“允许的反向链接”条目的端口号设置为0，则JEE上的AEM Forms将允许从该主机发起所有包含反向链接的请求，而不管端口号如何。 如果未指定端口号，则仅允许来自默认端口80 (HTTP)或端口443 (HTTPS)的请求。 如果删除了允许的反向链接列表中的所有条目，则会禁用反向链接筛选。
+JEE上的AEM Forms提供了一个反向链接筛选条件，用于指定允许访问您的服务器资源的反向链接。 默认情况下，反向链接筛选条件不会筛选使用安全HTTP方法（例如GET）的请求，除非&#x200B;*CSRF_CHECK_GETS*&#x200B;设置为true。 如果“允许的反向链接”条目的端口号设置为0，则JEE上的AEM Forms将允许从该主机发起所有包含反向链接的请求，而不管端口号如何。 如果未指定端口号，则仅允许来自默认端口80 (HTTP)或端口443 (HTTPS)的请求。 如果删除了允许的反向链接列表中的所有条目，则会禁用反向链接筛选。
 
-首次安装Document Services时，“允许的反向链接”列表会更新为安装Document Services的服务器上的地址。 服务器的条目包括服务器名称、 IPv4地址、 IPv6地址（如果已启用IPv6） 、环回地址和localhost条目。 添加到允许的反向链接列表中的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包含以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 列入允许列表对于主机操作系统返回的任何未限定的名称（没有IPv4地址、IPv6地址或限定的域名的名称），将不更新。 修改允许的反向链接列表以适合您的业务环境。 不要在生产环境中使用默认的“允许的反向链接”列表部署Forms Server。 修改任何允许的反向链接、反向链接异常或URI后，请确保重新启动服务器以使更改生效。
+首次安装Document Services时，“允许的反向链接”列表会更新为安装Document Services的服务器上的地址。 服务器的条目包括服务器名称、 IPv4地址、 IPv6地址（如果已启用IPv6） 、环回地址和localhost条目。 添加到允许的反向链接列表中的名称由主机操作系统返回。 例如，IP地址为10.40.54.187的服务器将包含以下条目： `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`。 对于主机操作系统返回的任何未限定的名称（没有IPv4地址、IPv6地址或限定的域名的名称），将不更新。 修改允许的反向链接列表以适合您的业务环境。 不要在生产环境中使用默认的“允许的反向链接”列表部署Forms Server。 修改任何允许的反向链接、反向链接异常或URI后，请确保重新启动服务器以使更改生效。
 
 **管理允许的反向链接列表**
 
@@ -956,13 +956,13 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 有关AEM Forms on JEE所需的WebSphere端口的信息，请转到WebSphere应用程序服务器UI中的端口号设置。
 
-### 配置SSL {#configuring-ssl}
+### 配置 SSL {#configuring-ssl}
 
 参考[AEM Forms on JEE物理架构](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)部分中描述的物理架构，您应该为计划使用的所有连接配置SSL。 具体而言，所有SOAP连接都必须通过SSL执行，以防止网络上用户凭据泄露。
 
-有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64_cn)中的“配置SSL”。
+有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64)中的“配置SSL”。
 
-有关如何将证书导入为AEM Forms服务器配置的JVM （Java虚拟机）的说明，请参阅[AEM Forms Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65_cn)中的相互身份验证部分。
+有关如何将证书导入为AEM Forms服务器配置的JVM （Java虚拟机）的说明，请参阅[AEM Forms Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65)中的相互身份验证部分。
 
 ### 配置SSL重定向 {#configuring-ssl-redirect}
 
@@ -976,7 +976,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 1. 打开JBOSS_HOME/standalone/configuration/standalone.xml文件进行编辑。
 
-   在&lt;subsystem xmlns=&quot;urn:jboss:域:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>元素之后，添加以下详细信息：
+   在&lt;subsystem xmlns=&quot;urn:jboss:domain:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>元素之后，添加以下详细信息：
 
    &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot;/>
 

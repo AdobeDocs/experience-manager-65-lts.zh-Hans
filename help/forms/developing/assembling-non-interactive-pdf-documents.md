@@ -1,5 +1,5 @@
 ---
-title: 汇编非交互式PDF文档
+title: 组装非交互式 PDF 文档
 description: 使用非交互式PDF表单作为输入，使用Java API和Web服务API汇编非交互式PDF文档。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: fc5ea2a6-79b4-436e-b5bc-c4beaf3619ee
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
 
-# 汇编非交互式PDF文档 {#assembling-non-interactive-pdf-documents}
+# 组装非交互式 PDF 文档 {#assembling-non-interactive-pdf-documents}
 
 使用交互式PDF表单作为输入时，可以组合非交互式PDF文档。 即，假设您有一个表单，用户可以使用它向表单字段中输入数据。 您可以将该表单传递到Assembler服务，从而导致Assembler服务返回PDF文档，该文档阻止用户在其字段中输入数据。 本文档是非交互式PDF表单。 例如，下图显示了表示交互式表单的抵押应用程序。
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 本节不讨论相关概念，例如创建包含输入文档的收藏集对象，或者了解如何从返回的收藏集对象中提取结果。 (请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。)
+>在阅读本节之前，建议您熟悉使用Assembler服务组合PDF文档。 本节不讨论相关概念，例如创建包含输入文档的收藏集对象，或者了解如何从返回的收藏集对象中提取结果。 （请参阅[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)。）
 
 >[!NOTE]
 >
@@ -76,8 +76,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果AEM Forms部署在除JBoss之外的受支持J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为JAR文件，这些文件特定于部署AEM Forms的J2EE应用程序服务器。
 
@@ -111,7 +111,7 @@ ht-degree: 0%
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API汇编非交互式PDF文档 {#assemble-a-non-interactive-pdf-document-using-the-java-api}
 
@@ -156,7 +156,7 @@ ht-degree: 0%
    * 创建`java.io.File`对象并确保文件扩展名为.pdf。
    * 调用`Document`对象的`copyToFile`方法以将`Document`对象的内容复制到文件中。 确保使用`invokeOneDocument`方法返回的`Document`对象。
 
-* “快速入门(SOAP模式)：使用Java API汇编非交互式PDF文档”
+* “快速入门（SOAP模式）：使用Java API汇编非交互式PDF文档”
 
 ## 使用Web服务API汇编非交互式PDF文档 {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 

@@ -10,30 +10,30 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: c84ba536-a78d-4cf9-a480-59cb18e41076
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 1%
+source-wordcount: '188'
+ht-degree: 52%
 
 ---
 
-# 无法使用输出服务、Forms服务或记录文档(DoR)服务 {#unable-to-use-output-service-forms-service-or-document-of-record-service}
+# 无法使用输出服务、表单服务或记录文档（DoR）服务 {#unable-to-use-output-service-forms-service-or-document-of-record-service}
 
 ## 问题
 
 安装AEM Forms 6.5 Service Pack 19后，尝试使用输出服务、Forms服务或记录文档(DoR)服务可能会导致`Connection to failed service`错误。
 
-## 解决方案
+## 解决办法
 
 要解决此问题：
 
 1. 停止AEM 6.5 Forms实例。
-1. 在安装了Microsoft 6.5 Forms的计算机上下载并安装适用于Visual Studio 2015、2017、2019和2022[&#128279;](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)的64位版本的AEM Visual C++可再发行包。
+1. 在安装了 AEM 6.5 Forms 的计算机上，下载并安装[适用于 Visual Studio 2015、2017、2019 和 2022 的 64 位 Microsoft Visual C++ 可再发行组件包](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022)。
 1. 重新启动AEM Forms服务器。
 
    >[!NOTE]
    >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   > 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 
 >[!NOTE]

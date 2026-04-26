@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 716d8eb2-2010-4d55-b8fe-bd4f6f256a4d
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 1%
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 对于使用关系数据库的JEE上的AEM Forms ，托管AEM Forms和关系数据库的计算机上的时间应始终绝对同步。 如果这些计算机上的时间不同步，则JEE服务器上的AEM Forms的CRX存储库可能会变得无法访问。 它可能已损坏，并且无法通过URL访问。 已记录`AuthenticationsupportService missing`错误。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在执行上述步骤之前，请备份CRX存储库。
 
-## 解决方案 {#solution}
+## 解决办法 {#solution}
 
 1. 转到`https://[AEM Forms Server]:[port]/system/console/bundles`。
 
@@ -35,6 +35,6 @@ ht-degree: 1%
 1. 如果问题仍未解决，请从备份中恢复CRX存储库，或者在备份不可用时重建CRX存储库。
 
 
-## 应用于 {#applies-to}
+## 应用到 {#applies-to}
 
 此解决方案适用于JEE群集上的AEM Forms 。

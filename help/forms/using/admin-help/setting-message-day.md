@@ -1,5 +1,5 @@
 ---
-title: 设置当天消息
+title: 设置每日消息
 description: 每天的消息允许您设置一条显示在Workspace用户界面的“欢迎”页面上的消息。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 9581155d-5346-4346-b483-ecb0c51b53e3
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 1%
+source-wordcount: '186'
+ht-degree: 7%
 
 ---
 
-# 设置当天消息 {#setting-the-message-of-the-day}
+# 设置每日消息 {#setting-the-message-of-the-day}
 
 >[!NOTE]
 > 

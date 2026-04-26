@@ -1,5 +1,5 @@
 ---
-title: 从作业管理器数据库中清除记录
+title: 清除作业管理器数据库中的记录
 description: 较大的流程数据可能会导致AEM表单性能降低。 当不再需要记录时，最好清除流程数据。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a5e6b09a-c4c7-41c0-8221-d563cb74b3b7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 0%
+source-wordcount: '487'
+ht-degree: 2%
 
 ---
 
-# 从作业管理器数据库中清除记录 {#purge-records-from-the-job-manager-database}
+# 清除作业管理器数据库中的记录 {#purge-records-from-the-job-manager-database}
 
 >[!NOTE]
 > 

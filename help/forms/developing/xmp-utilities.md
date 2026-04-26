@@ -1,5 +1,5 @@
 ---
-title: 使用XMP实用程序
+title: 使用 XMP 实用程序
 description: 使用XMP实用程序Java和Web服务API以编程方式将XMP元数据导入PDF文档，并从PDF文档中检索和保存XMP元数据。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 6deed56a-2e87-4444-8fb5-1d06b0792a5e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 0%
+source-wordcount: '1401'
+ht-degree: 1%
 
 ---
 
-# 使用XMP实用程序 {#working-with-xmp-utilities}
+# 使用 XMP 实用程序 {#working-with-xmp-utilities}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -30,8 +30,8 @@ XMP实用工具服务可以从XMP文档中检索和保存PDF元数据，并将XM
 
 您可以使用XMP Utilities服务完成这些任务：
 
-* 将元数据导入PDF文档。 (请参阅[将元数据导入PDF文档](xmp-utilities.md#importing-metadata-into-pdf-documents)。)
-* 从PDF文档导出元数据。 (请参阅[从PDF文档导出元数据](xmp-utilities.md#exporting-metadata-from-pdf-documents)。)
+* 将元数据导入PDF文档。 （请参阅[将元数据导入PDF文档](xmp-utilities.md#importing-metadata-into-pdf-documents)。）
+* 从PDF文档导出元数据。 （请参阅[从PDF文档导出元数据](xmp-utilities.md#exporting-metadata-from-pdf-documents)。）
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ XMP实用工具服务可以从XMP文档中检索和保存PDF元数据，并将XM
 
 ![ww_ww_metadatadatadalog](assets/ww_ww_metadatadialog.png)
 
-若要以编程方式将元数据导入PDF文档，您可以使用指定元数据值的现有XML文档，也可以使用类型为`XMPUtilityMetadata`的对象。 (请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。)
+若要以编程方式将元数据导入PDF文档，您可以使用指定元数据值的现有XML文档，也可以使用类型为`XMPUtilityMetadata`的对象。 （请参阅[AEM Forms API引用](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)。）
 
 >[!NOTE]
 >
@@ -194,7 +194,7 @@ XMP实用工具服务可以从XMP文档中检索和保存PDF元数据，并将XM
 
 1. 包含项目文件
 
-   * 创建使用Microsoft实用程序服务WSDL文件的XMP .NET客户端程序集。 (请参阅[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。)
+   * 创建使用Microsoft实用程序服务WSDL文件的XMP .NET客户端程序集。 （请参阅[使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)。）
    * 引用Microsoft .NET客户端程序集。 （请参阅[创建使用Base64编码的.NET客户端程序集](/help/forms/developing/invoking-aem-forms-using-web.md#creating-a-net-client-assembly-that-uses-base64-encoding)。）
 
 1. 创建XMPUtilityService客户端

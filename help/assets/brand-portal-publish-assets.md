@@ -11,10 +11,10 @@ role: User
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 9eba1e3f-9251-445e-b791-2be0a92aebd1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 40%
+source-wordcount: '432'
+ht-degree: 43%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 40%
 | AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=zh-Hans) |
 | AEM 6.5 | 本文 |
 
-作为Adobe Experience Manager (AEM) Assets管理员，您可以将资产和文件夹发布到AEM Assets Brand Portal实例（或安排在稍后的日期/时间执行发布工作流）。 但是，您必须首先使用 Brand Portal 配置 AEM Assets。有关详细信息，请参阅[使用 Brand Portal 配置 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
+作为Adobe Experience Manager (AEM) Assets管理员，您可以将资产和文件夹发布到AEM Assets Brand Portal实例（或安排在稍后的日期/时间执行发布工作流）。 但是，您必须首先使用 Brand Portal 配置 AEM Assets。 有关详细信息，请参阅[使用 Brand Portal 配置 AEM Assets](/help/assets/configure-aem-assets-with-brand-portal.md)。
 
 复制成功后，您可以将资源、文件夹和收藏集发布到Brand Portal。 要将资源发布到Brand Portal，请执行以下步骤：
 
@@ -47,7 +47,7 @@ ht-degree: 40%
 
 要将选定资产发布到 Brand Portal，请执行以下任一操作：
 
-* 在工具栏中，选择&#x200B;**[!UICONTROL 快速发布]**。然后从菜单中选择&#x200B;**[!UICONTROL 发布到Brand Portal]**。
+* 在工具栏中，选择&#x200B;**[!UICONTROL 快速发布]**。 然后从菜单中选择&#x200B;**[!UICONTROL 发布到Brand Portal]**。
 
 * 在工具栏中，选择&#x200B;**[!UICONTROL 管理发布]**。
 
@@ -55,7 +55,7 @@ ht-degree: 40%
 
    2. 在&#x200B;**[!UICONTROL 范围]**&#x200B;内，确认您的选择，然后单击&#x200B;**[!UICONTROL 发布到Brand Portal]**。
 
-此时将显示一条消息，表明资产已排队等候发布到 Brand Portal。登录到 Brand Portal 界面可查看已发布的资产。
+此时将显示一条消息，表明资产已排队等候发布到 Brand Portal。 登录到 Brand Portal 界面可查看已发布的资产。
 
 ## 稍后发布资产 {#publish-to-bp-later}
 
@@ -67,11 +67,11 @@ ht-degree: 40%
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
-1. 选择&#x200B;**[!UICONTROL 激活日期]**，并指定时间。单击&#x200B;**[!UICONTROL 下一步]**。
+1. 选择&#x200B;**[!UICONTROL 激活日期]**，并指定时间。 单击&#x200B;**[!UICONTROL 下一步]**。
 
-1. 选择&#x200B;**激活日期**，并指定时间。单击&#x200B;**下一步**。
+1. 选择&#x200B;**激活日期**，并指定时间。 单击&#x200B;**下一步**。
 
-1. 在&#x200B;**[!UICONTROL 工作流]**&#x200B;中指定&#x200B;**[!UICONTROL 工作流标题]**。单击&#x200B;**[!UICONTROL 稍后发布]**。
+1. 在&#x200B;**[!UICONTROL 工作流]**&#x200B;中指定&#x200B;**[!UICONTROL 工作流标题]**。 单击&#x200B;**[!UICONTROL 稍后发布]**。
 
    ![publishworkflow](assets/publishworkflow.png)
 
@@ -87,6 +87,6 @@ ht-degree: 40%
 
 1. 切换到列表视图![列表视图](assets/list-view.svg)以查看资源的当前发布状态。
 
-<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
 
 ![已生成报告状态](assets/report-status.JPG)

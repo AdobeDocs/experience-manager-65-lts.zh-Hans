@@ -5,9 +5,9 @@ role: Admin
 feature: Publishing
 solution: Experience Manager, Experience Manager Assets
 exl-id: f0db5ec6-45ea-418e-ae5f-e6e307a40a38
-source-git-commit: 8489976fbcee595ee8230c530597523e7cd0f6b7
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1582'
 ht-degree: 2%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 2%
 * 用于定义和管理特定任务的代理工作程序。
 这些任务可以涵盖多种任务；例如，使用[!DNL InDesign Server]处理文件。
 
-要将文件完全上载到您使用[!DNL Adobe InDesign]创建的[!DNL Experience Manager Assets]，将使用代理。 这使用代理工作进程与[!DNL Adobe InDesign Server]进行通信，其中运行[脚本](https://helpx.adobe.com/cn/indesign/using/scripting.html)以提取元数据并为[!DNL Experience Manager Assets]生成各种演绎版。 代理工作进程在云配置中启用[!DNL InDesign Server]和[!DNL Experience Manager]实例之间的双向通信。
+要将文件完全上载到您使用[!DNL Adobe InDesign]创建的[!DNL Experience Manager Assets]，将使用代理。 这使用代理工作进程与[!DNL Adobe InDesign Server]进行通信，其中运行[脚本](https://helpx.adobe.com/indesign/using/scripting.html)以提取元数据并为[!DNL Experience Manager Assets]生成各种演绎版。 代理工作进程在云配置中启用[!DNL InDesign Server]和[!DNL Experience Manager]实例之间的双向通信。
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign]作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/cn/products/indesign.html)桌面应用程序，用于为打印和数字分发设计页面布局。 [Adobe InDesign Server](https://www.adobe.com/cn/products/indesignserver.html)使您能够根据使用[!DNL InDesign]创建的内容，以编程方式创建自动文档。 它作为服务运行，为其[ExtendScript](https://helpx.adobe.com/cn/indesign/using/scripting.html)引擎提供接口。脚本使用[!DNL ExtendScript]编写，类似于[!DNL JavaScript]。
+>[!DNL Adobe InDesign]作为两个单独的产品提供。 [Adobe InDesign](https://www.adobe.com/products/indesign.html)桌面应用程序，用于为打印和数字分发设计页面布局。 [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html)使您能够根据使用[!DNL InDesign]创建的内容，以编程方式创建自动文档。 它作为服务运行，为其[ExtendScript](https://helpx.adobe.com/indesign/using/scripting.html)引擎提供接口。脚本以[!DNL ExtendScript]编写，它类似于[!DNL JavaScript]。
 
 ## 提取的工作原理 {#how-the-extraction-works}
 
@@ -68,7 +68,7 @@ ht-degree: 2%
 1. [安装InDesign Server](#installing-the-indesign-server)。
 1. 如有必要，[配置Experience Manager Assets工作流](#configuring-the-aem-assets-workflow)。
 仅当默认值不适用于您的实例时，才需要执行此操作。
-1. 为InDesign Server[&#128279;](#configuring-the-proxy-worker-for-indesign-server)配置代理工作程序。
+1. 为InDesign Server](#configuring-the-proxy-worker-for-indesign-server)配置[代理工作程序。
 
 ### 安装[!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -96,7 +96,7 @@ ht-degree: 2%
 * [媒体提取](#media-extraction)
 * [页面提取](#page-extraction)
 
-此工作流设置了默认值，这些默认值可适用于您在各种创作实例上的设置（这是一个标准工作流，因此可在[编辑工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)下获得更多信息）。 如果您使用的是默认值(包括SOAP端口)，则无需配置。
+此工作流设置了默认值，这些默认值可适用于您在各种创作实例上的设置（这是一个标准工作流，因此可在[编辑工作流](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)下获得更多信息）。 如果您使用的是默认值（包括SOAP端口），则无需配置。
 
 设置后，将[!DNL InDesign]文件上传到[!DNL Experience Manager Assets]（通过任何常用方法）会触发工作流处理资源并准备各种演绎版。 通过将INDD文件上传到[!DNL Experience Manager Assets]测试您的配置，以确认您看到由`<*your_asset*>.indd/Renditions`下的ID创建的不同演绎版
 
@@ -114,7 +114,8 @@ ht-degree: 2%
 
 * **扩展脚本**：您可以在此处指定不同的脚本组合。 如果您希望在[!DNL InDesign Server]上执行自己的脚本，请将脚本保存在`/apps/settings/dam/indesign/scripts`。
 
-<!-- TBD: Hiding this link since ADC is not available anymore. 
+<!--
+TBD: Hiding this link since ADC is not available anymore. 
 For information about [!DNL Adobe InDesign] scripts, see [InDesign developer documentation](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
 -->
 
@@ -128,7 +129,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 #### 页面提取 {#page-extraction}
 
-这会从提取的元素创建一个[!DNL Experience Manager]页面。 提取处理程序用于从演绎版(当前为HTML或IDML)中提取数据。 然后，使用此数据通过PageBuilder创建页面。
+这会从提取的元素创建一个[!DNL Experience Manager]页面。 提取处理程序用于从演绎版（当前为HTML或IDML）中提取数据。 然后，使用此数据通过PageBuilder创建页面。
 
 要进行自定义，可以编辑&#x200B;**[!UICONTROL 页面提取]**&#x200B;步骤的&#x200B;**[!UICONTROL 参数]**&#x200B;选项卡。
 
@@ -198,7 +199,7 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 1. 保存这些更改。
 1. 要为Adobe CS6及更高版本启用多会话支持，请在`com.day.cq.dam.ids.impl.IDSJobProcessor.name`配置下选中`enable.multisession.name`复选框。
-1. 通过将SOAP端点添加到IDS Worker配置[&#128279;](#configuring-the-proxy-worker-for-indesign-server)中，创建`x` IDS Worker的池。
+1. 通过将SOAP端点添加到IDS Worker配置](#configuring-the-proxy-worker-for-indesign-server)中，创建`x` IDS Worker的[池。
 
    如果有多台计算机运行[!DNL InDesign Server]，请为每台计算机添加SOAP端点（每台计算机的处理器数–1）。
 
@@ -238,4 +239,4 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!MORELIKETHIS]
 >
->* [关于Adobe InDesign Server](https://www.adobe.com/cn/products/indesignserver/faq.html)
+>* [关于Adobe InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)

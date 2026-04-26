@@ -10,9 +10,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 3fe5421e-e97e-43c4-b34b-b84bf189a779
-source-git-commit: 425b3fae2658d78b0885f5034ff4c61da625d9d4
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,8 @@ AEM升级过程需要仔细处理规划、分析和执行阶段，并为每个�
 
 务必确保您运行的是受支持的操作系统、Java™运行时、httpd和Dispatcher版本。 有关详细信息，请参阅AEM 6.5 LTS的[技术要求](/help/sites-deploying/technical-requirements.md)。 您必须在升级计划中考虑升级这些组件，并且应在升级AEM之前进行升级。
 
-<!-- Alexandru: drafting for now
+<!--
+Alexandru: drafting for now
 
 ## Upgrade Scope and Requirements {#upgrade-scope-requirements}
 
@@ -89,13 +90,15 @@ Below you will find a list of areas that are impacted in a typical AEM Upgrade p
  </tbody>
 </table>
 
-It is important to ensure that you are running a supported operating system, Java&trade; runtime, httpd, and Dispatcher version. For more information, see the [AEM 6.5 Technical Requirements page](/help/sites-deploying/technical-requirements.md). Upgrading these components must be accounted for in your project plan and should take place before upgrading AEM. -->
+It is important to ensure that you are running a supported operating system, Java&trade; runtime, httpd, and Dispatcher version. For more information, see the [AEM 6.5 Technical Requirements page](/help/sites-deploying/technical-requirements.md). Upgrading these components must be accounted for in your project plan and should take place before upgrading AEM.
+-->
 
 ## 升级阶段 {#upgrade-phases}
 
 规划和运行AEM升级需要完成大量工作。 为了明确在此过程中所做的各种工作，Adobe将规划和执行活动划分为单独的阶段。 在以下部分中，每个阶段都会生成一个交付项，通常在升级的将来阶段使用。
 
-<!-- Alexandru:drafting for now
+<!--
+Alexandru:drafting for now
 
 ### Planning for Author Training {#planning-for-author-training}
 
@@ -103,7 +106,8 @@ With any new release, there are potential changes to the UI and user workflows t
 
 ![unu_cropped](assets/unu_cropped.png)
 
-New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/release-notes/release-notes.md). Make sure to note any changes to UIs or product features that are commonly used in your organization. As you look through the new features, also take note of any that can be of value to your organization. After looking through what has changed in AEM 6.5, develop a training plan for your authors. This could involve using freely available resources like the help feature videos or formal training offered through [Adobe Digital Learning Services](https://learning.adobe.com/). -->
+New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/release-notes/release-notes.md). Make sure to note any changes to UIs or product features that are commonly used in your organization. As you look through the new features, also take note of any that can be of value to your organization. After looking through what has changed in AEM 6.5, develop a training plan for your authors. This could involve using freely available resources like the help feature videos or formal training offered through [Adobe Digital Learning Services](https://learning.adobe.com/).
+-->
 
 ### 创建测试计划 {#creating-a-test-plan}
 
@@ -121,9 +125,11 @@ New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/rel
 
 虽然Adobe已记录升级AEM实例的流程，但每个客户的网络布局、部署架构和自定义都需要对此方法进行微调和定制。 因此，Adobe建议您查看提供的所有文档，并将其用于告知特定于升级的Runbook，其中概述了将在环境中执行的特定升级和回滚过程。
 
-<!--Alexandru:drafting for now
+<!--
+Alexandru:drafting for now
 
-![runbook-diagram](assets/runbook-diagram.png) -->
+![runbook-diagram](assets/runbook-diagram.png)
+-->
 
 Adobe在[升级过程](/help/sites-deploying/upgrade-procedure.md)中提供了升级和回滚过程，以及在执行[就地升级](/help/sites-deploying/in-place-upgrade.md)中应用升级的分步说明。 您应该查看这些说明并与您的系统体系结构、定制和停机时间容差一起考虑，以确定在升级期间将执行的适当的切换和回滚过程。 在起草您的自定义Runbook时，应包括对架构或服务器大小所做的任何更改。
 
@@ -131,9 +137,11 @@ Adobe在[升级过程](/help/sites-deploying/upgrade-procedure.md)中提供了�
 
 先前练习的输出可用于构建升级计划，该计划涵盖测试或开发工作的预期时间表以及实际的升级执行。
 
-<!--Alexandru: drafting for now
+<!--
+Alexandru: drafting for now
 
-![develop-project-plan](assets/develop-project-plan.png) -->
+![develop-project-plan](assets/develop-project-plan.png)
+-->
 
 全面的项目计划应包括：
 
@@ -150,9 +158,11 @@ Adobe在[升级过程](/help/sites-deploying/upgrade-procedure.md)中提供了�
 
 Adobe已提供[升级代码和自定义项](/help/sites-deploying/upgrading-code-and-customizations.md)以与AEM 6.5 LTS兼容的过程。 在运行此迭代过程时，应根据需要对Runbook进行更改。
 
-<!--Alexandru: drafting for now
+<!--
+Alexandru: drafting for now
 
-![patru_cropped](assets/patru_cropped.png) -->
+![patru_cropped](assets/patru_cropped.png)
+-->
 
 开发和测试过程通常是迭代过程。 在发现需要调整升级过程的问题后，请确保将它们添加到您的自定义升级Runbook中。 在反复测试和修复之后，代码库应该经过完全验证并准备好部署到暂存环境。
 
@@ -160,9 +170,11 @@ Adobe已提供[升级代码和自定义项](/help/sites-deploying/upgrading-code
 
 Adobe建议在代码库获得贵组织的QA团队认证后进行最后一轮测试。 此轮测试将涉及在暂存环境中验证您的Runbook，然后进行多轮用户验收、性能和安全性测试。
 
-<!--Alexandru: drafting for now
+<!--
+Alexandru: drafting for now
 
-![cinci_cropped](assets/cinci_cropped.png) -->
+![cinci_cropped](assets/cinci_cropped.png)
+-->
 
 此步骤至关重要，因为这是您唯一一次能够针对类似生产的环境验证Runbook中的步骤。 升级环境后，请务必留出一些时间让最终用户登录，并完成他们在日常活动中使用系统时执行的活动。 在上线之前发现并纠正这些区域的问题，有助于防止代价高昂的生产中断。
 

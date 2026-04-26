@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: ca919915-c37b-4793-b5e2-21a464c5dcdf
-source-git-commit: 253e2b5a39fd4c2fe7ab9aeaafb72930b4aa39ff
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '948'
 ht-degree: 2%
 
 ---
@@ -39,11 +39,11 @@ Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的
 
 **部署类型：**&#x200B;指示证书的预期用途，如生产。 该值可以是“评估”或“生产”。 有关与每种证书类型关联的部署类型列表，请参阅证书配置文件部分的表中的部署类型列。
 
-**使用权限版本：**&#x200B;描述证书可以使用的使用权限算法的版本，如V6.1。此版本不表示Acrobat或Acrobat Reader DC扩展的版本。
+**使用权限版本：**&#x200B;描述证书可以使用的使用权限算法的版本，如V6.1。 此版本不表示Acrobat或Acrobat Reader DC扩展的版本。
 
 **配置文件代码：**&#x200B;配置文件代码是完整证书属性的简短描述，例如P8。 有关与每种文件类型关联的配置文件代码的列表，请参阅证书配置文件部分表中配置文件代码列。
 
-**序列号：**&#x200B;为Adobe颁发的每个证书(如0002054)分配了序列号。 Adobe企业支持或Adobe企业客户代表可以使用此序列号来跟踪到特定产品订单或OEM关系的证书。
+**序列号：**&#x200B;为Adobe颁发的每个证书（如0002054）分配了序列号。 Adobe企业支持或Adobe企业客户代表可以使用此序列号来跟踪到特定产品订单或OEM关系的证书。
 
 ## 证书配置文件 {#certificate-profiles}
 
@@ -62,7 +62,7 @@ Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的
   <tr>
    <td><p>P1</p></td>
    <td><p>SAP生产</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
@@ -74,7 +74,7 @@ Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的
   <tr>
    <td><p>P3</p></td>
    <td><p>Acrobat Reader DC扩展，生产</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
@@ -98,49 +98,49 @@ Acrobat Reader DC扩展证书的“友好”名称是一个描述证书属性的
   <tr>
    <td><p>P8</p></td>
    <td><p>Forms，生产</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>P9</p></td>
    <td><p>Adobe Acrobat 7.x，生产</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产</p></td>
   </tr>
   <tr>
    <td><p>I10</p></td>
    <td><p>Forms；OEM可以使用Forms</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
   <tr>
    <td><p>I11</p></td>
    <td><p>Forms；OEM可以使用Forms。</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
   <tr>
    <td><p>I12</p></td>
    <td><p>仅签名；OEM只能使用签名</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
   <tr>
    <td><p>I13</p></td>
    <td><p>仅离线注释；OEM可以使用离线注释</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
   <tr>
    <td><p>I14</p></td>
    <td><p>仅注释；OEM只能使用注释</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
   <tr>
    <td><p>I15</p></td>
    <td><p>完全权限；OEM可以使用完全权限</p></td>
-   <td><p>最大值</p></td>
+   <td><p>最大</p></td>
    <td><p>生产和评估</p></td>
   </tr>
  </tbody>

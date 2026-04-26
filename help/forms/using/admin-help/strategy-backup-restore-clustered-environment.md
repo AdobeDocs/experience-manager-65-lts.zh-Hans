@@ -1,5 +1,5 @@
 ---
-title: 群集环境中的备份和恢复策略
+title: 集群环境下的备份与恢复策略
 description: 如果您的AEM表单实施将其他自定义数据存储在其他数据库中，则必须实施策略来备份此数据，确保它与AEM表单数据保持同步。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
@@ -7,14 +7,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 0fe9b02a-96b4-462f-a940-a2d6084ed0a4
-source-git-commit: 1b7e0c532ab46346059de01cee4a1adecf3a0a13
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 0%
+source-wordcount: '1398'
+ht-degree: 1%
 
 ---
 
-# 群集环境中的备份和恢复策略 {#strategy-for-backup-and-restore-in-a-clustered-environment}
+# 集群环境下的备份与恢复策略 {#strategy-for-backup-and-restore-in-a-clustered-environment}
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ ht-degree: 0%
    1. 删除节点上的文件clusterNode/revision.log 。
    1. 删除节点上的.lock （如果存在）。
    1. 删除节点上的repository/system.id （如果存在）。
-   1. 删除节点上的文件&amp;amp；ast；&amp;amp；ast；/listener.properties （如果存在）。
+   1. 删除节点上的文件&amp;ast；&amp;ast；/listener.properties （如果存在）。
    1. 恢复单个群集节点的repository/cluster_node.id 。
 
 >[!NOTE]
@@ -161,7 +161,7 @@ ht-degree: 0%
    1. 删除所有群集节点上的文件clusterNode/revision.log 。
    1. 删除所有群集节点上的.lock （如果存在）。
    1. 删除repository/system.id所有群集节点（如果存在）。
-   1. 删除所有群集节点上的文件&amp;amp；ast；&amp;amp；ast；/listener.properties （如果存在）。
+   1. 删除所有群集节点上的文件&amp;ast；&amp;ast；/listener.properties （如果存在）。
    1. 恢复单个群集节点的repository/cluster_node.id 。
 
 >[!NOTE]

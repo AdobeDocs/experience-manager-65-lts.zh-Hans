@@ -1,5 +1,5 @@
 ---
-title: 配置“外出”设置
+title: 配置外出设置
 description: “外出”功能允许您指定用户何时外出且无法完成AEM表单分配的任务。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: bf4fa6e4-25c7-46a8-9bae-4af7bfc14426
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '671'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# 配置“外出”设置 {#configuring-out-of-office-settings}
+# 配置外出设置 {#configuring-out-of-office-settings}
 
 “外出”功能使用户或管理员可以指定用户何时外出且无法完成AEM表单分配的任务。 当用户设置为“外出”时，其任务将分配给一个或多个指定用户。 用户可以在Workspace中更改其“外出”设置，或者管理员可以代表用户在表单工作流中更改设置。
 

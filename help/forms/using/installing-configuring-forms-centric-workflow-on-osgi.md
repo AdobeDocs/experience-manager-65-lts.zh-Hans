@@ -7,10 +7,10 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,AEM Forms on OSGi
 exl-id: 4b316ade-4431-41fc-bb8a-7262a17fb456
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 4%
+source-wordcount: '1627'
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 企业从多个表单、后端系统和其他数据源收集和处理数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，查看表单并将其转换为PDF文档。 手工完成重复性任务需要花费大量的时间和资源。
 
-您可以在OSGi[&#128279;](../../forms/using/aem-forms-workflow.md)上使用以Forms为中心的工作流，快速构建基于自适应表单的工作流。 这些工作流可以帮助您自动执行审阅和批准工作流、业务流程工作流以及其他重复任务。 这些工作流还有助于处理文档(创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，对条形码表单进行解码等)，以及将Adobe Sign签名工作流与表单和文档结合使用。
+您可以在OSGi](../../forms/using/aem-forms-workflow.md)上使用[以Forms为中心的工作流，快速构建基于自适应表单的工作流。 这些工作流可以帮助您自动执行审阅和批准工作流、业务流程工作流以及其他重复任务。 这些工作流还有助于处理文档（创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，对条形码表单进行解码等），以及将Adobe Sign签名工作流与表单和文档结合使用。
 
 设置后，这些工作流可以手动触发以完成定义的流程，或在用户提交表单或交互式通信时以编程方式运行。 此功能包含在AEM Forms附加组件包中。
 
@@ -28,7 +28,8 @@ AEM Forms是一个功能强大的企业级平台。 OSGi上以Forms为中心的�
 
 >[!NOTE]
 >
->使用OSGi上以Forms为中心的工作流，您可以在OSGi栈栈<!--, without having to install the full-fledged Process Management capability on JEE stack-->.<!-- See a [comparison](capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE to learn the difference and similarities in the capabilities.--><!--After the comparison, If you choose to install the Process Management capability on JEE stack, see [Install or Upgrade AEM Forms on JEE](/help/forms/using/introduction-aem-forms.md) for detailed information about installing and configuring JEE stack and the Process Management capabilities.-->上快速构建和部署各种任务的工作流
+>利用OSGi上以Forms为中心的工作流，您可以在OSGi栈栈<!--, without having to install the full-fledged Process Management capability on JEE stack-->上快速构建和部署各种任务的工作流。
+><!-- See a [comparison](capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE to learn the difference and similarities in the capabilities.-->><!--After the comparison, If you choose to install the Process Management capability on JEE stack, see [Install or Upgrade AEM Forms on JEE](/help/forms/using/introduction-aem-forms.md) for detailed information about installing and configuring JEE stack and the Process Management capabilities.-->
 
 ## 部署拓扑 {#deployment-topology}
 
@@ -98,22 +99,22 @@ OSGi上以AEM Forms Forms为中心的工作流在AEM Forms的创作实例上运�
 
 AEM Forms附加组件包是部署在AEM上的应用程序。 该包中包含有关OSGi和其他功能的以Forms为中心的工作流。 执行以下步骤以安装附加组件包：
 
-1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
+1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登录 Software Distribution。
 1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
 1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
    1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
    2. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
 1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
+1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
 
-1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
+1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
 
    >[!NOTE]
    >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   > 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 对所有创作实例和发布实例重复步骤1-7。
 
@@ -143,7 +144,7 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
-列入允许列表对所有Author和Publish实例执行以下步骤，将包添加到中：
+对所有Author和Publish实例执行以下步骤，将包添加到中：
 
 1. 在浏览器窗口中打开AEM Configuration Manager 。 默认URL为https://&#39;[服务器]：[端口]&#39;/system/console/configMgr。
 1. 搜索并打开&#x200B;**反序列化防火墙配置**。
@@ -152,7 +153,7 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
 
-#### 配置Dispatcher {#configure-dispatcher}
+#### 配置 Dispatcher {#configure-dispatcher}
 
 Dispatcher是适用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有助于保护AEM服务器免受攻击。 您可以将AEM与企业级Web服务器结合使用，以提高Dispatcher实例的安全性。 如果您使用[Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，请为AEM Forms执行以下配置：
 
@@ -172,13 +173,13 @@ Dispatcher是适用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有�
 
 缓存是一种缩短数据访问时间、减少延迟并提高输入/输出(I/O)速度的机制。 自适应表单缓存仅存储自适应表单的HTML内容和JSON结构，而不保存任何预填数据。 它有助于减少渲染自适应表单所需的时间。
 
-* 使用自适应表单缓存时，请使用[AEM Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)来缓存自适应表单的客户端库(CSS和JavaScript)。
+* 使用自适应表单缓存时，请使用[AEM Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)来缓存自适应表单的客户端库（CSS和JavaScript）。
 * 开发自定义组件时，在用于开发的服务器上禁用自适应表单缓存。
 
 执行以下步骤以配置自适应表单缓存：
 
 1. 转到`https://'[server]:[port]'/system/console/configMgr`上的AEM Web控制台配置管理器。
-1. 单击&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道配置]**&#x200B;以编辑其配置值。 在“编辑配置值”对话框中，在&#x200B;**自适应Forms的数量**&#x200B;字段中指定AEM Forms服务器实例可以缓存的最大表单或文档数。 默认值为 100。单击&#x200B;**保存**。
+1. 单击&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道配置]**&#x200B;以编辑其配置值。 在“编辑配置值”对话框中，在&#x200B;**自适应Forms的数量**&#x200B;字段中指定AEM Forms服务器实例可以缓存的最大表单或文档数。 默认值为 100。 单击&#x200B;**保存**。
 
    >[!NOTE]
    >
@@ -188,7 +189,7 @@ Dispatcher是适用于AEM的缓存和负载平衡工具。 AEM Dispatcher还有�
 
 Adobe Sign支持自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
 
-在OSGi上的典型Adobe Sign和以Forms为中心的工作流方案中，用户填写自适应表单以&#x200B;**申请服务**。 例如，信用卡申请表和公民权益表。当用户填写、提交和签署申请表单时，将启动批准/拒绝工作流。 服务提供商将审核AEM收件箱中的应用程序，并使用Adobe Sign对应用程序进行电子签名。 要启用类似的电子签名工作流，您可以将Adobe Sign与AEM Forms集成。
+在OSGi上的典型Adobe Sign和以Forms为中心的工作流方案中，用户填写自适应表单以&#x200B;**申请服务**。 例如，信用卡申请表和公民权益表。 当用户填写、提交和签署申请表单时，将启动批准/拒绝工作流。 服务提供商将审核AEM收件箱中的应用程序，并使用Adobe Sign对应用程序进行电子签名。 要启用类似的电子签名工作流，您可以将Adobe Sign与AEM Forms集成。
 
 若要将Adobe Sign与AEM Forms一起使用，[将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
 
@@ -198,4 +199,4 @@ Adobe Sign支持自适应表单的电子签名工作流。 电子签名改进了
 
 * [在OSGi中使用以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md)
 * [工作流步骤参考](/help/sites-developing/workflows-step-ref.md)
-* [信件和互动式通信的后处理](../../forms/using/submit-letter-topostprocess.md)
+* [书信与交互式通信的后处理](../../forms/using/submit-letter-topostprocess.md)

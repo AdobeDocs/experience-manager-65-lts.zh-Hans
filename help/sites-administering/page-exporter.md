@@ -1,18 +1,18 @@
 ---
-title: 页面导出程序
+title: 页面导出器
 description: 了解如何使用Adobe Experience Manager (AEM)页面导出程序。
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 997637d5-1627-4102-8b7c-a0cfd871a7b2
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 0%
+source-wordcount: '1064'
+ht-degree: 1%
 
 ---
 
-# 页面导出程序{#the-page-exporter}
+# 页面导出器{#the-page-exporter}
 
 Adobe Experience Manager (AEM)允许您将页面导出为包括图像、`.js`和`.css`文件的完整网页。
 
@@ -37,18 +37,18 @@ Adobe Experience Manager (AEM)允许您将页面导出为包括图像、`.js`和
 
 1. 选择&#x200B;**高级**&#x200B;选项卡。
 
-1. 展开&#x200B;**导出**&#x200B;字段以选择导出模板。
-为您的站点选择所需的模板，然后使用&#x200B;**确定**&#x200B;进行确认。
+1. 展开&#x200B;**导出**字段以选择导出模板。
+为您的站点选择所需的模板，然后使用**确定**&#x200B;进行确认。
 
 1. 选择&#x200B;**保存并关闭**&#x200B;以关闭页面属性对话框。
 
 1. 请求导出页面，在URL中将后缀`html`替换为`export.zip`。
 
    例如：
-   * localhost：4502/content/we-retail/language-masters/en.html
+   * localhost:4502/content/we-retail/language-masters/en.html
 
    访问方式：
-   * localhost：4502/content/we-retail/language-masters/en.export.zip
+   * localhost:4502/content/we-retail/language-masters/en.export.zip
 
 1. 将存档文件下载到您的文件系统。
 
@@ -110,7 +110,8 @@ Adobe Experience Manager (AEM)允许您将页面导出为包括图像、`.js`和
 
 模板由节点结构组成，因为它使用[Content Sync框架](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/contentsync/package-summary.html)。 每个节点都有一个`type`属性，该属性定义了zip文件创建过程中的特定操作。
 
-<!-- For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
+<!--
+For more details about the type property, see the Overview of configuration types section in the Content Sync framework page.
 -->
 
 以下节点可用于构建导出模板：
@@ -180,7 +181,8 @@ As you may have noticed in the node structure, the **Geometrixx** page export te
 
 为了满足某些特定要求，请实施[自定义更新处理程序](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/contentsync/handler/package-summary.html)。
 
-<!-- To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
+<!--
+To meet some specific requirements, you may need to implement a custom `type` property. To do so, see the Implementing a custom update handler section in the Content Sync page.
 -->
 
 ## 以编程方式导出页面 {#programmatically-exporting-a-page}

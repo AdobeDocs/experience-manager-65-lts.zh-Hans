@@ -1,5 +1,5 @@
 ---
-title: 配置Adobe PDF设置
+title: 配置 Adobe PDF 设置
 description: 了解如何配置可在“Adobe PDF设置”页面上看到的Adobe PDF设置。 您可以使用任何预定义的PDF设置或创建自己的设置。
 contentOwner: admin
 content-type: reference
@@ -11,24 +11,24 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 41a8a4b0-cb39-40a6-82b6-085f2c635e0c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '7415'
+source-wordcount: '7478'
 ht-degree: 0%
 
 ---
 
-# 配置Adobe PDF设置{#configuring-adobe-pdf-settings}
+# 配置 Adobe PDF 设置{#configuring-adobe-pdf-settings}
 
 “Adobe PDF设置”页面会显示您可以为源指定的转换设置，以供使用。 您可以使用任何预定义的PDF设置或创建自己的设置。 PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能。 Adobe PDF设置以前称为Distiller®参数或作业选项。
 
 在“Adobe PDF设置”页面上，您可以执行以下任务：
 
-* 查看预定义的PDF设置。 (请参阅[关于预定义的PDF设置](configuring-pdf-settings.md#about-the-predefined-pdf-settings)。)
-* 创建PDF设置或编辑您之前创建的设置。 (请参阅[添加或编辑PDF设置](configuring-pdf-settings.md#add-or-edit-pdf-settings)。)
+* 查看预定义的PDF设置。 （请参阅[关于预定义的PDF设置](configuring-pdf-settings.md#about-the-predefined-pdf-settings)。）
+* 创建PDF设置或编辑您之前创建的设置。 （请参阅[添加或编辑PDF设置](configuring-pdf-settings.md#add-or-edit-pdf-settings)。）
 * 指定默认的PDF设置。 （请参阅[更改默认设置](/help/forms/using/admin-help/configuring-file-type-settings.md#change-the-default-settings)）
-* 将PDF设置文件上传到服务器。 (请参阅[上传PDF设置](configuring-pdf-settings.md#upload-pdf-settings)。)
-* 删除自定义的PDF设置。 (请参阅[删除PDF设置](configuring-pdf-settings.md#delete-pdf-settings)。)
+* 将PDF设置文件上传到服务器。 （请参阅[上传PDF设置](configuring-pdf-settings.md#upload-pdf-settings)。）
+* 删除自定义的PDF设置。 （请参阅[删除PDF设置](configuring-pdf-settings.md#delete-pdf-settings)。）
 * 上载并下载序言文件和尾言文件。 （请参阅[上载和下载prolog和epilog文件](configuring-pdf-settings.md#uploading-and-downloading-prologue-and-epilogue-files)。）
 
 Adobe PDF设置仅适用于基于PDFMaker的转换。 这些包括以下转化：
@@ -95,19 +95,19 @@ PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能�
 1. 单击新建或单击现有设置的名称。
 1. 在新建/编辑Adobe PDF设置页面上，完成以下部分中的必需信息：
 
-[常规选项](configuring-pdf-settings.md#general-options)
+   [常规选项](configuring-pdf-settings.md#general-options)
 
-[图像选项](configuring-pdf-settings.md#images-options)
+   [图像选项](configuring-pdf-settings.md#images-options)
 
-[字体选项](configuring-pdf-settings.md#fonts-options)
+   [字体选项](configuring-pdf-settings.md#fonts-options)
 
-[颜色选项](configuring-pdf-settings.md#color-options)
+   [颜色选项](configuring-pdf-settings.md#color-options)
 
-[高级选项](configuring-pdf-settings.md#advanced-options)
+   [高级选项](configuring-pdf-settings.md#advanced-options)
 
-[标准报告和合规性选项](configuring-pdf-settings.md#standards-reporting-and-compliance-options)
+   [标准报告和合规性选项](configuring-pdf-settings.md#standards-reporting-and-compliance-options)
 
-[初始视图选项](configuring-pdf-settings.md#initial-view-options)
+   [初始视图选项](configuring-pdf-settings.md#initial-view-options)
 
    要转到其他部分，请在网页上单击该部分的链接，或者使用“下一个”和“上一个”按钮。
 
@@ -153,15 +153,15 @@ PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能�
   </tr>
   <tr>
    <td><p>不能包含使用实时透明度效果的图稿。 在转换为PDF 1.3之前，必须拼合任何透明度。</p> </td>
-   <td><p>支持在图稿中使用实时透明度。 (Acrobat Distiller功能会将透明度扁平化。)</p> </td>
-   <td><p>支持在图稿中使用实时透明度。 (Acrobat Distiller功能会将透明度扁平化。)</p> </td>
-   <td><p>支持在图稿中使用实时透明度。 (Acrobat Distiller功能会将透明度扁平化。)</p> </td>
+   <td><p>支持在图稿中使用实时透明度。 （Acrobat Distiller功能会将透明度扁平化。）</p> </td>
+   <td><p>支持在图稿中使用实时透明度。 （Acrobat Distiller功能会将透明度扁平化。）</p> </td>
+   <td><p>支持在图稿中使用实时透明度。 （Acrobat Distiller功能会将透明度扁平化。）</p> </td>
   </tr>
   <tr>
    <td><p>不支持图层。</p> </td>
    <td><p>不支持图层。</p> </td>
-   <td><p>在从支持生成分层PDF文档的应用程序(例如Adobe Illustrator® CS或Adobe InDesign® CS及更高版本)创建PDF文件时，保留层。</p> </td>
-   <td><p>在从支持生成分层PDF文档的应用程序(例如Illustrator CS或InDesign CS及更高版本)创建PDF文件时，保留层。</p> </td>
+   <td><p>在从支持生成分层PDF文档的应用程序（例如Adobe Illustrator® CS或Adobe InDesign® CS及更高版本）创建PDF文件时，保留层。</p> </td>
+   <td><p>在从支持生成分层PDF文档的应用程序（例如Illustrator CS或InDesign CS及更高版本）创建PDF文件时，保留层。</p> </td>
   </tr>
   <tr>
    <td><p>支持使用8种着色剂的DeviceN色彩空间。</p> </td>
@@ -170,7 +170,7 @@ PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能�
    <td><p>支持使用最多31种着色剂的DeviceN色彩空间。</p> </td>
   </tr>
   <tr>
-   <td><p>可以嵌入多字节字体。 (Distiller会在嵌入时转换字体。)</p> </td>
+   <td><p>可以嵌入多字节字体。 （Distiller会在嵌入时转换字体。）</p> </td>
    <td><p>可以嵌入多字节字体。</p> </td>
    <td><p>可以嵌入多字节字体。</p> </td>
    <td><p>可以嵌入多字节字体。</p> </td>
@@ -330,7 +330,7 @@ PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能�
 
 ### Adobe Color设置 {#adobe-color-settings}
 
-**设置文件：**&#x200B;此列表包含主要图形应用程序(如Adobe Photoshop和Adobe Illustrator)中使用的颜色设置列表。 您选择的颜色设置将决定此页面上的其他Adobe颜色设置。 例如，如果选择非“无”设置，则除设备相关数据选项之外的所有选项都将预定义并变暗。 只有在“设置文件”中选择“无”时，才能编辑“颜色管理策略”和“工作区设置”。
+**设置文件：**&#x200B;此列表包含主要图形应用程序（如Adobe Photoshop和Adobe Illustrator）中使用的颜色设置列表。 您选择的颜色设置将决定此页面上的其他Adobe颜色设置。 例如，如果选择非“无”设置，则除设备相关数据选项之外的所有选项都将预定义并变暗。 只有在“设置文件”中选择“无”时，才能编辑“颜色管理策略”和“工作区设置”。
 
 ### 颜色管理策略 {#color-management-policies}
 
@@ -338,9 +338,9 @@ PDF设置可精确确定文件的转换方式及其生成的PDF结构和功能�
 
 **保持颜色不变：**&#x200B;保持与设备相关的颜色不变，并在PDF中保留与设备无关的颜色作为最接近的等效颜色。 此选项对于已校准其所有设备、使用该信息来指定文件中的颜色并仅输出到这些设备的打印店非常有用。
 
-**为色彩管理标记所有内容：**&#x200B;在提取文件并对图像中的颜色进行校正时，嵌入国际颜色联盟配置文件，这样如果您选择了Acrobat 4 (PDF 1.3)或更高版本的兼容性，则生成的PDF文件中的颜色将与设备无关。 但是，文件(RGB、灰度和CMYK)中与设备相关的色彩空间会转换为与设备无关的色彩空间（CalRGB、CalGray和LAB）。
+**为色彩管理标记所有内容：**&#x200B;在提取文件并对图像中的颜色进行校正时，嵌入国际颜色联盟配置文件，这样如果您选择了Acrobat 4 (PDF 1.3)或更高版本的兼容性，则生成的PDF文件中的颜色将与设备无关。 但是，文件（RGB、灰度和CMYK）中与设备相关的色彩空间会转换为与设备无关的色彩空间（CalRGB、CalGray和LAB）。
 
-**仅标记用于色彩管理的图像：**&#x200B;在提取文件时，如果您选择了Acrobat 4 (PDF 1.3)兼容性，则仅将ICC配置文件嵌入图像，而不是文本或图形。 此选项可防止黑色文本发生任何颜色偏移。 但是，图像中的设备相关颜色空间(RGB、灰度和CMYK)会转换为设备无关的颜色空间（CalRGB、CalGray和LAB）。 不转换文本和图形。
+**仅标记用于色彩管理的图像：**&#x200B;在提取文件时，如果您选择了Acrobat 4 (PDF 1.3)兼容性，则仅将ICC配置文件嵌入图像，而不是文本或图形。 此选项可防止黑色文本发生任何颜色偏移。 但是，图像中的设备相关颜色空间（RGB、灰度和CMYK）会转换为设备无关的颜色空间（CalRGB、CalGray和LAB）。 不转换文本和图形。
 
 **将所有颜色转换为sRGB或将所有颜色转换为
 CMYK：**&#x200B;对文件中的颜色进行校准，使颜色独立于设备，类似于“颜色管理”的“标记所有内容”。 如果您选择了Acrobat 4 (PDF 1.3)或更高版本的兼容性并转换为sRGB，则CMYK和RGB图像将转换为sRGB。
@@ -367,7 +367,7 @@ CMYK：**&#x200B;对文件中的颜色进行校准，使颜色独立于设备，
 
 对于“颜色管理策略”下的列表中的所有值（除“保持颜色不变”外），从“工作区”区域的列表中进行选择，以指定哪些ICC配置文件用于定义和校准PDF蒸馏文件中的灰度、RGB和CMYK颜色空间。 提供了以下选项：
 
-**灰度：**&#x200B;定义文件中所有灰度图像的颜色空间。 仅当您选择“标记颜色管理的所有内容”或“仅标记图像”进行颜色管理时，此选项才可用。 灰度图像的默认ICC配置文件为Gray Gamma 2.2。您还可以选择“无”以防止转换灰度图像。
+**灰度：**&#x200B;定义文件中所有灰度图像的颜色空间。 仅当您选择“标记颜色管理的所有内容”或“仅标记图像”进行颜色管理时，此选项才可用。 灰度图像的默认ICC配置文件为Gray Gamma 2.2。 您还可以选择“无”以防止转换灰度图像。
 
 **RGB：**&#x200B;定义文件中所有RGB图像的色彩空间。 通常，默认的sRGB IEC61966-2.1是一个很好的选择，因为它正在成为行业标准，并且许多输出设备都认可它。 您还可以选择“无”来阻止转换RGB图像。
 
@@ -381,11 +381,11 @@ CMYK：**&#x200B;对文件中的颜色进行校准，使颜色独立于设备，
 
 ### 设备相关数据 {#device-dependent-data}
 
-如果您使用使用高端文档和图形应用程序(例如Adobe Illustrator和Adobe InDesign)创建的文档，则这些选项适用。 有关更多信息，请参阅应用程序附带的文档。
+如果您使用使用高端文档和图形应用程序（例如Adobe Illustrator和Adobe InDesign）创建的文档，则这些选项适用。 有关更多信息，请参阅应用程序附带的文档。
 
 传递函数用于艺术效果以及针对特定输出装置的规格进行调整。 例如，用于特定照排机输出的文件可以包含补偿打印机固有的点增益的转移函数。
 
-在“颜色移除和黑色生成”下&#x200B;**保留：**&#x200B;保留这些设置(如果它们存在于PostScript文件中)。 “生成黑色”计算在尝试重现特定颜色时要使用的黑色量。 缺色去除(UCR)可减少青色、洋红色和黄色成分的量，以补偿黑色的生成所增加的黑色量。 由于它使用的油墨较少，所以它通常用于新闻纸和非涂层纸。
+在“颜色移除和黑色生成”下&#x200B;**保留：**&#x200B;保留这些设置（如果它们存在于PostScript文件中）。 “生成黑色”计算在尝试重现特定颜色时要使用的黑色量。 缺色去除(UCR)可减少青色、洋红色和黄色成分的量，以补偿黑色的生成所增加的黑色量。 由于它使用的油墨较少，所以它通常用于新闻纸和非涂层纸。
 
 **找到转移函数时：**&#x200B;确定找到转移函数时执行的操作：
 
@@ -397,31 +397,31 @@ CMYK：**&#x200B;对文件中的颜色进行校准，使颜色独立于设备，
 
 **保留半调信息：**&#x200B;保留文件中的任何半调信息。 半色调信息由控制半色调设备在纸张特定位置存放多少墨水的点组成。 改变点的大小和密度会产生灰度变化或连续颜色变化的假象。 对于CMYK图像，使用四个半色调网屏，每个网屏用于打印过程中使用的墨水。
 
-在传统的印刷制作中，半色调是通过在胶片和图像之间放置半色调网屏，然后曝光胶片来制作的。 电子等效项(如Adobe Photoshop中的等效项)允许用户在生成胶片或纸张输出之前指定半调网屏属性。 半色调信息用于特定的输出设备。
+在传统的印刷制作中，半色调是通过在胶片和图像之间放置半色调网屏，然后曝光胶片来制作的。 电子等效项（如Adobe Photoshop中的等效项）允许用户在生成胶片或纸张输出之前指定半调网屏属性。 半色调信息用于特定的输出设备。
 
 ## 高级选项 {#advanced-options}
 
-高级选项指定要保留在PDF文件中的文档结构约定(DSC)注释，以及如何设置影响PostScript转换的其他选项。 在PostScript文件中，DSC注释包含有关文件的信息（如原始应用程序、创建日期和页面方向）。 它们还为文件中的页面描述提供结构（例如prolog部分的开始和结束语句）。 当文档要打印或按时，DSC注释可能很有用。 有关访问高级选项的说明，请参阅[添加或编辑PDF设置](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
+高级选项指定要保留在PDF文件中的文档结构约定(DSC)注释，以及如何设置影响PostScript转换的其他选项。 在PostScript文件中，DSC注释包含有关文件的信息（如原始应用程序、创建日期和页面方向）。 They also provide structure for page descriptions in the file (such as beginning and ending statements for a prologue section). DSC comments can be useful when your document is going to print or press. For instructions about accessing the Advanced options, see [Add or edit PDF settings](configuring-pdf-settings.md#add-or-edit-pdf-settings).
 
-在使用高级选项时，了解PostScript语言以及如何将其翻译为PDF会很有帮助。 (请参阅[Adobe PostScript 3](https://www.adobe.com/products/postscript/main.html)。)
+When working with the Advanced options, it is helpful to have an understanding of the PostScript language and how it is translated to PDF. (See [Adobe PostScript 3](https://www.adobe.com/products/postscript/main.html).)
 
-**允许PostScript文件覆盖Adobe PDF设置：**&#x200B;使用存储在PostScript文件中的设置，而不是当前的Adobe PDF设置文件。 在处理PostScript文件之前，您可以在文件中放置参数，以控制以下方面：
+**Allow PostScript File to Override Adobe PDF Settings:** Uses settings that are stored in a PostScript file instead of the current Adobe PDF settings file. Before processing a PostScript file, you can place parameters in the file to control the following aspects:
 
-* 文本和图形的压缩
-* 取样图像的缩减取样和编码
-* Type 1字体的嵌入和Type 1多主字体的实例
+* compression of text and graphics
+* downsampling and encoding of sampled images
+* embedding of Type 1 fonts and instances of Type 1 Multiple Master fonts
 
-**允许PostScript XObjects：** PostScript XObjects存储出现在同一文件的多个页面上的信息，如背景图像或页眉和页脚信息。 使用PostScript XObjects可以加快打印速度，但需要更多的打印机内存。 要阻止创建PostScript XObjects，如果您创建的PDF文件具有Acrobat 5 (PDF 1.4)或更高版本兼容性，请取消选择此选项。
+**Allow PostScript XObjects:** PostScript XObjects store information that appears on many pages of the same file, such as a background image or header and footer information. Using PostScript XObjects can result in faster printing but requires more printer memory. To prevent PostScript XObjects from being created, deselect this option if you create PDF files with Acrobat 5 (PDF 1.4) or later compatibility.
 
-**将渐变转换为平滑阴影：**&#x200B;将渐变转换为Acrobat 4及更高版本的平滑阴影，使PDF文件更小，并可能提高最终输出的质量。 PDF Generator可转换Adobe Illustrator、Adobe InDesign、Adobe FreeHand MX、CorelDraw、Quark Xpress和Microsoft PowerPoint中的渐变。
+**Convert Gradients to Smooth Shades:** Converts blends to smooth shades for Acrobat 4 and later, making PDF files smaller and potentially improving the quality of final output. PDF Generator converts gradients from Adobe Illustrator, Adobe InDesign, Adobe FreeHand MX, CorelDraw, Quark Xpress, and Microsoft PowerPoint.
 
-**将平滑线条转换为曲线：**&#x200B;减少在CAD绘图中构建曲线时所使用的控制点数量，从而使PDF更小，屏幕渲染速度更快。
+**Convert Smooth Lines to Curves:** Reduces the amount of control points used to build curves in CAD drawings, which results in smaller PDFs and faster onscreen rendering.
 
-**保留2级Copypage语义：**&#x200B;使用LanguageLevel 2 PostScript中定义的Copypage运算符，而不是LanguageLevel 3 PostScript中定义的运算符。 如果您有PostScript文件并且选择了此选项，则copypage运算符会复制页面。 如果未选择此选项，则执行等效的showpage操作，但图形状态不会重新初始化。
+**Preserve Level 2 Copypage Semantics:** Uses the copypage operator that is defined in LanguageLevel 2 PostScript instead of in LanguageLevel 3 PostScript. If you have a PostScript file and select this option, a copypage operator copies the page. If this option is not selected, the equivalent of a showpage operation is executed, but the graphics state is not reinitialized.
 
-**保留叠印设置：**&#x200B;在要转换为PDF的文件中保留任何叠印设置。 叠印的颜色是两个或多个相互叠印的油墨。 例如，当青色油墨印刷在黄色油墨上时，得到的叠印为绿色。 如果没有叠印，则不会打印下面的黄色，从而导致青色颜色。
+**Preserve Overprint Settings:** Retains any overprint settings in files being converted to PDF. Overprinted colors are two or more inks printed on top of each other. For example, when a cyan ink prints over a yellow ink, the resultant overprint is a green color. Without overprinting, the underlying yellow would not be printed, resulting in a cyan color.
 
-**叠印默认值为非零叠印：**&#x200B;防止CMYK值为零的叠印对象挖空它们下面的CMYK对象。 只要存在Setoverprint运算符，就可以将OPM 1图形状态参数插入到PDF文件中。
+**Overprinting Default Is Nonzero Overprinting:** Prevents overprinted objects with zero CMYK values from knocking out CMYK objects that are underneath them. This effect is accomplished by inserting the OPM 1 graphics state parameter into the PDF file wherever the Setoverprint operator is present.
 
 **将Adobe PDF设置保存在PDF文件中：**&#x200B;嵌入用于创建PDF文件的设置文件。 您可以在Acrobat的“文件附件”对话框中打开并查看设置文件（文件扩展名为.joboptions）。 Adobe PDF设置文件将成为PDF文件中EmbeddedFiles树中的一个项目。
 
@@ -471,7 +471,7 @@ PDF Generator可以检查PostScript文件中的文档内容，确保在创建PDF
 
 **继续：**&#x200B;创建PDF文件。
 
-**取消作业：**&#x200B;仅当PDF文件满足所选报表选项的PDF/X要求并且在其他方面有效时，才创建PostScript文件。 如果同时选择了PDF/X报表选项并且PostScript文件仅满足一组PDF/X标准(例如PDF/X-3)，则PDF Generator将创建兼容的文件。
+**取消作业：**&#x200B;仅当PDF文件满足所选报表选项的PDF/X要求并且在其他方面有效时，才创建PostScript文件。 如果同时选择了PDF/X报表选项并且PostScript文件仅满足一组PDF/X标准（例如PDF/X-3），则PDF Generator将创建兼容的文件。
 
 **如果未指定TrimBox或ArtBox：**&#x200B;当标准报告和合规性页面上的合规性标准设置为“无”以外的选项时可用。
 

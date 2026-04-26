@@ -1,5 +1,5 @@
 ---
-title: 控制对受策略保护文档的访问
+title: 控制对受策略保护的文档的访问
 description: 了解如何查看、管理和控制对受策略保护文档的访问。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 553c0a95-26e9-4d2c-b53d-846861c6a1d7
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2167'
+source-wordcount: '2196'
 ht-degree: 0%
 
 ---
 
-# 控制对受策略保护文档的访问 {#controlling-access-to-policy-protected-documents}
+# 控制对受策略保护的文档的访问 {#controlling-access-to-policy-protected-documents}
 
 您可以控制收件人使用受策略保护文档的方式，而不管文档分发的范围如何。
 
@@ -123,40 +123,40 @@ ht-degree: 0%
 
 用户、策略集协调员和管理员可以切换应用于受策略保护文档的策略（您一次只能对文档应用一个策略）。 如果用户创建了策略，或者该策略是启用了此功能的共享策略，则用户可以切换应用于自己受策略保护的文档的策略。 否则，管理员或策略集协调员必须切换策略。 管理员可以为任何用户的受策略保护文档切换策略。 策略集协调员可以从其策略集中切换策略。
 
-切换策略时，新策略将按如下方式强制执行：
+When you switch a policy, the new policy is enforced as follows:
 
-* 如果文档在线并已关闭，则下次收件人通过在线打开任何受策略保护的文档与Document Security同步时，更改将生效。
-* 如果文档在线且处于打开状态，则更改将在用户关闭文档时生效。
-* 如果文档处于离线状态（在使用中时没有活动的Internet或网络连接，例如在笔记本电脑上），则下次用户通过在线打开受策略保护的文档与Document Security同步时，将应用更改。
+* If the document is online and closed, the change takes effect the next time the recipient synchronizes with document security by opening any policy-protected document online.
+* If document is online and open, the change takes effect when the user closes the document.
+* If the document is offline (in use without an active Internet or network connection, such as on a laptop), the change is applied the next time the user synchronizes with document security by opening a policy-protected document online.
 
 >[!NOTE]
 >
->要允许对当前没有此访问权限的受策略保护文档进行匿名访问，请删除客户端应用程序中的现有策略，然后应用允许匿名访问的策略。 如果切换策略，用户仍必须登录才能访问该文档。
+>To permit anonymous access to a policy-protected document that currently does not have this access, remove the existing policy in the client application and then apply a policy that permits anonymous access. If you switch the policy, users still must log in to access the document.
 
 1. 在Document Security页面上，单击“文档”。
 1. 在文档列表中，单击相应的文档。
-1. 单击“Switch Policy（切换策略）”。 此时将显示一个最多包含100个策略的列表。
-1. 如果未显示所需的策略，请从“查找”列表中选择“策略名称”或“策略ID”，键入名称或ID，然后单击“查找”。
-1. 单击列表中的新策略。
-1. 单击“切换策略”，然后单击“确定”返回“文档”页。
+1. Click Switch Policy. A list of up to 100 policies appears.
+1. If the policy you want is not displayed, select Policy Name or Policy ID from the Find list, type the name or ID, and click Find.
+1. Click a new policy in the list.
+1. Click Switch Policy, and then click OK to return to the Documents page.
 
-## 搜索文档 {#search-for-a-document}
+## Search for a document {#search-for-a-document}
 
-您可以使用列表中提供的日期范围标准和搜索条件的组合在“文档”页面上搜索文档。 这些标准包括文档名称、策略名称或所有文档。
+You can search for documents on the Documents page by using a combination of date range criteria and the search criteria that are available in the list. These criteria include the document name, policy name, or all documents.
 
-一些其他搜索选项仅供管理员使用：
+Some additional search options are only available to administrators:
 
-**文档ID：**&#x200B;应用策略时Document Security分配给文档的唯一ID号。
+**Document ID:** Unique ID number that document security assigns to the document when the policy is applied.
 
-**文档名称：**&#x200B;文档的名称。
+**Document name:** Name of the document.
 
-**发布者姓名：**&#x200B;将策略附加到文档的用户姓名。 您可以从所有域或指定域中选择用户。
+**Publisher name:** Name of the user who attached the policy to the document. You can select the user from all domains or a specified domain.
 
-**策略ID：**&#x200B;附加到文档的策略的ID号。
+**Policy ID:** ID number of the policy that is attached to the document.
 
-**策略名称：**&#x200B;附加到文档的策略的名称。
+**Policy name:** Name of the policy that is attached to the document.
 
-**所有文档：**&#x200B;所有受管理员和用户保护的文档。 使用“所有文档”选项进行搜索可能会返回一长串文档。
+**All documents:** All documents protected by administrators and users. Using the All Documents option to search may return a long list of documents.
 
 1. 在Document Security页面上，单击“文档”。
 1. 在“查找”列表中，选择所需的搜索条件。
@@ -203,6 +203,6 @@ ht-degree: 0%
 
 使用以下Document Security API：
 
-**protectDocumentWithCoverPage：**&#x200B;使用指定的策略保护给定PDF的安全，并返回包含封面页和受保护文档的文档作为附件
-`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：**&#x200B;提取作为封面页文档附件的受保护文档。 可以使用protectDocumentWithCoverPage方法创建具有封面页的文档
+**protectDocumentWithCoverPage：**使用指定的策略保护给定PDF的安全，并返回包含封面页和受保护文档的文档作为附件
+`//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument：**提取作为封面页文档附件的受保护文档。 可以使用protectDocumentWithCoverPage方法创建具有封面页的文档
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

@@ -1,5 +1,5 @@
 ---
-title: 使用CRX2Oak迁移工具
+title: 使用 CRX2Oak 迁移工具
 description: 了解如何将CRX2Oak迁移工具与Adobe Experience Manager结合使用。 该工具旨在帮助您在不同的存储库之间迁移数据。
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
@@ -7,14 +7,14 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 542967b2-e2cf-40d1-a805-456dc6e671a9
-source-git-commit: e13340d0ab84d68a2e7c676787909380d2f516a0
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 0%
+source-wordcount: '1217'
+ht-degree: 1%
 
 ---
 
-# 使用CRX2Oak迁移工具{#using-the-crx-oak-migration-tool}
+# 使用 CRX2Oak 迁移工具{#using-the-crx-oak-migration-tool}
 
 ## 简介 {#introduction}
 
@@ -43,7 +43,7 @@ CRX2Oak是一种用于在不同存储库之间迁移数据的工具。
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-## 功能 {#features}
+## 特性 {#features}
 
 CRX升级期间以某种方式调用AEM2Oak，即用户可以指定预定义的迁移配置文件，以自动重新配置持久性模式。 这称为快速启动模式。
 
@@ -142,7 +142,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
 * `--fail-on-error`：如果无法从源存储库读取节点，强制迁移失败。
 * `--ldap`：将LDAP用户从CQ 5.x实例迁移到基于Oak的实例。 要使此功能正常工作，必须将Oak配置中的身份提供程序命名为ldap。 有关详细信息，请参阅[LDAP文档](/help/sites-administering/ldap-config.md)。
 
-* `--ldap-config:`将此项与使用多个LDAP服务器进行身份验证的CQ 5.x存储库的`--ldap`参数一起使用。 您可以使用它指向CQ 5.x `ldap_login.conf`或`jaas.conf`配置文件。 格式为`--ldapconfig=path/to/ldap_login.conf`。
+* `--ldap-config:`将此项与使用多个LDAP服务器进行身份验证的CQ 5.x存储库的`--ldap`参数一起使用。 您可以使用它指向CQ 5.x `ldap_login.conf`或`jaas.conf`配置文件。 格式为 `--ldapconfig=path/to/ldap_login.conf`。
 
 ### 版本存储选项 {#version-store-options}
 
@@ -192,7 +192,7 @@ CRX2Oak的开源版本以oak-upgrade的形式提供。 它支持所有功能，�
   </tr>
   <tr>
    <td>快速入门模式</td>
-   <td>运行CRX2Oak时，可以将<strong>(日志级TRACE</strong>或<strong>)日志级DEBUG </strong>选项添加到命令行。 在此模式下，日志会自动重定向到<strong>upgrade.log文件</strong>。</td>
+   <td>运行CRX2Oak时，可以将<strong>（日志级TRACE</strong>或<strong>）日志级DEBUG </strong>选项添加到命令行。 在此模式下，日志会自动重定向到<strong>upgrade.log文件</strong>。</td>
   </tr>
   <tr>
    <td>独立模式</td>

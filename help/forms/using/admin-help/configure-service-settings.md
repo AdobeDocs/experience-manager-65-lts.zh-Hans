@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a2586a1e-0e7f-4ea4-87ec-fbd82df3ec4c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '10836'
-ht-degree: 0%
+source-wordcount: '10923'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ## 审核工作流服务设置 {#audit-workflow-service-settings}
 
-Workbench提供了在运行时记录进程实例并播放它们以观察进程行为的功能。 （请参阅[Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_63)。）要节省Forms Server文件系统的空间，您可以限制存储的进程记录数据量。 您可以配置审计工作流服务( `AuditWorkflowService`)的以下属性：
+Workbench提供了在运行时记录进程实例并播放它们以观察进程行为的功能。 （请参阅[工作台帮助](https://www.adobe.com/go/learn_aemforms_workbench_63)。） 为了节省Forms Server文件系统的空间，您可以限制存储的进程记录数据量。 您可以配置审计工作流服务( `AuditWorkflowService`)的以下属性：
 
 **maxNumberOfRecordingInstances：**&#x200B;存储的最大录制数。 当存储最大记录数时，最旧的记录将在创建新记录时从文件系统中删除。 如果您倾向于创建多个录制，并且希望自动删除旧录制，则此属性非常有用。 默认值为 50。
 
@@ -52,7 +52,7 @@ Workbench提供了在运行时记录进程实例并播放它们以观察进程�
 
 ## 条形码表单服务设置 {#barcoded-forms-service-settings}
 
-条形码表单服务`(BarcodedFormsService)`从扫描的图像中提取条形码数据。 该服务接受条形码表单(TIFF或PDF)作为输入，并提取由条形码编码的数据的机器表示形式。
+条形码表单服务`(BarcodedFormsService)`从扫描的图像中提取条形码数据。 该服务接受条形码表单（TIFF或PDF）作为输入，并提取由条形码编码的数据的机器表示形式。
 
 条形码表单服务可使用以下设置。
 
@@ -76,11 +76,11 @@ Workbench提供了在运行时记录进程实例并播放它们以观察进程�
 
 中央迁移Bridge服务(`CentralMigrationBridge`)调用Adobe Central Pro Output Server (Central)功能的子集，该功能包括JFMERGE、JFTRANS和XMLIMPORT命令。 集中迁移Bridge服务操作允许您在AEM表单中重用以下中心资源：
 
-* 模板设计(&amp;amp；ast；.ifd)
-* 输出模板(&amp;amp；ast；.mdf)
-* 数据文件（&amp;amp；ast；.dat文件）
-* 报头文件（&amp;amp；ast；.pre文件）
-* 数据定义文件(&amp;amp；ast；.tdf)
+* 模板设计(&amp;ast；.ifd)
+* 输出模板(&amp;ast；.mdf)
+* 数据文件（&amp;ast；.dat文件）
+* 报头文件（&amp;ast；.pre文件）
+* 数据定义文件(&amp;ast；.tdf)
 
 以下设置适用于中央迁移Bridge服务。
 
@@ -116,7 +116,7 @@ IBM FileNet的Content Repository Connector允许您创建与存储在IBM FileNet
 
 ## 转换PDF服务设置 {#convert-pdf-service-settings}
 
-转换PDF服务(`ConvertPdfService`)将PDF文档转换为PostScript和多种图像格式(JPEG、JPEG 2000、PNG和TIFF)。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
+转换PDF服务(`ConvertPdfService`)将PDF文档转换为PostScript和多种图像格式（JPEG、JPEG 2000、PNG和TIFF）。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
 
 以下设置适用于转换PDF服务。
 
@@ -164,7 +164,7 @@ Distiller服务(`DistillerService`)通过网络将PostScript、封装的PostScri
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
+>® LiveCycle® Content Services ES（已弃用）是随LiveCycle一起安装的内容管理系统。 它使用户能够设计、管理、监控和优化以人为中心的流程。 Content Services（已弃用）支持于2014年12月31日终止。 请参阅[Adobe产品生命周期文档](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)。
 
 文档管理服务(`DocumentManagementService`)允许进程使用内容服务提供的内容管理功能（已弃用）。 文档管理操作提供了在内容管理系统中维护空间和内容所需的基本任务。 此类任务的示例包括复制、删除、移动、检索和存储内容、创建空间和关联，以及获取和设置内容属性。
 
@@ -422,7 +422,7 @@ LDAP服务(`LDAPService`)提供查询LDAP目录的操作。 LDAP目录通常用�
 
 ## Microsoft SharePoint配置服务设置 {#microsoft-sharepoint-configuration-service-settings}
 
-Microsoft SharePoint配置服务`(MSSharePointConfigService)`允许您为具有模拟权限的AEM表单用户指定凭据。 有关模拟权限的信息，请参阅[配置Microsoft SharePoint的连接器](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html)。
+Microsoft SharePoint配置服务`(MSSharePointConfigService)`允许您为具有模拟权限的AEM表单用户指定凭据。 有关模拟权限的信息，请参阅[配置Microsoft SharePoint的连接器](https://help.adobe.com/zh_CN/AEMForms/6.1/SharePointConfig/index.html)。
 
 Microsoft SharePoint配置服务有以下设置可用：
 
@@ -528,7 +528,7 @@ PDFG清理扫描秒数的默认值为`43200`（12小时）。 作业过期秒数
 
 ## 远程服务设置 {#remoting-service-settings}
 
-大多数服务都已配置，因此您可以通过AEM Forms远程访问它们(AEM Forms已弃用)。 有关(已为AEM表单弃用)AEM表单远程处理的信息，请参阅[使用AEM表单编程](https://adobe.com/go/learn_aemforms_programming_63)。
+大多数服务都已配置，因此您可以通过AEM Forms远程访问它们（AEM Forms已弃用）。 有关（已为AEM表单弃用）AEM表单远程处理的信息，请参阅[使用AEM表单编程](https://adobe.com/go/learn_aemforms_programming_63)。
 
 以下设置适用于远程服务。
 
@@ -538,55 +538,55 @@ PDFG清理扫描秒数的默认值为`43200`（12小时）。 作业过期秒数
 
 ## 存储库服务设置 {#repository-service-settings}
 
-存储库服务(`RepositoryService`)为AEM表单提供资源存储和管理服务。 当开发人员创建应用程序时，他们可以在存储库中部署资产，而不是在文件系统上部署资产。 资源可以包括任何类型的宣传资料，包括XML表单、PDF forms(包括Acrobat表单)、表单片段、图像、配置文件、策略、SWF文件、DDX文件、XML架构、WSDL文件和测试数据。
+存储库服务(`RepositoryService`)为AEM表单提供资源存储和管理服务。 当开发人员创建应用程序时，他们可以在存储库中部署资产，而不是在文件系统上部署资产。 资源可以包括任何类型的宣传资料，包括XML表单、PDF forms（包括Acrobat表单）、表单片段、图像、配置文件、策略、SWF文件、DDX文件、XML架构、WSDL文件和测试数据。
 
-您可以使用AEM表单中包含的默认存储库，也可以使用第三方存储库( EMC Documentum Content Server 、 IBM FileNet Content Manager或IBM Content Manager )。
+You can use the default repository included with AEM forms, or use a third-party repository (EMC Documentum Content Server, IBM FileNet Content Manager, or IBM Content Manager).
 
-存储库提供方服务是一个服务委托，充当提供方服务的接口。 这样，您就可以连接到公共API，而不必知道哪个提供商服务正在实施存储功能。 存储库提供程序服务提供存储库服务资源的数据库存储。
+Repository Provider service is a service delegate that acts as the interface to a provider service. This lets you connect to a common API and not have to be aware of which provider service is implementing the storage capabilities. Repository Provider service provides database storage for the Repository service resources.
 
-以下设置适用于存储库服务。
+The following setting is available for the Repository service.
 
-**提供程序服务：**&#x200B;用作存储提供程序的服务的名称。 默认值为RepositoryProviderService。
+**Provider Service:** The name of the service that is used as the storage provider. The default value is RepositoryProviderService.
 
-## 签名服务设置 {#signature-service-settings}
+## Signature service settings {#signature-service-settings}
 
-签名服务(`SignatureService`)使您的组织能够保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证，确保文档不被更改。 更改文档会破坏其签名。 由于安全功能应用于文档本身，所以文档在其整个生命周期内都保持安全和受控制；在防火墙之外，当文档离线下载时，以及当它提交回您的组织时。
+The Signature service ( `SignatureService`) enables your organization to protect the security and privacy of Adobe PDF documents that it distributes and receives. This service uses digital signatures and certification to ensure that documents are not altered. Altering a document breaks its signature. Because security features are applied to the document itself, the document remains secure and controlled for its entire life cycle; beyond the firewall, when it is downloaded offline, and when it is submitted back to your organization.
 
-以下设置可用于签名服务。
+The following settings are available for the Signature service.
 
-**远程HSM SPI服务的名称：**&#x200B;此选项适用于在远程计算机上安装HSM的情况。 在64位Windows上安装AEM表单且使用HSM设备进行签名时，请指定此选项。
+**Name Of The Remote HSM SPI Service:** This option is for use when the HSM is installed on a remote computer. Specify this option when AEM forms is installed on a 64-bit Windows and you are using HSM devices for signing.
 
-**远程HSM Web服务的URL：**&#x200B;在64位Windows上安装AEM表单且使用HSM设备进行签名时，请指定此选项。
+**URL Of The Remote HSM Web Service:** Specify this option when AEM forms is installed on 64-bit Windows and you are using HSM devices for signing.
 
-**包含表单加载更改的认证：**&#x200B;选择此选项时，除了XFA模板之外，还会对XFA表单状态进行认证。 请注意，启用此选项可能会对性能产生负面影响。 默认值为true。
+**Certification To Include Form Load Changes:** When this option is selected, the XFA Form State is certified in addition to the XFA template. Note that enabling this option may have a negative impact on performance. The default value is true.
 
-**执行Document JavaScript脚本：**&#x200B;指定是否在签名操作期间执行Document JavaScript脚本。 默认值为false。
+**Execute Document JavaScript scripts:** Specifies whether to execute Document JavaScript scripts during signature operations. 默认值为false。
 
-**处理与Acrobat 9兼容的文档：**&#x200B;指定是否启用Acrobat 9兼容性。 例如，选中此选项后，动态PDF中的可见认证即会启用。 默认值为false。
+**Process documents with Acrobat 9 compatibility:** Specifies whether to enable Acrobat 9 compatibility. For example, when this option is selected, Visible Certification in Dynamic PDFs is enabled. 默认值为false。
 
-**签名时嵌入吊销信息：**&#x200B;指定签名PDF文档时是否嵌入吊销信息。 默认值为false。
+**Embed Revocation Info While Signing:** Specifies whether revocation information is embedded while signing the PDF document. 默认值为false。
 
-**认证时嵌入吊销信息：**&#x200B;指定认证PDF文档时是否嵌入吊销信息。 默认值为false。
+**Embed Revocation Info While Certifying:** Specifies whether the revocation information is embedded while certifying the PDF document. 默认值为false。
 
-**强制嵌入所有证书的吊销信息
-在签名/证书期间：**&#x200B;指定如果未嵌入所有证书的有效吊销信息，则签名或证书操作是否失败。 请注意，如果证书不包含任何CRL或OCSP信息，则即使未检索到任何吊销信息，该证书也被视为有效。 默认值为false。
+**Enforce Embedding of Revocation Info For All Certificates
+During Signing/Certification:** Specifies whether a signing or certification operation fails if valid revocation information for all certificates is not embedded. Note that if a certificate does not contain any CRL or OCSP information, it is considered valid, even if no revocation information is retrieved. 默认值为false。
 
-**吊销检查顺序：**&#x200B;指定通过证书吊销列表(CRL)和联机证书状态协议(OCSP)机制进行检查时吊销检查的顺序。 默认值为OCSPFirst。
+**Revocation Check Order:** Specifies the order of revocation checking when checking is possible through both Certificate Revocation List (CRL) and Online Certificate Status Protocol (OCSP) mechanisms. The default value is OCSPFirst.
 
-**吊销存档信息的最大大小：**&#x200B;吊销存档信息的最大大小（以KB为单位）。 AEM forms会尝试在不超出限制的情况下存储尽可能多的吊销信息。 默认值为10 KB。
+**Maximum Size Of Revocation Archival Info:** The maximum size of the revocation archival info in kilobytes. AEM forms attempts to store as much revocation information as possible without exceeding the limit. The default value is 10 KB.
 
-**支持从预发行版本创建的签名
-Adobe产品：**&#x200B;选择此选项时，使用Adobe产品的预发行版本创建的签名将正确验证。 默认值为false。
+**Support Signatures Created From PreRelease Builds Of
+Adobe Products:** When this option is selected, signature created using pre-release version of Adobe products will validate correctly. 默认值为false。
 
-**验证时间选项：**&#x200B;指定签名者证书的验证时间。 默认值为Secure Time Else Current Time。
+**Verification Time Option:** Specifies the time of verification of a signer&#39;s certificate. The default value is Secure Time Else Current Time.
 
-**使用签名中存档的吊销信息期间
-验证：**&#x200B;指定使用签名存档的吊销信息是否用于吊销检查。 默认值为true。
+**Use Revocation Information Archived in Signature during
+Validation:** Specifies whether the revocation information that is archived with the signature is used for revocation checking. The default value is true.
 
-**使用文档中存储的验证信息
-签名验证：**&#x200B;选择此选项时，将使用文档中嵌入的验证信息（包括吊销和时间戳信息）来验证签名。 默认值为true。
+**Use Validation Information Stored In The Document For
+Validation Of Signatures:** When this option is selected, validation information (including revocation and timestamp information) embedded in the doument is used to validate signatures. The default value is true.
 
-**允许的最大嵌套验证会话数：**&#x200B;允许的最大嵌套验证会话数。 在未正确设置OCSP或CRL证书时，AEM Forms在验证OCSP或CRL签名者证书时使用此值防止无限循环。 默认值为 10。
+**Maximum Nested Verification Sessions Allowed:** The maximum number of nested verification sessions that are allowed. AEM forms uses this value to prevent an infinite loop when verifying the OCSP or CRL signer certificates when the OCSP or CRL certificate is not set up correctly. 默认值为 10。
 
 **验证的最大时钟偏差：**&#x200B;签名时间在验证时间之后的最长时间（以分钟为单位）。 如果时钟偏差大于此值，则签名将无效。 默认值为65分钟。
 
@@ -654,7 +654,7 @@ CRL查找的&#x200B;**本地URI：**&#x200B;本地CRL提供程序的URL。 仅�
 
 **吊销检查样式：**&#x200B;指定吊销检查样式，该样式用于根据观察到的吊销状态确定CRL提供程序的证书的信任状态。 默认值为BestEffort。
 
-**用于CRL查找的LDAP服务器：**&#x200B;用于获取CRL的LDAP服务器(如www.ldap.com)。 所有基于DN的CRL查询都将定向到此服务器。 无默认值。
+**用于CRL查找的LDAP服务器：**&#x200B;用于获取CRL的LDAP服务器（如www.ldap.com）。 所有基于DN的CRL查询都将定向到此服务器。 无默认值。
 
 **联机：**&#x200B;指定是否联机以获取CRL。 如果为false，则仅查看缓存的CRL（在本地磁盘上或嵌入签名的CRL）。 默认值为true。
 
@@ -698,7 +698,7 @@ CRL查找的&#x200B;**本地URI：**&#x200B;本地CRL提供程序的URL。 仅�
 
 ## 观察文件夹服务设置 {#watched-folder-service-settings}
 
-Watched文件夹服务(`WatchedFolder`)配置所有观察文件夹端点通用的属性。 它还提供监视文件夹端点的默认值。 （请参阅[配置观察文件夹端点](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)。）它不是由外部客户端应用程序调用的，也不是在Workbench中创建的进程中使用的。
+Watched文件夹服务(`WatchedFolder`)配置所有观察文件夹端点通用的属性。 它还提供监视文件夹端点的默认值。 （请参阅[配置观察文件夹端点](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints)。） 它不会被外部客户端应用程序调用，也不会在Workbench中创建的进程中使用。
 
 以下设置可用于Watched Folder服务。
 
@@ -706,7 +706,7 @@ Watched文件夹服务(`WatchedFolder`)配置所有观察文件夹端点通用�
 
 **重复计数：**&#x200B;轮询输入目录的次数。 如果未在终结点配置中指定此值，则使用默认重复计数。 值为–1表示无限扫描目录。 默认值为 -1。
 
-**重复间隔：**&#x200B;每个轮询之间的默认间隔秒数。 除非在观察文件夹终结点配置中指定了不同的值，否则此值将用作重复间隔。 默认值为 5。有关其他信息，请参阅批量大小设置的说明。
+**重复间隔：**&#x200B;每个轮询之间的默认间隔秒数。 除非在观察文件夹终结点配置中指定了不同的值，否则此值将用作重复间隔。 默认值为 5。 有关其他信息，请参阅批量大小设置的说明。
 
 **异步：**&#x200B;将调用类型标识为异步或同步。 瞬态和同步进程只能同步调用。 默认值为asynchronous。
 

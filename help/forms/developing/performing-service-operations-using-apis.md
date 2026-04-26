@@ -1,5 +1,5 @@
 ---
-title: 使用API执行服务操作
+title: 使用 API 执行服务操作
 description: 使用AEM Forms API开发客户端应用程序。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 28a47c2d-5f2d-49c1-8890-512e2873ec29
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
-# 使用API执行服务操作 {#performing-service-operations-using-apis}
+# 使用 API 执行服务操作 {#performing-service-operations-using-apis}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 

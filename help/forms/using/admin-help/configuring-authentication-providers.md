@@ -11,9 +11,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 14f006f8-8751-4713-ba5a-590ce479fbb4
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1614'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 0%
 
 ### 为域启用及时资源调配 {#enable-just-in-time-provisioning-for-a-domain}
 
-1. 编写实现IdentityCreator和AssignmentProvider接口的服务容器。 (请参阅[使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63)。)
+1. 编写实现IdentityCreator和AssignmentProvider接口的服务容器。 （请参阅[使用AEM表单编程](https://www.adobe.com/go/learn_aemforms_programming_63)。）
 1. 将服务容器部署到Forms服务器。
 1. 在管理控制台中，单击设置>用户管理>域管理。
 

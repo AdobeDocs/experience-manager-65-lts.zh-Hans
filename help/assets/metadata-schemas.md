@@ -7,10 +7,10 @@ feature: Metadata
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: bf5c2dff-db68-4e82-8217-ff35069dcb81
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '3607'
-ht-degree: 7%
+source-wordcount: '3651'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 | 版本 | 文章链接 |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=zh-Hans) |
+| AEM as a Cloud Service | [单击此处](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/metadata-schemas.html?lang=en) |
 | AEM 6.5 | 本文 |
 
 组织可以提供一个元数据模型，用于增强资产发现、使用、互操作性等。 正确的元数据应用程序对于维护元数据驱动的工作流程和流程至关重要。 要遵循组织范围的元数据策略和标准，您可以使用帮助DAM用户一致的元数据架构。 [!DNL Adobe Experience Manager]允许使用简单灵活的方法创建、维护和应用元数据架构。
@@ -50,7 +50,7 @@ ht-degree: 7%
 | [!UICONTROL 默认值] | | 资源的基本元数据架构表单。 |
 | | 以下子表单继承[!UICONTROL 默认]表单的属性： | |
 | | <ul><li>[!UICONTROL dm_video]</li></ul> | Dynamic Media视频的架构表单。 |
-| | <ul><li>[!UICONTROL 图像]</li></ul> | 具有MIME类型（如`image/jpeg`和`image/png`）的图像的架构表单。 <br> [!UICONTROL 图像]表单具有以下子表单模板： <ul><li> [!UICONTROL jpeg]：子类型为[!UICONTROL jpeg]的资产的架构表单。</li> <li>[!UICONTROL tiff]：具有子类型TIFF的资源的架构表单。</li></ul> |
+| | <ul><li>[!UICONTROL 图像]</li></ul> | 具有MIME类型（如`image/jpeg`和`image/png`）的图像的架构表单。<br> [!UICONTROL 图像]表单具有以下子表单模板： <ul><li> [!UICONTROL jpeg]：子类型为[!UICONTROL jpeg]的资产的架构表单。</li> <li>[!UICONTROL tiff]：具有子类型TIFF的资源的架构表单。</li></ul> |
 | | <ul><li>[!UICONTROL 应用程序]</li></ul> | MIME类型资产（如`application/pdf`和`application/zip`）的架构表单。 <br>[!UICONTROL pdf]：具有子类型PDF的资源架构表单。 |
 | | <ul><li>[!UICONTROL 视频]</li></ul> | 具有MIME类型（如`video/avi`和`video/mp4`）的视频资产的架构表单。 |
 | [!UICONTROL 收藏集] | | 收藏集的架构表单。 |
@@ -135,7 +135,7 @@ ht-degree: 7%
 >
 >[!UICONTROL 隐藏字段]组件不包含这些属性。 相反，它包括属性，如属性“名称”、“值”、“字段标签”和“描述”。 每当保存资产时，隐藏字段组件的值都会作为POST参数发送。 它不会另存为资源的元数据。
 
-如果选择&#x200B;**[!UICONTROL 必需]**&#x200B;选项，则可以搜索缺少必需元数据的资产。从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，展开&#x200B;**[!UICONTROL 元数据验证]**&#x200B;谓词，然后选择&#x200B;**[!UICONTROL 无效]**&#x200B;选项。搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
+如果选择&#x200B;**[!UICONTROL 必需]**&#x200B;选项，则可以搜索缺少必需元数据的资产。 从&#x200B;**[!UICONTROL 过滤器]**&#x200B;面板中，展开&#x200B;**[!UICONTROL 元数据验证]**&#x200B;谓词，然后选择&#x200B;**[!UICONTROL 无效]**&#x200B;选项。 搜索结果中显示的资产缺少您通过架构表单配置的必需元数据。
 
 在筛选器面板的元数据验证谓词中选择![选项](assets/invalid-metadata-predicate.png)
 
@@ -151,11 +151,11 @@ ht-degree: 7%
 
 ### 在JSON文件中指定属性 {#specify-properties-in-json-file}
 
-您还可以通过指定相应的键值对在 JSON 文件中定义选项，而不是为&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中的选项指定属性。在 **[!UICONTROL JSON 路径]**&#x200B;字段中指定 JSON 文件的路径。
+您还可以通过指定相应的键值对在 JSON 文件中定义选项，而不是为&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡中的选项指定属性。 在 **[!UICONTROL JSON 路径]**&#x200B;字段中指定 JSON 文件的路径。
 
 #### 在架构表单中添加或删除选项卡 {#adding-deleting-a-tab-in-the-schema-form}
 
-通过架构编辑器，可以添加或删除选项卡。默认架构表单包括&#x200B;**[!UICONTROL Basic]**、**[!UICONTROL Advanced]**、**[!UICONTROL IPTC]**&#x200B;和&#x200B;**[!UICONTROL IPTC扩展]**&#x200B;选项卡。
+通过架构编辑器，可以添加或删除选项卡。 默认架构表单包括&#x200B;**[!UICONTROL Basic]**、**[!UICONTROL Advanced]**、**[!UICONTROL IPTC]**&#x200B;和&#x200B;**[!UICONTROL IPTC扩展]**&#x200B;选项卡。
 
 单击`+`在架构表单上添加选项卡。 默认情况下，新选项卡的名称为`Unnamed-1`。 您可以从&#x200B;**[!UICONTROL 设置]**&#x200B;选项卡修改名称。 单击`X`可删除选项卡。
 
@@ -232,7 +232,7 @@ ht-degree: 7%
 
    ![select_dependentfield](assets/select_dependentfield.png)
 
-1. 在&#x200B;**[!UICONTROL 要求]**&#x200B;下，根据新规则&#x200B;**[!UICONTROL 选项选择]**&#x200B;必需。
+1. 在&#x200B;**[!UICONTROL 要求]**&#x200B;下，根据新规则&#x200B;]**选项选择**[!UICONTROL &#x200B;必需。
 1. 单击&#x200B;**[!UICONTROL 添加规则]**&#x200B;并选择&#x200B;**[!UICONTROL 资产类型]**&#x200B;字段以创建依赖关系。 还可以选择创建依赖关系时所依据的字段值。 在这种情况下，请选择“ **[!UICONTROL 视频]**”。 单击&#x200B;**[!UICONTROL 完成]**&#x200B;以保存更改。
 
    ![define_rule](assets/define_rule.png)
@@ -257,7 +257,7 @@ ht-degree: 7%
 
 1. 同样，在资产类型字段中的值Video与其他字段（例如，编解码器和持续时间）之间创建依赖关系。
 1. 重复这些步骤以在[!UICONTROL Asset Type]字段和[!UICONTROL Page Count]和[!UICONTROL Author]等字段中的文档资源（PDF和Word）之间创建依赖关系。
-1. 单击&#x200B;**[!UICONTROL 保存]**。将元数据架构应用到文件夹。
+1. 单击&#x200B;**[!UICONTROL 保存]**。 将元数据架构应用到文件夹。
 
 1. 导航到将元数据架构应用到的文件夹，然后打开资源的属性页面。 根据您在“资产类型”字段中的选择，将显示相关的级联元数据字段。
 
@@ -290,7 +290,7 @@ ht-degree: 7%
 
 #### 为各种MIME类型使用现有架构模板 {#use-an-existing-schema-template-for-various-mime-types}
 
-您可以为其他MIME类型使用现有模板。 例如，对MIME类型`image/jpeg`的资源使用`image/png`表单。
+您可以为其他MIME类型使用现有模板。 例如，对MIME类型`image/png`的资源使用`image/jpeg`表单。
 
 在这种情况下，请在CRX存储库中的`/etc/dam/metadataeditor/mimetypemappings`处创建一个节点。 指定节点的名称并定义以下属性：
 
@@ -340,7 +340,7 @@ ht-degree: 7%
 
    *图：文本字段已添加到元数据架构表单编辑器中。*
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在&#x200B;**[!UICONTROL 元数据架构Forms]**&#x200B;页中。
+1. 单击&#x200B;**[!UICONTROL 保存]**。 修改后的表单列在&#x200B;**[!UICONTROL 元数据架构Forms]**&#x200B;页中。
 1. 在工具栏中单击&#x200B;**[!UICONTROL 应用到文件夹]**&#x200B;以将自定义元数据应用到文件夹。
 
 1. 选择要应用修改架构的文件夹，然后单击&#x200B;**[!UICONTROL 应用]**。
@@ -368,7 +368,7 @@ ht-degree: 7%
 
    *图：元数据架构表单编辑器中的必填字段。*
 
-1. 单击&#x200B;**[!UICONTROL 保存]**。修改后的表单列在&#x200B;**[!UICONTROL 元数据架构Forms]**&#x200B;页中。 选择表单，然后在工具栏中单击&#x200B;**[!UICONTROL 应用到文件夹]**&#x200B;以将自定义元数据应用到文件夹。
+1. 单击&#x200B;**[!UICONTROL 保存]**。 修改后的表单列在&#x200B;**[!UICONTROL 元数据架构Forms]**&#x200B;页中。 选择表单，然后在工具栏中单击&#x200B;**[!UICONTROL 应用到文件夹]**&#x200B;以将自定义元数据应用到文件夹。
 
 1. 导航到文件夹，然后上传一些缺少添加到自定义表单的必填字段元数据的资源。 在资产的卡片视图中，将显示一条消息，指出缺少必填字段的元数据。
 
@@ -380,5 +380,6 @@ ht-degree: 7%
    >
    >元数据验证检查占用大量资源，可能会影响系统性能。 相应地安排检查。 如果服务器无法应对负载，请尝试禁用此作业。
 
-<!-- TBD: Add this method to find invalid metadata in the metadata.md article later when it is published as a top-level metadata article.
+<!--
+TBD: Add this method to find invalid metadata in the metadata.md article later when it is published as a top-level metadata article.
 -->

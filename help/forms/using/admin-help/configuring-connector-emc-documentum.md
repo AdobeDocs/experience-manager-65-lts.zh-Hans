@@ -1,5 +1,5 @@
 ---
-title: 为EMC Documentum配置连接器
+title: 配置 EMC Documentum 连接器
 description: 了解如何配置Connector for EMC Documentum ，以实现AEM Forms与EMC Documentum之间的通信。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: a9eae40f-531f-4354-ade0-853e84dd88d9
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 1%
+source-wordcount: '1037'
+ht-degree: 2%
 
 ---
 
-# 为EMC Documentum配置连接器 {#configuring-connector-for-emc-documentum}
+# 配置 EMC Documentum 连接器 {#configuring-connector-for-emc-documentum}
 
 >[!NOTE]
 > 
@@ -74,7 +74,7 @@ Connector for EMC Documentum实现了AEM Forms与EMC Documentum之间的通信�
 
 >[!NOTE]
 >
->要选择除列出的系统信息库服务提供程序之外的其他系统信息库服务提供程序，请在“应用程序和服务”>“服务管理”中配置RepositoryService。<!-- Fix broken link (See Managing Services) -->。
+>要选择除列出的系统信息库服务提供程序之外的其他系统信息库服务提供程序，请在“应用程序和服务”>“服务管理”中配置RepositoryService。 <!-- Fix broken link (See Managing Services) -->.
 
 1. 在管理控制台中，单击“服务”>“EMC Documentum连接器”>“配置设置”。
 1. 在“资料库服务提供程序信息”区域中，选择替代资料库服务提供程序。

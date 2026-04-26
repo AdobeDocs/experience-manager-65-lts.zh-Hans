@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 exl-id: 23ffbaa6-1bd9-48c3-afa3-19737bb15de0
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html)。
 
 ## 架构 {#architecture}
 
@@ -38,7 +38,7 @@ AEM Forms的架构包含以下组件：
 
    * **前端创作**：用于创作和管理表单的表单创作和表单管理用户界面。
    * **表单呈现和提交前端**：面向最终用户的界面，供AEM Forms的最终用户（例如，访问政府网站的公民）使用。 这提供了表单呈现（在Web浏览器中显示表单）和提交功能。
-   * **REST API**： JSP和Servlet导出表单服务的子集，以供基于HTTP的客户端(如表单移动SDK)远程使用。
+   * **REST API**： JSP和Servlet导出表单服务的子集，以供基于HTTP的客户端（如表单移动SDK）远程使用。
 
 **OSGi上的AEM Forms：** OSGi环境上的AEM Forms是标准的AEM Author或AEM Publish，并在其上部署了AEM Forms包。 您可以在[单服务器环境、场设置和群集设置](/help/sites-deploying/recommended-deploys.md)中的OSGi上运行AEM Forms。 集群设置仅可用于AEM Author实例。
 
@@ -58,7 +58,8 @@ AEM Forms on JEE also includes provides following supporting services to the AEM
 
 AEM Forms创作用户界面不支持创建记录文档(DOR)、PDF forms和HTML5 Forms。 此类资源是使用独立的Forms Designer应用程序设计的，并分别上传到AEM Forms Manager。<!--Alternatively, for AEM Forms on JEE, forms can be designed as application (in AEM Forms Workbench) assets and deployed into AEM Forms on JEE server.-->
 
-OSGi <!--and AEM Forms on JEE both-->上的AEM Forms具有工作流功能。 您可以在OSGi上的AEM表单上快速生成和部署用于各种任务的基本工作流。<!--, without having to install the full-fledged Process Management capability of AEM Forms on JEE. There is some difference in the [features of Form-centric workflow on AEM Forms on OSGi and Process Management capability of AEM Forms on JEE](capabilities-osgi-jee-workflows.md). The development and management of Form-centric workflows on AEM Forms on OSGi uses the familiar AEM Workflow and AEM Inbox capabilities.-->
+OSGi <!--and AEM Forms on JEE both-->上的AEM Forms具有工作流功能。 您可以在OSGi上的AEM表单上快速构建和部署用于各种任务的基本工作流。
+<!--, without having to install the full-fledged Process Management capability of AEM Forms on JEE. There is some difference in the [features of Form-centric workflow on AEM Forms on OSGi and Process Management capability of AEM Forms on JEE](capabilities-osgi-jee-workflows.md). The development and management of Form-centric workflows on AEM Forms on OSGi uses the familiar AEM Workflow and AEM Inbox capabilities.-->
 
 ## 术语 {#terminologies}
 
@@ -66,7 +67,7 @@ OSGi <!--and AEM Forms on JEE both-->上的AEM Forms具有工作流功能。 您
 
 ![aem_forms_-_recommendedtopology](assets/aem_forms_-_recommendedtopology.png)
 
-**创作：**&#x200B;创作实例是在标准创作运行模式下运行的AEM Forms服务器。 <!--It can be AEM Forms on JEE or AEM Forms on OSGi environment.-->面向内部用户、表单和交互式通信设计人员以及开发人员。 它支持以下功能：
+**创作：**&#x200B;创作实例是在标准创作运行模式下运行的AEM Forms服务器。<!--It can be AEM Forms on JEE or AEM Forms on OSGi environment.--> 它面向内部用户、表单和交互式通信设计人员以及开发人员。 它支持以下功能：
 
 * **创作和管理表单和交互式通信：**&#x200B;设计人员和开发人员可以创建和编辑自适应表单和交互式通信，上传外部创建的其他类型的表单，例如在Adobe Forms Designer中创建的表单，并使用Forms Manager控制台管理这些资源。
 * **表单和交互式通信发布：**&#x200B;可以将托管在创作实例上的Assets发布到发布实例以执行运行时操作。 资产发布使用AEM的复制功能。 Adobe建议在所有创作实例上配置复制代理，以手动将已发布的表单推送到处理实例，并在处理实例上配置另一个复制代理，同时启用&#x200B;*接收时*&#x200B;触发器，以自动将收到的表单复制到发布实例。
@@ -140,7 +141,7 @@ You can make the following changes/customizations to the above-suggested topolog
 
 ### OSGi功能上的数据捕获、交互式通信、以表单为中心的工作流的拓扑 {#topology-for-data-capture-interactive-communication-form-centric-workflow-on-osgi-capabilities}
 
-计划使用AEM Forms数据捕获功能(例如自适应表单、HTML5 Forms、PDF forms)的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此外，还建议将此拓扑用于在OSGi功能上使用交互式通信和Forms为中心的工作流，例如，将AEM收件箱和AEM Forms应用程序用于业务流程工作流。
+计划使用AEM Forms数据捕获功能（例如自适应表单、HTML5 Forms、PDF forms）的AEM Forms客户可以具有与下面显示的拓扑类似的拓扑。 此外，还建议将此拓扑用于在OSGi功能上使用交互式通信和Forms为中心的工作流，例如，将AEM收件箱和AEM Forms应用程序用于业务流程工作流。
 
 ![interactive-use-cases-af-cm-osgi-workflow](assets/interactive-use-cases-af-cm-osgi-workflow.png)
 

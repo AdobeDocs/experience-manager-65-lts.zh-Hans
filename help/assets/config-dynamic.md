@@ -6,9 +6,9 @@ role: User, Admin
 feature: Configuration,Hybrid Mode
 solution: Experience Manager, Experience Manager Assets
 exl-id: 6252e61f-44b5-4931-80a0-426c6883092e
-source-git-commit: 846b45f6ab83599eb709573a77422f2aba1ef047
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '7607'
+source-wordcount: '8118'
 ht-degree: 2%
 
 ---
@@ -24,25 +24,14 @@ ht-degree: 2%
 >* SSL 3.0
 >* TLS（传输层安全性）1.0 和 1.1
 >* TLS 1.2 中的以下弱密码：
-> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`
-> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
-> `TLS_RSA_WITH_AES_256_GCM_SHA384`
-> `TLS_RSA_WITH_AES_256_CBC_SHA256`
-> `TLS_RSA_WITH_AES_256_CBC_SHA`
-> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`
-> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
-> `TLS_RSA_WITH_AES_128_GCM_SHA256`
-> `TLS_RSA_WITH_AES_128_CBC_SHA256`
-> `TLS_RSA_WITH_AES_128_CBC_SHA`
-> `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`
-> `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`
-> `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`
-> `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
+> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384`> `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`> `TLS_RSA_WITH_AES_256_GCM_SHA384`> `TLS_RSA_WITH_AES_256_CBC_SHA256`> `TLS_RSA_WITH_AES_256_CBC_SHA`> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256`> `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`> `TLS_RSA_WITH_AES_128_GCM_SHA256`> `TLS_RSA_WITH_AES_128_CBC_SHA256`> `TLS_RSA_WITH_AES_128_CBC_SHA`> `TLS_RSA_WITH_CAMELLIA_256_CBC_SHA`> `TLS_RSA_WITH_CAMELLIA_128_CBC_SHA`> `TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA`> `TLS_RSA_WITH_SDES_EDE_CBC_SHA`
 >
 > 另请参阅 [Dynamic Media 限制](/help/assets/limitations.md)。
 
-<!-- FOR ABOVE - CQDOC-19433 (original ticket)
-and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
+<!--
+FOR ABOVE - CQDOC-19433 (original ticket)
+and CQDOC-19792 (removed as per this ticket December 5, 2022)
+-->
 
 
 必须启用并配置Dynamic Media-Hybrid才能使用。 根据您的用例，Dynamic Media具有多个[支持的配置](#supported-dynamic-media-configurations)。
@@ -163,7 +152,7 @@ Experience Manager发布节点将继续提供其他内容，例如Dynamic Media�
 
 ## 启用Dynamic Media {#enabling-dynamic-media}
 
-默认情况下已禁用[Dynamic Media](https://business.adobe.com/cn/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须使用`dynamicmedia`运行模式启用Dynamic Media，就像使用`publish`运行模式一样。 在启用之前，请确保查看[技术要求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
+默认情况下已禁用[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)。 要利用Dynamic Media功能，您必须使用`dynamicmedia`运行模式启用Dynamic Media，就像使用`publish`运行模式一样。 在启用之前，请确保查看[技术要求](/help/sites-deploying/technical-requirements.md#requirements-for-aem-dynamic-media-add-on)。
 
 >[!NOTE]
 >
@@ -208,7 +197,7 @@ Experience Manager发布节点将继续提供其他内容，例如Dynamic Media�
    >
    >* s7access-&lt;yyyy>&lt;mm>&lt;dd>.log - s7access日志记录通过`/is/image`和`/is/content`向Dynamic Media发出的每个请求。
    >
-   >这些日志仅在启用Dynamic Media时使用。 它们未包含在从&#x200B;**页面生成的**&#x200B;下载完整`system/console/status-Bundlelist`包中；如果您有Dynamic Media问题，在调用客户支持时，将这两个日志附加到问题中。
+   >这些日志仅在启用Dynamic Media时使用。 它们未包含在从`system/console/status-Bundlelist`页面生成的&#x200B;**下载完整**&#x200B;包中；如果您有Dynamic Media问题，在调用客户支持时，将这两个日志附加到问题中。
 
 ### 如果您将Experience Manager安装到其他端口或上下文路径…… {#if-you-installed-aem-to-a-different-port-or-context-path}
 
@@ -220,10 +209,10 @@ Experience Manager发布节点将继续提供其他内容，例如Dynamic Media�
 
 在Experience Manager中：
 
-* **外部化器**&#x200B;中的[自域](/help/sites-developing/externalizer.md)用于检索端口号和上下文路径。
+* [外部化器](/help/sites-developing/externalizer.md)中的&#x200B;**自域**&#x200B;用于检索端口号和上下文路径。
 * 如果未配置&#x200B;**自域**，将从Jetty HTTP服务检索端口号和上下文路径。
 
-在Experience Manager QuickStart WAR部署中，无法派生端口号和上下文路径，因此您必须配置&#x200B;**自域**。 有关如何配置[自域](/help/sites-developing/externalizer.md)的信息，请参阅&#x200B;**外部化器文档**。
+在Experience Manager QuickStart WAR部署中，无法派生端口号和上下文路径，因此您必须配置&#x200B;**自域**。 有关如何配置&#x200B;**自域**&#x200B;的信息，请参阅[外部化器文档](/help/sites-developing/externalizer.md)。
 
 >[!NOTE]
 >
@@ -308,7 +297,7 @@ Dynamic Media图像投放的工作方式为：从Experience Manager Author发布
    * 选择&#x200B;**[!UICONTROL 密钥存储文件]**。 导航到Adobe提供给您的KeyStore文件，选择该文件，然后选择&#x200B;**[!UICONTROL 打开]**。
    * 在&#x200B;**[!UICONTROL KeyStore文件密码]**&#x200B;字段中，输入KeyStore文件密码。 此密码&#x200B;**不是**&#x200B;您在步骤5中创建的KeyStore密码，而是Adobe在预配期间发送给您的欢迎电子邮件中提供的KeyStore文件密码。 如果您未收到KeyStore文件密码，请联系Adobe客户支持。
    * 在&#x200B;**[!UICONTROL 私钥密码]**&#x200B;字段中，输入私钥密码（可以是上一步中提供的相同私钥密码）。 Adobe在配置期间发送给您的欢迎电子邮件中提供私钥密码。 如果您未收到私钥密码，请联系Adobe客户支持。
-   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中输入私钥别名。 例如，`*companyname*-alias`。Adobe在配置期间发送给您的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户支持。
+   * 在&#x200B;**[!UICONTROL 私钥别名]**&#x200B;字段中输入私钥别名。 例如，`*companyname*-alias`。 Adobe在配置期间发送给您的欢迎电子邮件中提供私钥别名。 如果您未收到私钥别名，请联系Adobe客户支持。
 
    ![edit_settings_fordynamic-media-replication2](assets/edit_settings_fordynamic-media-replication2.png)
 
@@ -326,7 +315,7 @@ Dynamic Media图像投放的工作方式为：从Experience Manager Author发布
    * **[!UICONTROL 已启用]** — 选中此复选框可启用复制代理。
    * **[!UICONTROL 区域]** — 设置为相应的区域：北美洲、欧洲或亚洲
    * **[!UICONTROL 租户ID]** — 此值是发布到复制服务的公司/租户的名称。 此值是Adobe在配置期间发送给您的欢迎电子邮件中提供的租户ID。 如果您没有收到此信息，请联系Adobe客户支持。
-   * **[!UICONTROL 密钥存储别名]** — 此值与在&#x200B;**设置身份验证**&#x200B;中生成密钥时设置的[新别名](#setting-up-authentication)值相同；例如`replication`。 （请参阅[设置身份验证](#setting-up-authentication)中的步骤7。）
+   * **[!UICONTROL 密钥存储别名]** — 此值与在[设置身份验证](#setting-up-authentication)中生成密钥时设置的&#x200B;**新别名**&#x200B;值相同；例如`replication`。 （请参阅[设置身份验证](#setting-up-authentication)中的步骤7。）
    * **[!UICONTROL 密钥库密码]** — 在您点按&#x200B;**[!UICONTROL 创建KeyStore]**&#x200B;时创建的KeyStore密码。 Adobe不提供此密码。 请参阅[的步骤5设置身份验证](#setting-up-authentication)。
 
    下图显示了包含示例数据的复制代理：
@@ -502,7 +491,7 @@ Adobe建议您对配置执行端到端测试。
 
 **测试您的配置：**
 
-1. 上传图像资源。 (在Assets中，导航到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 文件]**，然后选择该文件。)
+1. 上传图像资源。 （在Assets中，导航到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 文件]**，然后选择该文件。）
 1. 等待工作流完成。
 1. 发布图像资源。 （选择资产，然后选择&#x200B;**[!UICONTROL 快速发布]**。）
 1. 通过打开图像并点按&#x200B;**[!UICONTROL 演绎版]**，导航到该图像的演绎版。
@@ -605,7 +594,7 @@ Dynamic Media Cloud Service支持图像和视频、视频分析和视频编码�
      ```
 
    * **通过Experience Manager中的视频报表工具检查Video Analytics预设**
-导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频报告]**
+导航到**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 视频报告]**
 
      `https://localhost:4502/mnt/overlay/dam/gui/content/s7dam/videoreports/videoreport.html`
 
@@ -625,7 +614,7 @@ Dynamic Media Cloud Service支持图像和视频、视频分析和视频编码�
 
 ### 视频报表配置疑难解答 {#troubleshooting-the-video-reporting-configuration}
 
-* 在安装期间，有时与Analytics API服务器的连接会超时。 安装将重试连接20次，但仍会失败。 发生这种情况时，日志文件记录多个错误。 搜索`SiteCatalystReportService`。
+* 在安装期间，有时与Analytics API服务器的连接会超时。 安装将重试连接20次，但仍会失败。 发生这种情况时，日志文件记录多个错误。 搜索 `SiteCatalystReportService`。
 * 不首先安装Analytics预设包可能会导致创建新报表包。
 * 从Experience Manager 6.3升级到Experience Manager 6.4或Experience Manager 6.4.1，然后配置Dynamic Media配置（早于6.3版本），仍会创建报表包。 此问题已知，预定会在Experience Manager 6.4.2中修复。
 
@@ -638,7 +627,7 @@ Video Analytics预设（有时简称为Analytics预设）存储在Dynamic Media�
 * `reportSuite`
 * `trackingServer`
 * `trackingNamespace`
-* `marketingCloudOrgId` (在旧版Experience Manager中不存在)
+* `marketingCloudOrgId` （在旧版Experience Manager中不存在）
 
 Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings/dam/dm/presets/analytics/jcr:content/userdata`
 
@@ -762,7 +751,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
 1. 找到&#x200B;**[!UICONTROL 筛选器图像]**，右键单击它，然后选择&#x200B;**[!UICONTROL 复制]**。
 1. 在左文件夹树中，导航到`/etc/replication/agents.author/publish`
-1. 找到`jcr:content`，右键单击它，然后转到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建节点]**。 输入类型为`damRenditionFilters`的名称`nt:unstructured`。
+1. 找到`jcr:content`，右键单击它，然后转到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 创建节点]**。 输入类型为`nt:unstructured`的名称`damRenditionFilters`。
 1. 找到`damRenditionFilters`，右键单击它，然后选择&#x200B;**[!UICONTROL 粘贴]**。
 
 这些步骤将设置Experience Manager发布实例，以将图像交付到您的非生产环境。 该过滤器还从复制中排除原始图像和静态演绎版，在发布实例上不需要它们。
@@ -771,7 +760,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 >
 >如果创作实例中有许多不同的过滤器，则每个代理都需要为其分配不同的用户。 granite代码强制每个用户一个过滤器的模型。 每个过滤器设置始终使用不同的用户。
 >
->您是否在一个服务器上使用多个过滤器？ 例如，一个筛选器用于复制到发布，另一个筛选器用于s7delivery。 如果是，则必须确保这两个筛选器在&#x200B;**节点中分配了不同的** userId`jcr:content`。 请参阅下面的图像：
+>您是否在一个服务器上使用多个过滤器？ 例如，一个筛选器用于复制到发布，另一个筛选器用于s7delivery。 如果是，则必须确保这两个筛选器在`jcr:content`节点中分配了不同的&#x200B;**userId**。 请参阅下面的图像：
 
 ![image-2018-01-16-10-26-28-465](assets/image-2018-01-16-10-26-28-465.png)
 
@@ -790,7 +779,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
    ![chlimage_1-512](assets/chlimage_1-512.png)
 
-   请注意，资源`dc:format`的`Fiji Red.jpg`是`image/jpeg`。
+   请注意，资源`Fiji Red.jpg`的`dc:format`是`image/jpeg`。
 
    若要将此筛选器应用于所有图像，而不管其格式如何，请将该值设置为`image/*`，其中`*`是应用于任何格式的所有图像的正则表达式。
 
@@ -812,7 +801,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
    ![chlimage_1-513](assets/chlimage_1-4.png)
 
-   根据以上示例，如果您只想复制PTIFF(金字塔TIFF)，则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该演绎版为`cqdam.pyramid.tiff`。
+   根据以上示例，如果您只想复制PTIFF（金字塔TIFF），则可以输入`+cqdam,*`，其中包含以`cqdam`开头的所有演绎版。 在示例中，该演绎版为`cqdam.pyramid.tiff`。
 
    如果您只想复制原始文件，则可以输入`+original`。
 
@@ -822,9 +811,9 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
 >[!NOTE]
 >
->Dynamic Media在启用[后可开箱即用](#enabling-dynamic-media)。 但是，您可以选择通过配置Dynamic Media映像服务器来满足某些规范或要求来微调安装。
+>Dynamic Media在启用](#enabling-dynamic-media)后可开箱即用[。 但是，您可以选择通过配置Dynamic Media映像服务器来满足某些规范或要求来微调安装。
 
-**先决条件** - *在*&#x200B;之前，配置Dynamic Media映像服务器，请确保您的Windows®虚拟机包括Microsoft® Visual C++库的安装。 运行Dynamic Media图像服务器需要库。 您可以[在此处](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下载Microsoft® Visual C++ 2010可再发行软件包(x64)。
+**先决条件** - *在*&#x200B;之前，配置Dynamic Media映像服务器，请确保您的Windows®虚拟机包括Microsoft® Visual C++库的安装。 运行Dynamic Media图像服务器需要库。 您可以[在此处](https://www.microsoft.com/en-us/download/details.aspx?id=26999)下载® Visual C++ 2010可再发行软件包(x64)。
 
 要配置Dynamic Media图像服务器设置，请执行以下操作：
 
@@ -846,7 +835,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
    | 属性 | 默认值 | 描述 |
    | --- | --- | --- |
    | `TcpPort.name` | *`empty`* | 用于与ImageServer进程通信的端口号。 默认情况下，会自动检测自由端口。 |
-   | `AllowRemoteAccess.name` | *`empty`* | 允许或禁止远程访问ImageServer进程。 如果为false，则图像服务器仅在localhost上侦听。<br>指向本地主机的默认外部化程序设置必须指定特定VM实例的实际域或IP地址。 原因是本地主机指向VM的父系统。<br>虚拟机的域或IP地址必须具有主机文件条目，以便它能够自行解析。 |
+   | `AllowRemoteAccess.name` | *`empty`* | 允许或禁止远程访问ImageServer进程。 如果为false，则图像服务器仅在localhost上侦听。<br> 指向本地主机的默认外部化程序设置必须指定特定VM实例的实际域或IP地址。 原因是localhost指向VM的父系统。<br>VM的域或IP地址必须具有主机文件条目，以便它能够自行解析。 |
    | `MaxRenderRgnPixels` | 16兆帕 | 渲染的最大大小（以MB为单位）。 |
    | `MaxMessageSize` | 16 MB | 投放的最大消息大小（以MB为单位）。 |
    | `RandomAccessUrlTimeout` | 20 | 超时值，图像服务器等待JCR响应范围磁贴请求的时间，以秒为单位。 |
@@ -869,7 +858,7 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
 ### 默认清单设置 {#default-manifest-settings}
 
-通过默认清单，可配置用于生成Dynamic Media投放响应的默认值。 您可以微调质量(JPEG质量、分辨率、重新取样模式)、缓存（过期时间），并防止呈现过大图像(defaultpix、defaultthumbpix、maxpix)。
+通过默认清单，可配置用于生成Dynamic Media投放响应的默认值。 您可以微调质量（JPEG质量、分辨率、重新取样模式）、缓存（过期时间），并防止呈现过大图像(defaultpix、defaultthumbpix、maxpix)。
 
 默认清单配置的位置是从&#x200B;**[!UICONTROL Adobe CQ Scene7 PlatformServer]**&#x200B;捆绑包的&#x200B;**[!UICONTROL 目录根]**&#x200B;默认值中获取的。 默认情况下，此值位于&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**&#x200B;中的以下路径
 
@@ -889,21 +878,21 @@ Experience Manager 6.4及更高版本将此预设保存在`/conf/global/settings
 
 | 属性 | 默认值 | 描述 |
 | --- | --- | --- |
-| `bkgcolor` | `FFFFFF` | 默认背景颜色。 RGB值，用于填充不包含实际图像数据的回复图像的任意区域。 另请参阅图像服务API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html?lang=zh-Hans#image-serving-api)。 |
-| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html?lang=zh-Hans#image-serving-api)。<br>但是，您通常使用查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
-| `defaultthumbpix` | `100,100` | 默认缩略图大小。 用于缩略图请求(`req=tmb`)，而不是attribute：：DefaultPix。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)未明确指定大小，并且未使用`wid=`、`hei=`或`scl=`明确指定视图大小，则此操作为true。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html?lang=zh-Hans#image-serving-api)。 |
-| `expiration` | `36000000` | 默认客户端缓存生存时间。 提供特定目录记录中不包含有效catalog：：Expiration值时的默认过期时间间隔。<br>实数，0或更大。 自生成回复数据以来到到期为止的毫秒数。 设置为0将始终使回复图像立即过期，这样可以有效禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要提前清除缓存，请联系客户支持。<br>另请参阅图像服务API中的[过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html?lang=zh-Hans)。 |
-| `jpegquality` | `80` | 默认的JPEG编码属性。 指定JPEG回复图像的默认属性。<br>用逗号分隔的整数和标志。 第一个值在1至100的范围内，用于定义质量。 第二个值可以为0，表示正常行为；也可以为1，表示禁用JPEG编码器采用的RGB色度缩减像素采样。<br>另请参阅图像服务API中的[JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html?lang=zh-Hans#image-serving-api)。 |
-| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，服务器将返回错误。<br>另请参阅图像服务API中的[MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html?lang=zh-Hans#image-serving-api)。 |
-| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样和插值属性。<br>在请求中未指定`resMode=`时使用。<br>允许的值包括`BILIN`、`BICUB`或`SHARP2`。<br>枚举。 对于`bilin`，设置为2，`bicub`设置为3，或者`sharp2`插值模式设置为4。 使用`sharp2`以获得最佳结果。<br>另请参阅图像服务API中的[ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html?lang=zh-Hans#image-serving-api)。 |
-| `resolution` | `72` | 默认对象分辨率。 提供特定目录记录中不包含有效catalog：：Resolution值时的默认对象分辨率。<br>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，例如每米像素数。<br>另请参阅图像服务API中的[分辨率](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html?lang=zh-Hans#image-serving-api)。 |
+| `bkgcolor` | `FFFFFF` | 默认背景颜色。 RGB值，用于填充不包含实际图像数据的回复图像的任意区域。 另请参阅图像服务API中的[BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html#image-serving-api)。 |
+| `defaultpix` | `300,300` | 默认视图大小。 如果请求未使用wid=、hei=或scl=明确指定视图大小，服务器将限制回复图像不超过此宽度和高度。<br>指定为两个整数（0或更大，用逗号分隔）。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。 不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html#image-serving-api)。<br>但是，通常您使用的是查看器预设或图像预设来交付资产。 默认像素仅适用于未使用查看器预设或图像预设的资产。 |
+| `defaultthumbpix` | `100,100` | 默认缩略图大小。 用于缩略图请求(`req=tmb`)，而不是attribute：：DefaultPix。<br>服务器限制回复图像不超过此宽度和高度。 如果缩略图请求(`req=tmb`)未显式指定大小，并且未使用`wid=`、`hei=`或`scl=`显式指定视图大小，则此操作为true。<br>指定为两个整数，0或更大，用逗号分隔。 宽度和高度（像素）。 可以将任一值或两个值都设置为0以使其不受约束。<br>不适用于嵌套/嵌入的请求。<br>另请参阅图像服务API中的[DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html#image-serving-api)。 |
+| `expiration` | `36000000` | 默认客户端缓存生存时间。 提供特定目录记录中不包含有效catalog：：Expiration值时的默认过期时间间隔。<br>实数，0或更大。 自生成回复数据以来到到期为止的毫秒数。 设置为0将始终使回复图像立即过期，这样可以有效禁用客户端缓存。 默认情况下，此值设置为10小时，这意味着如果发布新图像，则旧图像需要10小时才能离开用户的缓存。 如果您需要提前清除缓存，请联系客户支持。<br>另请参阅图像服务API中的[过期](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-expiration.html)。 |
+| `jpegquality` | `80` | 默认的JPEG编码属性。 指定JPEG回复图像的默认属性。<br>用逗号分隔的整数和标志。 第一个值在1至100的范围内，用于定义质量。 第二个值可以为0，表示正常行为；也可以为1，表示禁用JPEG编码器采用的RGB色度缩减像素采样。<br>另请参阅图像服务API中的[JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html#image-serving-api)。 |
+| `maxpix` | `2000,2000` | 回复图像大小限制。 返回到客户端的最大回复图像宽度和高度。<br>如果请求导致回复图像的宽度或高度大于attribute：：MaxPix，则服务器返回错误。<br>另请参阅图像服务API中的[MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html#image-serving-api)。 |
+| `resmode` | `SHARP2` | 默认重新取样模式。 指定用于缩放图像数据的默认重新取样和插值属性。<br>在请求中未指定`resMode=`时使用。<br>允许的值包括`BILIN`、`BICUB`或`SHARP2`。<br>枚举。 对于`bilin`，设置为2，`bicub`设置为3，或者`sharp2`插值模式设置为4。 使用`sharp2`以获得最佳结果。<br>另请参阅图像服务API中的[ResMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-resmode.html#image-serving-api)。 |
+| `resolution` | `72` | 默认对象分辨率。 提供特定目录记录中不包含有效catalog：：Resolution值时的默认对象分辨率。<br>实数，大于0。 通常以每英寸像素数表示，但也可以以其他单位表示，例如每米像素数。<br>另请参阅图像服务API中的[分辨率](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-resolution.html#image-serving-api)。 |
 | `thumbnailtime` | `1%,11%,21%,31%,41%,51%,61%,71%,81%,91%` | 这些值表示视频播放时间的快照，并传递给[encoding.com](https://www.encoding.com/)。 有关详细信息，请参阅[关于视频缩略图](/help/assets/video.md#about-video-thumbnails-in-dynamic-media-hybrid-mode)。 |
 
 ## 配置Dynamic Media颜色管理 {#configuring-dynamic-media-color-management}
 
 通过Dynamic Media色彩管理，您可以对资源进行色彩校正以供预览。
 
-通过颜色校正，摄取的资产会保留其颜色空间(RGB、CMYK、灰色)并在生成的金字塔TIFF演绎版中嵌入颜色配置文件。 请求动态演绎版时，图像颜色将被校正到目标颜色空间中。 您可以在JCR的Dynamic Media发布设置中配置输出颜色配置文件。
+通过颜色校正，摄取的资产会保留其颜色空间（RGB、CMYK、灰色）并在生成的金字塔TIFF演绎版中嵌入颜色配置文件。 请求动态演绎版时，图像颜色将被校正到目标颜色空间中。 您可以在JCR的Dynamic Media发布设置中配置输出颜色配置文件。
 
 Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由ICC定义。
 
@@ -911,13 +900,13 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
 
 高级用例可以使用手动配置`icc=`修饰符来显式选择输出颜色配置文件：
 
-* `icc` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html?lang=zh-Hans)
+* `icc` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-icc.html)
 
-* `iccEmbed` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html?lang=zh-Hans)
+* `iccEmbed` - [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-iccembed.html)
 
 >[!NOTE]
 >
->仅当您安装了Software Distribution[中的](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)Feature Pack 12445时，才可使用Adobe的标准颜色配置文件集。 所有功能包和Service Pack均可在[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)中获取。 功能包12445提供了Adobe的颜色配置文件。
+>仅当您安装了Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-12445)中的[Feature Pack 12445时，才可使用Adobe的标准颜色配置文件集。 所有功能包和Service Pack均可在[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)中获取。 功能包12445提供了Adobe的颜色配置文件。
 
 
 ### 安装功能包12445 {#installing-feature-pack}
@@ -928,7 +917,7 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
 
 1. 导航到[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)并下载`cq-6.3.0-featurepack-12445`。
 
-   有关在[中使用包的详细信息，请参阅](/help/sites-administering/package-manager.md)如何使用包[!DNL Adobe Experience Manager]。
+   有关在[!DNL Adobe Experience Manager]中使用包的详细信息，请参阅[如何使用包](/help/sites-administering/package-manager.md)。
 
 1. 安装功能包。
 
@@ -961,58 +950,58 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
    <td><strong>描述</strong></td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html?lang=zh-Hans">iccprofilergb</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilergb.html">iccprofilergb</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认RGB颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html?lang=zh-Hans">iccprofilecmyk</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilecmyk.html">iccprofilecmyk</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认CMYK颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html?lang=zh-Hans">iccprofilegray</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilegray.html">iccprofilegray</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>默认灰色颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html?lang=zh-Hans">iccprofilesrcrgb</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcrgb.html">iccprofilesrcrgb</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的RGB图像的默认RGB颜色配置文件的名称</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html?lang=zh-Hans">iccprofilesrccmyk</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrccmyk.html">iccprofilesrccmyk</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的CMYK图像的默认CMYK颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html?lang=zh-Hans">iccprofilesrcgray</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccprofilesrcgray.html">iccprofilesrcgray</a></td>
    <td>字符串</td>
    <td>&lt;空&gt;</td>
    <td>用于没有嵌入颜色配置文件的CMYK图像的默认灰度颜色配置文件的名称。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html?lang=zh-Hans">iccblackpointcompensation</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccblackpointcompensation.html">iccblackpointcompensation</a></td>
    <td>布尔值</td>
    <td>真</td>
    <td>指定在颜色校正期间是否进行黑点补偿。 Adobe建议启用此设置。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html?lang=zh-Hans">iccdither</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccdither.html">iccdither</a></td>
    <td>布尔值</td>
    <td>假</td>
    <td>指定在颜色校正期间是否执行仿色。</td>
   </tr>
   <tr>
-   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html?lang=zh-Hans">iccrenderintent</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-iccrenderintent.html">iccrenderintent</a></td>
    <td>字符串</td>
    <td>相对</td>
-   <td><p>指定渲染方法。 可接受的值为：<strong>可感知、相对、饱和度、绝对。 </strong><i></i>Adobe建议使用<strong>相对</strong><i></i>作为默认值。</p> </td>
+   <td><p>指定渲染方法。 可接受的值为：<strong>可感知、相对、饱和度、绝对。</strong><i></i>Adobe建议使用<strong>相对</strong><i></i>作为默认值。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -1225,28 +1214,28 @@ Adobe的色彩管理使用ICC（国际色彩联盟）配置文件，该格式由
   </tr>
   <tr>
    <td>复制查看器URL</td>
-   <td><p>“复制URL”对话框显示类似于以下内容的URL（URL仅用于演示目的）：</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&contentRoot=%2F</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
+   <td><p>“复制URL”对话框显示类似于以下内容的URL（URL仅用于演示目的）：</p> <p><code>https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/BasicZoomViewer.html?asset=/content/dam/path/to/Image.jpg&amp;config=/conf/global/settings/dam/dm/presets/viewer/Zoom_dark&amp;serverUrl=https://IMAGESERVICEPUBLISHNODE/is/image/&amp;contentRoot=%2F</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
   </tr>
   <tr>
    <td>复制查看器的嵌入代码</td>
    <td><p>复制嵌入代码对话框会显示类似于以下内容的代码片段（代码示例仅用于演示目的）：</p> <p><code class="code">&lt;style type="text/css"&gt;
-       &#x200B;#s7basiczoom_div.s7basiczoomviewer&lbrace;
+       #s7basiczoom_div.s7basiczoomviewer{
        width:100%;
        height:auto;
-       &rbrace;
+       }
        &lt;/style&gt;
        &lt;script
        type="text/javascript" src="https://PUBLISHNODE/etc/dam/viewers/s7viewers/html5/js/BasicZoomViewer.js"&gt;&lt;/script&gt;
        &lt;div id="s7basiczoom_div"&gt;&lt;/div&gt;
        &lt;script type="text/javascript"&gt;
-       var s7basiczoomviewer = new s7viewers.BasicZoomViewer(&lbrace;
+       var s7basiczoomviewer = new s7viewers.BasicZoomViewer({
        "containerId" : "s7basiczoom_div",
-       "params" : &lbrace;
+       "params" : {
        "serverurl" : "https://IMAGESERVICEPUBLISHNODE/is/image/",
        "contenturl" : "https://PUBLISHNODE/",
        "config" : "/conf/global/settings/dam/dm/presets/viewer/Zoom_dark",
-       "asset" : "/content/dam/path/to/Image.jpg" &rbrace;
-       &rbrace;).init();
+       "asset" : "/content/dam/path/to/Image.jpg" }
+       }).init();
        &lt;/script&gt;</code></p> <p>其中<code>PUBLISHNODE</code>引用常规Experience Manager发布节点，<code>IMAGESERVICEPUBLISHNODE</code>引用图像服务URL。</p> <p>另请参阅<a href="/help/assets/delivering-dynamic-media-assets.md">传送Dynamic Media Assets</a>。</p> </td>
   </tr>
  </tbody>

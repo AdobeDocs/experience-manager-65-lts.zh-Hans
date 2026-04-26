@@ -1,5 +1,5 @@
 ---
-title: 使用PDF/A文档
+title: 使用 PDF/A 文档
 description: 使用DocConverter服务确定PDF文档是否为PDF/A文档，并将PDF文档转换为PDF/A文档。
 contentOwner: admin
 content-type: reference
@@ -11,21 +11,21 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 387f917c-eae3-4326-88f4-3b77cb9e4d46
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 1%
+source-wordcount: '2382'
+ht-degree: 2%
 
 ---
 
-# 使用PDF/A文档 {#working-with-pdf-a-documents}
+# 使用 PDF/A 文档 {#working-with-pdf-a-documents}
 
 **关于DocConverter服务**
 
 DocConverter服务可以将PDF文档转换为PDA/A文档。 您可以使用此服务完成这些任务：
 
-* 将PDF文档转换为PDF/A文档。 (请参阅[将文档转换为PDF/A文档](pdf-a-documents.md#converting-documents-to-pdf-a-documents)。)
-* 确定PDF文档是否为PDF/A文档。 (请参阅以编程方式确定PDF/A合规性[。)](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)
+* 将PDF文档转换为PDF/A文档。 （请参阅[将文档转换为PDF/A文档](pdf-a-documents.md#converting-documents-to-pdf-a-documents)。）
+* 确定PDF文档是否为PDF/A文档。 （请参阅以编程方式确定PDF/A合规性[。）](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ DocConverter服务可以将PDF文档转换为PDA/A文档。 您可以使用此�
 
 ## 将文档转换为PDF/A文档 {#converting-documents-to-pdf-a-documents}
 
-您可以使用DocConverter服务将PDF文档转换为PDF/A文档。 由于PDF/A是一种用于长期保存文档内容的存档格式，因此所有字体都将嵌入，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/A文档不包含音频和视频内容。 在将PDF文档转换为PDF/A文档之前，请确保PDF文档不是PDF/A文档。
+您可以使用DocConverter服务将PDF文档转换为PDF/A文档。 由于PDF/A是一种用于长期保存文档内容的存档格式，因此所有字体都将嵌入，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。 此外，PDF/A 文档不包含音频和视频内容。 在将PDF文档转换为PDF/A文档之前，请确保PDF文档不是PDF/A文档。
 
 PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区别在于对逻辑结构（辅助功能）的支持，合规性级别B不需要该支持。无论合规性级别如何，PDF/A-1都指示所有字体嵌入到生成的PDF/A文档中。 目前，验证（和转换）中仅支持PDF/A-1b。
 
@@ -63,8 +63,8 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -74,7 +74,7 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 
 **引用要转换为PDF/A文档的PDF文档**
 
-检索PDF文档以转换为PDF/A文档。 如果尝试将PDF文档(如Acrobat表单)转换为PDF/A文档，则会导致异常。
+检索PDF文档以转换为PDF/A文档。 如果尝试将PDF文档（如Acrobat表单）转换为PDF/A文档，则会导致异常。
 
 **设置跟踪信息**
 
@@ -140,9 +140,9 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 
 **另请参阅**
 
-[使用PDF/A文档](pdf-a-documents.md#working-with-pdf-a-documents)
+[使用 PDF/A 文档](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[快速入门(SOAP模式)：使用Java API将文档转换为PDF/A文档](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API将文档转换为PDF/A文档](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -194,7 +194,7 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 
 **另请参阅**
 
-[使用PDF/A文档](pdf-a-documents.md#working-with-pdf-a-documents)
+[使用 PDF/A 文档](pdf-a-documents.md#working-with-pdf-a-documents)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 
@@ -227,8 +227,8 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-docconverter-client.jar
-* adobe-utilities.jar(如果在JBoss Application Server上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果将AEM Forms部署在JBoss Application Server上，则此为必需字段)
+* adobe-utilities.jar（如果在JBoss Application Server上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果将AEM Forms部署在JBoss Application Server上，则此为必需字段）
 
 有关这些JAR文件位置的信息，请参阅[包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)。
 
@@ -293,9 +293,9 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 
 **另请参阅**
 
-[使用PDF/A文档](pdf-a-documents.md#working-with-pdf-a-documents)
+[使用 PDF/A 文档](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[快速入门(SOAP模式)：使用Java API确定PDF/A合规性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API确定PDF/A合规性](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -340,7 +340,7 @@ PDF/A-1规范包含两个一致性级别，即A和B。两者之间的主要区�
 
 **另请参阅**
 
-[使用PDF/A文档](pdf-a-documents.md#working-with-pdf-a-documents)
+[使用 PDF/A 文档](pdf-a-documents.md#working-with-pdf-a-documents)
 
 [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)
 

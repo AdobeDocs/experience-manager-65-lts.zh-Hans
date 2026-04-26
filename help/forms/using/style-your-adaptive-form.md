@@ -6,10 +6,10 @@ feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 5b3beaa6-ca0a-454e-85ee-c3653dd423fe
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '2038'
-ht-degree: 8%
+source-wordcount: '2189'
+ht-degree: 10%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 8%
 
 本教程是[创建您的第一个自适应表单](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/create-your-first-adaptive-form.html)系列中的步骤。 Adobe建议您按照时间顺序跟踪系列，以了解、执行和演示完整的教程用例。
 
-## 关于教程  {#about-the-tutorial}
+## 关于本教程  {#about-the-tutorial}
 
-您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
+您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
 
 在本教程结束时，您应该能够执行以下操作：
 
@@ -105,10 +105,10 @@ ht-degree: 8%
 1. 登录到AEM创作实例并导航到&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL 主题]**。 默认URL为[http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-themes)。
 1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;并选择&#x200B;**[!UICONTROL 主题]**。 此时将显示[!UICONTROL 创建主题]页面，其中包含创建主题所需的字段。 **[!UICONTROL Title]**&#x200B;和&#x200B;**[!UICONTROL Name]**&#x200B;字段是必填字段：
 
-   * **标题：**&#x200B;指定主题的标题。 例如，**全局主题。**&#x200B;标题可帮助您从主题列表中识别主题。
-   * **名称：**&#x200B;指定主题的名称。 例如，**Global-Theme。**&#x200B;在存储库中创建具有指定名称的节点。 当您开始键入标题时，将自动生成“名称”字段的值。 您可以更改建议的值。名称字段只能包含字母数字字符、连字符和下划线。所有无效的输入都将替换为连字符。
+   * **标题：**&#x200B;指定主题的标题。 例如，**全局主题。** 标题可帮助您从主题列表中识别主题。
+   * **名称：**&#x200B;指定主题的名称。 例如，**Global-Theme.** 在存储库中创建具有指定名称的节点。 当您开始键入标题时，将自动生成“名称”字段的值。 您可以更改建议的值。 名称字段只能包含字母数字字符、连字符和下划线。 所有无效的输入都将替换为连字符。
 
-1. 选择&#x200B;**[!UICONTROL 创建]**。将创建一个主题，并出现一个对话框以打开表单进行编辑。 选择&#x200B;**[!UICONTROL 打开]**&#x200B;以在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM [!DNL Forms]随附的现成自适应表单。
+1. 选择&#x200B;**[!UICONTROL 创建]**。 将创建一个主题，并出现一个对话框以打开表单进行编辑。 选择&#x200B;**[!UICONTROL 打开]**&#x200B;以在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM [!DNL Forms]随附的现成自适应表单。
 
    有关使用主题编辑器UI的信息，请参阅[关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor)。
 
@@ -130,18 +130,18 @@ ht-degree: 8%
 
 1. 在&#x200B;**[!UICONTROL 文本]**&#x200B;折叠面板中设置以下属性，然后选择![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | 字体系列 | Arial® |
    | 字体颜色 | FFFFFF |
-   | 字体大小 | 54像素 |
+   | 字体大小 | 54 px |
 
 1. 选择[!UICONTROL 标头]构件并选择&#x200B;**[!UICONTROL 标头]**。 用于设置标题小组件样式的选项显示在左侧。 展开&#x200B;**[!UICONTROL 维度和位置]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL 高度]**&#x200B;设置为`120px`，然后选择![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 1. 展开标题小组件的&#x200B;**[!UICONTROL 背景]**&#x200B;折叠面板，将&#x200B;**[!UICONTROL 背景颜色]**&#x200B;设置为`F6921E.`
 
    将鼠标悬停在&#x200B;**[!UICONTROL 图像和渐变]** > **[!UICONTROL +添加]**&#x200B;上，选择&#x200B;**[!UICONTROL 图像]**。 设置以下属性并选择![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)。
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | 图像 | 上传header-style.png。 图像下载到[开始](/help/forms/using/style-your-adaptive-form.md#before-you-start)之前。 |
    | 位置 | 右下 |
@@ -153,7 +153,7 @@ ht-degree: 8%
     <tbody> 
      <tr> 
       <td><b>边距</b></td> 
-      <td><b>价值</b></td> 
+      <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>边距</td> 
@@ -184,7 +184,7 @@ ht-degree: 8%
      <tr> 
       <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
-      <td><b>价值</b></td> 
+      <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>边框</td> 
@@ -215,7 +215,7 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18像素</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
       <td>维度和位置</td> 
@@ -248,7 +248,7 @@ ht-degree: 8%
      <tr> 
       <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
-      <td><b>价值</b></td> 
+      <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>背景</td> 
@@ -284,7 +284,7 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18像素</td> 
+      <td>18 px</td> 
      </tr> 
     </tbody> 
    </table>
@@ -304,7 +304,7 @@ ht-degree: 8%
 
 1. 选择&#x200B;**[!UICONTROL 附加]**&#x200B;按钮并选择![aem_6_3_edit](assets/aem_6_3_edit.png)图标。 在&#x200B;**[!UICONTROL 维度和位置]**&#x200B;折叠面板中设置以下属性：
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | 浮点数 | 左 |
    | 宽度 | 10% |
@@ -316,7 +316,7 @@ ht-degree: 8%
      <tr> 
       <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
-      <td><b>价值</b></td> 
+      <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>尺寸及位置</td> 
@@ -339,7 +339,7 @@ ht-degree: 8%
      <tr> 
       <td>尺寸及位置</td> 
       <td>高度</td> 
-      <td>40像素</td> 
+      <td>40 px</td> 
      </tr> 
      <tr> 
       <td>维度和位置<br /> </td> 
@@ -358,7 +358,7 @@ ht-degree: 8%
      <tr> 
       <td>边框</td> 
       <td>边框宽度</td> 
-      <td>1像素</td> 
+      <td>1 px</td> 
      </tr> 
      <tr> 
       <td>边框</td> 
@@ -373,7 +373,7 @@ ht-degree: 8%
      <tr> 
       <td>边框</td> 
       <td>边框半径</td> 
-      <td>7像素</td> 
+      <td>7 px</td> 
      </tr> 
      <tr> 
       <td>文本</td> 
@@ -388,7 +388,7 @@ ht-degree: 8%
      <tr> 
       <td>文本</td> 
       <td>字体大小</td> 
-      <td>18像素</td> 
+      <td>18 px</td> 
      </tr> 
      <tr> 
       <td>文本</td> 
@@ -406,7 +406,7 @@ ht-degree: 8%
      <tr> 
       <td><b>可折叠项</b></td> 
       <td><b>属性</b></td> 
-      <td><b>价值</b></td> 
+      <td><b>值</b></td> 
      </tr> 
      <tr> 
       <td>维度和位置</td> 
@@ -448,7 +448,8 @@ ht-degree: 8%
 <!--
 >[!NOTE]
 >
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).-->
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).
+-->
 
 >[!NOTE]
 >
@@ -479,7 +480,7 @@ ht-degree: 8%
 9. 转到新创建的`clientlibs`文件夹并添加`allowProxy`和`categories`属性。
 10. 导航到`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`并创建css文件夹。
 11. 转到创建的CSS文件夹并创建一个文件。 例如，创建一个文件作为`fonts.css`，并粘贴嵌入代码以及URL。
-    ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
+   ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
 12. 保存更改。
 
 >[!NOTE]
@@ -515,4 +516,5 @@ The fonts added to the **[!UICONTROL Adobe Fonts]** are available for selection 
 1. Create an [Adobe Fonts](https://fonts.adobe.com/?ref=tk.com) account, create a kit, add font Myriad Pro to the kit, publish the kit, and obtain the Kit ID. It is required to use [!DNL Adobe Fonts] (Web Fonts) in an adaptive form. 
 1. In the AEM [!DNL Forms] Server, navigate to ![adobeexperiencemanager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Adobe Fonts]**. Now, open a configuration folder. If a configuration is already available, click the **[!UICONTROL Create]** button to create an instance.
 
-   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**. -->
+   On the Create Configuration dialog, specify a **Title** for the configuration, and click **[!UICONTROL Create]**. You are redirected to the configuration page. In the [!UICONTROL Edit Component] dialog that appears, provide your **Kit ID** and click **[!UICONTROL OK]**.
+-->

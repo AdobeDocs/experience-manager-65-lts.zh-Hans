@@ -1,5 +1,5 @@
 ---
-title: 配置安全设置
+title: 配置安全性设置
 description: 了解如何配置安全设置。 您可以通过限制访问权限来保护PDF文档。 您可以对文档进行加密、认证或密码保护。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: fee34d9e-6606-40c1-bbbe-e7975ad90a22
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
 
-# 配置安全设置{#configuring-security-settings}
+# 配置安全性设置{#configuring-security-settings}
 
 您可以通过设置密码和限制某些功能（如打印和编辑）来限制对PDF文档的访问。 当PDF文档具有受限功能时，与这些功能相关的工具和菜单项将灰显。 您还可以使用其他方法创建安全文档，如加密或认证文档。 安全设置包含用于某些PDF转换的密码和特定选项。
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 6及更高版本兼容)：**&#x200B;加密文档的内容，但仍允许搜索引擎访问文档元数据。 仅当“兼容性”选项设置为Acrobat 6.0或更高版本、Acrobat 7.0或更高版本或者Acrobat 9.0或更高版本时，此选项才可用。
 
 **仅加密文件附件（Acrobat 7及更高版本）
-兼容)：**&#x200B;用户可以在没有密码的情况下打开文档，但必须输入密码才能打开文件附件。 仅当“兼容性”选项设置为Acrobat 7.0或更高版本或者Acrobat 9.0或更高版本时，此选项才可用。
+兼容)：**&#x200B;用户无需密码即可打开文档，但必须输入密码才能打开文件附件。 仅当“兼容性”选项设置为Acrobat 7.0或更高版本或者Acrobat 9.0或更高版本时，此选项才可用。
 
 这些设置配置密码安全性：
 
@@ -121,7 +121,7 @@ ht-degree: 0%
 
 **Any Except Extracting Pages：**&#x200B;允许用户使用更改允许列表中的任何方法更改文档，但删除页面除外。
 
-**启用文本、图像和其他内容的复制：**&#x200B;允许用户选择和复制PDF文档的内容。 它还允许需要访问PDF文件(如Acrobat Catalog)内容的实用程序访问这些内容。 仅当选择了高加密级别时，此选项才可用。
+**启用文本、图像和其他内容的复制：**&#x200B;允许用户选择和复制PDF文档的内容。 它还允许需要访问PDF文件（如Acrobat Catalog）内容的实用程序访问这些内容。 仅当选择了高加密级别时，此选项才可用。
 
 **启用屏幕的文本访问Reader设备
 视障：**&#x200B;允许视力障碍用户使用屏幕阅读器阅读文档。 但是，用户无法复制或提取文档内容。 仅当选择了高加密级别时，此选项才可用。

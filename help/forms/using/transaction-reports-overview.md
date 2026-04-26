@@ -8,16 +8,17 @@ feature: Transaction Reports
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 05c15b83-046e-4a11-904a-f45bd0b621df
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 0%
+source-wordcount: '490'
+ht-degree: 1%
 
 ---
 
-# OSGi上AEM Forms的交易报表 {#transaction-reports-overview}
+# OSGi 上的 AEM Forms 的事务报告 {#transaction-reports-overview}
 
-<!--## Introduction {#introduction}
+<!--
+## Introduction {#introduction}
 
 Transaction reports in AEM Forms let you keep a count of all transactions taken place since a specified date on your AEM Forms deployment. The objective is to provide information about product usage and help business stakeholders understand their digital processing volumes. Examples of a transaction include:
 
@@ -25,7 +26,8 @@ Transaction reports in AEM Forms let you keep a count of all transactions taken 
 * Rendition of a print or a web version of an interactive communication
 * Conversion of a document from one file format to another
 
-For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis.md).-->
+For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis.md).
+-->
 
 默认情况下，事务记录处于禁用状态。 您可以从AEM Web控制台[启用事务录制](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports)。 您可以查看有关创作、处理或发布实例的事务报表。 查看有关所有事务汇总的创作或处理实例的事务报表。 查看发布实例上的事务报告，了解仅在该报告运行所在的发布实例上发生的所有事务的计数。
 

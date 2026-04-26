@@ -1,5 +1,5 @@
 ---
-title: 流程报告的工作方式
+title: 流程报告工作原理
 description: 组成AEM Forms on JEE流程报表的服务描述以及流程报表UI简介
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: c59e5a1d-a066-48e7-a57e-c28cbb959719
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 0%
+source-wordcount: '359'
+ht-degree: 2%
 
 ---
 
-# 流程报告的工作方式{#how-process-reporting-works}
+# 流程报告工作原理{#how-process-reporting-works}
 
 流程报表是JEE上的AEM Forms的报表模块。
 

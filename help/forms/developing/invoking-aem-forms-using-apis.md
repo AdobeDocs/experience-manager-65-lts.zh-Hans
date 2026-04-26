@@ -1,6 +1,6 @@
 ---
 title: 如何使用API调用AEM Forms？
-description: 了解如何使用Java&amp；trade；API、Web服务、远程处理和REST调用AEM Forms服务。
+description: 了解如何使用Java&trade、API、Web服务、远程处理和REST调用AEM Forms服务。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 8cf0c8ca-12ea-4094-97a6-1cf34042bc8a
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '298'
+ht-degree: 1%
 
 ---
 
-# 使用API调用AEM Forms {#invoking-aem-forms-using-apis}
+# 使用 API 调用 AEM Forms {#invoking-aem-forms-using-apis}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 

@@ -1,6 +1,6 @@
 ---
-title: 端点注册表Java&amp；trade；API快速启动(SOAP)
-description: 了解如何使用Java&amp；trade； API添加EJB、SOAP、Watched Folder、电子邮件端点和远程端点以及编辑、删除和检索端点。
+title: 端点注册表Java&trade； API快速启动(SOAP)
+description: 了解如何使用Java&trade； API添加EJB、SOAP、Watched Folder、电子邮件端点和远程端点以及编辑、删除和检索端点。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,9 +11,9 @@ feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 hide: true
 hidefromtoc: true
 exl-id: ac33db6b-9896-4593-9365-62dd924b6bcb
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -22,23 +22,23 @@ ht-degree: 0%
 
 Java™ API快速入门(SOAP)适用于端点注册表。
 
-[快速启动：使用Java添加EJB端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
+[快速启动：使用Java™ API添加EJB端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
-[快速入门：使用Java添加SOAP端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[快速入门：使用Java™ API添加SOAP端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
-[快速启动：使用Java添加Watched文件夹端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
+[快速启动：使用Java™ API添加观察文件夹端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
-[快速启动：使用Java添加电子邮件端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
+[快速入门：使用Java™ API添加电子邮件端点](endpoint-registry-java-api-quick.md#quickstart-adding-an-email-endpoint-using-the-java-api)
 
-[快速启动：使用Java添加远程端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
+[快速启动：使用Java™ API添加远程端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-remoting-endpoint-using-the-java-api)
 
-[快速启动：使用Java添加TaskManager端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
+[快速启动：使用Java™ API添加TaskManager端点](endpoint-registry-java-api-quick.md#quickstart-adding-a-taskmanager-endpoint-using-the-java-api)
 
-[快速启动：使用Java修改端点](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
+[快速启动：使用Java™ API修改端点](endpoint-registry-java-api-quick.md#quickstart-modifying-an-endpoint-using-the-java-api)
 
-[快速启动：使用Java删除端点](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
+[快速启动：使用Java™ API删除端点](endpoint-registry-java-api-quick.md#quickstart-removing-an-endpoint-using-the-java-api)
 
-[快速启动：使用Java检索端点连接器信息](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
+[快速启动：使用Java™ API检索端点连接器信息](endpoint-registry-java-api-quick.md#quickstart-retrieving-endpoint-connector-information-using-the-java-api)
 
 AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应设置为SOAP。
 
@@ -151,7 +151,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：使用Java™ API添加SOAP端点 {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-以下Java™代码示例将SOAP端点添加到名为&#x200B;*MyApplication/EncryptDocument*&#x200B;的服务。 (请参阅[添加SOAP端点](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)。)
+以下Java™代码示例将SOAP端点添加到名为&#x200B;*MyApplication/EncryptDocument*&#x200B;的服务。 （请参阅[添加SOAP端点](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints)。）
 
 ```java
  /*
@@ -386,7 +386,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门：使用Java™ API添加电子邮件端点 {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-以下Java™代码示例将电子邮件端点添加到名为&#x200B;*MyApplication/EncryptDocumen* t的服务。（请参阅[添加电子邮件端点](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)。）
+以下Java™代码示例将电子邮件端点添加到名为&#x200B;*MyApplication/EncryptDocumen* t的服务。 （请参阅[添加电子邮件终结点](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints)。）
 
 >[!NOTE]
 >

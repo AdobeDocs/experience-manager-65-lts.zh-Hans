@@ -1,5 +1,5 @@
 ---
-title: 导入和管理存档
+title: 导入并管理归档文件
 description: 了解如何导入和管理存档。 存档导入并管理在Workbench中创建的LCA。 您可以导入、配置、使用和删除存档。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a42d1094-293e-4f1a-a8f7-376dc8d34807
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
 
-# 导入和管理存档 {#import-and-manage-archives}
+# 导入并管理归档文件 {#import-and-manage-archives}
 
 使用“存档”选项卡导入和管理在Workbench中创建的LCA。
 
@@ -167,7 +167,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->要删除包含存储在第三方存储库( EMC Documentum Content Server 、 IBM FileNet Content Manager或IBM Content Manager )中的资产的存档，还必须使用Workbench从存储库中删除资产文件。
+>要删除包含存储在第三方存储库（ EMC Documentum Content Server 、 IBM FileNet Content Manager或IBM Content Manager ）中的资产的存档，还必须使用Workbench从存储库中删除资产文件。
 
 1. 在管理控制台中，单击服务>应用程序和服务>存档管理。
 1. 在“归档文件管理”页中，选中要删除的归档文件的复选框，然后单击“删除”。

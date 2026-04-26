@@ -1,5 +1,5 @@
 ---
-title: 配置LDAP绑定口令
+title: 配置 LDAP 绑定密码
 description: 了解在将配置文件导入其他系统之前，如何配置绑定密码字段。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 33e0f81f-7867-4c59-a9e5-75bf5182a27c
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 0%
+source-wordcount: '196'
+ht-degree: 5%
 
 ---
 
-# 配置LDAP绑定口令{#configure-the-ldap-bind-password}
+# 配置 LDAP 绑定密码{#configure-the-ldap-bind-password}
 
 >[!NOTE]
 > 

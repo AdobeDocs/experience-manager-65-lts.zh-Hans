@@ -7,9 +7,9 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 5a93918b-3b5f-49e0-9283-86776f9d8fb4
-source-git-commit: 180fd02df50f84e0d4f9bc01efe56e28d25555e2
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -42,17 +42,17 @@ ht-degree: 0%
 
 #### 内容分类 {#content-classifications}
 
-AEM长期以来使用叠加和Sling资源合并器的主体，允许客户扩展和自定义AEM功能。 为AEM控制台和UI提供支持的预定义功能存储在&#x200B;**/libs**&#x200B;中。 客户永远不会修改&#x200B;**/libs**&#x200B;下的任何内容，但可以在&#x200B;**/apps**&#x200B;下添加其他内容以叠加和扩展&#x200B;**/libs**&#x200B;中定义的功能（有关更多信息，请参阅使用叠加进行开发）。 在升级AEM时，这仍会导致许多问题，因为&#x200B;**/libs**&#x200B;中的内容可能会发生更改，从而导致覆盖功能以意外方式中断。 客户还可以通过`sling:resourceSuperType`的继承来扩展AEM组件，或直接通过sling：resourceType引用&#x200B;**/libs**&#x200B;中的组件。 在引用和覆盖用例时，可能会出现类似的升级问题。
+AEM长期以来使用叠加和Sling资源合并器的主体，允许客户扩展和自定义AEM功能。 为AEM控制台和UI提供支持的预定义功能存储在&#x200B;**/libs**&#x200B;中。 客户永远不会修改&#x200B;**/libs**&#x200B;下的任何内容，但可以在&#x200B;**/apps**&#x200B;下添加其他内容以叠加和扩展&#x200B;**/libs**&#x200B;中定义的功能（有关更多信息，请参阅使用叠加进行开发）。 在升级AEM时，这仍会导致许多问题，因为&#x200B;**/libs**&#x200B;中的内容可能会发生更改，从而导致覆盖功能以意外方式中断。 客户还可以通过`sling:resourceSuperType`的继承来扩展AEM组件，或直接通过sling:resourceType引用&#x200B;**/libs**&#x200B;中的组件。 在引用和覆盖用例时，可能会出现类似的升级问题。
 
 为了让客户更安全轻松地了解&#x200B;**/libs**&#x200B;的哪些区域可以安全使用和叠加&#x200B;**/libs**&#x200B;中的内容已使用以下mixin进行分类：
 
-* **公共(granite：PublicArea)** — 将节点定义为公共，以便可以覆盖、继承(`sling:resourceSuperType`)或直接使用(`sling:resourceType`)。 标记为Public的/libs下的节点可以安全升级，并且添加了兼容包。 通常，客户应仅使用标记为“公共”的节点。
+* **公共(granite:PublicArea)** — 将节点定义为公共，以便可以覆盖、继承(`sling:resourceSuperType`)或直接使用(`sling:resourceType`)。 标记为Public的/libs下的节点可以安全升级，并且添加了兼容包。 通常，客户应仅使用标记为“公共”的节点。
 
-* **抽象(granite：AbstractArea)** — 将节点定义为抽象。 节点可以覆盖或继承(`sling:resourceSupertype`)，但不能直接使用(`sling:resourceType`)。
+* **抽象(granite:AbstractArea)** — 将节点定义为抽象。 节点可以覆盖或继承(`sling:resourceSupertype`)，但不能直接使用(`sling:resourceType`)。
 
-* **Final (granite：FinalArea)** — 将节点定义为最终节点。 最好分类为最终节点的节点不应覆盖或继承。 最终节点可以通过`sling:resourceType`直接使用。 默认情况下，最终节点下的子节点被视为内部节点。
+* **Final (granite:FinalArea)** — 将节点定义为最终节点。 最好分类为最终节点的节点不应覆盖或继承。 最终节点可以通过`sling:resourceType`直接使用。 默认情况下，最终节点下的子节点被视为内部节点。
 
-* ***内部(granite：InternalArea)*** *- *将节点定义为内部节点。 理想情况下，分类为内部节点的节点不应重叠、继承或直接使用。 这些节点仅用于AEM的内部功能
+* ***内部(granite:InternalArea)*** *- *将节点定义为内部节点。 理想情况下，分类为内部节点的节点不应重叠、继承或直接使用。 这些节点仅用于AEM的内部功能
 
 * **无批注** — 节点根据树层次结构继承分类。 /根默认为Public。 **父级被分类为“内部”或“最终”的节点也将被视为“内部”节点。**
 
@@ -86,7 +86,7 @@ CRXDE Lite中应用的Mixin将显示标记为`INTERNAL`的内容节点和树灰�
 
 AEM 6.5附带运行状况检查，如果以与内容分类不一致的方式使用叠加或引用的内容，该检查会提醒客户。
 
-**&#x200B; Sling/Granite Content Access Check**&#x200B;是一项新的运行状况检查，用于监视存储库以查看客户代码是否未正确访问AEM中的受保护节点。
+** Sling/Granite Content Access Check**是一项新的运行状况检查，用于监视存储库以查看客户代码是否未正确访问AEM中的受保护节点。
 
 此操作扫描&#x200B;**/应用程序**，通常需要几秒钟才能完成。
 

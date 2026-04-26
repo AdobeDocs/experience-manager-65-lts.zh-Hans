@@ -1,5 +1,5 @@
 ---
-title: 组合PDF项目组合
+title: 组装 PDF 组合
 description: 组合PDF组合以组合多个不同类型的文档，包括word文件、图像文件和PDF文档。 您可以使用Java API和Web服务API组合PDF产品组合。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms, Document Services
 hide: true
 hidefromtoc: true
 exl-id: 43460ac1-a152-4a0d-943f-1b3ed007f089
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1842'
 ht-degree: 0%
 
 ---
 
-# 组合PDF项目组合 {#assembling-pdf-portfolios}
+# 组装 PDF 组合 {#assembling-pdf-portfolios}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -84,8 +84,8 @@ DXX文档必须包含带有嵌套`Navigator`标记的`Portfolio`标记。 请注
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 **创建PDF Assembler客户端**
 
@@ -131,7 +131,7 @@ PDF Portfolio在收藏集对象中返回。 循环访问收藏集对象并将PDF
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式组合PDF文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
+[以编程方式组装 PDF 文档](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
 ## 使用Java API组合PDF Portfolio {#assemble-a-pdf-portfolio-using-the-java-api}
 
@@ -186,7 +186,7 @@ PDF Portfolio在收藏集对象中返回。 循环访问收藏集对象并将PDF
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API组合PDF项目组合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API组合PDF项目组合](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -235,8 +235,8 @@ PDF Portfolio在收藏集对象中返回。 循环访问收藏集对象并将PDF
    * 创建`MyMapOf_xsd_string_To_xsd_anyType`对象。 此收藏集对象用于存储创建PDF Portfolio所需的输入文件。
    * 对于每个输入文件，创建一个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。
    * 将表示键名的字符串值分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段。 此值必须匹配DDX文档中指定元素的值。 （为每个输入文件执行此任务。）
-   * 将存储输入文件的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 (为每个输入的PDF文档执行此任务。)
-   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 (为每个输入的PDF文档执行此任务。)
+   * 将存储输入文件的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 （为每个输入的PDF文档执行此任务。）
+   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 （为每个输入的PDF文档执行此任务。）
 
 1. 设置运行时选项。
 

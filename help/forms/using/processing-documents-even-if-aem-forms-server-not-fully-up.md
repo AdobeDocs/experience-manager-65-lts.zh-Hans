@@ -7,10 +7,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 22dd8daa-b8c6-4e7d-bca3-3958a79fb4b5
-source-git-commit: 402b42d8ce5539739205a85d99bcb035d382a036
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '110'
+ht-degree: 3%
 
 ---
 
@@ -27,6 +27,6 @@ ht-degree: 0%
 
 该解决方案适用于JEE服务器上的AEM Forms和OSGi服务器上的AEM Forms 。
 
-## 解决方案 {#solution}
+## 解决办法 {#solution}
 
-要解决此问题，请在服务器启动期间向`Dcom.adobe.livecycle.dsc.deferServiceStart=true`批处理文件[添加参数](/help/sites-deploying/command-line-start-and-stop.md#windows-platform-start-bat-script-example)。
+要解决此问题，请在服务器启动期间向[批处理文件](/help/sites-deploying/command-line-start-and-stop.md#windows-platform-start-bat-script-example)添加参数`Dcom.adobe.livecycle.dsc.deferServiceStart=true`。

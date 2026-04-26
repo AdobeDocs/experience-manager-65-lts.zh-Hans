@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 2823d38e-f544-408e-9437-3d0fc622dc34
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 1%
+source-wordcount: '257'
+ht-degree: 3%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 1%
 1. 在管理控制台中，单击服务>表单。
 1. 在“表单输出”下的“输出类型”列表中，选择以下选项之一：
 
-   **完整HTML：**&#x200B;渲染完整HTML标记中的表单(完整的HTML页面)。 此值为默认值。
+   **完整HTML：**&#x200B;渲染完整HTML标记中的表单（完整的HTML页面）。 此值为默认值。
 
-   **表单正文：**&#x200B;在`<BODY>`标记内呈现表单(不是完整的HTML页面)。
+   **表单正文：**&#x200B;在`<BODY>`标记内呈现表单（不是完整的HTML页面）。
 
 1. 单击“保存”。
 

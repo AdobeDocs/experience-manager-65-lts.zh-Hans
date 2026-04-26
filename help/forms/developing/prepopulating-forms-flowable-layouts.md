@@ -1,5 +1,5 @@
 ---
-title: 使用可流布局预填充Forms
+title: 使用流式布局预填充表单
 description: 使用Java API和Web服务API预填充具有流式布局的表单，以在呈现的表单中向用户显示数据。
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
@@ -11,16 +11,16 @@ feature: Adaptive Forms, Document Services, APIs & Integrations
 hide: true
 hidefromtoc: true
 exl-id: 8de9682f-8332-4f6e-ac4b-295fca82a424
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '3478'
-ht-degree: 0%
+source-wordcount: '3513'
+ht-degree: 1%
 
 ---
 
-# 使用可流布局预填充Forms {#prepopulating-forms-with-flowable-layouts1}
+# 使用流式布局预填充表单 {#prepopulating-forms-with-flowable-layouts1}
 
-## 使用可流布局预填充Forms {#prepopulating-forms-with-flowable-layouts2}
+## 使用流式布局预填充表单 {#prepopulating-forms-with-flowable-layouts2}
 
 预先填充的表单会在呈现的表单中向用户显示数据。 例如，假设用户使用用户名和密码登录到网站。 如果验证成功，则客户端应用程序将查询数据库以获取用户信息。 数据将合并到表单中，然后表单呈现给用户。 因此，用户能够在表单中查看个性化数据。
 
@@ -32,14 +32,14 @@ ht-degree: 0%
 
 以下两个XML数据源可以预填充表单：
 
-* XDP数据源，它是符合XFA语法的XML(或预填充使用Acrobat创建的表单的XFDF数据)。
+* XDP数据源，它是符合XFA语法的XML（或预填充使用Acrobat创建的表单的XFDF数据）。
 * 包含与表单字段名称匹配的名称/值对的任意XML数据源（本节中的示例使用任意XML数据源）。
 
 要预填充的每个表单字段都必须存在XML元素。 XML元素名称必须与字段名称匹配。 如果XML元素与表单字段不对应，或者如果XML元素名称与字段名称不匹配，则忽略该元素。 只要指定了所有XML元素，就不必匹配XML元素的显示顺序。
 
 在预填充已包含数据的表单时，必须指定已在XML数据源中显示的数据。 假设包含10个字段的表单在四个字段中有数据。 接下来，假设您希望预填充其余六个字段。 在这种情况下，必须在XML数据源中指定用于预填充表单的10个XML元素。 如果仅指定六个元素，则原始的四个字段为空。
 
-例如，您可以预填充窗体，如示例确认窗体。 (请参阅[渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)中的“确认表单”。)
+例如，您可以预填充窗体，如示例确认窗体。 （请参阅[渲染交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)中的“确认表单”。）
 
 要预填充示例确认表单，您必须创建一个XML数据源，该数据源包含与表单中的三个字段匹配的三个XML元素。 此表单包含以下三个字段：`FirstName`、`LastName`和`Amount`。 第一步是创建一个XML数据源，该数据源包含与表单设计中的字段匹配的XML元素。 下一步是将数据值分配给XML元素，如以下XML代码中所示。
 
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ### 窗体设计注意事项 {#form-design-considerations}
 
-带可流动布局的Forms基于在Designer中创建的表单设计。 表单设计指定一组布局、呈现和数据捕获规则，包括基于用户输入计算值。 数据输入到表单中时将应用规则。 添加到表单的字段是表单设计内的子表单。 例如，在上图所示的采购订单表单中，每行都是一个子表单。 有关创建包含子表单的表单设计的信息，请参阅[创建具有可流动布局的采购订单表单](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9_cn)。
+带可流动布局的Forms基于在Designer中创建的表单设计。 表单设计指定一组布局、呈现和数据捕获规则，包括基于用户输入计算值。 数据输入到表单中时将应用规则。 添加到表单的字段是表单设计内的子表单。 例如，在上图所示的采购订单表单中，每行都是一个子表单。 有关创建包含子表单的表单设计的信息，请参阅[创建具有可流动布局的采购订单表单](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9)。
 
 ### 了解数据子组 {#understanding-data-subgroups}
 
@@ -232,9 +232,9 @@ XML数据源用于预先填充具有固定布局和可流动布局的表单。 �
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[Forms服务API快速启动](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
+[表单服务 API 快速入门](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
 
-[呈现交互式PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[渲染交互式 PDF 表单](/help/forms/developing/rendering-interactive-pdf-forms.md)
 
 [创建可渲染Forms的Web应用程序](/help/forms/developing/creating-web-applications-renders-forms.md)
 
@@ -264,7 +264,7 @@ XML数据源用于预先填充具有固定布局和可流动布局的表单。 �
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * 通过重复表单静态部分中出现的每个字段的上一个子步骤，将所有剩余的元素添加到标题元素中(在XML数据源图表中，这些字段显示在A部分中。（请参阅[了解数据子组](#understanding-data-subgroups)）
+   * 通过重复表单静态部分出现的每个字段的最后一个子步骤（在XML数据源图表中，这些字段显示在A部分中），将所有剩余的元素添加到标题元素。 （请参阅[了解数据子组](#understanding-data-subgroups)。）
    * 通过调用`Document`对象的`createElement`方法创建XML数据源的详细信息元素。 将表示元素名称的字符串值传递给`createElement`方法。 将返回值强制转换为`Element`。 接下来，通过调用`root`对象的`appendChild`方法，将detail元素附加到根元素，并将该detail元素对象作为参数传递。 附加到详细信息元素的XML元素对应于表单的动态部分。 以下代码行显示此应用程序逻辑：
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -308,7 +308,7 @@ XML数据源用于预先填充具有固定布局和可流动布局的表单。 �
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API在可流式布局中预填充Forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API在可流式布局中预填充Forms](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -340,7 +340,7 @@ XML数据源用于预先填充具有固定布局和可流动布局的表单。 �
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * 通过重复表单静态部分中出现的每个字段的上一个子步骤，将所有剩余的元素添加到标题元素中(在XML数据源图表中，这些字段显示在A部分中。（请参阅[了解数据子组](#understanding-data-subgroups)）
+   * 通过重复表单静态部分出现的每个字段的最后一个子步骤（在XML数据源图表中，这些字段显示在A部分中），将所有剩余的元素添加到标题元素。 （请参阅[了解数据子组](#understanding-data-subgroups)。）
    * 通过调用`Document`对象的`createElement`方法创建XML数据源的详细信息元素。 将表示元素名称的字符串值传递给`createElement`方法。 将返回值强制转换为`Element`。 接下来，通过调用`root`对象的`appendChild`方法，将detail元素附加到根元素，并将该detail元素对象作为参数传递。 附加到详细信息元素的XML元素对应于表单的动态部分。 以下代码行显示了此应用程序逻辑：
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`

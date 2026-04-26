@@ -1,5 +1,5 @@
 ---
-title: 指定输出的文件位置
+title: 指定输出文件位置
 description: 了解如何为某些类型的文件（例如，内容根URI、XCI配置文件、缓存和默认值）的输出指定文件位置。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: aff0274a-bbb7-4062-afaf-7f9c31f57cb1
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
-# 指定输出的文件位置 {#specify-file-locations-for-output}
+# 指定输出文件位置 {#specify-file-locations-for-output}
 
 >[!NOTE]
 > 

@@ -1,5 +1,5 @@
 ---
-title: 以编程方式组合PDF文档
+title: 以编程方式组装 PDF 文档
 description: 使用Assembler服务API通过Java API和Web服务API将多个PDF文档组合为单个PDF文档。
 contentOwner: admin
 content-type: reference
@@ -12,14 +12,14 @@ feature: Adaptive Forms,Document Services
 hide: true
 hidefromtoc: true
 exl-id: a64f0bd4-8d5c-485d-b620-608bfe33a72f
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2139'
 ht-degree: 0%
 
 ---
 
-# 以编程方式组合PDF文档 {#programmatically-assembling-pdf-documents}
+# 以编程方式组装 PDF 文档 {#programmatically-assembling-pdf-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -84,8 +84,8 @@ ht-degree: 0%
 * adobe-livecycle-client.jar
 * adobe-usermanager-client.jar
 * adobe-assembler-client.jar
-* adobe-utilities.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
-* jbossall-client.jar(如果在JBoss上部署了AEM Forms，则此为必填字段)
+* adobe-utilities.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
+* jbossall-client.jar（如果在JBoss上部署了AEM Forms，则此为必填字段）
 
 如果AEM Forms部署在除JBoss之外的受支持J2EE应用程序服务器上，则必须将adobe-utilities.jar和jbossall-client.jar文件替换为特定于部署AEM Forms的J2EE应用程序服务器的JAR文件。
 
@@ -154,7 +154,7 @@ Assembler服务返回一个`java.util.Map`对象，该对象可以从`AssemblerR
 
 [设置连接属性](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-[以编程方式拆分PDF文档](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
+[以编程方式拆分 PDF 文档](/help/forms/developing/programmatically-disassembling-pdf-documents.md#programmatically-disassembling-pdf-documents)
 
 ## 使用Java API组合PDF文档 {#assemble-pdf-documents-using-the-java-api}
 
@@ -204,7 +204,7 @@ Assembler服务返回一个`java.util.Map`对象，该对象可以从`AssemblerR
    要获取新创建的PDF文档，请执行以下步骤：
 
    * 调用`AssemblerResult`对象的`getDocuments`方法。 这将返回`java.util.Map`对象。
-   * 反复查找`java.util.Map`对象，直到找到结果`com.adobe.idp.Document`对象。 (您可以使用DDX文档中指定的PDF结果元素来获取文档。)
+   * 反复查找`java.util.Map`对象，直到找到结果`com.adobe.idp.Document`对象。 （您可以使用DDX文档中指定的PDF结果元素来获取文档。）
    * 调用`com.adobe.idp.Document`对象的`copyToFile`方法来提取PDF文档。
 
    >[!NOTE]
@@ -213,7 +213,7 @@ Assembler服务返回一个`java.util.Map`对象，该对象可以从`AssemblerR
 
 **另请参阅**
 
-[快速入门(SOAP模式)：使用Java API组合PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[快速入门（SOAP模式）：使用Java API组合PDF文档](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
 [包括AEM Forms Java库文件](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -261,9 +261,9 @@ Assembler服务返回一个`java.util.Map`对象，该对象可以从`AssemblerR
    * 使用字节数组的内容分配其`MTOM`字段以填充`BLOB`对象。
    * 创建`MyMapOf_xsd_string_To_xsd_anyType`对象。 此收藏集对象用于存储输入的PDF文档。
    * 对于每个输入PDF文档，创建一个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。 例如，如果使用两个输入PDF文档，则创建两个`MyMapOf_xsd_string_To_xsd_anyType_Item`对象。
-   * 将表示键名的字符串值分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段。 此值必须匹配DDX文档中指定的PDF源元素的值。 (为每个输入的PDF文档执行此任务。)
-   * 将存储PDF文档的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 (为每个输入的PDF文档执行此任务。)
-   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 (为每个输入的PDF文档执行此任务。)
+   * 将表示键名的字符串值分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`key`字段。 此值必须匹配DDX文档中指定的PDF源元素的值。 （为每个输入的PDF文档执行此任务。）
+   * 将存储PDF文档的`BLOB`对象分配给`MyMapOf_xsd_string_To_xsd_anyType_Item`对象的`value`字段。 （为每个输入的PDF文档执行此任务。）
+   * 将`MyMapOf_xsd_string_To_xsd_anyType_Item`对象添加到`MyMapOf_xsd_string_To_xsd_anyType`对象。 调用`MyMapOf_xsd_string_To_xsd_anyType`对象的`Add`方法并传递`MyMapOf_xsd_string_To_xsd_anyType`对象。 （为每个输入的PDF文档执行此任务。）
 
 1. 设置运行时选项。
 

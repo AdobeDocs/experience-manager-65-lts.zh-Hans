@@ -1,5 +1,5 @@
 ---
-title: 工作管理器和限制
+title: 工作管理器与限流
 description: 本文档提供了有关工作管理器的背景信息，并提供了有关配置工作管理器限制选项的说明。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: e0aa9304-3da0-4ae6-a465-089dc96c427e
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 0%
+source-wordcount: '1053'
+ht-degree: 1%
 
 ---
 
-# 工作管理器和限制{#work-manager-and-throttling}
+# 工作管理器与限流{#work-manager-and-throttling}
 
 >[!NOTE]
 > 

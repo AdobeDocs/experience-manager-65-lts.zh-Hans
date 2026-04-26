@@ -1,5 +1,5 @@
 ---
-title: 更改“应用程序和服务”页面上显示的项目数
+title: 更改“应用程序和服务”页面上显示的项目数量
 description: 了解如何更改应用程序和服务页面上显示的项目数。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: a60548c8-42ed-4444-839d-7f33c9d2dd14
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 21%
 
 ---
 
-# 更改“应用程序和服务”页面上显示的项目数 {#change-the-number-of-items-displayed-on-the-applications-and-services-pages}
+# 更改“应用程序和服务”页面上显示的项目数量 {#change-the-number-of-items-displayed-on-the-applications-and-services-pages}
 
 >[!NOTE]
 > 
@@ -27,4 +27,4 @@ ht-degree: 0%
 在“首选项”页上，您可以控制每个“应用程序和服务”网页上显示的服务、端点、类别和存档的数量。
 
 1. 在管理控制台中，**[!UICONTROL 单击“服务”>“应用程序和服务”>“首选项”]**。
-1. 在“首选项”页面上，键入可在每个页面上显示的服务、端点、类别和存档的数量，然后单击“保存”**&#x200B;**。
+1. 在“首选项”页面上，键入可在每个页面上显示的服务、端点、类别和存档的数量，然后单击“保存”****。

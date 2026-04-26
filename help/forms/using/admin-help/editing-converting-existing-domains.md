@@ -1,5 +1,5 @@
 ---
-title: 编辑和转换现有域
+title: 编辑和转化现有域
 description: 了解如何从域管理页面更改现有域的设置。 将现有企业域转换为混合域或反之。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: 0dafef83-a516-48df-9175-019984843cfa
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
-# 编辑和转换现有域{#editing-and-converting-existing-domains}
+# 编辑和转化现有域{#editing-and-converting-existing-domains}
 
 >[!NOTE]
 > 

@@ -11,10 +11,10 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: f1a68461-c66a-4ea4-902b-644c620ea3f6
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
 source-wordcount: '480'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -31,9 +31,9 @@ ht-degree: 1%
    >
    >不应将会话超时限制设置为低于10分钟，因为系统可能无法正常运行。 建议值为10-120（分钟）。
 
-   **断言阈值（秒）：**&#x200B;由于群集中AEM表单应用程序服务器之间的系统时间差异，抵消延迟的缓冲时间。 AEM forms根据此属性中指定的时间量（以秒为单位）回溯用户的登录时间。 有效值为`0`到`3600`。 默认值为`60`。 此设置将更新配置文件中的`SAML/Producer/assertionThresholdInSeconds`条目密钥。
+   **断言阈值（秒）：**&#x200B;由于群集中AEM表单应用程序服务器之间的系统时间差异，抵消延迟的缓冲时间。 AEM forms根据此属性中指定的时间量（以秒为单位）回溯用户的登录时间。 有效值为`0`到`3600`。 默认值为 `60`。 此设置将更新配置文件中的`SAML/Producer/assertionThresholdInSeconds`条目密钥。
 
-   **允许的最大断言续订次数：**&#x200B;无需登录即可透明续订用户会话的最大次数。 有效值为`0`到`9999`。 值为`0`表示断言未续订。 默认值为 10。此设置将更新配置文件中的`SAML/Producer/maxAssertionRenewalCount`条目密钥。
+   **允许的最大断言续订次数：**&#x200B;无需登录即可透明续订用户会话的最大次数。 有效值为`0`到`9999`。 值为`0`表示断言未续订。 默认值为 10。 此设置将更新配置文件中的`SAML/Producer/maxAssertionRenewalCount`条目密钥。
 
 1. （可选）更改以下任何目录同步属性：
 
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 1. （可选）更改以下属性，然后单击&#x200B;**[!UICONTROL 确定]**：
 
-   **用户管理器事件审核：**&#x200B;选择此选项可启用目录同步事件和身份验证事件（如成功、失败和锁定）的审核。 默认情况下，除非安装了需要审核的组件(如Rights Management)，否则不会选择此选项。 此设置将更新配置文件中的`APSAuditService`条目密钥。
+   **用户管理器事件审核：**&#x200B;选择此选项可启用目录同步事件和身份验证事件（如成功、失败和锁定）的审核。 默认情况下，除非安装了需要审核的组件（如Rights Management），否则不会选择此选项。 此设置将更新配置文件中的`APSAuditService`条目密钥。
 
    **自动创建动态组：**&#x200B;启用基于电子邮件域的自动创建动态组。 （请参阅[创建动态组](/help/forms/using/admin-help/creating-configuring-groups.md#create-a-dynamic-group)。）
 

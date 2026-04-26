@@ -1,5 +1,5 @@
 ---
-title: Forms工作流程概述
+title: 表单工作流概述
 description: Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: aa2477a3-3870-4ba4-bcea-e94ae2d06d02
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 2%
+source-wordcount: '259'
+ht-degree: 17%
 
 ---
 
-# Forms工作流程概述 {#overview-of-forms-workflow}
+# 表单工作流概述 {#overview-of-forms-workflow}
 
 Forms工作流允许用户设计、管理和优化以人为中心的流程。 使用表单工作流，用户还可以管理连接系统和人员的自动化业务流程应用程序。
 
@@ -60,7 +60,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
     <ul>
      <li><p>搜索流程</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜索进程实例</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/searching-process-instances.md#searching-for-process-instances">搜索流程实例</a></p></td>
   </tr>
   <tr>
    <td><p>任务搜索</p></td>
@@ -68,7 +68,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
     <ul>
      <li><p>按用户或任务ID搜索任务</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">使用任务</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/tasks.md#working-with-tasks">处理任务</a></p></td>
   </tr>
   <tr>
    <td><p>停止的操作错误</p></td>
@@ -77,7 +77,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
      <li><p>查看所有停止的操作及其错误</p></li>
      <li><p>重试或终止停止的操作</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停止的操作和分支</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停滞的操作和分支</a></p></td>
   </tr>
   <tr>
    <td><p>停止的分支错误</p></td>
@@ -86,7 +86,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
      <li><p>查看所有停止的分支及其错误</p></li>
      <li><p>重试停止的分支</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停止的操作和分支</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/stalled-operations-branches.md#working-with-stalled-operations-and-branches">处理停滞的操作和分支</a></p></td>
   </tr>
   <tr>
    <td><p>外出办公</p></td>
@@ -97,7 +97,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
      <li><p>添加外出日期范围 </p></li>
      <li><p>指定用户外出时如何处理任务</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">配置“外出”设置</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-out-office-settings.md#configuring-out-of-office-settings">配置外出设置</a></p></td>
   </tr>
   <tr>
    <td><p>业务日历</p></td>
@@ -105,7 +105,7 @@ Forms工作流允许用户设计、管理和优化以人为中心的流程。 �
     <ul>
      <li><p>创建定义工作日和非工作日的业务日历</p></li>
     </ul></td>
-   <td><p><a href="/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars">配置商业日历</a></p></td>
+   <td><p><a href="/help/forms/using/admin-help/configuring-business-calendars.md#configuring-business-calendars">配置业务日程表</a></p></td>
   </tr>
   <tr>
    <td><p>共享队列</p></td>

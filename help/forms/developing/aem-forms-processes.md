@@ -1,5 +1,5 @@
 ---
-title: 了解AEM Forms流程
+title: 理解 AEM Forms 流程
 description: 了解AEM Forms流程如何包括表单创建、提交、数据处理、验证、集成、工作流自动化和输出管理。
 contentOwner: admin
 content-type: reference
@@ -11,14 +11,14 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 228185f0-deef-4d49-a5b9-0c19411e30c2
-source-git-commit: bc91f56d447d1f2c26c160f5c414fd0e6054f84c
+source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
 
-# 了解AEM Forms流程 {#understanding-aem-forms-processes}
+# 理解 AEM Forms 流程 {#understanding-aem-forms-processes}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
 
@@ -64,8 +64,8 @@ ht-degree: 0%
 
    *使用AEM Forms编程*&#x200B;描述了以下以编程方式调用此短暂进程的方法：
 
-   * [通过使用AEM Forms Remoting传递不安全的文档来调用短期进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)(使用Flex应用程序)
-   * [使用调用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) (Java™调用API)调用短期进程
+   * [通过使用AEM Forms Remoting传递不安全的文档来调用短期进程](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-a-short-lived-process-by-passing-an-unsecure-document-using-remoting)（使用Flex应用程序）
+   * [使用调用API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-a-short-lived-process-using-the-invocation-api) （Java™调用API）调用短期进程
    * [使用Base64编码调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)（Web服务示例）
    * [使用MTOM调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom)（Web服务示例）
    * [使用SwaRef调用AEM Forms](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-swaref)（Web服务示例）
