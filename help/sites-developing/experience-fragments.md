@@ -99,7 +99,7 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 
 >[!CAUTION]
 >
->体验片段仅支持&#x200B;***1} [可编辑模板](/help/sites-developing/page-templates-editable.md)。***
+>体验片段仅支持&#x200B;***1&rbrace; [可编辑模板](/help/sites-developing/page-templates-editable.md)。***
 >
 >体验片段只能在基于可编辑模板的页面上使用。
 
@@ -150,7 +150,7 @@ HTML演绎版是使用`Sling Rewriter`管道生成的。 管道定义于`/libs/e
 * 向其中添加组件，
 * 然后以HTML格式或JSON格式将其导出为Adobe Target选件。
 
-可在AEM](/help/sites-administering/experience-fragments-target.md#Prerequisites)的创作实例上[启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
+可在AEM[&#128279;](/help/sites-administering/experience-fragments-target.md#Prerequisites)的创作实例上启用此功能。 它需要有效的Adobe Target配置以及Link Externalizer配置。
 
 链接外部化器用于确定在创建Target选件的HTML版本（随后将发送到Adobe Target）时所需的正确URL。 Adobe Target需要拥有Target HTML选件中所有链接的公共访问权限。 在使用体验片段和这些链接引用的任何资源之前，先发布它们。
 

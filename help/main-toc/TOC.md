@@ -243,7 +243,7 @@ ht-degree: 84%
 + Assets {#assets}
    + [关于 DAM](/help/assets/assets.md)
    + [资产最佳做法](/help/assets/best-practices-for-assets.md)
-   + [ [!DNL Assets] 中的辅助功能](/help/assets/accessibility.md)
+   + [&#x200B; [!DNL Assets] 中的辅助功能](/help/assets/accessibility.md)
    + 使用 Experience Manager Assets {#using}
       + [[!DNL Assets] 主页体验](/help/assets/assets-home-page.md)
       + [搜索数字资产](/help/assets/search-assets.md)
@@ -318,7 +318,7 @@ ht-degree: 84%
       + [将资产与活动流集成](/help/assets/extending-activity-stream.md)
       + [扩展资产编辑器](/help/assets/asseteditorx.md)
       + [[!DNL Assets] HTTP API](/help/assets/mac-api-assets.md)
-      + [ [!DNL Assets] HTTP API 中的内容片段支持](/help/assets/assets-api-content-fragments.md)
+      + [&#x200B; [!DNL Assets] HTTP API 中的内容片段支持](/help/assets/assets-api-content-fragments.md)
       + [内容片段的 GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
       + [使用 GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)
       + [持久化查询](/help/sites-developing/headless/graphql-api/persisted-queries.md)
@@ -401,8 +401,8 @@ ht-degree: 84%
       + [视频演绎版](/help/assets/video-renditions.md)
    + 与其他解决方案集成 {#integrations}
       + [与 [!DNL Adobe Workfront] 集成](/help/assets/workfront-integrations.md)
-      + [为 [!DNL Workfront] 安装 [!DNL enhanced connector] ](/help/assets/workfront-connector-install.md)
-      + [为 [!DNL Workfront] 配置 [!DNL enhanced connector] ](/help/assets/workfront-connector-configure.md)
+      + [为 [!DNL Workfront] 安装 [!DNL enhanced connector] &#x200B;](/help/assets/workfront-connector-install.md)
+      + [为 [!DNL Workfront] 配置 [!DNL enhanced connector] &#x200B;](/help/assets/workfront-connector-configure.md)
 + Forms {#forms}
    + [AEM Forms 服务包热修复补丁](/help/forms/using/adobe-experience-manager-forms-65-lts-hotfixes.md)
    + 快速入门 {#getting-started}
