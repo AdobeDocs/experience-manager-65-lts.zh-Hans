@@ -8,38 +8,38 @@ feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin,Developer,User
 exl-id: 6dbc943b-3bca-4926-896d-f1471a49a70f
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '943'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # 关于 Experience Hub {#aem-experience-hub}
 
-Experience Hub引入了一个集中化的起点，以便在Adobe Experience Manager中管理内容、资源和站点。 Experience Hub旨在提供个性化体验，可让您根据自己的角色和目标，无缝导航AEM生态系统。 作为指南，它可以提供关键洞察和建议操作，帮助您高效实现目标。 Experience Hub布局清晰、以人物为导向，可确保快速访问基本工具，支持在所有AEM功能中实现简化而有效的体验。
+Experience Hub 为在 Adobe Experience Manager 中管理内容、资产和网站引入了一个集中的起点。 Experience Hub 旨在提供个性化体验，让您可以根据自己的角色和目标在 AEM 生态系统中无缝导航。 作为指南，它可以提供关键洞察和建议操作，帮助您高效实现目标。 Experience Hub 采用清晰的、以用户画像为导向的布局，可确保快速访问基本工具，有助于在 AEM 的所有功能中提供简化、高效的体验。
 
-观看重新构建的AEM Experience Hub工作区的快速导览（2分钟39秒）。
+观看重新设计的 AEM Experience Hub 工作区的快速导览（2 分 39 秒）。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475202/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community.
 -->
 
-## Experience Hub特写 {#aem-experience-hub-about}
+## 近距离了解 Experience Hub {#aem-experience-hub-about}
 
-1. 若要开始，请单击[Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home)打开其主页。
+1. 如要开始使用，请点击 [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home)，打开其主页。
 
-   ![Adobe Experience Cloud主页](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
+   ![Adobe Experience Cloud 主页](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
-1. 在&#x200B;**快速访问**&#x200B;分组中，单击&#x200B;[**Experience Manager**](https://experience.adobe.com)。
-1. 首次访问时，系统会为您分配&#x200B;**内容作者**&#x200B;预设（显示在页面的右上角附近）。 它控制您看到的构件、导航项和内容。
+1. 在&#x200B;**快速访问**&#x200B;分组中，点击 [**Experience Manager**](https://experience.adobe.com)。
+1. 首次访问时，系统会为您分配&#x200B;**内容作者**&#x200B;预设（显示在页面的右上角附近）。 它控制着您能看到哪些小组件、导航项和内容。
 
-   您可以随时更改此预设。
+   您可以随时更改这个预设。
 
-   ![显示所选内容作者的预设下拉列表](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
+   ![预设下拉列表中显示选定的内容作者](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
-Adobe Experience Manager页面已更新，导航和交互式构件已得到增强。 上一组解决方案信息卡提供了对以下工具的访问：
+Adobe Experience Manager 页面已更新，包含增强的导航和交互式小组件。 以前收藏的解决方案信息卡提供了对以下工具的访问权限：
 
 * 通用编辑器
 * Cloud Manager
@@ -50,100 +50,100 @@ Adobe Experience Manager页面已更新，导航和交互式构件已得到增�
 
 >[!IMPORTANT]
 >
->显示的构件、工具和工件取决于用户角色、权限和AEM部署类型（AEM as a Cloud Service或Managed Services 6.5/6.5 LTS）。
+>显示的小组件、工具和工件取决于用户画像、权限和 AEM 部署类型（AEM as a Cloud Service 或 Managed Services 6.5/6.5 LTS）。
 
-这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航。 此外，通过新的导航元素，可快速访问特定于已启用解决方案的主要Adobe Experience Manager功能。 此类解决方案包括Assets、Sites、Forms、内容片段、启动项等。
+这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主要导航区域。 此外，通过新的导航元素可快速访问专为已启用的解决方案提供的主要 Adobe Experience Manager 功能。 这些解决方案包括 Assets、Sites、Forms、内容片段、发布等。
 
-![Experience Hub环境](/help/assets/assets-experience-hub/experience-hub-author-environments-ams.png)
+![Experience Hub 环境](/help/assets/assets-experience-hub/experience-hub-author-environments-ams.png)
 
-这些功能可用于您有权访问的主要生产环境。 或者，您也可以选择要定位的特定环境，以防您有权访问多个AEM实例。
+这些功能适用于那些您有权访问的主要生产环境。 或者，如果您有权访问多个 AEM 实例，您也可以选择一个想作为目标的特定环境。
 
 ![生产和暂存环境](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
-作为Adobe Experience Manager的中心枢纽，Experience Hub页面可扩展，提供针对每个用户角色定制的其他小部件和操作。 可完全自定义的页面，允许您为屏幕选择最佳布局。 可以过滤构件，以便只有选定的构件会显示在主页上，从而确保提供个性化体验。
+作为 Adobe Experience Manager 的中心枢纽，Experience Hub 页面可扩展，包含为每个用户角色量身定制的额外小组件和操作。 该页面可完全自定义，允许您为屏幕选择最佳布局。 可以筛选小组件，只将选定的小组件显示在主要页面上，确保提供个性化体验。
 
-![已自定义Experience Hub](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
+![定制的 Experience Hub](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
 
-此外，还可以在页面上调整构件大小并重新放置构件，以更好地满足您的需求和首选项。
+此外，还可以在页面上调整小组件的大小，将其重新放置，更好地满足您的需求和偏好。
 
-![Experience Hub小组件](/help/assets/assets-experience-hub/experience-hub-custom-widgets-ams.png)
+![Experience Hub 小组件](/help/assets/assets-experience-hub/experience-hub-custom-widgets-ams.png)
 
-**创作环境**&#x200B;部分显示您可以访问的所有AEM环境。 这些解决方案和页面提供了特定的快捷方式，还允许您在列表顶部固定要显示的特定环境。
+**创作环境**&#x200B;部分中显示了您可以访问的所有 AEM 环境。 这些是解决方案和页面的可用的特定快捷方式，允许您固定想显示在列表顶部的特定环境。
 
-下图中的&#x200B;**最近访问**&#x200B;部分列出了您最近在AEM中访问的页面。 根据租户的许可，构件可能包括“项目”、“管道执行”、“Assets”、“页面编辑器”和“表单编辑器”等项目。
+下图是&#x200B;**最近访问**&#x200B;部分，其中列出了您最近在 AEM 中访问过的页面。 根据您的租户的许可证情况，小组件中可能包含“程序”、“管道执行”、“资产”、“页面编辑器”和“表单编辑器”等项。
 
-页面左上角附近的&#x200B;**快速快捷键**&#x200B;提供了一个可配置的快捷键列表，可帮助您开始日常任务。 此列表是可自定义的，每项操作均针对选定的AEM环境。
+页面左上角附近的&#x200B;**快捷方式**&#x200B;提供了一个可配置的快捷方式列表，可帮助您启动日常任务。 您可以自定义这个列表，每项操作都针对选定的 AEM 环境。
 
 ![创作环境](/help/assets/assets-experience-hub/experience-hub-recents-ams.png)
 
-![Experience Hub快速快捷键](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
+![Experience Hub 快捷方式](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
 
-如果不存在生产AEM Cloud Service或Managed Services环境，则选择选项将暗显（不可用）。
+如果生产 AEM Cloud Service 或 Managed Services 环境不存在，选择选项就会显示为灰色（不可用）。
 
-![无生产环境的Experience Hub](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
+![Experience Hub 无生产环境](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
 ## 常见问题解答（FAQ） {#faq}
 
-+++**Adobe Experience Hub在Adobe Experience Manager中的主要用途是什么？**
++++**Adobe Experience Hub 在 Adobe Experience Manager 中的主要用途是什么？**
 
-Adobe Experience Hub作为在Adobe Experience Manager中管理内容、资源和站点的集中式起点，根据用户角色和目标提供个性化体验。
-
-+++
-
-+++**Experience Hub如何适应不同的用户角色？**
-
-Experience Hub为作者、资源库管理员、管理员和IT人员提供基于角色的视图和快速操作。 每个角色都可以快速访问所需的工具和功能。
+Adobe Experience Hub 是在 Adobe Experience Manager 中管理内容、资产和网站的一个统一起点，根据用户角色和目标提供个性化体验。
 
 +++
 
-+++**Experience Hub的导航和布局有哪些功能？**
++++**Experience Hub 如何适应不同的用户角色？**
 
-Experience Hub使用统一的左侧导航来整理AEM的核心功能、可自定义的小部件和快速操作。 此布局可创建有条理、高效的工作区。
-
-+++
-
-+++**用户如何个性化其Experience Hub工作区？**
-
-用户可以添加、删除、调整小部件大小和重新排列小部件，并自定义快速操作以根据自己的需求和偏好定制工作区。
+Experience Hub 为作者、资产库管理员、管理员和 IT 提供基于角色的视图和快速操作。 每个角色都可以快速访问所需的各种工具和功能。
 
 +++
 
-+++**使用Experience Hub可以快速执行哪些类型的操作？**
++++**Experience Hub 的导航和布局有哪些功能？**
 
-Experience Hub为创建内容、上传资源或管理团队访问权限等重要任务提供了一键式快捷方式，这些快捷方式可针对用户的角色进行定制。
-
-+++
-
-+++**Experience Hub如何帮助导航到不同的AEM功能？**
-
-Experience Hub在&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主导航提供了对AEM功能（如Assets、站点、Forms、内容片段和启动项）的快速访问。
+Experience Hub 使用统一的左侧导航方法来排列核心 AEM 功能、可自定义的小组件和快速操作。 这个布局形成了一个有条有理、高效的工作区。
 
 +++
 
-+++**在Experience Hub中，小组件有何意义？**
++++**用户如何个性化自己的 Experience Hub 工作区？**
 
-Experience Hub中的小组件是可自定义的元素，可帮助用户高效管理其工作，例如跟踪最近的活动以及随时了解产品更新。
-
-+++
-
-+++**用户如何使用Experience Hub管理多个AEM环境？**
-
-用户可以选择要定位的环境，并固定收藏夹以使其位于顶部。 快捷方式可打开这些环境中的解决方案和页面。
+用户可以添加和移除小组件、调整其大小、将其重新排列，可以自定义快速操作，根据自己的需求和偏好定制工作区。
 
 +++
 
-+++**AI助手在AEM中充当什么角色？**
++++**使用 Experience Hub 可以快速执行哪些类型的操作？**
 
-AEM中的AI助手适用于已完成先决条件并在组织内提供其他支持和见解的用户。
+Experience Hub 可根据用户的角色，为创建内容、上传资产或管理团队访问权限等重要任务定制一键式快捷方式。
 
 +++
 
-+++**如果不存在生产AEM Cloud Service或Managed Services环境，会发生什么情况？**
++++**Experience Hub 如何帮助导航到不同的 AEM 功能？**
 
-如果不存在生产环境，则Experience Hub中的选择选项将暗显且不可用。
+Experience Hub 在&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;的主要导航区域中提供了快速访问 Assets、Sites、Forms、内容片段和发布等 AEM 功能的方法。
+
++++
+
++++**Experience Hub 中的小组件为什么很重要？**
+
+Experience Hub 中的小组件是可自定义的元素，可帮助用户高效管理自己的工作，例如跟踪最近的活动，随时了解产品更新。
+
++++
+
++++**用户如何使用 Experience Hub 管理多个 AEM 环境？**
+
+用户可以选择作为目标的环境，将要收藏的内容固定在顶部。 通过快捷方式可打开这些环境中的解决方案和页面。
+
++++
+
++++**AI 助手在 AEM 中起到什么作用？**
+
+AEM 中的 AI 助手提供给具备所有前提条件的用户使用，在组织内提供额外的支持和洞察。
+
++++
+
++++**如果生产 AEM Cloud Service 或 Managed Services 环境不存在，会怎么样？**
+
+如果生产环境不存在，Experience Hub 中的选择选项会显示灰色，不可用。
 
 +++
 
 ## AEM 中的 AI 助手
 
-对于具有[已完成必备条件](/help/ai-assistant-in-aem.md#get-access)的客户，其组织的用户可以使用AEM中的AI助手。 参见 [AEM 中的 AI 助手](/help/ai-assistant-in-aem.md)。
+对于已[满足前提条件](/help/ai-assistant-in-aem.md#get-access)的客户，其组织中的用户就可以使用 AEM 中的 AI 助手。 参见 [AEM 中的 AI 助手](/help/ai-assistant-in-aem.md)。
