@@ -6,8 +6,8 @@ feature: Release Information
 role: User,Admin,Developer
 exl-id: dfda31ac-765b-401d-98d0-c19f0de22aab
 source-git-commit: e3106e87f72484568667873c1772abd30a108e51
-workflow-type: tm+mt
-source-wordcount: '1068'
+workflow-type: ht
+source-wordcount: '1160'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 ## 新增功能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5 LTS 是 [!DNL Adobe Experience Manager] 6.5 代码库的升级发行版本。它提供关键客户修复、高优先级客户增强功能以及增强产品稳定性的一般错误修复。它还包括达到 SP22 的 [!DNL Adobe Experience Manager] 6.5 Service Pack 发行版本。
+[!DNL Adobe Experience Manager] 6.5 LTS 是 [!DNL Adobe Experience Manager] 6.5 代码库的升级发行版本。 它提供关键客户修复、高优先级客户增强功能以及增强产品稳定性的一般错误修复。 它还包括达到 SP22 的 [!DNL Adobe Experience Manager] 6.5 Service Pack 发行版本。
 
 下表提供了一个概述，接下来几页列出了完整的详细信息。
 
@@ -37,12 +37,12 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 #### Java™ 支持  {#java-support}
 
 * 支持 Java™ 17 和 Java™ 21。
-* 为了获得最佳性能，请用其他值覆盖默认 GC 值。有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
+* 为了获得最佳性能，请用其他值覆盖默认 GC 值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
 * 如果 Oracle 未公开提供，Adobe 会分配 Java™ 17 和 Java™ 21 维护更新，以便客户在 AEM 相关项目中使用。
 
 #### Uberjar 包装 {#uber-jar-packaging}
 
-* AEM 6.5 LTS 的 Uberjar 包装略有不同。有关详细信息，请参阅[更新 AEM Uber Jar 版本](/help/sites-deploying/upgrading-code-and-customizations.md#update-the-aem-uber-jar-version)。
+* AEM 6.5 LTS 的 Uberjar 包装略有不同。 有关详细信息，请参阅[更新 AEM Uber Jar 版本](/help/sites-deploying/upgrading-code-and-customizations.md#update-the-aem-uber-jar-version)。
 
 #### 升级 {#upgrade}
 
@@ -56,7 +56,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 >[!NOTE]
 >
-> 新安装 AEM 6.5 LTS 时，必须单独安装索引定义。更多详细信息请参阅[这篇文章](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#index-definitions)。
+> 新安装 AEM 6.5 LTS 时，必须单独安装索引定义。 更多详细信息请参阅[这篇文章](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#index-definitions)。
 
 ## 支持的平台 {#supported-platforms}
 
@@ -68,29 +68,29 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 ## 已弃用和已删除的功能 {#deprecated-and-removed-features}
 
-Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户价值。这些改变都仔细考虑了向后兼容的情况。
+Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户价值。 这些改变都仔细考虑了向后兼容的情况。
 
 沟通有关即将删除或取代 Adobe Experience Manager（AEM）功能的消息时，适用以下规则：
 
-1. 首先发布弃用公告。功能在弃用阶段仍可使用，但不会再进行改进。
-1. 最早会在下一个主要版本中移除已弃用的功能。移除的实际目标日期会计划稍后公布。
+1. 首先发布弃用公告。 功能在弃用阶段仍可使用，但不会再进行改进。
+1. 最早会在下一个主要版本中移除已弃用的功能。 移除的实际目标日期会计划稍后公布。
 
 在实际移除之前，此过程将为客户提供至少一个发布周期时间，使客户的实施能够适应功能弃用后的新版本或后续版本。
 
-### 已弃用的功能  {#deprecated-features}
+### 已弃用的功能 {#deprecated-features}
 
-本节列出了 Adobe 在 AEM 6.5 LTS 中已弃用的功能。通常情况下，Adobe 在未来版本中移除某些功能之前，会先弃用这些功能并提供替代方案。
+本节列出了 Adobe 在 AEM 6.5 LTS 中已弃用的功能。 通常情况下，Adobe 在未来版本中移除某些功能之前，会先弃用这些功能并提供替代方案。
 
 
 建议客户检查其当前部署中是否使用了此类特性/功能，然后制定相应的计划，使用所提供的替代功能更改自己的实施。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 |---|---|---|---|
-| Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 管理 AEM 中的 Headless 内容时首选以下编辑器：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于以基于表单的方法编辑。 | 6.5 LTS GA |
+| Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 在 AEM 中管理无头内容的首选编辑器有：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于进行可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于进行基于表单的编辑。 | 6.5 LTS GA |
 
-### 已移除的功能  {#removed-features}
+### 已移除的功能 {#removed-features}
 
-此部分列出了 AEM 6.5 LTS 中已移除的功能。之前的版本中已将这些功能标记为已弃用。
+此部分列出了 AEM 6.5 LTS 中已移除的功能。 之前的版本中已将这些功能标记为已弃用。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 |--- |--- |--- |--- |
@@ -117,7 +117,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 ### AEM 6.5.21-6.5.23 和 AEM 6.5 LTS GA 中的 JSP 脚本包问题
 
-AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripting.jsp:2.6.0` 捆绑包，其中包含一个已知问题。此问题经常在 AEM 实例处理许多并发请求而导致高负载的情况下发生。
+AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripting.jsp:2.6.0` 捆绑包，其中包含一个已知问题。 此问题经常在 AEM 实例处理许多并发请求而导致高负载的情况下发生。
 
 发生此问题时，错误日志中可能会出现以下异常之一，并会引用 `org.apache.sling.scripting.jsp:2.6.0`：
 
@@ -130,9 +130,9 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 
 ### 使用仅 SSL 功能的情况下，Dispatcher 连接失败 {#ssl-only-feature}
 
-在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。启用此功能后，健康检查可能会失败，并且 Dispatcher 和 AEM 实例之间的通信可能会中断。尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。它与 SNI（服务器名称指示）验证问题有关。
+在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。 启用此功能后，健康检查可能会失败，并且 Dispatcher 和 AEM 实例之间的通信可能会中断。 尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。 它与 SNI（服务器名称指示）验证问题有关。
 
-**影响：** 
+**影响：**
 
 * 健康检查失败，出现 HTTP 400 响应码
 * Dispatcher 与 AEM 实例之间的通信中断
@@ -146,12 +146,12 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 * 启用了仅 SSL 功能的系统
 * 使用 `https + IP` 方法与 AEM 实例连接的 Dispatcher 配置
 
-**解决方法：**
-如果您遇到此问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。采用必要的热修复之前，不要尝试启用仅 SSL 功能。
+**解决方案：**
+如果您遇到这个问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。 采用必要的热修复之前，不要尝试启用仅 SSL 功能。
 
 ## 受限网站{#restricted-sites}
 
-这些网站仅向客户开放。如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
+这些网站仅向客户开放。 如果您已是客户并需要访问权限，请联系您的 Adobe 客户经理。
 
-* [在 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
+* [从 licensing.adobe.com 下载产品](https://licensing.adobe.com/)
 * [联系 Adobe 客户支持部门](https://experienceleague.adobe.com/zh-hans/docs/customer-one/using/home)。
