@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
-workflow-type: ht
-source-wordcount: '7427'
-ht-degree: 100%
+source-git-commit: 6aca9496869f6673661a650438a7fc1beb212097
+workflow-type: tm+mt
+source-wordcount: '7603'
+ht-degree: 97%
 
 ---
 
@@ -573,7 +573,6 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 | 开源 | `org.apache.jackrabbit.api` 包现在已从 `org.apache.jackrabbit.oak-jackrabbit-api` 捆绑包中导出。 | 无需更改。 | 6.5 LTS GA |
 | 开源 | 不支持 `com.github.jknack.handlebars` | 选择相关[版本](https://mvnrepository.com/artifact/com.github.jknack/handlebars) | 6.5 LTS GA |
 
-
 ## 已知问题 {#known-issues}
 
 ### AEM Forms
@@ -596,6 +595,18 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 > * 对于任何 `oak-run` 操作，请使用 [`oak-run` 1.88.1-B006 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)。
 >
 > * 通过设置系统属性 `oak.compaction.legacy=true` 启动 AEM。
+
+### Sling-Initial-Content (SP2)中不再支持JSON注释 {#json-comments-no-longer-supported-in-sling-initial-content}
+
+此问题影响部署捆绑包（将`Sling-Initial-Content`与JSON文件一起使用）的OSGi捆绑包开发人员和管理员。
+
+从AEM 6.5 LTS SP2开始，`Sling-Initial-Content`包中使用的JSON文件不再接受注释（`//`或`/* */`）。 早期的AEM版本接受了注释，因为`javax.json`提供程序对此比较宽大。 AEM 6.5 LTS SP2已将`org.apache.sling.jcr.contentloader`升级到版本2.6.0，从而将JSON解析器切换为`jakarta.json`。 虽然[JSON规范(RFC 8259)](https://datatracker.ietf.org/doc/html/rfc8259)未定义注释的语法，但由于`javax.json`提供程序的宽大处理，较早的AEM版本已接受注释。 `jakarta.json`提供程序不提供此扩展。
+
+故障是静默的：内容节点在捆绑激活时加载失败，安装程序未显示任何错误。 如果在升级到SP2后意外缺少内容，请查看OSGi安装程序日志以了解JSON解析错误。 要识别受影响的包，请在`Sling-Initial-Content`清单标题下列出的JSON文件中搜索`//`或`/* */`。
+
+>[!CAUTION]
+>
+> 请删除`Sling-Initial-Content`包中JSON文件的所有注释，以避免在升级到AEM 6.5 LTS SP2后内容加载失败。
 
 ### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
 
