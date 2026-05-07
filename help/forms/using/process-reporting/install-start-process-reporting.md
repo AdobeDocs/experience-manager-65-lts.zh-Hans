@@ -54,7 +54,7 @@ Process Reporting服务会按计划将数据从AEM Forms数据库发布到Proces
 >如果您在某个群集中运行AEM Forms实施，请在群集的每个节点上执行以下步骤。
 
 1. 停止AEM Forms Server实例。
-1.  
+1. &#x200B;
 
    * （对于Windows）在编辑器中打开`[JBoss root]/bin/run.conf.bat`文件。
    * （对于Linux®、AIX®和Solaris™）编辑器中的`[JBoss root]/bin/run.conf.sh`文件。
