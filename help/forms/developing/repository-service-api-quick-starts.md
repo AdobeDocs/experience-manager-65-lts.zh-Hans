@@ -9,9 +9,8 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 hide: true
-hidefromtoc: true
 exl-id: 63bf92c4-c70f-47d1-9ddf-9a32de4d49bf
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 2%
@@ -62,7 +61,7 @@ AEM Forms存储库中资源的路径为：
 
 >[!NOTE]
 >
->默认情况下，Applications/FormsApplication不存在。 要遵循快速启动操作，请使用Workbench创建此应用程序。 有关使用Workbench创建应用程序的信息，请参阅[流程设计入门](https://www.adobe.com/go/learn_aemforms_workbench_65_cn)。
+>默认情况下，Applications/FormsApplication不存在。 要遵循快速启动操作，请使用Workbench创建此应用程序。 有关使用Workbench创建应用程序的信息，请参阅[流程设计入门](https://www.adobe.com/go/learn_aemforms_workbench_65)。
 
 ## 快速入门（SOAP模式）：使用Java API创建文件夹 {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 

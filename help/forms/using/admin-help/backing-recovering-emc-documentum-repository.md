@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 054d31c3-bd58-4596-8c06-4909d75e9569
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 3%
@@ -199,15 +198,15 @@ ht-degree: 3%
 
    * 完全数据库备份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>*`-U` `[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>*`-U``[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
 
    * 增量数据库备份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U` `[username]` `-P` `[password]` `-l 1 -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;数据库名称>*
 
    * 数据库日志备份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s` `<NetWorker_Server_Name>` `-U` `[username]` `-P` `[password]` `-l incr -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;数据库名称>*
 
      其中：
 

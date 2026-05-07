@@ -5,9 +5,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: a9790625-af8d-4416-b96f-4724a025260b
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '1046'
 ht-degree: 6%
@@ -26,7 +25,7 @@ ht-degree: 6%
 
 1. 根据您的要求填写信息，然后单击&#x200B;**注册。**
    ![支持的帐户](/help/forms/using/assets/azure_suuportedaccountype.png)
-在上例中，已选择任何组织目录（任何Azure AD目录 — 多租户）和个人Microsoft®帐户（例如，Skype、Xbox）中的&#x200B;**帐户**&#x200B;选项。
+在上例中，已选择任何组织目录（任何Azure AD目录 — 多租户）和个人Microsoft®帐户（例如，Skype、Xbox）中的**帐户**&#x200B;选项。
 
    >[!NOTE]
    >

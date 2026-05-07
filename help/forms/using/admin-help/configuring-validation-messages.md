@@ -1,6 +1,6 @@
 ---
 title: 配置验证消息
-description: Learn how to specify how validation messages are displayed and their location relative to the form returned in the web browser.
+description: 了解如何指定验证消息的显示方式及其相对于Web浏览器中返回表单的位置。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_forms
@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 1172f1f2-b297-4021-a9ee-507b0a4e628a
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 4%
@@ -24,40 +23,40 @@ ht-degree: 4%
 > 
 > 确保用户具有访问管理员控制台的管理员权限。
 
-For forms that are rendered as HTML, form validation errors that occur are displayed for the user. You can customize how validation messages are displayed. Depending on where the validation messages are displayed, you can also control the location of the message in the form and the size of the frame border.
+对于呈现为HTML的表单，将为用户显示发生的表单验证错误。 您可以自定义验证消息的显示方式。 根据显示验证消息的位置，您还可以控制消息在表单中的位置和帧边框的大小。
 
-## Specify how validation messages are displayed {#specify-how-validation-messages-are-displayed}
+## 指定验证消息的显示方式 {#specify-how-validation-messages-are-displayed}
 
-1. In administration console, click Services > forms.
-1. Under Validation Output, in the Reporting list, select one of the following options:
+1. 在管理控制台中，单击服务>表单。
+1. 在“验证输出”下的“报告”列表中，选择以下选项之一：
 
-   **Message box:** To display validation messages in a separate dialog box.
+   **消息框：**&#x200B;在单独的对话框中显示验证消息。
 
-   **Frame:** To display validation messages within a frame of the same window.
+   **帧：**&#x200B;在同一窗口的帧中显示验证消息。
 
-   **No Frame:** To display validation messages in the same window. This value is the default.
+   **无帧：**&#x200B;在同一窗口中显示验证消息。 此值为默认值。
 
-   **Via API (with data):** To return the validation messages through the API (with data). The validation messages are not displayed on the screen.
+   **通过API（包含数据）：**&#x200B;通过API（包含数据）返回验证消息。 验证消息不显示在屏幕上。
 
-   **Via API (with form):** To return the validation messages through the API (with the form). The validation messages are not displayed on the screen.
+   **通过API（含表单）：**&#x200B;通过API（含表单）返回验证消息。 验证消息不显示在屏幕上。
 
-   **None:** To not display validation messages.
+   **无：**&#x200B;不显示验证消息。
 
 1. 单击“保存”。
 
-## Specify the location of validation messages relative to the form returned in the web browser {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
+## 指定与Web浏览器中返回的表单相关的验证消息的位置 {#specify-the-location-of-validation-messages-relative-to-the-form-returned-in-the-web-browser}
 
-When Reporting is set to Frame or No Frame, you can specify the location of validation messages.
+当Reporting设置为Frame或No Frame时，可以指定验证消息的位置。
 
-1. Under Validation Output, in the Position list, select one of the following options:
+1. 在“验证输出”下的“位置”列表中，选择以下选项之一：
 
-   **Left:** To display validation messages on the left side of the web browser.
+   **左：**&#x200B;在Web浏览器的左侧显示验证消息。
 
-   **Right:** To display validation messages on the right side of the web browser.
+   **右：**&#x200B;在Web浏览器的右侧显示验证消息。
 
-   **Top**: To display validation messages at the top of the web browser. This value is the default.
+   **Top**：在Web浏览器的顶部显示验证消息。 此值为默认值。
 
-   **Bottom**: To display validation messages at the bottom of the web browser.
+   **Bottom**：在Web浏览器底部显示验证消息。
 
 1. 单击“保存”。
 

@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: a60548c8-42ed-4444-839d-7f33c9d2dd14
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 21%
@@ -27,4 +26,4 @@ ht-degree: 21%
 在“首选项”页上，您可以控制每个“应用程序和服务”网页上显示的服务、端点、类别和存档的数量。
 
 1. 在管理控制台中，**[!UICONTROL 单击“服务”>“应用程序和服务”>“首选项”]**。
-1. 在“首选项”页面上，键入可在每个页面上显示的服务、端点、类别和存档的数量，然后单击“保存”**&#x200B;**。
+1. 在“首选项”页面上，键入可在每个页面上显示的服务、端点、类别和存档的数量，然后单击“保存”****。

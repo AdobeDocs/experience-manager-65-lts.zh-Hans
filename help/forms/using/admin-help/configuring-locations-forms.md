@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 49e815e9-2087-4a42-b481-dc66de787d67
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 2%
@@ -88,7 +87,7 @@ font-mapping文件用于为表单中的HTML转换创建自定义字体映射，�
 
 **默认位置：**&#x200B;这是默认选项。 如果选择该选项，则会在依赖于您正在使用的应用程序服务器的位置创建缓存：
 
-* **JBoss：**&#x200B;[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
+* **JBoss：**[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
 * **WebLogic：** [WebLogic主页]\user_projects\domains\[aem-forms域名]\adobe\[Forms服务器名称]\FormServer\Cache
 * **WebSphere：** [IBM主页]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 

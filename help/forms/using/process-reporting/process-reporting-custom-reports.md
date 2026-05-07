@@ -5,9 +5,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 5670fede-4567-445e-8eeb-84349405db0e
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 16%
@@ -29,7 +28,7 @@ ht-degree: 16%
 
 ## 使用QueryBuilder的REST接口 {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生成器的功能。 了解如何在执行以下步骤之前使用[CRX QueryBuilder REST接口](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=zh-Hans)：
+CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生成器的功能。 了解如何在执行以下步骤之前使用[CRX QueryBuilder REST接口](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)：
 
 1. 浏览到URL `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. 根据Process Reporting存储节点结构和节点属性创建查询。
@@ -46,7 +45,7 @@ CRX QueryBuilder REST接口通过Java API和REST API公开资产共享查询生�
 
 ## 使用查询生成器API创建服务  {#creating-a-service-using-query-builder-api-nbsp}
 
-使用查询生成器API创建服务的先决条件是[使用查询生成器API创建和部署CQ OSGI捆绑包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)和[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=zh-Hans)。
+使用查询生成器API创建服务的先决条件是[使用查询生成器API创建和部署CQ OSGI捆绑包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)和[](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)。
 
 1. 创建包含相应注释的OSGi服务。 要访问QueryBuilder，请使用：
 

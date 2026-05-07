@@ -9,9 +9,8 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
 hide: true
-hidefromtoc: true
 exl-id: b960ca0b-5e0f-4009-b923-e93889c3c1f7
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 1%
@@ -525,7 +524,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 
 ## 快速入门（SOAP模式）：使用Java API以编程方式同步用户 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-以下Java代码示例使用用户管理API同步用户。 （请参阅以编程方式同步用户[&#128279;](/help/forms/developing/users.md#programmatically-synchronizing-users)。）
+以下Java代码示例使用用户管理API同步用户。 （请参阅以编程方式同步用户](/help/forms/developing/users.md#programmatically-synchronizing-users)。）[
 
 ```java
  /*
