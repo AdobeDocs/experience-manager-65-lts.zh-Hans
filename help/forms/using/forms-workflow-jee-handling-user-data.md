@@ -1,5 +1,5 @@
 ---
-title: Forms JEE工作流|处理用户数据
+title: Forms JEE工作流 |处理用户数据
 description: 了解如何使用AEM Forms JEE工作流设计、创建和管理业务流程。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -7,16 +7,15 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 hide: true
-hidefromtoc: true
 exl-id: 622c4899-f75f-4b47-a6c0-f94c8427e977
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
 
 ---
 
-# Forms JEE工作流|处理用户数据 {#forms-jee-workflows-handling-user-data}
+# Forms JEE工作流 |处理用户数据 {#forms-jee-workflows-handling-user-data}
 
 AEM Forms JEE工作流提供了用于设计、创建和管理业务流程的工具。 工作流进程包含一系列按指定顺序执行的步骤。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 进程可与资产、用户帐户和服务进行交互，并且可以使用以下任意方法触发：
 

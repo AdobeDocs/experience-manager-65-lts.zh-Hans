@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 6459abd5-6341-4c28-a747-bde9a91e3a88
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '1643'
 ht-degree: 0%
@@ -88,47 +87,47 @@ ht-degree: 0%
 
 可以挂起状态为“正在运行”的进程实例。
 
-After you suspend a process instance, its status changes to SUSPENDING, then SUSPENDED, and the process pauses at its current operation. The process instance remains in this status until the status is changed to UNSUSPENDED.
+暂停进程实例后，其状态将依次变为SUSPENDING和SUSPENDED，进程将暂停其当前操作。 进程实例将保持此状态，直到状态更改为UNSUSPENDED。
 
-Only process instances that have a status of SUSPENDED can be changed to UNSUSPENDED.
+只有状态为“已挂起”的进程实例才能更改为“已取消挂起”。
 
-When you unsuspend a process instance, its status changes to RUNNING, and it continues with the operation where it had been suspended.
+取消暂停进程实例时，其状态将更改为RUNNING，并且将继续执行已暂停的操作。
 
-When you suspend a process instance that has invoked other processes (child processes) using their invoke operation, the child processes are also suspended.
-
-1. 在管理控制台中，单击服务> Forms工作流> Forms工作流。
-1. On the Process Instance page, select the process and click Suspend or Unsuspend.
-
-### Terminate a process instances {#terminate-a-process-instances}
-
-If an operation of a process instance has stalled or encountered some other error condition, or if you need to force a process instance to stop running, you can terminate the process instance.
-
-You can terminate process instances that have any status.
-
-When you terminate a process instance, its status changes to TERMINATING, then TERMINATED, and the process stops at its current operation. No further operations are run, and all associated operations and tasks are terminated.
+当暂停使用其它进程（子进程）的调用操作调用它们的进程实例时，子进程也会被暂停。
 
 1. 在管理控制台中，单击服务> Forms工作流> Forms工作流。
-1. On the Process Instance page, select the process and click Terminate.
+1. 在“流程实例”页上，选择流程，然后单击“暂停”或“取消暂停”。
 
-## Working with process instance details {#working-with-process-instance-details}
+### 终止进程实例 {#terminate-a-process-instances}
 
-The Process Instance Detail page shows the history of a process instance.
+如果进程实例的操作已停止或遇到其他错误情况，或者需要强制进程实例停止运行，则可以终止进程实例。
 
-The Summary area shows basic information about the process instance.
+您可以终止具有任何状态的进程实例。
 
-On the Operations tab, each operation for the process instance is shown in order of completion from first to last with the following information:
+终止进程实例时，其状态将依次变为TERMINATING和TERMINATED，进程将停止其当前操作。 不运行进一步的操作，并且所有相关的操作和任务都被终止。
 
-**Operation Name:** The name of the operation, as defined in Workbench.
+1. 在管理控制台中，单击服务> Forms工作流> Forms工作流。
+1. 在“进程实例”页上，选择进程并单击终止。
 
-**Status:** Indicates whether the operation is running normally or has stopped. （请参阅关于流程实例状态。）
+## 使用流程实例详细信息 {#working-with-process-instance-details}
 
-**Branch Name:** The name of the branch, as defined in Workbench.
+“流程实例详细资料”页显示流程实例的历史记录。
 
-**Start Date:** The date and time the operation started.
+“摘要”区域显示有关流程实例的基本信息。
 
-**Completed Date:** The date and time the operation completed.
+在“操作”选项卡上，按从头到尾的完成顺序显示流程实例的每个操作，其中包含以下信息：
 
-A subprocess is a process instance that is started by another process and runs independently of that other process. 仅当子流程在Workbench中作为流程的一部分进行设计时，才会显示它们。 在“子流程”选项卡上，每个子流程均显示以下信息：
+**操作名称：**&#x200B;在Workbench中定义的操作名称。
+
+**状态：**&#x200B;指示操作是正常运行还是已停止。 （请参阅关于流程实例状态。）
+
+**分支名称：**&#x200B;在Workbench中定义的分支名称。
+
+**开始日期：**&#x200B;操作开始的日期和时间。
+
+**完成日期：**&#x200B;操作完成的日期和时间。
+
+子进程是由另一个进程启动并独立于另一个进程运行的进程实例。 仅当子流程在Workbench中作为流程的一部分进行设计时，才会显示它们。 在“子流程”选项卡上，每个子流程均显示以下信息：
 
 **进程ID：**&#x200B;此正整数，在实例化进程（即，当用户或自动步骤启动进程时）时形成Workflow分配。 您可以使用此标识符跟踪流程实例的生命周期。
 
@@ -162,40 +161,40 @@ A subprocess is a process instance that is started by another process and runs i
 
 如果操作或子进程停止或遇到其他错误情况，或者需要强制操作或子进程停止运行，则可以终止操作。
 
-You can terminate an operation that is RUNNING.
+您可以终止正在运行的操作。
 
-When you terminate an operation, its status changes to TERMINATED. The operation does not complete and the process instance stops running.
+终止操作时，其状态将更改为TERMINATED。 操作未完成，进程实例停止运行。
 
-You can terminate a subprocess that has any status.
+您可以终止具有任意状态的子进程。
 
-When you terminate a subprocess, its status changes to TERMINATING, then TERMINATED, and the process instance stops at its current operations. No further operations are run in the subprocess, although the parent process instance continues to run.
+终止子进程时，其状态将依次变为TERMINATING和TERMINATED，进程实例将停止其当前操作。 尽管父进程实例继续运行，但子进程不会运行其他操作。
 
-You cannot terminate processes that have gateway elements in the process diagram. If you attempt to terminate these types of processes, the operations within the gateway elements are not affected. To terminate operations that are within a gateway element, you must terminate the operations directly.
+您不能终止进程图中具有网关元素的进程。 如果尝试终止这些类型的进程，则网关元素中的操作不会受到影响。 要终止网关元素中的操作，必须直接终止这些操作。
 
-1. On the Process Instance Details page, click the Operations tab or the Subprocesses tab.
-1. Select the operation or subprocess and click Terminate.
+1. 在“流程实例详细资料”页上，单击操作选项卡或子流程选项卡。
+1. 选择操作或子进程，然后单击“终止”。
 
-### Retry an operation {#retry-an-operation}
+### 重试操作 {#retry-an-operation}
 
-You can retry operation that has a status of STALLED.
+您可以重试状态为STALLED的操作。
 
-When you retry an operation, Forms workflow is sent a request to restart the operation. If the request is successful, the status changes to RUNNING. If the operation cannot be restarted, it remains STALLED, and you may need to terminate it.
+重试某个操作时，会向Forms工作流发送一个重新启动该操作的请求。 如果请求成功，状态将更改为RUNNING。 如果无法重新启动该操作，则该操作将保持停止状态，您可能需要终止它。
 
-1. On the Process Instance Details page, click the Operations tab.
-1. Select the operation and click Retry.
+1. 在“流程实例详细资料”页上，单击“操作”选项卡。
+1. 选择操作并单击“重试”。
 
-## Working with operations {#working-with-operations}
+## 使用操作 {#working-with-operations}
 
 >[!NOTE]
 > 
 > 确保用户具有访问管理员控制台的管理员权限。
 
-The Operation Details page shows a summary of one operation in a process and its current user assignments.
+“操作详细资料”页显示流程中的一个操作及其当前用户分配的摘要。
 
 1. 在管理控制台中，单击服务> Forms工作流> Forms工作流。
-1. Click a process name to display its process instances. Click a process instance to display the Process Instance Details page, then select an operation to display the Operation Detail page.
+1. 单击进程名称以显示其进程实例。 单击流程实例以显示“流程实例详细资料”页，然后选择操作以显示“操作详细资料”页。
 
-   For each task, the list shows the following information:
+   对于每个任务，该列表都显示了以下信息：
 
    **进程名称 — 版本：**&#x200B;在Workbench中定义的进程名称。
 

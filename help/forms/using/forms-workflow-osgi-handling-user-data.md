@@ -1,22 +1,21 @@
 ---
-title: OSGi上以Forms为中心的工作流|处理用户数据
-description: OSGi上以Forms为中心的工作流|处理用户数据
+title: OSGi上以Forms为中心的工作流 |处理用户数据
+description: OSGi上以Forms为中心的工作流 |处理用户数据
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
 hide: true
-hidefromtoc: true
 exl-id: a817fa19-ae22-4c77-8a8e-6c4deed10d67
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 1%
 
 ---
 
-# OSGi上以Forms为中心的工作流|处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
+# OSGi上以Forms为中心的工作流 |处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
 
 以Forms为中心的AEM工作流使您能够自动执行以Forms为中心的真实业务流程。 工作流由一系列步骤组成，这些步骤按照关联工作流模型中指定的顺序执行。 每个步骤都会执行特定操作，例如向用户分配任务或发送电子邮件。 工作流可与存储库中的资产、用户帐户和服务进行交互。 因此，工作流可以协调涉及Experience Manager任何方面的复杂活动。
 

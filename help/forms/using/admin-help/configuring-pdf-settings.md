@@ -9,9 +9,8 @@ feature: PDF Generator
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: 41a8a4b0-cb39-40a6-82b6-085f2c635e0c
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '7478'
 ht-degree: 0%
@@ -401,27 +400,27 @@ CMYK：**&#x200B;对文件中的颜色进行校准，使颜色独立于设备，
 
 ## 高级选项 {#advanced-options}
 
-高级选项指定要保留在PDF文件中的文档结构约定(DSC)注释，以及如何设置影响PostScript转换的其他选项。 在PostScript文件中，DSC注释包含有关文件的信息（如原始应用程序、创建日期和页面方向）。 They also provide structure for page descriptions in the file (such as beginning and ending statements for a prologue section). DSC comments can be useful when your document is going to print or press. For instructions about accessing the Advanced options, see [Add or edit PDF settings](configuring-pdf-settings.md#add-or-edit-pdf-settings).
+高级选项指定要保留在PDF文件中的文档结构约定(DSC)注释，以及如何设置影响PostScript转换的其他选项。 在PostScript文件中，DSC注释包含有关文件的信息（如原始应用程序、创建日期和页面方向）。 它们还为文件中的页面描述提供结构（例如prolog部分的开始和结束语句）。 当文档要打印或按时，DSC注释可能很有用。 有关访问高级选项的说明，请参阅[添加或编辑PDF设置](configuring-pdf-settings.md#add-or-edit-pdf-settings)。
 
-When working with the Advanced options, it is helpful to have an understanding of the PostScript language and how it is translated to PDF. (See [Adobe PostScript 3](https://www.adobe.com/products/postscript/main.html).)
+在使用高级选项时，了解PostScript语言以及如何将其翻译为PDF会很有帮助。 （请参阅[Adobe PostScript 3](https://www.adobe.com/products/postscript/main.html)。）
 
-**Allow PostScript File to Override Adobe PDF Settings:** Uses settings that are stored in a PostScript file instead of the current Adobe PDF settings file. Before processing a PostScript file, you can place parameters in the file to control the following aspects:
+**允许PostScript文件覆盖Adobe PDF设置：**&#x200B;使用存储在PostScript文件中的设置，而不是当前的Adobe PDF设置文件。 在处理PostScript文件之前，您可以在文件中放置参数，以控制以下方面：
 
-* compression of text and graphics
-* downsampling and encoding of sampled images
-* embedding of Type 1 fonts and instances of Type 1 Multiple Master fonts
+* 文本和图形的压缩
+* 取样图像的缩减取样和编码
+* Type 1字体的嵌入和Type 1多主字体的实例
 
-**Allow PostScript XObjects:** PostScript XObjects store information that appears on many pages of the same file, such as a background image or header and footer information. Using PostScript XObjects can result in faster printing but requires more printer memory. To prevent PostScript XObjects from being created, deselect this option if you create PDF files with Acrobat 5 (PDF 1.4) or later compatibility.
+**允许PostScript XObjects：** PostScript XObjects存储出现在同一文件的多个页面上的信息，如背景图像或页眉和页脚信息。 使用PostScript XObjects可以加快打印速度，但需要更多的打印机内存。 要阻止创建PostScript XObjects，如果您创建的PDF文件具有Acrobat 5 (PDF 1.4)或更高版本兼容性，请取消选择此选项。
 
-**Convert Gradients to Smooth Shades:** Converts blends to smooth shades for Acrobat 4 and later, making PDF files smaller and potentially improving the quality of final output. PDF Generator converts gradients from Adobe Illustrator, Adobe InDesign, Adobe FreeHand MX, CorelDraw, Quark Xpress, and Microsoft PowerPoint.
+**将渐变转换为平滑阴影：**&#x200B;将渐变转换为Acrobat 4及更高版本的平滑阴影，使PDF文件更小，并可能提高最终输出的质量。 PDF Generator可转换Adobe Illustrator、Adobe InDesign、Adobe FreeHand MX、CorelDraw、Quark Xpress和Microsoft PowerPoint中的渐变。
 
-**Convert Smooth Lines to Curves:** Reduces the amount of control points used to build curves in CAD drawings, which results in smaller PDFs and faster onscreen rendering.
+**将平滑线条转换为曲线：**&#x200B;减少在CAD绘图中构建曲线时所使用的控制点数量，从而使PDF更小，屏幕渲染速度更快。
 
-**Preserve Level 2 Copypage Semantics:** Uses the copypage operator that is defined in LanguageLevel 2 PostScript instead of in LanguageLevel 3 PostScript. If you have a PostScript file and select this option, a copypage operator copies the page. If this option is not selected, the equivalent of a showpage operation is executed, but the graphics state is not reinitialized.
+**保留2级Copypage语义：**&#x200B;使用LanguageLevel 2 PostScript中定义的Copypage运算符，而不是LanguageLevel 3 PostScript中定义的运算符。 如果您有PostScript文件并且选择了此选项，则copypage运算符会复制页面。 如果未选择此选项，则执行等效的showpage操作，但图形状态不会重新初始化。
 
-**Preserve Overprint Settings:** Retains any overprint settings in files being converted to PDF. Overprinted colors are two or more inks printed on top of each other. For example, when a cyan ink prints over a yellow ink, the resultant overprint is a green color. Without overprinting, the underlying yellow would not be printed, resulting in a cyan color.
+**保留叠印设置：**&#x200B;在要转换为PDF的文件中保留任何叠印设置。 叠印的颜色是两个或多个相互叠印的油墨。 例如，当青色油墨印刷在黄色油墨上时，得到的叠印为绿色。 如果没有叠印，则不会打印下面的黄色，从而导致青色颜色。
 
-**Overprinting Default Is Nonzero Overprinting:** Prevents overprinted objects with zero CMYK values from knocking out CMYK objects that are underneath them. This effect is accomplished by inserting the OPM 1 graphics state parameter into the PDF file wherever the Setoverprint operator is present.
+**叠印默认值为非零叠印：**&#x200B;防止CMYK值为零的叠印对象挖空它们下面的CMYK对象。 只要存在Setoverprint运算符，就可以将OPM 1图形状态参数插入到PDF文件中。
 
 **将Adobe PDF设置保存在PDF文件中：**&#x200B;嵌入用于创建PDF文件的设置文件。 您可以在Acrobat的“文件附件”对话框中打开并查看设置文件（文件扩展名为.joboptions）。 Adobe PDF设置文件将成为PDF文件中EmbeddedFiles树中的一个项目。
 

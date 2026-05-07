@@ -9,9 +9,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: a2586a1e-0e7f-4ea4-87ec-fbd82df3ec4c
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '10923'
 ht-degree: 1%
@@ -540,53 +539,53 @@ PDFG清理扫描秒数的默认值为`43200`（12小时）。 作业过期秒数
 
 存储库服务(`RepositoryService`)为AEM表单提供资源存储和管理服务。 当开发人员创建应用程序时，他们可以在存储库中部署资产，而不是在文件系统上部署资产。 资源可以包括任何类型的宣传资料，包括XML表单、PDF forms（包括Acrobat表单）、表单片段、图像、配置文件、策略、SWF文件、DDX文件、XML架构、WSDL文件和测试数据。
 
-You can use the default repository included with AEM forms, or use a third-party repository (EMC Documentum Content Server, IBM FileNet Content Manager, or IBM Content Manager).
+您可以使用AEM表单中包含的默认存储库，也可以使用第三方存储库（ EMC Documentum Content Server 、 IBM FileNet Content Manager或IBM Content Manager ）。
 
-Repository Provider service is a service delegate that acts as the interface to a provider service. This lets you connect to a common API and not have to be aware of which provider service is implementing the storage capabilities. Repository Provider service provides database storage for the Repository service resources.
+存储库提供方服务是一个服务委托，充当提供方服务的接口。 这样，您就可以连接到公共API，而不必知道哪个提供商服务正在实施存储功能。 存储库提供程序服务提供存储库服务资源的数据库存储。
 
-The following setting is available for the Repository service.
+以下设置适用于存储库服务。
 
-**Provider Service:** The name of the service that is used as the storage provider. The default value is RepositoryProviderService.
+**提供程序服务：**&#x200B;用作存储提供程序的服务的名称。 默认值为RepositoryProviderService。
 
-## Signature service settings {#signature-service-settings}
+## 签名服务设置 {#signature-service-settings}
 
-The Signature service ( `SignatureService`) enables your organization to protect the security and privacy of Adobe PDF documents that it distributes and receives. This service uses digital signatures and certification to ensure that documents are not altered. Altering a document breaks its signature. Because security features are applied to the document itself, the document remains secure and controlled for its entire life cycle; beyond the firewall, when it is downloaded offline, and when it is submitted back to your organization.
+签名服务(`SignatureService`)使您的组织能够保护其分发和接收的Adobe PDF文档的安全性和隐私。 此服务使用数字签名和认证，确保文档不被更改。 更改文档会破坏其签名。 由于安全功能应用于文档本身，所以文档在其整个生命周期内都保持安全和受控制；在防火墙之外，当文档离线下载时，以及当它提交回您的组织时。
 
-The following settings are available for the Signature service.
+以下设置可用于签名服务。
 
-**Name Of The Remote HSM SPI Service:** This option is for use when the HSM is installed on a remote computer. Specify this option when AEM forms is installed on a 64-bit Windows and you are using HSM devices for signing.
+**远程HSM SPI服务的名称：**&#x200B;此选项适用于在远程计算机上安装HSM的情况。 在64位Windows上安装AEM表单且使用HSM设备进行签名时，请指定此选项。
 
-**URL Of The Remote HSM Web Service:** Specify this option when AEM forms is installed on 64-bit Windows and you are using HSM devices for signing.
+**远程HSM Web服务的URL：**&#x200B;在64位Windows上安装AEM表单且使用HSM设备进行签名时，请指定此选项。
 
-**Certification To Include Form Load Changes:** When this option is selected, the XFA Form State is certified in addition to the XFA template. Note that enabling this option may have a negative impact on performance. The default value is true.
+**包含表单加载更改的认证：**&#x200B;选择此选项时，除了XFA模板之外，还会对XFA表单状态进行认证。 请注意，启用此选项可能会对性能产生负面影响。 默认值为true。
 
-**Execute Document JavaScript scripts:** Specifies whether to execute Document JavaScript scripts during signature operations. 默认值为false。
+**执行Document JavaScript脚本：**&#x200B;指定是否在签名操作期间执行Document JavaScript脚本。 默认值为false。
 
-**Process documents with Acrobat 9 compatibility:** Specifies whether to enable Acrobat 9 compatibility. For example, when this option is selected, Visible Certification in Dynamic PDFs is enabled. 默认值为false。
+**处理与Acrobat 9兼容的文档：**&#x200B;指定是否启用Acrobat 9兼容性。 例如，选中此选项后，动态PDF中的可见认证即会启用。 默认值为false。
 
-**Embed Revocation Info While Signing:** Specifies whether revocation information is embedded while signing the PDF document. 默认值为false。
+**签名时嵌入吊销信息：**&#x200B;指定签名PDF文档时是否嵌入吊销信息。 默认值为false。
 
-**Embed Revocation Info While Certifying:** Specifies whether the revocation information is embedded while certifying the PDF document. 默认值为false。
+**认证时嵌入吊销信息：**&#x200B;指定认证PDF文档时是否嵌入吊销信息。 默认值为false。
 
-**Enforce Embedding of Revocation Info For All Certificates
-During Signing/Certification:** Specifies whether a signing or certification operation fails if valid revocation information for all certificates is not embedded. Note that if a certificate does not contain any CRL or OCSP information, it is considered valid, even if no revocation information is retrieved. 默认值为false。
+**强制嵌入所有证书的吊销信息
+在签名/证书期间：**&#x200B;指定如果未嵌入所有证书的有效吊销信息，签名或证书操作是否失败。 请注意，如果证书不包含任何CRL或OCSP信息，则即使未检索到任何吊销信息，该证书也被视为有效。 默认值为false。
 
-**Revocation Check Order:** Specifies the order of revocation checking when checking is possible through both Certificate Revocation List (CRL) and Online Certificate Status Protocol (OCSP) mechanisms. The default value is OCSPFirst.
+**吊销检查顺序：**&#x200B;指定通过证书吊销列表(CRL)和联机证书状态协议(OCSP)机制进行检查时吊销检查的顺序。 默认值为OCSPFirst。
 
-**Maximum Size Of Revocation Archival Info:** The maximum size of the revocation archival info in kilobytes. AEM forms attempts to store as much revocation information as possible without exceeding the limit. The default value is 10 KB.
+**吊销存档信息的最大大小：**&#x200B;吊销存档信息的最大大小（以KB为单位）。 AEM forms会尝试在不超出限制的情况下存储尽可能多的吊销信息。 默认值为10 KB。
 
-**Support Signatures Created From PreRelease Builds Of
-Adobe Products:** When this option is selected, signature created using pre-release version of Adobe products will validate correctly. 默认值为false。
+**支持从预发行版本创建的签名
+Adobe产品：**&#x200B;选择此选项时，使用Adobe产品的预发行版本创建的签名将正确验证。 默认值为false。
 
-**Verification Time Option:** Specifies the time of verification of a signer&#39;s certificate. The default value is Secure Time Else Current Time.
+**验证时间选项：**&#x200B;指定签名者证书的验证时间。 默认值为Secure Time Else Current Time。
 
-**Use Revocation Information Archived in Signature during
-Validation:** Specifies whether the revocation information that is archived with the signature is used for revocation checking. The default value is true.
+**使用签名中存档的吊销信息期间
+验证：**&#x200B;指定使用签名存档的吊销信息是否用于吊销检查。 默认值为true。
 
-**Use Validation Information Stored In The Document For
-Validation Of Signatures:** When this option is selected, validation information (including revocation and timestamp information) embedded in the doument is used to validate signatures. The default value is true.
+**使用文档中存储的验证信息
+签名验证：**&#x200B;选择此选项时，将使用文档中嵌入的验证信息（包括吊销和时间戳信息）来验证签名。 默认值为true。
 
-**Maximum Nested Verification Sessions Allowed:** The maximum number of nested verification sessions that are allowed. AEM forms uses this value to prevent an infinite loop when verifying the OCSP or CRL signer certificates when the OCSP or CRL certificate is not set up correctly. 默认值为 10。
+**允许的最大嵌套验证会话数：**&#x200B;允许的最大嵌套验证会话数。 在未正确设置OCSP或CRL证书时，AEM Forms在验证OCSP或CRL签名者证书时使用此值防止无限循环。 默认值为 10。
 
 **验证的最大时钟偏差：**&#x200B;签名时间在验证时间之后的最长时间（以分钟为单位）。 如果时钟偏差大于此值，则签名将无效。 默认值为65分钟。
 

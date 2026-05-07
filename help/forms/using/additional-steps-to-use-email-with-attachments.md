@@ -5,9 +5,8 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
-hidefromtoc: true
 exl-id: c04e0716-2aa2-420b-bbf5-74ffd1c28794
-source-git-commit: 103250f3442cf7c2793c51a95b1bf4fbaff71463
+source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 12%
@@ -43,7 +42,7 @@ ht-degree: 12%
 
 1. 安装从步骤3获得的`java.mail-1.5.jar`。 此步骤将重新启动JEE部署的sling属性。 等待`http://<server name>:<port>/lc/system/console/bundles`处安装的包将状态显示为&#x200B;**活动**。
 
-   >如果状态仍为&#x200B;**InActive**，请重新启动   从&#x200B;**服务控制台**&#x200B;中的&#x200B;**JBoss®**。
+   >如果状态仍为&#x200B;**InActive**，请从&#x200B;**服务控制台**&#x200B;重新启动&#x200B;**JBoss®**。
 
 
 1. 安装使用步骤5下载的`javax.mail-1.5.6.redhat-1.jar`文件。
