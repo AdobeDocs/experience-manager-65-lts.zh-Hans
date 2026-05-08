@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: 30ac3d2e81e859244684339a028d7d9db470eefe
+source-git-commit: eb4c7e2afa28c5bd5bdf9c38fe44143a71abd1fc
 workflow-type: tm+mt
-source-wordcount: '3180'
+source-wordcount: '3184'
 ht-degree: 4%
 
 ---
@@ -382,12 +382,12 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
   </tr>
 
 <tr>
-   <td>® Office 2021 Professional Plus、零售和批量许可证</td>
+   <td>® Office 2024 Professional Plus、零售和批量许可证</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>
-    <strong>OpenOffice 4.1.15</strong>   </td>
+   OpenOffice 4.1.15 </td>
    <td>
     ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT<br>
 
@@ -398,16 +398,15 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
 
 >[!NOTE]
 >
->- PDF Generator支持Microsoft® Office 2024。
 >- PDF Generator仅支持所支持的操作系统和应用程序的英语、法语、德语和日语版本。
->- PDF Generator需要Adobe Acrobat Pro DC（32位）来执行转换。
->- PDF Generator仅支持32位版本的Microsoft® Office Professional Plus以及转换所需的其他软件。
->- 如果® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
+>- PDF Generator需要32位Adobe Acrobat Pro DC和Microsoft® Office Professional Plus来执行转换。
+>- ® Office Professional Plus安装可以使用零售或基于MAK/KMS/AD的批量许可。
+>- 如果® Office安装由于任何原因（例如由于批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >- PDF Generator不支持Microsoft® Office 365。
 >- Windows和Linux®均支持OpenOffice的PDF Generator转换。
 >- 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
->- PDF Generator服务不支持Microsoft® Windows 11
-
+>- PDF Generator不支持Microsoft® Windows 11。
+>- ® Office 2021专业增强版支持已弃用。
 <!--
 Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.

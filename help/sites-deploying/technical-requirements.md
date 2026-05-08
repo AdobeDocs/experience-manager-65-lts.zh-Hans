@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: 551f915c2fa91a3b099ce5636ae5b7f4439c8236
+source-git-commit: f5a36877c0d051de5c96a8ab89b2886b28865249
 workflow-type: tm+mt
-source-wordcount: '3086'
+source-wordcount: '3090'
 ht-degree: 6%
 
 ---
@@ -392,12 +392,12 @@ Adobe Experience Manager（实例、Dispatcher）的所有元素都可以安装�
   </tr>
 
 <tr>
-   <td>® Office 2021 Professional Plus、零售和批量许可证</td>
+   <td>® Office 2024 Professional Plus、零售和批量许可证</td>
    <td>DOC、DOCX、XLS、XLSX、PPT、PPTX、RTF和TXT</td>
   </tr>
   <tr>
    <td>
-    <strong>OpenOffice 4.1.15</strong>   </td>
+   OpenOffice 4.1.15 </td>
    <td>
     ODT、ODP、ODS、ODG、ODF、SXW、SXI、SXC、SXD、XLS、XLSX、DOC、DOCX、PPT、PPTX、图像格式(BMP、GIF、JPEG、JPG、TIF、TIFF、PNG、JPF、JPX、JP2、J2K、J2C、JPC)、HTML、HTM、RTF、TXT<br>
 
@@ -408,15 +408,15 @@ Adobe Experience Manager（实例、Dispatcher）的所有元素都可以安装�
 
 >[!NOTE]
 >
->* PDF Generator支持Microsoft® Office 2024。
 >* PDF Generator仅支持所支持的操作系统和应用程序的英语、法语、德语和日语版本。
->* PDF Generator需要Adobe Acrobat Pro DC（32位）来执行转换。
->* PDF Generator仅支持32位版本的Microsoft® Office Professional Plus以及转换所需的其他软件。
->* 如果® Office安装由于任何原因（例如，批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
+>* PDF Generator需要32位Adobe Acrobat Pro DC和Microsoft® Office Professional Plus来执行转换。
+>* ® Office Professional Plus安装可以使用零售或基于MAK/KMS/AD的批量许可。
+>* 如果® Office安装由于任何原因（例如由于批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >* PDF Generator不支持Microsoft® Office 365。
 >* Windows和Linux®均支持OpenOffice的PDF Generator转换。
 >* 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
->* PDF Generator服务不支持Microsoft® Windows 11
+>* PDF Generator不支持Microsoft® Windows 11。
+>* ® Office 2021专业增强版支持已弃用。
 
 ### AEM Forms Designer的要求 {#requirements-for-aem-forms-designer}
 
