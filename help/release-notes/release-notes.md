@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 6aca9496869f6673661a650438a7fc1beb212097
+source-git-commit: eab6902e5bdb58f626e7b79f91d27447b31d6830
 workflow-type: tm+mt
-source-wordcount: '7603'
+source-wordcount: '7581'
 ht-degree: 97%
 
 ---
@@ -281,6 +281,8 @@ Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 R
 * AEM Forms 6.5 LTS 在 JBoss® EAP 8 上的群集部署中，`domain/configuration/domain_oracle.xml`、`domain_mysql.xml` 和 `domain_mssql.xml` 文件不再包含重复的 `<security>` 标记，此标记导致了无效的 XML 并阻止了域控制器启动。 (FORMS-24687)
 * 在 Turnkey 模式下，现在可在全新安装和升级时正确应用数据库端口更新。 在全新安装模式下，用户可以从所有可用端口中进行选择，在升级模式下，可以在升级时正确引用 lc_turnkey.xml 中更新的数据库端口。 (FORMS-24689)
 * 在 Linux®上设置 JBoss® EAP 8.0 时，在 Windows 上更改的 Shell 脚本不再因 CRLF 行末尾而导致出现 `/bin/sh^M: bad interpreter or $'\r': command not found` 错误。 (FORMS-24688)
+* 在 JBoss® EAP 8 上运行的 Forms JEE LTS 部署中，Reader 扩展 UI 可能会失败，并显示内部服务器错误。 (FORMS-24894)
+* 在Linux®上，当Forms JEE LTS Configuration Manager在`configurationManager/config/solcomp/LFS_Foundation.properties`中运行`OSFileSetIntendedFor`值未设置或不正确时，用户遇到运行时或部署问题，这会阻止为Linux®正确定制配置。 安装之后和运行配置管理器之前，在该文件中设置`OSFileSetIntendedFor=Linux`。 (FORMS-24741)
 
 <!--
 #### Forms JEE 
@@ -578,9 +580,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 ### AEM Forms
 
 * 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将 JAR 文件添加到 adobe-livecycle-jboss.ear\lib 解决了这个问题。 (FORMS-24690)
-* 在 JBoss® EAP 8 上运行的 Forms JEE LTS 部署中，Reader 扩展 UI 可能会失败，并显示内部服务器错误。 (FORMS-24894)
 * 在 JBoss®上运行的 Forms JEE LTS 上，与电子邮件相关的功能可能会失败。 尝试使用电子邮件功能时，服务器可能会记录类似 `Error IMAPProvider not a subtype` 的错误。 (FORMS-24892)
-* 在 Linux® 平台上，Forms JEE LTS 要求在运行配置管理器之前先正确设置 `LFS_Foundation.properties` 中的 `OSFileSetIntendedFor` 属性。 如果不更新，就可能无法为 Linux® 正确定制配置，这可能会导致出现运行时或部署问题。 要解决此问题，请在运行安装程序之后，执行配置管理器之前，导航到 `configurationManager/config/solcomp/`，打开 `LFS_Foundation.properties`，设置 `OSFileSetIntendedFor=Linux`，保存文件，然后运行配置管理器。 (FORMS-24741)
 
 ### 离线压缩后，执行在线压缩时存储库损坏 (GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
