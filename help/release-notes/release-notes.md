@@ -8,7 +8,7 @@ exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
 source-git-commit: eab6902e5bdb58f626e7b79f91d27447b31d6830
 workflow-type: tm+mt
 source-wordcount: '7581'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -596,17 +596,17 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 >
 > * 通过设置系统属性 `oak.compaction.legacy=true` 启动 AEM。
 
-### Sling-Initial-Content (SP2)中不再支持JSON注释 {#json-comments-no-longer-supported-in-sling-initial-content}
+### Sling-Initial-Content (SP2) 不再支持 JSON 注释 {#json-comments-no-longer-supported-in-sling-initial-content}
 
-此问题影响部署捆绑包（将`Sling-Initial-Content`与JSON文件一起使用）的OSGi捆绑包开发人员和管理员。
+这个问题影响了开发人员和管理员部署那些使用 `Sling-Initial-Content` 和 JSON 文件的 OSGi 捆绑包。
 
-从AEM 6.5 LTS SP2开始，`Sling-Initial-Content`包中使用的JSON文件不再接受注释（`//`或`/* */`）。 早期的AEM版本接受了注释，因为`javax.json`提供程序对此比较宽大。 AEM 6.5 LTS SP2已将`org.apache.sling.jcr.contentloader`升级到版本2.6.0，从而将JSON解析器切换为`jakarta.json`。 虽然[JSON规范(RFC 8259)](https://datatracker.ietf.org/doc/html/rfc8259)未定义注释的语法，但由于`javax.json`提供程序的宽大处理，较早的AEM版本已接受注释。 `jakarta.json`提供程序不提供此扩展。
+从 AEM 6.5 LTS SP2 开始，`Sling-Initial-Content` 捆绑包中使用的 JSON 文件不再接受注释（`//` 或 `/* */`）。 早期的 AEM 版本接受了注释，因为 `javax.json` 提供程序对此比较宽容。 AEM 6.5 LTS SP2 将 `org.apache.sling.jcr.contentloader` 升级为版本 2.6.0，后者将 JSON 解析器换为 `jakarta.json`。 虽然 [JSON 规范 (RFC 8259)](https://datatracker.ietf.org/doc/html/rfc8259) 未定义注释的语法，但由于 `javax.json` 提供程序的宽容性，较早的 AEM 版本接受注释。 `jakarta.json` 提供程序不提供此扩展。
 
-故障是静默的：内容节点在捆绑激活时加载失败，安装程序未显示任何错误。 如果在升级到SP2后意外缺少内容，请查看OSGi安装程序日志以了解JSON解析错误。 要识别受影响的包，请在`Sling-Initial-Content`清单标题下列出的JSON文件中搜索`//`或`/* */`。
+沉默的错误：捆绑包激活时内容节点加载失败，没有为安装程序提供任何错误消息。 如果在升级到 SP2 后意外缺少内容，请检查 OSGi 安装程序日志中是否记录了 JSON 解析错误。 要识别受影响的捆绑包，请在 `Sling-Initial-Content` 清单头下面列出的 JSON 文件中搜索 `//` 或 `/* */`。
 
 >[!CAUTION]
 >
-> 请删除`Sling-Initial-Content`包中JSON文件的所有注释，以避免在升级到AEM 6.5 LTS SP2后内容加载失败。
+> 请移除您的 `Sling-Initial-Content` 捆绑包中 JSON 文件的所有注释，以免在升级到 AEM 6.5 LTS SP2 后内容加载失败。
 
 ### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
 
