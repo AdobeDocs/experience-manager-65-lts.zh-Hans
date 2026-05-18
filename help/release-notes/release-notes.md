@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: eab6902e5bdb58f626e7b79f91d27447b31d6830
-workflow-type: ht
-source-wordcount: '7581'
-ht-degree: 100%
+source-git-commit: 02b7915e1e5554d29577e46960c072d46bcc8b0c
+workflow-type: tm+mt
+source-wordcount: '7695'
+ht-degree: 98%
 
 ---
 
@@ -282,7 +282,7 @@ Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 R
 * 在 Turnkey 模式下，现在可在全新安装和升级时正确应用数据库端口更新。 在全新安装模式下，用户可以从所有可用端口中进行选择，在升级模式下，可以在升级时正确引用 lc_turnkey.xml 中更新的数据库端口。 (FORMS-24689)
 * 在 Linux®上设置 JBoss® EAP 8.0 时，在 Windows 上更改的 Shell 脚本不再因 CRLF 行末尾而导致出现 `/bin/sh^M: bad interpreter or $'\r': command not found` 错误。 (FORMS-24688)
 * 在 JBoss® EAP 8 上运行的 Forms JEE LTS 部署中，Reader 扩展 UI 可能会失败，并显示内部服务器错误。 (FORMS-24894)
-* 在 Linux® 上，如果 Forms JEE LTS 配置管理器在运行时 `configurationManager/config/solcomp/LFS_Foundation.properties` 中的 `OSFileSetIntendedFor` 值未设置或不正确，会阻止为 Linux® 正确进行量身定制的配置，用户就会遇到运行时或部署问题。安装之后并在运行配置管理器之前，请在这个文件中设置 `OSFileSetIntendedFor=Linux`。(FORMS-24741)
+* 在 Linux® 上，如果 Forms JEE LTS 配置管理器在运行时 `configurationManager/config/solcomp/LFS_Foundation.properties` 中的 `OSFileSetIntendedFor` 值未设置或不正确，会阻止为 Linux® 正确进行量身定制的配置，用户就会遇到运行时或部署问题。 安装之后并在运行配置管理器之前，请在这个文件中设置 `OSFileSetIntendedFor=Linux`。 (FORMS-24741)
 
 <!--
 #### Forms JEE 
@@ -595,6 +595,16 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 > * 对于任何 `oak-run` 操作，请使用 [`oak-run` 1.88.1-B006 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)。
 >
 > * 通过设置系统属性 `oak.compaction.legacy=true` 启动 AEM。
+
+### AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包(GRANITE-67640) {#missing-apicontroller-bundle-granite-67640}
+
+AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控制如何解析OSGi捆绑包，并可阻止捆绑包解析为其他捆绑包，这对于限制公开的API很有用。
+
+从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-67640-1.0.zip)安装修补程序以使用此功能。
+
+>[!NOTE]
+>
+> 安装该修补程序后，请验证所有已安装捆绑包的捆绑状态，以确保`com.adobe.granite.apicontroller`的默认配置未引入可能会影响现有自定义实施的意外解决限制。
 
 ### Sling-Initial-Content (SP2) 不再支持 JSON 注释 {#json-comments-no-longer-supported-in-sling-initial-content}
 
