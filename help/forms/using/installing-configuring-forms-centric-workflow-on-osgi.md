@@ -7,7 +7,7 @@ role: Admin, User, Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,AEM Forms on OSGi
 exl-id: 4b316ade-4431-41fc-bb8a-7262a17fb456
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+source-git-commit: 3757f625b08650514ecaf07d4e2d13e1be6d5f0d
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 企业从多个表单、后端系统和其他数据源收集和处理数据。 数据的处理涉及审核和批准程序、重复任务和数据存档。 例如，查看表单并将其转换为PDF文档。 手工完成重复性任务需要花费大量的时间和资源。
 
-您可以在OSGi[&#128279;](../../forms/using/aem-forms-workflow.md)上使用以Forms为中心的工作流，快速构建基于自适应表单的工作流。 这些工作流可以帮助您自动执行审阅和批准工作流、业务流程工作流以及其他重复任务。 这些工作流还有助于处理文档（创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，对条形码表单进行解码等），以及将Adobe Sign签名工作流与表单和文档结合使用。
+您可以在OSGi](../../forms/using/aem-forms-workflow.md)上使用[以Forms为中心的工作流，快速构建基于自适应表单的工作流。 这些工作流可以帮助您自动执行审阅和批准工作流、业务流程工作流以及其他重复任务。 这些工作流还有助于处理文档（创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，对条形码表单进行解码等），以及将Adobe Sign签名工作流与表单和文档结合使用。
 
 设置后，这些工作流可以手动触发以完成定义的流程，或在用户提交表单或交互式通信时以编程方式运行。 此功能包含在AEM Forms附加组件包中。
 
@@ -29,7 +29,11 @@ AEM Forms是一个功能强大的企业级平台。 OSGi上以Forms为中心的�
 >[!NOTE]
 >
 >利用OSGi上以Forms为中心的工作流，您可以在OSGi栈栈<!--, without having to install the full-fledged Process Management capability on JEE stack-->上快速构建和部署各种任务的工作流。
-><!-- See a [comparison](capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE to learn the difference and similarities in the capabilities.-->><!--After the comparison, If you choose to install the Process Management capability on JEE stack, see [Install or Upgrade AEM Forms on JEE](/help/forms/using/introduction-aem-forms.md) for detailed information about installing and configuring JEE stack and the Process Management capabilities.-->
+
+<!--
+>See a [comparison](capabilities-osgi-jee-workflows.md) of the Forms-centric AEM Workflows on OSGi and Process Management on JEE to learn the difference and similarities in the capabilities.
+>After the comparison, If you choose to install the Process Management capability on JEE stack, see [Install or Upgrade AEM Forms on JEE](/help/forms/using/introduction-aem-forms.md) for detailed information about installing and configuring JEE stack and the Process Management capabilities.
+-->
 
 ## 部署拓扑 {#deployment-topology}
 
@@ -108,7 +112,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该包中包含有�
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
 
