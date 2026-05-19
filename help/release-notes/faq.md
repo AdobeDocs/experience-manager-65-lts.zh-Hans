@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: d18c9dc3-fdcc-4558-b9b6-ecf1ce61048a
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
-workflow-type: ht
-source-wordcount: '517'
-ht-degree: 100%
+source-git-commit: 004a3859c06e7c219e7919ac5920a9bc179ede43
+workflow-type: tm+mt
+source-wordcount: '532'
+ht-degree: 91%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 100%
 
 ## Adobe 为何发布了 AEM 的 6.5 LTS？
 
-Adobe 始终致力于确保所提供的应用程序的安全性和稳定性。 AEM 6.5 长期支持为 AEM 6.5 未来的更新奠定了基础。值得注意的是，AEM 6.5 LTS 包含了对 Oracle Java 17 和 Java 21 的支持，将成为获得各种 AEM 新功能和创新的 AEM 分支。
+Adobe 始终致力于确保所提供的应用程序的安全性和稳定性。 AEM 6.5 长期支持为 AEM 6.5 未来的更新奠定了基础。 值得注意的是，AEM 6.5 LTS 包含了对 Oracle Java 17 和 Java 21 的支持，将成为获得各种 AEM 新功能和创新的 AEM 分支。
 
 ## 我是内部部署客户，如果我不升级到 AEM 6.5 LTS 会怎样？
 
-AEM 6.5 LTS 包含重要的安全性和稳定性更新，包括对 Oracle Java 17 和 Java 21 的支持。 Adobe 至少在未来 2 年内将继续支持 AEM 6.5，但建议企业组织现在开始计划升级到 6.5 LTS。
+AEM 6.5 LTS 包含重要的安全性和稳定性更新，包括对 Oracle Java 17 和 Java 21 的支持。 建议组织计划升级到6.5 LTS。 Adobe将继续支持AEM 6.5，直到2027年2月28日。 查看[路线图](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap#aem65)以了解更多详细信息。
 
 ## 如果升级到 AEM 6.5 LTS，我现有的自定义功能和集成会受到影响吗？
 
