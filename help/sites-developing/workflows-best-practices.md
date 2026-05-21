@@ -1,22 +1,18 @@
 ---
-title: 工作流最佳实践
+title: 工作流最佳做法
 description: 了解在Adobe Experience Manager中使用工作流的最佳实践。
-contentOwner: User
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: extending-aem
-content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: f7d67e71-3148-4b27-a61e-ff64d3bf9b72
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 887d76effd8af7ff4d061fb15d5a3572b51af20c
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1948'
 ht-degree: 1%
 
 ---
 
-# 工作流最佳实践{#workflow-best-practices}
+# 工作流最佳做法{#workflow-best-practices}
 
 借助工作流，您可以自动化Adobe Experience Manager (AEM)活动。
 
@@ -32,11 +28,11 @@ ht-degree: 1%
 
 要优化高摄取负载，您可以将[工作流定义为临时](/help/sites-developing/workflows.md#transient-workflows)。
 
-当工作流是瞬态时，与中间工作步骤相关的运行时数据在运行时不会保留在JCR中（保留输出演绎版）。
+当工作流是瞬态工作流时，与中间工作步骤相关的运行时数据在运行时不会保留在JCR中（保留输出演绎版）。
 
 其优势可以包括：
 
-* 工作流处理时间减少；最多减少10%。
+* 工作流处理时间最多减少10%。
 * 显着减少存储库增长。
 * 无需清除其他CRUD工作流。
 * 此外，它还减少了要压缩的TAR文件数量。
@@ -73,7 +69,7 @@ AEM允许同时运行多个工作流线程。 默认情况下，线程数配置�
 
 ### 配置工作流清除 {#configure-workflow-purging}
 
-在标准安装中，AEM提供了一个维护控制台，可以在其中计划和配置每日和每周维护活动；例如，在：
+在标准安装中，AEM提供了一个维护控制台，可以在其中计划和配置每日和每周的维护活动；例如，在：
 
 `http://localhost:4502/libs/granite/operations/content/maintenance.html`
 
@@ -226,7 +222,7 @@ AEM允许同时运行多个工作流线程。 默认情况下，线程数配置�
 实施工作流进程时：
 
 * 将提供工作流会话，除非有令人信服的理由不提供该会话，否则应使用该会话。
-* 不应通过工作流步骤创建新会话，因为这会导致状态不一致，并可能导致工作流引擎中出现并发问题。
+* 不应通过工作流步骤创建新会话，因为这会导致状态不一致，并且可能会导致工作流引擎中出现并发问题。
 * 您不应从工作流中的流程步骤中获取新的JCR会话；您应使流程步骤API提供的工作流会话适应JCR会话。 例如：
 
 ```
@@ -243,14 +239,14 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 * 在工作流进程内，如果`WorkflowSession`正用于修改存储库，则不要显式保存会话 — 工作流完成时将保存会话。
 * 不应从工作流步骤中调用`Session.Save`：
 
-   * 建议调整工作流jcr会话；那么`save`不是必需的，因为工作流引擎在工作流执行完成后自动保存会话。
-   * 建议不要对流程步骤创建自己的jcr会话。
+   * 建议调整工作流JCR会话；然后`save`不是必需的，因为工作流引擎会在工作流执行完成后自动保存会话。
+   * 建议不要对流程步骤创建自己的JCR会话。
 
 * 通过消除不必要的保存，您可以减少开销，从而使工作流更加高效。
 
 >[!CAUTION]
 >
->尽管有此处提供的建议，但如果您确实创建了自己的jcr会话，则必须保存它。
+>尽管有此处提供的建议，但如果您确实创建了自己的JCR会话，则必须保存它。
 
 ### 最大程度地减少启动器的数量/范围 {#minimize-the-number-scope-of-launchers}
 
@@ -278,7 +274,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 工作流可能会产生大量开销，无论是在内存中创建的对象还是在存储库中跟踪的节点。 因此，最好让工作流在自身中进行处理，而不是启动其他工作流。
 
-例如，某个工作流在一组内容上实施业务流程，然后激活该内容。 最好创建一个自定义工作流进程来激活其中的每个节点，而不是为每个需要发布的内容节点启动&#x200B;**激活内容**&#x200B;模型。 此方法将需要额外的开发工作，但在执行时比为每个激活启动单独的工作流实例更有效。
+例如，某个工作流在一组内容上实施业务流程，然后激活该内容。 最好创建一个自定义工作流进程来激活其中的每个节点，而不是为每个需要发布的内容节点启动&#x200B;**激活内容**&#x200B;模型。 此方法将需要额外的开发工作，但在执行时它比为每个激活启动单独的工作流实例更有效。
 
 另一个示例是处理多个节点、创建工作流包，然后激活所述包的工作流。 您无需创建资源包，然后启动一个将资源包作为有效负载的单独工作流，您可以在创建资源包的步骤中更改工作流的有效负载，然后调用该步骤以激活同一工作流模型中的资源包。
 
@@ -286,7 +282,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 
 设计工作流模型时，您可以选择启用工作流步骤上的处理程序前进。 或者，您也可以将代码添加到工作流步骤中，以确定下一步应该运行哪个步骤，然后执行它。
 
-建议使用处理程序前进，因为它可提供更好的性能。
+建议使用高级处理程序，因为它可提供更好的性能。
 
 ### 工作流暂存 {#workflow-stages}
 
@@ -336,7 +332,7 @@ Sling作业处理控制台将显示：
 
 有关更多信息，请参阅：
 
-* [使用工作流程](/help/sites-authoring/workflows.md)
-* [管理工作流程](/help/sites-administering/workflows.md)
+* [使用工作流](/help/sites-authoring/workflows.md)
+* [管理工作流](/help/sites-administering/workflows.md)
 * [开发和扩展工作流](/help/sites-developing/workflows.md)
 * [性能优化](/help/sites-deploying/configuring-performance.md)
