@@ -50,7 +50,7 @@ ht-degree: 78%
 
 不会。 AEM 6.5 LTS不支持迁移到`jakarta.*`包命名空间的Sling工件。 在您的代码和依赖项中使用`javax.*`等效项 — 例如，在Sling模型中使用`javax.annotation.PostConstruct`而非`jakarta.annotation.PostConstruct`。 AEM 6.5 LTS中的Sling模型实现仅识别`javax.*`注释，因此在初始化期间静默忽略`jakarta.*`注释。
 
-有关详细信息，请参阅知识库文章[在AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-30339)上带有`jakarta.annotation.PostConstruct`的Sling模型失败。
+有关详细信息，请参阅知识库文章[在AEM 6.5 LTS](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-30339)上带有`jakarta.annotation.PostConstruct`的Sling模型失败。
 
 ## 获取额外帮助
 
