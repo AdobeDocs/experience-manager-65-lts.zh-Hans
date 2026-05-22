@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 051244f1-cc67-4222-bd45-0c135c28bb15
-source-git-commit: 89016492c069d61c18f9bf83bfb896cd78fb20fd
-workflow-type: ht
-source-wordcount: '308'
-ht-degree: 100%
+source-git-commit: f994a8712a403083de1edc62579846ba99bd3afd
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 78%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 100%
 
 ### AEM Groovy Console 支持
 
-由于缺少 guava 依赖项，AEM 6.5 中使用的 AEM Groovy Console 版本可能无法在 AEM 6.5 LTS 中运行。新的受支持的 AEM Groovy Console 版本为 [19.0.8](https://github.com/orbinson/aem-groovy-console/releases/download/19.0.8/aem-groovy-console-all-19.0.8.zip)。
+由于缺少 guava 依赖项，AEM 6.5 中使用的 AEM Groovy Console 版本可能无法在 AEM 6.5 LTS 中运行。 新的受支持的 AEM Groovy Console 版本为 [19.0.8](https://github.com/orbinson/aem-groovy-console/releases/download/19.0.8/aem-groovy-console-all-19.0.8.zip)。
 
 #### AEM Groovy Console 所需的其他配置
 
-如果您使用 AEM Groovy Console，就必须为 `com.adobe.granite.apicontroller.FilterResolverHookFactory` 明确添加以下 OSGi 配置。将 `aem-groovy-console-bundle` 添加到 `org.apache.sling.distribution.api` 键的允许捆绑包列表中，扩展平台默认值：
+如果您使用 AEM Groovy Console，就必须为 `com.adobe.granite.apicontroller.FilterResolverHookFactory` 明确添加以下 OSGi 配置。 将 `aem-groovy-console-bundle` 添加到 `org.apache.sling.distribution.api` 键的允许捆绑包列表中，扩展平台默认值：
 
 ```
 "org.apache.sling.distribution.api": "com.adobe.*,com.day.*,org.apache.sling.*,aem-groovy-console-bundle"
@@ -45,6 +45,12 @@ ht-degree: 100%
 ### Maven Central 上的 Uber JAR 好像损坏了——这是什么问题？
 
 请验证您使用的 Uber JAR 有 `apis` 分类器。 请注意，AEM 6.5 LTS 中 Uber JAR 的包装结构发生了变化。 有关详细信息，请参阅[更新 AEM Uber Jar 版本](/help/sites-deploying/upgrading-code-and-customizations.md#update-the-aem-uber-jar-version)。
+
+### AEM 6.5 LTS是否支持`jakarta.*`包命名空间（例如，`jakarta.annotation`）？
+
+不会。 AEM 6.5 LTS不支持迁移到`jakarta.*`包命名空间的Sling工件。 在您的代码和依赖项中使用`javax.*`等效项 — 例如，在Sling模型中使用`javax.annotation.PostConstruct`而非`jakarta.annotation.PostConstruct`。 AEM 6.5 LTS中的Sling模型实现仅识别`javax.*`注释，因此在初始化期间静默忽略`jakarta.*`注释。
+
+有关详细信息，请参阅知识库文章[在AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-30339)上带有`jakarta.annotation.PostConstruct`的Sling模型失败。
 
 ## 获取额外帮助
 
