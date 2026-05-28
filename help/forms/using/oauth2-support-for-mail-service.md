@@ -6,10 +6,10 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: a9790625-af8d-4416-b96f-4724a025260b
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: a053ca75d106025fcfeb63ac5ba3c95283861e7e
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 6%
+source-wordcount: '1034'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 6%
 为了让组织遵守安全电子邮件要求，AEM Forms提供了OAuth 2.0支持与Microsoft® Office 365邮件服务器协议集成。 您可以使用Azure Active Directory (Azure AD) OAuth 2.0身份验证服务连接各种协议（如IMAP、POP或SMTP），并访问Office 365用户的电子邮件数据。 以下是配置® Office 365邮件服务器协议以通过OAuth 2.0服务进行身份验证的分步说明：
 
 1. 登录到[https://portal.azure.com/](https://portal.azure.com/)并在搜索栏中搜索&#x200B;**Azure Active Directory**，然后单击结果。
-或者，您可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+或者，您可以直接浏览到[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 单击&#x200B;**添加** > **应用程序注册** > **新注册**。
 
    ![应用程序注册](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
@@ -72,7 +72,7 @@ ht-degree: 6%
 
 1. 将`clientID`替换为`<client_id>`并在浏览器中打开以下URL，将`redirect_uri`替换为您的应用程序的重定向URI：
 
-   ```https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login```
+   `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=[clientid]&scope=IMAP.AccessAsUser.All%20POP.AccessAsUser.All%20SMTP.Send%20User.Read%20Mail.Read%20offline_access&response_type=code&redirect_uri=[redirect_uri]&prompt=login`
 
    >[!NOTE]
    >

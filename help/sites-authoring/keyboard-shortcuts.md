@@ -1,24 +1,20 @@
 ---
 title: AEM中控制台的键盘快捷键
 description: 使用这些键盘快捷键可在创作时节省时间。
-contentOwner: Chris Bohnert
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-topic-tags: introduction
-content-type: reference
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 exl-id: bff562ff-bf0e-4f56-afd2-77907ec01e2c
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+source-git-commit: 2e9786117c4a8b3026f7f3109b5a49ce188b119a
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 75%
+source-wordcount: '386'
+ht-degree: 72%
 
 ---
 
 # 控制台的键盘快捷键{#keyboard-shortcuts-for-consoles}
 
-用户在整个 AEM 环境中都可以使用各种键盘快捷键。其中一些快捷键适用于控制台，还有一些则适用于[页面编辑](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)。
+在整个 AEM 环境中都可以使用各种键盘快捷键。 有些可应用于控制台的使用，其他应用于[页面编辑](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >
@@ -40,7 +36,7 @@ ht-degree: 75%
 | 控制台 | `?` | 键盘快捷键帮助 |
 |  | `/` | 调用[搜索](/help/sites-authoring/search.md) |
 |  | `Alt+`&lt;`Number`> | 切换要查看的[边栏选择器](/help/sites-authoring/basic-handling.md#rail-selector)选项 |
-|  | ``` ` ``` | 隐藏边栏 |
+|  | `` ` `` | 隐藏边栏 |
 |  | `e` | 编辑 |
 |  | `p` | 属性 |
 |  | `m` | 移动 |
