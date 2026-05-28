@@ -4,7 +4,7 @@ description: 了解如何定义自定义命名空间并将其部署到AEM 6.5 LT
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,JCR
 role: Developer
-source-git-commit: 31d67c5b9bff651077df5a497e5c318b86a48158
+source-git-commit: 475a77e8e4ff0ecd19a939fd3b3c9294adf24997
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 8%
@@ -29,11 +29,11 @@ ht-degree: 8%
 
 自定义命名空间在[Sling存储库初始化(repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)脚本中进行管理，并在项目的配置包（例如，`ui.config`）中部署为OSGi配置。
 
-## 资源
+## 资源 {#resources}
 
 + [Sling存储库初始化(repoinit)文档](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios)
 
-## 代码
+## 代码 {#code}
 
 以下代码用于配置`wknd`命名空间。
 

@@ -6,10 +6,10 @@ role: Admin, User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, AEM Forms on OSGi, AEM Forms Upgrade
 exl-id: 9233d4b7-441c-4cbd-86f8-2c52b99c3330
-source-git-commit: b7aa877f9e782b0568adc7baa440dc630c690454
+source-git-commit: b5db6129e83dd7a54516707bbdb8864dc709d54b
 workflow-type: tm+mt
-source-wordcount: '1527'
-ht-degree: 6%
+source-wordcount: '1615'
+ht-degree: 8%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 1. 安装AEM Forms附加组件包。 以下列出了这些步骤：
 
-   1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
+   1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登录 Software Distribution。
    1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
    1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
       1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
@@ -34,7 +34,7 @@ ht-degree: 6%
 
       您还可以使用[AEM Forms发行版](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)文章中列出的直接链接下载包。
 
-      安装包后，系统会提示您重新启动AEM实例。 **不立即停止服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在&lt;crx-repository>/error.log文件中，并且日志稳定。 另请注意，一些软件包可以保持已安装状态。 您可以安全地忽略这些软件包的状态。
+      安装包后，系统会提示您重新启动AEM实例。 **不立即停止服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在&lt;crx-repository>/error.log文件中，并且日志稳定。 另请注意，一些软件包可以保持已安装状态。 您可以安全地忽略这些软件包的状态。
 
 
       **使用以下其他JVM命令行参数重新启动AEM实例**：
@@ -44,7 +44,7 @@ ht-degree: 6%
 
       >[!NOTE]
       >
-      > 建议使用 “Ctrl + C” 命令重新启动 SDK。如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
+      > 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 执行安装后活动。
 
@@ -52,7 +52,7 @@ ht-degree: 6%
 
      迁移实用程序使自适应表单和以前版本的通信管理资产与AEM 6.5表单兼容。 您可以从AEM Software Distribution下载该实用程序。 有关配置和使用迁移实用程序的逐步信息，请参阅[迁移实用程序](../../forms/using/migration-utility.md)。
 
-     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
+     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
 
      ```sql
      UPDATE metadata m, additionalmetadatatable am
@@ -66,18 +66,18 @@ ht-degree: 6%
      WHERE `key` = 'dataType'
      ```
 
-   * **(如果仅从AEM 6.2 Forms或以前的版本升级)重新配置Adobe Sign**
+   * **（如果仅从AEM 6.2 Forms或以前的版本升级）重新配置Adobe Sign**
 
      如果您在早期版本的AEM Forms中配置了Adobe Sign，则从AEM Cloud Service重新配置Adobe Sign。 有关详细信息，请参阅[将Adobe Sign与AEM Forms集成](../../forms/using/adobe-sign-integration-adaptive-forms.md)。
 
    * **支持jQuery**
 
-     在AEM 6.5 Forms中，jQuery的版本更新为3.2.1，jQuery UI的版本更新为1.12.1。AEM表单在&#x200B;**noConflict**&#x200B;模式下使用JQuery。 因此，如果您使用的是任何其他jQuery版本，则在执行升级时不会显示任何问题。 但是，当您升级到AEM 6.5 Forms时：
+     在AEM 6.5 Forms中，jQuery的版本更新为3.2.1，jQuery UI的版本更新为1.12.1。 AEM表单在&#x200B;**noConflict**&#x200B;模式下使用JQuery。 因此，如果您使用的是任何其他jQuery版本，则在执行升级时不会显示任何问题。 但是，当您升级到AEM 6.5 Forms时：
 
       * 确保您的自定义组件（如果有）与支持的jQuery版本兼容。
       * 从自定义组件中删除不支持的API。 请参阅[升级指南](https://jquery.com/upgrade-guide/3.0/)以获取已删除的API列表。 例如，删除了对load()、.unload()和.error() API的支持。 使用.on()方法替换前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
 
-   * **(如果仅从AEM 6.2 Forms或以前的版本升级)重新配置分析和报表**
+   * **（如果仅从AEM 6.2 Forms或以前的版本升级）重新配置分析和报表**
 
      在AEM 6.4 Forms中，源的流量变量和印象的成功事件不可用。 因此，当您从AEM 6.2 Forms或之前的版本升级时，AEM Forms会停止向Adobe Analytics服务器发送数据，并且自适应表单的Analytics报表将不可用。 此外，AEM 6.4 Forms还为Form Analytics版本引入了流量变量，并为字段逗留时间引入了成功事件。 因此，请为您的AEM Forms环境重新配置分析和报表。 有关详细步骤，请参阅[配置分析和报表](../../forms/using/configure-analytics-forms-documents.md)。
 
@@ -93,7 +93,7 @@ ht-degree: 6%
 
    >[!NOTE]
    >
-   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
+   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
 
 
 ## 在JBoss EAP 8上部署AEM (Windows)
@@ -109,9 +109,9 @@ ht-degree: 6%
 | 组件 | 要求 |
 |-----------|-------------|
 | 操作系统 | Windows Server 2016或更高版本（64位） |
-| Java开发工具包 | JDK 21(Oracle或OpenJDK) |
+| Java开发工具包 | JDK 21（Oracle或OpenJDK） |
 | 应用程序服务器 | JBoss EAP 8.x |
-| AEM Distribution | AEM WAR文件(从Adobe获取) |
+| AEM Distribution | AEM WAR文件（从Adobe获取） |
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ ht-degree: 6%
 2. 请将此目录路径记为`<JBOSS_HOME>`，以便在本指南中使用。
 
    **示例：**\
-   ```C:\jboss-eap-8.0```
+   `C:\jboss-eap-8.0`
 
 ### 步骤2：准备AEM WAR文件
 
@@ -287,7 +287,7 @@ cq-quickstart.war
    ```
 
    **示例：**
-   ```C:\jboss-eap-8.0\standalone\deployments```
+   `C:\jboss-eap-8.0\standalone\deployments`
 
 #### 配置JVM设置（可选，但推荐）
 
@@ -318,7 +318,7 @@ cq-quickstart.war
    ```
 
    **示例：**
-   ```cmd cd C:\jboss-eap-8.0\bin```
+   `cmd cd C:\jboss-eap-8.0\bin`
 
 1. 启动JBoss服务器：
 
@@ -343,7 +343,7 @@ Deployed "cq-quickstart.war" (runtime-name : "cq-quickstart.war")
 部署完成且AEM完全启动后：
 
 **AEM作者URL：**
-```http://<server-ip>:8080/cq-quickstart```
+`http://<server-ip>:8080/cq-quickstart`
 
 **默认凭据：**
 
@@ -373,7 +373,7 @@ Deployed "cq-quickstart.war" (runtime-name : "cq-quickstart.war")
 
 #### 配置运行模式
 
-要更改AEM运行模式（创作/发布），请在重新打包WAR之前修改`sling.run.modes`中的`WEB-INF\web.xml`参数：
+要更改AEM运行模式（创作/发布），请在重新打包WAR之前修改`WEB-INF\web.xml`中的`sling.run.modes`参数：
 
 ```xml
 <init-param>
@@ -395,8 +395,8 @@ Deployed "cq-quickstart.war" (runtime-name : "cq-quickstart.war")
 ### 相关文档
 
 * [JBoss EAP 8文档](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/8.0)
-* [Adobe Experience Manager文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
-* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hans)
+* [Adobe Experience Manager文档](https://experienceleague.adobe.com/docs/experience-manager-65.html)
+* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)
 
 ### 文档信息
 
