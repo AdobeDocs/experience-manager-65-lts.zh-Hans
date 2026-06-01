@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: eb4c7e2afa28c5bd5bdf9c38fe44143a71abd1fc
+source-git-commit: aed08dbb5afd7aefb07716ff5dbbff7265c208e5
 workflow-type: tm+mt
-source-wordcount: '3184'
+source-wordcount: '3156'
 ht-degree: 4%
 
 ---
@@ -80,10 +80,10 @@ Adobe建议使用这些配置，并在标准软件维护协议中提供完全支
 
 >[!NOTE]
 >
->为帮助AEM Forms客户降低拥有成本、简化部署架构并使开发栈栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。 Adobe通过减少的基础架构组件列表，继续支持AEM Forms JEE栈栈。
->对于新安装，建议在可行的情况下，在现代OSGi栈栈上部署AEM Forms，以使用有关响应式自适应Forms的最新创新，实现使用表单数据模型的移动、多渠道交互式通信以及后端数据集成。
+>为帮助AEM Forms客户降低拥有成本、简化部署架构并使开发栈栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。Adobe通过减少的基础架构组件列表，继续支持AEM Forms JEE栈栈。
+>对于新安装，如果可行，建议在现代OSGi栈栈上部署AEM Forms，以使用关于响应式自适应Forms的最新创新，实现使用表单数据模型的移动、多渠道交互式通信以及后端数据集成。
 >
->Adobe认识到现有用户必须继续在JEE栈栈上部署AEM Forms。 在此类情况下，Adobe要求在受支持的基础设施上部署AEM Forms JEE，如本文档所述。 如果您要升级到AEM 6.5 Forzms，并且在以前的AEM Forms版本中使用不受支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
+>Adobe认识到现有用户必须继续在JEE栈栈上部署AEM Forms。 在此类情况下，Adobe要求在受支持的基础设施上部署AEM Forms JEE，如本文档所述。 如果您要升级到AEM 6.5 Forms，并且在以前的AEM Forms版本中使用不受支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
 
 ### Java™虚拟机(JVM) {#java-virtual-machines-jvm}
 
@@ -272,6 +272,11 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
   </tr>
   <tr>
    <td><p>® Windows® 10 64位</p> </td>
+   <td>E：预期有效</td>
+   <td><p>Service Pack和关键更新</p> </td>
+  </tr>
+  <tr>
+   <td><p>® Windows® 11 64位</p> </td>
    <td>E：预期有效</td>
    <td><p>Service Pack和关键更新</p> </td>
   </tr>
@@ -491,6 +496,10 @@ AEM Forms的以下子系统与[508](https://www.section508.gov/)不兼容：
   </tr>
   <tr>
    <td><p>® Windows® 10(Enterprise、Pro、Basic)</p> <p>32位或64位版本</p> <p> </p> </td>
+   <td>Service Pack和关键更新</td>
+  </tr>
+  <tr>
+   <td><p>® Windows® 11(Enterprise、Pro、Basic)</p> <p>64位版本</p> <p> </p> </td>
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
