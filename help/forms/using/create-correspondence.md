@@ -363,7 +363,7 @@ AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通�
 * **分页符**：在PDF预览中，您可以查看信件中的分页符对其输出的确切影响。
 * **最终预览**：在PDF预览中，您可以查看信件将出现在输出中的确切格式设置和外观。
 
-有关PDF forms中脚本支持的信息，请参阅[脚本支持](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html)。
+有关PDF forms中脚本支持的信息，请参阅[脚本支持](https://help.adobe.com/zh_CN/livecycle/11.0/ScriptingSupport/index.html)。
 
 有关HTML5表单中脚本支持的详细信息，请参阅[HTML5表单的脚本支持](/help/forms/using/scripting-support.md)。
 

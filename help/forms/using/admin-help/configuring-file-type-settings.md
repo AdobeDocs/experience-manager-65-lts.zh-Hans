@@ -621,7 +621,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 ## 其他应用程序设置（仅限Windows） {#other-applications-settings-windows-only}
 
-您不能通过管理控制台更改其他应用程序的设置；它们显示所支持文件类型的文件扩展名。 有关访问这些设置的说明，请参阅[创建或编辑文件类型设置](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7e42.2.html)。
+您不能通过管理控制台更改其他应用程序的设置；它们显示所支持文件类型的文件扩展名。 有关访问这些设置的说明，请参阅[创建或编辑文件类型设置](https://help.adobe.com/zh_CN/AEMForms/6.1/AdminHelp/WS92d06802c76abadb-5145d5d12905ce07e7-7e42.2.html)。
 
 * Corel WordPerfect： `wpd`
 * Adobe PageMaker： `pmd, pm6, p65, pm`
