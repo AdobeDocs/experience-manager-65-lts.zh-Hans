@@ -524,7 +524,7 @@ Dynamic Media建议使用MP4 H.264视频编码预设。 由于MP4文件使用H.2
 
    appMeasurementBridge对象具有内置跟踪功能。 但是，您可以自行提供以支持多个跟踪系统或其他功能。
 
-<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/zh_CN/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 
 
@@ -857,7 +857,7 @@ Dynamic Media将字幕文件转换为JSON（JavaScript对象表示法）格式�
 
 如果需要，您可以创建自己的自定义视频查看器，并将其品牌化为章节，而不是使用视频查看器预设。 有关使用章节导航创建您自己的HTML5查看器的说明，请在Adobe HTML5 Viewer SDK API中，引用类`s7sdk.video.VideoPlayer`和`s7sdk.video.VideoScrubber`下的“使用修饰符自定义行为”标题。 请参阅[HTML5查看器SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html)文档。
 
-<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/zh_CN/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 您可以像创建字幕一样为视频创建章节列表。 即，创建一个WebVTT文件。 但请注意，此文件必须与您也在使用的任何WebVTT字幕文件分开；不能将字幕和章节合并到一个WebVTT文件中。
 

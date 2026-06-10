@@ -49,7 +49,7 @@ AEM Forms Document Security提供了多种应用安全策略的工具。 您可�
 
 * **Document Security SDK：** SDK是功能丰富的客户端。 您可以使用Document Security SDK访问Document Server功能，打开受策略保护的文档，以及开发自定义扩展、插件或应用程序。 例如，您可以开发扩展以保护自定义文件格式，或将SDK与数据丢失防护(DLP)解决方案集成。 使用Document Security SDK开发的扩展、应用程序和插件可将文档发送到指定的AEM Forms服务器，并且策略会应用于该服务器。 AEM Forms document security客户端SDK (CSDK)无法取消使用可移植保护库(PPL)保护的文档的保护，反之亦然。
 
-  Document Security SDK适用于Java™和C++。 Java™ SDK包含在AEM Forms Document Security产品中，并且安装在JEE上部署AEM Forms上。 联系[AEM客户支持](https://experienceleague.adobe.com/zh-hans?support-solution=General&support-tab=home#support)以获取C++ SDK。 C++ SDK可以使用Microsoft® Visual Studio 2013进行编译。 访问[Document Security API文档](https://help.adobe.com/en_US/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)网站，您可以在其中学习和使用SDK的功能。
+  Document Security SDK适用于Java™和C++。 Java™ SDK包含在AEM Forms Document Security产品中，并且安装在JEE上部署AEM Forms上。 联系[AEM客户支持](https://experienceleague.adobe.com/zh-hans?support-solution=General&support-tab=home#support)以获取C++ SDK。 C++ SDK可以使用Microsoft® Visual Studio 2013进行编译。 访问[Document Security API文档](https://help.adobe.com/zh_CN/livecycle/11.0/Services/WS92d06802c76abadb76c48dfe12dbeb3e281-7ff0.2.html)网站，您可以在其中学习和使用SDK的功能。
 
 * **Adobe Acrobat：**&#x200B;您可以使用Adobe Acrobat将安全策略应用到使用常用桌面应用程序(如Microsoft®Office、Web浏览器或任何支持PDF格式打印的应用程序创建的PDF文档。
 

@@ -25,7 +25,7 @@ Dynamic Media Classic视频集成将优化视频的覆盖范围扩展到所有�
 
 * **[!UICONTROL Scene7视频]**&#x200B;组件自动执行设备和带宽检测，以便在台式机、平板电脑和移动设备上播放正确格式和正确质量的视频。
 * Assets — 您可以包含自适应视频集，而不是只包含单个视频资源。 自适应视频集包含要在多个屏幕上无缝回放视频所需的所有视频演绎版。 自适应视频集对使用不同比特率和格式（例如400 kbps、800 kbps和1000 kbps）编码的相同视频的版本进行分组。 您可以使用自适应视频集以及S7视频组件在多个屏幕(包括台式机、iOS、Android™、BlackBerry®和Windows移动设备)上实现自适应视频流传输。
-<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/en_US/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
+<!-- See [Scene7 documentation about adaptive video sets for more information](https://help.adobe.com/zh_CN/scene7/using/WS53492AE1-6029-45d8-BF80-F4B5CF33EB08.html). -->
 
 ## 关于FFMPEG和Dynamic Media Classic {#about-ffmpeg-and-scene}
 
