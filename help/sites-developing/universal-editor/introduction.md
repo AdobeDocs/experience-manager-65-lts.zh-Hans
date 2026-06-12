@@ -6,8 +6,8 @@ role: Developer
 exl-id: 495df631-5bdd-456b-b115-ec8561f33488
 source-git-commit: 49922325d3cc993d551683fac1effe9fc9590880
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 42%
+source-wordcount: '1320'
+ht-degree: 46%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 42%
 
 ## 概述 {#overview}
 
-通用编辑器是一个多功能可视化编辑器，是 Adobe Experience Manager Sites 的一部分。它允许作者对任何Headless体验进行“所见即所得”(WYSIWYG)编辑。
+通用编辑器是一个多功能可视化编辑器，是 Adobe Experience Manager Sites 的一部分。 它允许作者对任何Headless体验进行“所见即所得”(WYSIWYG)编辑。
 
 * 作者受益于通用编辑器的灵活性。 它支持对所有形式的AEM Headless内容进行相同一致的可视化编辑。
-* 开发人员同样能够从通用编辑器的多样性中获益，因为它还支持对实施的真正解耦。它使开发人员几乎可以使用他们选择的任何框架或架构，而无需施加任何SDK或技术限制。
+* 开发人员同样能够从通用编辑器的多样性中获益，因为它还支持对实施的真正解耦。 它使开发人员几乎可以使用他们选择的任何框架或架构，而无需施加任何SDK或技术限制。
 
 请参阅 [AEM as a Cloud Service 文档中有关通用编辑器的章节](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)，以了解更多详细信息。
 
@@ -99,7 +99,7 @@ Universal Editor依赖于许多必须配置的服务。
 1. 在列表中找到&#x200B;**通用编辑器 URL 服务**，然后点击&#x200B;**编辑配置值**。
 1. 定义应为哪些内容路径或 `sling:resourceTypes` 打开通用编辑器。
    * 在&#x200B;**通用编辑器打开映射**&#x200B;字段中，提供通用编辑器为其打开的路径。
-   * 在应由通用编辑器&#x200B;**字段打开的:resourceTypesSling**&#x200B;中，输入通用编辑器直接打开的资源的列表。
+   * 在应由通用编辑器&#x200B;**字段打开的** Sling:resourceTypes中，输入通用编辑器直接打开的资源的列表。
 1. 单击&#x200B;**保存**。
 1. 检查您的[外部化器配置](/help/sites-developing/externalizer.md)，并确保至少按照以下示例设置了本地、作者和发布环境：
 
@@ -142,7 +142,7 @@ Universal Editor依赖于许多必须配置的服务。
 1. 安装 Node.js 版本 >=20。
 1. 从[Software Distribution](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud/software-distribution/home)下载并解压缩最新的通用编辑器服务
 1. 通过环境变量或`.env`文件配置通用编辑器服务。
-   * [有关详细信息，请参阅 AEM as a Cloud Service 通用编辑器文档。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/local-dev#setting-up-service)
+   * [有关详细信息，请参阅AEM as a Cloud Service通用编辑器文档。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/local-dev#setting-up-service)
    * 请注意，如果需要重写内部 IP，可能需要使用 `UES_MAPPING` 选项。
 1. 运行 `universal-editor-service.cjs`
 
@@ -161,7 +161,7 @@ Universal Editor依赖于许多必须配置的服务。
 
    >[!NOTE]
    >
-   >默认端口为 8080。如果在[您的 `.env` 文件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/local-dev#setting-up-service)中通过 `UES_PORT` 参数更改了端口值，则必须在此处相应调整。
+   >默认端口为 8080。 如果在[您的 `.env` 文件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/local-dev#setting-up-service)中通过 `UES_PORT` 参数更改了端口值，则必须在此处相应调整。
 
 1. 重新启动 Apache。
 

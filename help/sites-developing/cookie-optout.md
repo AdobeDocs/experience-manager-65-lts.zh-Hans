@@ -1,5 +1,5 @@
 ---
-title: 配置Cookie用法
+title: 配置 Cookie 的使用
 description: AEM提供的服务允许您配置并控制Cookie在网页中的使用方式。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: Developer
 exl-id: 219555d8-26e1-4047-b885-ec34084154c1
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 2%
+source-wordcount: '557'
+ht-degree: 5%
 
 ---
 
-# 配置Cookie用法{#configuring-cookie-usage}
+# 配置 Cookie 的使用{#configuring-cookie-usage}
 
 AEM提供的服务允许您配置并控制Cookie在网页中的使用方式：
 
