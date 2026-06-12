@@ -6,7 +6,7 @@ feature: Release Information
 role: User,Admin,Developer
 exl-id: dfda31ac-765b-401d-98d0-c19f0de22aab
 source-git-commit: e3106e87f72484568667873c1772abd30a108e51
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 100%
 
@@ -95,7 +95,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 | 区域 | 专题 | 替换 | 版本（SP） |
 |--- |--- |--- |--- |
 | Commerce | 不支持 AEM CIF Classic。 | 迁移到 [AEM CIF](/help/commerce/cif/migration.md)。 | 6.5 LTS GA |
-| 解决方案 | 不支持社交/Communities。 | 没有替代功能可用。 | 6.5 LTS GA |
+| 解决方案 | 不支持社交/社区。 | 没有替代功能可用。 | 6.5 LTS GA |
 | Screens | 不支持 Screens。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 资产 | 不支持 `dam-pim` 和 `dam-rating`，因为捆绑包取决于社交。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 资产 | `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettings()` 已被移除。 | 使用已添加的替代 api `com.day.cq.dam.scene7.api.model.Scene7ViewerConfig#getSettingsList()`。 | 6.5 LTS GA |
@@ -147,7 +147,7 @@ AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripti
 * 使用 `https + IP` 方法与 AEM 实例连接的 Dispatcher 配置
 
 **解决方案：**
-如果您遇到这个问题，请联系 Adobe 客户支持部门。有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。 采用必要的热修复之前，不要尝试启用仅 SSL 功能。
+如果您遇到这个问题，请联系 Adobe 客户支持部门。 有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。 采用必要的热修复之前，不要尝试启用仅 SSL 功能。
 
 ## 受限网站{#restricted-sites}
 

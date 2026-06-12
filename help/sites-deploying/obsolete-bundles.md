@@ -11,8 +11,8 @@ role: Admin
 exl-id: 29f1d07b-925b-4612-aa1b-34c387a5765f
 source-git-commit: b93a65226587936010c3dd53312c66e15f73cf2a
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 8%
+source-wordcount: '384'
+ht-degree: 4%
 
 ---
 
@@ -101,5 +101,5 @@ ht-degree: 8%
 * org.apache.sling.atom.taglib
 * com.github.jknack.handlebars
 * com.adobe.granite.osgi.wrapper.guava
-* com.adobe.cq.core.wcm.components.core(可替换为[与AEM 6.5 LTS兼容的版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/versions))
-* com.adobe.cq.core.wcm.components.extension.contentfragment.bundle(可替换为AEM 6.5 LTS兼容版本)
+* com.adobe.cq.core.wcm.components.core（可替换为[与AEM 6.5 LTS兼容的版本](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/versions)）
+* com.adobe.cq.core.wcm.components.extension.contentfragment.bundle（可替换为AEM 6.5 LTS兼容版本）

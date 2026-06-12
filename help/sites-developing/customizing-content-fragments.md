@@ -1,6 +1,6 @@
 ---
 title: 自定义和扩展内容片段
-description: 内容片段扩展标准资源。 了解如何对其进行自定义。
+description: 内容片段扩展了标准资产。 了解如何对其进行自定义。
 topic-tags: extending-aem
 content-type: reference
 docset: aem65
@@ -10,34 +10,34 @@ role: Developer
 exl-id: 705bffea-ef70-40b5-81d8-b130d3908073
 source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
 workflow-type: tm+mt
-source-wordcount: '2687'
-ht-degree: 1%
+source-wordcount: '2826'
+ht-degree: 2%
 
 ---
 
 # 自定义和扩展内容片段{#customizing-and-extending-content-fragments}
 
-内容片段扩展标准资源；请参阅：
+内容片段扩展了标准资产；请参阅：
 
-* 有关内容片段的更多信息，请[创建和管理内容片段](/help/assets/content-fragments/content-fragments.md)和[使用内容片段创作页面](/help/sites-authoring/content-fragments.md)。
+* [创建和管理内容片段](/help/assets/content-fragments/content-fragments.md)和使用内容片段进行[页面创作](/help/sites-authoring/content-fragments.md)，以获取有关内容片段的更多信息。
 
-* 有关标准资源的更多信息，请[管理资源](/help/assets/manage-assets.md)和[自定义和扩展资源](/help/assets/extending-assets.md)。
+* [管理Assets](/help/assets/manage-assets.md)和[自定义和扩展Assets](/help/assets/extending-assets.md)，以了解有关标准资产的更多信息。
 
 ## 架构 {#architecture}
 
 内容片段的基本[组成部分](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment)为：
 
 * *内容片段，*
-* 由一个或多个&#x200B;*内容元素*&#x200B;组成，
-* 并且可能有一个或多个&#x200B;*内容变化*。
+* 包含一个或多个&#x200B;*内容元素*，
+* 并且可以具有一个或多个&#x200B;*内容变量*&#x200B;的服务器。
 
-根据片段的类型，还可使用模型或模板：
+根据片段类型，还会使用模型或模板：
 
 >[!CAUTION]
 >
->[建议使用内容片段模型](/help/assets/content-fragments/content-fragments-models.md) 来创建所有新片段。
+>建议使用[内容片段模型](/help/assets/content-fragments/content-fragments-models.md)创建所有新片段。
 >
->内容片段模型用于 WKND 中的所有示例。
+>内容片段模型用于WKND中的所有示例。
 
 >[!NOTE]
 >
@@ -48,10 +48,10 @@ ht-degree: 1%
 * 内容片段模型：
 
    * 用于定义包含结构化内容的内容片段。
-   * 内容片段模型定义内容片段在创建时的结构。
-   * 片段引用模型;因此，对模型的更改可能会/将影响任何依赖片段。
-   * 模型由数据类型组成。
-   * 添加新变体等的函数必须相应地更新片段。
+   * 内容片段模型在创建内容片段时定义其结构。
+   * 片段引用模型；因此，对模型的更改可能/将影响任何依赖的片段。
+   * 模型由数据类型构建。
+   * 用于添加新变体的函数等，必须相应地更新片段。
 
   >[!CAUTION]
   >
@@ -82,7 +82,6 @@ ht-degree: 1%
 * 所有内容都存储在资源的`jcr:content/data`节点下：
 
    * 元素数据存储在主子节点下：
-
      `jcr:content/data/master`
 
    * 变体存储在子节点下，该子节点带有变体的名称：
@@ -91,7 +90,7 @@ ht-degree: 1%
    * 每个元素的数据作为属性存储在相应的子节点中，该属性具有元素名称：
 例如，元素`text`的内容作为属性`text`存储在`jcr:content/data/master`上
 
-* 元数据和关联内容存储在`jcr:content/metadata`下
+* 元数据和关联内容存储在下方 `jcr:content/metadata`
 除了标题和描述，它们不被视为传统元数据并存储在`jcr:content`上
 
 #### 将简单内容片段映射到Assets {#mapping-simple-content-fragments-to-assets}
@@ -130,43 +129,43 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
->现在建议使用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。 有关详细信息，请参阅[开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans)。
+>现在建议使用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans)。 有关详细信息，请参阅[开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)。
 
-与任何其他资源类型一样，可以从AEM页面引用内容片段。 AEM提供了&#x200B;[**内容片段**&#x200B;核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) — 一个[组件，可让您在页面中包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此&#x200B;**内容片段**&#x200B;核心组件。
+可以从AEM页面引用内容片段，就像任何其他资源类型一样。 AEM提供了&#x200B;[**内容片段**&#x200B;核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=zh-Hans) — 一个[组件，它允许您在页面上包含内容片段](/help/sites-authoring/content-fragments.md#adding-a-content-fragment-to-your-page)。 您还可以扩展此&#x200B;**内容片段**&#x200B;核心组件。
 
-* 组件使用`fragmentPath`属性引用实际内容片段。 `fragmentPath`属性的处理方式与其他资源类型的类似属性相同；例如，在将内容片段移动到其他位置时。
+* 组件使用`fragmentPath`属性引用实际内容片段。 `fragmentPath`属性的处理方式与其他资产类型的类似属性相同；例如，当内容片段移动到其他位置时。
 
-* 元件允许您选取要显示的变化。
+* 利用组件，可选择要显示的变体。
 * 此外，可以选择一定范围的段落以限制输出；例如，这可用于多列输出。
-* 组件允许[在内容](/help/sites-developing/components-content-fragments.md#in-between-content)之间：
+* 该组件允许[中间内容](/help/sites-developing/components-content-fragments.md#in-between-content)：
 
-   * 在此组件中，您可以将其他资源（图像等）放在引用片段的段落之间。
-   * 对于介于两者之间的内容，您需要：
+   * 在这里，利用组件可以在引用片段的段落之间放置其他资产（图像等）。
+   * 对于中间内容，您需要：
 
-      * 请注意引用可能不稳定；介于两者之间的内容（在创作页面时添加）与其旁边的段落没有固定的关系，在介于两者之间的内容位置之前插入新段落（在内容片段编辑器中）可能会失去相对位置
-      * 请考虑其他参数（如变体和段落过滤器），以避免搜索结果中出现误报
+      * 请注意，可能存在不稳定的引用；中间内容（在创作页面时添加）与其旁边的段落没有固定关系，在中间内容的位置可能丢失相对位置之前插入新段落（在内容片段编辑器中）
+      * 请考虑使用其他参数（如变体和段落过滤器）以避免搜索结果中出现误报
 
 >[!NOTE]
 >
 >**内容片段模型：**
 >
->使用基于页面上的内容片段模型的内容片段时，将引用该模型。 这意味着，如果在发布页面时模型尚未发布，则会标记该模型，并将模型添加到要随页面一起发布的资源中。
+>使用基于页面上的内容片段模型的内容片段时，会引用模型。 这意味着，如果在您发布页面时模型尚未发布，则会标记该模型，并将模型添加到要与页面一起发布的资源。
 >
 >**内容片段模板：**
 >
 >使用基于页面上的内容片段模板的内容片段时，没有引用，因为创建片段时复制了模板。
 
-#### 使用 OSGi 控制台进行配置 {#configuration-using-osgi-console}
+#### 使用OSGi控制台进行配置 {#configuration-using-osgi-console}
 
-例如，内容片段的后端实现负责使页面上使用的片段实例可搜索，或管理混合媒体内容。 此实现需要知道哪些组件用于渲染片段以及如何参数化渲染。
+例如，内容片段的后端实施负责使页面上使用的片段实例可搜索，或管理混合媒体内容。 此实施需要知道哪些组件用于呈现片段以及如何对呈现进行参数化。
 
-可以在 Web 控制台[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中为 OSGi 捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此参数。
+可以在[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)中为OSGi捆绑包&#x200B;**内容片段组件配置**&#x200B;配置此内容的参数。
 
 * **资源类型**
-可以提供 的列表 `sling:resourceTypes` ，以定义用于呈现内容片段的组件以及应将后台处理应用到的位置。
+可提供`sling:resourceTypes`列表以定义用于呈现内容片段的组件以及应应用后台处理的位置。
 
 * **引用属性**
-可以配置属性列表，以指定为相应组件存储对片段的引用的位置。
+可以配置属性列表以指定在何处为各个组件存储对片段的引用。
 
 >[!NOTE]
 >
@@ -191,11 +190,11 @@ ht-degree: 1%
 
    * `paragraphScope`定义是应呈现所有段落，还是仅呈现段落范围（值：`all`与`range`）
 
-   * 如果`paragraphScope`==`range`，则属性`paragraphRange`定义要渲染的段落范围
+   * 如果`paragraphScope`==`range`，则属性`paragraphRange`定义要呈现的段落范围
 
-### 与其他框架的集成 {#integration-with-other-frameworks}
+### 与其他框架集成 {#integration-with-other-frameworks}
 
-内容片段可以与以下内容集成：
+内容片段可以与集成：
 
 * **翻译**
 
@@ -266,10 +265,10 @@ ht-degree: 1%
 
   此界面表示：
 
-   * 内容片段模型或内容片段模板，用于创建内容片段，
+   * 从中创建内容片段的内容片段模型或内容片段模板，
    * 以及（创建后）该片段的结构信息
 
-  这些信息可能包括：
+  此信息可以包括：
 
    * 访问基本数据（标题、描述）
    * 访问片段元素的模板/模型：
@@ -282,7 +281,7 @@ ht-degree: 1%
 
       * 列出变体模板
       * 获取给定变体的结构信息
-      * 访问变体模板（请参阅 `VariationTemplate`）
+      * 访问变体模板（请参阅`VariationTemplate`）
 
    * 获取初始关联内容
 
@@ -290,7 +289,7 @@ ht-degree: 1%
 
    * `ElementTemplate`
 
-      * 获取基本数据（名称、职务）
+      * 获取基本数据（名称、标题）
       * 获取初始元素内容
 
    * `VariationTemplate`
@@ -363,26 +362,26 @@ ht-degree: 1%
 
    * `Resource` — 基础Sling资源；请注意，直接更新基础`Resource`需要重建`ContentFragment`对象。
 
-   * `Asset` — 表示内容片段的DAM `Asset`抽象；请注意，直接更新`Asset`需要重新生成`ContentFragment`对象。
+   * `Asset` — 表示内容片段的DAM `Asset`抽象；请注意，直接更新`Asset`需要重建`ContentFragment`对象。
 
-* `ContentElement`可以调整为：
+* `ContentElement`可以适应：
 
    * `ElementTemplate` — 用于访问元素的结构信息。
 
-* `FragmentTemplate`可以调整为：
+* `FragmentTemplate`可以适应：
 
    * `Resource` - `Resource`确定引用的模型或已复制的原始模板；
 
       * 通过`Resource`进行的更改不会自动反映到`FragmentTemplate`中。
 
-* `Resource`可以调整为：
+* `Resource`可以适应：
 
    * `ContentFragment`
    * `FragmentTemplate`
 
 ### 注意事项 {#caveats}
 
-应当指出：
+需要注意的是：
 
 * 实施API是为了提供UI支持的功能。
 * 整个API设计为&#x200B;**而非**&#x200B;自动保留更改（除非在API JavaDoc中另有说明）。 因此，您将始终必须提交相应请求的资源解析程序（或您实际使用的解析程序）。
@@ -415,7 +414,7 @@ ht-degree: 1%
 
 控制编辑会话的要求包括：
 
-* 编辑的内容片段可以跨越多个视图(= HTML页面)，应为原子结构。
+* 编辑的内容片段可以跨越多个视图（= HTML页面），应为原子结构。
 * 编辑也应是&#x200B;*事务性*；在编辑会话结束时，必须提交（保存）或回滚（取消）更改。
 * Edge案例应正确处理；这些案例包括用户通过手动输入URL或使用全局导航离开页面时的情况。
 * 应提供定期自动保存（每x分钟）以防止数据丢失。
@@ -427,9 +426,9 @@ ht-degree: 1%
 
 * 启动会话
 
-   * 内容片段的新版本已创建。
+   * 将创建内容片段的新版本。
    * 自动保存已启动。
-   * 设置Cookie；它们定义当前编辑的片段，并且有一个编辑会话打开。
+   * 设置了Cookie；这些Cookie定义了当前编辑的片段，并打开了编辑会话。
 
 * 完成会话
 
@@ -527,7 +526,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 * 值： `300`（5分钟等于300秒）
 
-## 用于页面创作的组件 {#components-for-page-authoring}
+## 页面创作组件 {#components-for-page-authoring}
 
 有关详细信息，请参阅
 

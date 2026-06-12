@@ -18,7 +18,7 @@ Adobe Experience Manager (AEM)安装时使用了所有参数的默认设置，�
 
 AEM有许多方面可以进行配置：
 
-* 某些组件通常针对每个项目安装[&#128279;](#primary-configuration-considerations)进行配置，必须对其进行查看以确认它们是否适用于您的项目。
+* 某些组件通常针对每个项目安装](#primary-configuration-considerations)进行[配置，必须对其进行查看以确认它们是否适用于您的项目。
 * [其他配置](#further-configuration-considerations)可能是通用的，但不是必需的；与功能或系统性能和稳定性相关。
 * 只有AEM的某些可选功能才需要其他功能（这些功能与相应的功能一起进行记录）。
 
@@ -176,7 +176,7 @@ LDAP身份验证在存储库级别进行，因此它直接由存储库处理。 
 
 Dispatcher是Adobe Experience Manager用于缓存和/或负载平衡的工具。 它可以与企业级Web服务器一起使用。
 
-有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans)以了解更多配置详细信息。
+有关完整的详细信息，请参阅[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)，特别是[配置Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html)以了解更多配置详细信息。
 
 ### 配置AEM LiveCycle Connector {#configuring-aem-livecycle-connector}
 

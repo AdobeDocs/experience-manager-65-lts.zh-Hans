@@ -7,8 +7,8 @@ role: User,Admin,Developer
 exl-id: 314a6c65-9b90-4f4c-9e4a-d551dbb646e9
 source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 32%
+source-wordcount: '430'
+ht-degree: 30%
 
 ---
 
@@ -34,7 +34,7 @@ AEM为您提供两种环境：
 
 ### 创作环境 {#author-environment}
 
-作者在称为&#x200B;**创作环境**&#x200B;的环境中工作。这为创建内容提供了易于使用的界面(图形用户界面（GUI或UI）)。 它位于公司防火墙的后面，可提供全面保护，并要求作者使用已分配了相应访问权限的帐户登录。
+作者在称为&#x200B;**创作环境**&#x200B;的环境中工作。 这为创建内容提供了易于使用的界面(图形用户界面（GUI或UI）)。 它位于公司防火墙的后面，可提供全面保护，并要求作者使用已分配了相应访问权限的帐户登录。
 
 >[!NOTE]
 >
@@ -70,15 +70,15 @@ AEM为您提供两种环境：
 >不幸的是，使用的术语有时存在重叠。 这种情况可能会发生在以下位置：
 >
 >* **发布/取消发布**
->  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
+>  这些是在发布环境中公开提供（或不公开提供）您内容的主要操作术语。
 >
->* **激活／取消激活**
->  这两个术语与发布/取消发布同义。
+>* **激活/停用**
+>  这些术语与发布/取消发布同义。
 >
->* **复制**
->  这些是技术术语，用于指示数据（例如，页面内容、文件、代码、用户注释）从一个环境移动到另一个环境；即在发布或反向复制用户注释时。
+>* **复制/复制**
+>  这些是技术术语，用于指示数据（例如，页面内容、文件、代码、用户注释）从一个环境移动到另一个环境；即发布或反向复制用户注释时。
 >
 
 #### Dispatcher {#dispatcher}
 
-为了优化网站访问性能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans)**&#x200B;实施了负载平衡和缓存。
+为了优化网站访问性能，**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)**&#x200B;实施了负载平衡和缓存。
