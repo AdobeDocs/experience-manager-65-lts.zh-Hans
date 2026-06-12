@@ -75,7 +75,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->*请务必将crossdomain.xml文件放在正确的位置。 例如，假定您在JBoss上部署了AEM Forms，则将此文件放在以下位置：&lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war。*
+>*请务必将crossdomain.xml文件放在正确的位置。 例如，假设您在JBoss上部署了AEM Forms，则将此文件放在以下位置： &lt;install_directory>\Adobe_Experience_Manager_forms\jboss\server\lc_turnkey\deploy\jboss-web.deployer\ROOT.war.*
 
 ## 包括AEM Forms Flex库文件 {#including-the-aem-forms-flex-library-file}
 

@@ -1,5 +1,5 @@
 ---
-title: 用户、组和访问权限管理
+title: 用户、群组和访问权限管理
 description: 了解Adobe Experience Manager中的用户、组和访问权限管理。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -11,8 +11,8 @@ role: Admin
 exl-id: a1f4823f-4861-4e99-88cd-4a686abe3f64
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3073'
-ht-degree: 0%
+source-wordcount: '3107'
+ht-degree: 3%
 
 ---
 
@@ -167,7 +167,7 @@ CRX中的访问权限评估如下：
 
 来自多个组主体的访问权限根据其顺序进行评估，无论是在层次结构中还是在单个访问控制列表中。
 
-### 最佳实践 {#best-practices}
+### 最佳做法 {#best-practices}
 
 下表列出了一些建议和最佳实践：
 
@@ -179,17 +179,17 @@ CRX中的访问权限评估如下：
   </tr>
   <tr>
    <td><i>使用组</i></td>
-   <td><p>避免逐个用户分配访问权限。 原因有多种：</p>
+   <td><p>避免逐一为单个用户分配访问权限。 原因有多种：</p>
     <ul>
-     <li>用户数多于组数，因此组简化了结构。</li>
-     <li>组可帮助提供所有帐户的概述。</li>
-     <li>对组进行继承更简单。</li>
-     <li>用户来来去去。 组是长期的。</li>
+     <li>系统中用户数量远多于用户组，使用组可以简化结构。</li>
+     <li>组有助于全面了解所有帐户。</li>
+     <li>继承关系在组中更为简单。</li>
+     <li>用户会进进出出。 组是长期的。</li>
     </ul> </td>
   </tr>
   <tr>
    <td><i>积极的</i></td>
-   <td><p>始终使用Allow语句指定组主体的访问权限（如果可能）。 避免使用Deny语句。</p> <p>在单个访问控制列表中，按层次和顺序对组主体进行评估。</p> </td>
+   <td><p>始终使用Allow语句指定组主体的访问权限（如果可能）。 避免使用“拒绝”语句。</p> <p>在单个访问控制列表中，按层次和顺序对组主体进行评估。</p> </td>
   </tr>
   <tr>
    <td><i>保持简单</i></td>
@@ -197,11 +197,11 @@ CRX中的访问权限评估如下：
   </tr>
   <tr>
    <td><i>测试</i></td>
-   <td>使用测试安装进行练习并确保您了解各种用户和组之间的关系。</td>
+   <td>使用测试安装进行练习，以确保您理解不同用户和组之间的关系。</td>
   </tr>
   <tr>
    <td><i>默认用户/组</i></td>
-   <td>始终在安装后立即更新默认用户和组，以防止出现任何安全问题。</td>
+   <td>安装完成后，请务必立即更新默认用户和组，以帮助避免任何安全问题。</td>
   </tr>
  </tbody>
 </table>
@@ -561,7 +561,7 @@ CRX中的访问权限评估如下：
   </tr>
   <tr>
    <td><code>jcr:removeNode</code></td>
-   <td>删除节点。</td>
+   <td>移除节点。</td>
   </tr>
   <tr>
    <td><code>jcr:retentionManagement</code></td>

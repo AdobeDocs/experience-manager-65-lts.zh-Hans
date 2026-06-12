@@ -11,7 +11,7 @@ role: Admin
 exl-id: eef69d02-2e88-4f44-98bb-d98fa297e3a2
 source-git-commit: ffb467630ee061bce5a9cab4e8a311e70b2aeb38
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '944'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,11 @@ Adobe的AEM团队与开源项目[NotSoSerial](https://github.com/kantega/notsose
 
 此包中包含的代理jar是Adobe修改过的NotSoSerial分发。
 
-NotSoSerial是解决Java™级别问题的Java™级别解决方案，并非特定于AEM。 它会向试图反序列化对象的操作添加预检检查。 此检查针对防火墙样式的允许列表列入阻止列表和/或测试类名。 由于默认阻止列表中的类数量有限，此测试不太可能对您的系统或代码产生影响。
+NotSoSerial是解决Java™级别问题的Java™级别解决方案，并非特定于AEM。 它会向试图反序列化对象的操作添加预检检查。 此检查针对防火墙样式的允许列表和/或测试类名。 由于默认阻止列表中的类数量有限，此测试不太可能对您的系统或代码产生影响。
 
 默认情况下，代理会针对当前已知的易受攻击的类执行阻止列表检查。 此阻止列表旨在保护您免受目前使用此类漏洞的漏洞的攻击。
 
-可以按照本文的[配置代理](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent)部分中的说明配置阻止列表列入允许列表和。
+可以按照本文的[配置代理](/help/sites-administering/mitigating-serialization-issues.md#configuring-the-agent)部分中的说明配置阻止列表和。
 
 该代理旨在帮助缓解最新已知的易受攻击的类别。 如果您的项目正在反序列化不受信任的数据，则它仍可能容易受到拒绝服务攻击、内存不足攻击和未知的未来反序列化攻击。
 
@@ -71,7 +71,7 @@ NotSoSerial代理未包含在用于应用程序服务器的AEM的标准分发中
 
 ## 配置代理 {#configuring-the-agent}
 
-对于大多数安装，默认配置已足够。 此配置包括已知远程运行易受攻击的类的阻止列表列入允许列表和信任数据的反序列化安全的包。
+对于大多数安装，默认配置已足够。 此配置包括已知远程运行易受攻击的类的阻止列表和信任数据的反序列化安全的包。
 
 防火墙配置是动态的，可以随时更改：
 
@@ -84,7 +84,7 @@ NotSoSerial代理未包含在用于应用程序服务器的AEM的标准分发中
    >
    >* `https://server:port/system/console/configMgr/com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
 
-此配置包含允许列表 列入阻止列表、序列化和反序列化日志记录。
+此配置包含允许列表、序列化和反序列化日志记录。
 
 **允许列表**
 
@@ -142,4 +142,4 @@ NotSoSerial代理未包含在用于应用程序服务器的AEM的标准分发中
 
 ## 其他注意事项 {#other-considerations}
 
-如果您在IBM® JVM上运行，请查看有关对[此位置](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=documentation-java-attach-api)的Java™附加API支持的文档。
+如果您在® JVM上运行，请查看有关对[此位置](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=documentation-java-attach-api)的Java™附加API支持的文档。
