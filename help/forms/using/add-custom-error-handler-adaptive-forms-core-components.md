@@ -21,7 +21,7 @@ ht-degree: 81%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/add-custom-error-handler-adaptive-forms-core-components.html)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/add-custom-error-handler-adaptive-forms-core-components.html?lang=zh-Hans)。
 
 AEM Forms 为表单提交提供现成的成功和错误处理程序。 它还提供用于自定义错误处理函数的功能。 例如，可在后端为特定的错误代码调用自定义工作流或通知客户服务已停止。 处理程序是根据服务器响应执行的客户端函数。 在使用 API 调用外部服务时，数据会传输到服务器以进行验证，这会向客户端返回响应，其中包含有关提交的成功或错误事件的信息。 该信息作为参数传递给相关处理程序以执行该函数。 错误处理程序可帮助管理和显示遇到的错误或验证问题。
 
@@ -171,7 +171,7 @@ AEM Forms 为表单提交提供现成的成功和错误处理程序。 它还提
 在自适应Forms中使用错误处理程序之前：
 
 * [为您的环境启用自适应Forms核心组件](enable-adaptive-forms-core-components.md)。
-* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=en#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
+* [创建自定义函数](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-functions-aem-forms.html?lang=zh-Hans#:~:text=AEM%20Forms%206.5%20introduced%20the,use%20them%20across%20multiple%20forms.)的基本知识。
 * 安装[Apache Maven](https://maven.apache.org/download.cgi)的最新版本。
 
 ## 使用规则编辑器添加错误处理程序 {#add-error-handler-using-rule-editor}
