@@ -14,7 +14,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 1ffc31e1-9e47-40fe-93b8-cd6ef96e0674
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3792'
+source-wordcount: '3901'
 ht-degree: 7%
 
 ---
@@ -147,7 +147,7 @@ Adobe Illustrator的文件格式是PDF的一个变体。 在Experience Manager A
 
 “最大宽度”和“最大高度”可限制栅格化的分辨率。 例如，如果最大值保持不变，且“分辨率”设置为300 ppi，则US Letter文档将栅格化为186 ppi。 也就是说，文档是1581 x 2046像素。
 
-`Rasterize PDF/AI Image Preview Rendition`进程组件定义了最大值，以确保它不会在内存中创建过大的映像。 如此大的映像可能会溢出提供给JVM (Java™虚拟机)的内存。 必须注意为JVM提供足够的内存来管理配置的并行工作流数，每个工作流都有可能以配置的最大大小创建映像。
+`Rasterize PDF/AI Image Preview Rendition`进程组件定义了最大值，以确保它不会在内存中创建过大的映像。 如此大的映像可能会溢出提供给JVM （Java™虚拟机）的内存。 必须注意为JVM提供足够的内存来管理配置的并行工作流数，每个工作流都有可能以配置的最大大小创建映像。
 
 ### InDesign (INDD)文件格式 {#indesign-indd-file-format}
 
@@ -192,9 +192,9 @@ Dynamic Media集成使用以下脚本：
 
 ## 配置图像缩略图大小 {#configuring-image-thumbnail-size}
 
-您可以通过在&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流中配置这些设置来配置缩略图的大小。 在工作流中，您可以分两个步骤配置图像资产的缩略图大小。 尽管(**[!UICONTROL Dynamic Media进程图像Assets]**)用于动态图像资源，并且（**[!UICONTROL 进程缩略图]**）用于生成静态缩略图，或者在所有其他进程无法生成缩略图时，*两个*&#x200B;必须具有相同的设置。
+您可以通过在&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流中配置这些设置来配置缩略图的大小。 在工作流中，您可以分两个步骤配置图像资产的缩略图大小。 尽管（**[!UICONTROL Dynamic Media进程图像Assets]**）用于动态图像资源，并且（**[!UICONTROL 进程缩略图]**）用于生成静态缩略图，或者在所有其他进程无法生成缩略图时，*两个*&#x200B;必须具有相同的设置。
 
-在 **[!UICONTROL Dynamic Media 流程图像资产]**&#x200B;步骤中，缩略图由图像服务器生成，此配置与应用于&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤的配置无关。通过&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤生成缩略图是创建缩览图最耗时、内存占用最多的方法。
+在 **[!UICONTROL Dynamic Media 流程图像资产]**&#x200B;步骤中，缩略图由图像服务器生成，此配置与应用于&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤的配置无关。 通过&#x200B;**[!UICONTROL 流程缩略图]**&#x200B;步骤生成缩略图是创建缩览图最耗时、内存占用最多的方法。
 
 缩略图大小按以下格式定义： **`width:height:center`**，例如`80:80:false`。 宽度和高度决定缩略图的大小（以像素为单位）。 中心值为false或true，如果设置为true，则表示缩略图图像大小与配置中给定的大小完全一样。 如果调整后的图像较小，则它会在缩略图内居中。
 
@@ -260,7 +260,7 @@ Dynamic Media集成使用以下脚本：
 **要创建Dynamic Media图像预设：**
 
 1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后选择&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 图像预设]**。
-1. 单击&#x200B;**[!UICONTROL 创建]**。将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
+1. 单击&#x200B;**[!UICONTROL 创建]**。 将打开&#x200B;**[!UICONTROL 编辑图像预设]**&#x200B;窗口。
 
    ![chlimage_1-496](assets/chlimage_1-496.png)
 
@@ -268,7 +268,7 @@ Dynamic Media集成使用以下脚本：
    >
    >要使此图像预设具有响应性，请擦除&#x200B;**[!UICONTROL 宽度]**&#x200B;和&#x200B;**[!UICONTROL 高度]**&#x200B;字段中的值，并将其留空。
 
-1. 根据需要，在&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中输入值，包括名称。图像预设选项中概 [述了这些选项](#image-preset-options)。 预设显示在左窗格中，并可以与其他资产一起动态使用。
+1. 根据需要，在&#x200B;**[!UICONTROL 基本]**&#x200B;和&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡中输入值，包括名称。 图像预设选项中概 [述了这些选项](#image-preset-options)。 预设显示在左窗格中，并可以与其他资产一起动态使用。
 
    ![6_5_imagepreset-edit](assets/6_5_imagepreset-edit.png)
 
@@ -296,7 +296,7 @@ Dynamic Media集成使用以下脚本：
 
 创建或编辑图像预设时，您具有本节中介绍的选项。 此外，Adobe建议从以下“最佳实践”选项开始：
 
-* **[!UICONTROL 格式]** （**[!UICONTROL 基本]**&#x200B;选项卡） — 选择&#x200B;**[!UICONTROL JPEG]**&#x200B;或其他符合您要求的格式。 所有 Web 浏览器都支持 JPEG 图像格式；它可以在小文件大小和图像质量之间实现良好的平衡。但是，JPEG 格式图像使用有损压缩方案，如果压缩设置太低，则会引入不需要的图像伪影。因此，Adobe 建议将压缩质量设置为 75。此设置在图像质量和小文件大小之间提供了良好的平衡。
+* **[!UICONTROL 格式]** （**[!UICONTROL 基本]**&#x200B;选项卡） — 选择&#x200B;**[!UICONTROL JPEG]**&#x200B;或其他符合您要求的格式。 所有 Web 浏览器都支持 JPEG 图像格式；它可以在小文件大小和图像质量之间实现良好的平衡。 但是，JPEG 格式图像使用有损压缩方案，如果压缩设置太低，则会引入不需要的图像伪影。 因此，Adobe 建议将压缩质量设置为 75。 此设置在图像质量和小文件大小之间提供了良好的平衡。
 
 * **[!UICONTROL 启用简单锐化]** - 请勿选择&#x200B;**[!UICONTROL 启用简单锐化]**（此锐化滤镜提供的控制度低于“钝化蒙版”设置）。
 
@@ -345,11 +345,11 @@ Dynamic Media集成使用以下脚本：
     </div>
     <ul>
      <li><strong>压缩</strong> — 选择压缩算法。 PDF的算法选项为<strong>None</strong>、<strong>Zip</strong>和<strong>Jpeg</strong>；TIFF的算法选项为<strong>None</strong>、<strong>LZW</strong>、<strong>Jpeg</strong>和<strong>Zip</strong>；带有Alpha的TIFF的算法选项为<strong>None</strong>、<strong>LZW</strong>和<strong>Zip</strong>。</li>
-    </ul> <p>选择<strong>PNG</strong>、<strong>PNG (带Alpha)、</strong>或<strong>EPS</strong>，不会提供其他选项。</p> </td>
+    </ul> <p>选择<strong>PNG</strong>、<strong>PNG （带Alpha）、</strong>或<strong>EPS</strong>，不会提供其他选项。</p> </td>
   </tr>
   <tr>
    <td><strong>锐化</strong></td>
-   <td>选择<strong>启用简单锐化</strong>选项可在执行所有缩放操作后将基本锐化滤镜应用于图像。锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </td>
+   <td>选择<strong>启用简单锐化</strong>选项可在执行所有缩放操作后将基本锐化滤镜应用于图像。 锐化有助于弥补在以不同大小显示图像时可能产生的模糊。 </td>
   </tr>
  </tbody>
 </table>
@@ -372,7 +372,7 @@ Dynamic Media集成使用以下脚本：
   </tr>
   <tr>
    <td><strong>渲染方法</strong></td>
-   <td>可以覆盖默认的渲染方法。 渲染意图决定了在目标颜色配置文件（超出色域）中无法重现的颜色会发生什么情况。 如果渲染意图与ICC配置文件不兼容，则会将其忽略。
+   <td>可以覆盖默认的渲染方法。渲染意图决定了在目标颜色配置文件（超出色域）中无法重现的颜色会发生什么情况。如果渲染意图与ICC配置文件不兼容，则会将其忽略。
     <ul>
      <li>选择<strong>可感知</strong>可在原始图像中的一种或多种颜色超出目标颜色空间的色域时，将总色域从一个颜色空间压缩到另一个颜色空间。</li>
      <li>当当前颜色空间中的颜色超出目标颜色空间中的色域时，选择<strong>相对色度</strong>。 并且，您希望将其映射到目标颜色空间色域内尽可能最接近的颜色，而不影响任何其他颜色。 </li>
@@ -397,7 +397,7 @@ Dynamic Media集成使用以下脚本：
      <li>如果要对最终取样缩小的图像微调锐化滤镜效果，请选择<strong>钝化蒙版</strong>。 您可以控制效果的强度、效果的半径（以像素为单位）以及被忽略的对比度阈值。 此效果使用与Photoshop的“钝化蒙版”滤镜相同的选项。</li>
     </ul> <p>在<strong>USM锐化</strong>中，您可以选择以下选项：</p>
     <ul>
-     <li><strong>数量</strong> — 控制应用于边缘像素的对比度。 缺省实数值为1.0。对于高分辨率图像，最高可将其增加到5.0。将“量”视为滤镜强度的度量。</li>
+     <li><strong>数量</strong> — 控制应用于边缘像素的对比度。 缺省实数值为1.0。 对于高分辨率图像，最高可将其增加到5.0。 将“量”视为滤镜强度的度量。</li>
      <li><strong>半径</strong> — 确定边缘像素周围影响锐化的像素数。 对于高分辨率图像，请输入1到2之间的实数。 低值仅锐化边缘像素；高值锐化较宽范围的像素。 正确的值取决于图像的大小。</li>
      <li><strong>阈值</strong> — 确定在应用钝化蒙版滤镜时要忽略的对比度范围。 换句话说，此选项确定锐化的像素与周围区域必须有多大的不同，才会被视为边缘像素并进行锐化。 为避免引入噪声，请尝试使用2到20之间的整数值。 </li>
      <li><strong>应用于</strong> — 确定取消锐化是应用于每种颜色还是亮度。</li>
@@ -409,7 +409,7 @@ Dynamic Media集成使用以下脚本：
   </tr>
   <tr>
    <td><strong>重新取样模式</strong></td>
-   <td>选择<strong>重新取样模式</strong>选项。 在缩减图像取样时，以下选项会锐化图像：
+   <td>选择<strong>重新取样模式</strong>选项。在缩减图像取样时，以下选项会锐化图像：
     <ul>
      <li><strong>双线性</strong> — 最快速的重新取样方法。 会出现一些锯齿伪像。</li>
      <li><strong>两次立方</strong> — 增加CPU的使用，但生成较锐利的图像，出现的锯齿伪像较少。</li>

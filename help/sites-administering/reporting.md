@@ -12,8 +12,8 @@ role: Admin
 exl-id: 6dd29f1c-3769-469c-8b8a-464f9ac00b15
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2782'
-ht-degree: 3%
+source-wordcount: '2806'
+ht-degree: 4%
 
 ---
 
@@ -304,7 +304,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡（可在报告页面上找到）�
 * 创作
 * 组件路径
 * 组件类型
-* 上次修改时间
+* 上次修改
 * 页面
 
 这意味着您可以看到以下内容：
@@ -366,7 +366,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡（可在报告页面上找到）�
 
   可选；默认：空白
 
-* **每天运行于(hh：mm)**
+* **每天运行于(hh:mm)**
 
   指定报告每天自动运行的时间。
 
@@ -494,7 +494,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡（可在报告页面上找到）�
 * 持续时间
 * 发起者
 * 模型
-* 有效负荷
+* 负载
 * 已开始
 * 状态
 
@@ -534,7 +534,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡（可在报告页面上找到）�
 
 >[!CAUTION]
 >
->访问这些报告可能是一个安全问题；因此，Adobe建议您配置Dispatcher，以便`/etc/reports`对外部访客不可用。 有关更多详细信息，请参阅[安全核对清单](security-checklist.md)。
+>访问这些报告可能是一个安全问题；因此，Adobe建议您配置Dispatcher，以便`/etc/reports`对外部访客不可用。 详情请参阅[安全清单](security-checklist.md)。
 
 ## 运行报告所需的权限 {#permissions-needed-for-running-reports}
 

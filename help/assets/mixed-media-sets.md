@@ -12,8 +12,8 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 52325c53-324f-4dd0-93c0-cb8a78a38d6b
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1500'
-ht-degree: 14%
+source-wordcount: '1506'
+ht-degree: 15%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 14%
 
 1. 根据需要设置[混合媒体查看器预设](/help/assets/managing-viewer-presets.md)。
 
-   管理员可以创建或修改混合媒体集查看器预设。要查看带有查看器预设的混合媒体，请选择混合媒体集，然后在左边栏下拉菜单中，选择&#x200B;**[!UICONTROL 查看器]**。
+   管理员可以创建或修改混合媒体集查看器预设。 要查看带有查看器预设的混合媒体，请选择混合媒体集，然后在左边栏下拉菜单中，选择&#x200B;**[!UICONTROL 查看器]**。
 
    要创建或编辑查看器预设，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 查看器预设]**。
 
@@ -91,7 +91,7 @@ ht-degree: 14%
 
 **创建混合媒体集：**
 
-1. 在Assets中，导航到要创建混合媒体集的位置，选择&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 混合媒体集]**。 您还可以从包含资产的文件夹中创建旋转集。此时将显示混合媒体集编辑器。
+1. 在Assets中，导航到要创建混合媒体集的位置，选择&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 混合媒体集]**。 您还可以从包含资产的文件夹中创建旋转集。 此时将显示混合媒体集编辑器。
 
    ![chlimage_1-138](assets/chlimage_1-349.png)
 
@@ -105,7 +105,7 @@ ht-degree: 14%
 
 1. 选择资产选择器，以便您可以选择要包含在混合媒体集中的资产。 选择它们，然后选择&#x200B;**[!UICONTROL 选择]**。
 
-   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择筛选器，然后从工具栏中选择&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 选择&#x200B;**[!UICONTROL 视图]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 列表视图]**、**[!UICONTROL 列视图]**&#x200B;或&#x200B;**[!UICONTROL 卡片视图]**&#x200B;以更改视图。
+   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。 您还可以应用过滤器来优化搜索结果。 您可以按路径、收藏集、文件类型和标记进行过滤。 选择筛选器，然后从工具栏中选择&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 选择&#x200B;**[!UICONTROL 视图]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 列表视图]**、**[!UICONTROL 列视图]**&#x200B;或&#x200B;**[!UICONTROL 卡片视图]**&#x200B;以更改视图。
 
    请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
@@ -123,7 +123,7 @@ ht-degree: 14%
 
 1. 要删除资产，请选中相应的复选框，然后选择&#x200B;**[!UICONTROL 删除资产]**。
 1. 要应用预设，请选择右上角的&#x200B;**[!UICONTROL 预设]**，然后选择要应用于资产的预设。
-1. 选择&#x200B;**[!UICONTROL 保存]**。新创建的混合媒体集会显示在您创建该混合媒体集的文件夹中。
+1. 选择&#x200B;**[!UICONTROL 保存]**。 新创建的混合媒体集会显示在您创建该混合媒体集的文件夹中。
 
 ## 编辑混合媒体集 {#editing-mixed-media-sets}
 

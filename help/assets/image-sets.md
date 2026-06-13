@@ -13,7 +13,7 @@ exl-id: 654cf0fc-1a80-4764-8ce7-22d060e1f61a
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '2274'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -155,7 +155,7 @@ ht-degree: 6%
 
 1. 在Experience Manager中，选择Experience Manager徽标以访问全局导航控制台，然后转到&#x200B;**[!UICONTROL 导航]** > **[!UICONTROL Assets]**。 导航到要创建图像集的位置，然后转到&#x200B;**[!UICONTROL 创建]** > **[!UICONTROL 图像集]**&#x200B;以打开“图像集编辑器”页。
 
-   您还可以从包含资产的文件夹中创建集。
+   您还可以从包含资产的文件夹中创建旋转集。
 
    ![6_5_imagesets-createpulldown](assets/6_5_imagesets-createpulldown.png)
 
@@ -169,9 +169,9 @@ ht-degree: 6%
 
    * 在“图像集编辑器”页面中间附近，选择&#x200B;**[!UICONTROL 点按以打开资产选择器]**。
 
-   选择要包含在图像集中的资源。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
+   选择要包含在图像集中的资源。 选定资产上有一个复选标记图标。 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
 
-   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。 您还可以应用过滤器来优化搜索结果。 您可以按路径、收藏集、文件类型和标记进行过滤。 选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
    请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
@@ -195,7 +195,7 @@ ht-degree: 6%
    >
    >创建图像集时，您可以更改图像集缩略图，或允许Experience Manager根据图像集中的资源自动选择缩略图。 要选择缩略图，请选择“图像集编辑器”页面上“标题”字段上方的&#x200B;**[!UICONTROL 更改缩略图]**，然后选择任意图像（您也可以导航到其他文件夹以查找图像）。 如果您选择了缩略图，然后决定让Experience Manager从图像集生成缩略图，请选择&#x200B;**[!UICONTROL 切换到]** > **[!UICONTROL 自动缩略图]**。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。新创建的图像集将显示在您创建该图像集的文件夹中。
+1. 选择&#x200B;**[!UICONTROL 保存]**。 新创建的图像集将显示在您创建该图像集的文件夹中。
 
 ## 查看图像集 {#viewing-image-sets}
 
@@ -211,7 +211,7 @@ ht-degree: 6%
 
   ![6_5_imageset-assetproperties](assets/6_5_imageset-assetproperties2.png)
 
-* 来自任何集的成员图像。选择&#x200B;**[!UICONTROL 集]**&#x200B;菜单以显示资产所属的集。
+* 来自任何集的成员图像。 选择&#x200B;**[!UICONTROL 集]**&#x200B;菜单以显示资产所属的集。
 
   ![6_5_imageset-setspulldownmenu](assets/6_5_imageset-setspulldownmenu.png)
 
@@ -248,7 +248,6 @@ ht-degree: 6%
    * 要重新排序资产，请将图像拖动到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项排序，请选择列标题。
    * 要添加资源或更新现有资源，请选择&#x200B;**[!UICONTROL 添加资源]**。 导航到某个资源，选择该资源，然后选择页面右上角附近的&#x200B;**[!UICONTROL 选择]**。
-
      >[!NOTE]
      >
      >如果通过将Experience Manager用于缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资源。

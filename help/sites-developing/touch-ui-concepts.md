@@ -12,8 +12,8 @@ role: Developer
 exl-id: b60b198e-1683-4970-b9b4-f1d0178e00e1
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 0%
+source-wordcount: '2207'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Manager (AEM)为创作环境提供了带[响应式设计](/help
 * 符合以下条件的包标头：
    * 显示徽标
    * 提供指向全局导航的链接
-   * 提供指向其他通用操作的链接；例如“搜索”、“帮助”、“Experience Cloud解决方案”、“通知”和“用户设置”。
+   * 提供指向其他通用操作的链接；例如搜索、帮助、Experience Cloud解决方案、通知和用户设置。
 * 左侧边栏（需要时显示，可隐藏），其中可显示：
    * 时间线
    * 引用
@@ -120,7 +120,7 @@ Granite UI：
 
 ![chlimage_1-82](assets/chlimage_1-82.png)
 
-* [Granite UI Foundation组件](#granite-ui-foundation-components)
+* [Granite UI基础组件](#granite-ui-foundation-components)
 此基础组件库可由其他库使用或扩展。
 * [Granite UI管理组件](#granite-ui-administration-components)
 
@@ -241,14 +241,14 @@ Granite UI和ExtJS（用于经典UI）之间的差异也令人感兴趣：
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete` `cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete`&#x200B;`cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **节点类型** | **Granite UI资源类型** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container` `granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container`&#x200B;`granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI管理组件 {#granite-ui-administration-components}

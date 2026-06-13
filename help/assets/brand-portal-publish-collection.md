@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 1456a32e-c98f-4106-8546-799614c51a59
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '323'
 ht-degree: 30%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 30%
 
 >[!NOTE]
 >
->无法将内容片段发布到 Brand Portal。因此，如果您在AEM创作中选择内容片段，则&#x200B;**发布到Brand Portal**&#x200B;操作将不可用。
+>无法将内容片段发布到 Brand Portal。 因此，如果您在AEM创作中选择内容片段，则&#x200B;**发布到Brand Portal**&#x200B;操作将不可用。
 >
 >如果将包含内容片段的收藏集从AEM Author发布到Brand Portal，则文件夹中除内容片段之外的所有内容都将复制到Brand Portal界面。
 
@@ -54,4 +54,4 @@ ht-degree: 30%
 
 1. 在工具栏中，单击&#x200B;**从 Brand Portal 中删除**&#x200B;图标。
 1. 在对话框中，单击&#x200B;**取消发布**。
-1. 关闭确认消息。收藏集将从 Brand Portal 界面中删除。
+1. 关闭确认消息。 收藏集将从 Brand Portal 界面中删除。

@@ -11,8 +11,8 @@ role: Admin
 exl-id: 3ef72c05-1301-402e-94ce-49fbaf26fb98
 source-git-commit: aff6c41e13293a1c83eca226354f5c16cff18d99
 workflow-type: tm+mt
-source-wordcount: '2147'
-ht-degree: 8%
+source-wordcount: '2175'
+ht-degree: 12%
 
 ---
 
@@ -34,11 +34,11 @@ AEM会向符合以下条件的用户发送电子邮件通知：
 
 >[!NOTE]
 >
->使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+>在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 ## 配置邮件服务 {#configuring-the-mail-service}
 
-为了使AEM能够发送电子邮件，需要正确配置&#x200B;**Day CQ邮件服务**。 您可以在Web控制台中查看配置。 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+为了使AEM能够发送电子邮件，需要正确配置&#x200B;**Day CQ邮件服务**。 您可以在Web控制台中查看配置。 在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
 以下约束适用：
 
@@ -206,7 +206,7 @@ subject=<text_1>
 >
 >有关模板格式的详细信息，可在Properties.load() [&#128279;](https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html#load-java.io.InputStream-)方法的javadocs中找到。
 
-方法`${payload.path.open}`显示工作项的有效负荷的路径。 例如，对于网站中的页面，则`payload.path.open`将类似于`/bin/wcmcommand?cmd=open&path=…`。；这没有服务器名称，因此模板会将此前面加上`${host.prefix}`。
+方法`${payload.path.open}`显示工作项的有效负荷的路径。 例如，对于Sites中的页面，则`payload.path.open`将类似于`/bin/wcmcommand?cmd=open&path=…`.；这没有服务器名称，因此模板会在它前面加上`${host.prefix}`。
 
 可在电子邮件模板中使用以下变量：
 
@@ -260,7 +260,7 @@ subject=<text_1>
 在共享或取消共享AEM Assets中的收藏集时，用户可以从AEM接收电子邮件通知。 要配置电子邮件通知，请执行以下步骤。
 
 1. 配置电子邮件服务，如[配置邮件服务](/help/sites-administering/notification.md#configuring-the-mail-service)中所述。
-1. 以管理员身份登录AEM。 单击&#x200B;**工具** > **操作** > **Web控制台**&#x200B;以打开Web控制台配置。
+1. 以管理员身份登录 AEM。 单击&#x200B;**工具** > **操作** > **Web控制台**&#x200B;以打开Web控制台配置。
 1. 编辑&#x200B;**Day CQ DAM资源收集Servlet**。 选择&#x200B;**发送电子邮件**。 单击&#x200B;**保存**。
 
 ## 设置OAuth {#setting-up-oauth}
@@ -327,7 +327,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 
 ![CQ邮件程序SMTP Oauth2提供程序配置窗口](assets/oauth-smtpprov2.png)
 
-现在，激活OAuth组件。 您可以执行以下操作来实现此目标：
+现在，激活OAuth组件。 您可以通过以下方式来实现：
 
 1. 通过访问以下URL转到组件控制台： `http://serveraddress:serverport/system/console/components`
 1. 查找以下组件
@@ -350,7 +350,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 ### Microsoft Outlook {#microsoft-outlook}
 
 1. 转至 [https://portal.azure.com/](https://portal.azure.com/) 并登录。
-1. 在搜索栏中搜索 **Azure Active Directory**，并单击搜索结果。或者，您可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+1. 在搜索栏中搜索 **Azure Active Directory**，并单击搜索结果。 或者，您可以直接浏览到 [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. 单击&#x200B;**应用程序注册** - **新注册**
 
    ![配置Microsoft Outlook时的新注册按钮](assets/oauth-outlook1.png)
@@ -373,9 +373,9 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 
 回顾一下，您必须具有以下信息才能在AEM端为邮件程序服务配置OAuth2：
 
-* 将使用租户 ID 构建的身份验证 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* 将使用租户 ID 构建的令牌 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
-* 将使用租户 ID 构建的刷新 URL。它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 将使用租户 ID 构建的身份验证 URL。 它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* 将使用租户 ID 构建的令牌 URL。 它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* 将使用租户 ID 构建的刷新 URL。 它采用以下形式：`https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * 客户端 ID
 * 客户端密码
 
@@ -416,7 +416,7 @@ AEM为其集成的邮件程序服务提供OAuth2支持，以允许组织遵守�
 
 ![已完成的CQ邮件程序SMTP OAuth2配置](assets/oauth-outlook-smptconfig.png)
 
-现在，激活OAuth组件。 您可以执行以下操作来实现此目标：
+现在，激活OAuth组件。 您可以通过以下方式来实现：
 
 1. 通过访问以下URL转到组件控制台： `http://serveraddress:serverport/system/console/components`
 1. 查找以下组件

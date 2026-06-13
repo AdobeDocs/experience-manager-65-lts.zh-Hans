@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 17e45464-3de4-40a8-b102-ccc9eaba92a3
 source-git-commit: f27795b9acf834101d82937d9f9f142361816735
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 选择[空间站360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)打开浏览器窗口并观看360度视频。 在视频播放过程中，将鼠标指针拖动到新位置以更改视角。
 
-![360 — 视频样本，国际空间站漂浮在外太空及其后面的地球和太阳上。](assets/6_5_360videoiss_simplified.png)
+![360个视频样本，其国际空间站漂浮在外层空间及其后的地球和太阳。](assets/6_5_360videoiss_simplified.png)
 来自空间站360*的*&#x200B;视频帧
 
 ## 360/VR视频和Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
@@ -79,7 +79,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 对于已上传的资产，要使其符合与360视频查看器一起使用的360视频资格，该资产的长宽比必须为2。
 
-默认情况下，如果视频的长宽比（宽度/高度）为2.0，则Experience Manager会将视频检测为“360”。如果您是管理员，可以通过在CRXDE Lite中设置可选的`s7video360AR`属性来覆盖默认纵横比设置2，具体方法如下：
+默认情况下，如果视频的长宽比（宽度/高度）为2.0，则Experience Manager会将视频检测为“360”。 如果您是管理员，可以通过在CRXDE Lite中设置可选的`s7video360AR`属性来覆盖默认纵横比设置2，具体方法如下：
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
@@ -101,7 +101,7 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 如果对360视频满意，则可发布该视频。
 
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
-查看[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
+查看[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **预览360视频：**
@@ -138,5 +138,5 @@ Dynamic Media - Scene7模式包括对交付360个视频资产的本机支持。 
 
 有关如何发布360视频的详细信息，请参阅[发布Dynamic Media资源](/help/assets/publishing-dynamicmedia-assets.md)。
 另请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
-另请参阅[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
+另请参阅[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
 另请参阅[将Dynamic Media资源添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。

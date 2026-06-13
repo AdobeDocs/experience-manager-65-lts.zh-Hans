@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 16b03ca5-c060-4944-ad30-ad0bd350dc52
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2001'
 ht-degree: 9%
 
 ---
@@ -57,11 +57,11 @@ ht-degree: 9%
 
    >[!NOTE]
    >
-   >您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。**重要信息：**&#x200B;批次集由IPS（图像生产系统）作为资产引入的一部分创建，仅在Dynamic Media - Scene7模式下可用。
+   >您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。 **重要信息：**&#x200B;批次集由IPS（图像生产系统）作为资产引入的一部分创建，仅在Dynamic Media - Scene7模式下可用。
 
 1. 根据需要设置[旋转集查看器预设](/help/assets/managing-viewer-presets.md)。
 
-   管理员可以创建或修改旋转集查看器预设。要查看带有查看器预设的旋转集，请选择旋转集，然后在左边栏下拉菜单中，选择&#x200B;**查看器**。
+   管理员可以创建或修改旋转集查看器预设。 要查看带有查看器预设的旋转集，请选择旋转集，然后在左边栏下拉菜单中，选择&#x200B;**查看器**。
 
    如果要创建或编辑查看器预设，请参阅&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Assets]** > **[!UICONTROL 查看器预设]**。
 
@@ -113,7 +113,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。**重要信息：**&#x200B;批次集由IPS（图像生产系统）作为资产引入的一部分创建，仅在Dynamic Media - Scene7模式下可用。
+>您还可以通过[批量集预设](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)自动创建旋转集。 **重要信息：**&#x200B;批次集由IPS（图像生产系统）作为资产引入的一部分创建，仅在Dynamic Media - Scene7模式下可用。
 >
 >请参阅[配置Dynamic Media - Scene7模式](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)中的“创建批次集预设以自动生成图像集和旋转集”。
 >
@@ -132,7 +132,7 @@ ht-degree: 9%
 
 **创建旋转集：**
 
-1. 在Assets中，导航到要创建旋转集的位置，选择&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 旋转集]**。 您还可以从包含资产的文件夹中创建旋转集。此时将显示旋转集编辑器。
+1. 在Assets中，导航到要创建旋转集的位置，选择&#x200B;**[!UICONTROL 创建]**，然后选择&#x200B;**[!UICONTROL 旋转集]**。 您还可以从包含资产的文件夹中创建旋转集。 此时将显示旋转集编辑器。
 
    ![6_5_spinset-createpulldownmenu](assets/6_5_spinset-createpulldownmenu.png)
 
@@ -150,9 +150,9 @@ ht-degree: 9%
 
    * 在“旋转集编辑器”页面中间附近，选择&#x200B;**[!UICONTROL 选择以打开“资产选择器”]**。
 
-   选择以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
+   选择以选择要包含在旋转集中的资产。 选定资产上有一个复选标记图标。 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
 
-   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。 您还可以应用过滤器来优化搜索结果。 您可以按路径、收藏集、文件类型和标记进行过滤。 选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
    请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
@@ -172,7 +172,7 @@ ht-degree: 9%
 
    * 要应用预设，请选择页面右上角附近的&#x200B;**[!UICONTROL 预设]**，然后选择要应用于所有资产的预设。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。新创建的旋转集将出现在您创建该旋转集的文件夹中。
+1. 选择&#x200B;**[!UICONTROL 保存]**。 新创建的旋转集将出现在您创建该旋转集的文件夹中。
 
 ## 查看旋转集 {#viewing-spin-sets}
 
@@ -188,7 +188,7 @@ ht-degree: 9%
 
    ![chlimage_1-156](assets/chlimage_1-384.png)
 
-1. 来自任何集的成员图像。选择&#x200B;**[!UICONTROL 集]**&#x200B;菜单以显示资产所属的集。
+1. 来自任何集的成员图像。 选择&#x200B;**[!UICONTROL 集]**&#x200B;菜单以显示资产所属的集。
 
    ![chlimage_1-157](assets/chlimage_1-385.png)
 
@@ -221,12 +221,11 @@ ht-degree: 9%
 
    * 要重新排序图像，请将图像拖动到新位置（选择重新排序图标以移动项目）。
    * 要按升序或降序对项排序，请选择列标题。
-   * 要添加资源或更新现有资源，请选择&#x200B;**[!UICONTROL 添加资源]**。 导航到某个资源，选择该资源，然后选择右上角附近的&#x200B;**[!UICONTROL 选择]**。
+   * 要添加资源或更新现有资源，请选择&#x200B;**[!UICONTROL 添加资源]**。导航到某个资源，选择该资源，然后选择右上角附近的&#x200B;**[!UICONTROL 选择]**。
 如果通过将Experience Manager用于缩略图的图像替换为其他图像来删除该图像，则仍会显示原始资源。
    * 要删除资源，请选择该资源并选择&#x200B;**[!UICONTROL 删除资源]**。
    * 要应用预设，请选择“预设”图标并选择预设。
    * 要删除整个旋转集，请导航到该旋转集，选择它，然后选择&#x200B;**[!UICONTROL 删除]**
-
    >[!NOTE]
    >
    >您可以导航到旋转集，选择左边栏中的&#x200B;**[!UICONTROL 设置成员]**，然后选择单个资产上的“铅笔”图标以打开编辑窗口，来编辑图像。

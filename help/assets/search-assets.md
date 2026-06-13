@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 3511e07b-f6d0-435a-aa80-55357d3dccf5
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '5797'
+source-wordcount: '5754'
 ht-degree: 6%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 *图：了解[!DNL Experience Manager Assets]搜索结果界面。*
 
-**A.**&#x200B;将搜索另存为智能收藏集。 **B.**&#x200B;筛选条件或谓词以缩小搜索结果。 **C.**&#x200B;显示文件、文件夹或两者。 **D.** 单击“过滤器”以打开或关闭左边栏。 **E.**&#x200B;搜索位置为DAM。**F.**&#x200B;包含用户提供的搜索关键字的Omnisearch字段。 **G.**&#x200B;选择加载的搜索结果。 **小时**&#x200B;显示的搜索结果数占总搜索结果数。 **I.**&#x200B;关闭搜索。 **J.**&#x200B;在卡片视图和列表视图之间切换。
+**A.**&#x200B;将搜索另存为智能收藏集。 **B.**&#x200B;筛选条件或谓词以缩小搜索结果。 **C.**&#x200B;显示文件、文件夹或两者。 **D.** 单击“过滤器”以打开或关闭左边栏。 **E.**&#x200B;搜索位置为DAM。**F.**&#x200B;具有用户提供的搜索关键字的Omnisearch字段。 **G.**&#x200B;选择加载的搜索结果。 **小时**&#x200B;显示的搜索结果数占总搜索结果数。 **I.**&#x200B;关闭搜索。 **J.**&#x200B;在卡片视图和列表视图之间切换。
 
 ### 动态搜索Facet {#dynamicfacets}
 
@@ -87,7 +87,7 @@ ht-degree: 6%
 * `woman-running`
 
 但是，查询`woman -running`返回其元数据中不带`running`的资源。
-使用智能标记可添加额外的`OR`子句，以将任何搜索词作为应用的智能标记进行查找。 使用智能标记以`woman`或`running`标记的资产也出现在这样的搜索查询中。 所以搜索结果是，
+使用智能标记会添加额外的`OR`子句，以将任何搜索词作为应用的智能标记进行查找。使用智能标记以`woman`或`running`标记的资产也出现在此类搜索查询中。所以搜索结果是，
 
 * 元数据中包含`woman`和`running`关键字的Assets（默认行为）。
 

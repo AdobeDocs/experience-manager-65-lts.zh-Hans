@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 23c04c7e-3321-4eae-8067-ca23adefa9f6
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 15%
+source-wordcount: '211'
+ht-degree: 17%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 15%
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
    * 选择查看器预设后，将显示 **[!UICONTROL URL]** 和&#x200B;**[!UICONTROL 嵌入]**&#x200B;按钮。
-   * 当您在资产的&#x200B;**[!UICONTROL 详细信息视图]**&#x200B;中选择查看器时，系统会显示大量查看器预设。您可以增加可查看的预设数。请参阅[增加显示的查看器预设数](managing-viewer-presets.md)。
+   * 当您在资产的&#x200B;**[!UICONTROL 详细信息视图]**&#x200B;中选择查看器时，系统会显示大量查看器预设。 您可以增加可查看的预设数。 请参阅[增加显示的查看器预设数](managing-viewer-presets.md)。
 
 1. 从左窗格中选择一个查看器，以便将其应用到右窗格中显示的资源。 您还可以[复制URL以与其他用户共享](linking-urls-to-yourwebapplication.md)。
 
