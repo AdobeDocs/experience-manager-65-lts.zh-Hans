@@ -9,8 +9,8 @@ role: Admin
 exl-id: 413f15c9-5b51-4d8d-8cf0-3e98608b9d9e
 source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 5%
+source-wordcount: '1410'
+ht-degree: 4%
 
 ---
 
@@ -50,7 +50,7 @@ AEM 使用一组机制为页面实现响应式布局：
 将布局容器放置到页面上后，即可使用&#x200B;**布局**&#x200B;模式在响应式网格内放置内容。
 
 * [**模拟器**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
-这让您创建和编辑响应式网站，通过以交互的方式调整组件大小，根据设备/窗口大小重新排列布局。然后，用户可以使用模拟器查看内容的呈现方式。
+通过执行此操作，您可以创建和编辑响应式网站，这些网站可通过以交互方式调整组件大小，从而根据设备/窗口大小重新排列布局。 然后，用户可以使用模拟器查看内容的呈现方式。
 
 通过这些响应式网格机制，您可以：
 
@@ -135,7 +135,7 @@ AEM 使用一组机制为页面实现响应式布局：
 
 #### 使用XML配置断点 {#configuring-breakpoints-using-xml}
 
-断点位于`<jcr:content>`的`.context.html`部分中，位于相应的模板（或内容）文件夹下。
+断点位于`.context.html`的`<jcr:content>`部分中，位于相应的模板（或内容）文件夹下。
 
 示例定义：
 
@@ -227,7 +227,7 @@ AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目�
 
 #### 样式设置注意事项 {#styling-considerations}
 
-保持在响应容器中的组件(连同它们各自的HTML DOM元素)根据响应栅格大小而调整大小。 因此，在这些情况下，建议避免（或更新）固定宽度（包含）DOM元素的定义。
+保持在响应容器中的组件（连同它们各自的HTML DOM元素）根据响应栅格大小而调整大小。 因此，在这些情况下，建议避免（或更新）固定宽度（包含）DOM元素的定义。
 
 例如：
 
@@ -249,7 +249,7 @@ AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目�
 
 * `afterchildedit`
 
-要正确调整响应式网格中包含的自适应图像的大小并更新其内容，您需要将设置为`afterEdit`的`REFRESH_PAGE`侦听器添加到每个包含组件的`EditConfig`文件中。
+要正确调整响应式网格中包含的自适应图像的大小并更新其内容，您需要将设置为`REFRESH_PAGE`的`afterEdit`侦听器添加到每个包含组件的`EditConfig`文件中。
 
 例如：
 
@@ -309,7 +309,7 @@ AEM使用LESS生成必要的CSS部分，这些项目需要包含在您的项目�
 
 如果无法避免使用嵌套的响应式网格，请确保：
 
-* 所有容器（容器、选项卡、折叠等）都具有属性`layout = responsiveGrid`。
+* 所有容器（容器、选项卡、折叠等） 具有属性`layout = responsiveGrid`。
 * 不要在容器层次结构中混合使用属性`layout = simple`。
 
 这包括页面模板中的所有结构化容器。

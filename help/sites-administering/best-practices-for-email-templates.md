@@ -13,7 +13,7 @@ exl-id: 34678cae-3c7f-4c9f-b7b6-c1dd4e0758ad
 index: false
 source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1106'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ AEM中提供的演示活动遵循所有这些最佳实践。 对于每种最佳�
 
 >[!NOTE]
 >
->应在类型为`master`的`cq/personalization/components/ambitpage`页面下创建所有营销活动内容。
+>应在类型为`cq/personalization/components/ambitpage`的`master`页面下创建所有营销活动内容。
 >
 >例如，如果您的计划促销活动结构类似于
 >
@@ -47,7 +47,7 @@ AEM中提供的演示活动遵循所有这些最佳实践。 对于每种最佳�
 
 >[!NOTE]
 >
->为Adobe Campaign创建邮件模板时，必须在模板的&#x200B;**jcr**&#x200B;节点中包含值为&#x200B;**mapRecipient**&#x200B;的属性&#x200B;**acMapping:content**。 如果不这样做，则无法在Experience Manager的&#x200B;**页面属性**&#x200B;中选择Adobe Campaign模板（字段已禁用）。
+>为Adobe Campaign创建邮件模板时，必须在模板的&#x200B;**jcr:content**&#x200B;节点中包含值为&#x200B;**mapRecipient**&#x200B;的属性&#x200B;**acMapping**。 如果不这样做，则无法在Experience Manager的&#x200B;**页面属性**&#x200B;中选择Adobe Campaign模板（字段已禁用）。
 
 ## 模板/页面组件 {#template-page-component}
 

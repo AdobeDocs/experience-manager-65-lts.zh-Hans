@@ -1,5 +1,5 @@
 ---
-title: 将ContextHub添加到页面并访问存储
+title: 将 ContextHub 添加到页面并访问存储
 description: 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
@@ -7,12 +7,12 @@ role: Developer
 exl-id: a2b32ec3-ff1b-47e0-b346-53a5db5ae27f
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 0%
+source-wordcount: '925'
+ht-degree: 1%
 
 ---
 
-# 将ContextHub添加到页面并访问存储 {#adding-contexthub-to-pages-and-accessing-stores}
+# 将 ContextHub 添加到页面并访问存储 {#adding-contexthub-to-pages-and-accessing-stores}
 
 将ContextHub添加到您的页面以启用ContextHub功能并链接到ContextHub JavaScript库。
 

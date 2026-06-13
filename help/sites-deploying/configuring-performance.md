@@ -11,7 +11,7 @@ role: Admin
 exl-id: c46d9569-23e7-44e2-a072-034450f14ca2
 source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
 workflow-type: tm+mt
-source-wordcount: '5053'
+source-wordcount: '5215'
 ht-degree: 17%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 17%
 >
 >此外，您还可以查看有关[性能优化提示](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-17466)的知识库文章。
 
-关键问题是网站响应访客请求所用的时间。 虽然该数值会因请求而异，但可以定义一个平均目标值。一旦证实该值既可实现，又可维护，就可使用它来监控网站的性能，并指示潜在问题的发展。
+一个关键问题是网站对访客请求的响应时间。 虽然该数值会因请求而异，但可以定义一个平均目标值。 一旦证实该值既可实现，又可维护，就可使用它来监控网站的性能，并指示潜在问题的发展。
 
 您针对的响应时间在创作环境和发布环境中不同，反映了目标受众的不同特征：
 
@@ -228,13 +228,13 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 #### 存储库中的配置 {#configuration-in-the-repo}
 
-如果您使用sling[节点:OsgiConfig配置服务](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)，则必须找到现有服务的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台发现PID。
+如果您使用sling:OsgiConfig节点[&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)配置服务，则必须找到现有服务的PID，例如：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705。 您可以使用Web控制台发现PID。
 
 配置名为`queue.maxparallel`的属性。
 
 #### Web控制台中的配置 {#configuration-in-the-web-console}
 
-要使用Web控制台[配置这些服务](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)，请在Apache Sling作业队列配置服务工厂下找到现有配置项。
+要使用Web控制台[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)配置这些服务，请在Apache Sling作业队列配置服务工厂下找到现有配置项。
 
 配置名为Maximum Parallel Jobs的属性。
 
@@ -378,7 +378,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 在这两种情况下，当预定义数量的用户使用系统时，您都可以定义每秒的预期事务处理数。
 
-| 组件 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 组件 | 测试类型 | 不行。 用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 主页单个用户 | 平均 | 1 | 1 |  |  |
 |   | 峰值 | 1 | 3 |  |  |
@@ -389,7 +389,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 组合测试组件可以更密切地反映应用程序行为。 必须再次测试平均值和峰值条件。
 
-| 场景 | 组件 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 场景 | 组件 | 不行。 用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 混合平均值 | 主页 | 10 | 1 |  |  |
 |   | 搜索 | 10 | 1 |  |  |
@@ -406,7 +406,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 在您网站推出后的前几天，您可能会更加感兴趣。 此方案甚至大于您正在测试的峰值。 Adobe建议您测试上线场景，确保系统能够适应这种情况。
 
-| 场景 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 场景 | 测试类型 | 不行。 用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 启用峰值 | 主页 | 200 | 20 |  |  |
 |   | 搜索 | 100 | 10 |  |  |
@@ -423,9 +423,9 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 在设计这些测试时，应该记住，并非所有情景都会定期发生。 但是，它们对整个系统的影响很重要。
 
-| 错误方案 | 错误类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 错误方案 | 错误类型 | 不行。 用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
-| 搜索组件过载 | 搜索全局通配符（星号） | 10 | 1 |  | 只搜索&amp;amp；ast；&amp;amp；ast；&amp;amp；ast；。 |
+| 搜索组件过载 | 搜索全局通配符（星号） | 10 | 1 |  | 只搜索&amp;ast；&amp;ast；&amp;ast；。 |
 |   | 停用词 | 20 | 2 |  | 正在搜索停用词。 |
 |   | 空字符串 | 10 | 1 |  | 正在搜索空字符串。 |
 |   | 特殊字符 | 10 | 1 |  | 正在搜索特殊字符。 |
@@ -434,7 +434,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 只有在系统连续运行（小时或天）后，才会遇到某些问题。 持久性测试用于测试所需时间段内的恒定平均负载。 然后可以分析任何性能降级。
 
-| 场景 | 测试类型 | 不行。用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
+| 场景 | 测试类型 | 不行。 用户 | Tx/秒（预期） | Tx/秒（已测试） | 描述 |
 |---|---|---|---|---|---|
 | 耐力测试（72小时） | 主页 | 10 | 1 |  |  |
 |   | 搜索 | 10 | 1 |  |  |
@@ -453,7 +453,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 我们提供了一系列工具，帮助您进行负载生成、性能监控和结果分析。 其中一些工具包括：
 
-* [JMeter](https://jmeter.apache.org/)
+* [JMet](https://jmeter.apache.org/)
 * [OpenText Professional性能工程](https://www.opentext.com/products/professional-performance-engineering)。
 * [Java™交互式配置文件](https://jiprof.sourceforge.net/)
 
@@ -476,7 +476,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 >[!NOTE]
 >
->虽然 Dispatcher 版本独立于 AEM，但 Dispatcher 文档会嵌入到 AEM 文档中。始终使用嵌入到最新版本的 AEM 文档中的 Dispatcher 文档。
+>虽然 Dispatcher 版本独立于 AEM，但 Dispatcher 文档会嵌入到 AEM 文档中。 始终使用嵌入到最新版本的 AEM 文档中的 Dispatcher 文档。
 >
 >您可能是在单击以前版本的 AEM 文档中嵌入的 Dispatcher 文档链接后重定向到此页面。
 
@@ -484,7 +484,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 
 >[!NOTE]
 >
->Dispatcher 将缓存存储在标准 Web 服务器上，记住这一点可能会对您有所帮助。了解此信息意味着您可以缓存可以存储为页面并使用URL请求的所有内容。 并且，您无法存储其他内容，例如Cookie、会话数据和表单数据。
+>Dispatcher 将缓存存储在标准 Web 服务器上，记住这一点可能会对您有所帮助。 了解此信息意味着您可以缓存可以存储为页面并使用URL请求的所有内容。 并且，您无法存储其他内容，例如Cookie、会话数据和表单数据。
 >
 >通常，许多缓存策略涉及选择完好的URL，并且不依赖此类额外数据。
 >
@@ -513,7 +513,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 
 #### 使用一致的页面编码 {#using-consistent-page-encoding}
 
-使用Dispatcher版本4.1.11，您可以缓存响应标头。 如果不在Dispatcher上缓存响应标头，则在标头中存储页面编码信息时，可能会出现问题。 在此情况下，当 Dispatcher 从缓存中提供一个页面时，Web 服务器的默认编码将用于该页面。可通过两种方式避免此问题：
+使用Dispatcher版本4.1.11，您可以缓存响应标头。 如果不在Dispatcher上缓存响应标头，则在标头中存储页面编码信息时，可能会出现问题。 在此情况下，当 Dispatcher 从缓存中提供一个页面时，Web 服务器的默认编码将用于该页面。 可通过两种方式避免此问题：
 
 * 如果您只使用一种编码，请确保 Web 服务器上使用的编码与 AEM 网站的默认编码相同。
 * 要设置编码，使用 HTML `head` 部分中的 `<META>` 标记，如以下示例所示：
@@ -524,7 +524,7 @@ Dispatcher提供了多种内置机制，如果您的网站利用这些机制可�
 
 #### 消除 URL 参数 {#avoid-url-parameters}
 
-如果可能，请消除要缓存的页面的 URL 参数。例如，如果您有一个图片库，则绝不会缓存以下 URL（除非对 Dispatcher 进行[相应配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)）：
+如果可能，请消除要缓存的页面的 URL 参数。 例如，如果您有一个图片库，则绝不会缓存以下 URL（除非对 Dispatcher 进行[相应配置](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)）：
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -540,11 +540,11 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 >
 >此URL调用与`gallery.html`相同的页面和模板。 在模板定义中，您可以指定用于渲染页面的脚本，也可以对所有页面使用同一脚本。
 
-#### 按 URL 进行自定义  {#customize-by-url}
+#### 按 URL 进行自定义 {#customize-by-url}
 
 如果您允许用户更改字体大小（或任何其他版面自定义设置），请确保各种自定义设置都反映在 URL 中。
 
-例如，由于不会缓存 cookie，因此如果您将字体大小存储在 cookie（或类似机制）中，则不会为缓存的页面保留字体大小。因此，Dispatcher 会随机返回任意字体大小的文档。
+例如，由于不会缓存 cookie，因此如果您将字体大小存储在 cookie（或类似机制）中，则不会为缓存的页面保留字体大小。 因此，Dispatcher 会随机返回任意字体大小的文档。
 
 在 URL 中包含字体大小作为选择器可避免出现此问题：
 
@@ -554,7 +554,7 @@ www.myCompany.com/news/main.large.html
 
 >[!NOTE]
 >
->对于大多数版面，还可以使用样式表或客户端脚本，或两者同时使用。这些工具可以很好地与缓存配合使用。
+>对于大多数版面，还可以使用样式表或客户端脚本，或两者同时使用。 这些工具可以很好地与缓存配合使用。
 >
 >此策略对于打印版本也很有用，您可以在打印版本中使用如下URL：
 >
@@ -575,11 +575,11 @@ www.myCompany.com/news/main.large.html
 
 >[!NOTE]
 >
->图像文件不一定会实际存在于 AEM 实例上。您可以使用动态创建图像文件的脚本。随后，Dispatcher 会将文件存储在 Web 服务器上。
+>图像文件不一定会实际存在于 AEM 实例上。 您可以使用动态创建图像文件的脚本。 随后，Dispatcher 会将文件存储在 Web 服务器上。
 
 #### 使用于导航的图像文件失效 {#invalidating-image-files-used-for-navigation}
 
-如果将图片用于导航条目，则方法基本上与标题相同，但会稍微复杂一些。 将所有导航图像与目标页面一起存储。如果将两张图片用于一般或活动场景，则可以使用以下脚本：
+如果将图片用于导航条目，则方法基本上与标题相同，但会稍微复杂一些。 将所有导航图像与目标页面一起存储。 如果将两张图片用于一般或活动场景，则可以使用以下脚本：
 
 * 一个正常显示页面的脚本。
 * 一个处理“.normal”请求并返回正常图片的脚本。
@@ -612,7 +612,7 @@ www.myCompany.com/news/main.large.html
 
 #### 粘性连接 {#sticky-connections}
 
-[粘性连接](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#the-benefits-of-load-balancing)可确保同一个用户的文档全部在同一服务器上撰写。如果用户在退出此文件夹不久后返回，则此连接仍保持粘性。要保存所有需要网站的粘性连接的文档，请定义一个文件夹。 尽量不要在该文件夹中放入其他文件。如果您使用个性化的页面和会话数据，此方案将影响负载平衡。
+[粘性连接](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#the-benefits-of-load-balancing)可确保同一个用户的文档全部在同一服务器上撰写。 如果用户在退出此文件夹不久后返回，则此连接仍保持粘性。 要保存所有需要网站的粘性连接的文档，请定义一个文件夹。 尽量不要在该文件夹中放入其他文件。 如果您使用个性化的页面和会话数据，此方案将影响负载平衡。
 
 #### MIME 类型 {#mime-types}
 
@@ -621,7 +621,7 @@ www.myCompany.com/news/main.large.html
 1. 按其扩展名（例如，`.html`、`.gif`和`.jpg`）。
 1. 按服务器随文件一起发送的 MIME 类型。
 
-对于大多数文件，MIME 类型隐含在文件扩展名中。那就是，
+对于大多数文件，MIME 类型隐含在文件扩展名中。 那就是，
 
 1. 按其扩展名（例如，`.html`、`.gif`和`.jpg`）。
 1. 按服务器随文件一起发送的 MIME 类型。

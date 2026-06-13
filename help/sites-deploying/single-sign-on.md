@@ -11,8 +11,8 @@ role: Admin
 exl-id: 1c437771-cec5-48b8-8d77-a66c269420ec
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 0%
+source-wordcount: '738'
+ht-degree: 5%
 
 ---
 
@@ -39,7 +39,7 @@ SSO身份验证处理程序服务(`com.adobe.granite.auth.sso.impl.SsoAuthentica
 
 要为AEM实例配置SSO，请配置[SSO身份验证处理程序](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler)：
 
-1. 使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+1. 在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
    例如，对于NTLM set：
 
@@ -85,8 +85,7 @@ SSO身份验证处理程序服务(`com.adobe.granite.auth.sso.impl.SsoAuthentica
 >* `disp_iis.ini`
 >* IIS
 >
->在`disp_iis.ini`集合中：
->(有关完整详细信息，请参阅[将Dispatcher与Microsoft® Internet Information Server一起安装](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hans#microsoft-internet-information-server))
+>在`disp_iis.ini`中，设置：>（有关完整详细信息，请参阅[使用® Internet Information Server安装Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=zh-Hans#microsoft-internet-information-server)）
 >
 >* `servervariables=1` （将IIS服务器变量作为请求标头转发到远程实例）
 >* `replaceauthorization=1` （将除“Basic”以外的任何名为“Authorization”的标头替换为其“Basic”等效标头）
