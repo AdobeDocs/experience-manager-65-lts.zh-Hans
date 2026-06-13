@@ -1,5 +1,5 @@
 ---
-title: 在HTML5表单中创建可访问的复杂表
+title: 在 HTML5 Forms 中创建无障碍复杂表格
 description: 了解如何在HTML5表单中创建无障碍的表。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: e6e6c08a-3bed-4713-a0e0-2a02607c7fc7
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 0%
+source-wordcount: '280'
+ht-degree: 5%
 
 ---
 
-# 在HTML5表单中创建可访问的复杂表 {#create-accessible-complex-tables-in-html-forms}
+# 在 HTML5 Forms 中创建无障碍复杂表格 {#create-accessible-complex-tables-in-html-forms}
 
 HTML5 Forms中表的默认实施使用HTML DIV元素来呈现表。 渲染包括使用ARIA角色来满足辅助功能要求。
 

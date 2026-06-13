@@ -8,8 +8,8 @@ role: Admin, Developer
 exl-id: 15face30-3039-49a0-bfee-56bff21e5c27
 source-git-commit: 093d38dbb1d3e2a2f63c1b7a88d9f31c9950e955
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 3%
+source-wordcount: '741'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ AEM Content和Commerce的入门培训分为两步：
 
 ### 安装适用于AEM 6.5 LTS的AEM Content和Commerce加载项 {#install-add-on}
 
-从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装适用于AEM 6.5 LTS的AEM Commerce加载项。
+从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html)门户下载并安装适用于AEM 6.5 LTS的AEM Commerce加载项。
 
 启动并安装所需的AEM 6.5 LTS Service Pack。 我们建议安装最后一个可用的Service Pack。
 
@@ -42,9 +42,9 @@ AEM可以连接到任何具有AEM的GraphQL端点可访问的commerce system。 
 
 或者，可以提供身份验证标头以使用需要身份验证的其他CIF功能。
 
-必须调整由[AEM项目原型](https://github.com/adobe/aem-project-archetype)和已包含在[默认配置](https://github.com/adobe/aem-cif-guides-venia)中的[AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)生成的项目。
+必须调整由[AEM项目原型](https://github.com/adobe/aem-project-archetype)和已包含在[默认配置](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json)中的[AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)生成的项目。
 
-将`url`中`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`的值替换为商务系统的GraphQL端点。 此配置可通过OSGI控制台或通过项目部署OSGI配置来完成。 使用不同的AEM运行模式支持用于暂存和生产系统的不同配置。
+将`com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json`中`url`的值替换为商务系统的GraphQL端点。 此配置可通过OSGI控制台或通过项目部署OSGI配置来完成。 使用不同的AEM运行模式支持用于暂存和生产系统的不同配置。
 
 AEM Content和Commerce附加组件以及CIF核心组件同时使用AEM服务器端连接和客户端连接。 客户端CIF核心组件和CIF附加创作工具默认连接到`/api/graphql`。 如果需要，可以通过CIF Cloud Service配置对此进行调整（请参阅下文）。
 
@@ -78,9 +78,9 @@ CIF加载项提供了位于`/api/graphql`的GraphQL代理servlet，可以选择�
 
   >[!NOTE]
   >
-  >Adobe Commerce 2.4.2中引入了对UID的支持。仅当您的Commerce后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此功能。
+  >Adobe Commerce 2.4.2中引入了对UID的支持。 仅当您的Commerce后端支持版本2.4.2或更高版本的GraphQL架构时，才启用此功能。
 
-- 目录根类别标识符 — 商店目录根的标识符(UID或ID)
+- 目录根类别标识符 — 商店目录根的标识符（UID或ID）
 
   >[!CAUTION]
   >
@@ -92,6 +92,6 @@ CIF加载项提供了位于`/api/graphql`的GraphQL代理servlet，可以选择�
 
 ## 其他资源 {#additional-resources}
 
-- [AEM项目原型](https://github.com/adobe/aem-project-archetype)
-- [AEM Venia引用存储](https://github.com/adobe/aem-cif-guides-venia)
+- [AEM 项目原型](https://github.com/adobe/aem-project-archetype)
+- [AEM Venia参考商店](https://github.com/adobe/aem-cif-guides-venia)
 - [Commerce多商店设置](configuring/multi-store-setup.md)

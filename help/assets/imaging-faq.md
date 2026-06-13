@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 9f95a54d-6c5e-44c1-965e-631ec7487308
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '3487'
+source-wordcount: '3441'
 ht-degree: 2%
 
 ---
@@ -338,9 +338,9 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 >
 >**X-Adobe-Smart-Imaging = -1，正在传递WebP**
 >
->如果`X-Adobe-Smart-Imaging`的值为–1且仍在传递WebP，则智能成像处于活动状态。 但是，由于缓存已过时，未计算大小优势。 您可以在图像的URL中使用`cache=update`（仅限一次）来解决此问题。
+>如果`X-Adobe-Smart-Imaging`的值为–1且仍在传递WebP，则智能成像处于活动状态。但是，由于缓存已过时，未计算大小优势。您可以在图像的URL中使用`cache=update`（仅限一次）来解决此问题。
 >使用修饰符的示例：
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`>要使整个缓存失效，必须创建支持案例。
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`>若要使整个缓存失效，您必须创建一个支持案例。
 
 +++
 

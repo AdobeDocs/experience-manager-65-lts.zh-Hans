@@ -11,7 +11,7 @@ role: Admin, User, Developer
 exl-id: 8294cbbe-f37f-41d0-b8e8-298f9413462e
 source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1888'
 ht-degree: 2%
 
 ---
@@ -168,7 +168,7 @@ ACMExtensionsMessages.properties文件包含“创建通信”用户界面中各
 >
 >您可能需要清除浏览器缓存。
 
-1. 转到`https://[host]:'port'/system/console/bundles`。 如有必要，请以管理员身份登录。
+1. 转到 `https://[host]:'port'/system/console/bundles`. 如有必要，请以管理员身份登录。
 
 1. 找到Adobe资源编辑器构建基块捆绑包。 重新启动捆绑包：单击“停止”，然后单击“启动”。
 
@@ -190,7 +190,7 @@ ACMExtensionsMessages.properties文件包含“创建通信”用户界面中各
 * 启用/禁用新添加的操作：通过覆盖actionEnabled()函数来完成。
 * 用户单击按钮时操作的实际处理：通过覆盖handleAction()函数的实现完成。
 
-1. 转到`https://'[server]:[port]'/[ContextPath]/crx/de`。 如有必要，请以管理员身份登录。
+1. 转到 `https://'[server]:[port]'/[ContextPath]/crx/de`. 如有必要，请以管理员身份登录。
 
 1. 在apps文件夹中，在CRX的/apps分支中创建名为`js`的文件夹，该文件夹的结构与以下文件夹类似：
 
@@ -328,7 +328,7 @@ ACMExtensionsMessages.properties文件包含“创建通信”用户界面中各
 * DSC组件jar (DSCSample.jar)
 * 发送书信以供审阅流程LCA (SendLetterForReview.lca)
 
-下载并解压缩components.zip文件以获取DSCSample.jar和SendLetterForReview.lca文件。 按照以下步骤指定使用这些文件。
+下载并解压缩components.zip文件以获取DSCSample.jar和SendLetterForReview.lca文件。按照以下步骤指定使用这些文件。
 [获取文件](assets/components.zip)
 
 #### 配置LiveCycle Server以运行LCA进程 {#configure-the-livecycle-server-to-run-the-lca-process}
