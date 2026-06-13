@@ -10,7 +10,7 @@ role: Admin, User, Developer
 exl-id: cb6528fd-6761-412d-8413-c72049acf91d
 source-git-commit: d9eb2edf01200b575c6f99a47e5c010e3b3ca28a
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3848'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在“创建通信”用户界面中创建通信 {#create-correspondence-in-the-create-correspondence-user-interface}
 
-在Correspondence Management[&#128279;](/help/forms/using/create-letter.md)中创建信件模板后，最终用户/代理/索赔理算员可以在“创建信件”用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建信件。 最后，理赔人或代理可以在预览模式下管理内容并提交信件。
+在Correspondence Management](/help/forms/using/create-letter.md)中创建[信件模板后，最终用户/代理/索赔理算员可以在“创建信件”用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建信件。 最后，理赔人或代理可以在预览模式下管理内容并提交信件。
 
 ### 预览通信 {#preview-a-correspondence}
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >有关在预览信件的HTML或PDF呈现模式之间切换的更多信息，请参阅[更改信件的呈现模式](#changerenditionmode)。 有关PDF在通信管理和AEM中支持的详细信息，请参阅[停止NPAPI浏览器插件及其影响](https://helpx.adobe.com/cn/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
+   >有关在预览信件的HTML或PDF呈现模式之间切换的更多信息，请参阅[更改信件的呈现模式](#changerenditionmode)。 有关PDF在通信管理和AEM中支持的详细信息，请参阅[停止NPAPI浏览器插件及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
 
 ### 输入数据 {#enterdata}
 
@@ -225,7 +225,7 @@ ht-degree: 0%
 
 1. 根据需要，在内容选项卡中编辑内容模块。 要使内容层次结构中的相关内容模块获得焦点，您可以在信件预览中选择相关行或段落，或者直接在内容层次结构中选择内容模块。
 
-   例如，在下图中选择了“允许我们访问……”行，并在“内容”选项卡中选择了相应的内容模块。
+   例如，行“允许我们访问……” 在下图中选择了，然后在内容选项卡中选择了相应的内容模块。
 
    通过点按内容中的高亮显示选定模块(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以禁用或启用在信件预览中点按相关文本、段落或数据字段时在“内容”选项卡中高亮显示内容模块的功能。
 
@@ -285,7 +285,7 @@ ht-degree: 0%
 
 在发布实例上发布信件或保存草稿之前，请在创作和发布实例上执行以下步骤以启用另存为草稿功能：
 
-默认情况下，*cq：lastReplicationAction*、*cq：lastreplicated*&#x200B;和&#x200B;*cq：lastReplicatedBy*&#x200B;属性未转移到发布实例。 若要将&#x200B;*cq：lastReplicationAction*、*cq：lastreplicated*&#x200B;和&#x200B;*cq：lastReplicatedBy*&#x200B;属性转移到发布实例，请禁用[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]组件。 要禁用组件，请执行以下操作：
+默认情况下，*cq:lastReplicationAction*、*cq:lastreplicated*&#x200B;和&#x200B;*cq:lastReplicatedBy*&#x200B;属性未转移到发布实例。 若要将&#x200B;*cq:lastReplicationAction*、*cq:lastreplicated*&#x200B;和&#x200B;*cq:lastReplicatedBy*&#x200B;属性转移到发布实例，请禁用[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]组件。 要禁用组件，请执行以下操作：
 
 1. 在创作实例上，打开Adobe Experience Manager Web控制台组件控制台。 默认URL为`http://author-server:port/system/console/components`
 
@@ -363,7 +363,7 @@ AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通�
 * **分页符**：在PDF预览中，您可以查看信件中的分页符对其输出的确切影响。
 * **最终预览**：在PDF预览中，您可以查看信件将出现在输出中的确切格式设置和外观。
 
-有关PDF forms中脚本支持的信息，请参阅[脚本支持](https://help.adobe.com/zh_CN/livecycle/11.0/ScriptingSupport/index.html)。
+有关PDF forms中脚本支持的信息，请参阅[脚本支持](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html)。
 
 有关HTML5表单中脚本支持的详细信息，请参阅[HTML5表单的脚本支持](/help/forms/using/scripting-support.md)。
 
@@ -371,7 +371,7 @@ AEM Forms通信管理在创建通信UI中将信件显示为HTML。 但是，通�
 
 默认情况下，创建通信UI使用HTML或移动表单呈现信件预览。 移动设备表单预览在任何浏览器中呈现时不会出现任何问题，因为它使用浏览器的本机插件，并且无需其他插件。 您可以将信件预览模式更改为PDF。 但是，浏览器限制可能会为信件的交互式PDF预览的不同功能带来问题。
 
-有关浏览器与信件预览兼容性的详细信息，请参阅[NPAPI浏览器插件停止使用及其影响](https://helpx.adobe.com/cn/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
+有关浏览器与信件预览兼容性的详细信息，请参阅[NPAPI浏览器插件停止使用及其影响](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html)。
 
 要更改信件的预览模式，请完成以下步骤：
 

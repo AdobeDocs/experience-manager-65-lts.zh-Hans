@@ -11,8 +11,8 @@ role: Developer
 exl-id: e33640ba-6039-4057-8942-b4faa9b2e250
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 0%
+source-wordcount: '954'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 * 电子邮件的SMTP
 * 用于用户管理的LDAP
 
-例如，您可以在通过TCP/IP网络通信的任意两个应用程序(例如Web浏览器和AEM)之间放置代理服务器。 这样，您就可以监控在请求CQ页面时确切发生的情况。
+例如，您可以在通过TCP/IP网络通信的任意两个应用程序（例如Web浏览器和AEM）之间放置代理服务器。 这样，您就可以监控在请求CQ页面时确切发生的情况。
 
 ## 启动代理服务器工具 {#starting-the-proxy-server-tool}
 

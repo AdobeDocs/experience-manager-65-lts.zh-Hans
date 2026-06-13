@@ -8,7 +8,7 @@ role: Admin, Developer
 exl-id: 17c6a9b3-9fa0-432a-b6df-e5e0149a3168
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -64,11 +64,11 @@ ht-degree: 0%
    您可以在[addBlogToNavigation.js](https://github.com/adobe/aem-pwa-studio-extensions/blob/master/aem-cfm-blog-extension/extension/src/addBlogToNavigation.js)和PWA Studio的[可扩展性框架](https://developer.adobe.com/commerce/pwa-studio/guides/general-concepts/extensibility/)文档中查找有关自定义导航组件的更多详细信息。
 
 1. Apollo客户端需要`<https://pwa-studio/endpoint.js>`处的AEM GraphQL端点。 要将端点映射到此位置，请自定义PWA Studio应用程序的“向上”配置：
-a.到`pwa-root/.env`，添加AEM_CFM_GRAPHQL变量，并将其调整为指向您的AEM内容片段GraphQL端点。
+答： 到`pwa-root/.env`，添加AEM_CFM_GRAPHQL变量，并将其调整为指向您的AEM内容片段GraphQL端点。
 
    示例： AEM_CFM_GRAPHQL=<http://localhost:4503/content/graphql/global>
 
-   b.将代理解析程序添加到UPGRADE配置。 UPPER配置示例可能如下所示：
+   b. 将代理解析程序添加到UPPER配置。 UPPER配置示例可能如下所示：
 
 ```json
    response:
