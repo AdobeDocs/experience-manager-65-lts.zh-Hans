@@ -7,20 +7,20 @@ role: User, Developer
 exl-id: 2d9ec8c4-330e-4474-97f4-1f434025683f
 source-git-commit: e91f40d1af626b3aa42c9ddb8381d73ef9a69273
 workflow-type: tm+mt
-source-wordcount: '4354'
+source-wordcount: '4296'
 ht-degree: 4%
 
 ---
 
 # 为自适应表单或自适应表单片段生成记录文档 {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
 
 ## 概述 {#overview}
@@ -412,12 +412,12 @@ ht-degree: 4%
 **表单级别设置**
 
 * **[!UICONTROL 基本]**
-   * **模板：**&#x200B;您可以选择“默认”或“自定义”模板。
+   * **模板：**您可以选择“默认”或“自定义”模板。
      ![替换文本](image.png)
    * **个性色：**&#x200B;您可以预定义[!UICONTROL 记录文档]的模板颜色。
    * **字体系列：**&#x200B;为[!UICONTROL 记录文档]文本选择字体类型。
    * **包括DoR中未绑定的字段：**&#x200B;设置属性包括来自[!UICONTROL 记录文档]中基于架构的自适应表单的未绑定字段。 默认情况下，它为true。
-   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器[&#128279;](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上启用重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
+   * **隐藏时从DoR中排除字段：**&#x200B;设置属性以在提交表单时从[!UICONTROL 记录文档]中排除隐藏字段。 在服务器](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)上启用[重新验证时，服务器会重新计算隐藏字段，然后再从[!UICONTROL 记录文档]中排除这些字段
 * **[!UICONTROL 表单字段属性]**
    * 如果勾选选项&#x200B;**对于复选框和单选按钮组件，则仅显示选定的值**，它将生成仅具有选定值的DoR输出。
    * 可以为多个选定值选择分隔符，也可以选择任何其他分隔符类型。
@@ -426,7 +426,7 @@ ht-degree: 4%
       * 水平
       * 与自适应表单相同
      >[!NOTE]
-     > 垂直对齐和水平对齐仅适用于以下情况     单选按钮和复选框
+     > 垂直对齐和水平对齐仅适用于单选按钮和复选框
 * **[!UICONTROL 母版页属性]**&#x200B;有关[母版页属性](#master-page-properties-master-page-properties)的详细信息，请单击
 
 ## 在记录文档中应用分页符 {#apply-page-breaks-in-dor}

@@ -8,7 +8,7 @@ role: Admin, User, Developer
 exl-id: 5f6106a9-64a6-45aa-a31d-2075d1e911bf
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3352'
 ht-degree: 2%
 
 ---
@@ -60,8 +60,8 @@ AEM Forms 6.5包括JavaScript函数，这些函数允许您使用规则编辑器
 * `@func [functionName] <Function Name>`
 
 >[!NOTE]
->`[functionName]`是函数的名称。 不允许使用空格。
->`<Function Name>` 是自适应Forms的规则编辑器中函数的显示名称。
+>`[functionName]`是函数的名称。不允许使用空格。
+>`<Function Name>`是自适应Forms的规则编辑器中函数的显示名称。
 >如果函数名称与函数本身的名称相同，则可以在语法中省略`[functionName]`。
 
 #### 参数
@@ -356,7 +356,7 @@ var c = {
 
 ### 使用AEM项目原型创建客户端库{#create-client-library-archetype}
 
-您可以向使用AEM项目原型[&#128279;](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)创建的项目中添加客户端库，从而添加自定义函数。
+您可以向使用AEM项目原型](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#getting-started)创建的项目[中添加客户端库，从而添加自定义函数。
 如果您现有项目<!--and have already the project structure as shown in the image below,-->，则可以直接将[自定义函数](#create-add-custom-function)添加到本地项目。
 
 <!--![custom fuction folder structure](assets/custom-library-folder-structure.png)-->
@@ -477,7 +477,7 @@ var c = {
 创建的文件夹结构如下所示：
 
    ![创建的客户端库文件夹结构](/help/forms/using/assets/clientlibrary_folderstructure.png)
-1. 双击`functions.js`文件以打开编辑器。 该文件包含自定义函数的代码。
+1. 双击`functions.js`文件以打开编辑器。该文件包含自定义函数的代码。
 让我们将以下代码添加到JavaScript文件中，以根据出生日期计算年龄(YYYY-MM-DD)。
 
    ```javascript
@@ -533,12 +533,12 @@ var c = {
 
 ![正在添加自定义函数客户端库](/help/forms/using//assets/calculateage-customfunction.png)
 
-现在，让我们了解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用规则编辑器的调用服务来配置和使用自定义函数
+现在，让我们了解如何在AEM Forms 6.5](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用[规则编辑器的调用服务来配置和使用自定义函数
 
 ## 在自适应表单中使用自定义函数 {#use-custom-functions}
 
-在自适应表单中，您可以在规则编辑器[&#128279;](/help/forms/using/rule-editor-core-components.md)中使用自定义函数。
-让我们将以下代码添加到JavaScript文件（`Function.js`文件）中，以根据出生日期(YYYY-MM-DD)计算年龄。 创建自定义函数作为`calculateAge()`，它将出生日期作为输入并返回年龄：
+在自适应表单中，您可以在规则编辑器](/help/forms/using/rule-editor-core-components.md)中使用[自定义函数。
+让我们将以下代码添加到JavaScript文件（`Function.js`文件）中，以根据出生日期(YYYY-MM-DD)计算年龄。创建自定义函数作为`calculateAge()`，它将出生日期作为输入并返回年龄：
 
 ```javascript
     /**
@@ -573,7 +573,7 @@ var c = {
 
 >[!NOTE]
 >
-> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
+> 您可以引用以下[自定义函数](/help/forms/using/assets/customfunctions.zip)文件夹。 使用[包管理器](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/sites/administering/contentmanagement/package-manager)在AEM实例中下载并安装此文件夹。
 
 ### 在自定义函数中支持异步函数 {#support-of-async-functions}
 
@@ -777,7 +777,7 @@ In the above code snippet, a custom function named `updateDateTime` takes parame
 
 #### **用例**：在字段级别显示自定义消息并将字段标记为无效
 
-您可以使用`markFieldAsInvalid()`函数将字段定义为无效，并在字段级别设置自定义错误消息。 `fieldIdentifier`值可以是`fieldId`、`field qualifiedName`或`field dataRef`。 名为`option`的对象的值可以是`{useId: true}`、`{useQualifiedName: true}`或`{useDataRef: true}`。
+您可以使用`markFieldAsInvalid()`函数将字段定义为无效，并在字段级别设置自定义错误消息。`fieldIdentifier`值可以是`fieldId`、`field qualifiedName`或`field dataRef`。名为`option`的对象的值可以是`{useId: true}`、`{useQualifiedName: true}`或`{useDataRef: true}`。
 用于将字段标记为无效并设置自定义消息的语法包括：
 
 * `globals.functions.markFieldAsInvalid(field.$id,"[custom message]",{useId: true});`

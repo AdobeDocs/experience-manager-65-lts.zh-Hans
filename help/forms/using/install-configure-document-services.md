@@ -8,7 +8,7 @@ feature: Interactive Communication
 exl-id: dd22ea1b-33e9-407d-b7b6-645bdba00b4e
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '10681'
+source-wordcount: '10632'
 ht-degree: 2%
 
 ---
@@ -199,7 +199,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 >* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint仅适用于Microsoft®Windows。 如果您使用的是基于UNIX的操作系统，请安装OpenOffice以将RTF文件和支持的® Office文件转换为PDF文档。
 >* 关闭在安装Adobe Acrobat和第三方软件后显示的所有对话框，这些对话框适用于配置为使用PDF Generator服务的所有用户。
 >* 至少启动一次所有已安装的软件。 关闭配置为使用PDF Generator服务的所有用户的所有对话框。
->* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/cn/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
+>* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
 
 安装Acrobat后，打开Microsoft® Word。 在&#x200B;**Acrobat**&#x200B;选项卡上，单击&#x200B;**创建PDF**，并将计算机上可用的.doc或.docx文件转换为PDF文档。 如果转换成功，AEM Forms可以将Acrobat与PDF Generator服务结合使用。
 
@@ -1058,7 +1058,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不立即停止服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在`[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件中并且日志稳定。
 
@@ -1091,7 +1091,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 
    >[!NOTE]
    >
-   >您使用Adobe以外的其他各方提供的字体的权利受这些各方向您提供的这些字体的许可协议管辖，并且不在您使用Adobe软件的许可范围内。 Adobe建议您查看并确保在将non-Adobe字体与Adobe软件结合使用之前，遵守所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
+   >您使用Adobe以外的其他各方提供的字体的权利受这些各方向您提供的这些字体的许可协议管辖，并且不在您使用Adobe软件的许可范围内。Adobe建议您查看并确保在将non-Adobe字体与Adobe软件结合使用之前，遵守所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
    >在将新字体安装到fonts文件夹时，请重新启动AEM Forms实例。
    >
 
@@ -1188,7 +1188,7 @@ DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用�
 
 * 证书附带的私钥密码。
 
-* 私钥别名。 您可以执行Java keytool命令以查看私钥别名：
+* 私钥别名。您可以执行Java keytool命令以查看私钥别名：
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * Keystore文件密码。 如果您使用Adobe的Reader扩展证书，则Keystore文件密码始终与“私钥”密码相同。
@@ -1453,18 +1453,18 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
    * 使用以下命令生成prov.xml，并使用prov.xml文件重新存储现有安装，而不使用[迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)编号文章中提供的命令。
 
-         &grave;&grave;
+         ``
          
-         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>中的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
+         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>格式的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
          
-         &grave;&grave;
+         `
      
    * 卷序列化包（使用prov.xml文件和新序列重新序列化现有安装）：以管理员身份从PRTK安装文件夹运行以下命令，以在客户端计算机上序列化和激活已部署的包：
 
-         &grave;&grave;
+         ``
          adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
          
-         &grave;&grave;
+         ``
      
 * 对于大规模安装，请使用[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html)删除Reader和Acrobat的早期版本。 自定义安装程序并将其部署到组织中的所有计算机。
 
@@ -1501,7 +1501,7 @@ ALC-PDG-015-003 — 系统无法打开输入文件。 再次提交文件或联�
 
 +++ 无法将XPS文件转换为PDF
 
-要解决此问题，请在Windows[&#128279;](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html)上创建特定于功能的注册表项。
+要解决此问题，请在Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html)上[创建特定于功能的注册表项。
 
 +++
 

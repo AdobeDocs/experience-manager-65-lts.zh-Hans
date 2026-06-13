@@ -1,5 +1,5 @@
 ---
-title: 创建无障碍的自适应表单
+title: 创建可访问的自适应表单
 description: AEM Forms为您提供用于创建无障碍自适应表单的工具并帮助遵守无障碍标准。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -10,14 +10,14 @@ role: User, Developer
 exl-id: 8a0b276a-6020-4f48-95ab-4e7270e42e44
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2139'
 ht-degree: 2%
 
 ---
 
-# 创建无障碍的自适应表单{#creating-accessible-adaptive-forms}
+# 创建可访问的自适应表单{#creating-accessible-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应Forms的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应Forms的旧方法。</span>
 
 ## 简介 {#introduction}
 
@@ -58,7 +58,7 @@ Ultraminary-Accessible主题是参考主题。 它有助于演示如何在自适
 
 您应该关注四个关键方面：键盘导航、颜色对比度、有意义的图像替换文本以及使自适应表单可访问的表单控件的相应标签。 执行以下步骤可访问您现有的自适应表单：
 
-### 1.应用易访问的主题并执行其他修复
+### &#x200B;1. 应用可访问的主题并执行其他修复
 
 将Ultraminary-Accessible主题应用于您现有的自适应表单。 要应用主题，请执行以下操作：
 
@@ -97,7 +97,7 @@ Ultraminary-Accessible主题是参考主题。 它有助于演示如何在自适
 
 1. 删除自适应表单中的潦草签名字段（如果有）。 配置自适应表单以使用Adobe Sign实现无缝的数字签名体验。
 
-### 2.为表单控件提供适当的标签 {#provide-proper-labels-for-form-controls}
+### &#x200B;2. 为表单控件提供适当的标签 {#provide-proper-labels-for-form-controls}
 
 组件的标签或标题可标识表单组件所表示的内容。 例如，文本“名字”会告诉用户必须在文本字段中输入其名字。 为便于屏幕阅读器访问，标签以编程方式与表单组件关联。 或者，表单控件配置有附加的可访问性信息。
 
@@ -127,7 +127,7 @@ Ultraminary-Accessible主题是参考主题。 它有助于演示如何在自适
 >* 单选按钮和复选框只能有两个辅助功能选项，即“自定义文本”和“标题”。
 >* 对于基于XFA的自适应表单，辅助功能选项继承自XDP中设置的辅助功能选项。 XDP中的工具提示映射到简短描述，而标题映射到标题。 其他选项按原样工作。
 
-### 3.为图像提供等效文本 {#provide-text-equivalents-for-images}
+### &#x200B;3. 为图像提供等效文本 {#provide-text-equivalents-for-images}
 
 图像有助于提高某些用户的理解。 但是，对于使用屏幕阅读器的用户，图像会降低表单的辅助功能。 如果选择使用图像，请为所有图像提供文本描述。
 
@@ -137,7 +137,7 @@ Ultraminary-Accessible主题是参考主题。 它有助于演示如何在自适
 
 ![图像的替换文本](assets/image-properties.png)
 
-### 4.提供足够的颜色对比度 {#provide-sufficient-color-contrast}
+### &#x200B;4. 提供足够的颜色对比度 {#provide-sufficient-color-contrast}
 
 辅助功能设计涉及考虑有关颜色使用的其他准则。 表单作者可以使用颜色通过突出显示各种表单组件来改善表单的外观。 但是，如果颜色使用不当，可能会使表单难以或由能力不同的人阅读。
 
@@ -147,7 +147,7 @@ Ultraminary-Accessible主题是参考主题。 它有助于演示如何在自适
 
 请参阅[创建自适应表单的自定义主题](/help/forms/using/creating-custom-adaptive-form-themes.md)，以了解有关更改自适应表单的颜色对比度和主题的更多信息。
 
-### 5.确保表单控件可使用键盘 {#ensure-that-form-controls-are-keyboard-accessible}
+### &#x200B;5. 确保可使用键盘访问表单控件 {#ensure-that-form-controls-are-keyboard-accessible}
 
 仅使用键盘或等效输入设备即可完全填充可访问的表单。 行动不便或视力不佳的用户可能别无选择，只能使用键盘，而许多使用鼠标的用户更喜欢使用键盘输入。 通过允许使用各种输入方法，您不仅可以创建无障碍表单，还可以创建更适合所有用户偏好的表单。
 

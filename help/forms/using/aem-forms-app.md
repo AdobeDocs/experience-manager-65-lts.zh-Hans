@@ -1,5 +1,5 @@
 ---
-title: AEM Forms应用程序
+title: AEM Forms 应用程序
 description: AEM Forms应用程序使您的字段工作人员能够在其移动设备上使用自适应表单。
 contentOwner: sashanka
 content-type: reference
@@ -11,26 +11,26 @@ role: Admin, User, Developer
 exl-id: 9cc83733-630a-4846-bd9e-72fd76a3286d
 source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '2336'
-ht-degree: 0%
+source-wordcount: '2386'
+ht-degree: 2%
 
 ---
 
-# AEM Forms应用程序简介 {#aem-forms-app}
+# AEM Forms 应用程序简介 {#aem-forms-app}
 
 ## 概述 {#overview}
 
-AEM Forms应用程序支持根据您的服务器，在移动设备上同步自适应表单、移动表单和表单集。 您可以在OSGi&rbrack;(/help/forms/using/aem-forms-workflow.md) <!--or Forms workflows on JEE-->上定义以&lbrack;Forms为中心的工作流。 例如，您经营一家银行公司，并使用AEM Forms管理客户应用程序和通信。 您的客户填写并提交表单以进行验证。 如果您在移动设备上启用表单，则客户可以在AEM Forms应用程序中填写表单。 您还可以通过在移动设备上启用验证表单来管理验证工作流。 您的现场工作人员可以向客户携带移动设备、验证详细信息并提交表单。 AEM Forms应用程序与AEM Forms服务器同步，并获取为移动设备启用的表单。 如果应用程序处于离线状态，则会将数据存储在本地。
+AEM Forms应用程序支持根据您的服务器，在移动设备上同步自适应表单、移动表单和表单集。 您可以在OSGi](/help/forms/using/aem-forms-workflow.md) <!--or Forms workflows on JEE-->上定义以[Forms为中心的工作流。 例如，您经营一家银行公司，并使用AEM Forms管理客户应用程序和通信。 您的客户填写并提交表单以进行验证。 如果您在移动设备上启用表单，则客户可以在AEM Forms应用程序中填写表单。 您还可以通过在移动设备上启用验证表单来管理验证工作流。 您的现场工作人员可以向客户携带移动设备、验证详细信息并提交表单。 AEM Forms应用程序与AEM Forms服务器同步，并获取为移动设备启用的表单。 如果应用程序处于离线状态，则会将数据存储在本地。
 
 客户可以通过Software Distribution获取AEM Forms应用程序的源代码。 Software Distribution中的源代码包可用为： `adobe-aemfd-forms-app-src-pkg-<version>.zip`。
 
 iOS、Android和Windows设备支持AEM Forms应用程序。 您可以从Google Play安装适用于Android的AEM Forms应用程序，从App Store安装iOS，并从Windows应用商店安装Windows。
 
-    [&#x200B; ![google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
+    [ ！[google_play](assets/google_play.png)](https://play.google.com/store/apps/details?id=com.adobe.aem.forms)
     
-    [&#x200B; ![app_store](assets/app_store.png)](https://itunes.apple.com/us/app/adobe-experience-manager-forms/id1129625976?ls=1&mt=8)
+    [ ！[app_store](assets/app_store.png)](https://itunes.apple.com/us/app/adobe-experience-manager-forms/id1129625976?ls=1&amp;mt=8)
     
-    [&#x200B; ![microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
+    [ ！[microsoft-badge-icon](assets/microsoft-badge-icon.png)](https://www.microsoft.com/en-us/store/p/adobe-experience-manager-forms/9nd12rlxtgtt)
 
 要在iOS、Android或Windows设备上安装、自定义和分发应用程序，请参阅[自定义、生成和分发AEM Forms应用程序](#customize-build-distribute)。
 
@@ -47,7 +47,7 @@ AEM Forms应用程序需要AEM Forms服务器。 用户可以渲染您在AEM For
 
 如果您拥有AEM Forms服务器，则可以在AEM应用程序中呈现自适应表单作为AEM Forms收件箱应用程序，以及呈现任务。 例如，您经营一家银行公司，客户填写申请表以使用您的服务。 该应用程序与自适应表单相关联，该表单接受来自客户的信息，并将其存储为提交以供审核。 管理员审阅任务并批准现场工作人员的验证请求。 您的现场工作人员将移动设备带给您的客户并验证详细信息。
 
-### 独立表单或AEM Forms应用程序(带服务器，无AEM Forms工作流程) {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
+### 独立表单或AEM Forms应用程序（带服务器，无AEM Forms工作流程） {#standalone-forms-or-aem-forms-app-with-servers-without-aem-forms-workflow}
 
 未使用AEM Forms Workflow的AEM Forms服务器是OSGi上的AEM Forms，或者是独立的移动表单或自适应表单。 AEM Forms应用程序可在[OSGi](/help/sites-deploying/configuring-osgi.md)上与AEM Forms实施配合使用。 您为AEM Forms应用程序启用和发布的Forms在应用程序中可用。
 
@@ -98,7 +98,7 @@ See [AEM Forms app (previously known as Mobile Workspace)](/help/forms/using/aem
 
 移动设备上的任务包含自适应表单、HTML5表单或表单集，也可以包含附件和[摘要URL](/help/forms/using/getting-task-variables-summary-url.md)。 默认情况下，分配给您的任务放在&#x200B;**[!UICONTROL 任务]**&#x200B;文件夹中。 处理任务时，您可以更改任务并在AEM Forms服务器上保存任务的草稿副本。
 
-移动设备上的表单可以是自适应表单或移动设备表单。 Forms文件夹中提供了在表单应用程序中启用同步的Forms。 您可以同步在AEM Forms服务器中启用的表单，而无需使用AEM Forms工作流程(OSGi上的AEM Forms)。
+移动设备上的表单可以是自适应表单或移动设备表单。 Forms文件夹中提供了在表单应用程序中启用同步的Forms。 您可以同步在AEM Forms服务器中启用的表单，而无需使用AEM Forms工作流程（OSGi上的AEM Forms）。
 
 请参阅：
 
@@ -147,7 +147,7 @@ AEM Forms应用程序支持可动态适应用户输入的自适应表单。 还�
 
 >[!NOTE]
 >
->需要AEM Forms工作流程(JEE上的AEM Forms)。
+>需要AEM Forms工作流程（JEE上的AEM Forms）。
 
 ## AEM Forms应用程序的工作原理 {#how-aem-forms-app-works}
 
@@ -175,7 +175,7 @@ AEM Forms应用程序可轻松根据组织的特定需求进行自定义。 该�
 
 有关设置AEM Forms应用程序项目以进行自定义的更多信息，请参阅：
 
-* [为AEM Forms应用程序设置环境](/help/forms/using/setup-environment-mobile-workspace.md)
+* [为 AEM Forms 应用程序设置环境](/help/forms/using/setup-environment-mobile-workspace.md)
 * [设置Visual Studio项目并构建Windows应用程序](/help/forms/using/setup-visual-studio-project-build-installer.md)
 * [设置Xcode项目并构建iOS应用程序](/help/forms/using/setup-xcode-project-build-installer.md)
 * [设置Eclipse项目并构建Android应用程序](/help/forms/using/setup-eclipse-project-build-installer.md)
@@ -186,14 +186,14 @@ AEM Forms应用程序的源代码可从`adobe-lc-mobileworkspace-src.zip`中提�
 
 要获取AEM Forms应用程序源，请执行以下步骤：
 
-1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
+1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登录 Software Distribution。
 1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
 1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
    1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
    2. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
 1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
+1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
 iOS **的**：
 
@@ -220,6 +220,6 @@ Windows **的**：
 * **如果您从Android上的Play Store安装了应用程序的早期版本**
 您可以直接从Play Store升级应用程序。
 
-* **如果使用源代码生成并安装应用程序的早期版本(适用于iOS和Android)**：
+* **如果使用源代码生成并安装应用程序的早期版本（适用于iOS和Android）**：
 
   在安装新应用程序之前，请将所有数据与AEM Forms服务器同步。 数据同步后，卸载旧版应用程序，然后安装新应用程序。

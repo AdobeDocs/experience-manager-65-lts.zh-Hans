@@ -1,5 +1,5 @@
 ---
-title: HTML5表单常见问题解答(FAQ)
+title: HTML5 Forms 常见问题解答（FAQ）
 description: 有关HTML5表单的布局、脚本支持和范围的常见问题解答(FAQ)。
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ role: Admin, User, Developer
 exl-id: fc98390c-8517-46fc-9f15-bac5d4327c60
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2007'
-ht-degree: 0%
+source-wordcount: '1982'
+ht-degree: 1%
 
 ---
 
-# HTML5表单常见问题解答(FAQ){#frequently-asked-questions-faq-for-html-forms}
+# HTML5 Forms 常见问题解答（FAQ）{#frequently-asked-questions-faq-for-html-forms}
 
 关于HTML5表单的布局、脚本支持和范围有一些常见问题解答(FAQ)。
 
@@ -93,11 +93,11 @@ ht-degree: 0%
 
 1. 我观察到与缺少内容或内容重叠相关的布局问题。 原因是什么？
 
-   回答：如果在同一位置有一个绘制文本或绘制图像元素以及另一个重叠元素（例如矩形），则绘制文本内容在文档顺序中位于后面时(在AEM Forms Designer层次结构视图中)不可见。 PDF支持透明分层，但HTML/浏览器不支持透明分层。
+   回答：如果在同一位置有一个绘制文本或绘制图像元素以及另一个重叠元素（例如矩形），则绘制文本内容在文档顺序中位于后面时（在AEM Forms Designer层次结构视图中）不可见。 PDF支持透明分层，但HTML/浏览器不支持透明分层。
 
 1. 为什么HTML表单中显示的某些字体与设计表单时使用的字体不同？
 
-   回答： HTML5 Forms不允许嵌入字体(与字体嵌入表单中的PDF forms相反)。 要使表单的HTML版本按预期呈现，请确保这些字体在AEM Forms服务器的CRX存储库(AEM Content Repository)中以及安装了AEM Designer的计算机上可用。 当AEM Forms服务器的CRX存储库中或AEM Designer的安装位置不支持这些字体时，将会使用回退字体呈现表单。
+   回答： HTML5 Forms不允许嵌入字体（与字体嵌入表单中的PDF forms相反）。 要使表单的HTML版本按预期呈现，请确保这些字体在AEM Forms服务器的CRX存储库(AEM Content Repository)中以及安装了AEM Designer的计算机上可用。 当AEM Forms服务器的CRX存储库中或AEM Designer的安装位置不支持这些字体时，将会使用回退字体呈现表单。
 
 1. HTML表单中是否支持vAlign和hAlign属性？
 
@@ -172,7 +172,7 @@ ht-degree: 0%
    答案： HTML5表单不支持浮动字段的显示模式。
 
 1. HTML5 Forms中日期字段的格式是什么？
-答案：日期字段接受ISO格式，YYYY-MM-DD。 如果以某种其他格式指定日期，则在用户退出该字段之前，日期字段不接受格式。
+答案：日期字段接受ISO格式，YYYY-MM-DD。如果以某种其他格式指定日期，则在用户退出该字段之前，日期字段不接受格式。
 
 ### 脚本 {#scripting}
 
@@ -212,7 +212,7 @@ ht-degree: 0%
 
 1. HTML5 Forms是否多次执行初始化脚本和表单就绪事件？
 
-   回答：是，初始化脚本和表单就绪事件会执行多次，在服务器上至少执行一次，在客户端执行一次。 建议基于某些业务逻辑（表单或字段数据）编写初始化或表单：ready事件等脚本，以便基于数据和幂等状态（如果数据相同）执行操作。
+   回答：是，初始化脚本和表单就绪事件会执行多次，在服务器上至少执行一次，在客户端执行一次。 建议根据某些业务逻辑（表单或字段数据）编写初始化或表单:ready事件等脚本，以便根据数据和幂等状态（如果数据相同）执行操作。
 
 ### 设计XDP {#designing-xdp}
 

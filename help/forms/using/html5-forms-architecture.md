@@ -1,5 +1,5 @@
 ---
-title: HTML5表单的架构
+title: HTML5 Forms 的架构
 description: HTML5 Forms作为包部署在嵌入的AEM实例中，并使用RESTful Apache Sling架构通过HTTP/S公开作为REST端点的功能。
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ role: Admin, User, Developer
 exl-id: e57d51de-9d98-4b20-8180-22fa81fad4fd
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1976'
-ht-degree: 0%
+source-wordcount: '2002'
+ht-degree: 2%
 
 ---
 
-# HTML5表单的架构{#architecture-of-html-forms}
+# HTML5 Forms 的架构{#architecture-of-html-forms}
 
 ## 架构 {#architecture}
 
@@ -27,11 +27,11 @@ HTML5 forms功能作为包部署在嵌入式AEM实例中，并使用RESTful [Apa
 
 ### 使用Sling框架 {#using-sling-framework}
 
-[Apache Sling](https://sling.apache.org/)以资源为中心。 它会使用请求URL首先解析资源。 每个资源都有一个&#x200B;**sling：resourceType**（或&#x200B;**sling：resourceSuperType**）属性。 然后，根据此属性、请求方法和请求URL的属性，选择sling脚本来处理请求。 此sling脚本可以是JSP或servlet。 对于HTML5表单，**配置文件**&#x200B;节点用作Sling资源，**配置文件渲染器**&#x200B;用作Sling脚本，用于处理使用特定配置文件渲染移动表单的请求。 **配置文件渲染器**&#x200B;是一个JSP，它从请求中读取参数并调用Forms OSGi服务。
+[Apache Sling](https://sling.apache.org/)以资源为中心。 它会使用请求URL首先解析资源。 每个资源都有一个&#x200B;**sling:resourceType** （或&#x200B;**sling:resourceSuperType**）属性。 然后，根据此属性、请求方法和请求URL的属性，选择sling脚本来处理请求。 此sling脚本可以是JSP或servlet。 对于HTML5表单，**配置文件**&#x200B;节点用作Sling资源，**配置文件渲染器**&#x200B;用作Sling脚本，用于处理使用特定配置文件渲染移动表单的请求。 **配置文件渲染器**&#x200B;是一个JSP，它从请求中读取参数并调用Forms OSGi服务。
 
 有关REST端点和支持的请求参数的详细信息，请参阅[渲染表单模板](/help/forms/using/rendering-form-template.md)。
 
-当用户从客户端设备(如iOS或Android™浏览器)发出请求时，Sling首先根据请求URL解析配置文件节点。 从该配置文件节点中，读取&#x200B;**sling：resourceSuperType**&#x200B;和&#x200B;**sling：resourceType**&#x200B;以确定可处理此表单渲染请求的所有可用脚本。 然后，它使用Sling请求选择器以及请求方法来识别最适合处理此请求的脚本。 请求到达配置文件渲染器JSP后，JSP会调用Forms OSGi服务。
+当用户从客户端设备（如iOS或Android™浏览器）发出请求时，Sling首先根据请求URL解析配置文件节点。 从该配置文件节点中，读取&#x200B;**sling:resourceSuperType**&#x200B;和&#x200B;**sling:resourceType**&#x200B;以确定可处理此表单渲染请求的所有可用脚本。 然后，它使用Sling请求选择器以及请求方法来识别最适合处理此请求的脚本。 请求到达配置文件渲染器JSP后，JSP会调用Forms OSGi服务。
 
 有关Sling脚本解析的更多详细信息，请参阅[AEM Sling备忘单](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)或[Apache Sling Url分解](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html)。
 
@@ -94,7 +94,7 @@ HTML5 forms使用缓存来优化吞吐量和响应时间。 您可以配置缓�
   </tr>
   <tr>
    <td>激进</td>
-   <td>缓存渲染的HTML内容<br />缓存在保守级别缓存的所有项目。<br /> <strong>注意</strong>：此策略可产生最佳性能，但会消耗更多内存来存储缓存的项目。</td>
+   <td>缓存渲染的HTML内容<br />缓存所有在保守级别缓存的项目。<br /> <strong>注意</strong>：此策略可提供最佳性能，但会占用更多内存来存储缓存的项目。</td>
   </tr>
  </tbody>
 </table>
@@ -109,7 +109,7 @@ HTML5 forms使用LRU策略执行内存缓存。 如果缓存策略设置为“�
 
 配置服务允许调整HTML5表单的配置参数和缓存设置。
 
-要更新这些设置，请转到CQ Felix Admin Console(位于https://&lt;&#39;[server]：[port]&#39;/system/console/configMgr)，搜索并选择Mobile Forms配置。
+要更新这些设置，请转到CQ Felix Admin Console（位于https://&lt;&#39;[server]：[port]&#39;/system/console/configMgr），搜索并选择Mobile Forms配置。
 
 可以使用配置服务配置高速缓存大小或禁用高速缓存。 您还可以使用“调试选项”参数启用调试。 有关调试表单的详细信息，请参阅[调试HTML5表单](/help/forms/using/debug.md)。
 
@@ -172,9 +172,9 @@ Sling包包含与配置文件和配置文件渲染器相关的内容。
 
 #### 配置文件渲染器 {#profile-renderers}
 
-配置文件节点具有属性&#x200B;**sling：resourceSuperType**，其值为&#x200B;**xfaforms/profile**。 此属性在内部将请求转发到&#x200B;**/libs/xfaforms/profile**&#x200B;文件夹中配置文件节点的sling脚本。 这些脚本是JSP页面，是用于组合HTML表单和所需JS/CSS工件的容器。 这些页面包括对以下内容的引用：
+配置文件节点具有值为&#x200B;**xfaforms/profile**&#x200B;的属性&#x200B;**sling:resourceSuperType**。 此属性在内部将请求转发到&#x200B;**/libs/xfaforms/profile**&#x200B;文件夹中配置文件节点的sling脚本。 这些脚本是JSP页面，是用于组合HTML表单和所需JS/CSS工件的容器。 这些页面包括对以下内容的引用：
 
-* **xfaforms.I18N。&lt;locale>**：此库包含本地化数据。
+* **xfaforms.I18N.&lt;区域设置>**：此库包含本地化数据。
 * **xfaforms.profile**：此库包含XFA脚本和布局引擎的实施。
 
 这些库被建模为CQ客户端库，这些库利用CQ框架JavaScript库的自动连接、缩小和压缩功能。
@@ -182,5 +182,5 @@ Sling包包含与配置文件和配置文件渲染器相关的内容。
 
 如上所述，配置文件渲染器JSP通过sling include调用Forms服务。 此JSP还根据管理员配置或请求参数设置各种调试选项。
 
-利用HTML5表单，开发人员可创建配置文件和配置文件渲染器以自定义表单的外观。 例如，利用HTML表单，开发人员可以将表单集成到现有HTML门户的面板或&lt;div>部分中。
+利用HTML5表单，开发人员可创建配置文件和配置文件渲染器以自定义表单的外观。例如，利用HTML表单，开发人员可以将表单集成到现有HTML门户的面板或&lt;div>部分中。
 有关创建自定义配置文件的更多详细信息，请参阅[创建自定义配置文件](/help/forms/using/custom-profile.md)。

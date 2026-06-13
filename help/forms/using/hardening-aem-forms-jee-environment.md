@@ -107,7 +107,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
  </tbody> 
 </table>
 
-有关操作系统的其他安全信息，请参阅[“操作系统安全信息”](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
+有关操作系统的其他安全信息，请参阅[“操作系统安全信息”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information)。
 
 ## 安装 {#installation}
 
@@ -122,7 +122,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>权限</p> </td> 
+   <td><p>特权</p> </td> 
    <td><p>使用安装软件所需的最少权限。 使用不在Administrators组中的帐户登录到计算机。 在Windows上，您可以使用“运行方式”命令以管理用户的身份运行AEM Forms on JEE安装程序。 在UNIX和Linux系统上，使用诸如<code>sudo</code>之类的命令安装软件。</p> </td> 
   </tr> 
   <tr> 
@@ -263,17 +263,17 @@ Configuration Manager使用部署在您的应用程序服务器上的servlet对J
 1. 启动AEM Forms服务器。
 1. 在浏览器中键入以下URL以测试更改并确保其不再有效。
 
-   https://&lt;localhost>：&lt;port>/adobe-bootstrapper/bootstrap
+   https://<localhost>：<port>/adobe-bootstrapper/bootstrap
 
 **锁定对信任存储区的远程访问**
 
 Configuration Manager允许您将Acrobat Reader DC扩展凭据上传到JEE信任存储区上的AEM Forms。 这意味着默认情况下已启用通过远程协议（SOAP和EJB）访问Trust Store Credential Service。 在使用Configuration Manager上载权限凭据或决定稍后使用管理控制台管理凭据后，不再需要此访问。
 
-您可以按照[禁用对服务的非必要远程访问](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一节中的步骤来禁用对所有信任存储区服务的远程访问。
+您可以按照[禁用对服务的非必要远程访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services)一节中的步骤来禁用对所有信任存储区服务的远程访问。
 
 **禁用所有非必要的匿名访问**
 
-某些Forms Server服务具有可能被匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照[禁用对服务的非必要匿名访问](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步骤禁用它。
+某些Forms Server服务具有可能被匿名调用者调用的操作。 如果不需要匿名访问这些服务，请按照[禁用对服务的非必要匿名访问](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services)中的步骤禁用它。
 
 #### 更改默认管理员密码 {#change-the-default-administrator-password}
 
@@ -352,7 +352,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
 
 保护数据库时，您应该实施数据库供应商所述的措施。 您应该分配一个数据库用户，该用户具有最低所需的数据库权限，可供AEM Forms on JEE使用。 例如，不要使用具有数据库管理员权限的帐户。
 
-在Oracle上，您使用的数据库帐户只需要CONNECT、RESOURCE和CREATE VIEW权限。 有关其他数据库上的类似要求，请参阅[准备在JEE （单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64_cn)。
+在Oracle上，您使用的数据库帐户只需要CONNECT、RESOURCE和CREATE VIEW权限。 有关其他数据库上的类似要求，请参阅[准备在JEE （单服务器）上安装AEM Forms](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64)。
 
 #### 为Windows上的SQL Server for JBoss配置集成安全性 {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
@@ -394,7 +394,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
 1. 在右侧窗格中的“其他属性”下，单击“**自定义属性”**，然后单击“**新建”**。
 1. 在&#x200B;**名称**&#x200B;框中，键入`integratedSecurity`，在&#x200B;**值**&#x200B;框中，键入`true`。
 1. 在安装了WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位于同一位置（默认为&#x200B;*[InstallDir]*/sqljdbc_1.2/enu/auth/x86）。
-1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击用于WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>)的Windows服务并选择&#x200B;**属性**。
+1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击Windows的WebSphere服务(IBM WebSphere Application Server &lt;version> - &lt;node>)，然后选择&#x200B;**属性**。
 1. 在“属性”对话框中，单击&#x200B;**登录**&#x200B;选项卡。
 1. 选择&#x200B;**此帐户**&#x200B;并提供设置要使用的登录帐户所需的信息。
 1. 将SQL Server上的安全性从&#x200B;**混合**&#x200B;模式设置为&#x200B;**仅限Windows身份验证**。
@@ -409,7 +409,7 @@ AEM Forms数据库架构包含有关系统配置和业务流程的敏感信息�
 * 信任存储区HSM PIN加密密钥
 * 本地用户密码散列
 
-有关特定于供应商的工具的信息，请参阅[“数据库安全信息”](https://helpx.adobe.com/cn/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
+有关特定于供应商的工具的信息，请参阅[“数据库安全信息”](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#database_security_information)。
 
 ### LDAP安全 {#ldap-security}
 
@@ -751,7 +751,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 您可能已创建自定义WAR文件以与AEM Forms on JEE配合使用以满足业务要求。 要为自定义WAR文件启用反向链接筛选，请在WAR的类路径中包含&#x200B;***adobe-usermanager-client.jar***，并在* web.xml*文件中包含以下参数的筛选条目：
 
-**CSRF_CHECK_GETS**&#x200B;控制GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您要筛选GET请求时，才应包含此参数。
+**CSRF_CHECK_GETS**&#x200B;控制对GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您要筛选GET请求时，才应包含此参数。
 
 **CSRF_ALLOWED_REFERER_EXCEPTIONS**&#x200B;是允许的反向链接例外列表的ID。 反向链接筛选条件可阻止来自列表ID所标识列表中反向链接的请求，从而防止这些请求在Forms服务器上调用任何资源。
 
@@ -959,9 +959,9 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 参考[AEM Forms on JEE物理架构](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)部分中描述的物理架构，您应该为计划使用的所有连接配置SSL。 具体而言，所有SOAP连接都必须通过SSL执行，以防止网络上用户凭据泄露。
 
-有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64_cn)中的“配置SSL”。
+有关如何在JBoss、WebLogic和WebSphere上配置SSL的说明，请参阅[管理帮助](https://www.adobe.com/go/learn_aemforms_admin_64)中的“配置SSL”。
 
-有关如何将证书导入为AEM Forms服务器配置的JVM （Java虚拟机）的说明，请参阅[AEM Forms Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65_cn)中的相互身份验证部分。
+有关如何将证书导入为AEM Forms服务器配置的JVM （Java虚拟机）的说明，请参阅[AEM Forms Workbench帮助](https://www.adobe.com/go/learn_aemforms_workbench_65)中的相互身份验证部分。
 
 ### 配置SSL重定向 {#configuring-ssl-redirect}
 

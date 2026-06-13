@@ -10,8 +10,8 @@ feature: Adaptive Forms,Foundation Components
 exl-id: e9853779-e22c-484e-8480-8e724d584ab7
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Adobe Experience Manager (AEM) Forms提供了[主题编辑器](/help/forms/using/themes.md)功能来创建和修改自适应表单[主题](/help/forms/using/themes.md)。 仅当从没有[主题编辑器](/help/forms/using/themes.md)的版本升级，并且您对使用Less/CSS文件（预主题编辑器方法）创建的主题已有投资时，才执行本文中列出的步骤。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 * 了解LESS (Leaner CSS)框架
 * 如何在Adobe Experience Manager中创建客户端库
@@ -228,7 +228,7 @@ ht-degree: 0%
 
    1. **可选**：在自定义页面中，根据需要覆盖header.jsp、footer.jsp和body.jsp。
 
-1. 创建一个自定义模板（例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`），其jcr：content指向在上一步中创建的自定义页面（例如： `myAfCustomizations/myAfPages/forestPage)`）。
+1. 创建一个自定义模板（例如： `/apps/myAfCustomizations/myAfTemplates/forestTemplate`），其jcr:content指向在上一步中创建的自定义页面（例如： `myAfCustomizations/myAfPages/forestPage)`）。
 
    ![CRX存储库快照](assets/2-1.png)
 
