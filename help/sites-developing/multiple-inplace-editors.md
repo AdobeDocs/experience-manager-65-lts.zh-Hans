@@ -8,7 +8,7 @@ role: Developer
 exl-id: 68e6ddea-1a50-4238-a13d-883a1b0b798d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '467'
 ht-degree: 1%
 
 ---
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 ## 代码示例 {#code-samples}
 
-您可以在GitHub[&#128279;](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的aem-authoring-hybrideditors项目中找到此页面的代码。 您可以以[ZIP存档](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下载完整项目。
+您可以在GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors)上的[aem-authoring-hybrideditors项目中找到此页面的代码。 您可以以[ZIP存档](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip)的形式下载完整项目。
 
 ## 添加就地编辑器 {#add-an-in-place-editor}
 
