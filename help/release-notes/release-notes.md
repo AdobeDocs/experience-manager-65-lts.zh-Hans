@@ -7,8 +7,8 @@ role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
 source-git-commit: c87fd907f2e9b91cc7013be5c12c867fb71dbbe1
 workflow-type: tm+mt
-source-wordcount: '7679'
-ht-degree: 98%
+source-wordcount: '7660'
+ht-degree: 97%
 
 ---
 
@@ -155,7 +155,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 在最近几次更改 UI 样式设置后，内容片段 RTE 显示出布局和可视化方面的问题。 服务包 2 改进了 RTE 样式设置，使工具栏和可编辑区域正确渲染，并保持清晰可读。 内容片段编辑器现在与页面编辑器的外观和行为保持一致。 (SITES-38684)
 * 从 Polaris 资产选择器中移除 IMS 范围后，破坏了内容片段与传递端点的集成。 打开远程资产选择器并选择资产时，作者会遇到错误。 此更新重新添加了所需的 IMS 范围，恢复了稳定的传递层访问。 （SITES-35837）
-* “关联的内容”面板不再渲染硬编码的“未定义”占位符。 内容片段编辑器现在通过本地化资源来解析此文本，因此编辑器可以看到翻译过的 UI 文本。 (SITES-33675)
+* “关联内容”面板不再呈现硬编码的“未定义”占位符。内容片段编辑器现在通过本地化资源解析该文本，因此编辑器可以看到翻译的UI文本。(SITES-33675)
   <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
 * 内容片段编辑器现在会在所有区域设置中都显示翻译过的“一般”选项卡标签。 编辑器会替换未本地化的选项卡文本，从选项卡标题中移除内部 ID。 (SITES-30715)
 * 对于未被允许的资产类型，内容片段编辑器现在会显示翻译过的名称。 作者配置内容引用限制时，选取器列表不再混合内部字符串和只用英语的标签。 (SITES-29699)

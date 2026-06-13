@@ -10,7 +10,7 @@ role: Admin, User, Developer
 exl-id: b73b3adc-e12c-47a8-9342-6214128b72ff
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3842'
+source-wordcount: '3826'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 数据字典由三种类型的元素组成：简单、复合和集合元素。 简单DDE是一些原始元素，例如字符串、数字、日期和布尔值，它们包含城市名称等信息。 复合DDE包含其他DDE，它们可以是原始类型、复合类型或集合类型。 例如，由街道地址、城市、省/自治区/直辖市、国家/地区和邮政编码组成的地址。 集合是类似的简单或复合DDE的列表。 例如，客户具有多个地点或不同的帐单和送货地址。
 
-通信管理使用后端、客户或根据数据字典的结构存储的收件人特定数据来创建针对不同客户的通信。 例如，可以创建具有友好名称的文档，例如“尊敬的{First Name}”、“先生”。 {姓氏}”。
+通信管理使用后端、客户或根据数据字典的结构存储的收件人特定数据来创建针对不同客户的通信。 例如，可以创建具有友好名称的文档，例如“亲爱的{First Name}”、“先生{Last Name}”。
 
 通常，业务用户不需要了解元数据表示法，如XSD（XML架构）和Java类。 但是，它们通常需要访问这些数据结构和属性才能构建解决方案。
 
@@ -273,12 +273,12 @@ ht-degree: 1%
   <tr>
    <td>名称</td>
    <td>字符串</td>
-   <td>必需。DDE的<br />名称。 它必须是唯一的。</td>
+   <td>必需。<br /> DDE的名称。 它必须是唯一的。</td>
   </tr>
   <tr>
    <td>引用<br />名称</td>
    <td>字符串</td>
-   <td>必需。DDE的唯一引用名称，允许对DDE的引用独立于对数据字典的层次结构或结构的更改。 使用此名称映射文本模块</td>
+   <td>必需。 DDE的唯一引用名称，允许对DDE的引用独立于对数据字典的层次结构或结构的更改。 使用此名称映射文本模块</td>
   </tr>
   <tr>
    <td>displayname</td>
@@ -293,7 +293,7 @@ ht-degree: 1%
   <tr>
    <td>元素类型</td>
    <td>字符串</td>
-   <td>必需。DDE的类型：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION。</td>
+   <td>必需。 DDE的类型：STRING、NUMBER、DATE、Boolean、COMPOSITE、COLLECTION。</td>
   </tr>
   <tr>
    <td>元素子类型</td>
@@ -326,7 +326,7 @@ ht-degree: 1%
    <td>添加到DDE的自定义属性映射（用户界面特定或任何其他信息）。</td>
   </tr>
   <tr>
-   <td>必填</td>
+   <td>必需</td>
    <td>布尔值</td>
    <td>该标记指示与数据字典对应的实例数据源必须包含此特定DDE的值。</td>
   </tr>
@@ -362,7 +362,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td><p>xs：元素，其中maxOccurs &gt; 1<br /> </p> </td>
-   <td>类型为COLLECTION-<br />的DDE将在从父COLLECTION节点捕获信息的COLLECTION DDE旁边创建DDE节点。 对于简单/复合数据类型的集合，也将创建相同的变量。 只要您拥有类型组合的COLLECTION，数据字典树就会捕获为捕获类型信息而创建的DDE子项中的组成字段。<br /> - DDE （集合）<br /> - DDE（类型信息的组合）<br /> - DDE（字符串）字段1<br /> - DDE（字符串）字段2<br /> <br /> </p> </td>
+   <td>类型为COLLECTION-<br />的DDE将在从父COLLECTION节点捕获信息的COLLECTION DDE旁边创建DDE节点。 对于简单/复合数据类型的集合，也将创建相同的变量。 无论何时您拥有类型组合的COLLECTION，数据字典树都会捕获为捕获类型信息而创建的DDE子项中的组成字段。<br /> - DDE （集合）<br /> - DDE（类型信息的组合）<br /> - DDE（字符串）字段1<br /> - DDE（字符串）字段2<br /> <br /> </p> </td>
    <td>java.util.List<br /> </td>
   </tr>
   <tr>
@@ -564,7 +564,7 @@ ht-degree: 1%
    <td>/note/to</td>
   </tr>
   <tr>
-   <td>起始日期:</td>
+   <td>从</td>
    <td>/note/from</td>
   </tr>
   <tr>

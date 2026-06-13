@@ -1,5 +1,5 @@
 ---
-title: 向资产列表视图添加自定义操作
+title: 在资产列表视图中添加自定义操作
 description: 本文介绍了如何将自定义操作添加到资产列表视图
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: a27c4469-6430-4a68-ba2c-7fb0ddebb263
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 3%
+source-wordcount: '1381'
+ht-degree: 6%
 
 ---
 
-# 向资产列表视图添加自定义操作{#add-custom-action-to-the-asset-listing-view}
+# 在资产列表视图中添加自定义操作{#add-custom-action-to-the-asset-listing-view}
 
 ## 概述 {#overview}
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 此自定义体现在向“资产列表”视图中添加命令“下载平面PDF”的方案中。 此自定义方案允许用户下载单个选定书信的平面PDF。
 
-### 前提条件 {#prerequisites}
+### 先决条件 {#prerequisites}
 
 要完成以下方案或类似方案，您需要了解：
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
    1. 确保“覆盖节点”对话框具有以下值：
 
-      **路径：** /libs/fd/cm/ma/gui/content/cmassets/jcr：content/body/content/header/items/selection/items
+      **路径：** /libs/fd/cm/ma/gui/content/cmassets/jcr:content/body/content/header/items/selection/items
 
       **位置：** /apps/
 
@@ -82,7 +82,7 @@ ht-degree: 3%
 
       **名称：** downloadFlatPDF（或您要为此属性提供的名称）
 
-      **类型：** nt：unstructured
+      **类型：** nt:unstructured
 
    1. 单击已创建的新节点（此处downloadFlatPDF）。 CRX显示节点的属性。
 
@@ -108,7 +108,7 @@ ht-degree: 3%
         <tr>
         <td>图标</td>
         <td>字符串</td>
-        <td>icon-download<br /> <br />通信管理显示在命令/菜单左侧的图标。 有关可用的不同图标和设置，请参阅<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans" target="_blank">CoralUI图标文档</a>。<br /> </td>
+        <td>icon-download<br /> <br />通信管理显示在命令/菜单左侧的图标。 有关可用的不同图标和设置，请参阅<a href="https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html" target="_blank">CoralUI图标文档</a>。<br /> </td>
         </tr>
         <tr>
         <td>jcr:primaryType</td>
@@ -254,7 +254,7 @@ ht-degree: 3%
 
       **名称：** letterpdfdownloader (或者您要为此属性提供的名称 — 必须是唯一的。 如果在此处使用不同的名称，请在formaction.js文件的ACTION_URL变量中指定相同的名称。)
 
-      **类型：** nt：unstructured
+      **类型：** nt:unstructured
 
    1. 单击您创建的新节点（此处downloadFlatPDF）。 CRX显示节点的属性。
 
@@ -277,7 +277,7 @@ ht-degree: 3%
    1. 双击&#x200B;**POST.jsp**&#x200B;文件以在CRX中将其打开。
    1. 将以下代码添加到POST.jsp文件，然后单击&#x200B;**全部保存**：
 
-      此代码特定于书信渲染服务。 对于任何其他资产，请将该资产的Java™库添加到此代码中。 有关AEM Forms API的更多信息，请参阅[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=zh-Hans)。
+      此代码特定于书信渲染服务。 对于任何其他资产，请将该资产的Java™库添加到此代码中。 有关AEM Forms API的更多信息，请参阅[AEM Forms API](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)。
 
       有关AEM库的详细信息，请参阅AEM [组件](/help/sites-developing/components.md)。
 

@@ -12,7 +12,7 @@ hide: true
 exl-id: e56b22b9-3f4f-46d1-9885-a7e58b47f42d
 source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -1191,7 +1191,7 @@ AEM Forms操作可以使用AEM Forms强类型API执行，并且连接模式应�
 * `createDDX`：创建一个`org.w3c.dom.Document`对象，该对象表示发送到Assembler服务的DDX文档。 此用户定义的函数返回`org.w3c.dom.Document`对象。
 * `convertDDX`：将`org.w3c.dom.Document`对象转换为`com.adobe.idp.Document`对象。 此方法接受`org.w3c.dom.Document`对象作为输入参数并返回`com.adobe.idp.Document`对象。
 
-  在此快速入门中会调用这两种方法。 （请参阅[动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。）
+  在此快速入门中会调用这两种方法。（请参阅[动态创建DDX文档](/help/forms/developing/assembling-pdf-documents.md#dynamically-creating-ddx-documents)。）
 &quot;
 
 ```java

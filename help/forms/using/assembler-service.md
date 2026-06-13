@@ -1,5 +1,5 @@
 ---
-title: 使用汇编程序服务
+title: 使用组装服务
 description: Assembler服务允许您组合、重新排列和扩充PDF和XDP文档，并获取有关PDF文档的信息。
 feature: Document Services
 solution: Experience Manager, Experience Manager Forms
@@ -7,12 +7,12 @@ role: Admin, User, Developer
 exl-id: 5e1c5e07-1848-4784-9bdc-4d3b464baebe
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '2167'
 ht-degree: 6%
 
 ---
 
-# 使用汇编程序服务{#using-assembler-service}
+# 使用组装服务{#using-assembler-service}
 
 Assembler服务允许您组合、重新排列和扩充PDF和XDP文档，并获取有关PDF文档的信息。 提交给Assembler服务的每个作业包括Document Description XML (DDX)文档、源文档和外部资源（字符串和图形）。 有关汇编程序服务的详细信息，请参阅[汇编程序服务概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
 
@@ -309,7 +309,7 @@ source="myFragmentSource"/>
 
 ## 确定文档是否符合PDF/A标准 {#determine-whether-documents-are-pdf-a-compliant}
 
-您可以使用Assembler服务确定PDF文档是否符合PDF/A标准。 PDF/A 是一种用于长期保存文档内容的存档格式。字体将嵌入到文档中，并且文件是未压缩的。因此，PDF/A 文档通常比标准 PDF 文档大。此外，PDF/A 文档不包含音频和视频内容。
+您可以使用Assembler服务确定PDF文档是否符合PDF/A标准。 PDF/A 是一种用于长期保存文档内容的存档格式。 字体将嵌入到文档中，并且文件是未压缩的。 因此，PDF/A 文档通常比标准 PDF 文档大。 此外，PDF/A 文档不包含音频和视频内容。
 
 ## 获取有关PDF文档的信息 {#obtain-information-about-a-pdf-document}
 
