@@ -10,7 +10,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 7398b95b-e82d-4241-8f32-13b8d20caad9
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '10234'
+source-wordcount: '10112'
 ht-degree: 3%
 
 ---
@@ -197,7 +197,7 @@ Dynamic Media支持通过FTP服务器批量上传资产。 如果您打算上载
 1. 在“上载作业选项”对话框的右下角，单击&#x200B;**[!UICONTROL 保存]**。
 1. 在上传页面的右下角，单击&#x200B;**[!UICONTROL 提交上传]**。
 
-   要查看上载进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。 “作业”页显示上载的进度。 您可以随时在[!DNL Experience Manager]中继续工作并返回Dynamic Media Classic中的“作业”页面以查看正在进行的作业。
+   要查看上载进度，请在全局导航栏上单击&#x200B;**[!UICONTROL 作业]**。“作业”页显示上载的进度。您可以随时在[!DNL Experience Manager]中继续工作并返回Dynamic Media Classic中的“作业”页面以查看正在进行的作业。
 若要取消正在进行的上载作业，请单击“持续时间”时间旁边的&#x200B;**[!UICONTROL 取消]**。
 
 #### 上载作业选项 {#upload-job-options}
@@ -470,8 +470,8 @@ Photoshop文档(PSD)文件最常用于创建图像模板。 上传PSD文件时�
 
 ## 移动和重命名资源 {#moving-or-renaming-assets}
 
-将资源（或文件夹）移动到其他位置时，不会复制资源（或文件夹），这与复制资源时不同。 将资源（或文件夹）放置到目标位置，并从源位置将其删除。 在将资源移动到新位置时，您还可以重命名资源。
-如果您要将已发布的资产移至其他位置，则可以选择重新发布该资产。 默认情况下，对已发布的资产执行移动操作会自动取消发布该资产。 如果作者在移动资产时选择[!UICONTROL Republish]选项，则会重新发布已移动的资产。
+将资源（或文件夹）移动到其他位置时，不会复制资源（或文件夹），这与复制资源时不同。将资源（或文件夹）放置到目标位置，并从源位置将其删除。在将资源移动到新位置时，您还可以重命名资源。
+如果您要将已发布的资产移至其他位置，则可以选择重新发布该资产。默认情况下，对已发布的资产执行移动操作会自动取消发布该资产。如果作者在移动资产时选择[!UICONTROL Republish]选项，则会重新发布已移动的资产。
 
 ![移动已发布的资产时，您可以重新发布该资产](assets/republish-on-move.png)
 

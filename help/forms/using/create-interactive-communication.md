@@ -10,7 +10,7 @@ role: User, Developer
 exl-id: 6d24ce27-4653-4a70-97d0-e4299eceb32c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '6130'
+source-wordcount: '6132'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 交互式通信可集中管理个性化交互式信函的创建、编排和交付。 利用打印作为Web的主通道，您可以在创建交互式通信的Web输出时最大限度地减少重复工作。
 
-### 前提条件 {#prerequisites}
+### 先决条件 {#prerequisites}
 
 以下是创建交互式通信的先决条件：
 
-* 设置包含测试数据或使用实际数据源(如Microsoft® Dynamics的实例)的[表单数据模型](/help/forms/using/data-integration.md)。
+* 设置包含测试数据或使用实际数据源（如® Dynamics的实例）的[表单数据模型](/help/forms/using/data-integration.md)。
 * 确保您具有[文档片段](/help/forms/using/document-fragments.md)。
 * 确保您有[打印和Web渠道模板](/help/forms/using/web-channel-print-channel.md)。
 * 确保您具有Web渠道所需的[主题](/help/forms/using/themes.md)。
@@ -37,7 +37,7 @@ ht-degree: 1%
 
    ![create-interactive-communication](assets/create-interactive-communication.png)
 
-1. 输入以下信息。 : 
+1. 输入以下信息。 :
 
    * **[!UICONTROL 标题]**：输入交互式通信的标题。
    * **[!UICONTROL 名称]**：交互式通信的名称派生自您输入的标题。 根据需要进行编辑。
@@ -49,7 +49,7 @@ ht-degree: 1%
 
    * **[!UICONTROL 后处理]**：选择要触发的工作流的名称。 选择AEM工作流时，请提供附件路径、布局路径、PDF路径、打印数据路径和Web数据路径。
    * **[!UICONTROL 标记]**：选择要应用于交互式通信的标记。 您还可以键入新的/自定义标记名称并按Enter键以创建它。
-   * **[!UICONTROL 作者]**：作者名称将自动从登录用户的用户名中获取。
+   * **[!UICONTROL 作者]**:The的作者名称是从登录用户的用户名中自动获取的。
    * **[!UICONTROL 发布日期：]**&#x200B;输入发布交互式通信的日期。
    * **[!UICONTROL 取消发布日期]**：输入取消发布交互式通信的日期。
 
@@ -62,7 +62,7 @@ ht-degree: 1%
    * **[!UICONTROL 交互式通信Web模板]**：浏览并选择Web模板。
    * **[!UICONTROL 主题]**&#x200B;和&#x200B;**[!UICONTROL 选择主题]**：浏览并选择主题以设置交互式通信的Web渠道的样式。 有关详细信息，请参阅AEM Forms中的[主题](/help/forms/using/themes.md)。
 
-   * **[!UICONTROL 为Web渠道使用“打印为母版”]**：选择此选项以创建与打印渠道同步的Web渠道。 将打印渠道用作Web渠道的主渠道可以确保Web渠道的内容和数据绑定从打印渠道派生，并且当您选择“同步”时，在打印渠道中所做的更改将反映在Web渠道中。 但是，根据需要，作者可以中断Web渠道中特定组件的继承。 有关详细信息，请参阅[将Web渠道与打印渠道同步](../../forms/using/create-interactive-communication.md#synchronize)。
+   * **[!UICONTROL 为Web渠道使用“打印为母版”]**：选择此选项以创建与打印渠道同步的Web渠道。将打印渠道用作Web渠道的主渠道可以确保Web渠道的内容和数据绑定从打印渠道派生，并且当您选择“同步”时，在打印渠道中所做的更改将反映在Web渠道中。但是，根据需要，作者可以中断Web渠道中特定组件的继承。有关详细信息，请参阅[将Web渠道与打印渠道同步](../../forms/using/create-interactive-communication.md#synchronize)。
 如果选择&#x200B;**[!UICONTROL 为Web渠道使用“打印为母版”]**&#x200B;选项，则可以选择以下任意模式来生成Web渠道：
 
       * **[!UICONTROL 自动布局]**：选择此模式可从Print channel自动生成Web渠道的占位符、内容和数据绑定。
@@ -70,7 +70,7 @@ ht-degree: 1%
 
    有关打印渠道和Web渠道的详细信息，请参阅[打印渠道和Web渠道](/help/forms/using/web-channel-print-channel.md)。
 
-1. 选择&#x200B;**[!UICONTROL 创建]**。此时会创建交互式通信，并出现一个警告框。 选择&#x200B;**[!UICONTROL 编辑]**&#x200B;开始生成交互式通信的内容，如[使用交互式通信创作用户界面](#step2)添加内容中所述。 或者，您也可以选择&#x200B;**[!UICONTROL 完成]**，然后选择稍后编辑交互式通信。
+1. 选择&#x200B;**[!UICONTROL 创建]**。 此时会创建交互式通信，并出现一个警告框。 选择&#x200B;**[!UICONTROL 编辑]**&#x200B;开始生成交互式通信的内容，如[使用交互式通信创作用户界面](#step2)添加内容中所述。 或者，您也可以选择&#x200B;**[!UICONTROL 完成]**，然后选择稍后编辑交互式通信。
 
 ## 向交互式通信添加内容 {#step2}
 

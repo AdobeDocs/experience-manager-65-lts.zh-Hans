@@ -9,7 +9,7 @@ role: Admin, User, Developer
 exl-id: 9c05a71b-70fa-4470-afdf-823fd5da5ad1
 source-git-commit: 51342861dd01e659999c19fbe0274e8d3cbcf8c4
 workflow-type: tm+mt
-source-wordcount: '4485'
+source-wordcount: '4746'
 ht-degree: 2%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 2%
 
 ### 从software distribution {#from-software-distribution}
 
-1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
+1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登录 Software Distribution。
 1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
 1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
    1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
@@ -94,7 +94,7 @@ ht-degree: 2%
    ![我们管理表单包](assets/wegov_forms_package.jpg)
 
 1. 允许安装过程完成。
-1. 导航到&#x200B;*https://&lt;aemserver>：&lt;port>/content/we-gov/home.html？wcmmode=disabled*，确保安装成功。
+1. 导航到&#x200B;*https://&lt;aemserver>：&lt;port>/content/we-gov/home.html?wcmmode=disabled*，以确保安装成功。
 
 ### 从本地ZIP文件 {#from-a-local-zip-file}
 
@@ -111,11 +111,11 @@ ht-degree: 2%
    ![安装WeGov Forms包](assets/wegov_forms_package-1.jpg)
 
 1. 允许安装过程完成。
-1. 导航到&#x200B;*https://&lt;aemserver>：&lt;port>/content/we-gov/home.html？wcmmode=disabled*，确保安装成功。
+1. 导航到&#x200B;*https://&lt;aemserver>：&lt;port>/content/we-gov/home.html?wcmmode=disabled*，以确保安装成功。
 
 ### 安装新包版本 {#installing-new-package-versions}
 
-要安装新的软件包版本，请按照4.1和4.2中定义的步骤操作。即使已安装旧版本，也可以安装较新的包版本。 但是，Adobe建议您先卸载旧版本的包。 为此，请执行以下操作：
+要安装新的软件包版本，请按照4.1和4.2中定义的步骤操作。 即使已安装旧版本，也可以安装较新的包版本。 但是，Adobe建议您先卸载旧版本的包。 为此，请执行以下操作：
 
 1. 导航到&#x200B;*https://&lt;aemserver>：&lt;port>/crx/packmgr/index.jsp*
 1. 找到较早的&#x200B;**we-gov-forms.pkg.all-&lt;version>.zip**&#x200B;文件。
@@ -227,8 +227,8 @@ ht-degree: 2%
 
 **引用：**
 
-1. [Microsoft](/help/forms/using/ms-dynamics-odata-configuration.md)
-1. [配置Microsoft® Dynamics for AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms#)
+1. [® Dynamics OData配置](/help/forms/using/ms-dynamics-odata-configuration.md)
+1. [配置® Dynamics for AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/forms/adaptive-forms/using-ms-dynamics-with-aem-forms#)
 
 #### MS® Dynamics OData云服务 {#ms-dynamics-odata-cloud-service}
 
@@ -238,7 +238,7 @@ ht-degree: 2%
 
    1. 确保您正在使用MS® Dynamics应用程序注册中配置的同一重定向URL访问服务器。
 
-1. 选择“Microsoft® Dynamics OData Cloud Service”配置。
+1. 选择“® Dynamics OData Cloud Service”配置。
 1. 单击&#x200B;**属性**。
 
    Microsoft OData Cloud Service的![属性](assets/properties_odata_cloud_service.jpg)
@@ -248,7 +248,7 @@ ht-degree: 2%
 
    1. **服务根：**，例如`https://msdynamicsserver.api.crm3.dynamics.com/api/data/v9.1/`
    1. **身份验证类型：** OAuth 2.0
-   1. **身份验证设置**(请参阅[MS® Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig)以收集此信息)：
+   1. **身份验证设置**（请参阅[MS® Dynamics云配置设置](../../forms/using/forms-install-configure-gov-reference-site.md#dynamicsconfig)以收集此信息）：
 
       1. 客户端ID — 也称为应用程序ID
       1. 客户端密码
@@ -276,9 +276,9 @@ ht-degree: 2%
 
    1. 配置OData服务时，此URL必须与用于访问AEM服务器的URL匹配。
 
-1. 在“设置”视图中，单击&#x200B;**密钥**&#x200B;以查看新密钥(用作AEM中的客户端密钥)。
+1. 在“设置”视图中，单击&#x200B;**密钥**&#x200B;以查看新密钥（用作AEM中的客户端密钥）。
 
-   1. 请确保保留密钥的副本；你以后无法在Azure或AEM中查看它。
+   1. 请确保保留密钥的副本；您以后无法在Azure或AEM中查看它。
 
 1. 要找到资源URL/服务根URL，请导航到MS® Dynamics实例仪表板。
 1. 在顶部导航栏中，单击&#x200B;**Sales**&#x200B;或您自己的实例类型，然后单击&#x200B;**选择设置**。
@@ -376,7 +376,7 @@ ht-degree: 2%
 
    ![We.Gov Adobe Analytics](assets/wegov_adobe_analytics.jpg)
 
-1. 如果要更新框架配置，请在同一页面中单击“We.Gov Adobe Analytics Framework (Analytics Framework)”(请参阅[启用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring)以启用创作)。
+1. 如果要更新框架配置，请在同一页面中单击“We.Gov Adobe Analytics Framework (Analytics Framework)”（请参阅[启用AEM创作](../../forms/using/forms-install-configure-gov-reference-site.md#enableauthoring)以启用创作）。
 
 #### Adobe Analytics查找用户凭据 {#analytics-locating-user-credentials}
 
@@ -483,7 +483,7 @@ ht-degree: 2%
 
 阅读更多说明前，请查看以下内容：
 
-* [配置自动表单转换服务](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/configure-service#)
+* [配置自动化表单转换服务](https://experienceleague.adobe.com/zh-hans/docs/aem-forms-automated-conversion-service/using/configure-service#)
 
 #### 创建IMS配置 — 第1部分 {#creating-ims-config}
 
@@ -518,7 +518,7 @@ ht-degree: 2%
 
 1. 确保您位于正确的组中（右上角的下拉列表）。
 
-1. 在Experience Cloud部分中，选择Forms转换工具。
+1. 在Experience Cloud部分中，选择Forms转化工具。
 
 1. 单击&#x200B;**继续**。
 
@@ -544,7 +544,7 @@ ht-degree: 2%
 
 1. 输入API密钥。
 
-1. 输入客户端密码(单击Adobe I/O中的集成上的&#x200B;**公开**&#x200B;以显示该密码)。
+1. 输入客户端密码（单击Adobe I/O中的集成上的&#x200B;**公开**&#x200B;以显示该密码）。
 
 1. 单击Adobe I/O中的JWT选项卡以获取JWT有效负荷，并将其粘贴到IMS配置的有效负荷中。
 
@@ -788,7 +788,7 @@ IMS配置完成后，您可以继续在AEM中创建云配置。
 
 用户可以配置各种工作流服务选项，其中包括：
 
-1. Microsoft® Dynamics条目
+1. ® Dynamics条目
 1. Adobe Sign
 1. AEM自定义通信管理
 1. Adobe Analytics

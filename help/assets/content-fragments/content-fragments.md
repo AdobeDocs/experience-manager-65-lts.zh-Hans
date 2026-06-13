@@ -7,7 +7,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 7b5a9485-8d07-434e-9871-5f97d6781eaf
 source-git-commit: e0a31fe9bc3297a4cb6e72765482c24cebb3ad29
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '2371'
 ht-degree: 60%
 
 ---
@@ -94,7 +94,7 @@ ht-degree: 60%
 
 AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，而不只是关注网页。
 
-它们使用可供任何客户使用的标准化方法，将内容投放到非传统 AEM 网页的渠道。这些渠道可以包括：
+它们使用可供任何客户使用的标准化方法，将内容投放到非传统 AEM 网页的渠道。 这些渠道可以包括：
 
 * 单页面应用程序
 * 本机移动设备应用程序
@@ -102,7 +102,7 @@ AEM 内容服务旨在概括 AEM 中/来自 AEM 的内容的描述和投放，�
 
 使用 JSON 导出程序以 JSON 格式进行投放。
 
-AEM 内容片段可用于描述和管理结构化内容。结构化内容在可包含各种内容类型的模型中定义；包括文本、数值数据、布尔值、日期和时间等。
+AEM 内容片段可用于描述和管理结构化内容。 结构化内容在可包含各种内容类型的模型中定义；包括文本、数值数据、布尔值、日期和时间等。
 
 随后，此结构化内容与 AEM 核心组件的 JSON 导出功能一起，可用于将 AEM 内容投放到 AEM 页面以外的渠道。
 
@@ -131,7 +131,7 @@ AEM 内容片段可用于描述和管理结构化内容。结构化内容在可�
    * 内容片段（及其变体）可以从&#x200B;**Assets**&#x200B;控制台创建和维护。
    * 在内容片段编辑器中创作和编辑。
 
-* 在包含内容片段组件[&#x200B; （引用组件）的](/help/sites-authoring/content-fragments.md)页面编辑器中使用：
+* 在包含内容片段组件[&#128279;](/help/sites-authoring/content-fragments.md) （引用组件）的页面编辑器中使用：
 
    * **内容片段**&#x200B;组件可供页面作者使用。 它允许他们以 HTML 或 JSON 格式引用和投放所需的内容片段。
 
@@ -201,7 +201,7 @@ Assets可以通过多种方式与内容片段一起使用；各具优势：
    * 嵌入在片段的段落系统中。
    * 可以[在页面上使用/引用片段时](/help/sites-authoring/content-fragments.md)进行格式化。
    * 只能使用片段编辑器在片段中添加、删除或移动到片段中。 无法在页面编辑器中执行这些操作。
-   * 只能在片段编辑器[中使用](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)富文本格式添加、删除或移动片段。
+   * 只能在片段编辑器[&#128279;](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment)中使用富文本格式添加、删除或移动片段。
    * 只能添加到多行文本元素（任何片段类型）。
    * 附于前文（段落）。
 
@@ -263,14 +263,14 @@ Assets可以通过多种方式与内容片段一起使用；各具优势：
 中间内容：
 
 * 处理内容片段时，可在页面编辑器中使用。
-* 是在页面上使用或引用片段[后，在片段流中添加的](/help/sites-authoring/content-fragments.md#adding-in-between-content)其他内容。
+* 是在页面上使用或引用片段[&#128279;](/help/sites-authoring/content-fragments.md#adding-in-between-content)后，在片段流中添加的其他内容。
 * 可用于[使用内容片段时的页面编辑器](/help/sites-authoring/content-fragments.md)。
 * 中间内容可以添加到任何片段中，其中只有一个元素可见。
 * 关联内容的使用方式，以及相应浏览器中的资源和/或组件。
 
 >[!CAUTION]
 >
->中间内容是页面内容。它不会存储在内容片段中。
+>中间内容是页面内容。 它不会存储在内容片段中。
 
 ### 片段必需 {#required-by-fragments}
 
@@ -299,7 +299,7 @@ Assets可以通过多种方式与内容片段一起使用；各具优势：
 
 ## 使用示例 {#example-usage}
 
-片段及其元素和变体可用于为多个渠道创建一致的内容。在设计片段时，必须考虑使用的内容以及使用的位置。
+片段及其元素和变体可用于为多个渠道创建一致的内容。 在设计片段时，必须考虑使用的内容以及使用的位置。
 
 ## 最佳做法 {#best-practices}
 

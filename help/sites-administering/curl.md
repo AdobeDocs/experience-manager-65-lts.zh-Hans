@@ -11,7 +11,7 @@ role: Developer
 exl-id: 45d49917-d20f-470c-bf95-6e701de67a11
 source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '865'
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ cURL命令可以为AEM中的大多数操作构建，例如触发工作流、检�
 
 >[!NOTE]
 >
->以下示例假定AEM在端口`localhost`上的`4502`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
+>以下示例假定AEM在端口`4502`上的`localhost`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
 
 ### 包管理 {#package-management}
 
@@ -310,7 +310,7 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 >[!NOTE]
 >
->以下示例假定AEM在端口`localhost`上的`4502`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
+>以下示例假定AEM在端口`4502`上的`localhost`上运行，并使用密码为`admin`的用户`admin`。 其他命令占位符设置在尖括号中。
 
 ### 页面管理 {#page-management}
 

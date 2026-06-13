@@ -8,14 +8,14 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 16ab2e64-9c12-43ae-a8d2-f71e63899c68
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2665'
-ht-degree: 7%
+source-wordcount: '2751'
+ht-degree: 8%
 
 ---
 
 # 了解元数据概念 {#why-we-need-metadata}
 
-元数据是指有关数据的数据。 就这一点而言，数据是指您的数字资产，例如图像。 元数据对于高效的资源管理至关重要。
+元数据是指有关数据的数据。 就这一点而言，数据是指您的数字资产，例如图像。 元数据对于高效的资产管理非常关键。
 
 元数据是某个资源的所有可用数据的集合，但并不一定包含在该图像中。 元数据的一些示例包括：
 
@@ -35,7 +35,7 @@ ht-degree: 7%
 * 资源的描述。
 * 分配给资产的标记。
 
-更多元数据可帮助您进一步分类资源，在数字信息量增长时非常有用。 它可以仅根据文件名管理数百个文件。 但是，这种方法不具备扩展性。随着涉及的人数以及管理的资源数的增加，这种方法很快就会出现不足。
+更多元数据可帮助您进一步分类资源，在数字信息量增长时非常有用。 它可以仅根据文件名管理数百个文件。 但是，这种方法不具备扩展性。 随着涉及的人数以及管理的资源数的增加，这种方法很快就会出现不足。
 
 随着元数据的增加，数字资产的价值会随之增长，因为资产会变得：
 
@@ -87,9 +87,9 @@ ID3标记是针对MP3文件格式而设计的。 有关格式的其他信息：
 
 ### Exif {#exif}
 
-可交换图像文件格式(Exif)是数字摄影中最常用的元数据格式。 它提供了一种以多种文件格式(如JPEG、TIFF、RIFF和WAV)嵌入元数据属性的固定词汇的方法。 Exif将元数据存储为元数据名称和元数据值对。 这些元数据名称 — 值对也称为标记，不要与[!DNL Experience Manager]中的标记混淆。 现代数码相机创建Exif元数据并提供现代图形软件支持。 Exif格式是元数据管理（尤其是图像）的最低通用分母。
+可交换图像文件格式(Exif)是数字摄影中最常用的元数据格式。 它提供了一种以多种文件格式（如JPEG、TIFF、RIFF和WAV）嵌入元数据属性的固定词汇的方法。 Exif将元数据存储为元数据名称和元数据值对。 这些元数据名称 — 值对也称为标记，不要与[!DNL Experience Manager]中的标记混淆。 现代数码相机创建Exif元数据并提供现代图形软件支持。 Exif格式是元数据管理（尤其是图像）的最低通用分母。
 
-Exif的一个主要限制是一些流行的图像文件格式(如BMP、GIF或PNG)不支持它。
+Exif的一个主要限制是一些流行的图像文件格式（如BMP、GIF或PNG）不支持它。
 
 由Exif定义的元数据字段通常具有技术性质，在描述性元数据管理中的用处有限。 因此，[!DNL Experience Manager Assets]提供Exif属性到[通用元数据架构](metadata-schemas.md)和[XMP](xmp-writeback.md)的映射。
 
@@ -145,7 +145,7 @@ Exif的一个主要限制是一些流行的图像文件格式(如BMP、GIF或PNG
 * Exif — 摄像头提供的技术信息，包括GPS位置。
 * CRS - [!DNL Camera Raw]架构。
 * `iptc4xmpCore`和`iptc4xmpExt`。
-* TIFF — 图像元数据(不仅适用于TIFF图像)。
+* TIFF — 图像元数据（不仅适用于TIFF图像）。
 
 ### 打印特定的元数据 {#print-specific-metadata}
 
@@ -156,7 +156,7 @@ Exif的一个主要限制是一些流行的图像文件格式(如BMP、GIF或PNG
 
 ### 特定于多媒体的元数据 {#multimedia-specific-metadata}
 
-* `xmpDM` - [!DNL Dynamic Media]。
+* `xmpDM` - [!DNL Dynamic Media].
 * `xmpMM` — 媒体管理。
 
 ## 元数据架构引用 {#metadata-schemata-reference}
@@ -173,7 +173,7 @@ Exif的一个主要限制是一些流行的图像文件格式(如BMP、GIF或PNG
 
 | 属性 | 描述 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
-| 参与者 | 负责向内容投稿的个人或公司。 |
+| contributor | 负责向内容投稿的个人或公司。 |
 | 覆盖 | 资产覆盖的地理位置或时间段。 |
 | 创建者 | 负责创建内容的人或公司。 |
 | 日期 | 与资产关联的日期或时间段。 |
@@ -226,7 +226,7 @@ XMP中的元数据包含一组属性。 这些属性始终与
 
 ### XMP生态系统 {#xmp-ecosystem}
 
-XMP 定义了一个可与任何定义的元数据项集一起使用的[元数据](https://en.wikipedia.org/wiki/Metadata)模型。XMP 还为基本属性定义了一个特定的[&#128279;](https://en.wikipedia.org/wiki/Image_scanner)架构[，这些基本属性可用于记录资源经过多个处理步骤的历史记录：从拍摄、](https://en.wikipedia.org/wiki/XML_schema)扫描或创作为文本，到照片编辑步骤（如[裁剪](https://en.wikipedia.org/wiki/Cropping_%28image%29)或颜色调整），再到组合到最终图像中。XMP 允许每个软件程序或设备向数字资源添加其自己的信息，该信息可保留在最终的数字文件中。
+XMP 定义了一个可与任何定义的元数据项集一起使用的[元数据](https://en.wikipedia.org/wiki/Metadata)模型。 XMP 还为基本属性定义了一个特定的[&#128279;](https://en.wikipedia.org/wiki/Image_scanner)架构[，这些基本属性可用于记录资源经过多个处理步骤的历史记录：从拍摄、](https://en.wikipedia.org/wiki/XML_schema)扫描或创作为文本，到照片编辑步骤（如[裁剪](https://en.wikipedia.org/wiki/Cropping_%28image%29)或颜色调整），再到组合到最终图像中。 XMP 允许每个软件程序或设备向数字资源添加其自己的信息，该信息可保留在最终的数字文件中。
 
 XMP 最常使用 [W3C](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) [资源描述框架](https://en.wikipedia.org/wiki/Resource_Description_Framework) (RDF) 的子集进行序列化和存储，该子集又以 [XML](https://en.wikipedia.org/wiki/XML) 形式表示。
 
@@ -254,7 +254,7 @@ XMP标准设计为可扩展，允许您向XMP数据添加自定义类型的元�
 XMP架构是公共XML命名空间中的一组属性名称，其中包括
 数据类型和描述性信息。 XMP架构由其XML命名空间URI标识。 使用命名空间可以防止不同架构中具有相同名称但不同含义的属性之间发生冲突。
 
-例如，两个独立设计的架构中的`Creator`属性可能是指创建资产的人，也可能是指创建资产的应用程序(例如，Adobe Photoshop)。
+例如，两个独立设计的架构中的`Creator`属性可能是指创建资产的人，也可能是指创建资产的应用程序（例如，Adobe Photoshop）。
 
 #### 属性和值 {#properties-and-values}
 
@@ -290,13 +290,13 @@ XMP可能包括来自一个或多个架构的资产。 例如，许多Adobe应�
 1. 根据需要编辑IPTC扩展元数据属性。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**&#x200B;以保存更改。
 
-### 创意评级支持 {#creative-rating-support}
+### Creative评级支持 {#creative-rating-support}
 
-除了显示单个用户评级和聚合评级之外，“属性”页面现在还显示通过Adobe Bridge和其他创意应用程序分配给资产的评级
+除了显示单个用户评级和聚合评级之外，“属性”页面现在还显示通过Adobe Bridge和其他Creative应用程序分配给资产的评级
 
 这些评级位于&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡的&#x200B;**[!UICONTROL 创意评分]**&#x200B;部分下。
 
-此评级为只读属性，范围为1-5。 您可以从搜索面板中根据资产的创意评级搜索资产。
+此评级为只读属性，范围为1-5。 您可以从搜索面板中根据资产的Creative评级搜索资产。
 
 但是，此属性当前未编入索引，以避免与用户所做的自定义更改发生任何冲突。
 

@@ -1,5 +1,5 @@
 ---
-title: OSGi上以Forms为中心的工作流
+title: OSGi 上以表单为中心的工作流
 description: 使用AEM Forms Workflow自动并快速构建审阅和批准，以启动文档服务
 topic-tags: publish, document_services
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ role: User, Developer
 exl-id: 972273ad-763f-4314-95b1-678368f99148
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3667'
-ht-degree: 1%
+source-wordcount: '3646'
+ht-degree: 2%
 
 ---
 
-# OSGi上以Forms为中心的工作流{#forms-centric-workflow-on-osgi}
+# OSGi 上以表单为中心的工作流{#forms-centric-workflow-on-osgi}
 
 ![主页图像](do-not-localize/header.png)
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 设置后，这些工作流可以手动触发以完成定义的流程，或在用户提交表单或[通信管理](/help/forms/using/cm-overview.md)信件时以编程方式运行。 通过这项增强的AEM工作流功能，AEM Forms提供了两种截然不同但相似的功能。 作为部署策略的一部分，您需要决定适合您的部署策略。 查看OSGi上以Forms为中心的AEM工作流和JEE上的流程管理的[比较](capabilities-osgi-jee-workflows.md)。 此外，有关部署拓扑，请参阅[AEM Forms的架构和部署拓扑](/help/forms/using/aem-forms-architecture-deployment.md)。
 
-OSGi上以Forms为中心的工作流扩展了[AEM收件箱](/help/sites-authoring/inbox.md)，并为AEM工作流编辑器提供额外的组件（步骤），以添加对以AEM Forms为中心的工作流的支持。 扩展的AEM收件箱具有类似于[AEM Forms Workspace](introduction-html-workspace.md)的功能。 除了管理以人为中心的工作流（批准、审核等）之外，您还可以使用AEM工作流自动执行与[文档服务](/help/sites-developing/workflows-step-ref.md)相关的操作(例如，生成PDF)和电子签名(Adobe Sign)文档。
+OSGi上以Forms为中心的工作流扩展了[AEM收件箱](/help/sites-authoring/inbox.md)，并为AEM工作流编辑器提供额外的组件（步骤），以添加对以AEM Forms为中心的工作流的支持。 扩展的AEM收件箱具有类似于[AEM Forms Workspace](introduction-html-workspace.md)的功能。 除了管理以人为中心的工作流（批准、审核等）之外，您还可以使用AEM工作流自动执行与[文档服务](/help/sites-developing/workflows-step-ref.md)相关的操作（例如，生成PDF）和电子签名(Adobe Sign)文档。
 
 所有AEM Forms工作流步骤都支持使用变量。 变量使工作流步骤能够在运行时跨步骤保留和传递元数据。 您可以创建不同类型的变量以存储不同类型的数据。 您还可以创建变量集合（数组），用于存储相关同类型数据的多个实例。 通常，当您需要根据其持有的值做出决策时，或者需要存储稍后在流程中需要的信息时，可以使用变量或变量集合。 有关在这些以Forms为中心的工作流组件（步骤）中使用变量的更多信息，请参阅OSGi上的[以Forms为中心的工作流 — 步骤参考](../../forms/using/aem-forms-workflow-step-reference.md)。 有关创建和管理变量的信息，请参阅AEM工作流中的[变量](../../forms/using/variable-in-aem-workflows.md)。
 
@@ -41,7 +41,7 @@ OSGi上以Forms为中心的工作流扩展了[AEM收件箱](/help/sites-authorin
 
 ## 开始之前 {#before-you-start}
 
-* 工作流是真实业务过程的一种表现形式。 让您的实际业务流程和业务流程参与者的列表做好准备。 此外，在开始创建工作流之前，应准备好宣传材料(自适应表单、PDF文档等)。
+* 工作流是真实业务过程的一种表现形式。 让您的实际业务流程和业务流程参与者的列表做好准备。 此外，在开始创建工作流之前，应准备好宣传材料（自适应表单、PDF文档等）。
 * 一个工作流可以有多个阶段。 这些阶段显示在AEM收件箱中，并帮助报告工作流的进度。 将业务流程划分为逻辑阶段。
 * 您可以配置AEM工作流的分配任务步骤，以向用户或受分配人发送电子邮件通知。 因此，[启用电子邮件通知](#configure-email-service)。
 * 工作流还可以使用Adobe sign进行数字签名。 如果您计划在工作流中使用Adobe Sign，则在工作流中使用AEM Forms[&#128279;](../../forms/using/adobe-sign-integration-adaptive-forms.md)之前，请配置该工作流的Adobe Sign。
@@ -214,7 +214,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 使用观察文件夹 {#watched}
 
-管理员（fd-administrators组的成员）可以配置网络文件夹，以便当用户在该文件夹中放置文件(例如PDF文件)时运行预配置的工作流。 工作流完成后，它可以将结果文件保存到指定的输出文件夹中。 此类文件夹称为[观察文件夹](../../forms/using/watched-folder-in-aem-forms.md)。 执行以下过程配置watched文件夹以启动工作流：
+管理员（fd-administrators组的成员）可以配置网络文件夹，以便当用户在该文件夹中放置文件（例如PDF文件）时运行预配置的工作流。 工作流完成后，它可以将结果文件保存到指定的输出文件夹中。 此类文件夹称为[观察文件夹](../../forms/using/watched-folder-in-aem-forms.md)。 执行以下过程配置watched文件夹以启动工作流：
 
 1. 在您的AEM创作实例上，转到![tools-1](assets/tools-1.png) > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。 将显示已配置的观察文件夹的列表。
 1. 选择&#x200B;**[!UICONTROL 新建]**。 此时将显示字段列表。 为以下字段指定一个值，为工作流配置Watched文件夹：
@@ -272,14 +272,14 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 清除工作流实例 {#purge-workflow-instances}
 
-最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参阅[定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular)清除工作流实例。
+最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参阅[定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular)清除工作流实例。
 
 ## 将敏感数据参数化为工作流变量并存储在外部数据存储中 {#externalize-wf-variables}
 
-从自适应表单提交到[!DNL Experience Manager]工作流的任何数据都可以包含您企业最终用户的PII（个人身份信息）或SPD（敏感个人数据）。 但是，不必将您的数据存储在[!DNL Adobe Experience Manager] [JCR存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=zh-Hans)中。 通过将信息参数化到[工作流变量](/help/forms/using/variable-in-aem-workflows.md)，您可以将最终用户数据存储外部化到托管数据存储（例如，Azure blob存储）中。
+从自适应表单提交到[!DNL Experience Manager]工作流的任何数据都可以包含您企业最终用户的PII（个人身份信息）或SPD（敏感个人数据）。 但是，不必将您的数据存储在[!DNL Adobe Experience Manager] [JCR存储库](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=zh-Hans)中。 通过将信息参数化到[工作流变量](/help/forms/using/variable-in-aem-workflows.md)中，您可以将最终用户数据存储到托管数据存储（例如，Azure blob storage）中。
 
-在[!DNL Adobe Experience Manager] Forms工作流中，通过工作流变量处理并通过一系列工作流步骤传递数据。 这些变量是存储在工作流实例元数据节点中的命名属性或键值对；例如，`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`。 这些工作流变量可以外部化到JCR以外的单独存储库中，然后由[!DNL Adobe Experience Manager]工作流处理。 [!DNL Adobe Experience Manager]提供API `[!UICONTROL UserMetaDataPersistenceProvider]`以将工作流变量存储在托管外部存储中。 若要了解有关在[!DNL Adobe Experience Manager]中使用客户拥有的数据存储的工作流变量的更多信息，请参阅[管理外部数据存储的工作流变量](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
-[!DNL Adobe]提供了以下[示例](https://github.com/adobe/workflow-variable-externalizer)，以使用API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md)将变量从工作流元数据映射存储到Azure blob存储。 在类似的行中，您可以使用该示例作为指导，使用[UserMetaDataPersistenceProvider] API将[!DNL Adobe Experience Manager]外部的任何其他数据存储中的工作流变量外部化并管理这些变量。
+在[!DNL Adobe Experience Manager] Forms工作流中，通过工作流变量处理并通过一系列工作流步骤传递数据。这些变量是存储在工作流实例元数据节点中的命名属性或键值对；例如，`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`。这些工作流变量可以外部化到JCR以外的单独存储库中，然后由[!DNL Adobe Experience Manager]工作流处理。[!DNL Adobe Experience Manager]提供API `[!UICONTROL UserMetaDataPersistenceProvider]`以将工作流变量存储在托管外部存储中。若要了解有关在[!DNL Adobe Experience Manager]中使用客户拥有的数据存储的工作流变量的更多信息，请参阅[管理外部数据存储的工作流变量](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
+[!DNL Adobe]提供了以下[示例](https://github.com/adobe/workflow-variable-externalizer)，以使用API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md)将变量从工作流元数据映射存储到Azure blob存储。在类似的行中，您可以使用该示例作为指导，使用[UserMetaDataPersistenceProvider] API将[!DNL Adobe Experience Manager]外部的任何其他数据存储中的工作流变量外部化并管理它们。
 
 >[!NOTE]
 >
@@ -336,7 +336,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 外部数据存储的AEM工作流准则 {#guidelines-workflows-external-data-storage}
 
-以下是使用[!DNL Adobe Experience Manager]工作流并将数据存储到外部数据存储(例如，Microsoft Azure Storage Server)时的准则：
+以下是使用[!DNL Adobe Experience Manager]工作流并将数据存储到外部数据存储（例如Microsoft Azure storage server）时的准则：
 
 * 在工作流模型步骤中定义输入和输出数据文件及附件时，使用变量来存储数据。 请勿选择&#x200B;**[!UICONTROL 相对于有效负荷]**&#x200B;和&#x200B;**[!UICONTROL 在绝对路径]**&#x200B;上可用的选项。 [为外部数据存储配置 [!DNL Adobe Experience Manager] 工作流模型](#configure-aem-wf-model)后，**[!UICONTROL 相对于有效负载]**&#x200B;和&#x200B;**[!UICONTROL 在绝对路径上可用]**&#x200B;选项不会自动显示。
 
