@@ -1,5 +1,5 @@
 ---
-title: 与Adobe Dynamic Tag Management集成
+title: 与 Adobe 动态标记管理集成
 description: 了解与Adobe Dynamic Tag Management的集成。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,14 @@ role: Admin
 exl-id: 8bf470d5-1824-41d6-80e4-4af1eb6df713
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2146'
-ht-degree: 2%
+source-wordcount: '2210'
+ht-degree: 3%
 
 ---
 
-# 与Adobe Dynamic Tag Management集成 {#integrating-with-adobe-dynamic-tag-management}
+# 与 Adobe 动态标记管理集成 {#integrating-with-adobe-dynamic-tag-management}
 
-将[Adobe Dynamic Tag Management](https://business.adobe.com/cn/products/experience-platform/adobe-experience-platform.html)与AEM集成，以便您可以使用Dynamic Tag Management Web资产跟踪AEM网站。 Dynamic Tag Management允许营销人员管理用于收集数据的标记，并在各种数字营销系统中分发数据。 例如，使用Dynamic Tag Management收集AEM网站的使用情况数据，并分发数据以在Adobe Analytics或Adobe Target中进行分析。
+将[Adobe Dynamic Tag Management](https://business.adobe.com/products/experience-platform/adobe-experience-platform.html)与AEM集成，以便您可以使用Dynamic Tag Management Web资产跟踪AEM网站。 Dynamic Tag Management允许营销人员管理用于收集数据的标记，并在各种数字营销系统中分发数据。 例如，使用Dynamic Tag Management收集AEM网站的使用情况数据，并分发数据以在Adobe Analytics或Adobe Target中进行分析。
 
 在集成之前，请创建跟踪AEM网站域的Dynamic Tag Management [Web属性](https://microsite.omniture.com/t2/help/en_US/dtm/#Web_Properties)。 必须配置Web属性的[托管选项](https://microsite.omniture.com/t2/help/en_US/dtm/#Hosting__Embed_Tab)，以便您可以配置AEM以访问Dynamic Tag Management库。
 
@@ -28,8 +28,8 @@ ht-degree: 2%
 >
 >如果您将DTM与自定义代理配置一起使用，请同时配置HTTP客户端代理配置，因为AEM的某些功能使用的是3.x API，而其他一些功能使用的是4.x API：
 >
->* 3.x 通过 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) 进行配置
->* 4.x 通过 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) 进行配置
+>* 3.x使用[http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)进行配置
+>* 4.x使用[http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)进行配置
 >
 
 ## 部署选项 {#deployment-options}
@@ -55,7 +55,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
 
 ### 使用Dynamic Tag Management部署挂钩 {#using-the-dynamic-tag-management-deployment-hook}
 
-当AEM托管Dynamic Tag Management库时，您可以使用Dynamic Tag Management部署挂接服务自动将库更新推送到AEM。 在对库进行更改时(例如，在编辑Dynamic Tag Management Web属性时)，将推送库更新。
+当AEM托管Dynamic Tag Management库时，您可以使用Dynamic Tag Management部署挂接服务自动将库更新推送到AEM。 在对库进行更改时（例如，在编辑Dynamic Tag Management Web属性时），将推送库更新。
 
 要使用部署挂接，Dynamic Tag Management必须能够连接到托管库的AEM实例。 [启用Dynamic Tag Management服务器对AEM](/help/sites-administering/dtm.md#enabling-access-for-the-deployment-hook-service)的访问权限。
 
@@ -97,7 +97,7 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
    <th>描述</th>
   </tr>
   <tr>
-   <td>api令牌</td>
+   <td>API 令牌</td>
    <td>Dynamic Tag Management用户帐户的API令牌属性的值。 AEM使用此资产进行动态Tag Management身份验证。</td>
   </tr>
   <tr>
@@ -159,11 +159,11 @@ AEM支持在云中托管或在AEM上托管的动态Tag Management。
   </tr>
   <tr>
    <td>启用轮询导入程序</td>
-   <td><p>（可选）选择以定期下载和安装Dynamic Tag Management库，以确保您使用的是更新版本。 选中后，Dynamic Tag Management不会将HTTP POST请求发送到部署挂接URL。</p> <p>AEM会自动为Dynamic Tag Management Web资产配置Library Download资产的Deploy Hook URL资产。 选中后，属性将配置为无值。 如果未选定该属性，则使用您的动态Tag Management配置的URL配置该属性。</p> <p>当Dynamic Tag Management部署挂接无法连接到AEM时(例如，当AEM位于防火墙后面时)，启用轮询导入程序。</p> </td>
+   <td><p>（可选）选择以定期下载和安装Dynamic Tag Management库，以确保您使用的是更新版本。 选中后，Dynamic Tag Management不会将HTTP POST请求发送到部署挂接URL。</p> <p>AEM会自动为Dynamic Tag Management Web资产配置Library Download资产的Deploy Hook URL资产。 选中后，属性将配置为无值。 如果未选定该属性，则使用您的动态Tag Management配置的URL配置该属性。</p> <p>当Dynamic Tag Management部署挂接无法连接到AEM时（例如，当AEM位于防火墙后面时），启用轮询导入程序。</p> </td>
   </tr>
   <tr>
    <td>时间表表达式</td>
-   <td>（在选中启用轮询导入程序时显示并是必需的。）一个cron表达式，用于控制何时下载Dynamic Tag Management库。</td>
+   <td>（在选择启用轮询导入程序时显示和必需。） 控制何时下载Dynamic Tag Management库的cron表达式。</td>
   </tr>
  </tbody>
 </table>

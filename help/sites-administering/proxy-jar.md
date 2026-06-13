@@ -1,5 +1,5 @@
 ---
-title: 代理服务器工具(proxy.jar)
+title: 代理服务器工具（proxy.jar）
 description: 了解Adobe Experience Manager中的代理服务器工具(proxy.jar)。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Developer
 exl-id: d918ddf2-aa70-4742-97d5-24a2c51f578a
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
 
-# 代理服务器工具(proxy.jar){#proxy-server-tool-proxy-jar}
+# 代理服务器工具（proxy.jar）{#proxy-server-tool-proxy-jar}
 
 代理服务器充当在客户端和服务器之间中继请求的中间服务器。 代理服务器跟踪所有客户端 — 服务器交互并输出整个TCP通信的日志。 这使您能够准确地监视正在发生的情况，而无需访问主服务器。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 * 电子邮件的SMTP
 * 用于用户管理的LDAP
 
-例如，您可以在通过TCP/IP网络通信的任意两个应用程序(例如Web浏览器和AEM)之间放置代理服务器。 这样，您就可以监控在请求AEM页面时确切发生的情况。
+例如，您可以在通过TCP/IP网络通信的任意两个应用程序（例如Web浏览器和AEM）之间放置代理服务器。 这样，您就可以监控在请求AEM页面时确切发生的情况。
 
 ## 启动代理服务器工具 {#starting-the-proxy-server-tool}
 
@@ -116,7 +116,7 @@ C-0-#000000 -> [GET /author/prox.html?CFC_cK=1102938422341 HTTP/1.1 ]
 * C表示此条目来自客户端（这是对网页的请求）
 * 0是连接数（连接计数器从0开始）
 * 选#00000字节流中的偏移量。 这是第一个条目，因此偏移为0。
-* [GET &lt;？>]是请求的内容，示例中为HTTP标头(url)的内容。
+* [GET &lt;??>]是请求的内容，示例中为HTTP标头(url)之一。
 
 当连接关闭时，将记录以下信息：
 
@@ -143,7 +143,7 @@ S-6-Finished: 665 bytes (1.0 kb/s)
 </html>
 ```
 
-如果AEM在localhost：4303上运行，请如下所示启动代理服务器：
+如果AEM在localhost:4303上运行，请按如下方式启动代理服务器：
 
 ```xml
 java -jar proxy.jar localhost 4303 4444 -logfile test.log

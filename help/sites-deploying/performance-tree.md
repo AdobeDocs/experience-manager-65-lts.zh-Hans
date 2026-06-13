@@ -11,8 +11,8 @@ role: Admin
 exl-id: c83fcf96-cc45-40a0-9a50-c60406096de1
 source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 9%
+source-wordcount: '1298'
+ht-degree: 11%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 9%
 
 ## 先决条件和假设 {#prerequisites-and-assumptions}
 
-假设在给定页面(AEM控制台或网页)上发现性能问题并且可以一致地复制。 在开始调查之前，必须具备测试或监控性能的方法。
+假设在给定页面（AEM控制台或网页）上发现性能问题并且可以一致地复制。 在开始调查之前，必须具备测试或监控性能的方法。
 
-分析从步骤0开始。 目标是确定哪个实体(Dispatcher、外部主机或AEM)应对性能问题负责，然后确定应调查哪个区域（服务器或网络）。
+分析从步骤0开始。 目标是确定哪个实体（Dispatcher、外部主机或AEM）应对性能问题负责，然后确定应调查哪个区域（服务器或网络）。
 
 ### 章节 1 {#section}
 
@@ -77,7 +77,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤 4</strong></td>
    <td>是否来自Dispatcher的请求？</td>
-   <td><p>要查看是否正确缓存了请求，请查看<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#debugging">Dispatcher调试文档</a>。<br /> </p> </td>
+   <td><p>要查看是否正确缓存了请求，请查看<a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Dispatcher调试文档</a>。<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>步骤 5</strong></td>
@@ -107,7 +107,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤10和29</strong></td>
    <td>调查网络层</td>
-   <td><p>调查网络层的饱和度和延迟问题。</p> <p>对于创作层，建议延迟不超过100毫秒。</p> <p>有关性能优化提示的详细信息，请参阅<a href="https://helpx.adobe.com/cn/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此页面</a>。</p> </td>
+   <td><p>调查网络层的饱和度和延迟问题。</p> <p>对于创作层，建议延迟不超过100毫秒。</p> <p>有关性能优化提示的详细信息，请参阅<a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此页面</a>。</p> </td>
   </tr>
   <tr>
    <td><strong>步骤 11</strong></td>
@@ -160,7 +160,7 @@ ht-degree: 9%
    <td><br />
     <ol>
      <li><a href="/help/sites-deploying/monitoring-and-maintaining.md#out-of-memory">内存不足</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=zh-Hans">分析内存问题。</a><br /> </li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html">分析内存问题。</a><br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -176,14 +176,14 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤 23</strong></td>
    <td>查询速度慢</td>
-   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">有关查询和索引的最佳实践</a></td>
+   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">查询与索引的最佳做法</a></td>
   </tr>
   <tr>
    <td><strong>步骤 24</strong></td>
    <td>存储库调整</td>
    <td>
     <ul>
-     <li><a href="https://helpx.adobe.com/cn/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">性能调整提示</a></li>
+     <li><a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">性能调整提示</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#configuring-for-performance">配置性能</a></li>
      <li><a href="https://www.slideshare.net/jukka/repository-performance-tuning">存储库性能优化</a></li>
     </ul> </td>
@@ -211,7 +211,7 @@ ht-degree: 9%
     <ol>
      <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets同步服务</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">多个DAM实例</a></li>
-     <li>性能优化提示文章<a href="https://helpx.adobe.com/cn/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>。<br /> </li>
+     <li>性能优化提示文章<a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">此处</a>。<br /> </li>
     </ol> </td>
   </tr>
   <tr>
@@ -227,51 +227,51 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤 31</strong></td>
    <td>在Dispatcher之前使用CDN</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn">将Dispatcher与CDN结合使用</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">将Dispatcher与CDN结合使用</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 32</strong></td>
    <td>要卸载AEM服务器，请使用Dispatcher级别的会话管理</td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#enabling-secure-sessions-sessionmanagement">启用安全会话</a></p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">启用安全会话</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 33</strong></td>
    <td>使请求可缓存</td>
    <td>
     <ol>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans">常规Dispatcher配置</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache">配置Dispatcher缓存</a></li>
-    </ol> <p>如何提高缓存率；使请求可缓存(Dispatcher最佳实践)</p> <p>此外，请考虑以下设置以优化缓存配置<br /> </p>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html">常规Dispatcher配置</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">配置Dispatcher缓存</a></li>
+    </ol> <p>如何提高缓存率；使请求可缓存（Dispatcher最佳实践）</p> <p>此外，请考虑以下设置以优化缓存配置<br /> </p>
     <ol>
      <li>为非GET的HTTP请求设置无缓存规则</li>
      <li>将查询字符串配置为不可缓存</li>
      <li>不缓存缺少扩展名的URL</li>
-     <li>缓存身份验证标头(自Dispatcher版本4.1.10之后可能提供)</li>
+     <li>缓存身份验证标头（自Dispatcher版本4.1.10之后可能提供）</li>
     </ol> </td>
   </tr>
   <tr>
    <td><strong>步骤 34</strong></td>
    <td>升级Dispatcher版本</td>
-   <td><p>您可以在以下位置下载最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=zh-Hans">关注链接</a></p> </td>
+   <td><p>您可以在以下位置下载最新的Dispatcher版本：</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html">关注链接</a></p> </td>
   </tr>
   <tr>
    <td><strong>步骤 35</strong></td>
-   <td>配置Dispatcher</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans">配置Dispatcher</a><br /> </td>
+   <td>配置 Dispatcher</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html">配置Dispatcher</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 36</strong></td>
    <td>检查缓存失效</td>
    <td><br />
     <ul>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hans#invalidating-dispatcher-cache-from-the-authoring-environment">创作层的缓存失效；</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hans#invalidating-dispatcher-cache-from-a-publishing-instance">发布层的缓存失效。</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">创作层的缓存失效；</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">发布层的缓存失效。</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>步骤37和38</strong></td>
    <td>延迟加载</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hans">查看AEM Web性能的Gem会话。</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">查看AEM Web性能的Gem会话。</a><br /> </td>
   </tr>
   <tr>
    <td><strong>步骤 39</strong></td>
@@ -291,7 +291,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤 49</strong></td>
    <td>缩小有效负载大小</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">启用Gzip</a>和<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hans">缩小图像大小</a>。<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">启用Gzip</a>和<a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">缩小图像大小</a>。<br /> </td>
   </tr>
   <tr>
    <td><strong>步骤42和43</strong></td>
@@ -323,7 +323,7 @@ ht-degree: 9%
   <tr>
    <td><strong>步骤50和51</strong></td>
    <td>JS代码阻止</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hans">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html?lang=zh-Hans</a></td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html</a></td>
   </tr>
  </tbody>
 </table>

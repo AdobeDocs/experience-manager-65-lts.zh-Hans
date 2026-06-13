@@ -12,8 +12,8 @@ role: Developer
 exl-id: 2a94ea8d-2919-4f30-be31-ce559493805d
 source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 22%
+source-wordcount: '684'
+ht-degree: 24%
 
 ---
 
@@ -29,7 +29,7 @@ AEM提供了各种机制，使您能够自定义创作实例的控制台（和[�
 Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 自定义时，您可以在`/apps.`下创建自己的clientlib。例如，它可以保存自定义组件所需的代码。
 
 * 叠加
-叠加基于节点定义，允许您用自己的自定义功能（在`/apps`中）叠加标准功能（在`/libs`中）。 创建叠加时，不需要原始内容的1:1副本，因为sling资源合并器允许继承。
+叠加基于节点定义，允许您用自己的自定义功能（在`/apps`中）叠加标准功能（在`/libs`中）。 创建叠加时不需要原始文件的1:1副本，因为Sling资源合并器允许继承。
 
 可以通过多种方式使用这些变量来扩展AEM控制台。 下面包含少量选件（在高级别）。
 
@@ -64,7 +64,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 >[!NOTE]
 >
->有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-16935)。
+>有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)。
 
 ## 自定义控制台的默认视图 {#customizing-the-default-view-for-a-console}
 
@@ -94,7 +94,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 ### 将新操作添加到工具栏 {#add-new-action-to-the-toolbar}
 
-1. 您可以构建自己的组件，并为自定义操作包含相应的客户端库。 例如，在以下位置执行&#x200B;**提升至Twitter**&#x200B;操作：
+1. 您可以构建自己的组件并包含用于自定义操作的相应客户端库。 例如，在以下位置执行&#x200B;**提升至Twitter**&#x200B;操作：
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -151,7 +151,6 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 1. 可选：
 
    * 如果要插入其他数据，您需要使用编写[PageInforProvider](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
-
      `pageInfoProviderType`属性。
 
    例如，请参阅下面的附加类/捆绑包（来自GitHub）。
@@ -162,4 +161,4 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 使用控制台时，常见的用例是用户必须从资源（例如，页面、组件、资源等）中进行选择的情况。 这可以采用列表形式，例如，作者必须从中选择一个项目。
 
-为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。有关详细信息，请参阅[自定义页面创作 — 筛选资源](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)。
+为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。 有关详细信息，请参阅[自定义页面创作 — 筛选资源](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources)。

@@ -1,5 +1,5 @@
 ---
-title: 创建已关闭的用户组
+title: 创建封闭用户组
 description: 了解如何创建已关闭的用户组。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Admin
 exl-id: c44ecbb4-a883-4468-bddc-55964485529b
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 1%
+source-wordcount: '748'
+ht-degree: 3%
 
 ---
 
-# 创建已关闭的用户组{#creating-a-closed-user-group}
+# 创建封闭用户组{#creating-a-closed-user-group}
 
 封闭用户组(CUG)用于限制对已发布Internet站点内特定页面的访问。 此类页面要求分配的成员登录并提供安全凭据。
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 
    1. 激活&#x200B;**启用**&#x200B;复选框。
 
-   1. 添加您的&#x200B;**登录页面**&#x200B;的路径。
+   1. 添加您的&#x200B;**登录页面**的路径。
 这是可选操作，如果留空，则使用标准登录页面。
 
    已添加![CUG](assets/cug-authentication-requirement.png)
@@ -91,7 +91,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >“权限”选项卡中的 CUG 无法从 Blueprint 转出到 Live Copy。在配置Live Copy时对此进行规划。
+   >“权限”选项卡中的 CUG 无法从 Blueprint 转出到 Live Copy。 在配置Live Copy时对此进行规划。
    >
    >有关详细信息，请参阅AEM中的[已关闭的用户组 — Livecopy](closed-user-groups.md#aem-livecopy)。
 
@@ -117,13 +117,13 @@ ht-degree: 1%
 
 如果您使用的是Dispatcher，则需要使用以下属性定义Dispatcher场：
 
-* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#identifying-virtual-hosts-virtualhosts)：与CUG应用于的页面的路径匹配。
+* [virtualhosts](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#identifying-virtual-hosts-virtualhosts)：与CUG应用于的页面的路径匹配。
 * \sessionmanagement：请参见下文。
-* [cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#configuring-the-dispatcher-cache-cache)： CUG所应用文件的专用缓存目录。
+* [cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)： CUG所应用文件的专用缓存目录。
 
 ### 为CUG配置Dispatcher会话管理 {#configuring-dispatcher-session-management-for-cugs}
 
-在dispatcher.any文件[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#enabling-secure-sessions-sessionmanagement)中为CUG配置会话管理。 在请求访问CUG页面时使用的身份验证处理程序决定了如何配置会话管理。
+在dispatcher.any文件](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)中为CUG配置[会话管理。 在请求访问CUG页面时使用的身份验证处理程序决定了如何配置会话管理。
 
 ```xml
 /sessionmanagement
@@ -134,10 +134,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->当Dispatcher场启用了会话管理时，不会缓存场处理的所有页面。 要缓存超出CUG的页面，请在dispatcher.any中创建第二个场
->处理非CUG页面。
+>当Dispatcher场启用了会话管理时，不会缓存场处理的所有页面。要缓存CUG以外的页面，请在dispatcher.any>中创建另一个场来处理非CUG页面。
 
-1. 通过定义`/directory`配置[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#enabling-secure-sessions-sessionmanagement)；例如：
+1. 通过定义`/directory`配置[/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement)；例如：
 
    ```xml
    /sessionmanagement
@@ -147,4 +146,4 @@ ht-degree: 1%
      }
    ```
 
-1. 将[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#caching-when-authentication-is-used)设置为`0`。
+1. 将[/allowAuthorized](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used)设置为`0`。

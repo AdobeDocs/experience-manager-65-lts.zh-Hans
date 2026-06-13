@@ -12,8 +12,8 @@ role: Admin
 exl-id: b840d970-9365-4df3-8467-e34abd940074
 source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
 workflow-type: tm+mt
-source-wordcount: '3270'
-ht-degree: 1%
+source-wordcount: '3230'
+ht-degree: 3%
 
 ---
 
@@ -79,13 +79,13 @@ ht-degree: 1%
 >
 >* 创作代理：如果为默认代理（发布），请确保先启用它，然后再继续。
 >
->默认情况下有效禁用(自AEM 6.1起)：
+>默认情况下有效禁用（自AEM 6.1起）：
 >
 >* 创作代理：反向复制代理(publish_reverse)
 >* 发布代理：反向复制（发件箱）
 >
->要检查代理或队列的状态，请使用&#x200B;**工具**&#x200B;控制台。
->请参阅[监视复制代理](#monitoring-your-replication-agents)。
+>要检查代理或队列的状态，请使用&#x200B;**工具**控制台。
+>请参阅[监视您的复制代理](#monitoring-your-replication-agents)。
 
 #### 复制（创作到发布） {#replication-author-to-publish}
 
@@ -105,16 +105,16 @@ ht-degree: 1%
 * [默认代理](#replication-author-to-publish)
 用于从“创作”复制到“发布”。
 
-* Dispatcher Flush
-用于管理Dispatcher缓存。 有关详细信息，请参阅[使创作环境中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hans#invalidating-dispatcher-cache-from-the-authoring-environment)和[使发布实例中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=zh-Hans#invalidating-dispatcher-cache-from-a-publishing-instance)。
+* Dispatcher 刷新
+用于管理Dispatcher缓存。 有关详细信息，请参阅[使创作环境中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment)和[使发布实例中的Dispatcher缓存失效](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance)。
 
 * [反向复制](#configuring-reverse-replication)
 用于从Publish复制到Author。 反向复制不用于Communities功能，例如论坛、博客和评论。 由于未启用发件箱，因此该功能实际上已被禁用。 使用反向复制需要自定义配置。
 
 * 静态代理
 这是一个“将节点的静态表示存储在文件系统中的代理”。
-例如，在默认设置下，内容页面和DAM资源将作为HTML或相应的资源格式存储在`/tmp`下。 查看配置的`Settings`和`Rules`选项卡。
-这是请求的，以便当直接从应用程序服务器请求页面时，可以看到内容。 这是一个专用代理，（可能）在大多数情况下不需要它。
+例如，在默认设置下，内容页面和DAM资源将作为HTML或相应的资源格式存储在`/tmp`下。查看配置的`Settings`和`Rules`选项卡。
+这是请求的，以便当直接从应用程序服务器请求页面时，可以看到内容。这是一个专用代理，（可能）在大多数情况下不需要它。
 
 ## 复制代理 — 配置参数 {#replication-agents-configuration-parameters}
 
@@ -205,7 +205,7 @@ ht-degree: 1%
 
   此处指定的协议（HTTP或HTTPS）确定传输方法。
 
-  对于Dispatcher Flush代理，仅在您使用基于路径的虚拟主机条目来区分场时使用URI属性，并使用此字段来定位要失效的场。 例如，场 #1 的虚拟主机为 `www.mysite.com/path1/*`，场 #2 的虚拟主机为 `www.mysite.com/path2/*`。您可以使用URL `/path1/invalidate.cache`定位第一个场，使用`/path2/invalidate.cache`定位第二个场。
+  对于Dispatcher Flush代理，仅在您使用基于路径的虚拟主机条目来区分场时使用URI属性，并使用此字段来定位要失效的场。 例如，场 #1 的虚拟主机为 `www.mysite.com/path1/*`，场 #2 的虚拟主机为 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 锁定第一个场，使用 `/path2/invalidate.cache` 锁定第二个场。
 
 * **用户**
 
@@ -271,7 +271,7 @@ ht-degree: 1%
 
   要使用的HTTP方法。
 
-  对于Dispatcher Flush代理，这几乎始终是GET，不应更改（POST是另一个可能的值）。
+  对于Dispatcher Flush代理，这几乎总是GET，不应更改（POST是另一个可能的值）。
 
 * **HTTP标头**
 
@@ -293,7 +293,7 @@ ht-degree: 1%
 
   >[!NOTE]
   >
-  >如果您在建议的默认上下文以外的其他上下文中安装了AEM，则必须在HTTP标头中注册该上下文。 例如：
+  >如果您在建议的默认上下文以外的其他上下文中安装了AEM，则必须在HTTP标头中注册该上下文。例如：
   >`CQ-Handle:/<*yourContext*>{path}`
 
 * **关闭连接**
@@ -332,7 +332,7 @@ ht-degree: 1%
 
   当为页面定义的时间或超时发生时，将触发自动复制（根据需要激活或停用页面）。 这主要用于Dispatcher Flush代理。
 
-* 接收时&#x200B;**&#x200B;**
+* 接收时&#x200B;****
 
   如果选中，代理将在收到复制事件时进行链式复制。
 
@@ -352,7 +352,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->当Dispatcher处理创作或发布实例的HTTP请求时，复制代理发出的HTTP请求必须包含PATH标头。 除了以下过程之外，还必须将PATH标头添加到Dispatcher的客户端标头列表中。 请参阅[/clientheaders （客户端标头）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=zh-Hans#specifying-the-http-headers-to-pass-through-clientheaders)。
+>当Dispatcher处理创作或发布实例的HTTP请求时，复制代理发出的HTTP请求必须包含PATH标头。 除了以下过程之外，还必须将PATH标头添加到Dispatcher的客户端标头列表中。 请参阅[/clientheaders （客户端标头）](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)。
 >
 
 1. 访问AEM中的&#x200B;**工具**&#x200B;选项卡。
@@ -425,7 +425,6 @@ ht-degree: 1%
    * 在&#x200B;**传输**&#x200B;选项卡中：
 
       * 输入新发布实例所需的URI；例如，
-
         `https://localhost:4504/bin/receive`。
 
       * 输入用于复制的站点特定用户帐户。
@@ -469,13 +468,12 @@ ht-degree: 1%
    * 在&#x200B;**传输**&#x200B;选项卡中：
 
       * 输入新发布实例所需的URI；例如，
-
         `https://localhost:80/dispatcher/invalidate.cache`。
 
       * 输入用于复制的站点特定用户帐户。
       * 您可以根据需要配置其他参数。
 
-   对于Dispatcher Flush代理，仅在您使用基于路径的虚拟主机条目来区分场时使用URI属性，并使用此字段来定位要失效的场。 例如，场 #1 的虚拟主机为 `www.mysite.com/path1/*`，场 #2 的虚拟主机为 `www.mysite.com/path2/*`。您可以使用URL `/path1/invalidate.cache`定位第一个场，使用`/path2/invalidate.cache`定位第二个场。
+   对于Dispatcher Flush代理，仅在您使用基于路径的虚拟主机条目来区分场时使用URI属性，并使用此字段来定位要失效的场。 例如，场 #1 的虚拟主机为 `www.mysite.com/path1/*`，场 #2 的虚拟主机为 `www.mysite.com/path2/*`。 您可以使用 URL `/path1/invalidate.cache` 锁定第一个场，使用 `/path2/invalidate.cache` 锁定第二个场。
 
    >[!NOTE]
    >
@@ -508,7 +506,7 @@ ht-degree: 1%
 * `agents.publish`
 * `treeactivation`
 
-两个`agents`保存有关相应环境的配置信息，并且仅在环境运行时处于活动状态。 例如，`agents.publish`仅用于Publish环境。 以下屏幕截图显示了创作环境中的发布代理(随AEM WCM提供)：
+两个`agents`保存有关相应环境的配置信息，并且仅在环境运行时处于活动状态。 例如，`agents.publish`仅用于Publish环境。 以下屏幕截图显示了创作环境中的发布代理（随AEM WCM提供）：
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
@@ -566,7 +564,7 @@ Publisher将解压缩所有项目，保存它们并向作者报告。
 1. 从左侧导航栏中，转到&#x200B;**[!UICONTROL 复制 — 作者上的代理]**，然后双击&#x200B;**[!UICONTROL 默认代理]**。
    * 您还可以通过直接转到`http://serveraddress:serverport/etc/replication/agents.author/publish.html`访问默认的发布复制代理
 1. 按复制队列上方的&#x200B;**[!UICONTROL 编辑]**&#x200B;按钮。
-1. 在以下窗口中，转到&#x200B;**[!UICONTROL 批处理]**&#x200B;选项卡：
+1. 在以下窗口中，转到&#x200B;**[!UICONTROL 批处理]**选项卡：
    ![批次复制](assets/batchreplication.png)
 1. 配置代理。
 
