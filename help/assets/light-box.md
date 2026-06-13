@@ -8,12 +8,12 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 913b8c5a-c532-43a0-93ce-0b96dd5eec54
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-# 灯箱 {#lightbox}
+# Lightbox {#lightbox}
 
 Lightbox是一种特殊的收藏集，可让您轻松访问资产。 您可以快速访问Lightbox以添加或删除资源。 它用作您的个人图像库。
 
@@ -22,7 +22,7 @@ Lightbox是一种特殊的收藏集，可让您轻松访问资产。 您可以�
 ## 将资源添加到Lightbox {#adding-assets-to-lightbox}
 
 1. 从[!DNL Assets]用户界面中，选择要添加到Lightbox的资源。
-1. 将资源拖到Lightbox **区域中的**&#x200B;拖放位置。 当拖放区域变为活动状态并且其标签更改为&#x200B;**[!UICONTROL 拖放到“添加”]**&#x200B;时释放。
+1. 将资源拖到Lightbox ]**区域中的**[!UICONTROL &#x200B;拖放位置。 当拖放区域变为活动状态并且其标签更改为&#x200B;**[!UICONTROL 拖放到“添加”]**&#x200B;时释放。
 
    ![add_to_lightbox](assets/add_to_lightbox.png)
 

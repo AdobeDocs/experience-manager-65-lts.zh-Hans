@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: f27b595b-24eb-444c-a598-6f70c59ed8fc
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2354'
+source-wordcount: '2419'
 ht-degree: 2%
 
 ---
@@ -123,7 +123,7 @@ Dynamic Media支持以下3D格式。
 1. 选择3D资产的卡。
 1. 在3D资产的详细信息视图页面上，执行以下任一操作：
 
-   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | 视图 | 描述 | 鼠标操作 | 触摸屏操作 |
    | --- | --- | --- | --- |
    | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 左键单击+拖动。 | 单指按下+拖动。 |
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 双指按下+拖动。 |
@@ -152,11 +152,11 @@ Dynamic Media支持以下3D格式。
    * 从浏览器中的页面URL中删除`/editor.html`。
 
    ![3D资产显示在3D媒体组件内](/help/assets/assets-dm/3d-asset-in-3d-media.png)
-以&#x200B;**[!UICONTROL 预览]**&#x200B;模式显示的完全交互式3D资产。
+以**[!UICONTROL 预览]**&#x200B;模式显示的完全交互式3D资产。
 
 1. 在&#x200B;**[!UICONTROL 预览]**&#x200B;模式下，执行以下任一操作：
 
-   | 查看 | 描述 | 鼠标操作 | 触摸屏操作 |
+   | 视图 | 描述 | 鼠标操作 | 触摸屏操作 |
    | --- | --- | --- | --- |
    | **转动相机** | 围绕 3D 场景和对象旋转视图。 | 左键单击+拖动。 | 单指按下+拖动。 |
    | **平移相机** | 向左、向右、向上或向下平移视图。 | 右键单击+拖动。 | 双指按下+拖动。 |
@@ -232,7 +232,7 @@ Dynamic Media包括一个Dynamic Media 3D Media组件，您可以在Adobe Experi
 
 将3D媒体组件添加到网页后，即可为其分配3D资产。
 
-请参阅将3D媒体组件添加到网页[&#128279;](#adding-the-three-d-media-component-to-a-web-page)。
+请参阅将3D媒体组件添加到网页](#adding-the-three-d-media-component-to-a-web-page)。[
 
 **要将3D资产分配给3D媒体组件：**
 

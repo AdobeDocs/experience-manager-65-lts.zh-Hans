@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: d88e3ca9-f80d-48f5-857a-eaf71dcb9226
 source-git-commit: e3106e87f72484568667873c1772abd30a108e51
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 1. 确定加载到系统中的资源的大小和数量。
 1. 获取要上传到[!DNL Experience Manager]中的具有代表性的资源示例。 例如，如果您计划将PSD、JPG、AI和PDF文件加载到系统中，则需要每种文件格式的多个示例图像。 此外，这些示例应该能够代表不同的文件大小和图像的复杂性。
 1. 定义要使用的演绎版。
-1. 使用[!DNL Experience Manager]或[!DNL ImageMagick]应用程序在[!DNL Adobe Creative Cloud]中创建演绎版。 除了用户指定的呈现版本之外，还应创建现成的呈现版本。 对于实施Dynamic Media的用户，可以使用IC二进制文件生成要存储在Experience Manager中的PTIFF演绎版。
+1. 使用[!DNL ImageMagick]或[!DNL Adobe Creative Cloud]应用程序在[!DNL Experience Manager]中创建演绎版。 除了用户指定的呈现版本之外，还应创建现成的呈现版本。 对于实施Dynamic Media的用户，可以使用IC二进制文件生成要存储在Experience Manager中的PTIFF演绎版。
 1. 如果您计划使用子资产，请为相应的文件类型生成它们。
 1. 比较输出图像、演绎版和子资源与原始图像的大小。 它允许您在系统加载时生成预期的增长因子。 例如，如果在处理1 GB的资源后生成大小合计为3 GB的演绎版和子资源，则演绎版增长因子为3。
 1. 确定在系统中维护资源版本的最长时间。

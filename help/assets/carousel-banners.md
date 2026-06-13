@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: d066e8ea-57f4-41a1-afcf-86950267fd50
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '4563'
+source-wordcount: '4550'
 ht-degree: 3%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 3%
 
 使用轮播横幅快速启动并运行：
 
-1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables)(仅适用于使用Experience Manager Assets + Dynamic Media的客户)
+1. [识别热点和图像映射变量](#identifying-hotspot-and-image-map-variables)（仅适用于使用Experience Manager Assets + Dynamic Media的客户）
 
    首先，确定现有“快速视图”实施使用的动态变量，以便您可以在Adobe Experience Manager Assets中的轮播横幅创建过程中正确输入热点和图像映射数据。
 
@@ -109,7 +109,7 @@ ht-degree: 3%
 
 大多数概览实施都使用以下范例：
 
-* 用户在网站上激活用户界面元素。例如，点按&#x200B;**[!UICONTROL 概览]**&#x200B;按钮。
+* 用户在网站上激活用户界面元素。 例如，点按&#x200B;**[!UICONTROL 概览]**&#x200B;按钮。
 * 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
 * 概览数据将转换为内容，为在网页上呈现做准备。
 * 最后，前端代码在屏幕上以可视方式呈现此类内容。
@@ -139,10 +139,10 @@ ht-degree: 3%
    <td>单个SKU，在查询字符串中找到。</td>
    <td><p>记录的概览URL包括：</p>
     <ul>
-     <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
     </ul> <p>URL中的唯一变量部分是<code>productId=</code>查询字符串参数的值，它显然是SKU值。 因此，热点或图像映射只需要使用如下值填充的SKU字段 <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
@@ -158,9 +158,9 @@ ht-degree: 3%
    <td>查询字符串中的SKU和类别ID。</td>
    <td><p>记录的概览URL包括：</p>
     <ul>
-     <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
     </ul> <p>在这种情况下，URL包含两个不同的部分。 SKU存储在<code>prodId</code>参数中，类别ID存储在<code>category=</code>参数中。</p> <p>因此，热点/图像映射定义是对。 即SKU值和名为<code>categoryId</code>的额外变量。 生成的对如下所示：</p>
     <ul>
      <li><p>SKU是<strong><code>305466</code></strong>，<code>categoryId</code>是<code>1100004</code>。</p> </li>
@@ -194,9 +194,9 @@ ht-degree: 3%
 
    * 在页面中间附近，选择&#x200B;**[!UICONTROL 点按以打开资产选择器]**。
 
-   选择以选择要包含在轮播集中的资源。 选定资产上有一个复选标记图标。完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
+   选择以选择要包含在轮播集中的资源。 选定资产上有一个复选标记图标。 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 选择]**。
 
-   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。您还可以应用过滤器来优化搜索结果。您可以按路径、收藏集、文件类型和标记进行过滤。选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
+   借助资产选择器，您可以通过键入关键字并点按或单击&#x200B;**[!UICONTROL 返回]**&#x200B;来搜索资产。 您还可以应用过滤器来优化搜索结果。 您可以按路径、收藏集、文件类型和标记进行过滤。 选择筛选器，然后选择工具栏上的&#x200B;**[!UICONTROL 筛选器]**&#x200B;图标。 点按“视图”图标并选择&#x200B;**[!UICONTROL 列视图]**、**[!UICONTROL 卡片视图]**&#x200B;或&#x200B;**[!UICONTROL 列表视图]**&#x200B;可更改视图。
 
    有关详细信息，请参阅[使用选择器](/help/assets/working-with-selectors.md)。
 
@@ -274,7 +274,7 @@ ht-degree: 3%
 
    如有必要，请将热点或图像映射拖动到新位置。 根据需要添加更多热点或图像映射。
 
-   要删除热点或图像映射，请选择&#x200B;**[!UICONTROL 操作]**&#x200B;选项卡。 在&#x200B;**[!UICONTROL 映射和热点]**&#x200B;标题下，从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要删除的热点或图像映射的名称。选择菜单旁边的&#x200B;**[!UICONTROL 垃圾桶]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 删除]**。
+   要删除热点或图像映射，请选择&#x200B;**[!UICONTROL 操作]**&#x200B;选项卡。 在&#x200B;**[!UICONTROL 映射和热点]**&#x200B;标题下，从&#x200B;**[!UICONTROL 选定类型]**&#x200B;下拉菜单中，选择要删除的热点或图像映射的名称。 选择菜单旁边的&#x200B;**[!UICONTROL 垃圾桶]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 删除]**。
 
 1. 在“名称”文本字段中，键入热点或图像映射的名称。 此名称还显示在&#x200B;**[!UICONTROL 映射和热点]**&#x200B;下拉列表中。 提供名称可让您在决定将来更改热点或图像映射时轻松识别它。
 1. 在&#x200B;**[!UICONTROL 操作]**&#x200B;选项卡中执行以下操作之一：
@@ -293,7 +293,6 @@ ht-degree: 3%
    * 选择&#x200B;**[!UICONTROL 超链接]**。
 
       * 如果您是Experience Manager Sites客户，请选择站点选择器图标（文件夹）以导航到URL。
-
         >[!NOTE]
         >
         >如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
@@ -306,8 +305,8 @@ ht-degree: 3%
 
    * 选择&#x200B;**[!UICONTROL 体验片段]**。
 
-      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。 选择要使用的体验片段，然后选择页面右上角的&#x200B;**[!UICONTROL 选择]**，以便您可以返回热点管理页面。
-查看[体验片段](/help/sites-authoring/experience-fragments.md)。
+      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。选择要使用的体验片段，然后选择页面右上角的&#x200B;**[!UICONTROL 选择]**，以便您可以返回热点管理页面。
+请参阅[体验片段](/help/sites-authoring/experience-fragments.md)。
 
       * 指定体验片段在横幅上显示的宽度和高度。
 
@@ -375,7 +374,7 @@ ht-degree: 3%
 
 如果对轮播横幅满意，则可以发布该横幅。
 请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
-请参阅[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
+请参阅[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
 请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 您可以从轮播编辑器（首选方法）或&#x200B;**[!UICONTROL 查看器]**&#x200B;列表中预览轮播横幅。
