@@ -1,5 +1,5 @@
 ---
-title: 在AEM Forms工作区中使用表单集
+title: 在 AEM Forms 工作区中使用表单集
 description: 表单集是HTML5表单的集合，这些表单经过分组，作为一组表单提供给最终用户。 了解如何在AEM Forms工作区中使用表单集。
 contentOwner: vishgupt
 content-type: reference
@@ -12,12 +12,12 @@ role: User, Developer
 exl-id: 4b2c994e-8ca6-42fc-a8b2-96c53e9f9453
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 7%
 
 ---
 
-# 在AEM Forms工作区中使用表单集{#working-with-formsets-in-aem-forms-workspace}
+# 在 AEM Forms 工作区中使用表单集{#working-with-formsets-in-aem-forms-workspace}
 
 表单集是HTML5表单的集合，这些表单经过分组，作为一组表单提供给最终用户。 当最终用户开始填写表单集时，他们会无缝地从一个表单转换为另一个表单。 然后，只需一次单击即可提交表单集。 有关表单集以及如何设置表单集的详细信息，请参阅AEM Forms中的[表单集](../../forms/using/formset-in-aem-forms.md)。
 

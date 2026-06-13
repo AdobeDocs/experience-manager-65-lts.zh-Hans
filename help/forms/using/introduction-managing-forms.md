@@ -1,5 +1,5 @@
 ---
-title: 管理表单简介
+title: 表单管理简介
 description: AEM Forms提供了用于管理自适应Forms和相关资源的工具。 本文介绍了关键表单管理功能和用户界面元素。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User
 exl-id: 7ec29926-a5f6-4080-a981-597f9632f6e8
 source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1556'
 ht-degree: 1%
 
 ---
 
-# 管理表单简介 {#introduction-to-managing-forms}
+# 表单管理简介 {#introduction-to-managing-forms}
 
 AEM [!DNL Forms]提供了简单但功能强大的用户界面，用于创建和管理表单、文档、主题、书信、文档片段、数据字典和相关资源。 它有助于管理表单、文档和相关资产的完整生命周期 — 从开发人员的桌面到产品
 它位于供最终用户使用的门户服务器上。 您可以使用AEM [!DNL Forms]用户界面执行以下操作：
@@ -94,7 +94,7 @@ AEM [!DNL Forms]信件是一种安全、个性化的交互式通信。 您可以
 
 AEM“工具”面板包含用于各种组件的工具。 要导航到特定于AEM Forms的工具，请单击Experience Manager徽标![adobeexperiencemanager](assets/adobeexperiencemanager.png) >工具![hammer](assets/hammer.png) > **[!UICONTROL Forms]**。 将显示用于执行以下功能的工具：
 
-* **配置Watched文件夹：**&#x200B;管理员可以配置网络文件夹（称为watched文件夹），以便当用户在watched文件夹中放置文件(如PDF文件)时，将启动预配置的操作并处理该文件。 有关详细信息，请参阅[创建和配置观察文件夹](/help/forms/using/creating-configure-watched-folder.md)。
+* **配置Watched文件夹：**&#x200B;管理员可以配置网络文件夹（称为watched文件夹），以便当用户在watched文件夹中放置文件（如PDF文件）时，将启动预配置的操作并处理该文件。 有关详细信息，请参阅[创建和配置观察文件夹](/help/forms/using/creating-configure-watched-folder.md)。
 * **配置Forms App脱机服务：** AEM [!DNL Forms] App脱机服务缓存表单中使用的资源的路径或URL。 缓存表单中使用的资源的路径或URL可提高服务器端性能。 要配置AEM Forms应用程序的服务器端脱机组件，请参阅[在脱机模式下工作](/help/forms/using/work-offline-mode.md)。
 
   ![AEM Forms工具](assets/aem_forms_tools_new.png)

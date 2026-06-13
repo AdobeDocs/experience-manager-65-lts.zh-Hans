@@ -7,8 +7,8 @@ feature: Adaptive Forms
 exl-id: 5d1bd8c9-2d9b-47a5-9204-9328eadfb102
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 0%
+source-wordcount: '1899'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/an
 
 ![Analytics概述](/help/forms/using/assets/analyticsworkflow.png)
 
-## 1.配置[!DNL Adobe Analytics] {#Configure-adobe-analytics}
+## &#x200B;1. 配置 [!DNL Adobe Analytics] {#Configure-adobe-analytics}
 
 在配置[!DNL Adobe Analytics]之前，创建：
 
@@ -164,7 +164,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/an
 
 1. 在&#x200B;**[!UICONTROL 操作]**&#x200B;部分中，选择+并指定&#x200B;**[!UICONTROL Adobe Analytics]**&#x200B;作为扩展名称。
 
-1. 选择&#x200B;**[!UICONTROL 清除变量]**&#x200B;作为操作类型。 选择&#x200B;**[!UICONTROL 保留更改]**。 执行这些步骤后，**[!UICONTROL 操作]**&#x200B;部分显示为：
+1. 选择&#x200B;**[!UICONTROL 清除变量]**&#x200B;作为操作类型。选择&#x200B;**[!UICONTROL 保留更改]**。执行这些步骤后，**[!UICONTROL 操作]**&#x200B;部分显示为：
    ![操作配置](/help/forms/using/assets/actions-config.png)
 
    根据您的要求自定义&#x200B;**[!UICONTROL 操作]**&#x200B;部分。 例如，您可以在Actions流程中定义两个&#x200B;**发送信标**&#x200B;步骤，以便将数据发送到[!DNL Adobe Analytics]，并在一个步骤中将其视为页面查看，将数据发送到[!DNL Adobe Analytics]，而在第二个步骤中不要将其视为页面查看。
@@ -196,7 +196,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/an
 
 ![发布流](/help/forms/using/assets/publish-flow.png)
 
-## 2.配置AEM Forms {#configure-aem-forms}
+## &#x200B;2. 配置 AEM Forms {#configure-aem-forms}
 
 在创建Adobe Launch配置之前，请使用Adobe Launch作为云解决方案创建[Adobe IMS配置](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims)。
 
@@ -272,7 +272,7 @@ AEM Forms与[Adobe Analytics](https://experienceleague.adobe.com/zh-hans/docs/an
 
 1. 选择&#x200B;**保留更改**&#x200B;并执行[配置规则](#configure-rules)中指定的其余操作。
 
-## 3.在[!DNL Adobe Analytics]中配置和查看报告 {#view-reports-adobe-analytics}
+## &#x200B;3. 在[!DNL Adobe Analytics]中配置和查看报告 {#view-reports-adobe-analytics}
 
 将自适应表单配置为将事件数据发送到[!DNL Adobe Analytics]后，您可以在[!DNL Adobe Analytics]中开始查看报表：
 

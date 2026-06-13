@@ -1,5 +1,5 @@
 ---
-title: Document Security | 处理用户数据
+title: Document Security |处理用户数据
 description: 了解AEM Forms Document Security如何让您管理用户数据和数据存储，以及如何访问、删除和导出用户数据。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ feature: Document Security,Adaptive Forms
 exl-id: c619a3b8-cd06-4f5d-af20-67f3a4bfcdce
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
 
-# Document Security | 处理用户数据 {#document-security-handling-user-data}
+# Document Security |处理用户数据 {#document-security-handling-user-data}
 
 AEM Forms document security允许您创建、存储预定义的安全设置，并将其应用于您的文档。 它确保只有授权用户才能使用文档。 您可以使用策略保护文档。 策略是包含安全设置和授权用户列表的信息的集合。 您可以将策略应用到一个或多个文档，并授权在AEM Forms JEE用户管理中添加的用户。
 
@@ -22,7 +22,7 @@ AEM Forms document security允许您创建、存储预定义的安全设置，�
 
 ## 用户数据和数据存储 {#user-data-and-data-stores}
 
-Document Security将与受保护文档相关的策略和数据（包括数据库中的用户数据）存储在数据库中，例如My Sql、Oracle®MS®SQL Server和IBM® DB2。 此外，策略中授权用户的数据存储在用户管理中。 有关用户管理中存储的数据的信息，请参阅[Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+Document Security将与受保护文档相关的策略和数据（包括数据库中的用户数据）存储在数据库中，例如My Sql、®MS®SQL Server和IBM® DB2。 此外，策略中授权用户的数据存储在用户管理中。 有关用户管理中存储的数据的信息，请参阅[Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
 下表映射了Document Security在数据库表中组织数据的方式。
 
@@ -69,7 +69,7 @@ Document Security将与受保护文档相关的策略和数据（包括数据库
    <td>存储有关已存档策略的信息。 归档的策略包含其策略XML，并将其存储为Blob对象。</td>
   </tr>
   <tr>
-   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code><br /> (Oracle和MS® SQL数据库)</p> </td>
+   <td><p><code>EdcPolicySetPrincipalEntity</code></p> <p><code>EdcPolicySetPrincipalEnt</code><br /> （Oracle和MS® SQL数据库）</p> </td>
    <td>存储策略集和用户之间的映射。</td>
   </tr>
   <tr>
@@ -99,7 +99,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 >[!NOTE]
 >
->以下命令使用My SQL和IBM® DB2®数据库中的数据库表名。 在Oracle和MS® SQL数据库上运行这些命令时，请将`EdcPolicySetPrincipalEntity`替换为命令中的`EdcPolicySetPrincipalEnt`。
+>以下命令使用My SQL和® DB2®数据库中的数据库表名。 在Oracle和MS® SQL数据库上运行这些命令时，请将`EdcPolicySetPrincipalEntity`替换为命令中的`EdcPolicySetPrincipalEnt`。
 
 ```sql
 Select * from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -209,5 +209,5 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
    >
    >管理员可以使用管理控制台在&#x200B;**[!UICONTROL 服务> Document Security >我的策略]**&#x200B;中搜索、访问和删除其他用户个人策略中的用户数据。
 
-1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅[Forms用户管理 | 正在处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
+1. 从用户管理数据库中删除主体ID的数据。 有关详细步骤，请参阅[Forms用户管理 |处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 1. 启动AEM Forms服务器。
