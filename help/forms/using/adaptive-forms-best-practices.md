@@ -1,19 +1,19 @@
 ---
-title: 使用自适应表单的最佳实践
+title: 使用自适应表单的最佳做法
 description: 介绍设置AEM Forms项目、开发自适应表单和优化AEM Forms系统性能的最佳实践。
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: b87629fa-85a9-4024-963a-4761bc093e62
 source-git-commit: d0529c8bce32e192cbbc7686f14825df57762363
 workflow-type: tm+mt
-source-wordcount: '5535'
-ht-degree: 1%
+source-wordcount: '5664'
+ht-degree: 2%
 
 ---
 
-# 使用自适应表单的最佳实践 {#best-practices-for-working-with-adaptive-forms}
+# 使用自适应表单的最佳做法 {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 概述 {#overview}
 
@@ -66,7 +66,7 @@ Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简�
    * **无**：使用此选项创建的自适应表单不使用任何表单模型。 从此类表单生成的数据 XML 具有带字段和相应值的平面结构。
    * **XML或JSON架构**： XML和JSON架构表示组织中的后端系统生成或使用数据的结构。 您可以将架构关联到自适应表单，并使用其元素将动态内容添加到自适应表单。 架构的元素在内容浏览器的数据模型对象选项卡中可用，用于创作自适应表单。 您可以拖放架构元素来构建表单。
    * **XFA表单模板**：如果您在基于XFA的HTML5表单中有投资，则它是理想的表单模型。 它提供了一种将您的基于XFA的表单转换为自适应表单的直接方法。 任何现有XFA规则都会保留在关联的自适应表单中。 生成的自适应表单支持XFA构造，例如验证、事件、属性和模式。
-   * **表单数据模型**：如果您希望集成后端系统(如数据库、Web服务和AEM用户配置文件)以预填充自适应表单并将提交的表单数据写回后端系统，则它是首选表单模型。 利用表单数据模型编辑器，可在可用于创建自适应表单的表单数据模型中定义和配置实体和服务。 有关详细信息，请参阅[AEM Forms数据集成](/help/forms/using/data-integration.md)。
+   * **表单数据模型**：如果您希望集成后端系统（如数据库、Web服务和AEM用户配置文件）以预填充自适应表单并将提交的表单数据写回后端系统，则它是首选表单模型。 利用表单数据模型编辑器，可在可用于创建自适应表单的表单数据模型中定义和配置实体和服务。 有关详细信息，请参阅[AEM Forms数据集成](/help/forms/using/data-integration.md)。
 
 请务必仔细选择不仅适合您的要求，而且能够扩大您对XFA和XSD资产（如果有）的现有投资的数据模型。 使用XSD模型创建表单模板，因为生成的XML包含架构定义的每个XPATH的数据。 使用XSD模型作为表单数据模型的默认选择也很有帮助，因为它将表单设计与处理和使用数据的后端系统分离，并且由于表单字段的一对一映射，它提高了表单的性能。 此外，还可以将该字段的BindRef设置为其数据值在XML中的XPATH。
 
@@ -89,14 +89,14 @@ Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简�
 * 您还可以自定义特定的自适应表单组件，如字段和面板布局。
 
    * 使用AEM的[叠加](/help/sites-developing/overlays.md)功能修改组件的副本。 不建议修改默认组件。
-   * 要在/libs中自定义现成自适应表单组件的布局，除[默认布局](/help/forms/using/custom-layout-components-forms.md)之外，还[创建自定义布局组件](/help/forms/using/layout-capabilities-adaptive-forms.md)。
+   * 要在/libs中自定义现成自适应表单组件的布局，除[默认布局](/help/forms/using/layout-capabilities-adaptive-forms.md)之外，还[创建自定义布局组件](/help/forms/using/custom-layout-components-forms.md)。
    * 通过创建自定义小部件或外观引入自定义交互。 不建议修改默认组件。 有关详细信息，请参阅[外观框架](/help/forms/using/introduction-widgets.md)。
 
 * 有关处理PII数据的建议，请参阅[处理个人身份信息](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p)。
 
 ### 创建表单模板
 
-您可以使用&#x200B;**配置浏览器**&#x200B;中启用的表单模板创建自适应表单。 要启用表单模板，请参阅[创建自适应表单模板](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template)。
+您可以使用&#x200B;**配置浏览器**&#x200B;中启用的表单模板创建自适应表单。 要启用表单模板，请参阅[创建自适应表单模板](https://experienceleague.adobe.com/en/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template)。
 
 表单模板也可以从在另一台作者计算机上创建的自适应表单包上传。 通过安装[aemforms-references-*包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)，可以使用表单模板。 建议的一些最佳实践包括：
 
@@ -279,7 +279,7 @@ AEM Forms提供了一个[规则编辑器](/help/forms/using/rule-editor.md)，�
 需要服务器端验证，以防止任何绕过客户端验证的尝试以及任何可能危及数据提交和业务规则违规的行为。 服务器端验证通过加载所需的客户端库在服务器上执行。
 
 * 在客户端库中包含用于验证自适应表单中表达式的函数，并在自适应表单容器对话框中指定客户端库。 有关详细信息，请参阅[服务器端重新验证](/help/forms/using/configuring-submit-actions.md#p-server-side-revalidation-in-adaptive-form-p)。
-* 服务器端验证将验证表单模型。建议为验证创建单独的客户端库，并且不要在同一客户端库中将其与HTML样式和DOM操作等其他内容混合。
+* 服务器端验证将验证表单模型。 建议为验证创建单独的客户端库，并且不要在同一客户端库中将其与HTML样式和DOM操作等其他内容混合。
 
 ### 本地化自适应表单 {#localizing-adaptive-forms}
 
@@ -311,22 +311,22 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 * 备份现有客户端库、自定义代码和配置。
 * 在新环境中以指定的顺序手动部署产品软件包和修补程序。
 * 手动部署特定于项目的代码包和捆绑包，并将其作为单独的包或捆绑包部署到新的AEM服务器上。
-* (*仅适用于JEE上的AEM Forms*)在Forms Workflow服务器上手动部署LCA和DSC。
+* （*仅适用于JEE上的AEM Forms*）在Forms Workflow服务器上手动部署LCA和DSC。
 * 使用[Export-Import](/help/forms/using/import-export-forms-templates.md)功能将资产移动到新环境。 您还可以配置复制代理并发布资产。
 * 升级时，请将所有已弃用的API和功能替换为新的API和功能。
 
-### 配置AEM {#configuring-aem}
+### 配置 AEM {#configuring-aem}
 
 以下是配置AEM以提高整体性能的一些最佳实践：
 
 * 从Felix控制台为JavaScript和CSS启用HTML客户端库压缩。
-* 在AEM Dispatcher上缓存`/etc.clientlibs/fd`中的所有客户端库和任何其他自定义客户端库，以提高已发布表单的响应速度和安全性。 有关详细信息，请参阅[Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher.html)。
+* 在AEM Dispatcher上缓存`/etc.clientlibs/fd`中的所有客户端库和任何其他自定义客户端库，以提高已发布表单的响应速度和安全性。 有关详细信息，请参阅[Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)。
 
 * 不缓存`/content/forms/af/`和`/content/dam/formsanddocuments/*`路径。 有关配置自适应表单缓存的详细信息，请参阅[缓存自适应表单](/help/forms/using/configure-adaptive-forms-cache.md)。
 
 * 通过Web服务器压缩模块启用HTML。 有关详细信息，请参阅[AEM Forms服务器的性能优化](/help/forms/using/performance-tuning-aem-forms.md)。
 * 增加大型表单的每个请求配置的调用。 请参阅[优化大型复杂表单的性能](#optimizing-performance-of-large-and-complex-forms)。
-* 创建由错误处理程序[显示的](/help/sites-developing/customizing-errorhandler-pages.md)自定义错误页面。
+* 创建由错误处理程序](/help/sites-developing/customizing-errorhandler-pages.md)显示的[自定义错误页面。
 * 安全的AEM Forms服务器。
 
    * 使用`nosamplecontent`运行模式以确保在生产服务器上没有部署示例内容和示例用户。 请参阅[在生产就绪模式下运行AEM](/help/sites-administering/production-ready.md)。
@@ -342,7 +342,7 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 * **存储草稿数据**：如果使用自适应表单的草稿功能，则应实施自定义服务提供接口(SPI)，以将草稿数据存储到更安全的存储（如数据库）。 有关详细信息，请参阅将草稿和提交组件与数据库集成的[示例](/help/forms/using/integrate-draft-submission-database.md)。
 
-* **存储提交数据**：如果您使用表单门户提交存储，则应该实施自定义SPI以将提交数据存储在数据库中。 有关示例集成，请参阅将草稿和提交组件与数据库[集成的](/help/forms/using/integrate-draft-submission-database.md)示例。
+* **存储提交数据**：如果您使用表单门户提交存储，则应该实施自定义SPI以将提交数据存储在数据库中。 有关示例集成，请参阅将草稿和提交组件与数据库](/help/forms/using/integrate-draft-submission-database.md)集成的[示例。
 
   您还可以编写自定义提交操作，将表单数据和附件存储在安全存储中。 有关详细信息，请参阅[为自适应表单编写自定义提交操作](/help/forms/using/custom-submit-action-form.md)。
 
@@ -363,11 +363,11 @@ AEM提供可用于本地化自适应表单的翻译工作流。 有关信息，�
 
 AEM Forms规则编辑器提供了一个用于创建和管理规则的可视化界面，无需进行大量编码。 这对于不具备高级编程技能但需要在表单中定义和维护业务规则的业务用户或表单设计人员特别有用，这里我们将讨论一些使用案例，其中规则编辑器允许您：
 
-* &#x200B;<!-- Allows you --> 为表单定义业务规则，而无需大量的编程。
-* &#x200B;<!-- Use the Rule Editor when you need --> 在表单中实施条件逻辑。 这包括显示或隐藏表单元素、根据特定条件更改字段值或动态更改表单的行为。
-* &#x200B;<!--When you want --> 要对表单提交强制实施数据验证规则，可以使用规则编辑器来定义验证条件。
-* &#x200B;<!-- When you need --> 要将表单与外部数据源(FDM)或服务集成，规则编辑器可帮助定义用于在表单交互期间获取、显示或处理数据的规则。
-* &#x200B;<!-- If you want -->要创建响应用户操作的动态和交互式表单，您可以使用规则编辑器定义实时控制表单元素行为的规则。
+* <!-- Allows you --> 为表单定义业务规则，而无需大量的编程。
+* <!-- Use the Rule Editor when you need --> 在表单中实施条件逻辑。 这包括显示或隐藏表单元素、根据特定条件更改字段值或动态更改表单的行为。
+* <!--When you want --> 要对表单提交强制实施数据验证规则，可以使用规则编辑器来定义验证条件。
+* <!-- When you need --> 要将表单与外部数据源(FDM)或服务集成，规则编辑器可帮助定义用于在表单交互期间获取、显示或处理数据的规则。
+* <!-- If you want -->要创建响应用户操作的动态和交互式表单，您可以使用规则编辑器定义实时控制表单元素行为的规则。
 
 规则编辑器适用于AEM Forms Foundation组件和核心组件。
 

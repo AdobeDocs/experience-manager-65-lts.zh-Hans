@@ -1,5 +1,5 @@
 ---
-title: HTTP2内容交付
+title: 基于 HTTP2 的内容传递
 description: 了解HTTP/2如何改进浏览器和服务器的通信方式，实现更快的信息传输，同时降低所需的处理能力。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 7576e0e3-b05a-483b-9d38-316ddf0d5816
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '788'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ HTTP/2改进了浏览器和服务器的通信方式，允许更快地传输信�
 
 以下网站以简明扼要的方式介绍了HTTP/2及其好处：
 
-[关于HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)的须知事项
+[您必须了解的HTTP/2相关信息](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## 使用HTTP/2进行内容交付有哪些主要好处？ {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -61,7 +61,7 @@ Adobe自己的测试得到了以下结果：
 
 您启动切换到HTTP/2的请求；不会自动为您完成此操作。
 
-1. 要切换到HTTP/2，请启动Adobe客户支持请求。 请参阅[打开支持票证](https://experienceleague.adobe.com/zh-hans?support-solution=General&lang=en&support-tab=home#support)。
+1. 要切换到HTTP/2，请启动Adobe客户支持请求。 请参阅[打开支持票证](https://experienceleague.adobe.com/?support-solution=General&lang=en&support-tab=home#support)。
 
    1. 在您的支持请求中提供以下信息：
 

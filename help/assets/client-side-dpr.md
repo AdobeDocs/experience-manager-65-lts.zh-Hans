@@ -7,7 +7,7 @@ feature: Smart Imaging
 exl-id: 3b4f3624-d76d-4835-834b-e8610c2c40bd
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 0%
    您可以将两个DPR脚本合并到一个脚本中，以避免多个网络请求。
 
    Adobe建议您在HTML页面的&#x200B;_之前加载这些脚本_。
-Adobe还建议您将应用程序Bootstrap在不同的HTML标记下，而不是在正文元素下。 原因是`dprImageInjection.js`动态注入HTML页面中正文部分顶部的图像标记。
+Adobe还建议您将应用程序Bootstrap在不同的HTML标记下，而不是在正文元素下。原因是`dprImageInjection.js`动态注入HTML页面中正文部分顶部的图像标记。
 
 ## JavaScript文件下载 {#client-side-dpr-script}
 
