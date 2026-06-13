@@ -12,7 +12,7 @@ role: Admin
 exl-id: af957cd7-ad3d-46f2-9ca5-e175538104f1
 source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '5965'
+source-wordcount: '6331'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ AEM作者已连接到`mongod`实例，每个AEM作者均连接到所有三个`mo
 
 如果运行项目的不同技术团队之间通信良好，则支持虚拟化环境。 这种支持包括运行AEM的团队、拥有操作系统的团队以及管理虚拟化基础架构的团队。
 
-对于MongoDB实例的I/O容量有特定的要求，必须由管理虚拟化环境的团队进行管理。 如果项目使用云部署(如Amazon Web Services)，则必须为实例配置足够的I/O容量和一致性，以支持MongoDB实例。 否则，MongoDB进程和Oak存储库会不可靠和不稳定地执行。
+对于MongoDB实例的I/O容量有特定的要求，必须由管理虚拟化环境的团队进行管理。 如果项目使用云部署（如Amazon Web Services），则必须为实例配置足够的I/O容量和一致性，以支持MongoDB实例。 否则，MongoDB进程和Oak存储库会不可靠和不稳定地执行。
 
 在虚拟化环境中，MongoDB需要特定的I/O和VM配置，以确保MongoDB的存储引擎不会受到VMWare资源分配策略的损害。 成功的实施可确保各个团队之间不存在障碍，并且所有团队都已注册以提供所需的性能。
 
@@ -80,7 +80,7 @@ RAM不足会导致性能显着降低。 工作集和数据库的大小与应用�
 
 为了帮助执行负载测试过程，可以假定工作集与数据库总大小的比率如下：
 
-* 固态硬盘存储为1:10
+* 1:10用于SSD存储
 * 硬盘存储为1:3
 
 这些比率意味着对于SSD部署，2 TB的数据库需要200 GB的RAM。
@@ -131,7 +131,7 @@ Ganglia是此类系统的一个良好示例，它提供了所需信息的范围�
 
 对于由多台服务器组成的群集，生产系统要求进行中央日志聚合。 Splunk等软件支持日志聚合，允许团队分析应用程序的行为模式，而无需手动收集日志。
 
-## 核对清单 {#checklists}
+## 清单 {#checklists}
 
 本节介绍在实施项目之前，应执行的各个步骤，以确保正确设置AEM和MongoDB部署。
 
@@ -145,7 +145,7 @@ Ganglia是此类系统的一个良好示例，它提供了所需信息的范围�
 1. 任何AEM服务器与任何MongoDB服务器之间的数据包延迟都小于2毫秒，没有数据包丢失，标准分布为1毫秒或更少。
 1. 确保AEM与MongoDB服务器之间的跃点数不超过两个
 1. 两个MongoDB服务器之间的跳数不能超过两个
-1. 任何核心服务器(MongoDB或AEM或任何组合)之间都没有高于OSI级别3的路由器。
+1. 任何核心服务器（MongoDB或AEM或任何组合）之间都没有高于OSI级别3的路由器。
 1. 如果使用VLAN中继或任何形式的网络隧道，则必须遵守数据包延迟检查。
 
 ### AEM配置 {#aem-configuration}
@@ -260,7 +260,7 @@ MongoDB运行在多种操作系统上，包括各种Linux®风格、Windows和ma
    * andkernel.threads-64000的最大值
 
 * 确保系统已配置交换空间。 有关适当大小的详细信息，请参阅操作系统的文档。
-* 确保正确设置系统默认的TCP keepalive。 值为300通常为副本集和共享群集提供更好的性能。 请参阅：[TCP keepalive时间是否影响MongoDB部署？常见问题解答中的](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive)以了解更多信息。
+* 确保正确设置系统默认的TCP keepalive。 值为300通常为副本集和共享群集提供更好的性能。 请参阅：[TCP keepalive时间是否影响MongoDB部署？](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) ，以了解更多信息。
 
 #### Windows {#windows}
 

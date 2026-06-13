@@ -11,7 +11,7 @@ role: Admin
 exl-id: 68a4d4b2-91a3-4545-a491-2a1ec08ceec5
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2072'
+source-wordcount: '2078'
 ht-degree: 7%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 7%
 
 [范围的谓词](#predicates-and-their-settings)现成可用。 您可以添加多个谓词，其中包括“属性”谓词，以搜索与您指定的单个属性匹配的资产。 或者，使用“选项”谓词来搜索与您为特定属性指定的一个或多个值匹配的资产。
 
-您可以[配置在各种控制台和资产浏览器（编辑页面时）中使用的搜索表单](#configuring-your-search-forms)。 可通过以下方式访问用于配置这些表单[&#128279;](#configuring-your-search-forms)的对话框：
+您可以[配置在各种控制台和资产浏览器（编辑页面时）中使用的搜索表单](#configuring-your-search-forms)。 可通过以下方式访问用于配置这些表单](#configuring-your-search-forms)的[对话框：
 
 * **工具**
 
@@ -62,7 +62,7 @@ ht-degree: 7%
 
   此配置定义在资产浏览器中搜索产品时（编辑页面时）可用的选项。
 
-* **页面编辑器(Dynamic Media Classic [以前为Scene7]搜索)**：
+* **页面编辑器（Dynamic Media Classic [以前为Scene7]搜索）**：
 
   此配置定义在资产浏览器中搜索Scene7资源（编辑页面时）时可用的选项。
 
@@ -385,7 +385,7 @@ ht-degree: 7%
   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **选项节点路径**
-与&#x200B;**选项路径**&#x200B;几乎相同，只是该路径位于公共谓词字段中，其他路径专用于资产。
+与**选项路径**&#x200B;几乎相同，只是该路径位于公共谓词字段中，其他路径专用于资源。
 
 * **单选**
 如果选中，这些选项将呈现为仅允许单个选择的复选框。 如果错误地选中此复选框，则可取消选中此复选框。
@@ -393,7 +393,7 @@ ht-degree: 7%
 * **发布和Live Copy属性名称**
 站点特定谓词的发布和Live Copy复选框的标签。
 
-* **设置**&#x200B;选项卡中的字段标签上的&amp;amp；ast；表示这些字段是必填字段，如果保留为空，则会显示错误消息。
+* **设置**&#x200B;选项卡中的字段标签上的&amp;ast；表示这些字段是必填字段，如果留空，则会显示错误消息。
 
 ## 配置搜索Forms {#configuring-your-search-forms}
 
@@ -434,7 +434,7 @@ ht-degree: 7%
 
    例如，**日期范围谓词**&#x200B;的设置：
 
-   日期范围谓词![&#128279;](assets/chlimage_1-376.png)的属性
+   日期范围谓词](assets/chlimage_1-376.png)的![属性
 
 1. 根据需要进行更改，并通过&#x200B;**完成**&#x200B;确认。
 
@@ -552,7 +552,7 @@ ht-degree: 7%
   </tr>
   <tr>
    <td>预览</td>
-   <td><code>/var/dam/content</code>节点的读取、写入和删除权限。<code>/apps</code>节点上的<br />读、写权限。</td>
+   <td><code>/var/dam/content</code>节点的读取、写入和删除权限。<br /> <code>/apps</code>节点的读、写权限。</td>
   </tr>
  </tbody>
 </table>
