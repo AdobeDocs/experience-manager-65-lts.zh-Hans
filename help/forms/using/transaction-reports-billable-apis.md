@@ -10,8 +10,8 @@ role: Admin, User, Developer
 exl-id: d9dc7630-a157-4202-8caf-7c55e348c06e
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 7%
+source-wordcount: '2359'
+ht-degree: 5%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/using-communications/transaction-reports-billable-apis)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/using-communications/transaction-reports-billable-apis)。
 
 AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某些API作为交易入账，而其他API则作为自由使用。 本文档提供了在交易报表中作为交易入账的所有API的列表。 以下是一些使用计费API的常见方案：
 
@@ -203,7 +203,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
    <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PDFOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePDFOutputBatch</a></td>
    <td>合并数据和模板以创建一组PDF文档。</td>
    <td>已处理的文档</td>
-   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，Transaction Reporting服务会将每个记录计为单独的PDF演绎版。 <br>您可以使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>标志将多个呈现合并到单个PDF文件。 无论标志的状态如何，服务都会将每个记录计为单独的PDF演绎版。 </td>
+   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，Transaction Reporting服务会将每个记录计为单独的PDF演绎版。<br> 您可以使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>标志将多个呈现合并到单个PDF文件。 无论标志的状态如何，服务都会将每个记录计为单独的PDF演绎版。 </td>
   </tr>
   <tr>
    <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PrintedOutputOptions-" target="_blank">generatePrintedOutput</a></td>
@@ -221,7 +221,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
    <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePrintedOutputBatch-java.util.Map-java.util.Map-com.adobe.fd.output.api.PrintedOutputOptions-com.adobe.fd.output.api.BatchOptions-" target="_blank">generatePrintedOutputBatch</a></td>
    <td>将一组XDP和PDF文档转换为一组PostScript (PS)、打印机命令语言(PCL)和ZPL文件格式。 </td>
    <td>已处理的文档</td>
-   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，Transaction Reporting服务会将每个记录计为单独的PDF演绎版。 <br>您可以使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>标志将多个呈现合并到单个PDF文件。 无论标志的状态如何，服务都会将每个记录计为单独的PDF演绎版。 </td>
+   <td> generatePDFOutputBatch API将表单模板与记录组合在一起，并生成PDF。 当您处理一批记录时，Transaction Reporting服务会将每个记录计为单独的PDF演绎版。<br> 您可以使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/BatchOptions.html#getGenerateManyFiles--">getGenerateManyFiles</a>标志将多个呈现合并到单个PDF文件。 无论标志的状态如何，服务都会将每个记录计为单独的PDF演绎版。 </td>
   </tr>
  </tbody>
 </table>
@@ -464,7 +464,7 @@ AEM Forms提供了多个API来提交表单、处理文档和渲染文档。 某�
    <td>附加信息</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">渲染</a> (转换为PDF)</td>
+   <td><a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/fd/ccm/channels/print/api/model/PrintChannel.html" target="_blank">渲染</a> （转换为PDF）</td>
    <td>生成交互式通信的PDF版本。</td>
    <td>已渲染的文档</td>
    <td>

@@ -1,5 +1,5 @@
 ---
-title: ConvertPDF服务
+title: ConvertPDF 服务
 description: 使用Adobe Experience Manager Forms ConvertPDF服务将PDF文档转换为PostScript或图像文件。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,16 +10,16 @@ role: Admin, User, Developer
 exl-id: 1f6263f5-e4fb-44c2-a1d2-6046e9d69a48
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 0%
+source-wordcount: '412'
+ht-degree: 1%
 
 ---
 
-# ConvertPDF服务 {#convertpdf-service}
+# ConvertPDF 服务 {#convertpdf-service}
 
 ## 概述 {#overview}
 
-转换PDF服务将PDF文档转换为PostScript或图像文件(JPEG、JPEG 2000、PNG和TIFF)。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
+转换PDF服务将PDF文档转换为PostScript或图像文件（JPEG、JPEG 2000、PNG和TIFF）。 将PDF文档转换为PostScript对于在任何PostScript打印机上进行基于服务器的无人参与打印很有用。 在不支持PDF文档的内容管理系统中存档文档时，将PDF文档转换为多页TIFF文件是一种切实可行的做法。
 
 您可以使用Convert PDF服务完成以下操作：
 
