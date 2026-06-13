@@ -1,5 +1,5 @@
 ---
-title: 员工招聘参考站点演练
+title: 员工招聘参考网站演示
 description: AEM Forms参考网站展示了组织如何使用AEM Forms功能实施员工招聘工作流程。
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ role: Admin, User, Developer
 exl-id: 238cf38b-31f3-4a0b-ad26-b93df2844195
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
 
-# 员工招聘参考站点演练 {#employee-recruitment-reference-site-walkthrough}
+# 员工招聘参考网站演示 {#employee-recruitment-reference-site-walkthrough}
 
 ## 概述 {#overview}
 

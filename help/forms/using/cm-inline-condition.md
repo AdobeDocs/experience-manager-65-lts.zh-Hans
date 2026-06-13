@@ -1,5 +1,5 @@
 ---
-title: 交互式通信和字母中的内联条件和重复
+title: 交互式通信和书信中的内联条件与重复
 description: 通过在交互式通信和信件中使用内联条件和重复，您可以创建高度情境化且结构良好的通信。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: 2d05a36e-c02e-41ef-a03d-2a799aa6eab3
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1660'
-ht-degree: 0%
+source-wordcount: '1670'
+ht-degree: 1%
 
 ---
 
-# 交互式通信和字母中的内联条件和重复{#inline-condition-and-repeat-in-interactive-communications-and-letters}
+# 交互式通信和书信中的内联条件与重复{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 ## 内联条件 {#inline-conditions}
 
@@ -180,7 +180,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   否则，如果您不需要有选择地呈现信息（此处为事务），请通过在对话框中删除以下内容来保持条件为空： `${}`。 当重复表达式窗口为空（不需要重复时没有${}）或包含有效的重复条件时，将启用保存重复表达式。
+   否则，如果您不需要有选择地呈现信息（此处为事务），请通过在对话框中删除以下内容来保持条件为空： `${}`。 当重复表达式窗口为空（无需重复时无${}）或包含有效的重复条件时，将启用保存重复表达式。
 
 1. 选择用于设置动态文本格式的分隔符，然后选择要保存的复选标记：
 
@@ -200,7 +200,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
    * 在预览包含示例数据的信件时，根据相关数据字典创建的示例XML数据文件。
    * 附加到相关数据字典的XML数据文件。
 
-   有关详细信息，请参阅[数据字典](https://helpx.adobe.com/cn/aem-forms/6-2/data-dictionary.html)。
+   有关详细信息，请参阅[数据字典](https://helpx.adobe.com/aem-forms/6-2/data-dictionary.html)。
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 
@@ -218,7 +218,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
 例如，以下内容在一个条件（绿色格式）中重复（红色格式）。
 
-当重复呈现信用卡交易记录时，条件${DD_creditcard_nooftransactions > 0}确保仅在至少有一个交易记录时才呈现重复构造。
+当重复呈现信用卡交易时，条件${DD_creditcard_nooftransactions > 0}确保仅在至少有一个交易时才呈现重复结构。
 
 ![repeatwitincondition](assets/repeatwitincondition.png)
 

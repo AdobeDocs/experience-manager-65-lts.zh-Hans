@@ -1302,7 +1302,7 @@ Document Security服务从PDF文档中删除策略后，您可以将不安全的
 <table>
  <thead>
   <tr>
-   <th><p>密钥名称</p></th>
+   <th><p>键名</p></th>
    <th><p>描述</p></th>
    <th><p>值</p></th>
   </tr>
