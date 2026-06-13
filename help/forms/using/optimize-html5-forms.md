@@ -1,5 +1,5 @@
 ---
-title: 优化HTML5表单
+title: 优化 HTML5 Forms
 description: 您可以优化HTML5表单的输出大小。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: 1ab2fe5d-5fac-4a11-8d27-7c7607f98653
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 0%
+source-wordcount: '284'
+ht-degree: 2%
 
 ---
 
-# 优化HTML5表单 {#optimizing-html-forms}
+# 优化 HTML5 Forms {#optimizing-html-forms}
 
 HTML5表单以HTML5格式呈现表单。 根据窗体大小和窗体中的图像等因素，生成的输出可能会很大。 为了优化数据传输，建议的方法是使用为请求提供服务的Web服务器压缩HTML响应。 此方法可减少响应大小、网络流量以及在服务器和客户端计算机之间流式传输数据所需的时间。
 
@@ -83,4 +83,4 @@ Apache可以使用HTTP或AJP协议与JBoss通信。
    </Location>
    ```
 
-1. 要访问AEM服务器，请使用https://[Apache_server]：80。
+1. 要访问AEM服务器，请使用https://[Apache_server]:80。

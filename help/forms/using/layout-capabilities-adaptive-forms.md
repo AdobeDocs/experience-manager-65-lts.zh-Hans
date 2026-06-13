@@ -11,14 +11,14 @@ role: User, Developer
 exl-id: 23ca3bff-1a7e-48cc-83b7-b2ec8545cd00
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 5%
+source-wordcount: '1246'
+ht-degree: 10%
 
 ---
 
 # 自适应表单的布局功能{#layout-capabilities-of-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
@@ -67,7 +67,7 @@ Adobe Experience Manager (AEM)允许您创建易于使用的自适应表单，�
 
 自适应表单中的面板布局列表
 
-### 响应 — 页面上的所有内容，无需导航 {#responsive-everything-on-one-page-without-navigation-br}
+### 响应 - 在一个页面上显示全部内容，且不使用导航 {#responsive-everything-on-one-page-without-navigation-br}
 
 使用此面板布局可创建响应式布局，该布局可调整设备的屏幕大小，而无需任何专门的导航。
 
@@ -99,7 +99,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 使用向导的表单
 
-### 可折叠项设计的布局 {#layout-for-accordion-design}
+### 折叠设计布局 {#layout-for-accordion-design}
 
 使用此布局，您可以将`Panel adaptive form`组件放在具有折叠样式导航的面板中。 使用此布局，您还可以创建可重复的面板。 可重复面板允许您根据需要动态添加或移除面板。 您可以定义面板重复的最小和最大次数。 此外，可以根据面板项中提供的信息来动态确定面板的标题。
 
@@ -109,7 +109,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 使用折叠布局创建的可重复面板
 
-### 选项卡式布局 — 选项卡显示在左侧 {#tabbed-layout-tabs-appear-on-the-left}
+### 选项卡式布局 - 选项卡显示在左侧 {#tabbed-layout-tabs-appear-on-the-left}
 
 使用此布局，您可以将`Panel adaptive form`组件放在具有选项卡导航的面板中。 选项卡位于面板内容的左侧。
 
@@ -117,7 +117,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 显示在面板左侧的选项卡
 
-### 选项卡式布局 — 选项卡显示在顶部 {#tabbed-layout-tabs-appear-on-the-top}
+### 选项卡式布局 - 选项卡显示在顶部 {#tabbed-layout-tabs-appear-on-the-top}
 
 使用此布局，您可以将`Panel adaptive form`组件放在具有选项卡导航的面板中。 选项卡位于面板内容的顶部。
 
@@ -139,7 +139,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 使用移动设备布局时，通过点按![aem6forms_form_menu](assets/aem6forms_form_menu.png)图标，可以使用表单菜单访问各种表单面板。
 
-### 在表单标题中使用面板标题进行布局 {#layout-with-panel-titles-in-the-form-header}
+### 在表单页眉中包含面板标题的布局 {#layout-with-panel-titles-in-the-form-header}
 
 顾名思义，此布局显示面板标题以及导航菜单和导航栏。 此布局还提供用于导航的“下一个”和“上一个”图标。
 
@@ -147,7 +147,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 移动版面以及表单标题中的面板标题
 
-### 在表单标题中没有面板标题的布局 {#layout-without-panel-titles-in-the-form-header}
+### 在表单页眉中不包含面板标题的布局 {#layout-without-panel-titles-in-the-form-header}
 
 顾名思义，此布局仅显示没有面板标题的导航菜单和导航栏。 此布局还提供用于导航的“下一个”和“上一个”图标。
 
@@ -175,7 +175,7 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 工具栏的默认视图
 
-### 移动固定工具栏布局 {#mobile-fixed-layout-for-toolbar}
+### 工具栏的移动固定布局 {#mobile-fixed-layout-for-toolbar}
 
 选择此布局可提供桌面和移动设备的替代布局。
 
@@ -185,4 +185,4 @@ window.guideBridge.validate([], this.panel.navigationContext.currentItem.somExpr
 
 ![工具栏的移动固定布局](assets/toolbar_layout_mobile_fixed.png)
 
-移动固定工具栏布局
+工具栏的移动固定布局

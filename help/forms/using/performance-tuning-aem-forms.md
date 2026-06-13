@@ -11,7 +11,7 @@ feature: Adaptive Forms
 exl-id: 4009c85e-cb8a-4bed-a6ff-7c76fe78a47f
 source-git-commit: 060bb23d64a90f0b2da487ead4c672cbf471c9a8
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 您可以使用AEM Forms Web Configuration Console中的&#x200B;**移动Forms配置**&#x200B;组件来配置并控制AEM的缓存策略，网址为：
 
-* (OSGi上的AEM Forms) `https://'[server]:[port]'/system/console/configMgr`
+* （OSGi上的AEM Forms） `https://'[server]:[port]'/system/console/configMgr`
 
 <!--
 * (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`

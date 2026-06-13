@@ -1,5 +1,5 @@
 ---
-title: 条形码Forms服务
+title: 条形码表单服务
 description: 使用AEM Forms条形码Forms服务从条形码的电子图像中提取数据。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: f823d240-88c7-4357-9dbb-6cc069451721
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
 
-# 条形码Forms服务{#barcoded-forms-service}
+# 条形码表单服务{#barcoded-forms-service}
 
 ## 概述 {#overview}
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 您可以使用条形码Forms服务完成以下任务：
 
-* 从条形码图像(TIFF或PDF)中提取条形码数据。 数据以分隔文本形式存储。
+* 从条形码图像（TIFF或PDF）中提取条形码数据。 数据以分隔文本形式存储。
 * 将分隔的文本数据转换为XML（XDP或XFDF）。 XML数据比分隔文本更容易解析。 此外，XDP或XFDF格式的数据也可作为AEM Forms中其他服务的输入。
 
 对于图像中的每个条形码，条形码Forms服务会查找该条形码，对其进行解码并提取数据。 该服务返回XML文档内容元素中的条形码数据（必要时使用实体编码）。 例如，以下表单的TIFF扫描图像包含两个条形码：
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ### 使用条形码表单的工作流 {#workflows-that-use-barcoded-forms}
 
-表单作者使用Designer创建交互式条形码表单。 (请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。)当用户使用Adobe Reader或Acrobat填写条形码表单时，会自动更新条形码以对表单数据进行编码。
+表单作者使用Designer创建交互式条形码表单。 （请参阅[Designer帮助](https://www.adobe.com/go/learn_aemforms_designer_63)。） 当用户使用Adobe Reader或Acrobat填写条形码表单时，会自动更新条形码以编码表单数据。
 
 条形码Forms服务可用于将纸上存在的数据转换为电子格式。 例如，在填写并打印条形码表单时，可以扫描打印的副本并将其用作条形码Forms服务的输入。
 

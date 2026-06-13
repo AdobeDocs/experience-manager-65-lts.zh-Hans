@@ -11,7 +11,7 @@ role: Admin, User, Developer
 exl-id: a1791374-d05c-4f60-b178-152a7bc06c45
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '3215'
+source-wordcount: '3164'
 ht-degree: 53%
 
 ---
@@ -91,7 +91,7 @@ Click to enlarge
 
    * **数据模型对象**
 用于查看表单模型层次结构。
-它可让您将表单模型元素拖放到自适应表单上。 已添加的元素会自动转换为表单组件，同时保留其原始属性。 当表单使用 XML 架构、JSON 架构或 XDP 模板时，您会看到数据模型对象。
+它可让您将表单模型元素拖放到自适应表单上。添加的元素会自动转换为表单组件，同时保留其原始属性。当表单使用XML架构、JSON架构或XDP模板时，您可以看到数据模型对象。
 
 * **属性浏览器**
 
@@ -159,7 +159,7 @@ Click to enlarge
   </tr>
   <tr>
    <td>文件附件</td>
-   <td><p>添加一个按钮，可让用户浏览支持文档并将其附加到表单。 可以将多个文件附加到“文件”附件组件。 您还可以在组件的属性浏览器中为附件指定&#x200B;**[!UICONTROL 最大文件大小]**&#x200B;和&#x200B;**[!UICONTROL 支持的文件类型]**。 </p> <p><strong> 注意: </strong><ul> <li> 组件不支持附加文件名以字符(.)开头，包含字符\ / ： * ？ “ &lt; &gt; | ； % $ ，或包含为Windows操作系统保留的特殊文件名，如nul、prn、con、lpt或com。 </li> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请选择并逐一附加文件。 不能同时选择和附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关更多信息，请参阅<a href="https://helpx.adobe.com/cn/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支持的文件格式</a>。 </li></ul></p> </td>
+   <td><p>添加一个按钮，可让用户浏览支持文档并将其附加到表单。 可以将多个文件附加到“文件”附件组件。 您还可以在组件的属性浏览器中为附件指定&#x200B;**[!UICONTROL 最大文件大小]**&#x200B;和&#x200B;**[!UICONTROL 支持的文件类型]**。 </p> <p><strong> 注意: </strong><ul> <li> 组件不支持附加文件名以字符(.)开头，包含字符\ / ： * ？ “ &lt; &gt; | ； % $，或包含为Windows操作系统保留的特殊文件名，如nul、prn、con、lpt或com。 </li> <li> 要将多个文件附加到在Apple Safari浏览器中打开的文件附件组件，请选择并逐一附加文件。 不能同时选择和附加多个文件。</li> <li>文件附件组件支持为Adobe Sign启用的自适应表单中的预定义文件格式集。 有关更多信息，请参阅<a href="https://helpx.adobe.com/cn/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">支持的文件格式</a>。 </li></ul></p> </td>
   </tr>
   <tr>
    <td>文件附件列表</td>

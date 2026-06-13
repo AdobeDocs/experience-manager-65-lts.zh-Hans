@@ -11,7 +11,7 @@ solution: Experience Manager, Experience Manager Forms
 exl-id: 9c516c90-1b1d-406a-b42d-909aae8bb634
 source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '848'
 ht-degree: 7%
 
 ---
@@ -36,12 +36,12 @@ ht-degree: 7%
 
 可以使用两种方法识别自适应表单的区域设置。 呈现自适应表单时，它通过以下方式标识请求的区域设置：
 
-* 正在查看自适应表单URL中的`[local]`选择器。 URL 的格式为 `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`。使用`[local]`选择器允许缓存自适应表单。
+* 正在查看自适应表单URL中的`[local]`选择器。 URL 的格式为 `http://host:port/content/forms/af/[afName].[locale].html?wcmmode=disabled`。 使用`[local]`选择器允许缓存自适应表单。
 
 * 按指定顺序查看以下参数：
 
    * 请求参数`afAcceptLang`
-要覆盖用户的浏览器区域设置，您可以传递`afAcceptLang`请求参数以强制实施区域设置。 例如，以下URL强制以日语区域设置呈现表单：
+要覆盖用户的浏览器区域设置，您可以传递`afAcceptLang`请求参数以强制实施区域设置。例如，以下URL强制以日语区域设置呈现表单：
      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
    * 使用`Accept-Language`标头在请求中指定的用户的浏览器区域设置。
@@ -83,9 +83,9 @@ AEM Forms当前支持英语(en)、西班牙语(es)、法语(fr)、意大利语(i
 
 ### 为区域设置添加XFA客户端库 {#add-xfa-client-library-for-a-locale-br}
 
-在`cq:ClientLibraryFolder`下创建类别为`etc/<folderHierarchy>`的`xfaforms.I18N.<locale>`类型的节点，并将以下文件添加到客户端库：
+在`etc/<folderHierarchy>`下创建类别为`xfaforms.I18N.<locale>`的`cq:ClientLibraryFolder`类型的节点，并将以下文件添加到客户端库：
 
-* **I18N.js**&#x200B;定义了`xfalib.locale.Strings`中定义的`<locale>`的`/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`。
+* **I18N.js**&#x200B;定义了`/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`中定义的`<locale>`的`xfalib.locale.Strings`。
 
 * **js.txt**&#x200B;包含以下内容：
 
@@ -97,12 +97,12 @@ I18N.js
 
 ### 为区域设置添加自适应表单客户端库 {#add-adaptive-form-client-library-for-a-locale-br}
 
-在`cq:ClientLibraryFolder`下创建类型为`etc/<folderHierarchy>`的节点，类别为`guides.I18N.<locale>`，依赖项为`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 ”
+在`etc/<folderHierarchy>`下创建类型为`cq:ClientLibraryFolder`的节点，类别为`guides.I18N.<locale>`，依赖项为`xfaforms.3rdparty`、`xfaforms.I18N.<locale>`和`guide.common`。 &quot;
 
 将以下文件添加到客户端库：
 
-* **i18n.js**&#x200B;定义`guidelib.i18n`，根据`datePatterns`区域设置集规范`timePatterns`中描述的XFA规范，其模式为`dateTimeSymbols`的“calendarSymbols”、`numberPatterns`、`numberSymbols`、`currencySymbols`、`typefaces`、`<locale>`、[和](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)。 您还可以看到如何为`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`中其他支持的区域设置定义它。
-* **LogMessages.js**&#x200B;定义了`guidelib.i18n.strings`中定义的`guidelib.i18n.LogMessages`的`<locale>`和`/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`。
+* **i18n.js**&#x200B;定义`guidelib.i18n`，根据[区域设置集规范](https://helpx.adobe.com/content/dam/Adobe/specs/xfa_spec_3_3.pdf)中描述的XFA规范，其模式为`<locale>`的“calendarSymbols”、`datePatterns`、`timePatterns`、`dateTimeSymbols`、`numberPatterns`、`numberSymbols`、`currencySymbols`和`typefaces`。 您还可以看到如何为`/etc/clientlibs/fd/af/I18N/fr/javascript/i18n.js`中其他支持的区域设置定义它。
+* **LogMessages.js**&#x200B;定义了`/etc/clientlibs/fd/af/I18N/fr/javascript/LogMessages.js`中定义的`<locale>`的`guidelib.i18n.strings`和`guidelib.i18n.LogMessages`。
 * **js.txt**&#x200B;包含以下内容：
 
 ```text
@@ -114,12 +114,12 @@ LogMessages.js
 
 仅当要添加的`<locale>`不属于`en`、`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`时才执行此步骤。
 
-1. 在`nt:unstructured`下创建一个`languages`节点`etc`（如果尚未存在）。
+1. 在`etc`下创建一个`nt:unstructured`节点`languages`（如果尚未存在）。
 
 1. 将多值字符串属性`languages`添加到节点（如果尚不存在）。
 1. 添加`<locale>`默认区域设置值`de`、`es`、`fr`、`it`、`pt-br`、`zh-cn`、`zh-tw`、`ja`、`ko-kr`（如果尚未存在）。
 
-1. 将`<locale>`添加到`languages`的`/etc/languages`属性的值。
+1. 将`<locale>`添加到`/etc/languages`的`languages`属性的值。
 
 `<locale>`将显示在`https://'[server]:[port]'/libs/cq/i18n/translator.html`。
 
@@ -129,7 +129,7 @@ LogMessages.js
 
 >[!NOTE]
 >
-> 建议使用 “Ctrl + C” 命令重新启动 SDK。如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ## 用于添加西班牙语支持的示例库 {#sample-libraries-for-adding-support-for-spanish}
 

@@ -11,14 +11,14 @@ role: User, Developer
 exl-id: 69734a2b-7f9d-4661-a1e9-3bf6e362c272
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2213'
-ht-degree: 2%
+source-wordcount: '2298'
+ht-degree: 3%
 
 ---
 
 # 预填充自适应表单字段{#prefill-adaptive-form-fields}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
@@ -92,7 +92,7 @@ ht-degree: 2%
 
 * **提交的XML结构**：当不使用预填充XML时，提交的XML包含`afData`包装器标记中绑定和未绑定字段的数据。 如果使用预填充XML，则提交的XML具有与预填充XML相同的结构。 如果预填充XML以`afData`根标记开头，则输出XML也具有相同的格式。 如果预填充XML没有`afData/afBoundData`包装器，而是直接从架构根标记（如`employeeData`）开始，则提交的XML也以`employeeData`标记开始。
 
-Prefill-Submit-Data-ContentPackage.zip
+预填充 — 提交 — Data-ContentPackage.zip
 
 [获取文件](assets/prefill-submit-data-contentpackage.zip)
 包含预填充数据和已提交数据的示例
@@ -139,7 +139,7 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->建议不要在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空`bindRef`的面板)中使用未绑定字段。 它可能会导致这些未绑定字段的数据丢失。 此外，建议整个表单中的字段名称是唯一的，特别是对于未绑定的字段。
+>建议不要在绑定面板（通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空`bindRef`的面板）中使用未绑定字段。 它可能会导致这些未绑定字段的数据丢失。 此外，建议整个表单中的字段名称是唯一的，特别是对于未绑定的字段。
 
 #### 不具有afData和afBoundData包装器的示例 {#an-example-without-afdata-and-afbounddata-wrapper}
 
@@ -204,11 +204,11 @@ Prefill-Submit-Data-ContentPackage.zip
 
 >[!NOTE]
 >
->不建议在绑定面板(通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板)中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**&#x200B;** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
+>不建议在绑定面板（通过从Sidekick或“数据源”选项卡拖动组件而创建的具有非空bindRef的面板）中使用未绑定字段，因为这样可能会导致未绑定字段的数据丢失。**&#x200B;** 建议在表单中保留唯一的字段名称，尤其是未绑定的字段。
 
 ### 无表单模型的自适应表单 {#adaptive-form-with-no-form-model}
 
-对于没有表单模型的自适应表单，所有字段的数据都在`<data>`的`<afUnboundData> tag`标记下。
+对于没有表单模型的自适应表单，所有字段的数据都在`<afUnboundData> tag`的`<data>`标记下。
 
 此外，请注意以下事项：
 
@@ -242,7 +242,7 @@ Prefill-Submit-Data-ContentPackage.zip
 >预填充服务配置适用于自适应表单、HTML5表单和HTML5表单集。
 
 1. 使用URL打开&#x200B;**[!UICONTROL Adobe Experience Manager Web控制台配置]**：\
-   https://&lt;服务器>：&lt;端口>/system/console/configMgr
+   https://<服务器>：<端口>/system/console/configMgr
 1. 搜索并打开&#x200B;**[!UICONTROL 默认预填充服务配置]**。
 
    ![预填充配置](assets/prefill_config_new.png)
@@ -314,7 +314,7 @@ https://localhost:4502/content/forms/af/abc.html?wcmmode=disabled&dataRef=servic
 
 ### 在slingRequest中设置数据属性 {#setting-data-attribute-in-slingrequest}
 
-您还可以在`data`中设置`slingRequest`属性，其中`data`属性是包含XML或JSON的字符串，如下面的示例代码所示（示例为XML）：
+您还可以在`slingRequest`中设置`data`属性，其中`data`属性是包含XML或JSON的字符串，如下面的示例代码所示（示例为XML）：
 
 ```javascript
 <%
