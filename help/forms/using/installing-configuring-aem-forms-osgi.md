@@ -1,5 +1,5 @@
 ---
-title: 安装和配置数据捕获功能
+title: 安装和配置数据采集功能
 description: 安装和配置自适应表单、PDF forms和HTML5 Forms。 为自适应表单配置Adobe Analytics和Adobe Target ，以分析表单的使用情况并根据用户档案定位用户。
 topic-tags: installing
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ feature: Adaptive Forms,AEM Forms on OSGi
 exl-id: ee917b4b-fd38-4e05-8632-8efb82d9cddc
 source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '1881'
-ht-degree: 4%
+source-wordcount: '1962'
+ht-degree: 10%
 
 ---
 
-# 安装和配置数据捕获功能{#install-and-configure-data-capture-capabilities}
+# 安装和配置数据采集功能{#install-and-configure-data-capture-capabilities}
 
 ## 简介 {#introduction}
 
@@ -27,7 +27,7 @@ AEM Forms提供了一组表单，用于从最终用户获取数据：自适应�
 
 **HTML5 Forms**&#x200B;是PDF forms的浏览器友好版本。 HTML5 Forms适用于不支持PDF插件的环境。 HTML5 Forms支持在不支持基于XFA的PDF的移动设备和桌面浏览器上渲染基于XFA的表单。 这些表单最适合平板电脑和桌面环境。
 
-AEM Forms是一个功能强大的企业级平台，数据捕获(自适应表单、PDF forms和HTML5 Forms)只是AEM Forms的功能之一。 有关功能的完整列表，请参阅[AEM Forms简介](/help/forms/using/introduction-aem-forms.md)。
+AEM Forms是一个功能强大的企业级平台，数据捕获（自适应表单、PDF forms和HTML5 Forms）只是AEM Forms的功能之一。 有关功能的完整列表，请参阅[AEM Forms简介](/help/forms/using/introduction-aem-forms.md)。
 
 ## 部署拓扑 {#deployment-topology}
 
@@ -109,21 +109,21 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 您只需要至少�
 
 AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包含AEM Forms数据捕获和其他功能。 执行以下步骤以安装附加组件包：
 
-1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。您需要 Adobe ID 才能登录 Software Distribution。
+1. 打开 [Software Distribution](https://experience.adobe.com/downloads)。 您需要 Adobe ID 才能登录 Software Distribution。
 1. 选择标题菜单中的&#x200B;**[!UICONTROL Adobe Experience Manager]**。
 1. 在&#x200B;**[!UICONTROL 筛选器]**&#x200B;部分中：
    1. 从&#x200B;**[!UICONTROL 解决方案]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms]**。
    2. 选择包的版本和类型。 您还可以使用&#x200B;**[!UICONTROL 搜索下载]**&#x200B;选项来筛选结果。
 1. 选择适用于您的操作系统的包名称，选择&#x200B;**[!UICONTROL 接受EULA条款]**，然后选择&#x200B;**[!UICONTROL 下载]**。
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
-1. 选择包并单击&#x200B;**[!UICONTROL 安装]**。
+1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
-1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。**&#x200B;在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在`[AEM-Installation-Directory]/crx-quickstart/logs/error.log`文件中并且日志稳定。
+   您还可以通过[AEM Forms发行版](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)文章中列出的直接链接下载包。
+1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在`[AEM-Installation-Directory]/crx-quickstart/logs/error.log`文件中并且日志稳定。
 
    >[!NOTE]
    >
-   > 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   > 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 1. 对所有创作实例和发布实例重复步骤1-7。
 
@@ -171,16 +171,16 @@ AEM Forms具有一些强制和可选配置。 强制配置包括配置BouncyCast
 
 #### 配置序列化代理 {#configure-the-serialization-agent}
 
-列入允许列表对所有Author和Publish实例执行以下步骤，将包添加到中：
+对所有Author和Publish实例执行以下步骤，将包添加到中：
 
-1. 在浏览器窗口中打开AEM Configuration Manager 。 默认URL为`https://'[server]:[port]'/system/console/configMgr`。
+1. 在浏览器窗口中打开AEM Configuration Manager 。 默认 URL 为 `https://'[server]:[port]'/system/console/configMgr`。
 1. 搜索&#x200B;**com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name**&#x200B;并打开配置。
 1. 将&#x200B;**sun.util.calendar**&#x200B;程序包添加到&#x200B;**允许列表**&#x200B;字段。 单击&#x200B;**保存**。
 1. 对所有创作实例和发布实例重复步骤1-3。
 
 ### 可选安装后配置 {#optional-post-installation-configurations}
 
-#### 配置Dispatcher {#configure-dispatcher}
+#### 配置 Dispatcher {#configure-dispatcher}
 
 Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与企业级Web服务器结合使用。 如果您使用[Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)，请为AEM Forms执行以下配置：
 
@@ -200,13 +200,13 @@ Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与
 
 缓存是一种缩短数据访问时间、减少延迟并提高输入/输出(I/O)速度的机制。 自适应表单缓存仅存储自适应表单的HTML内容和JSON结构，而不保存任何预填数据。 它有助于减少渲染自适应表单所需的时间。
 
-* 使用自适应表单缓存时，请使用[AEM Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)来缓存自适应表单的客户端库(CSS和JavaScript)。
+* 使用自适应表单缓存时，请使用[AEM Dispatcher](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/dispatcher-configuration.html)来缓存自适应表单的客户端库（CSS和JavaScript）。
 * 开发自定义组件时，在用于开发的服务器上禁用自适应表单缓存。
 
 执行以下步骤以配置自适应表单缓存：
 
 1. 转到https://&#39;[server]：[port]&#39;/system/console/configMgr上的AEM Web控制台配置管理器。
-1. 单击&#x200B;**自适应表单和交互式通信Web渠道配置**&#x200B;以编辑其配置值。 在“编辑配置值”对话框中，在&#x200B;**自适应Forms的数量**&#x200B;字段中指定AEM Forms服务器实例可以缓存的最大表单或文档数。 默认值为 100。单击&#x200B;**保存**。
+1. 单击&#x200B;**自适应表单和交互式通信Web渠道配置**&#x200B;以编辑其配置值。 在“编辑配置值”对话框中，在&#x200B;**自适应Forms的数量**&#x200B;字段中指定AEM Forms服务器实例可以缓存的最大表单或文档数。 默认值为 100。 单击&#x200B;**保存**。
 
    >[!NOTE]
    >
@@ -222,17 +222,17 @@ Dispatcher是Adobe Experience Manager的缓存和/或负载平衡工具，可与
 
 Adobe Sign支持自适应表单的电子签名工作流。 电子签名改进了法律、销售、工资单、人力资源管理和其他许多方面的文档的处理工作流。
 
-在典型的Adobe Sign和自适应表单方案中，用户填写自适应表单以&#x200B;**申请服务**。 例如，信用卡申请表和公民权益表。在用户填写、签署和提交申请表后，该表将发送给服务提供商以执行后续操作。服务提供商将审核申请，并使用Adobe Sign将申请标记为已批准。 要启用类似的电子签名工作流，您可以将Adobe Sign与AEM Forms集成。
+在典型的Adobe Sign和自适应表单方案中，用户填写自适应表单以&#x200B;**申请服务**。 例如，信用卡申请表和公民权益表。 在用户填写、签署和提交申请表后，该表将发送给服务提供商以执行后续操作。 服务提供商将审核申请，并使用Adobe Sign将申请标记为已批准。 要启用类似的电子签名工作流，您可以将Adobe Sign与AEM Forms集成。
 
 若要将Adobe Sign与AEM Forms一起使用，[将Adobe Sign与AEM Forms集成](/help/forms/using/adobe-sign-integration-adaptive-forms.md)。
 
 #### 配置Adobe Analytics {#configure-adobe-analytics}
 
-AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些量度背后的目的是，根据有关提高表单或文档可用性的更改数据做出明智的决策。
+AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的在于，根据有关使表单或文档更有用所需的更改的数据做出明智的决策。
 
 要将Adobe Analytics与AEM Forms结合使用，请参阅[配置Analytics和报表](/help/forms/using/configure-analytics-forms-documents.md)。
 
-#### 集成Adobe Target {#integrate-adobe-target}
+#### 集成 Adobe Target {#integrate-adobe-target}
 
 如果您的表单提供的体验不吸引人，则客户可能会放弃表单。 虽然这令客户感到沮丧，但也可能会增加贵组织的支持量和成本。 确定并提供提高转化率的正确客户体验是关键而富有挑战性的。 AEM forms拥有此问题的关键。
 

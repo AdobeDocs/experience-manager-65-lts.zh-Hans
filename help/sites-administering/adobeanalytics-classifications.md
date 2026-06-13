@@ -1,5 +1,5 @@
 ---
-title: Adobe分类
+title: Adobe 分类
 description: 了解如何使用Adobe Classifications将分类数据导出到Adobe Analytics。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: Admin
 exl-id: f564bda3-4141-40b3-8c08-140d4da92e2c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '619'
 ht-degree: 5%
 
 ---
 
-# Adobe分类{#adobe-classifications}
+# Adobe 分类{#adobe-classifications}
 
 Adobe分类按计划方式将分类数据导出到[Adobe Analytics](/help/sites-administering/adobeanalytics.md)。 导出程序是&#x200B;**com.adobe.cq.scheduled.exporter.Exporter**&#x200B;的实现。
 

@@ -8,7 +8,7 @@ role: Admin, User, Developer
 exl-id: 5b3beaa6-ca0a-454e-85ee-c3653dd423fe
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2174'
 ht-degree: 10%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 ## 关于本教程  {#about-the-tutorial}
 
-您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
+您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
 
 在本教程结束时，您应该能够执行以下操作：
 
@@ -479,8 +479,8 @@ ht-degree: 10%
 8. 在CRXDE中创建文件夹结构，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
 9. 转到新创建的`clientlibs`文件夹并添加`allowProxy`和`categories`属性。
 10. 导航到`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`并创建css文件夹。
-11. 转到创建的CSS文件夹并创建一个文件。 例如，创建一个文件作为`fonts.css`，并粘贴嵌入代码以及URL。
-    ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
+11. 转到创建的CSS文件夹并创建一个文件。例如，创建一个文件作为`fonts.css`，并粘贴嵌入代码以及URL。
+   ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
 12. 保存更改。
 
 >[!NOTE]

@@ -10,22 +10,22 @@ role: User, Developer
 exl-id: 0ecfd918-2c68-4085-8c6e-440499b84fc1
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2352'
-ht-degree: 5%
+source-wordcount: '2378'
+ht-degree: 6%
 
 ---
 
 # 自适应表单的样式结构{#styling-constructs-for-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 了解CSS和LESS框架。
 
 ## 可自定义的内容 {#what-can-be-customized}
 
-本文列出了自适应表单的公开可用css类。 您可以使用这些类设置自适应表单各种组件的样式。 创作组件（如显示警告的对话框和状态栏）的样式超出了本文的范围。 仅当您无法使用[主题编辑器](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/themes.html)来样式组件时，才使用这些样式构造创建样式（使用CSS或更少）。
+本文列出了自适应表单的公开可用css类。 您可以使用这些类设置自适应表单各种组件的样式。 创作组件（如显示警告的对话框和状态栏）的样式超出了本文的范围。 仅当您无法使用[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)来样式组件时，才使用这些样式构造创建样式（使用CSS或更少）。
 
 ## 在自适应表单中自定义样式 {#customizing-styles-in-adaptive-forms}
 
@@ -561,7 +561,7 @@ LESS框架简化了自定义自适应表单中样式的用例。 该框架允许
   </tr>
   <tr>
    <td><p><code>filePreviewIconColor</code></p> </td>
-   <td><p>构件中“预览”图标(Bootstrap图标)的颜色</p> </td>
+   <td><p>构件中“预览”图标（Bootstrap图标）的颜色</p> </td>
   </tr>
   <tr>
    <td><p><code>fileItemCommentHeight</code></p> </td>
