@@ -1,5 +1,5 @@
 ---
-title: 升级前维护任务
+title: 升级前的维护任务
 description: 了解为AEM推荐的升级前任务。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Admin
 exl-id: 1dd5d370-d1d4-4d15-9663-35b941b9076b
 source-git-commit: 8f7bbc3887601e10cf29e99ee54959a10c8a3f98
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 0%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
-# 升级前维护任务{#pre-upgrade-maintenance-tasks}
+# 升级前的维护任务{#pre-upgrade-maintenance-tasks}
 
 在开始升级之前，请务必遵循这些维护任务，以确保系统已准备就绪，并且可以在出现问题时回滚：
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## 索引定义 {#index-definitions}
 
-确保已安装随最新AEM 6.5 Service Pack一起发布的所需索引定义。 (有关详细信息，请参阅[AEM 6.5 servicepack发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/release-notes))。
+确保已安装随最新AEM 6.5 Service Pack一起发布的所需索引定义。 （有关详细信息，请参阅[AEM 6.5 servicepack发行说明](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/release-notes)）。
 
 ## 确保有足够的磁盘空间 {#ensure-sufficient-disk-space}
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 您可以通过以下方式访问MBean：
 
-1. 转到&#x200B;*https://serveraddress:serverport/system/console/jmx*&#x200B;处的JMX控制台
+1. 转到位于&#x200B;*https://serveraddress:serverport/system/console/jmx*&#x200B;的JMX控制台
 1. 搜索&#x200B;**PreUpgradeTasks**&#x200B;并单击结果
 
 1. 从&#x200B;**操作**&#x200B;部分中选择任意方法，然后在以下窗口中选择&#x200B;**调用**。

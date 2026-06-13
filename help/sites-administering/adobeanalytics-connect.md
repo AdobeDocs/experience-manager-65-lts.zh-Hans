@@ -12,8 +12,8 @@ role: Admin
 exl-id: a39ed93e-4276-48ff-ba49-d0f630409222
 source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
 workflow-type: tm+mt
-source-wordcount: '1487'
-ht-degree: 2%
+source-wordcount: '1491'
+ht-degree: 7%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Analytics帐户必须：
 
 >[!CAUTION]
 >
->提供&#x200B;**管理员**&#x200B;权限(在Adobe Analytics中)不足以允许用户从AEM连接到Adobe Analytics。 帐户还必须具有&#x200B;**Web服务访问**&#x200B;权限。
+>提供&#x200B;**管理员**&#x200B;权限（在Adobe Analytics中）不足以允许用户从AEM连接到Adobe Analytics。 帐户还必须具有&#x200B;**Web服务访问**&#x200B;权限。
 
 ![chlimage_1-67](assets/chlimage_1-67.png)
 
@@ -84,17 +84,17 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 
 >[!CAUTION]
 >
->由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
+>由于 Adobe Analytics API 的安全性更改，AEM 内置的 Activity Map 版本已无法继续使用。
 >
->现在应使用Adobe Analytics[提供的](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)ActivityMap插件。
+>现在应使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)提供的ActivityMap插件。
 
 ## 为Activity Map配置 {#configuring-for-the-activity-map}
 
 >[!CAUTION]
 >
->由于Adobe Analytics API中的安全性更改，无法再使用AEM中包含的Activity Map版本。
+>由于 Adobe Analytics API 的安全性更改，AEM 内置的 Activity Map 版本已无法继续使用。
 >
->现在应使用Adobe Analytics[提供的](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)ActivityMap插件。
+>现在应使用Adobe Analytics[&#128279;](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=zh-Hans)提供的ActivityMap插件。
 
 ## 创建Adobe Analytics框架 {#creating-a-adobe-analytics-framework}
 
@@ -198,17 +198,17 @@ Adobe Analytics [数据中心](https://experienceleague.adobe.com/docs/analytics
 
 * **获取尝试**：
 尝试获取已排队报告的次数。
-默认为 `6`。
+默认值为`6`。
 
 * **获取延迟**：
 尝试获取已排队报告的间隔毫秒数。
-默认值为`10000`。 由于这是以毫秒为单位的，因此它对应于10秒。
+默认值为`10000`。由于这是以毫秒为单位的，因此它对应于10秒。
 
 * **提取频率**：
 用于确定提取Analytics报告的频率的`cron`表达式。
 默认值为`0 0 0/12 * * ?`；这对应于每小时12次提取。
 
-要配置此OSGi服务，您可以使用存储库[中的](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)Web控制台[或](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)osgiConfig节点（服务PID为`com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）。
+要配置此OSGi服务，您可以使用存储库[&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)中的[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或osgiConfig节点（服务PID为`com.day.cq.analytics.sitecatalyst.impl.importer.ReportImporterScheduler`）。
 
 ## 编辑Adobe Analytics配置和/或框架 {#editing-adobe-analytics-configurations-and-or-frameworks}
 

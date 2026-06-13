@@ -9,7 +9,7 @@ role: Admin, User, Developer
 exl-id: b866ff4a-251c-4402-b426-9c4d97fd181d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3982'
+source-wordcount: '4013'
 ht-degree: 2%
 
 ---
@@ -159,7 +159,7 @@ ht-degree: 2%
 
 * 索赔理算员或案例处理员等业务用户修改信件内容或部分的条件。
 * 方案是描述使用信件解决方案的用户体验、要求和好处的叙述。
-* 方案还提供：项目所需的技能组合和工具。
+* 方案还提供项目所需的:The技能组合和工具。
 * 规划实施的最佳实践。 “高级实施概述。
 
 ## 执行分析的好处 {#benefits-of-performing-the-analysis}
@@ -222,13 +222,13 @@ ht-degree: 2%
 1. 选择以预览通信。
 1. 编辑并设置字段、变量、内容和附件。
 
-### 前提条件 {#prerequisites}
+### 先决条件 {#prerequisites}
 
 创建通信时，首先需要满足以下条件：
 
 * [兼容包](compatibility-package.md)。 安装兼容包以查看&#x200B;**Forms**&#x200B;页面上的&#x200B;**书信**&#x200B;选项。
 * 书信XDP （[布局](/help/forms/using/document-fragments.md)）。
-* 构成信件部分的其他XDP （[布局片段](document-fragments.md#document-fragments)）。 在[Designer](https://www.adobe.com/go/learn_aemforms_designer_65_cn)中创建XDP\Layouts。
+* 构成信件部分的其他XDP （[布局片段](document-fragments.md#document-fragments)）。 在[Designer](https://www.adobe.com/go/learn_aemforms_designer_65)中创建XDP\Layouts。
 * 相关的[数据字典](/help/forms/using/data-dictionary.md)（可选）。
 * 您要在通信中使用的[数据模块](/help/forms/using/document-fragments.md)。
 * [测试数据](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)是其中移植了测试数据的XML文件。 如果您使用数据字典，则需要测试数据。
@@ -347,7 +347,7 @@ ht-degree: 2%
 1. 选择&#x200B;**库访问权限**&#x200B;以授予对库的访问权限。 如果启用了“库访问”，则理赔师可以在创建信件并插入附件时访问内容库。
 1. 选择&#x200B;**附件配置**&#x200B;并指定附件的最大数量。
 
-1. 选择&#x200B;**保存**。您的信件已创建并列在“信件”页面上。
+1. 选择&#x200B;**保存**。 您的信件已创建并列在“信件”页面上。
 
 在Correspondence Management中创建信件模板后，最终用户/代理/索赔理算员可以在CCR用户界面中打开信件，并通过输入数据、设置内容和管理附件来创建信件。 有关详细信息，请参阅[创建通信](/help/forms/using/create-correspondence.md)。
 

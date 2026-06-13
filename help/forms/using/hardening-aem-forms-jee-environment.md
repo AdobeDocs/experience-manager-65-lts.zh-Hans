@@ -122,7 +122,7 @@ JEE上的AEM Forms具有高度可自定义性，可以在许多不同的环境�
  </thead> 
  <tbody>
   <tr> 
-   <td><p>权限</p> </td> 
+   <td><p>特权</p> </td> 
    <td><p>使用安装软件所需的最少权限。 使用不在Administrators组中的帐户登录到计算机。 在Windows上，您可以使用“运行方式”命令以管理用户的身份运行AEM Forms on JEE安装程序。 在UNIX和Linux系统上，使用诸如<code>sudo</code>之类的命令安装软件。</p> </td> 
   </tr> 
   <tr> 
@@ -394,7 +394,7 @@ Web服务定义语言(WSDL)生成应该仅对开发环境启用，在这些环�
 1. 在右侧窗格中的“其他属性”下，单击“**自定义属性”**，然后单击“**新建”**。
 1. 在&#x200B;**名称**&#x200B;框中，键入`integratedSecurity`，在&#x200B;**值**&#x200B;框中，键入`true`。
 1. 在安装了WebSphere的计算机上，将sqljdbc_auth.dll文件添加到Windows系统路径(C:\Windows)。 sqljdbc_auth.dll文件与Microsoft SQL JDBC 1.2驱动程序安装位于同一位置（默认为&#x200B;*[InstallDir]*/sqljdbc_1.2/enu/auth/x86）。
-1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击用于WebSphere (IBM WebSphere Application Server &lt;version> - &lt;node>)的Windows服务并选择&#x200B;**属性**。
+1. 选择&#x200B;**开始** > **控制面板** > **服务**，右键单击Windows的WebSphere服务(IBM WebSphere Application Server &lt;version> - &lt;node>)，然后选择&#x200B;**属性**。
 1. 在“属性”对话框中，单击&#x200B;**登录**&#x200B;选项卡。
 1. 选择&#x200B;**此帐户**&#x200B;并提供设置要使用的登录帐户所需的信息。
 1. 将SQL Server上的安全性从&#x200B;**混合**&#x200B;模式设置为&#x200B;**仅限Windows身份验证**。
@@ -751,7 +751,7 @@ addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arr
 
 您可能已创建自定义WAR文件以与AEM Forms on JEE配合使用以满足业务要求。 要为自定义WAR文件启用反向链接筛选，请在WAR的类路径中包含&#x200B;***adobe-usermanager-client.jar***，并在* web.xml*文件中包含以下参数的筛选条目：
 
-**CSRF_CHECK_GETS**&#x200B;控制GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您要筛选GET请求时，才应包含此参数。
+**CSRF_CHECK_GETS**&#x200B;控制对GET请求的反向链接检查。 如果未定义此参数，则默认值设置为false。 仅当您要筛选GET请求时，才应包含此参数。
 
 **CSRF_ALLOWED_REFERER_EXCEPTIONS**&#x200B;是允许的反向链接例外列表的ID。 反向链接筛选条件可阻止来自列表ID所标识列表中反向链接的请求，从而防止这些请求在Forms服务器上调用任何资源。
 

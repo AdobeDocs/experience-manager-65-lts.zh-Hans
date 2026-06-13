@@ -11,7 +11,7 @@ role: Admin, User, Developer
 exl-id: 632ecead-f57d-4b43-8a3d-f2b0b8fe1115
 source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
 workflow-type: tm+mt
-source-wordcount: '7136'
+source-wordcount: '7066'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 可以使用以下方法之一在文件系统上创建Watched文件夹：
 
-* 在配置Watched文件夹配置节点的属性时，在folderPath属性中键入父目录的完整路径，并附加要创建的Watched文件夹的名称，如以下示例所示： `C:/MyPDFs/MyWatchedFolder`
+* 在配置Watched Folder配置节点的属性时，在folderPath属性中键入父目录的完整路径，并附加要创建的Watched文件夹的名称，如以下示例所示： `C:/MyPDFs/MyWatchedFolder`
 `MyWatchedFolder`文件夹不存在，AEM Forms会尝试在指定路径创建该文件夹。
 
 * 在配置Watched Folder端点之前，在文件系统上创建文件夹，然后在folderPath属性中提供完整路径。 有关folderPath属性的详细信息，请参阅[观察文件夹属性](#watchedfolderproperties)。
@@ -94,16 +94,16 @@ ht-degree: 0%
 
 * **deleteExpiredStageFileOnlyWhenThrottled （布尔值，默认为true）：**&#x200B;是否应在限制监视文件夹时激活到期机制。 由于以未处理状态延迟的少量文件（由于间歇性作业/工作流错误触发）可能会在启用限制时阻塞整个批次的处理，因此该机制与受限制的监视文件夹更相关。 如果此属性保持为true（默认值），将不会为不受限制的监视文件夹激活到期机制。 如果属性保留为false，则只要stageFileExpirationDuration属性为正数，机制将始终激活。
 
-* **pollInterval (Long)**：扫描观察文件夹以进行输入的间隔（以秒为单位）。 除非启用“限制”设置，否则“轮询间隔”应大于处理平均作业的时间；否则，系统可能会过载。 默认值为 5。有关其他信息，请参阅批量大小的说明。 轮询间隔的值必须大于或等于1。
-* **excludeFilePattern （字符串）**：以分号(；)分隔的模式列表，Watched文件夹使用该列表来确定要扫描和选取的文件和文件夹。 不会扫描任何具有此模式的文件或文件夹以进行处理。 当输入是具有多个文件的文件夹时，此设置很有用。 文件夹的内容可以复制到一个名称由Watched文件夹选取的文件夹中。 这样可防止Watched文件夹在将该文件夹完全复制到输入文件夹之前拾取要处理的文件夹。 默认值为null。
+* **pollInterval (Long)**：扫描观察文件夹以进行输入的间隔（以秒为单位）。 除非启用“限制”设置，否则“轮询间隔”应大于处理平均作业的时间；否则，系统可能会过载。 默认值为 5。 有关其他信息，请参阅批量大小的说明。 轮询间隔的值必须大于或等于1。
+* **excludeFilePattern （字符串）**：以分号(；)分隔的模式列表，Watched文件夹使用该列表来确定要扫描和选取的文件和文件夹。不会扫描任何具有此模式的文件或文件夹以进行处理。当输入是具有多个文件的文件夹时，此设置很有用。文件夹的内容可以复制到一个名称由Watched文件夹选取的文件夹中。这样可防止Watched文件夹在将该文件夹完全复制到输入文件夹之前拾取要处理的文件夹。默认值为null。
 您可以使用[文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)排除：
 
    * 具有特定文件扩展名的文件；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
    * 具有特定名称的文件；例如，data&#42;将排除名为data1、data2等的文件和文件夹。
    * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-      * 数据`[0-9][0-9][0-9]`。`[dD][aA]`&#39;端口&#39;
-      * &#42;。`[dD][Aa]`&#39;端口&#39;
+      * 数据`[0-9][0-9][0-9]`.`[dD][aA]`&#39;端口&#39;
+      * &#42;.`[dD][Aa]`&#39;端口&#39;
       * &#42;.`[Xx][Mm][Ll]`
 
 有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)。
@@ -111,18 +111,18 @@ ht-degree: 0%
 * **includeFilePattern （字符串）**：以分号(；)分隔的模式列表，Watched文件夹使用该模式来确定要扫描和选取的文件夹和文件。 例如，如果IncludeFilePattern是input&#42;，则选取与输入&#42;匹配的所有文件和文件夹。 这包括名为input1、input2等的文件和文件夹。 默认值为&#42;，表示所有文件和文件夹。 您可以使用文件模式来包括：
 
    * 具有特定文件扩展名的文件；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
-   * 具有特定名称的文件；例如，数据。&#42;将包括名为data1、data2等的文件和文件夹。
+   * 具有特定名称的文件；例如，数据。&#42; 将包括名为data1、data2等的文件和文件夹。
 
 * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-   * 数据`[0-9][0-9][0-9]`。`[dD][aA]`&#39;端口&#39;
+   * 数据`[0-9][0-9][0-9]`.`[dD][aA]`&#39;端口&#39;
 
-      * &#42;。`[dD][Aa]`&#39;端口&#39;
+      * &#42;.`[dD][Aa]`&#39;端口&#39;
       * &#42;.`[Xx][Mm][Ll]`
 
 有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
-* **waitTime (Long)**：在创建文件夹或文件后，扫描文件夹或文件之前等待的时间（以毫秒为单位）。 例如，如果等待时间为3,600,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 默认值为 0。此设置对于确保将文件或文件夹完全复制到输入文件夹非常有用。 例如，如果您要处理一个大文件，而下载该文件需要10分钟，则将等待时间设置为10&#42;60 &#42;1000毫秒。 这样可防止Watched Folder在文件未满十分钟时扫描文件。
+* **waitTime (Long)**：在创建文件夹或文件后，扫描文件夹或文件之前等待的时间（以毫秒为单位）。 例如，如果等待时间为3,600,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 默认值为 0。 此设置对于确保将文件或文件夹完全复制到输入文件夹非常有用。 例如，如果您要处理一个大文件，而下载该文件需要10分钟，则将等待时间设置为10&#42;60 &#42;1000毫秒。 这样可防止Watched Folder在文件未满十分钟时扫描文件。
 * **purgeDuration (Long)**：结果文件夹中的文件和文件夹早于此值时会被清除。 此值以天为单位。 此设置有助于确保结果文件夹不会变满。 值为–1天表示从不删除结果文件夹。 默认值为 -1。
 * **resultFolderName (String)**：保存结果的文件夹。 如果结果未出现在此文件夹中，请检查失败文件夹。 只读文件不会被处理，并保存在失败文件夹中。 此值可以是具有以下文件模式的绝对路径或相对路径：
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 除了上面列出的观察文件夹配置属性外，您还可以指定自定义配置参数。 自定义参数将传递到文件处理代码。 它允许代码根据参数的值更改其行为。 要指定参数，请执行以下操作：
 
 1. 登录到CRXDE-Lite并导航到“观察文件夹”配置节点。
-1. 添加属性参数。&lt;property_name>转到Watched Folder配置节点。 属性的类型只能为Boolean、Date、Decimal、Double、Long和String。 您可以指定单值和多值属性。
+1. 将属性参数&lt;property_name>添加到Watched Folder配置节点。 属性的类型只能为Boolean、Date、Decimal、Double、Long和String。 您可以指定单值和多值属性。
 
 >[!NOTE]
 >
@@ -200,7 +200,7 @@ ht-degree: 0%
 
 1. 登录到CRXDE-Lite并导航到“观察文件夹”配置节点。
 
-1. 添加属性workflow.var。&lt;variable_name>转到“观察文件夹”配置节点。
+1. 将属性workflow.var.&lt;variable_name>添加到“观察文件夹”配置节点。
 
    属性的类型只能为Boolean、Date、Decimal、Double、Long和String。 还支持多值属性。 对于多值属性，工作流步骤可用的值是指定类型的数组。
 
@@ -333,7 +333,7 @@ processWorkflowContext()的参数是com.adobe.aemfd.watchfolder.workflow.api.Wor
 
 * getWorkItem：返回WorkItem变量的值。 变量将传递到WorkflowContextService.execute()方法。
 * getWorkflowSession：返回WorkflowSession变量的值。 变量将传递到WorkflowContextService.execute()方法。
-* getMetadata：返回元数据变量的值。 变量将传递到WorkflowContextService.execute()方法。
+* getMetadata：返回元数据变量的值。变量将传递到WorkflowContextService.execute()方法。
 * getCommittedVariables：返回表示由先前步骤设置的变量的只读对象映射。 如果变量未在前面的任何步骤中修改，则会返回在配置Watched文件夹时指定的默认值。
 * getCommittedResults：返回只读文档映射。 该映射表示通过上述步骤生成的输出文件。
 * setVariable： WorkflowContextProcessor实施使用变量来操作变量，这些变量表示在步骤之间流动的自定义动态数据。 变量的名称和类型与[配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)期间指定的变量的名称相同。 要更改变量的值，请使用非null值调用setVariable API。 要删除变量，请使用null值调用setVariable()。
@@ -355,7 +355,7 @@ setResult API在工作流中使用的注意事项：
 >
 >在任何其他情况下调用包含null内容的setResult API都将导致错误。
 
-以下示例作为工作流步骤实施。 在此示例中，ECMAscript使用变量stepCount跟踪当前工作流实例中调用步骤的次数。
+以下示例作为工作流步骤实施。在此示例中，ECMAscript使用变量stepCount跟踪当前工作流实例中调用步骤的次数。
 输出文件夹的名称是当前步骤编号、原始文件名和outPrefix参数中指定的前缀的组合。
 
 ECMAScript获取工作流上下文服务的引用，并创建WorkflowContextProcessor接口的实现。 WorkflowContextProcessor实现接受输入文件，将文件复制到临时位置，并返回表示所复制文件的文档。 根据布尔变量purgePrevious的值，当前步骤将删除当前工作流实例中启动该步骤时，由同一步骤上次生成的输出。 最后，调用wfSvc.execute方法以执行WorkflowContextProcessor实现。 输出文档的内容将保存到Watched Folder配置节点中提到的物理路径上的结果文件夹中。
@@ -568,8 +568,8 @@ log.info("Exiting workflow script!")
 * 具有特定名称的文件；例如，数据。&#42;
 * 名称和扩展名中包含复合表达式的文件，如以下示例所示：
 
-   * 数据`[0-9][0-9][0-9]`。`[dD][aA]`&#39;端口&#39;
-   * &#42;。`[dD][Aa]`&#39;端口&#39;
+   * 数据`[0-9][0-9][0-9]`.`[dD][aA]`&#39;端口&#39;
+   * &#42;.`[dD][Aa]`&#39;端口&#39;
    * &#42;.`[Xx][Mm][Ll]`
 
 * 管理员可以定义用于存储结果的输出文件夹的文件模式。 对于输出文件夹（“结果”、“保留”和“失败”），管理员可以指定以下任何文件模式：
@@ -669,8 +669,8 @@ ECMAScript将使用PDF Generator的createPDF API将Microsoft Word (.docx)文档�
 
 1. 将以下属性添加到节点：
 
-   * folderPath （字符串）：在定义的时间间隔内扫描的文件夹的路径。 文件夹必须位于共享位置，且所有服务器均具有服务器的完全访问权限。
-inputProcessorType （字符串）：要启动的进程的类型。 在本教程中，指定工作流。
+   * folderPath （字符串）：在定义的时间间隔内扫描的文件夹的路径。文件夹必须位于共享位置，且所有服务器均具有服务器的完全访问权限。
+inputProcessorType （字符串）：要启动的进程的类型。在本教程中，指定工作流。
 
    * inputProcessorId （字符串）： inputProcessorId属性的行为基于为inputProcessorType属性指定的值。 在此示例中，inputProcessorType属性的值为workflow。 因此，对于inputProcessorId属性，请指定PDFG工作流的以下路径： /etc/workflow/models/pdfg/jcr:content/model
 

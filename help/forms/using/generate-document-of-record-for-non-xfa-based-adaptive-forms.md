@@ -7,7 +7,7 @@ role: User, Developer
 exl-id: 2d9ec8c4-330e-4474-97f4-1f434025683f
 source-git-commit: e91f40d1af626b3aa42c9ddb8381d73ef9a69273
 workflow-type: tm+mt
-source-wordcount: '4354'
+source-wordcount: '4296'
 ht-degree: 4%
 
 ---
@@ -426,7 +426,7 @@ ht-degree: 4%
       * 水平
       * 与自适应表单相同
      >[!NOTE]
-     > 垂直对齐和水平对齐仅适用于以下情况     单选按钮和复选框
+     > 垂直对齐和水平对齐仅适用于单选按钮和复选框
 * **[!UICONTROL 母版页属性]**&#x200B;有关[母版页属性](#master-page-properties-master-page-properties)的详细信息，请单击
 
 ## 在记录文档中应用分页符 {#apply-page-breaks-in-dor}

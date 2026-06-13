@@ -12,8 +12,8 @@ role: Admin
 exl-id: c8bab030-053f-47d1-94f7-b7ff08bfaab0
 source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
 workflow-type: tm+mt
-source-wordcount: '5601'
-ht-degree: 0%
+source-wordcount: '5796'
+ht-degree: 1%
 
 ---
 
@@ -61,11 +61,11 @@ ht-degree: 0%
 
 ### 备份软件安装 {#backing-up-your-software-installation}
 
-安装或配置发生重大更改后，请创建软件安装的备份。
+在安装或配置发生重大更改后，创建软件安装的备份。
 
-要完成此任务，请备份整个存储库[&#128279;](#backing-up-your-repository)，然后：
+要完成此任务，请[备份整个存储库](#backing-up-your-repository)，然后：
 
-1. 停止 AEM。
+1. 停止AEM。
 1. 从您的文件系统备份整个`<cq-installation-dir>`。
 
 >[!CAUTION]
@@ -86,7 +86,7 @@ CRX文档的[备份和还原](/help/sites-administering/backup-and-restore.md)�
 
 有关创建联机“热”备份的完整详细信息，请参阅[创建联机备份](/help/sites-administering/backup-and-restore.md#online-backup)。
 
-## 版本清除 {#version-purging}
+## 版本清理 {#version-purging}
 
 **清除版本**&#x200B;工具用于清除存储库中节点或节点层次结构的版本。 其主要用途是通过删除节点的旧版本来帮助您减小存储库的大小。
 
@@ -154,7 +154,7 @@ CRX文档的[备份和还原](/help/sites-administering/backup-and-restore.md)�
 >
 >* http://localhost:4502/etc/versioning/purge.html
 >
->如果不恢复存储库，则无法还原已清除的节点。 通过始终在清除前执行试运行来照顾您的配置。
+>如果不还原存储库，则无法还原已清除的节点。 清理之前，请始终先进行试运行，以处理您的配置。
 
 #### 试运行 — 分析控制台 {#analyzing-the-console}
 
@@ -174,13 +174,13 @@ CRX文档的[备份和还原](/help/sites-administering/backup-and-restore.md)�
 此外，控制台还提供了有关版本的有用信息：
 
 * `V 1.0`：版本号。
-* `V 1.0.1`&#42;：星号表示版本是当前（基本）版本，无法清除。
+* `V 1.0.1`&#42;：星号表示版本是当前（基础）版本，无法清除。
 
 * `Thu Mar 15 2012 08:37:32 GMT+0100`：版本的日期。
 
 在下一个示例中：
 
-* **[!DNL Shirts]**&#x200B;版本被清除，因为其版本期限超过两天。
+* **[!DNL Shirts]**&#x200B;版本已清除，因为其版本期限大于两天。
 * 已清除&#x200B;**[!DNL Tonga Fashions!]**&#x200B;版本，因为其版本数大于5。
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
@@ -272,7 +272,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 | 0 | 致命错误 | 操作失败，安装程序无法继续。 |
 |---|---|---|
 | 1 | 错误 | 操作失败。 安装会继续，但部分AEM WCM安装不正确，无法正常工作。 |
-| 2 | 警告 | 作已成功，但遇到问题。 AEM WCM 是否正常工作。 |
+| 2 | 警告 | 操作已成功，但遇到了问题。 AEM WCM可能会正常工作，也可能无法正常工作。 |
 | 3 | 信息 | 操作已成功。 |
 
 ### 创建自定义日志文件 {#create-a-custom-log-file}
@@ -296,7 +296,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
 
    >[!NOTE]
    >
-   >虽然不是技术要求，但建议独 `<identifier>` 一无二。
+   >虽然不是技术要求，但建议使`<identifier>`具有唯一性。
 
 1. 在此节点上设置以下属性：
 
@@ -336,7 +336,7 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >
    >`org.apache.sling.commons.log.pattern`最多支持6个参数。
    >
-   >{0}类型为`java.util.Date`的时间戳
+   >`java.util.Date`类型为{0}的时间戳
    >
    >{1}日志标记
    >
@@ -431,9 +431,9 @@ DEBUG 3 WebApp Panel: WebApp successfully deployed
    >* 可使用数字指定大小限制。 如果未提供大小指示器，则将其视为字节数，或者您可以添加其中一个大小指示器 — `KB`、`MB`或`GB`（忽略大小写）。
    >* 可将时间/日期计划指定为`java.util.SimpleDateFormat`模式。 它定义文件旋转的时间段。 此外，附加到旋转文件的后缀（用于标识）。
    >
-   >默认值为“.”年-月-日（用于每日日志轮换）。
+   >默认值为“。”yyyy-MM-dd（用于每日日志轮换）。
    >
-   >例如，在 2010 年 1 月 20 日午夜（或在此日期之后的第一条日志消息恰好出现时），../logs/error.log 重命名为 ../日志/error.log.2010-01-20. 1 月 21 日的日志记录输出到（一个新的和空的）../logs/error.log，直到它在下一次更改日期时滚动。
+   >例如，在2010年1月20日午夜（或者确切地说，当此日期之后出现第一条日志消息时），../logs/error.log将重命名为../logs/error.log.2010-01-20。 1月21日的日志记录将输出到（一个新的、空的） ../logs/error.log ，直到该日志在下一天更改时滚动。
    >
    >| `'.'yyyy-MM` | 每月初的轮换 |
    >|---|---|
@@ -532,22 +532,22 @@ OSGi事件还会生成审核记录，可在AEM Web Console的&#x200B;**配置状
 
 [性能优化](/help/sites-deploying/configuring-performance.md)是一个在开发过程中获得焦点的交互进程。 部署后，会在特定时间间隔或事件后对其进行审查。
 
-收集信息以进行优化时使用的方法也可用于持续监控。
+收集优化信息时使用的方法也可用于持续监测。
 
 >[!NOTE]
 >
->还可以检查可用于提高性能[&#128279;](/help/sites-deploying/configuring-performance.md#configuring-for-performance)的特定配置。
+>还可以检查特定[配置以提高性能](/help/sites-deploying/configuring-performance.md#configuring-for-performance)。
 
-下面列出了发生的常见性能问题，以及有关如何发现和解决这些问题的建议。
+下面列出了出现的常见性能问题，以及如何发现和处理这些问题的建议。
 
 | 区域 | 症状 | 增加容量…… | 要减小音量…… |
 |---|---|---|---|
-| 客户 | 高客户端CPU使用率。 | 安装更高性能的客户端CPU。 | 简化(HTML)布局。 |
+| 客户端 | 高客户端CPU使用率。 | 安装更高性能的客户端CPU。 | 简化(HTML)布局。 |
 |   | 服务器CPU使用率低。 | 升级到更快的浏览器。 | 改进客户端缓存。 |
 |   | 有些客户速度很快，有些速度很慢。 |  |  |
 | 服务器 |  |  |  |
 | 网络 | 服务器和客户端上的CPU使用率都较低。 | 消除任何网络瓶颈。 | 改进/优化客户端缓存的配置。 |
-|   | 在服务器上本地浏览的速度（相对而言）比较快。 | 增加网络带宽。 | 减少网页的“重量”(例如，减少图像数量，优化了HTML)。 |
+|   | 在服务器上本地浏览的速度（相对而言）比较快。 | 增加网络带宽。 | 减少网页的“重量”（例如，减少图像数量，优化了HTML）。 |
 | Web服务器 | Web服务器上的CPU使用率很高。 | 将Web服务器群集起来。 | 减少每页的点击量（访问）。 |
 |   |  | 使用硬件负载平衡器。 |  |
 | 应用程序 | 服务器CPU使用率很高。 | 集群AEM实例。 | 搜索并消除CPU和内存瓶颈（使用代码查看和计时输出）。 |
@@ -573,8 +573,8 @@ OSGi事件还会生成审核记录，可在AEM Web Console的&#x200B;**配置状
    * 提出以下问题：
 
       * 问题是否仅在特定时间出现？
-      * 问题是否仅出现在特定页面上？
-      * 其他请求是否会受到影响？
+      * 问题是否只出现在特定页面上？
+      * 其他请求是否受到影响？
 
    * 收集尽可能多的信息，以便与您在正常情况下了解的系统进行比较：
 
@@ -710,7 +710,7 @@ Adobe建议将“慢”页面与`request.log`隔离，然后单独对其进行�
 * 指示是请求（向右箭头）还是响应（向左箭头）的箭头。
 * 对于请求，该行包含：
 
-   * 方法(通常为GET、HEAD或POST)
+   * 方法（通常为GET、HEAD或POST）
    * 所请求的页面
    * 协议
 
@@ -905,7 +905,7 @@ Percentage of the requests served within a certain time (ms)
 工具命令`jconsole`可用于JDK。
 
 1. 启动AEM实例。
-1. 运行`jconsole.`
+1. 运行 `jconsole.`
 1. 选择您的AEM实例并&#x200B;**连接**。
 
 1. 在`Local`应用程序中，双击`com.day.crx.quickstart.Main`；概述默认显示：
@@ -1104,7 +1104,7 @@ grep "<date>" access.log | cut -d " " -f 3 | sort -u | wc -l
 * 是否以及如何配置[版本清除](/help/sites-deploying/version-purging.md)
 * 知识库：
 
-   * [打开的文件太多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=zh-Hans)
+   * [打开的文件过多](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=zh-Hans)
 
 ### 性能定期下降 {#regular-performance-degradation}
 

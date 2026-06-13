@@ -10,14 +10,14 @@ role: Admin, User, Developer
 exl-id: 9d7f3c62-1b49-437c-9f61-1f0fc0156bdf
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1188'
+ht-degree: 7%
 
 ---
 
 # 在 AEM Sites 页面中嵌入自适应表单或交互式通信 {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
@@ -37,12 +37,12 @@ AEM Forms允许表单开发人员将自适应表单和交互式通信无缝嵌�
 * **[AEM Forms容器组件](/help/forms/using/embed-adaptive-form-aem-sites.md#af-component)**
 AEM Forms提供了一个组件，您可以将该组件添加到网站页面。 AEM Forms容器组件允许您嵌入自适应表单和交互式通信。
 
-* **[资产浏览器](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**
+* **[资源浏览器](/help/forms/using/embed-adaptive-form-aem-sites.md#asset-browser)**
 您创建的所有表单和交互式通信均可在Assets下使用。 您可以将表单作为资源拖放到页面上。
 
 ## 先决条件 {#prerequisites}
 
-要在使用可编辑模板的AEM站点页面中嵌入自适应表单或交互式通信，请确保在相关模板中将AEM表单组件配置为允许的组件。 有关详细信息，请参阅&#x200B;**创建页面模板**&#x200B;中的[策略和属性（布局容器）](/help/sites-authoring/templates.md)部分。
+要在使用可编辑模板的AEM站点页面中嵌入自适应表单或交互式通信，请确保在相关模板中将AEM表单组件配置为允许的组件。 有关详细信息，请参阅[创建页面模板](/help/sites-authoring/templates.md)中的&#x200B;**策略和属性（布局容器）**&#x200B;部分。
 
 如果存在使用静态模板的站点页面，则需要在站点页面的段落系统中对其进行配置。 有关详细信息，请参阅[在设计模式下配置组件](/help/sites-authoring/default-components-designmode.md)。
 

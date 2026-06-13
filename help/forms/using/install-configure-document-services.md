@@ -8,7 +8,7 @@ feature: Interactive Communication
 exl-id: dd22ea1b-33e9-407d-b7b6-645bdba00b4e
 source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
 workflow-type: tm+mt
-source-wordcount: '10681'
+source-wordcount: '10632'
 ht-degree: 2%
 
 ---
@@ -1091,7 +1091,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 
    >[!NOTE]
    >
-   >您使用Adobe以外的其他各方提供的字体的权利受这些各方向您提供的这些字体的许可协议管辖，并且不在您使用Adobe软件的许可范围内。 Adobe建议您查看并确保在将non-Adobe字体与Adobe软件结合使用之前，遵守所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
+   >您使用Adobe以外的其他各方提供的字体的权利受这些各方向您提供的这些字体的许可协议管辖，并且不在您使用Adobe软件的许可范围内。Adobe建议您查看并确保在将non-Adobe字体与Adobe软件结合使用之前，遵守所有适用的非Adobe许可协议，特别是在服务器环境中使用字体时。
    >在将新字体安装到fonts文件夹时，请重新启动AEM Forms实例。
    >
 
@@ -1188,7 +1188,7 @@ DocAssurance服务可以对PDF文档应用使用权限。 要对PDF文档应用�
 
 * 证书附带的私钥密码。
 
-* 私钥别名。 您可以执行Java keytool命令以查看私钥别名：
+* 私钥别名。您可以执行Java keytool命令以查看私钥别名：
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
 * Keystore文件密码。 如果您使用Adobe的Reader扩展证书，则Keystore文件密码始终与“私钥”密码相同。
@@ -1455,9 +1455,9 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
          &grave;&grave;
          
-         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>中的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
+         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>格式的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
          
-         &grave;&grave;
+         &grave;
      
    * 卷序列化包（使用prov.xml文件和新序列重新序列化现有安装）：以管理员身份从PRTK安装文件夹运行以下命令，以在客户端计算机上序列化和激活已部署的包：
 

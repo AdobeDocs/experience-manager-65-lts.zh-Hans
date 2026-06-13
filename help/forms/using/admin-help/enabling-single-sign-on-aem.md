@@ -12,7 +12,7 @@ hide: true
 exl-id: ba02f9b1-209e-42f2-b1df-2ed64fc9fdbc
 source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1719'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在JEE环境中登录到您的AEM Forms 。
 1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 选择您的域配置，例如LDAP ，然后单击它。 您可以在“目录”中找到所有已创建的用户和组。 如果需要，您可以创建新用户或组。
+1. 选择您的域配置，例如LDAP ，然后单击它。您可以在“目录”中找到所有已创建的用户和组。如果需要，您可以创建新用户或组。
    ![域管理页](/help/forms/using/assets/domain-mgmt-page.png)
 1. 单击验证，在新页上选择一个验证提供程序，如LDAP。
 1. 导航到“域管理”页面，选择LDAP，然后单击&#x200B;**立即同步**，以将目录与您配置的身份验证方案同步，以便访问AEM。

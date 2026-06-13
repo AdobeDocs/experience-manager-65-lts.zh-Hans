@@ -1,5 +1,5 @@
 ---
-title: 更改界面上的字体
+title: 更改界面字体
 description: 如何有选择地更改用户界面上的字体。
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ role: User, Developer
 exl-id: e27ff9df-41d0-4eef-b04e-a3eefea3c9ab
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 1%
+source-wordcount: '278'
+ht-degree: 6%
 
 ---
 
-# 更改界面上的字体{#changing-the-font-on-the-interface}
+# 更改界面字体{#changing-the-font-on-the-interface}
 
 您可以更改AEM Forms工作区中显示的字体。 在用户界面的特定部分中使用的字体在样式表的相应部分中定义。 您可以选择性地更改用户界面上的字体。
 

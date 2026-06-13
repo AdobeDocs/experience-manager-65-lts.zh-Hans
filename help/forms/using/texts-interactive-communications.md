@@ -7,7 +7,7 @@ role: User, Developer
 exl-id: ca18b9f4-9d06-4b15-81dd-68a6821e2e3e
 source-git-commit: 6db207b08535c063e41b333054561036481e8db9
 workflow-type: tm+mt
-source-wordcount: '2464'
+source-wordcount: '2482'
 ht-degree: 1%
 
 ---
@@ -218,7 +218,7 @@ ht-degree: 1%
 
 ![textbackgroundcolorapplied-1](assets/textbackgroundcolorapplied-1.png)
 
-您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块&#x200B;**选择相应的颜色阴影后选择**&#x200B;选择`**[B]**`。
+您可以直接选择基本颜色调色板中存在的基本颜色`**[A]**`，或者在使用滑块`**[B]**`选择相应的颜色阴影后选择&#x200B;**选择**。
 
 或者，您也可以转到“高级”选项卡选择适当的色相、亮度和饱和度`**[C]**`以创建精确的颜色，然后选择“选择`**[D]**`”以应用颜色突出显示文本。
 
@@ -226,13 +226,13 @@ ht-degree: 1%
 
 ### 粘贴格式化文本 {#paste}
 
-要重用存在于其他应用程序(例如Microsoft®Word或HTML页面)中的文本的一个或多个段落，请复制该文本并将其粘贴到文本编辑器中。 复制的文本的格式将保留在文本编辑器中。
+要重用存在于其他应用程序（例如®Word或HTML页面）中的文本的一个或多个段落，请复制该文本并将其粘贴到文本编辑器中。 复制的文本的格式将保留在文本编辑器中。
 
-您可以在可编辑的文本文档片段中复制并粘贴文本的一个或多个段落。 例如，您可能拥有Microsoft® Word文档，其中包含可接受的居住证明项目符号列表，如下所示：
+您可以在可编辑的文本文档片段中复制并粘贴文本的一个或多个段落。 例如，您可能拥有® Word文档，其中包含可接受的居住证明项目符号列表，如下所示：
 
 ![pastetextmsword-2](assets/pastetextmsword-2.png)
 
-您可以直接将文本从Microsoft® Word文档复制并粘贴到可编辑的文本文档片段中。 项目符号列表、字体和文本颜色等格式将保留在文本文档片段中。
+您可以直接将文本从® Word文档复制并粘贴到可编辑的文本文档片段中。 项目符号列表、字体和文本颜色等格式将保留在文本文档片段中。
 
 ![pastetexteditablemodule-1](assets/pastetexteditablemodule-1.png)
 

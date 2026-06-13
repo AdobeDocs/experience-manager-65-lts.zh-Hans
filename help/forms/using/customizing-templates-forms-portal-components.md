@@ -11,14 +11,14 @@ role: User, Developer
 exl-id: 3eb9c0e3-950e-4dd5-a4c9-2d8f486ea3cf
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1242'
-ht-degree: 0%
+source-wordcount: '1188'
+ht-degree: 1%
 
 ---
 
 # 自定义Forms Portal组件的模板{#customizing-templates-for-forms-portal-components}
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 [管理表单元数据](../../forms/using/manage-form-metadata.md)
 
@@ -34,7 +34,7 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资源�
 
 ## 创建自定义模板 {#creating-a-nbsp-custom-template}
 
-1. 在/apps下创建sling：Folder节点
+1. 在/apps下创建sling:Folder节点
 
    添加“fpContentType”属性。 根据要为其定义自定义模板的组件，为属性指定适当的值。
 
@@ -50,10 +50,10 @@ Forms Portal允许您在表单列表中使用自定义元数据。 在为资源�
 
    >[!NOTE]
    >
-   >标题可以不同于您创建的sling：Folder的节点名称。
+   >标题可以不同于您创建的sling:Folder的节点名称。
 
    下图描述了Search &amp; Lister组件的配置。
-   ![创建sling：Folder](assets/1.png)
+   ![正在创建Sling:Folder](assets/1.png)
 
 1. 在此文件夹中创建一个文件template.html ，以将其用作自定义模板。
 1. 编写自定义模板并使用如下所述的自定义元数据。
@@ -120,8 +120,8 @@ Forms Portal为占位符提供了一个语法，用于显示自定义/现成元�
 1. **本地化支持**：若要本地化任何静态文本，请使用属性`${localize-YOUR_TEXT}`并使本地化值可用（如果尚未存在）。
    *在所讨论的示例中，属性`${localize-Apply}`和`${localize-Download}`用于本地化“应用和下载”文本。*
 
-1. **排序支持**：单击HTML元素可对搜索结果排序。 要在表布局中实施排序，请在特定表标题上添加“data-sortKey”属性。 此外，添加其值作为要排序的元数据。
-例如，对于网格视图中的“Title”标头，“data-sortKey”标头的值为“title”。 单击标题，以便对特定列中的值进行排序。
+1. **排序支持**：单击HTML元素可对搜索结果排序。要在表布局中实施排序，请在特定表标题上添加“data-sortKey”属性。此外，添加其值作为要排序的元数据。
+例如，对于网格视图中的“Title”标头，“data-sortKey”标头的值为“title”。单击标题，以便对特定列中的值进行排序。
 
 1. **使用配置属性**： Search &amp; Lister组件有多个可在用户界面中使用的配置。 例如，要显示通过“编辑”对话框保存的HTML工具提示文本，请使用`${config-htmlLinkText}`属性。 **同样，对于PDF工具提示文本，请使用** `${config-pdfLinkText}`属性。
 
@@ -156,9 +156,9 @@ Forms Portal为占位符提供了一个语法，用于显示自定义/现成元�
 
 ![草稿和提交节点](assets/raw-image-with-index.png)
 
-**A**。 容器元素
+**A**。容器元素
 
-**B.**&#x200B;具有固定层次结构的“路径”元数据，用于获取为每个表单存储的缩略图。
+**B.** 具有固定层级的“路径”元数据，用于获取为每个表单存储的缩略图。
 
 **C.**&#x200B;用于每个表单的模板节的数据可重复属性
 
@@ -171,7 +171,7 @@ Forms Portal为占位符提供了一个语法，用于显示自定义/现成元�
 ## 提示、技巧和已知问题 {#tips-tricks-and-known-issues}
 
 1. 请勿在任何自定义模板中使用单引号(&#39;)。
-1. 对于自定义元数据，请仅将此属性存储在&#x200B;**jcr：content/metadata**&#x200B;节点上。 如果您将其存储在任何其他位置，Forms Portal将无法显示元数据。
+1. 对于自定义元数据，请仅将此属性存储在&#x200B;**jcr:content/metadata**&#x200B;节点上。 如果您将其存储在任何其他位置，Forms Portal将无法显示元数据。
 1. 确保任何自定义元数据或现有元数据的名称不包含冒号( ： )。 如果是，则无法在用户界面上显示它。
 1. **数据可重复**&#x200B;对于&#x200B;**Link**&#x200B;组件没有任何意义。 Adobe建议您避免在模板中为链接组件使用此属性。
 
@@ -184,4 +184,4 @@ Forms Portal为占位符提供了一个语法，用于显示自定义/现成元�
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
 * [自定义Forms Portal组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)
+* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)

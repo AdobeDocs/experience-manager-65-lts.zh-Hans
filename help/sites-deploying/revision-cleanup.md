@@ -167,7 +167,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>哪些因素决定了联机修订版清理的持续时间？</strong></td>
-   <td>这些因素包括：<br />
+   <td>因素为：<br />
     <ul>
      <li>存储库大小</li>
      <li>在系统上加载（每分钟请求数，特别是写操作）</li>
@@ -380,7 +380,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>根据运行状况检查和日志条目，联机修订清理连续三次未成功完成。 成功完成联机修订清理需要什么条件？</strong></td>
-   <td>您可以采取几个步骤来查找并修复问题：<br />
+   <td>您可以执行几个步骤来查找并修复问题：<br />
     <ul>
      <li>首先，检查日志条目<br /> </li>
      <li>根据日志中的信息，采取适当措施：

@@ -12,7 +12,7 @@ role: Admin
 exl-id: e51842b5-fa91-42d2-a490-5a7e867dada7
 source-git-commit: 0e60c406a9cf1e5fd13ddc09fd85d2a2f8a410f6
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ AEM 6.5 LTS最重要的变化之一是存储库级别的创新。
 1. 在安装目录中创建名为`crx-quickstart\install`的文件夹。
 1. 通过创建一个配置文件来配置节点存储，该配置文件具有您要在`crx-quickstart\install`目录中使用的配置的名称。
 
-   Document Node Store(AEM的MongoDB存储实现的基础)使用名为`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`的文件
+   Document Node Store（AEM的MongoDB存储实现的基础）使用名为`org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config`的文件
 
 1. 编辑文件并设置配置选项。 以下选项可供选择：
 

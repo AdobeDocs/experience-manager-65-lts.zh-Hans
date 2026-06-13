@@ -11,8 +11,8 @@ role: Developer
 exl-id: 255f52f3-aff4-432c-a541-3ce03e626742
 source-git-commit: 9bc1cad84bb14b7513ede1fff2c1a37768dac442
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 5%
+source-wordcount: '1735'
+ht-degree: 6%
 
 ---
 
@@ -247,7 +247,7 @@ ht-degree: 5%
 * `@prop allowedChildren` — 用于确定允许作为子组件的组件的路径的正则表达式模式。
 * `@node virtual` — 包含反映用于组件拖放的虚拟组件的子节点。
 * `@prop componentGroup` — 组件组的名称，用于组件拖放。
-* `@node cq:infoProviders` — 包含子节点，每个子节点都有一个引用`className`的属性`PageInfoProvider`。
+* `@node cq:infoProviders` — 包含子节点，每个子节点都有一个引用`PageInfoProvider`的属性`className`。
 
 **定义**
 

@@ -12,7 +12,7 @@ role: Admin
 exl-id: c5907a0b-031f-4e3a-8a5c-5daf31eb71fc
 source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
 workflow-type: tm+mt
-source-wordcount: '4829'
+source-wordcount: '4969'
 ht-degree: 1%
 
 ---
@@ -252,7 +252,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>identifier.stability</td>
-   <td>指示不可引用节点标识符的稳定性。 可以使用以下值：
+   <td>指示不可引用节点标识符的稳定性。可以使用以下值：
     <ul>
      <li>identifier.stability.infinition.duration：标识符不会更改。</li>
      <li>identifier.stability.method.duration：在方法调用之间可以更改标识符。</li>
@@ -317,7 +317,7 @@ ht-degree: 1%
    <td>true表示LEVEL_1_SUPPORTED和OPTION_XML_IMPORT_SUPPORTED均为true。</td>
   </tr>
   <tr>
-   <td>write.supported</td>
+   <td>支持write</td>
    <td>true表示存储库使用API提供写访问权限。 false表示只读访问。</td>
   </tr>
   <tr>
@@ -333,7 +333,7 @@ ht-degree: 1%
    <td>true表示应用程序可以对存储库执行日志观察。 通过日志观察，可以获得特定时间段内的一组更改通知。 </td>
   </tr>
   <tr>
-   <td>query.languages</td>
+   <td>query.lanages</td>
    <td>存储库支持的查询语言。 无值表示不支持查询。</td>
   </tr>
   <tr>
@@ -401,7 +401,7 @@ ht-degree: 1%
    <td>存储库供应商的名称。</td>
   </tr>
   <tr>
-   <td>query.joins</td>
+   <td>query.join</td>
    <td><p>查询中连接的支持级别。 可以使用以下值：</p>
     <ul>
      <li>query.joins.none：不支持连接。 查询可以使用一个选择器。</li>
@@ -430,7 +430,7 @@ ht-degree: 1%
    <td>true表示存储库支持同名的同级节点（具有相同父项的节点）。</td>
   </tr>
   <tr>
-   <td>node.type.management.residual.definitions.supported</td>
+   <td>node.type.management.residence.definitions.supported</td>
    <td>true表示存储库支持带有剩余定义的名称属性。 如果受支持，项目定义的名称属性可以是星号(“*”)。</td>
   </tr>
   <tr>
@@ -446,7 +446,7 @@ ht-degree: 1%
    <td>true表示option.xml.export.support为true，而query.languages的长度不为零。</td>
   </tr>
   <tr>
-   <td>option.unfiled.content.supported</td>
+   <td>option.unfield.content.supported</td>
    <td>true表示存储库支持未归档的内容。 未归档的节点不属于存储库层次结构。</td>
   </tr>
   <tr>
@@ -751,7 +751,7 @@ ht-degree: 1%
 
 * 域： org.apache.sling
 * 类型：引擎
-* 属性： {service=RequestProcessor}
+* 属性: {service=RequestProcessor}
 
 ### 属性 {#attributes-4}
 

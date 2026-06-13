@@ -8,8 +8,8 @@ role: Admin
 exl-id: 9bb1ff8b-5fcb-44df-8c45-2306e127410d
 source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 5%
+source-wordcount: '351'
+ht-degree: 15%
 
 ---
 
@@ -84,7 +84,7 @@ AEM Fluid Experiences与经典AEM的不同之处在于，它仅涉及Headless投
 
 ## 了解详细信息 {#learn-more}
 
-* 无头用例的[流体验](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=zh-Hans)
-* [AEM Content Service：什么、为什么和如何？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans)
-* 第三方访问的[常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=zh-Hans)
+* [无头用例的流体验](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html?lang=zh-Hans)
+* [AEM Content Service：什么、为什么以及如何？](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=zh-Hans)
+* [有关第三方访问的常见问题解答](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html?lang=zh-Hans)
 * [使用Sling API](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=zh-Hans#sling-models)

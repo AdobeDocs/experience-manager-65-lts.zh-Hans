@@ -1,5 +1,5 @@
 ---
-title: AEM常见问题解答
+title: AEM 常见问题解答
 description: 使用这些常见问题解答来了解、配置和解决AEM中的常见工作流或问题。
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
@@ -7,12 +7,12 @@ role: Admin
 exl-id: b2e73e28-fa34-436d-8a20-848d353e3b8c
 source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 0%
+source-wordcount: '993'
+ht-degree: 1%
 
 ---
 
-# AEM常见问题解答 {#aem-faqs}
+# AEM 常见问题解答 {#aem-faqs}
 
 了解一些AEM故障排除和配置问题的答案。
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 #### 如何审核AEM功能（如登录尝试和ACL或权限更改）？ {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
 
-AEM引入了记录管理更改的功能，以便更好地进行故障排除和审核。 默认情况下，该信息记录在`error.log`文件中。 为了更便于监视，建议将它们重定向到单独的日志文件。
+AEM引入了记录管理更改的功能，以便更好地进行故障排除和审核。默认情况下，该信息记录在`error.log`文件中。为了更便于监视，建议将它们重定向到单独的日志文件。
 要将输出重定向到单独的日志文件，请参阅[如何在AEM中审核用户管理操作](/help/sites-administering/audit-user-management-operations.md)。
 
 #### 如何默认启用SSL？ {#how-to-enable-ssl-by-default}
@@ -58,7 +58,7 @@ Adobe Experience Manager (AEM) 6.4随SSL向导提供，并提供用于配置Jett
 
 要默认启用SSL，请参阅默认的[SSL](/help/sites-administering/ssl-by-default.md)。
 
-#### 从移动应用程序(最好是React Native)中使用AEM的内容服务时，建议的架构是什么？ {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
+#### 从移动应用程序（最好是React Native）中使用AEM的内容服务时，建议的架构是什么？ {#what-is-the-recommended-architecture-when-using-aem-s-content-services-from-a-mobile-app-ideally-react-native}
 
 内容服务基于Sling模型，并且AEM开发人员必须为导出的每个组件提供Sling模型pojo。
 
@@ -78,7 +78,7 @@ Adobe Experience Manager (AEM) 6.4随SSL向导提供，并提供用于配置Jett
 
 请参阅[了解升级AEM的原因](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/upgrade-aem-article-understand.html)，其中介绍了考虑升级到最新版本Adobe Experience Manager的客户的关键功能的概要细目。
 
-## 资产 {#assets}
+## Assets {#assets}
 
 ### 上传MP4文件（例如，使用拖放方法）时，为什么Assets工作流会重复其自身？ {#why-the-assets-workflow-repeats-itself-while-uploading-mp-files-for-example-using-drag-and-drop-method}
 
@@ -88,7 +88,7 @@ Adobe Experience Manager (AEM) 6.4随SSL向导提供，并提供用于配置Jett
 
 当您通过Touch UI （**引用** > **更新语言副本**）创建语言副本时，会在新语言下创建新的DAM文件夹，并从中引用资产。
 
-这是现成配置的默认设置。 您可以在翻译配置中设置&#x200B;**翻译页面Assets** = **不翻译**。
+这是现成配置的默认设置。您可以在翻译配置中设置&#x200B;**翻译页面Assets** = **不翻译**。
 对于AEM 6.4，**工具** > **云服务** > **翻译云服务**。
 
 #### 如何禁用会导致AEM SegmentStore (AEM 6.3.1.1)呈指数增长的AEM组件？ {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
@@ -105,7 +105,7 @@ AEM提供了各种机制，让您能够自定义创作实例的控制台和页�
 
 #### 基于CoralUI 2的组件与基于CoralUI 3的组件有何区别？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-为Coral3创建了一组新的Granite UI Foundation的Sling组件，这些组件位于[/libs/granite/ui/components/coral/foundation下。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html)对于基于CoralUI 2的组件有一个集合，对于基于CoralUI 3的组件有一个集合。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
+为Coral3创建了一组新的Granite UI Foundation的Sling组件，该组件位于[/libs/granite/ui/components/coral/foundation下。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
 
 要了解详细信息，请参阅[基于CoralUI 3的迁移指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)。
 

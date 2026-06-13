@@ -7,8 +7,8 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 8584d5ea-6ef2-4e81-8b18-5aa2d4226ea6
 source-git-commit: 9ed889c74a886e1b41c379dac77bb570ef5c2c39
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 0%
+source-wordcount: '1570'
+ht-degree: 2%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 0%
    ![chlimage_1-104](assets/chlimage_1-309.png)
 
 1. （可选）单击&#x200B;**[!UICONTROL 标记]**&#x200B;并为宣传册选择一个或多个标记。 单击&#x200B;**[!UICONTROL 确认]**&#x200B;确认您的选择。
-1. 单击&#x200B;**[!UICONTROL 创建]**。将显示一个对话框，确认已创建新宣传册。 单击&#x200B;**[!UICONTROL 打开]**&#x200B;以在编辑模式下打开宣传册。
+1. 单击&#x200B;**[!UICONTROL 创建]**。 将显示一个对话框，确认已创建新宣传册。 单击&#x200B;**[!UICONTROL 打开]**&#x200B;以在编辑模式下打开宣传册。
 
    <!--![chlimage_1-106](assets/.png) -->
 
@@ -174,4 +174,4 @@ ht-degree: 0%
 
 ## 最佳实践和限制 {#best-practices-limitations-tips}
 
-* [!DNL InDesign]中的[!DNL Experience Manager]编辑器在标记级别工作，单个标记下的所有文本被视为单个实体。 要在编辑时保留文本格式和样式，请单独标记每个段落（或使用不同样式的文本）。
+* [!DNL Experience Manager]中的[!DNL InDesign]编辑器在标记级别工作，单个标记下的所有文本被视为单个实体。 要在编辑时保留文本格式和样式，请单独标记每个段落（或使用不同样式的文本）。

@@ -11,8 +11,8 @@ role: Developer
 exl-id: 82199140-e464-45a5-9c00-dda2d8efde74
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 0%
+source-wordcount: '988'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 * [需要哪些测试环境？](/help/sites-developing/test-environments.md)
 * [定义测试用例](/help/sites-developing/test-cases.md)
-* [测试 — 何时与谁？](/help/sites-developing/when-who.md)
+* [测试——何时进行以及与谁进行？](/help/sites-developing/when-who.md)
 
 ## 开始之前 {#before-you-start}
 

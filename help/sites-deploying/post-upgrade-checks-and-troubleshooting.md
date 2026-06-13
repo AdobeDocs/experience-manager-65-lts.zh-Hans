@@ -1,5 +1,5 @@
 ---
-title: 升级后检查和故障排除
+title: 升级后的检查与疑难解答
 description: 了解如何对升级后可能显示的问题进行故障排除。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Admin
 exl-id: 8b3d8d0f-10f7-4736-881d-8f1f21c69182
 source-git-commit: a037dc7cbb13abfeb8a7289baded50d3d788cbf6
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 0%
+source-wordcount: '1203'
+ht-degree: 1%
 
 ---
 
-# 升级后检查和故障排除{#post-upgrade-checks-and-troubleshooting}
+# 升级后的检查与疑难解答{#post-upgrade-checks-and-troubleshooting}
 
 ## 升级后检查 {#post-upgrade-checks}
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 另外，最好检查是否有必要执行导致问题的更改，如果没有，则恢复。 此外，在严格的语义版本控制后，检查资源包导出的版本增加是否超过需要。
 
-### 正在分析error.log和upgrade.log {#analyzing-the-error.log-and-upgrade.log}
+### 分析error.log和upgrade.log {#analyzing-the-error.log-and-upgrade.log}
 
 在大多数情况下，需要查阅日志来查找错误原因。 但是，在升级时，由于旧捆绑包可能无法正确升级，因此还需要监视依赖项问题。
 

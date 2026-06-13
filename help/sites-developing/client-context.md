@@ -1,5 +1,5 @@
 ---
-title: 客户端上下文详细信息
+title: Client Context 详情
 description: Client Context表示动态组合的用户数据集合。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Developer
 exl-id: efa4b828-0807-40ac-81a0-1090cac9a257
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2969'
+source-wordcount: '2996'
 ht-degree: 0%
 
 ---
 
-# 客户端上下文详细信息{#client-context-in-detail}
+# Client Context 详情{#client-context-in-detail}
 
 >[!NOTE]
 >
@@ -302,7 +302,7 @@ personalization.ui客户端库文件夹(/etc/clientlibs/foundation/personalizati
 
 要使用genericstore组件呈现存储数据，您必须执行以下操作：
 
-* 将personalization：storeRendererTag标记添加到组件JSP脚本中，以标识会话存储的名称。
+* 将个性化:storeRendererTag标记添加到组件JSP脚本以标识会话存储的名称。
 * 对会话存储类实施渲染方法。
 
 #### 标识泛型存储会话存储 {#identifying-the-genericstore-session-store}
@@ -492,7 +492,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 
 1. 在Web浏览器([https://localhost:4502/crx/de](https://localhost:4502/crx/de))中打开CRXDE Lite。
 1. 右键单击`/apps`文件夹，然后单击“创建”>“创建文件夹”。 指定`myapp`的名称，然后单击“确定”。
-1. 同样，在`myapp`下创建名为`contextstores`的文件夹。 ”
+1. 同样，在`myapp`下创建名为`contextstores`的文件夹。 &quot;
 1. 右键单击`/apps/myapp/contextstores`文件夹，然后单击“创建”>“创建组件”。 指定以下属性值，然后单击“下一步”：
 
    * 标签： geoloc
@@ -518,7 +518,7 @@ window.CQMobileSlider["geometrixx-outdoors"] = {
 1. 右键单击`/apps/myapp/contextstores/geoloc/dialog/items/items/tab1/items`节点，然后单击“创建”>“创建节点”。 指定以下属性值，然后单击“确定”：
 
    * 名称：静态
-   * 类型：cq：Widget
+   * 类型： cq:Widget
 
 1. 将以下属性添加到节点：
 
@@ -626,5 +626,5 @@ init.js.jsp文件在页面加载Client Context时执行。 此时，已加载Cli
 
 要使用自定义的客户端上下文，请编辑属性
 `path`
-客户端上下文组件的设计样式中（如页面模板中所示）。 例如，作为标准位置：
+客户端上下文组件的设计样式中（如页面模板中所示）。例如，作为标准位置：
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`

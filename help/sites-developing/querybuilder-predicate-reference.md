@@ -11,7 +11,7 @@ role: Developer
 exl-id: c044d541-24d6-4975-9b38-6a4317a16358
 source-git-commit: a85b54d5a7c3b00f95f439941a390dcfee883187
 workflow-type: tm+mt
-source-wordcount: '2291'
+source-wordcount: '2354'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 1%
 属性的相对路径，例如`myFeatureEnabled`或`jcr:content/myFeatureEnabled`。
 
 * **值**
-要检查属性“`true`”或“`false`”的值。
+要检查“`true`”或“`false`”的属性的值。
 
 ### `contentfragment` {#contentfragment}
 
@@ -112,7 +112,7 @@ ht-degree: 1%
 ### `daterange` {#daterange}
 
 将JCR DATE属性与日期和时间间隔匹配。 使用ISO8601
-日期和时间格式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)，并允许部分呈现，如`YYYY-MM-DD`。 或者，时间戳可以按UTC时区(UNIX®时间格式)提供自1970年以来的毫秒数。
+日期和时间格式(`YYYY-MM-DDTHH:mm:ss.SSSZ`)，并允许部分呈现，如`YYYY-MM-DD`。 或者，时间戳可以按UTC时区（UNIX®时间格式）提供自1970年以来的毫秒数。
 
 您可以查找介于两个时间戳之间的任何内容，比给定日期更新或更早的任何内容，也可以选择介于包含时间间隔和打开时间间隔之间的内容。
 
@@ -205,7 +205,7 @@ group.2_group.path=/content/dam/geometrixx
 group.2_group.type=dam:Asset
 ```
 
-在&#x200B;**中的页面或**&#x200B;中的资产中搜索术语“`/content/geometrixx/en`管理`/content/dam/geometrixx`”。
+在`/content/geometrixx/en`中的页面或`/content/dam/geometrixx`中的资产中搜索术语“**管理**”。
 
 概念`fulltext AND ( (path AND type) OR (path AND type) )`。 此类OR连接需要良好的索引来提高性能。
 
@@ -346,7 +346,7 @@ group.2_group.type=dam:Asset
 
 * **平面**
 
-  仅搜索直接子项（如在`/*`中附加“`xpath`”）（仅在“`exact`”不为true或可选时使用）。
+  仅搜索直接子项（如在`xpath`中附加“`/*`”）（仅在“`exact`”不为true或可选时使用）。
 
 * **self**
 
@@ -382,7 +382,7 @@ group.2_group.type=dam:Asset
 
 * **深度**
 
-  属性和相对路径可以存在的通配符级别数。 例如，`property=size depth=2`检查节点和大小、节点/&amp;amp；ast；/size以及节点/&amp;amp；ast；/&amp;amp；ast；/size。
+  属性和相对路径可以存在的通配符级别数。 例如，`property=size depth=2`检查节点和大小、 node/&amp;ast；/size和node/&amp;ast；/&amp;ast；/size。
 
 ### `rangeproperty` {#rangeproperty}
 
@@ -420,7 +420,7 @@ group.2_group.type=dam:Asset
 
 ### `relativedaterange` {#relativedaterange}
 
-使用相对于当前服务器时间的时间偏移量将`JCR DATE`属性与日期和时间间隔匹配。 您可以使用毫秒值或bugzilla语法`lowerBound`指定`upperBound`和`1s 2m 3h 4d 5w 6M 7y`。 带有“`-`”的前缀，表示当前时间之前的负偏移。 如果仅指定`lowerBound`或`upperBound`，则另一个将默认为0，即当前时间。
+使用相对于当前服务器时间的时间偏移量将`JCR DATE`属性与日期和时间间隔匹配。 您可以使用毫秒值或bugzilla语法`1s 2m 3h 4d 5w 6M 7y`指定`lowerBound`和`upperBound`。 带有“`-`”的前缀，表示当前时间之前的负偏移。 如果仅指定`lowerBound`或`upperBound`，则另一个将默认为0，即当前时间。
 
 例如：
 

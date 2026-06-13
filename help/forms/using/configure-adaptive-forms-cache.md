@@ -11,8 +11,8 @@ feature: Adaptive Forms,Foundation Components
 exl-id: a6793fdf-7ee8-4a54-91d8-635eb79ca702
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '857'
-ht-degree: 1%
+source-wordcount: '928'
+ht-degree: 3%
 
 ---
 
@@ -41,13 +41,13 @@ ht-degree: 1%
 
 您还可以在Dispatcher配置自适应表单缓存，以获得额外的性能提升。
 
-### 前提条件 {#pre-requisites}
+### 先决条件 {#pre-requisites}
 
 * 启用[在客户端](prepopulate-adaptive-form-fields.md#prefill-at-client)合并或预填充数据选项。 它有助于合并预填充表单的每个实例的唯一数据。
 
 ### 在Dispatcher上缓存自适应表单的注意事项 {#considerations}
 
-* 使用自适应表单缓存时，请使用AEM [!DNL Dispatcher]来缓存自适应表单的客户端库(CSS和JavaScript)。
+* 使用自适应表单缓存时，请使用AEM [!DNL Dispatcher]来缓存自适应表单的客户端库（CSS和JavaScript）。
 * 在开发自定义组件时，在用于开发的服务器上，将禁用自适应表单缓存。
 * 不缓存不带扩展名的URL。 例如，缓存了模式为`/content/forms/[folder-structure]/[form-name].html`的URL，缓存时忽略模式为`/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`的URL。 因此，请使用带有扩展名的URL来获得缓存的好处。
 * 本地化自适应表单的注意事项：
@@ -136,7 +136,7 @@ ht-degree: 1%
 
 当您通过资产浏览器选择图像或视频并将其添加到自适应表单并在Assets编辑器中编辑这些图像和视频时，包含此类图像的自适应表单不会自动从Dispatcher缓存中失效。
 
-#### 解决方案 {#Solution1}
+#### 解决办法 {#Solution1}
 
 发布图像和视频后，明确取消发布并发布引用这些资产的自适应表单。
 
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 当自适应表单URL没有任何本地化信息，并且在配置管理器中启用了&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，将提供自适应表单的本地化版本。 仅缓存自适应表单的第一个实例并将其交付给每个后续用户。
 
-#### 解决方案 {#Solution3}
+#### 解决办法 {#Solution3}
 
 通过执行以下步骤来解决问题：
 

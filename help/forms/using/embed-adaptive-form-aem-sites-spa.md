@@ -1,5 +1,5 @@
 ---
-title: 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信
+title: 在 AEM Sites 单页应用程序中嵌入自适应表单或交互式通信
 description: 在AEM Sites页面中嵌入自适应表单或交互式通信。 用户无需离开站点页面即可填写和提交表单。
 topic-tags: author, interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,24 +10,24 @@ role: User, Developer
 exl-id: 2ac51487-42e0-4b8a-b224-2858f26e85ef
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 4%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
-# 在AEM Sites单页应用程序中嵌入自适应表单或交互式通信{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
+# 在 AEM Sites 单页应用程序中嵌入自适应表单或交互式通信{#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-single-page-application}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 概述 {#overview}
 
 AEM Forms允许表单开发人员将自适应表单和交互式通信无缝嵌入到AEM Sites单页应用程序(SPA)中。 嵌入式自适应表单和交互式通信功能完善，用户无需离开页面即可填写并提交表单。 它有助于用户停留在网页上其他元素的上下文中，同时与自适应表单或交互式通信交互。
 
-在AEM Sites单页应用程序中，您可以使用[AEM Forms SPA Container组件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) [添加自适应表单或交互式通信。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component)它是AEM Sites SPA的AEM Forms组件，您可以将其添加到站点页面。
+在AEM Sites单页应用程序中，您可以使用[AEM Forms SPA Container组件](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) [添加自适应表单或交互式通信。](../../forms/using/embed-adaptive-form-aem-sites-spa.md#af-component) 它是AEM Sites SPA的AEM Forms组件，可添加到站点页面。
 
 有关在非SPA AEM Sites中嵌入自适应表单的信息，请参阅[在AEM Sites页面中嵌入自适应表单或交互式通信](/help/forms/using/embed-adaptive-form-aem-sites.md)。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 要使用AEM Forms SPA容器组件在AEM Sites SPA中嵌入自适应表单或交互式通信，请确保您已安装：
 
