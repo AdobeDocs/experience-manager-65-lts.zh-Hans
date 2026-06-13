@@ -13,15 +13,15 @@ exl-id: 9889b0fe-f39c-42dc-bc7b-8743d68e7503
 index: false
 source-git-commit: b8671573afd711dec4b883b3b382304e13889852
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 4%
+source-wordcount: '1169'
+ht-degree: 6%
 
 ---
 
 
 # AEM中的SPA快速入门 — React{#getting-started-with-spas-in-aem-react}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。为此，开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在AEM中顺畅地为使用SPA框架构建的站点编辑内容。
+单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。 为此，开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在AEM中顺畅地为使用SPA框架构建的站点编辑内容。
 
 SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA。 本文介绍了在React框架上开发的简化SPA应用程序，并说明它是如何进行组合，允许您快速启动并运行自己的SPA。
 

@@ -11,7 +11,7 @@ role: Developer
 exl-id: 4a78de53-33bf-4999-ba3c-7d0bc33196a4
 source-git-commit: 24bd1f57da3f9ce613ee28276d1ae9465b6dfba6
 workflow-type: tm+mt
-source-wordcount: '3668'
+source-wordcount: '6205'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 本页介绍Adobe Experience Manager (AEM)可用的所有xtype。
 
-在ExtJS语言中，xtype是指定给类的符号名称。 您可以阅读ExtJS 2[概述中的“组件XTypes”段落，详细解释什么是xtype以及如何使用它。](https://docs.sencha.com/)
+在ExtJS语言中，xtype是指定给类的符号名称。 您可以阅读ExtJS 2[&#128279;](https://docs.sencha.com/)概述中的“组件XTypes”段落，详细解释什么是xtype以及如何使用它。
 
 有关AEM中所有可用小组件的更多信息，请参阅[小组件API文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 >
 >本页介绍在经典UI中ExtJS xtype的使用。
 >
->Adobe建议您使用基于[Coral UI](/help/sites-developing/touch-ui-concepts.md)和[Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)的标准、新式、[触屏UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)。
+>Adobe建议您使用基于[Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)和[Granite UI](/help/sites-developing/touch-ui-concepts.md#granite-ui-foundation-components)的标准、新式、[触屏UI](/help/sites-developing/touch-ui-concepts.md)。
 
 ## xtype {#xtypes}
 
@@ -182,7 +182,7 @@ ht-degree: 0%
 
   [CQ.Ext.Component](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
-  所有`Ext`组件的基类。 组件的所有子类都可以参与由`Ext`Container[类提供的创建、渲染和销毁的自动的](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)组件生命周期。 创建容器时，可以通过[项](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)配置选项将组件添加到容器中。
+  所有`Ext`组件的基类。 组件的所有子类都可以参与由[Container](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)类提供的创建、渲染和销毁的自动的`Ext`组件生命周期。 创建容器时，可以通过[项](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)配置选项将组件添加到容器中。
 
 * `componentextractor`
 
@@ -192,7 +192,7 @@ ht-degree: 0%
 
 * `componentselector`
 
-  [CQ.form.ComponentSelector](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.form.ComponentSelector](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   可用组件的分组、有序选择。
 
@@ -234,7 +234,7 @@ ht-degree: 0%
 
 * `cq.workflow.model.selector`
 
-  [CQ.wcm.WorkflowModelSelector](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.wcm.WorkflowModelSelector](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   WorkflowModelSelector将WorkflowModelCombo与工作流的缩略图图像以及创建和编辑工作流模型的按钮组合在一起。
 
@@ -344,7 +344,7 @@ ht-degree: 0%
 
 * `feedimporter`
 
-  [CQ.wcm.FeedImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.wcm.FeedImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   FeedImporter允许用户导入RSS或Atom信息源，并为每个信息源条目创建页面。
 
@@ -440,13 +440,13 @@ ht-degree: 0%
 
 * `jsonstore`
 
-  [CQ.Ext.data.JsonStore](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.Ext.data.JsonStore](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   一个小型帮助程序类，用于更轻松地从JSON数据创建[CQ.Ext.data.Store](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)。 JsonStore自动配置了[CQ.Ext.data.JsonReader](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)。
 
 * `label`
 
-  [CQ.Ext.form.Label](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.Ext.form.Label](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   基本标签字段。
 
@@ -578,9 +578,9 @@ ht-degree: 0%
 
 * `offlineimporter`
 
-  [CQ.wcm.OfflineImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.wcm.OfflineImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
-  `OfflineImporter`是一种用于导入Microsoft® Word文档并将其转换为AEM页面的工具。 此功能允许使用文字处理器离线编辑内容。
+  `OfflineImporter`是一种用于导入® Word文档并将其转换为AEM页面的工具。 此功能允许使用文字处理器离线编辑内容。
 
 * `ownerdraw`
 
@@ -729,7 +729,7 @@ ht-degree: 0%
 
 * `siteimporter`
 
-  [CQ.wcm.SiteImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+  [cq.wcm.SiteImporter](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
 
   `SiteImporter`允许用户导入完整的网站和创建初始项目。
 
@@ -909,7 +909,7 @@ ht-degree: 0%
 
   `TreePanel`提供树状结构数据的树状结构UI表示形式。
 
-  添加到[的](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)TreeNode`TreePanel`可以包含应用程序在其[属性](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)属性中使用的元数据。
+  添加到`TreePanel`的[TreeNode](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)可以包含应用程序在其[属性](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)属性中使用的元数据。
 
 * `trigger`
 

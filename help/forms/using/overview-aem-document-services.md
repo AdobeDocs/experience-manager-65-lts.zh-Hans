@@ -11,8 +11,8 @@ role: Admin, User, Developer
 exl-id: 03e87c5a-c106-4b4c-9b42-8ce7a04d9c0c
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1422'
-ht-degree: 1%
+source-wordcount: '1456'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html)。
 
 
 AEM Document Services是一组OSGi服务，用于创建、汇编和保护PDF文档。 Document Services包含以下服务：
@@ -59,7 +59,7 @@ Assembler服务允许您组合、重新排列和扩充PDF和XDP文档，并获�
 除上述功能外，汇编程序服务可以：
 
 * 将PDF文档转换为PDF/A标准。
-* 将PDF forms、XML表单(在Designer中创建)和PDF forms(在Acrobat中创建)转换为PDF/A-1b、PDF/A-2b和PDFA/A-3b。
+* 将PDF forms、XML表单（在Designer中创建）和PDF forms（在Acrobat中创建）转换为PDF/A-1b、PDF/A-2b和PDFA/A-3b。
 * 转换已签名或未签名的PDF文档（需要数字签名）。
 * 验证PDF/A文件的合规性，并在必要时对其进行转换。
 

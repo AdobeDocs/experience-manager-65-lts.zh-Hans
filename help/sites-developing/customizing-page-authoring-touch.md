@@ -11,8 +11,8 @@ role: Developer
 exl-id: 8d53072b-826d-4ff4-843b-09204fb5a455
 source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
-source-wordcount: '1264'
-ht-degree: 38%
+source-wordcount: '1467'
+ht-degree: 39%
 
 ---
 
@@ -65,11 +65,11 @@ Adobe Experience Manager (AEM)提供了各种机制，允许您自定义创作�
 
 ## 添加新层（模式） {#add-new-layer-mode}
 
-当您编辑页面的时候，有各种各样的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)可用。这些模式是使用[层次](/help/sites-developing/touch-ui-structure.md#layer)来实施的。其允许访问同一页面内容的不同类型的功能。标准层包括：编辑、预览、批注、开发人员和定位。
+当您编辑页面的时候，有各种各样的[模式](/help/sites-authoring/author-environment-tools.md#page-modes)可用。 这些模式是使用[层次](/help/sites-developing/touch-ui-structure.md#layer)来实施的。 其允许访问同一页面内容的不同类型的功能。 标准层包括：编辑、预览、批注、开发人员和定位。
 
 ### 层次示例：Live Copy 状态 {#layer-example-live-copy-status}
 
-标准 AEM 实例提供 MSM 层。这会访问与[多站点管理](/help/sites-administering/msm.md)相关的数据，并在层次中突出显示它。
+标准 AEM 实例提供 MSM 层。 这会访问与[多站点管理](/help/sites-administering/msm.md)相关的数据，并在层次中突出显示它。
 
 若要查看其实际操作情况，您可以编辑任何[We.Retail语言副本](/help/sites-developing/we-retail-globalized-site-structure.md)页面（或任何其他活动副本页面）并选择&#x200B;**活动副本状态**&#x200B;模式。
 
@@ -85,29 +85,29 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-authoring-new-layer-mode项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+* [在GitHub上打开aem-authoring-new-layer-mode项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * 将项目下载为[ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
 
 ## 将新的选择类别添加到资源浏览器 {#add-new-selection-category-to-asset-browser}
 
-资源浏览器会显示各种类型/类别的资源（例如图像和文档）。还可以按这些资源类别过滤资源。
+资源浏览器会显示各种类型/类别的资源（例如图像和文档）。 还可以按这些资源类别过滤资源。
 
 ### 代码示例 {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` 是一个示例包，其中显示了如何将群组添加到资源查找器。此示例会连接到 [Flickr &#x200B;](https://www.flickr.com)的公共流，并在侧面板中显示它们。
+`aem-authoring-extension-assetfinder-flickr` 是一个示例包，其中显示了如何将群组添加到资源查找器。 此示例会连接到 [Flickr &#x200B;](https://www.flickr.com)的公共流，并在侧面板中显示它们。
 
 GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-authoring-extension-assetfinder-flickr项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
+* [在GitHub上打开aem-authoring-extension-assetfinder-flickr项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
 * 将项目下载为[ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr/archive/master.zip)
 
 ## 筛选资源 {#filtering-resources}
 
 创作页面时，用户通常必须从资源（例如，页面、组件和资产）中进行选择。 这可以采用列表形式，例如，作者必须从中选择项目。
 
-为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。例如，如果使用[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)组件允许用户选择特定资源的路径，则可以通过以下方式筛选显示的路径：
+为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。 例如，如果使用[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)组件允许用户选择特定资源的路径，则可以通过以下方式筛选显示的路径：
 
 * 通过实施 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面来实施自定义谓词。
 * 指定谓词的名称，并在使用 `pathbrowser` 时引用该名称。
@@ -132,7 +132,7 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-authoring-extension-toolbar-screenshot项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+* [在GitHub上打开aem-authoring-extension-toolbar-screenshot项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * 将项目下载为[ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
 
 ## 添加新的就地编辑器 {#add-new-in-place-editor}
@@ -160,7 +160,7 @@ GITHUB上的代码
 
 1. 可以使用包含配置的`config`节点和包含必要插件配置详细信息的`plugin`节点来配置编辑器的其他配置详细信息。
 
-   以下是为图像组件的图像裁剪插件定义长宽比的示例。 由于屏幕大小受限的可能性，裁切长宽比已移至全屏编辑器并且仅可在其中看到。
+   以下是为图像组件的图像裁剪插件定义纵横比的示例。 由于屏幕大小受限的可能性，裁切长宽比已移至全屏编辑器并且仅可在其中看到。
 
    ```xml
    <cq:inplaceEditing
@@ -184,7 +184,7 @@ GITHUB上的代码
 
    >[!CAUTION]
    >
-   >由 `ratio` 属性设置的 AEM 裁剪比例定义为&#x200B;**高度/宽度**。这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。只要您清楚地定义 `name` 属性，页面创作用户便不会察觉到任何差异，因为您定义的名称才是 UI 中显示的内容。
+   >由 `ratio` 属性设置的 AEM 裁剪比例定义为&#x200B;**高度/宽度**。 这与常见的宽高比的定义不同，这样做是出于对旧版兼容性的考虑。 只要您清楚地定义 `name` 属性，页面创作用户便不会察觉到任何差异，因为您定义的名称才是 UI 中显示的内容。
 
 #### 创建新的就地编辑器 {#creating-a-new-in-place-editor}
 
@@ -214,7 +214,7 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-authoring-extension-inplace-editor项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
+* [在GitHub上打开aem-authoring-extension-inplace-editor项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
 * 将项目下载为[ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor/archive/master.zip)
 
 #### 配置多个就地编辑器 {#configuring-multiple-in-place-editors}
@@ -233,7 +233,7 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-authoring-extension-header-backtosites项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
+* [在GitHub上打开aem-authoring-extension-header-backtosites项目](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
 * 将项目下载为[ZIP文件](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites/archive/master.zip)
 
 ## 自定义激活请求工作流程程 {#customizing-the-request-for-activation-workflow}

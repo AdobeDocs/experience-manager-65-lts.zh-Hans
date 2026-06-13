@@ -7,8 +7,8 @@ role: Developer
 exl-id: 81d47a8f-569a-4a7c-ba07-6f6c9258547c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 94%
+source-wordcount: '792'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 94%
 >
 >GraphiQL 包含在 AEM 的所有环境中（但只有在配置端点时才可访问/显示）。
 >
->在以前的版本中，安装 GraphiQL IDE 时需要软件包。如果您已安装此软件，现可将其移除。
+>在以前的版本中，安装 GraphiQL IDE 时需要软件包。 如果您已安装此软件，现可将其移除。
 
 >[!NOTE]
 >在使用 GraphiQL IDE 之前，您必须在[配置浏览器](/help/assets/content-fragments/content-fragments-configuration-browser.md)中[配置您的端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)。
@@ -44,11 +44,11 @@ ht-degree: 94%
 
 ![GraphiQL 接口](assets/cfm-graphiql-interface.png "GraphiQL 接口")
 
-您可以在系统上使用 GraphiQL，以便您的客户端应用程序可以使用 GET 请求来请求查询，并发布查询。对于生产使用，您可以[将查询移动到生产环境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。最初是移至生产作者环境，以供通过查询来验证新撰写的内容，最后移至生产发布环境，以供实时使用。
+您可以在系统上使用 GraphiQL，以便您的客户端应用程序可以使用 GET 请求来请求查询，并发布查询。 对于生产使用，您可以[将查询移动到生产环境](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production)。 最初是移至生产作者环境，以供通过查询来验证新撰写的内容，最后移至生产发布环境，以供实时使用。
 
 ## 选择您的端点 {#selecting-endpoint}
 
-第一步，您需要选择您想用于查询的&#x200B;**[端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**。该端点适用于您要用于查询的 Sites 配置。
+第一步，您需要选择您想用于查询的&#x200B;**[端点](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)**。 该端点适用于您要用于查询的 Sites 配置。
 
 这可以从右上角的下拉列表中获得。
 
@@ -77,11 +77,11 @@ ht-degree: 94%
 
 从&#x200B;**[持久查询](/help/sites-developing/headless/graphql-api/persisted-queries.md)**&#x200B;面板（最左边）的列表中选择要更新的查询。
 
-查询会显示在编辑器面板中。进行任何需要的更改，然后使用&#x200B;**保存**&#x200B;将更新提交到持久查询。
+查询会显示在编辑器面板中。 进行任何需要的更改，然后使用&#x200B;**保存**&#x200B;将更新提交到持久查询。
 
 ## 正在运行查询 {#running-queries}
 
-您可以立即运行新查询，或者加载并运行持久查询。要加载持久查询，请从列表中选择它，查询会显示在编辑器面板中。
+您可以立即运行新查询，或者加载并运行持久查询。 要加载持久查询，请从列表中选择它，查询会显示在编辑器面板中。
 
 在两种情况下，编辑器面板中显示的查询都是在以下情况下执行的查询：
 
@@ -139,11 +139,11 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 >[!NOTE]
 >
->持久查询缓存`Time To Live` {&quot;cache-control&quot;:&quot;parameter&quot;:value} 定义的默认值为 2 小时（7200 秒）。
+>持久查询的缓存`Time To Live` {&quot;cache-control&quot;：&quot;parameter&quot;:value}定义的默认值为2小时（7200秒）。
 
 ## 复制 URL 以直接访问查询 {#copy-url}
 
-**“复制 URL”**&#x200B;选项让您通过复制用于直接访问持久查询并查看结果的 URL 来模拟查询。然后可以将其用于测试；例如，通过在浏览器中访问：
+**“复制 URL”**&#x200B;选项让您通过复制用于直接访问持久查询并查看结果的 URL 来模拟查询。 然后可以将其用于测试；例如，通过在浏览器中访问：
 
 <!--
   >[!NOTE]
@@ -187,4 +187,4 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 >[!NOTE]
 >
->在一些键盘上，该`Control`键被标记为`Ctrl`。
+>在一些键盘上，该`Control`键被标为`Ctrl`。

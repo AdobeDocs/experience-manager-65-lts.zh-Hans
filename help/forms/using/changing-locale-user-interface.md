@@ -1,5 +1,5 @@
 ---
-title: 更改AEM Forms工作区用户界面的区域设置
+title: 更改 AEM Forms 工作区用户界面的区域设置
 description: 如何修改AEM Forms工作区以将文本、折叠的类别、队列和进程以及界面上的日期选取器本地化。
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ role: User, Developer
 exl-id: 3f919e4d-0535-4816-8762-9c0088e47a2c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 0%
+source-wordcount: '559'
+ht-degree: 3%
 
 ---
 
-# 更改AEM Forms工作区用户界面的区域设置{#changing-the-locale-of-aem-forms-workspace-user-interface}
+# 更改 AEM Forms 工作区用户界面的区域设置{#changing-the-locale-of-aem-forms-workspace-user-interface}
 
 AEM Forms工作区为英语、法语、德语和日语提供开箱即用支持。 它还提供将AEM Forms工作区用户界面本地化为任何其他语言的功能。
 
@@ -55,7 +55,7 @@ AEM Forms工作区使用图像来显示类别、队列和流程的标题。 您�
 
 >[!NOTE]
 >
->查找浏览器的浏览器语言区域设置代码。 打开`https://'[server]:[port]'/lc/libs/ws/Locale.html`。
+>查找浏览器的浏览器语言区域设置代码。 打开 `https://'[server]:[port]'/lc/libs/ws/Locale.html`。
 
 ![collapsing_panels_image](assets/collapsing_panels_image.png)
 
@@ -80,7 +80,7 @@ AEM Forms工作区使用图像来显示类别、队列和流程的标题。 您�
 
 1. 执行[Workspace自定义](../../forms/using/introduction-customizing-html-workspace.md)文章中列出的所有语义更改。
 1. 导航到&#x200B;*js/runtime/utility*&#x200B;文件夹，然后打开&#x200B;*usersession.js*&#x200B;文件以进行编辑。
-1. 找到原始代码块中列出的代码并添加条件&#x200B;*lang！将“nw”*==入if语句：
+1. 找到原始代码块中列出的代码，并将条件&#x200B;*lang !== &#39;nw&#39;*&#x200B;添加到if语句中：
 
    ```javascript
    // Orignal code

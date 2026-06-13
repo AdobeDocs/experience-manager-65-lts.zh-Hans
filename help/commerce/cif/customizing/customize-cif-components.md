@@ -7,8 +7,8 @@ role: Admin, Developer
 exl-id: e8f2a771-b2e3-4f3e-85a0-480f783fc313
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2305'
-ht-degree: 1%
+source-wordcount: '2662'
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ Venia品牌最近开始使用可持续材料制造一些产品，并且公司希
 
 ![环保徽章最终实施](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 需要本地开发环境才能完成本教程。 这包括一个AEM正在运行的实例，该实例已配置并连接到Adobe Commerce实例。 查看[使用AEM](../develop.md)设置本地开发的要求和步骤。 要完全遵循本教程，您需要具有在Adobe Commerce中将[属性添加到产品](https://docs.magento.com/user-guide/catalog/product-attributes-add.html)的权限。
 
@@ -38,7 +38,7 @@ Venia品牌最近开始使用可持续材料制造一些产品，并且公司希
 
 >[!NOTE]
 >
->**请随时使用现有项目**(基于包含CIF的AEM项目原型)并跳过此部分。
+>**请随时使用现有项目**（基于包含CIF的AEM项目原型）并跳过此部分。
 
 1. 运行以下git命令，以便克隆项目：
 
@@ -55,7 +55,7 @@ Venia品牌最近开始使用可持续材料制造一些产品，并且公司希
 
 1. 添加必要的OSGi配置，以便将AEM实例连接到Adobe Commerce实例，或将配置添加到新创建的项目。
 
-1. 此时，您应该拥有连接到Adobe Commerce实例的工作中店面版本。 导航至`US` > `Home`页面，网址为： [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
+1. 此时，您应该拥有连接到Adobe Commerce实例的工作中店面版本。 导航到`US` > `Home`页面，网址为： [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
 
    您应该会看到店面当前使用的是Venia主题。 展开店面的主菜单，您应该会看到各种类别，这表示与Adobe Commerce的连接正在正常工作。
 
@@ -100,7 +100,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 1. 在产品视图中，单击&#x200B;**添加属性** > **创建新属性**。
 1. 使用以下值填写&#x200B;**新属性**&#x200B;表单（保留其他值的默认设置）
 
-   | 字段集 | 字段标签 | 价值 |
+   | 字段集 | 字段标签 | 值 |
    | ----------------------------- | ------------------ | ---------------- |
    | 属性属性 | 属性标签 | **环保** |
    | 属性属性 | 目录输入类型 | **是/否** |
@@ -180,7 +180,7 @@ AEM中显示的产品和产品数据存储在Adobe Commerce中。 接下来，�
 
 ## 更新产品Teaser的Sling模型 {#updating-sling-model-product-teaser}
 
-接下来，通过实施Sling模型来扩展Product Teaser的业务逻辑。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是注释驱动的“POJO”(纯旧Java™对象)，它们实现组件所需的任何业务逻辑。 Sling模型与HTL脚本一起用作组件的一部分。 遵循Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式，以便您可以扩展现有产品Teaser模型的部分。
+接下来，通过实施Sling模型来扩展Product Teaser的业务逻辑。 [Sling模型](https://sling.apache.org/documentation/bundles/models.html)是注释驱动的“POJO”（纯旧Java™对象），它们实现组件所需的任何业务逻辑。 Sling模型与HTL脚本一起用作组件的一部分。 遵循Sling模型[&#128279;](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models)的委派模式，以便您可以扩展现有产品Teaser模型的部分。
 
 Sling模型是作为Java™实现的，并且可在所生成项目的&#x200B;**core**&#x200B;模块中找到。
 
@@ -330,7 +330,7 @@ AEM组件的常见扩展是修改组件生成的标记。 这是通过覆盖组�
 
 >[!NOTE]
 >
->如果您使用CIF产品和类别选取器(如本产品Teaser或CIF页面组件)自定义组件，请确保为组件对话框包含所需的`cif.shell.picker` clientlib。 有关详细信息，请参阅[CIF产品和类别选取器的用法](use-cif-pickers.md)。
+>如果您使用CIF产品和类别选取器（如本产品Teaser或CIF页面组件）自定义组件，请确保为组件对话框包含所需的`cif.shell.picker` clientlib。 有关详细信息，请参阅[CIF产品和类别选取器的用法](use-cif-pickers.md)。
 
 1. 在IDE中，导航并展开`ui.apps`模块，然后将文件夹层次结构展开到： `ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/productteaser`并检查`.content.xml`文件。
 
@@ -348,7 +348,7 @@ AEM组件的常见扩展是修改组件生成的标记。 这是通过覆盖组�
 
    该项目中的产品Teaser组件的组件定义如上所示。 注意属性`sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`。 这是创建[代理组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=zh-Hans#create-proxy-components)的示例。 您可以使用`sling:resourceSuperType`继承所有功能，而不是从AEM CIF核心组件复制和粘贴所有产品Teaser HTL脚本。
 
-1. 打开文件`productteaser.html`。 这是[CIF产品Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)中的`productteaser.html`文件副本
+1. 打开文件 `productteaser.html`。 这是[CIF产品Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html)中的`productteaser.html`文件副本
 
    ```html
    <!--/* productteaser.html */-->
@@ -395,7 +395,7 @@ AEM组件的常见扩展是修改组件生成的标记。 这是通过覆盖组�
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. 打开新的浏览器窗口，并导航到AEM和&#x200B;**OSGi控制台** > **状态** > **Sling模型**： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
+1. 打开新的浏览器窗口并导航到AEM和&#x200B;**OSGi控制台** > **状态** > **Sling模型**： [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 1. 搜索`MyProductTeaserImpl`，您应该会看到如下所示的一行：
 
@@ -478,7 +478,7 @@ AEM组件的常见扩展是修改组件生成的标记。 这是通过覆盖组�
 
    ![环保徽章最终实施](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
-## 恭喜 {#congratulations}
+## 祝贺您 {#congratulations}
 
 您已自定义您的第一个AEM CIF组件！ 在此下载[完成的解决方案文件](../assets/customize-cif-components/customize-cif-component-SOLUTION_FILES.zip)。
 

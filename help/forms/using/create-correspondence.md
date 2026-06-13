@@ -10,7 +10,7 @@ role: Admin, User, Developer
 exl-id: cb6528fd-6761-412d-8413-c72049acf91d
 source-git-commit: d9eb2edf01200b575c6f99a47e5c010e3b3ca28a
 workflow-type: tm+mt
-source-wordcount: '3805'
+source-wordcount: '3848'
 ht-degree: 0%
 
 ---
@@ -225,7 +225,7 @@ ht-degree: 0%
 
 1. 根据需要，在内容选项卡中编辑内容模块。 要使内容层次结构中的相关内容模块获得焦点，您可以在信件预览中选择相关行或段落，或者直接在内容层次结构中选择内容模块。
 
-   例如，在下图中选择了“允许我们访问……”行，并在“内容”选项卡中选择了相应的内容模块。
+   例如，行“允许我们访问……” 在下图中选择了，然后在内容选项卡中选择了相应的内容模块。
 
    通过点按内容中的高亮显示选定模块(![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png))，您可以禁用或启用在信件预览中点按相关文本、段落或数据字段时在“内容”选项卡中高亮显示内容模块的功能。
 
@@ -285,7 +285,7 @@ ht-degree: 0%
 
 在发布实例上发布信件或保存草稿之前，请在创作和发布实例上执行以下步骤以启用另存为草稿功能：
 
-默认情况下，*cq：lastReplicationAction*、*cq：lastreplicated*&#x200B;和&#x200B;*cq：lastReplicatedBy*&#x200B;属性未转移到发布实例。 若要将&#x200B;*cq：lastReplicationAction*、*cq：lastreplicated*&#x200B;和&#x200B;*cq：lastReplicatedBy*&#x200B;属性转移到发布实例，请禁用[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]组件。 要禁用组件，请执行以下操作：
+默认情况下，*cq:lastReplicationAction*、*cq:lastreplicated*&#x200B;和&#x200B;*cq:lastReplicatedBy*&#x200B;属性未转移到发布实例。 若要将&#x200B;*cq:lastReplicationAction*、*cq:lastreplicated*&#x200B;和&#x200B;*cq:lastReplicatedBy*&#x200B;属性转移到发布实例，请禁用[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]组件。 要禁用组件，请执行以下操作：
 
 1. 在创作实例上，打开Adobe Experience Manager Web控制台组件控制台。 默认URL为`http://author-server:port/system/console/components`
 

@@ -1,5 +1,5 @@
 ---
-title: HTML5 Forms与PDF forms的功能差异
+title: HTML5 Forms 与 PDF Forms 的功能差异
 description: 了解HTML5 Forms和PDF forms之间的功能差异。
 contentOwner: robhagat
 content-type: reference
@@ -12,20 +12,20 @@ role: Admin, User, Developer
 exl-id: adf65e7f-9984-40e8-99e3-fadce08bb44e
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '450'
+ht-degree: 6%
 
 ---
 
-# HTML5 Forms与PDF forms的功能差异 {#feature-differentiation-between-html-forms-and-pdf-forms}
+# HTML5 Forms 与 PDF Forms 的功能差异 {#feature-differentiation-between-html-forms-and-pdf-forms}
 
 下表指定了为HTML5 Forms和PDF forms提供的功能支持：
 
 <table>
  <tbody>
   <tr>
-   <th>专题</th>
-   <th>HTML5 表单</th>
+   <th>功能</th>
+   <th>HTML5 Forms</th>
    <th>PDF</th>
   </tr>
   <tr>
@@ -55,7 +55,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>页眉/页脚 </td>
-   <td>支持。 <br /> <br />由于HTML5移动表单不支持分页符，因此页眉和页脚只显示一次。 但是，您可以将它们设置为在移动设备表单预览中的多个位置显示。<br /> </td>
+   <td>支持。<br /> <br /> 由于HTML5移动设备表单不支持分页符，因此页眉和页脚仅出现一次。 但是，您可以将它们设置为在移动设备表单预览中的多个位置显示。<br /> </td>
    <td>支持。</td>
   </tr>
   <tr>

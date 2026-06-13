@@ -11,8 +11,8 @@ role: Developer
 exl-id: 3ce50030-86c7-4291-98fa-0cc9cb63f45c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 1%
+source-wordcount: '1830'
+ht-degree: 2%
 
 ---
 
@@ -165,7 +165,7 @@ ht-degree: 1%
 
 本节概述如何使用批量编辑器，并介绍基于批量编辑器的现有Geometrixx组件：产品列表组件。
 
-利用产品列表组件，用户可显示和编辑数据表。 例如，您可以使用产品列表组件表示目录中的产品。 该信息显示在标准HTML表中，并且任何编辑操作都在&#x200B;**编辑**&#x200B;对话框中执行，该对话框包含BulkEditor小组件。 (此批量编辑器与在/etc/importers/bulkeditor.html上或通过“工具”菜单访问的编辑器相同)。 产品列表组件已针对特定的有限批量编辑器功能进行了配置。 可以配置批量编辑器的每个部分（或从批量编辑器派生的组件）。
+利用产品列表组件，用户可显示和编辑数据表。 例如，您可以使用产品列表组件表示目录中的产品。 该信息显示在标准HTML表中，并且任何编辑操作都在&#x200B;**编辑**&#x200B;对话框中执行，该对话框包含BulkEditor小组件。 （此批量编辑器与在/etc/importers/bulkeditor.html上或通过“工具”菜单访问的编辑器相同）。 产品列表组件已针对特定的有限批量编辑器功能进行了配置。 可以配置批量编辑器的每个部分（或从批量编辑器派生的组件）。
 
 使用批量编辑器，您可以添加、修改、删除、过滤和导出行，保存修改并导入一组行。 每一行都作为节点存储在Product List组件实例本身下。 每个单元格都是每个节点的属性。 这是一种设计选择，可以轻松进行更改，例如，您可以将节点存储在存储库中的其他位置。 查询servlet的角色是返回要显示的节点列表；搜索路径被定义为产品列表实例。
 
@@ -433,7 +433,7 @@ ht-degree: 1%
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>列元数据配置。 可能的属性（应用于列的所有单元格）： <br />
+   <td>列元数据配置。可能的属性（应用于列的所有单元格）： <br />
     <ul>
      <li>cellStyle： html样式 </li>
      <li>cellCls： css类 </li>
@@ -529,7 +529,7 @@ CSS和只读列
 
 在产品列表组件用例中，发送到查询servlet的两个参数如下：
 
-* 查询： &quot;path：/content/geometrixx/en/customers/jcr：content/par/productlist Cube&quot;
+* 查询： &quot;path：/content/geometrixx/en/customers/jcr:content/par/productlist Cube&quot;
 * 列：“Selection、ProductId、ProductName、Color、CatalogCode、SellingSku”
 
 并且JSON流返回如下：
@@ -563,7 +563,7 @@ CSS和只读列
 
 * 参数名称： &lt;jcr path>/&lt;property name>
 
-  示例： /content/geometrixx/en/products/jcr：content/par/productlist/1258674859000/SellingSku
+  示例： /content/geometrixx/en/products/jcr:content/par/productlist/1258674859000/SellingSku
 
 * 值： &lt;值>
 
