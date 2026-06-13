@@ -12,8 +12,8 @@ role: Admin
 exl-id: 410691eb-27a9-4f8e-b926-01027c7f84d4
 source-git-commit: cc96a14ebaf9f895a798b5f4904f5b4769b990bb
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 2%
+source-wordcount: '323'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 简介 {#introduction}
 
-您可以通过发送Adobe有关您如何与Adobe Experience Cloud (AEM)交互的统计数据，来帮助改进Adobe Experience Manager。 此信息不包含有关贵公司网站访客的任何数据，并且仅用于帮助Adobe提供、支持和改善您的用户体验。
+您可以发送有关您如何与Adobe Experience Cloud (AEM)交互的Adobe统计数据，帮助改进Adobe Experience Manager。 此信息不包含有关贵公司网站访客的任何数据，并且仅用于帮助Adobe提供、支持和改善您的用户体验。
 
 您可以使用触屏UI或Web控制台选择收集使用情况统计数据。
 
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->您可以随时选择退出，方法是使用[Web控制台]&#x200B;(/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console，或不选择AEM选择加入屏幕上的选择加入选项。
+>您可以随时选择退出，方法是使用[Web控制台]&#x200B;(#opt-in-by-using-the-web-console，或不选择AEM选择加入屏幕上的选择加入选项。
 
 ## 使用触屏UI选择加入 {#opt-in-by-using-the-touch-ui}
 
@@ -70,7 +70,7 @@ ht-degree: 2%
 
    ![usage_statisticscollectionedit](assets/usage_statisticscollectionedit.png)
 
-1. 选中&#x200B;**已启用**&#x200B;复选框。 或者，如果您希望选择退出使用统计信息收集，则可以取消选中该复选框。
+1. 选中&#x200B;**启用**&#x200B;复选框。 或者，如果您希望选择退出使用统计信息收集，则可以取消选中该复选框。
 
    ![usage_statisticsselect](assets/usage_statisticsselect.png)
 

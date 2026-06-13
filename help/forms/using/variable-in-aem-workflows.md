@@ -11,7 +11,7 @@ role: User, Developer
 exl-id: 1a0d00f9-45f7-45af-ab34-d1c164980abb
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '2064'
+source-wordcount: '2127'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/variable-in-aem-workflows.html)。
 
 工作流模型中的变量是一种根据其数据类型存储值的方法。 然后，可以在任何工作流步骤中使用变量的名称来检索存储在变量中的值。 您还可以使用变量名称来定义用于制定路由决策的表达式。
 
@@ -39,13 +39,13 @@ ht-degree: 0%
 您可以使用工作流模型Sidekick中提供的“变量”部分创建变量。 AEM工作流变量支持以下数据类型：
 
 * **原始数据类型**： Long、Double、Boolean、Date和String
-* **复杂数据类型**：[文档](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
+* **复杂数据类型**：[文档](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
 
 >[!NOTE]
 >
 >工作流仅支持日期类型变量使用ISO8601格式。
 
-文档和表单数据模型数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有原始和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
+文档和表单数据模型数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有原始和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
 
 执行以下步骤可创建变量：
 
@@ -197,7 +197,7 @@ OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态
 | 表单数据模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
 **示例**
 
@@ -266,8 +266,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### 使用工作流变量在JCR外部存储敏感用户数据 {#jcr-independent-persistance}
 
-使用Forms Workflow处理的数据可能包含敏感用户数据，如个人身份信息和敏感个人信息。 企业可以选择将数据从JCR存储存储存储到它们拥有并管理的外部数据存储中，由各种工作流步骤处理这些数据（并使用工作流变量进行传递）。 若要了解有关在外部存储中保留工作流数据的更多信息，请参阅[将工作流变量用于客户拥有的数据存储](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
-[!DNL Adobe Experience Manager]提供工作流API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)以在外部Azure Blob存储中存储工作流变量。 有关使用API的详细信息，请参阅[使用工作流变量参数化敏感数据并将其存储在外部数据存储中](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
+使用Forms Workflow处理的数据可能包含敏感用户数据，如个人身份信息和敏感个人信息。企业可以选择将数据从JCR存储存储存储到它们拥有并管理的外部数据存储中，由各种工作流步骤处理这些数据（并使用工作流变量进行传递）。若要了解有关在外部存储中保留工作流数据的更多信息，请参阅[将工作流变量用于客户拥有的数据存储](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)。
+[!DNL Adobe Experience Manager]提供工作流API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)以在外部Azure Blob存储中存储工作流变量。有关使用API的详细信息，请参阅[使用工作流变量参数化敏感数据并将其存储在外部数据存储中](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)。
 
 ## 编辑变量 {#edit-a-variable}
 

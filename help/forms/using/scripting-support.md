@@ -1,5 +1,5 @@
 ---
-title: 对HTML5表单的脚本支持
+title: HTML5 Forms 的脚本支持
 description: HTML5 Forms支持的JavaScript、FormCalc属性和其他方法。
 contentOwner: robhagat
 content-type: reference
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: 4110e3d5-7242-459b-b249-637b5bf3472d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3916'
+source-wordcount: '3948'
 ht-degree: 6%
 
 ---
 
-# 对HTML5表单的脚本支持 {#scripting-support-for-html-forms}
+# HTML5 Forms 的脚本支持 {#scripting-support-for-html-forms}
 
 JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
 
@@ -77,7 +77,7 @@ JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
   </tr>
   <tr>
    <td>修饰符</td>
-   <td>确定在特定事件执行时是否按住修饰符键(例如，Microsoft®Windows®上的Ctrl)。</td>
+   <td>确定在特定事件执行时是否按住修饰符键（例如，®Windows®上的Ctrl）。</td>
    <td>无</td>
   </tr>
  </tbody>
@@ -548,7 +548,7 @@ JavaScript、FormCalc属性以及HTML5表单中支持的方法如下所示：
 |---|---|---|
 | instancemanager | instanceManager对象可管理表单模型对象的实例创建、移除和移动。 | 无 |
 
-## content {#content}
+## 内容 {#content}
 
 | **属性** | **描述** | **异常** |
 |---|---|---|
@@ -1285,7 +1285,7 @@ FormCalc是一种特定于XFA的语言，用于创建以电子表单为中心的
   </tr>
   <tr>
    <td>app.setTimeOut()</td>
-   <td>指定JavaScript脚本和时间段。 该脚本只执行一次，在句点过后。此方法的返回值必须保存在JavaScript变量中。 否则，超时对象将接受垃圾回收，这会导致时钟停止。 要取消超时事件，请将返回的超时对象传递给clearTimeOut。</td>
+   <td>指定JavaScript脚本和时间段。 该脚本只会在经过一段时间后执行一次。此方法的返回值必须保存在JavaScript变量中。 否则，超时对象将接受垃圾回收，这会导致时钟停止。 要取消超时事件，请将返回的超时对象传递给clearTimeOut。</td>
    <td> </td>
   </tr>
   <tr>

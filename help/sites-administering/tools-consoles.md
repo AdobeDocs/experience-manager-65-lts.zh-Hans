@@ -12,7 +12,7 @@ role: Admin
 exl-id: b81d2f39-1517-49f0-9d16-bcde514cc199
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '597'
 ht-degree: 25%
 
 ---
@@ -102,7 +102,7 @@ ht-degree: 25%
   </tr>
   <tr>
    <td> </td>
-   <td>系统概览</td>
+   <td>系统概述</td>
   </tr>
   <tr>
    <td> </td>
@@ -182,7 +182,7 @@ ht-degree: 25%
   </tr>
   <tr>
    <td> </td>
-   <td>分析配置</td>
+   <td>洞察配置</td>
   </tr>
   <tr>
    <td> </td>
@@ -317,7 +317,7 @@ ht-degree: 25%
    <td>Pinterest社交登录配置<br /> </td>
   </tr>
   <tr>
-   <td>社区</td>
+   <td>Communities</td>
    <td> </td>
   </tr>
   <tr>
@@ -345,7 +345,7 @@ ht-degree: 25%
    <td>社区徽章</td>
   </tr>
   <tr>
-   <td>商务</td>
+   <td>Commerce</td>
    <td> </td>
   </tr>
   <tr>
@@ -384,7 +384,7 @@ ht-degree: 25%
    <td>配置管理器设置。</td>
   </tr>
   <tr>
-   <td>商务</td>
+   <td>Commerce</td>
    <td>提供对导入程序和各种产品数据的访问。</td>
   </tr>
   <tr>
@@ -392,7 +392,7 @@ ht-degree: 25%
    <td>访问各种选项。</td>
   </tr>
   <tr>
-   <td>功能板</td>
+   <td>仪表板</td>
    <td>创建报告仪表板；这些仪表板提供了一种可自定义的方式，用于定义显示合并数据的页面。</td>
   </tr>
   <tr>

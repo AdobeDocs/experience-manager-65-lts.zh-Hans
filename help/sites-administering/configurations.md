@@ -7,8 +7,8 @@ role: Admin
 exl-id: 73230415-078c-4933-8521-bc18e5490103
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 5%
+source-wordcount: '1505'
+ht-degree: 6%
 
 ---
 
@@ -104,7 +104,7 @@ AEM管理员和作者可以将配置视为工作区。 通过实施这些功能�
    >
    >创建配置后，无法取消选择功能。
 
-1. 使用&#x200B;**有效权限**&#x200B;按钮查看角色矩阵以及当前授予配置的权限。
+1. 使用&#x200B;**有效权限**按钮查看角色矩阵以及当前授予配置的权限。
    ![有效权限窗口](assets/configuration-effective-permissions.png)
 1. 要分配新权限，请在&#x200B;**添加新权限**&#x200B;部分的&#x200B;**选择用户或组**&#x200B;字段中输入用户或组名称。
    * **选择用户或组**&#x200B;字段提供基于现有用户和角色的自动完成功能。
