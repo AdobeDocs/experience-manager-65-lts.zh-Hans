@@ -38,7 +38,7 @@ AEM Forms提供AEM Forms应用程序的完整源代码。 源包含用于构建�
 
 下图显示了`src`文件夹中`android`文件夹的目录结构。
 
-src](assets/android-folder.png)中Android文件夹的目录结构![
+src![&#128279;](assets/android-folder.png)中Android文件夹的目录结构
 
 ## 构建标准AEM Forms应用程序 {#set-up-the-xcode-project}
 
@@ -48,9 +48,9 @@ src](assets/android-folder.png)中Android文件夹的目录结构![
 
 1. 将下载的`adobe-lc-mobileworkspace-src-<version>.zip`存档复制到：
 
-   对于Mac用户&#x200B;****： `[User_Home]/Projects`
+   对于Mac用户&#x200B;**&#x200B;**： `[User_Home]/Projects`
 
-   Windows®用户&#x200B;****： `%HOMEPATH%\Projects`
+   Windows®用户&#x200B;**&#x200B;**： `%HOMEPATH%\Projects`
 
    >[!NOTE]
    >
@@ -58,9 +58,9 @@ src](assets/android-folder.png)中Android文件夹的目录结构![
 
 1. 在以下目录中解压缩归档文件：
 
-   对于Mac用户&#x200B;****： `[User_Home]/Projects/[your-project]`
+   对于Mac用户&#x200B;**&#x200B;**： `[User_Home]/Projects/[your-project]`
 
-   Windows®用户&#x200B;****： `%HOMEPATH%\Projects\[your-project]`
+   Windows®用户&#x200B;**&#x200B;**： `%HOMEPATH%\Projects\[your-project]`
 
    >[!NOTE]
    >
@@ -81,7 +81,7 @@ src](assets/android-folder.png)中Android文件夹的目录结构![
 1. 在™ Studio中，选择&#x200B;**[!UICONTROL 导入项目（Eclipse ADT、Gradle等）]**。
 1. 在项目资源管理器中，选择要在&#x200B;**根目录**&#x200B;文本框中生成的项目的根目录：
 
-   对于Mac用户：****[User_Home]/Projects/MobileWorkspace/src/android
+   对于Mac用户：**&#x200B;**&#x200B;[User_Home]/Projects/MobileWorkspace/src/android
 
    对于Windows®用户&#x200B;**：** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
@@ -103,6 +103,6 @@ src](assets/android-folder.png)中Android文件夹的目录结构![
 
 您可以使用以下命令通过[™ Debug Bridge](https://developer.android.com/tools/adb)在Android™设备上安装应用程序：
 
-对于Mac用户&#x200B;****： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+对于Mac用户&#x200B;**&#x200B;**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
-Windows®用户&#x200B;****： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+Windows®用户&#x200B;**&#x200B;**： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
