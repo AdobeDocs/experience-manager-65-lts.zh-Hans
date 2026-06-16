@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: aed08dbb5afd7aefb07716ff5dbbff7265c208e5
+source-git-commit: a24394ffd8d54faf9f16245e359d91c0cfbb04e4
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3167'
 ht-degree: 4%
 
 ---
@@ -214,6 +214,11 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
    <td><p>JBoss® Enterprise Application Platform (EAP) 8.0.6 <sup>[2] [3] [7]</sup> </p> </td>
    <td><p>A：受到支持</p> </td>
    <td><p>受支持的EAP版本的补丁程序和累积补丁程序</p> </td>
+  </tr>
+  <tr>
+   <td><p>WebSphere® Liberty配置文件(WLP)</p> </td>
+   <td><p>A：受到支持</p> </td>
+   <td><p>Service Pack和关键更新</p> </td>
   </tr>
  </tbody>
 </table>
