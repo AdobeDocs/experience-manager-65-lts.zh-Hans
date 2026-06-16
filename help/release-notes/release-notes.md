@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: c87fd907f2e9b91cc7013be5c12c867fb71dbbe1
+source-git-commit: a24394ffd8d54faf9f16245e359d91c0cfbb04e4
 workflow-type: tm+mt
-source-wordcount: '7660'
+source-wordcount: '7696'
 ht-degree: 97%
 
 ---
@@ -48,6 +48,8 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 **AEM Forms 6.5 LTS SP2 中包含的内容**
 
 * 添加了在 JBoss® EAP 8.0 中对 RDBMK 的支持。
+
+* 添加了对WebSphere® Liberty Profile (WLP)的支持。
 
 * 增强了可视规则编辑器中的用户体验。 此次更新包括：
 
@@ -580,7 +582,8 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 ### AEM Forms
 
 * 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将 JAR 文件添加到 adobe-livecycle-jboss.ear\lib 解决了这个问题。 (FORMS-24690)
-* 在 JBoss®上运行的 Forms JEE LTS 上，与电子邮件相关的功能可能会失败。 尝试使用电子邮件功能时，服务器可能会记录类似 `Error IMAPProvider not a subtype` 的错误。 (FORMS-24892)
+* 在 JBoss®上运行的 Forms JEE LTS 上，与电子邮件相关的功能可能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 (FORMS-24892)
+* 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能可能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
 
 ### 离线压缩后，执行在线压缩时存储库损坏 (GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
