@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: a24394ffd8d54faf9f16245e359d91c0cfbb04e4
+source-git-commit: 6795f085b5a4d1ac2836b6c6f2f4d09a5739e639
 workflow-type: tm+mt
-source-wordcount: '7696'
+source-wordcount: '7708'
 ht-degree: 97%
 
 ---
@@ -49,7 +49,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 添加了在 JBoss® EAP 8.0 中对 RDBMK 的支持。
 
-* 添加了对WebSphere® Liberty Profile (WLP)的支持。
+* 添加了对WebSphere® Liberty Profile (WLP)的支持。 只有Oracle数据库和IBM® Sumeru JDK 21支持WLP。
 
 * 增强了可视规则编辑器中的用户体验。 此次更新包括：
 
