@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: 7cc40eba821828dfce4188b10c117739dd74dd61
+source-git-commit: 6795f085b5a4d1ac2836b6c6f2f4d09a5739e639
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2893'
 ht-degree: 4%
 
 ---
@@ -223,6 +223,10 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
  </tbody>
 </table>
 
+>[!NOTE]
+>
+>只有Oracle Database和IBM® Sumeru JDK 21支持WebSphere® Liberty Profile (WLP)。
+
 ### 服务器操作系统 {#server-operating-systems}
 
 #### 生产环境 {#production-environments}
@@ -294,8 +298,9 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 1. CRX-repository支持TarMK和MongoDB类型的持久性。
 1. JEE上的AEM Forms不支持JBoss®基于角色的访问控制(RBAC)。
+1. JEE上的AEM Forms仅支持WebSphere® Liberty Profile (WLP)与Oracle数据库和IBM® Sumeru JDK 21。
 
-<!-- 
+<!--
 1. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312) 
 -->
 
@@ -303,7 +308,7 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 - JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支持更新和修复包。 但是，除非另外指定，否则不支持更新到下一个主要或次要版本。
 - 基于群集的安装不支持TarMK持久性。 有关支持的持久性的信息，请参阅[为AEM Forms安装选择持久性类型](/help/forms/using/choosing-persistence-type-for-aem-forms.md)。
-- 根据Adobe的[第三方软件支持政策](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)，AEM Forms on JEE支持各种第三方软件。
+- 根据Adobe的[第三方软件支持政策](#third-party-patch-support-policy-third-party-patch-support-policy)，AEM Forms on JEE支持各种第三方软件。
 - 根据第三方供应商提供的支持，在JEE支持平台上使用AEM Forms 。 第三方供应商可能不允许某些组合。 例如，许多供应商尚未通过Oracle认证其应用程序服务器。 因此，JEE上的AEM Forms也不支持这些组合。 要确保您选择支持的软件版本，请同时查看第三方供应商的支持列表。
 - JEE上的AEM Forms不支持TarMK冷备用。
 - JEE上的AEM Forms不支持垂直群集。
