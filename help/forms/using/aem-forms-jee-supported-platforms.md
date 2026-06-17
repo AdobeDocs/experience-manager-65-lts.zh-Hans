@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: a24394ffd8d54faf9f16245e359d91c0cfbb04e4
+source-git-commit: 7cc40eba821828dfce4188b10c117739dd74dd61
 workflow-type: tm+mt
-source-wordcount: '3167'
+source-wordcount: '2860'
 ht-degree: 4%
 
 ---
@@ -27,24 +27,26 @@ JEE服务器上的AEM Forms可以使用支持的操作系统、应用程序服�
 
 >[!NOTE]
 >
->- 有关受支持的服务器平台的例外的完整列表，请参阅[受支持的服务器平台的例外](../../forms/using/aem-forms-jee-supported-platforms.md#p-exceptions-to-supported-server-platforms-p)。
 >- JEE上的AEM Forms仅支持所支持的操作系统和应用程序的英语、法语、德语和日语版本。
 
 ### 升级和支持政策
 
 #### 完整安装程序
 
-- **对完整安装程序的升级支持**：随第六个AEM Service Pack一起发布完整安装程序。 仅从AEM 6.5.23.0开始支持基于安装程序的完整升级。
+- **对完整安装程序的升级支持**：仅从AEM 6.5.23.0开始支持基于完整安装程序的升级。
 
 - **弃用和删除**：每个完整的安装程序版本都会更新平台支持。 在完整安装程序版本期间在platform matrix中标记为已弃用的任何软件，都有权在后续的完整安装程序版本中从支持的平台矩阵中删除，这指示对软件的支持已终止。
 
-#### 服务包
 
-- **Service Pack覆盖范围**： Adobe使用最新的六个Service Pack中的任意一个，为AEM Forms环境提供技术支持。 如果您的当前版本早于最近六个Service Pack，Adobe强烈建议升级到最新版本以获得最佳性能、安全性和持续支持。
+<!--
+#### Service Packs
 
-- **修补程序安装程序指南**：使用修补程序安装程序进行更新时，必须验证基础完整安装程序版本是否不多于两个发行版旧。 例如，在安装Service Pack 6.5.19.0期间，请确保基础完整安装程序版本为6.5.18.0或6.5.12.0。
+- **Service Pack Coverage**: Adobe provides technical support for AEM Forms environments using any of the latest six service packs. If your current version predates the last six service packs, Adobe strongly recommends upgrading to the latest version for optimal performance, security, and continuous support. 
 
-- **修补程序升级支持**：您可以一直升级到最新的Service Pack，直到同时升级到最新支持的平台。 例如，可以从Service Pack 6.5.12.0升级到6.5.19.0，前提是转换到6.5.19.0支持的平台组合。
+- **Patch Installer Guidelines**: While using the patch installers to update, it's crucial to verify that the underlying full installer version is not more than two releases old. For instance, during the installation of service pack 6.5.19.0, ensure the underlying full installer version is either 6.5.18.0 or 6.5.12.0. 
+
+- **Patch Upgrade Support**: You can keep upgrading to the latest service pack, until you are upgrading to the most recent supported platforms also. For example, upgrading from service pack 6.5.12.0 to 6.5.19.0 is possible, provided that you transition to a platform combination supported for 6.5.19.0.
+-->
 
 ### 建议的配置 {#recommendedconfigurations}
 
@@ -82,8 +84,6 @@ Adobe建议使用这些配置，并在标准软件维护协议中提供完全支
 >
 >为帮助AEM Forms客户降低拥有成本、简化部署架构并使开发栈栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。Adobe通过减少的基础架构组件列表，继续支持AEM Forms JEE栈栈。
 >对于新安装，如果可行，建议在现代OSGi栈栈上部署AEM Forms，以使用关于响应式自适应Forms的最新创新，实现使用表单数据模型的移动、多渠道交互式通信以及后端数据集成。
->
->Adobe认识到现有用户必须继续在JEE栈栈上部署AEM Forms。 在此类情况下，Adobe要求在受支持的基础设施上部署AEM Forms JEE，如本文档所述。 如果您要升级到AEM 6.5 Forms，并且在以前的AEM Forms版本中使用不受支持的平台，则可以联系Adobe支持部门以获取有关升级到受支持平台的帮助。
 
 ### Java™虚拟机(JVM) {#java-virtual-machines-jvm}
 
@@ -301,7 +301,7 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 此外，在为Adobe AEM Forms on JEE部署选择软件时，请考虑以下几点：
 
-- JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支持更新、修补程序和修复包。 但是，除非另外指定，否则不支持更新到下一个主要或次要版本。
+- JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支持更新和修复包。 但是，除非另外指定，否则不支持更新到下一个主要或次要版本。
 - 基于群集的安装不支持TarMK持久性。 有关支持的持久性的信息，请参阅[为AEM Forms安装选择持久性类型](/help/forms/using/choosing-persistence-type-for-aem-forms.md)。
 - 根据Adobe的[第三方软件支持政策](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p)，AEM Forms on JEE支持各种第三方软件。
 - 根据第三方供应商提供的支持，在JEE支持平台上使用AEM Forms 。 第三方供应商可能不允许某些组合。 例如，许多供应商尚未通过Oracle认证其应用程序服务器。 因此，JEE上的AEM Forms也不支持这些组合。 要确保您选择支持的软件版本，请同时查看第三方供应商的支持列表。
@@ -464,10 +464,9 @@ AEM Forms的以下子系统与[508](https://www.section508.gov/)不兼容：
  </tbody>
 </table>
 
-有关其他要求，请参阅：
-
-- [JEE上单服务器AEM Forms部署的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_single_65_cn)
-- [JEE部署上的群集AEM Forms的系统要求](https://www.adobe.com/go/learn_aemforms_sysreq_cluster_65_cn)
+>[!NOTE]
+>
+>有关其他要求，请参阅[JEE上单服务器AEM Forms部署的系统要求](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/prepare-install-single-server.pdf)
 
 ### Adobe Acrobat和Adobe Reader {#adobe-acrobat-and-adobe-reader}
 
@@ -487,7 +486,7 @@ AEM Forms的以下子系统与[508](https://www.section508.gov/)不兼容：
 
 >[!NOTE]
 >
->Acrobat DC产品系列为Acrobat和Reader引入了两个路径，它们是不同的产品：“Classic”和“Continuous”。 有关两个轨道的详细信息和比较，请参阅[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html)。
+>Acrobat DC产品系列为Acrobat和Reader引入了两个路径，它们是不同的产品：“Classic”和“Continuous”。
 
 ## AEM Forms on JEE支持的客户端 {#supported-clients-for-aem-forms-on-jee}
 
@@ -580,7 +579,7 @@ AEM Forms的以下子系统与[508](https://www.section508.gov/)不兼容：
 >桌面的一些与浏览器相关的例外情况如下：
 >
 >- 只有Macintosh OS X支持Safari。
->- Workspace支持带有Acrobat DC或更高版本的Macintosh OS X 10.6和10.7上的Safari 5.1。 有关Safari 5.1与Adobe Reader、Acrobat兼容性的更多信息，请参阅[https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html](https://helpx.adobe.com/x-productkb/multi/safari-5-1-incompatible-reader.html)。
+>- Workspace支持带有Acrobat DC或更高版本的Macintosh OS X 10.6和10.7上的Safari 5.1。
 >- Safari不支持管理控制台。
 >- 通信管理不支持Windows® Internet Explorer 9.0 for AEM 6.1表单。
 >- Forms Portal支持Internet Explorer 11上的JAWS 14.0屏幕阅读器软件以进行辅助功能。
@@ -638,13 +637,13 @@ JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支�
 
 ## 第三方修补程序支持政策 {#third-party-patch-support-policy}
 
-JEE上AEM Forms的第三方软件要求记录在其各自产品文档的“系统要求”部分。 从[https://adobe.com/go/learn_aemforms_documentation_65_cn](https://adobe.com/go/learn_aemforms_documentation_65_cn)访问所有文档。
+JEE上AEM Forms的第三方软件要求记录在其各自产品文档的“系统要求”部分。 从[AEM Forms 65 LTS](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/getting-started/introduction-aem-forms)访问所有文档。
 
 AEM Forms on JEE的第三方参考平台说明了开发和发布AEM Forms on JEE期间第三方基础架构的特定修补程序级别，以及该AEM Forms on JEE版本支持的基础架构的最低修补程序/Service Pack级别。
 
 Adobe支持第三方供应商在发布后发布的紧急或推荐修补程序，前提是第三方供应商保证向后兼容AEM Forms on JEE支持的版本。 Adobe将仅支持在AEM Forms on JEE文档中规定的最低修补程序级别之后发布的修补程序。
 
-有时，Adobe不支持更改主要功能的第三方更新，因此不支持完全向后兼容性。 有关支持的更新的详细信息，请参阅[受支持的修补程序定义](https://helpx.adobe.com/aem-forms/aem-forms-third-party-software-patch.html)以了解特定供应商产品和Adobe支持的修补程序类型。
+有时，Adobe不支持更改主要功能的第三方更新，因此不支持完全向后兼容性。
 
 在Adobe无法控制的情况下，声称向后兼容的第三方修补程序可能会对Adobe产品或客户环境产生负面影响。 在这种情况下，Adobe建议客户在将第三方提供的任何紧急修补程序应用于关键系统之前，评估这些修补程序的影响。 Adobe与第三方合作，通过正常的Adobe支持计划或通过第三方在补丁中纠正问题，通过合理的业务努力来解决此类问题。 这并不保证Adobe支持的新发布的第三方修补程序可按供应商或AEM Forms on JEE的文档记录工作。
 
