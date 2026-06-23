@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5 LTS
-source-git-commit: c77ad85cf736ee660bfaa662d428a7f7e83a12ff
+source-git-commit: 176e5aabb810f9eee0aa2f8583422f149f016a2e
 workflow-type: tm+mt
-source-wordcount: '7695'
+source-wordcount: '7709'
 ht-degree: 67%
 
 ---
@@ -1096,6 +1096,7 @@ ht-degree: 67%
       + {hide-from-toc}[PaperCapture服务无法对PDF执行OCR](/help/forms/using/papercapture-service-resolution.md)
       + [在使用JBoss EAP 8 (Linux)的AEM Forms 6.5 LTS上脚本执行失败](/help/forms/using/script-execution-issues-on-aem-forms-65-lts-with-jboss-eap-8-linux.md)
       + [无法启动JBoss域控制器](/help/forms/using/unable-to-start-jboss-domain-controller-due-to-duplicate-security-tag.md)
+      + [缓解JEE 6.5 LTS SP2上AEM Forms的VULN-36128和VULN-36120](/help/forms/using/mitigating-vulnerabilities-vuln-36128-vuln-36120-for-aem-forms-on-jee-65-lts-sp2.md)
    + 旧版文档 {#legacy-documentation}
       + {hide-from-toc}[使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据](/help/forms/developing/building-xml.md)
       + {hide-from-toc}[在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](/help/forms/developing/compressing-decompressing-custom-dsc.md)
@@ -1262,7 +1263,7 @@ ht-degree: 67%
             + Headless 内容架构师历程 {#architect}
                + [AEM Headless 内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/overview.html?lang=zh-Hans)
                + [使用 AEM 对 Headless 进行内容建模——简介](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/introduction.html?lang=zh-Hans)
-               + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html?lang=zh-Hans)
+               + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html)
                + [了解如何在 AEM 中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/model-structure.html?lang=zh-Hans)
          + 快速入门指南 {#getting-started}
             + [简介](/help/sites-developing/headless/getting-started/introduction.md)

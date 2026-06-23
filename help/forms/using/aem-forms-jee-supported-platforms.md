@@ -9,9 +9,9 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: 6795f085b5a4d1ac2836b6c6f2f4d09a5739e639
+source-git-commit: 2fa67ea63307e4e8da9bcef9e89b9c032e917bf1
 workflow-type: tm+mt
-source-wordcount: '2893'
+source-wordcount: '2860'
 ht-degree: 4%
 
 ---
@@ -244,17 +244,12 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
-   <td>Ubuntu 20.04</td>
+   <td>Ubuntu 22.04</td>
    <td>A：受到支持</td>
    <td>Service Pack和关键更新</td>
   </tr>
   <tr>
    <td><p>Red Hat® Enterprise Linux® 9（内核5.x）（64位）</p> </td>
-   <td><p>A：受到支持</p> </td>
-   <td><p>次要版本、累积更新和关键更新</p> </td>
-  </tr>
-  <tr>
-   <td><p>Red Hat® Enterprise Linux® 8（内核4.x）（64位）</td>
    <td><p>A：受到支持</p> </td>
    <td><p>次要版本、累积更新和关键更新</p> </td>
   </tr>
@@ -278,11 +273,6 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
    <th><p><strong>平台（基本版本）</strong></p> </th>
    <th>支持级别</th>
    <th><p><strong>支持的修补程序定义</strong></p> </th>
-  </tr>
-  <tr>
-   <td><p>® Windows® 10 64位</p> </td>
-   <td>E：预期有效</td>
-   <td><p>Service Pack和关键更新</p> </td>
   </tr>
   <tr>
    <td><p>® Windows® 11 64位</p> </td>
