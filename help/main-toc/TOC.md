@@ -1263,7 +1263,7 @@ ht-degree: 67%
             + Headless 内容架构师历程 {#architect}
                + [AEM Headless 内容架构师历程概述](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/overview.html?lang=zh-Hans)
                + [使用 AEM 对 Headless 进行内容建模——简介](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/introduction.html?lang=zh-Hans)
-               + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html)
+               + [了解使用 AEM 对 Headless 进行内容建模的基础知识](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/basics.html?lang=zh-Hans)
                + [了解如何在 AEM 中创建内容片段模型](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/headless/architect/model-structure.html?lang=zh-Hans)
          + 快速入门指南 {#getting-started}
             + [简介](/help/sites-developing/headless/getting-started/introduction.md)
