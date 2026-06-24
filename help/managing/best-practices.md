@@ -624,8 +624,8 @@ ht-degree: 97%
 
       * [开发——基础知识](/help/sites-developing/the-basics.md)
       * [MSM 概念](/help/sites-administering/msm.md)
-      * [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+      * [HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)
 
 * 相关文档
 
-   * Adobe Experience Cloud - [Adobe Experience Cloud 规划](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)
+   * Adobe Experience Cloud - [Adobe Experience Cloud 规划](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=zh-Hans)
