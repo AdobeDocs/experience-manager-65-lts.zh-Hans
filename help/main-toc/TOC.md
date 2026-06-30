@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的工作方式以及软件可以对您的作用。
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5 LTS
-source-git-commit: 314aafaec6b45d7ea929f32d47e73da293800d4b
+source-git-commit: 1d825cd821609504c5e2cff7f7002bf3afe30434
 workflow-type: tm+mt
 source-wordcount: '7710'
 ht-degree: 67%
@@ -1096,7 +1096,7 @@ ht-degree: 67%
       + {hide-from-toc}[PaperCapture服务无法对PDF执行OCR](/help/forms/using/papercapture-service-resolution.md)
       + [在使用JBoss EAP 8 (Linux)的AEM Forms 6.5 LTS上脚本执行失败](/help/forms/using/script-execution-issues-on-aem-forms-65-lts-with-jboss-eap-8-linux.md)
       + [无法启动JBoss域控制器](/help/forms/using/unable-to-start-jboss-domain-controller-due-to-duplicate-security-tag.md)
-      + [缓解JEE 6.5 LTS SP2上AEM Forms的服务器端请求伪造(SSRF)漏洞](/help/forms/using/mitigating-server-side-request-forgery-vulnerabilities-for-aem-forms-on-jee-65-lts-sp2.md)
+      + [缓解JEE 6.5 LTS SP2上AEM Forms的服务器端请求伪造(SSRF)漏洞](/help/forms/troubleshooting/mitigating-server-side-request-forgery-vulnerabilities-for-aem-forms-on-jee-65-lts-sp2.md)
    + 旧版文档 {#legacy-documentation}
       + {hide-from-toc}[使用AEM Forms on JEE Workbench中的执行脚本服务构建XML数据](/help/forms/developing/building-xml.md)
       + {hide-from-toc}[在JEE自定义DSC中使用AEM Forms压缩和解压缩文件](/help/forms/developing/compressing-decompressing-custom-dsc.md)
