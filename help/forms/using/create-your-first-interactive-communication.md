@@ -10,8 +10,8 @@ role: Admin, User, Developer
 exl-id: 247ea068-6564-4b62-8449-a8800548106f
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 0%
+source-wordcount: '1046'
+ht-degree: 1%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 * 指向账单Web版本的链接，在本教程中称为Web渠道。 账单的Web版本，除了PDF版本中涵盖的详细信息，还提供使用详细信息的图形表示以及基于Adobe Target的个性化优惠。 Web版本还包含在线支付表单。 它有助于在不离开集成电路的情况下进行在线支付。
 * 指向增值服务的链接，如在线存储、音乐订阅和点播视频订阅。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 * 设置AEM创作实例。
 * 在创作实例上安装[AEM Forms加载项](/help/forms/using/installing-configuring-aem-forms-osgi.md)
@@ -68,7 +68,7 @@ ht-degree: 0%
 * 条件数据
 * 图像
 
-[&#128279;](/help/forms/using/planning-interactive-communications.md)
+  [![请参见 — the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/planning-interactive-communications.md)
 
 ## 步骤2：创建表单数据模型 {#step-create-form-data-model}
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 * 编辑示例数据
 * 测试表单数据模型和已配置的服务（包含测试数据）
 
-[&#128279;](/help/forms/using/create-form-data-model0.md)
+  [![请参见 — the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-form-data-model0.md)
 
 ## 步骤3：创建文档片段 {#step-create-document-fragments}
 
@@ -101,7 +101,7 @@ ht-degree: 0%
 * 创建变量
 * 创建和应用规则
 
-[&#128279;](/help/forms/using/create-document-fragments.md)
+  [![请参见 — the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-document-fragments.md)
 
 ## 步骤4：创建模板 {#step-create-templates}
 
@@ -119,7 +119,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 * 将XDP模板上传到AEM Forms服务器
 * 为Web渠道创建和启用模板
 
-[&#128279;](/help/forms/using/create-templates-print-web.md)
+  [![请参见 — the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-templates-print-web.md)
 
 ## 步骤5：创建交互式通信 {#step-create-an-interactive-communication}
 
@@ -138,7 +138,7 @@ Web渠道的模板是在AEM中创建的。 模板作者和管理员可以创建�
 * 在Web版本的交互式通信中创建图表
 * 在Web版本的交互式通信中创建超链接
 
-[&#128279;](/help/forms/using/create-interactive-communication0.md)
+  [![请参见 — the-guide-sm](assets/see-the-guide-sm.png)](/help/forms/using/create-interactive-communication0.md)
 
 ## 步骤6：发布交互式通信 {#step-publish-your-interactive-communication}
 
