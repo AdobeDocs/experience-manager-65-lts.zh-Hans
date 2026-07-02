@@ -12,8 +12,8 @@ role: Admin
 exl-id: d50dedf3-1973-471d-b16d-f56d60325bb3
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2672'
-ht-degree: 26%
+source-wordcount: '2681'
+ht-degree: 29%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 26%
 
 ### 转出触发器 {#rollout-triggers}
 
-每个转出配置都使用一个可执行转出的转出触发器。转出配置可以使用以下触发器之一：
+每个转出配置都使用一个可执行转出的转出触发器。 转出配置可以使用以下触发器之一：
 
 * **转出**：在Blue Print页面上使用&#x200B;**转出**&#x200B;命令，或者在Live Copy页面上使用&#x200B;**同步**&#x200B;命令。
 
@@ -170,7 +170,7 @@ ht-degree: 26%
   </tr>
   <tr>
    <td>referencesupdate</td>
-   <td><p>在Live Copy上，此同步操作会更新引用，例如链接。<br />它将搜索Live Copy页面中指向Blueprint内资源的路径。 找到后，它会更新路径以指向Live Copy中的相关资源（而不是Blueprint）。 具有Blueprint外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM引用更新操作服务</a>以指定要排除的节点类型、段落项和页面属性。 </p> </td>
+   <td><p>在Live Copy上，此同步操作将更新引用，例如链接。<br /> 它会搜索Live Copy页面中指向Blueprint内资源的路径。 找到后，它会更新路径以指向Live Copy中的相关资源（而不是Blueprint）。 具有 Blueprint 外部目标的引用不会发生更改。</p> <p><a href="#excluding-properties-and-node-types-from-synchronization">配置CQ MSM引用更新操作服务</a>以指定要排除的节点类型、段落项和页面属性。 </p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -229,8 +229,7 @@ ht-degree: 26%
   </tr>
   <tr>
    <td>productCreateUpdate</td>
-   <td>创建或更新目录中的产品资源。 此操作用于以下情况之一：
-    <ul>
+   <td>创建或更新目录中的产品资源。 此操作用于以下情况之一：<ul>
      <li>生成或转出目录（或目录部分）</li>
      <li>用户恢复产品组件的同步继承。</li>
     </ul> </td>
@@ -243,7 +242,7 @@ ht-degree: 26%
   </tr>
   <tr>
    <td>catalogRolloutHooks</td>
-   <td>执行特定于目录生成的转出挂接。 调用CatalogGenerator的executePageRolloutHooks和executeProductRolloutHooks方法。<br />请参阅AEM Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGenerator 。</td>
+   <td>执行特定于目录生成的转出挂接。 调用CatalogGenerator的executePageRolloutHooks和executeProductRolloutHooks方法。<br /> 请参阅AEM Javadocs中的com.adobe.cq.commerce.pim.api.CatalogGenerator 。</td>
    <td> </td>
   </tr>
   <tr>
@@ -265,11 +264,11 @@ ht-degree: 26%
 
 ### 从同步中排除属性和节点类型 {#excluding-properties-and-node-types-from-synchronization}
 
-您可以配置多个支持相应同步操作的 OSGi 服务，以便它们不会影响特定的节点类型和属性。例如，许多与AEM内部功能相关的属性和子节点不应包含在Live Copy中。 只应复制与页面用户相关的内容。
+您可以配置多个支持相应同步操作的 OSGi 服务，以便它们不会影响特定的节点类型和属性。 例如，许多与AEM内部功能相关的属性和子节点不应包含在Live Copy中。 只应复制与页面用户相关的内容。
 
-使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
-下表列出了可以为其指定要排除节点的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
+下表列出了可以为其指定要排除节点的同步操作。 该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
 | 同步操作 | Web 控制台中的服务名称 | 服务 PID |
 |---|---|---|
@@ -324,7 +323,7 @@ ht-degree: 26%
 
 您可以根据需要更改定义排除列表的表达式。
 
-例如，如果您希望将页面&#x200B;**标题**&#x200B;包含在考虑转出的更改中，请从排除项中删除 `jcr:title`。例如，使用正则表达式：
+例如，如果您希望将页面&#x200B;**标题**&#x200B;包含在考虑转出的更改中，请从排除项中删除 `jcr:title`。 例如，使用正则表达式：
 
 `jcr:(?!(title)$).*`
 
@@ -332,9 +331,9 @@ ht-degree: 26%
 
 您可以配置多个 OSGi 服务以支持与更新引用相关的对应同步操作。
 
-使用AEM时，可通过多种方法管理此类服务的配置设置；请参阅[配置OSGi](/help/sites-deploying/configuring-osgi.md)以了解更多详细信息和建议的做法。
+在使用 AEM 时，可通过多种方式管理这些服务的配置设置。有关更多详情与最佳做法，请参阅[配置 OSGi](/help/sites-deploying/configuring-osgi.md)。
 
-下表列出了可以为其指定引用更新的同步操作。该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
+下表列出了可以为其指定引用更新的同步操作。 该表提供了要使用 Web 控制台进行配置的服务名称以及要使用存储库节点进行配置的 PID。
 
 <table>
  <tbody>
@@ -355,7 +354,7 @@ ht-degree: 26%
 
 ## 指定要使用的转出配置 {#specifying-the-rollout-configurations-to-use}
 
-MSM允许您指定通常使用的转出配置集，并且在需要时，您可以覆盖特定活动副本的转出配置集。 MSM 提供了多个位置来指定要使用的转出配置。该位置可确定配置是否适用于特定的Live Copy。
+MSM允许您指定通常使用的转出配置集，并且在需要时，您可以覆盖特定活动副本的转出配置集。 MSM 提供了多个位置来指定要使用的转出配置。 该位置可确定配置是否适用于特定的Live Copy。
 
 下面列出了可在其中指定要使用的转出配置的位置，并描述了MSM如何确定要用于Live Copy的转出配置：
 
@@ -364,7 +363,7 @@ MSM允许您指定通常使用的转出配置集，并且在需要时，您可�
 * **Live Copy父页面属性：**&#x200B;当Live Copy页面和Blueprint源页面均未配置转出配置时，将使用适用于Live Copy页面的父页面的转出配置。
 * **[系统默认值](/help/sites-administering/msm-sync.md#setting-the-system-default-rollout-configuration)：**&#x200B;当无法确定Live Copy父页面的转出配置时，将使用系统默认转出配置。
 
-例如，某个Blueprint使用We.Retail引用站点作为源内容。 从该 Blueprint 创建一个网站。以下列表中的每个项都描述了有关使用转出配置的不同场景：
+例如，某个Blueprint使用We.Retail引用站点作为源内容。 从该 Blueprint 创建一个网站。 以下列表中的每个项都描述了有关使用转出配置的不同场景：
 
 * 所有Blueprint页面或Live Copy页面均未配置为使用转出配置。 MSM对所有Live Copy页面使用系统默认转出配置。
 * We.Retail引用站点的根页面配置了多个转出配置。 MSM对所有Live Copy页面使用这些转出配置。
@@ -372,7 +371,7 @@ MSM允许您指定通常使用的转出配置集，并且在需要时，您可�
 
 ### 为 Live Copy 页面设置转出配置 {#setting-the-rollout-configurations-for-a-live-copy-page}
 
-使用要在转出源页面时使用的转出配置配置Live Copy页面。 子页面默认情况下会继承该配置。在配置要使用的转出配置时，您将覆盖Live Copy页面从其父页面继承的配置。
+使用要在转出源页面时使用的转出配置配置Live Copy页面。 子页面默认情况下会继承该配置。 在配置要使用的转出配置时，您将覆盖Live Copy页面从其父页面继承的配置。
 
 您还可以在您[创建Live Copy](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-page)时为Live Copy页面配置转出配置。
 
@@ -410,7 +409,7 @@ Blueprint页面的子页面继承配置。 在配置要使用的转出配置时�
 
 指定要用作系统默认值的转出配置。 要指定默认值，请配置OSGi服务：
 
-* **Day CQ WCM Live Relationship Manager**
+* **天CQ WCM实时关系管理器**
 服务PID为`com.day.cq.wcm.msm.impl.LiveRelationshipManagerImpl`
 
 使用[Web控制台](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)或[存储库节点](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)配置服务。
@@ -418,4 +417,4 @@ Blueprint页面的子页面继承配置。 在配置要使用的转出配置时�
 * 在Web控制台中，要配置的属性名称是默认转出配置。
 * 使用存储库节点，要配置的属性的名称是 `liverelationshipmgr.relationsconfig.default`。
 
-将此属性值设置为要用作系统默认值的转出配置的路径。默认值为 `/libs/msm/wcm/rolloutconfigs/default`，这是&#x200B;**标准转出配置**。
+将此属性值设置为要用作系统默认值的转出配置的路径。 默认值为 `/libs/msm/wcm/rolloutconfigs/default`，这是&#x200B;**标准转出配置**。
