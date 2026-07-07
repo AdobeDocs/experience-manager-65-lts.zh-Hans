@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: e4be0056-1e19-41a8-8d8c-be65999b562d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '4118'
+source-wordcount: '4435'
 ht-degree: 1%
 
 ---
@@ -45,14 +45,11 @@ ht-degree: 1%
 
 交互式图像步骤：
 
-1. **（可选）标识热点变量** — 如果您单独使用Experience Manager Assets和Dynamic Media，则首先要标识现有Quickview实施中使用的动态变量。 然后，您可以在创建交互式图像时输入热点数据。 请参阅[（可选）识别热点变量](#optional-identifying-hotspot-variables)。
-但是，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager eCommerce，或者同时使用两者，则无需执行此步骤。
+1. **（可选）标识热点变量** — 如果您单独使用Experience Manager Assets和Dynamic Media，则首先要标识现有Quickview实施中使用的动态变量。 然后，您可以在创建交互式图像时输入热点数据。 请参阅[（可选）识别热点变量](#optional-identifying-hotspot-variables)。但是，如果您使用Adobe Experience Manager Sites或Adobe Experience Manager eCommerce，或者同时使用两者，则无需执行此步骤。
 
-1. **（可选）创建交互式图像查看器预设** — 自定义用于表示热点的图形图像。 如果您打算使用名为`Shoppable_Banner`的现成交互式图像查看器预设，则无需创建自己的交互式图像查看器预设。
-请参阅[（可选）创建交互式图像查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
+1. **（可选）创建交互式图像查看器预设** — 自定义用于表示热点的图形图像。 如果您打算使用名为`Shoppable_Banner`的现成交互式图像查看器预设，则无需创建自己的交互式图像查看器预设。请参阅[（可选）创建交互式图像查看器预设](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset)。
 
-1. **上载图像横幅** — 上载要使其成为交互式图像的横幅。
-查看[上传图像横幅](#uploading-an-image-banner)。
+1. **上载图像横幅** — 上载要使其成为交互式图像的横幅。查看[上传图像横幅](#uploading-an-image-banner)。
 
 1. **将热点添加到图像横幅中** — 将一个或多个热点添加到图像横幅中，并将每个热点与超链接、概览或体验片段等操作相关联。 添加热点后，可通过发布交互式图像来完成此任务。
 
@@ -73,7 +70,7 @@ ht-degree: 1%
 >仅当满足以下条件时，才需要此任务：
 >
 >* 要通过触发概览向图像添加交互性。
->* 您实施的Experience Manager *不*&#x200B;使用电子商务集成框架，将产品数据从任何电子商务解决方案(如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop)提取到Experience Manager。
+>* 您实施的Experience Manager *不*&#x200B;使用电子商务集成框架，将产品数据从任何电子商务解决方案（如IBM®WebSphere®Commerce、Elastic Path、hybris或Intershop）提取到Experience Manager。
 >
 >如果您的Experience Manager实施使用的是电子商务，则可以跳过此任务并继续执行下一个任务。
 
@@ -89,7 +86,7 @@ ht-degree: 1%
 
 大多数概览实施都使用以下范例：
 
-* 用户在网站上激活用户界面元素。例如，选择“概览”按钮。
+* 用户在网站上激活用户界面元素。 例如，选择“概览”按钮。
 * 如果需要，网站会向后端发送Ajax请求以加载概览数据或内容。
 * 概览数据将转换为内容，为在网页上呈现做准备。
 * 最后，前端代码在屏幕上以可视方式呈现此类内容。
@@ -98,11 +95,9 @@ ht-degree: 1%
 
 通常，您无需使用任何专门的调试工具。 现代Web浏览器的功能是Web检查器，这些检查器可以完成适当的工作。 以下是一些包含Web检查器的Web浏览器示例：
 
-* 要在Google Chrome中查看所有传出的HTTP请求，请按F12打开“开发人员工具”面板，然后选择“网络”选项卡。
-在Mac上，按Command+Option+I以打开“开发人员工具”面板，然后选择“网络”选项卡。
+* 要在Google Chrome中查看所有传出的HTTP请求，请按F12打开“开发人员工具”面板，然后选择“网络”选项卡。在Mac上，按Command+Option+I以打开“开发人员工具”面板，然后选择“网络”选项卡。
 
-* 在Firefox中，您可以通过按F12并使用其“网络”选项卡来激活Firebug插件，也可以使用内置的检查器工具及其“网络”选项卡。
-在Mac上，按Command+Option+I以打开“开发人员工具”面板，然后选择“检查器”选项卡。
+* 在Firefox中，您可以通过按F12并使用其“网络”选项卡来激活Firebug插件，也可以使用内置的检查器工具及其“网络”选项卡。在Mac上，按Command+Option+I以打开“开发人员工具”面板，然后选择“检查器”选项卡。
 
 在浏览器中打开网络监视时，将触发页面上的快速视图。
 
@@ -296,8 +291,7 @@ ht-degree: 1%
 
    * 选择&#x200B;**[!UICONTROL 体验片段]**。
 
-      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。 选择要使用的体验片段，然后选择页面右上角的&#x200B;**[!UICONTROL 选择]**，以便您可以返回热点管理页面。
-查看[体验片段](/help/sites-authoring/experience-fragments.md)。
+      * 如果您是Experience Manager Sites客户，请选择“搜索”图标（放大镜）以打开“体验片段”页面。 选择要使用的体验片段，然后选择页面右上角的&#x200B;**[!UICONTROL 选择]**，以便您可以返回热点管理页面。查看[体验片段](/help/sites-authoring/experience-fragments.md)。
 
       * 根据需要指定体验片段在横幅上的宽度和高度。
 
@@ -322,10 +316,7 @@ ht-degree: 1%
 
 您可以使用“预览”来查看交互式图像向客户显示的方式，并测试图像的热点以确保它们按预期运行。
 
-如果对交互式图像感到满意，则可以发布该图像。
-请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
-查看[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。
-请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
+如果对交互式图像感到满意，则可以发布该图像。请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。查看[将URL链接到您的Web应用程序](/help/assets/linking-urls-to-yourwebapplication.md)。 如果您的交互式内容包含具有相对URL的链接，尤其是指向Experience Manager Sites页面的链接，则基于URL的链接方法不可用。请参阅[将Dynamic Media Assets添加到页面](/help/assets/adding-dynamic-media-assets-to-pages.md)。
 
 **要预览交互式图像：**
 
@@ -346,11 +337,9 @@ ht-degree: 1%
 
 如果您是独立Experience Manager Assets客户，则可以手动将交互式图像添加到您的网站，如本节所述。
 
-1. 复制发布的交互式图像的嵌入代码。
-请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
+1. 复制发布的交互式图像的嵌入代码。请参阅[在网页上嵌入视频查看器或图像查看器](/help/assets/embed-code.md)。
 
-1. 将复制的嵌入代码添加到网页内所需的位置。
-复制的嵌入代码是为响应式环境设置的，因此会自动适合分配的区域。
+1. 将复制的嵌入代码添加到网页内所需的位置。复制的嵌入代码是为响应式环境设置的，因此会自动适合分配的区域。
 
 **示例**
 

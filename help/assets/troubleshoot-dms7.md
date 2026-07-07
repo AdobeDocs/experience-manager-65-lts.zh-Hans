@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media - Scene7模式疑难解答
+title: 排查 Dynamic Media - Scene7 模式问题
 description: 了解如何在Dynamic Media以Scene7模式运行时对其设置、配置和常规问题进行故障排除和解决。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -13,12 +13,12 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 469495f2-b6d3-490d-a5df-ffa07b30cc1e
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1393'
-ht-degree: 0%
+source-wordcount: '1410'
+ht-degree: 1%
 
 ---
 
-# Dynamic Media - Scene7模式疑难解答{#troubleshooting-dynamic-media-scene-mode}
+# 排查 Dynamic Media - Scene7 模式问题{#troubleshooting-dynamic-media-scene-mode}
 
 以下文档介绍了对运行&#x200B;**dynamicmedia_scene7**&#x200B;运行模式的Dynamic Media进行的故障排除。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
   此复制代理位于“创作中的代理”下。
 
-## 常规(所有Assets) {#general-all-assets}
+## 常规（所有Assets） {#general-all-assets}
 
 以下是适用于所有资产的一些常规提示和技巧。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 ### 同步日志记录 {#synchronization-logging}
 
-同步错误和问题记录在`error.log` (Experience Manager服务器目录`/crx-quickstart/logs/`)中。 有足够的日志记录功能来确定大多数问题的根本原因，但您可以通过Sling控制台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加对`com.adobe.cq.dam.ips`程序包的DEBUG日志记录以收集更多信息。
+同步错误和问题记录在`error.log` （Experience Manager服务器目录`/crx-quickstart/logs/`）中。 有足够的日志记录功能来确定大多数问题的根本原因，但您可以通过Sling控制台([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog))增加对`com.adobe.cq.dam.ips`程序包的DEBUG日志记录功能，以收集更多信息。
 
 ### 移动、复制、删除 {#move-copy-delete}
 
@@ -81,7 +81,7 @@ ht-degree: 0%
   <tr>
    <td><strong>问题</strong></td>
    <td><strong>如何调试</strong></td>
-   <td><strong>解决方案</strong></td>
+   <td><strong>解决办法</strong></td>
   </tr>
   <tr>
    <td>无法访问资产详细信息视图中的复制URL/嵌入按钮</td>
@@ -146,7 +146,7 @@ ht-degree: 0%
   <tr>
    <td><strong>问题</strong></td>
    <td><strong>如何调试</strong></td>
-   <td><strong>解决方案</strong></td>
+   <td><strong>解决办法</strong></td>
   </tr>
   <tr>
    <td>无法预览视频</td>
@@ -255,8 +255,7 @@ ht-degree: 0%
 1. 在列表中搜索查看器包；它以`cq-dam-scene7-viewers-content`开头。
 1. 选择&#x200B;**重新安装**。
 1. 在云服务下，导航到Dynamic Media配置页面，然后打开Dynamic Media - S7配置的配置对话框。
-1. 不做更改，选择&#x200B;**保存**。
-此save操作会再次触发逻辑以创建并同步示例资产、查看器预设CSS和图稿。
+1. 不做更改，选择&#x200B;**保存**。此save操作会再次触发逻辑以创建并同步示例资产、查看器预设CSS和图稿。
 
 ### 问题：查看器预设创作中未加载图像预览 {#image-preview-not-loading}
 

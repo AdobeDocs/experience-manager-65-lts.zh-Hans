@@ -1,5 +1,5 @@
 ---
-title: 使用Agent UI准备和发送交互式通信
+title: 使用代理 UI 准备并发送交互式通信
 description: 利用代理UI，代理可以准备交互式通信并将其发送到发布流程。 代理在允许的情况下进行所需的修改，并将交互式通信提交至发布流程，如电子邮件或打印件。
 topic-tags: interactive-communications
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ role: User, Developer
 exl-id: 2ccd8c75-e4d0-40f9-bc8f-352b408b5c62
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 0%
+source-wordcount: '2029'
+ht-degree: 3%
 
 ---
 
-# 使用Agent UI准备和发送交互式通信 {#prepare-and-send-interactive-communication-using-the-agent-ui}
+# 使用代理 UI 准备并发送交互式通信 {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 利用代理UI，代理可以准备交互式通信并将其发送到发布流程。 代理在允许的情况下进行所需的修改，并将交互式通信提交至发布流程，如电子邮件或打印件。
 
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ### 输入数据 {#enter-data}
 
-1. 在数据选项卡中，根据需要输入变量、表单数据模型属性和打印模板(XDP)字段的数据。 填写所有标有星号(&amp;amp；ast；)的必填字段以启用&#x200B;**提交**&#x200B;按钮。
+1. 在数据选项卡中，根据需要输入变量、表单数据模型属性和打印模板(XDP)字段的数据。 填写所有标有星号(&amp;ast；)的必填字段以启用&#x200B;**提交**&#x200B;按钮。
 
    在交互式通信预览中选择数据字段值，以高亮显示数据选项卡中的相应数据字段，反之亦然。
 
@@ -172,7 +172,7 @@ ht-degree: 0%
 
 ## 将交互式通信另存为草稿 {#save-as-draft}
 
-您可以使用代理UI为每个交互式通信保存一个或多个草稿，并稍后检索草稿以继续处理。 您可以为每个草稿指定不同的名称来标识它。
+您可以使用代理 UI 为每个交互式通信保存一个或多个草稿，并在稍后检索草稿以继续处理。 您可以为每个草稿指定不同的名称，以便识别。
 
 Adobe建议按顺序执行这些指令，以成功地将交互式通信另存为草稿。
 

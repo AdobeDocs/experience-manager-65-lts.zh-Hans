@@ -12,8 +12,8 @@ role: Admin
 exl-id: b7b1bce6-9cea-4f13-955f-f9e361f298bf
 source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 1%
+source-wordcount: '2340'
+ht-degree: 3%
 
 ---
 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 ![Apache Sling分发代理](assets/chlimage_1-20.png)
 
-### 2.创建授权用户 {#createauthuser}
+### &#x200B;2. 创建授权用户 {#createauthuser}
 
 **配置权限**
 
@@ -198,7 +198,7 @@ ht-degree: 1%
 
 ![队列代理工厂](assets/chlimage_1-23.png)
 
-### &#x200B;5. Adobe Social Sync — 差异观察者工厂 {#diffobserver}
+### &#x200B;5. Adobe Social Sync — 观察者工厂差异 {#diffobserver}
 
 **启用组同步**
 
@@ -267,20 +267,20 @@ ht-degree: 1%
 ![同步代理工厂](assets/chlimage_1-25.png)
 
 * **导出程序终结点**
-每个发布实例都应该有一个导出器端点。 例如，如果有2个Publish实例localhost：4503和4504，则应该有两个条目：
+每个发布实例都应该有一个导出器端点。 例如，如果有2个Publish实例，本地主机:4503和4504，则应该有两个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/exporters/socialpubsync-reverse`
    * `https://localhost:4504/libs/sling/distribution/services/exporters/socialpubsync-reverse`
 
 * **导入程序端点**
-每个发布实例都应该有一个导入程序端点。 例如，如果有2个Publish实例localhost：4503和4504，则应该有两个条目：
+每个发布实例都应该有一个导入程序端点。 例如，如果有2个Publish实例，本地主机:4503和4504，则应该有两个条目：
 
    * `https://localhost:4503/libs/sling/distribution/services/importers/socialpubsync`
    * `https://localhost:4504/libs/sling/distribution/services/importers/socialpubsync`
 
 * 选择`Save`
 
-### 8.唯一Sling ID {#unique-sling-id}
+### &#x200B;8. 唯一Sling ID {#unique-sling-id}
 
 >[!CAUTION]
 >
@@ -303,11 +303,9 @@ ht-degree: 1%
    * 搜索并删除名为&#x200B;*sling.id.file*&#x200B;的文件
 
       * 例如，在Linux®系统上：
-
         `rm -i $(find . -type f -name sling.id.file)`
 
       * 例如，在Windows系统上：
-
         `use windows explorer and search for *sling.id.file*`
 
 1. 启动发布实例
@@ -339,7 +337,7 @@ ht-degree: 1%
 
 * 策略处理：
 
-   * 要使用新节点覆盖现有rep：policy节点，请添加第三个包过滤器：
+   * 要使用新节点覆盖现有rep:policy节点，请添加第三个包过滤器：
 
       * `/home/users|+.*/rep:policy`
 
@@ -421,7 +419,7 @@ ht-degree: 1%
 
 ### 未正确添加配置 {#configuration-improperly-added}
 
-当用户同步失败时，最常见的问题是添加了&#x200B;*其他配置*。 相反，*existing *default配置应该已&#x200B;*编辑*。
+当用户同步失败时，最常见的问题是添加了&#x200B;*其他配置*。 相反，*existing* default配置应该已*编辑*。
 
 以下是有关已编辑的默认配置应如何显示在Web控制台中的视图。 如果出现多个实例，则应删除添加的配置。
 
@@ -461,7 +459,7 @@ ht-degree: 1%
 
 授权用户对所有Publish实例应明确具有以下权限和限制：
 
-| **path** | **jcr：all** | **rep：glob** |
+| **path** | **jcr:all** | **代表:glob** |
 |---|---|---|
 | /home | X | &#42;/活动/&#42; |
 | /home/users | X | &#42;/活动/&#42; |
@@ -469,7 +467,7 @@ ht-degree: 1%
 
 作为`administrators`组的成员，授权用户应在所有Publish实例上具有以下权限：
 
-| **path** | **jcr：all** | **jcr：read** | **rep：write** |
+| **path** | **jcr:all** | **jcr:read** | **代表:write** |
 |---|---|---|---|
 | /etc/packages/sling/distribution |  |  | X |
 | /libs/sling/distribution |  | X |  |
