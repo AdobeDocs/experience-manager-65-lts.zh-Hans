@@ -1,5 +1,5 @@
 ---
-title: 信件和互动式通信的后处理
+title: 书信与交互式通信的后处理
 description: 通信管理中的信件后处理允许您创建AEM和Forms后处理过程（如打印和电子邮件），并将它们与您的信件集成。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: b48ceb2a-9e5b-4df7-9a3e-2ed7e3849041
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 0%
+source-wordcount: '837'
+ht-degree: 2%
 
 ---
 
-# 信件和互动式通信的后处理{#post-processing-of-letters-and-interactive-communications}
+# 书信与交互式通信的后处理{#post-processing-of-letters-and-interactive-communications}
 
 ## 后处理 {#post-processing}
 
@@ -44,7 +44,7 @@ ht-degree: 0%
 1. 指定用户名和密码。
 1. 确保已将sun.util.calendar添加到反序列化防火墙配置中。
 
-   列入允许列表转到“反序列化防火墙配置”，在“包前缀的类”下，添加sun.util.calendar。
+   转到“反序列化防火墙配置”，在“包前缀的类”下，添加sun.util.calendar。
 
 1. 现在，您的服务器已映射，并且在创建信件时，可在AEM Forms on JEE的AEM用户界面中找到发布流程。
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
    转到Adobe Experience Manager Web控制台配置页面> **[!UICONTROL 通信管理配置]**&#x200B;并设置以下参数：
 
-   1. **inPDFDoc (PDF文档参数)：**&#x200B;作为输入的PDF文档。 此输入包含渲染的字母作为输入。 指示的参数名称是可配置的。 可以从配置的通信管理配置中配置它们。
+   1. **inPDFDoc （PDF文档参数）：**&#x200B;作为输入的PDF文档。 此输入包含渲染的字母作为输入。 指示的参数名称是可配置的。 可以从配置的通信管理配置中配置它们。
    1. **inXMLDoc （XML数据参数）：**&#x200B;作为输入的XML文档。 此输入包含用户以XML形式输入的数据。
    1. **inXDPDoc （XDP文档参数）：**&#x200B;作为输入的XML文档。 此输入包含基础布局(XDP)。
    1. **inAttachmentDocs（附件文档参数）：**&#x200B;列表输入参数。 此输入包含作为输入的所有附件。
