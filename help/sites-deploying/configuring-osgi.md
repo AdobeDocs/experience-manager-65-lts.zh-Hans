@@ -1,5 +1,5 @@
 ---
-title: 配置OSGi
+title: 配置 OSGi
 description: OSGi是Adobe Experience Manager (AEM)技术栈栈中的基本元素。 它用于控制AEM的复合捆绑包及其配置。 本文详细介绍了如何管理此类捆绑包的配置设置。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: Admin
 exl-id: 3bf3ba2e-f5f2-428a-a1fc-36f885350f6b
 source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 0%
+source-wordcount: '1935'
+ht-degree: 1%
 
 ---
 
-# 配置OSGi{#configuring-osgi}
+# 配置 OSGi{#configuring-osgi}
 
 [OSGi](https://www.osgi.org/)是Adobe Experience Manager (AEM)技术栈栈中的基本元素。 它用于控制AEM的复合捆绑包及其配置。
 
@@ -28,7 +28,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
 
 * 使用[Adobe CQ Web控制台](#osgi-configuration-with-the-web-console)
 * 使用[配置文件](#osgi-configuration-with-configuration-files)
-* 在存储库[&#128279;](#osgi-configuration-in-the-repository)中配置内容节点(`sling:OsgiConfig`)
+* 在存储库](#osgi-configuration-in-the-repository)中配置[内容节点(`sling:OsgiConfig`)
 
 虽然存在细微差异（主要与[运行模式](/help/sites-deploying/configure-runmodes.md)有关），但可以使用任一方法：
 
@@ -45,7 +45,7 @@ OSGi“*”提供了标准化基元，允许使用小型、可重用的协作组
    * 包含在Web控制台中定义的设置。
    * 可以包含在内容包中，以供在其他实例中使用。
 
-* [存储库中的content-nodes (sling：osgiConfig)](#osgi-configuration-in-the-repository)
+* [存储库中的content-nodes (sling:osgiConfig)](#osgi-configuration-in-the-repository)
 
    * 需要使用CRXDE Lite手动配置。
    * 由于`sling:OsgiConfig`节点的命名约定，您可以将配置绑定到特定的[运行模式](/help/sites-deploying/configure-runmodes.md)。 您甚至可以在同一存储库中保存多个运行模式的配置。
@@ -299,9 +299,7 @@ Web控制台不显示存储库中已保存更改的位置，但可以轻松地�
 例如，如果实例是以运行模式`author,dev,emea`启动的，且`/apps/*/config.author/`和`/apps/*/config.emea.author/`都定义了配置
 `com.day.cq.wcm.core.impl.VersionManagerImpl`，已应用`/apps/*/config.emea.author/`中的配置。
 
-此规则的粒度处于PID级别。
-您不能在`/apps/*/config.author/`中为同一PID定义某些属性，也不能在`/apps/*/config.emea.author/`中为同一PID定义更具体的属性。
-匹配运行模式数最高的配置对整个PID有效。
+此规则的粒度处于PID级别。您不能在`/apps/*/config.author/`中为同一PID定义某些属性，也不能在`/apps/*/config.emea.author/`中为同一PID定义更具体的属性。匹配运行模式数最高的配置对整个PID有效。
 
 ### 标准配置 {#standard-configurations}
 
