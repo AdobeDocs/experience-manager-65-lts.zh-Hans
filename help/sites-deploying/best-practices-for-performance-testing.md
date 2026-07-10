@@ -1,5 +1,5 @@
 ---
-title: 性能测试的最佳实践
+title: 性能测试最佳做法
 description: 了解用于性能测试的整体策略和方法，以及可用于帮助此过程的一些工具。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: Admin
 exl-id: 29c20cf3-1694-4d06-ab7c-688018808c44
 source-git-commit: 4087a6f44bd87e3f841feb09220a9ea34ec1dc1c
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 0%
+source-wordcount: '1800'
+ht-degree: 1%
 
 ---
 
-# 性能测试的最佳实践{#best-practices-for-performance-testing}
+# 性能测试最佳做法{#best-practices-for-performance-testing}
 
 ## 简介 {#introduction}
 
@@ -74,7 +74,7 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 
 触屏UI中的&#x200B;**开发人员模式**
 
-AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hans)。
+AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar读取请求日志**
 
@@ -86,8 +86,7 @@ ACS AEM工具中的[Explain查询工具](/help/sites-administering/operations-da
 
 **PageSpeed工具**
 
-Google的PageSpeed工具提供了网站分析功能，用于确保对页面性能最佳实践的遵守情况，以及可在Apache实例上与Dispatcher一起安装的插件，用于进行其他优化。
-请参阅[PageSpeed Tools网站](https://developers.google.com/speed)。
+Google的PageSpeed工具提供了网站分析功能，用于确保对页面性能最佳实践的遵守情况，以及可在Apache实例上与Dispatcher一起安装的插件，用于进行其他优化。请参阅[PageSpeed Tools网站](https://developers.google.com/speed)。
 
 ## 创作环境 {#author-environment}
 
