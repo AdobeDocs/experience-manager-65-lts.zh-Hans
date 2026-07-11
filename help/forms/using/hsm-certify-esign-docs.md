@@ -1,5 +1,5 @@
 ---
-title: 使用HSM对文档进行数字签名或认证
+title: 使用 HSM 对文档进行数字签名或认证
 description: 使用HSM服务器或eToken设备签署/认证PDF文档。
 contentOwner: vishgupt
 content-type: reference
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: 20bd6c24-ac9d-4f8d-b5c0-9b7935d4bdf8
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 0%
+source-wordcount: '699'
+ht-degree: 8%
 
 ---
 
-# 使用HSM对文档进行数字签名或认证 {#use-hsm-to-digitally-sign-or-certify-documents}
+# 使用 HSM 对文档进行数字签名或认证 {#use-hsm-to-digitally-sign-or-certify-documents}
 
 硬件安全模块(HSM)和令牌是专门、强化和防篡改的计算设备，旨在安全地管理、处理和存储数字密钥。 这些设备直接连接到计算机或网络服务器。
 
@@ -52,11 +52,11 @@ Adobe Experience Manager Forms可以使用存储在HSM上的凭据或电子令�
    ```
 
 1. 保存并关闭sling.properties文件。
-1. 重新启动AEM实例。
+1. 重启 AEM 实例。
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 <!--
 
@@ -103,7 +103,7 @@ Perform the following steps to setup certificates:
 1. 打开&#x200B;**HSM凭据配置服务**&#x200B;并指定以下字段的值：
 
    * **凭据别名**：指定用于标识别名的字符串。 此值用作某些数字签名操作（如“签名签名字段”操作）的属性。
-   * **DLL路径**：指定服务器上HSM或etoken客户端库的路径。 例如，`C:\Program Files\LunaSA\cryptoki.dll`。在群集环境中，必须确保群集中的所有服务器必须使用相同的路径。
+   * **DLL路径**：指定服务器上HSM或etoken客户端库的路径。 例如，`C:\Program Files\LunaSA\cryptoki.dll`。 在群集环境中，必须确保群集中的所有服务器必须使用相同的路径。
    * **HSM Pin**：指定访问设备密钥所需的密码。
    * **HSM插槽ID**：指定整数类型的插槽标识符。 插槽ID是逐个客户端设置的。 用于标识HSM上包含用于签名/认证的私钥的插槽。
 
@@ -114,7 +114,7 @@ Perform the following steps to setup certificates:
    * **证书SHA1**：为正在使用的凭据指定公钥(.cer)文件的SHA1值（指纹）。 确保SHA1值中没有使用空格。
    * **HSM设备类型**：选择HSM（Luna或其他）或eToken设备的制造商。
 
-   单击&#x200B;**保存**。为AEM Forms配置了硬件安全模块。 现在，您可以将Hardware Security Module与AEM Forms结合使用来签署或认证文档。
+   单击&#x200B;**保存**。 为AEM Forms配置了硬件安全模块。 现在，您可以将Hardware Security Module与AEM Forms结合使用来签署或认证文档。
 
 ## 使用DocAssurance服务API签署或证明使用存储在设备上的数字密钥的文档  {#programatically}
 

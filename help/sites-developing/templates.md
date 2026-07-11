@@ -12,8 +12,8 @@ role: Developer
 exl-id: 3b3cff43-4edc-4250-8e6d-08eb5906ffcd
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 0%
+source-wordcount: '901'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 以下模板将详细介绍：
 
-* [页面模板 — 可编辑](/help/sites-developing/page-templates-editable.md)
+* [页面模板（可编辑）](/help/sites-developing/page-templates-editable.md)
 
 ## 模板 — 页面 {#templates-pages}
 
