@@ -1,5 +1,5 @@
 ---
-title: 对配置属性的加密支持
+title: 配置属性的加密支持
 description: 了解AEM中提供的对配置属性的加密支持。
 contentOwner: User
 content-type: reference
@@ -11,12 +11,12 @@ role: Admin
 exl-id: 28407eda-1854-4816-b877-428c006bdeec
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 0%
+source-wordcount: '280'
+ht-degree: 4%
 
 ---
 
-# 对配置属性的加密支持{#encryption-support-for-configuration-properties}
+# 配置属性的加密支持{#encryption-support-for-configuration-properties}
 
 ## 概述 {#overview}
 
