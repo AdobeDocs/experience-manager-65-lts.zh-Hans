@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: ee3cfd977ab2e7f7cadabb2719fb38ef255b6a2a
+source-git-commit: 992c178c97245aa3fef43137498dc45e5ab79c39
 workflow-type: tm+mt
-source-wordcount: '7770'
+source-wordcount: '7761'
 ht-degree: 96%
 
 ---
@@ -53,11 +53,11 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 增强了可视规则编辑器中的用户体验。 此次更新包括：
 
-   * 保存后自动重新加载摘要视图，以显示更新后的规则状态
+  * 保存后自动重新加载摘要视图，以显示更新后的规则状态
 
-   * 显示“添加”/“删除”按钮并允许进行切换，不再隐藏这两个按钮
+  * 显示“添加”/“删除”按钮并允许进行切换，不再隐藏这两个按钮
 
-   * 保存规则的操作失败后，提供明确的反馈 (FORMS-21261)
+  * 保存规则的操作失败后，提供明确的反馈 (FORMS-21261)
 
 * 添加了运行时应用程序编程接口 (API)，以切换 AEM Forms 中的旧版可扩展标记语言 (XML) 导出模式，由此取代 `Dcom.adobe.fd.forms.export.legacy` 参数。 此增强功能使用户能够更有效地切换导出模式，从而提高工作流的灵活性。 (FORMS-23115)
 
@@ -157,7 +157,8 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 在最近几次更改 UI 样式设置后，内容片段 RTE 显示出布局和可视化方面的问题。 服务包 2 改进了 RTE 样式设置，使工具栏和可编辑区域正确渲染，并保持清晰可读。 内容片段编辑器现在与页面编辑器的外观和行为保持一致。 (SITES-38684)
 * 从 Polaris 资产选择器中移除 IMS 范围后，破坏了内容片段与传递端点的集成。 打开远程资产选择器并选择资产时，作者会遇到错误。 此更新重新添加了所需的 IMS 范围，恢复了稳定的传递层访问。 （SITES-35837）
-* “关联的内容”面板不再渲染硬编码的“未定义”占位符。 内容片段编辑器现在通过本地化资源来解析此文本，因此编辑器可以看到翻译过的 UI 文本。 (SITES-33675)  <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
+* “关联内容”面板不再呈现硬编码的“未定义”占位符。内容片段编辑器现在通过本地化资源解析该文本，因此编辑器可以看到翻译的UI文本。(SITES-33675)
+  <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
 * 内容片段编辑器现在会在所有区域设置中都显示翻译过的“一般”选项卡标签。 编辑器会替换未本地化的选项卡文本，从选项卡标题中移除内部 ID。 (SITES-30715)
 * 对于未被允许的资产类型，内容片段编辑器现在会显示翻译过的名称。 作者配置内容引用限制时，选取器列表不再混合内部字符串和只用英语的标签。 (SITES-29699)
 
@@ -359,23 +360,23 @@ AEM 6.5 LTS 服务包 2 需要 S3 连接器 1.60.10 或更高版本。 S3 数据
 
   **影响**
 
-   * Sling 弃用了这些 PID，您应该从配置中将它们移除：
-      * 工厂 PID：`org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment`
-      * 全局 PID： `org.apache.sling.jcr.base.internal.LoginAdminWhitelist`
-这些较旧的配置使用属性，如 `whitelist.name` 和 `whitelist.bundles`。
+  * Sling 弃用了这些 PID，您应该从配置中将它们移除：
+    * 工厂 PID：`org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment`
+    * 全局 PID： `org.apache.sling.jcr.base.internal.LoginAdminWhitelist`
+      这些较旧的配置使用属性，如 `whitelist.name` 和 `whitelist.bundles`。
 
-   * Sling 仍为已弃用的 PID 提供部分向后兼容性，但不要将它们用于新配置。 请改用较新的 `LoginAdminAllowList.*` PID。
-   * 不要同时运行已弃用的和新的允许列表配置。 混合配置可能会产生歧义，导致意外行为。 如果您迁移到 AEM 6.5 LTS SP2，请完全移除已弃用的 PID。
+  * Sling 仍为已弃用的 PID 提供部分向后兼容性，但不要将它们用于新配置。 请改用较新的 `LoginAdminAllowList.*` PID。
+  * 不要同时运行已弃用的和新的允许列表配置。 混合配置可能会产生歧义，导致意外行为。 如果您迁移到 AEM 6.5 LTS SP2，请完全移除已弃用的 PID。
 
   **您应该怎么做**
 
-   1. 查找使用 `LoginAdminWhitelist*` PID 的允许列表配置。
-   1. 将它们替换为适当的新 PID：
+  1. 查找使用 `LoginAdminWhitelist*` PID 的允许列表配置。
+  1. 将它们替换为适当的新 PID：
 
-      * 工厂 PID：`org.apache.sling.jcr.base.LoginAdminAllowList.fragment`
-      * 全局 PID：`org.apache.sling.jcr.base.LoginAdminAllowList`
+     * 工厂 PID：`org.apache.sling.jcr.base.LoginAdminAllowList.fragment`
+     * 全局 PID：`org.apache.sling.jcr.base.LoginAdminAllowList`
 
-      有关其他详细信息，请参阅[已弃用的管理登录用允许列表捆绑包方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecated-approach-to-allowlist-bundles-for-administrative-login)。
+     有关其他详细信息，请参阅[已弃用的管理登录用允许列表捆绑包方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecated-approach-to-allowlist-bundles-for-administrative-login)。
 
 * AEM 6.5 LTS SP2 更新了 Sling、Oak 和 Felix 的基础层捆绑包集。 这些升级增强了核心运行时的稳定性，在整个平台上对齐了依赖项版本。 (GRANITE-61874)
 
@@ -499,7 +500,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 > 如果您直接从旧版 6.5 SP 升级到 LTS SP1，请按照从 6.5 [升级](/help/sites-deploying/upgrade.md)到 6.5 LTS GA 的说明进行操作。
 
 
-有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
+有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)，该文档适用于LTS Service Pack更新。
 
 >[!NOTE]
 >
