@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 37e0d7de-0f7b-475f-b508-3dd150008fee
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 2%
+source-wordcount: '1279'
+ht-degree: 1%
 
 ---
 
@@ -49,7 +49,7 @@ Dynamic Media中的以下查看器支持概览：
     <td><a href="/help/assets/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">正在向视频添加交互性</a>。</td>
     </tr>
     <tr>
-    <td>传送横幅</td>
+    <td>轮播横幅</td>
     <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">将热点或图像映射添加到横幅</a>。<br /> </td>
     </tr>
     </tbody>
@@ -83,7 +83,7 @@ Dynamic Media中的以下查看器支持概览：
    查看器使用名为`QuickViewActive`的处理程序。
 
    **示例**
-假设您在网页上对交互式图像使用以下示例嵌入代码：
+   假设您在网页上对交互式图像使用以下示例嵌入代码：
 
    ![chlimage_1-291](assets/chlimage_1-291.png)
 
@@ -106,15 +106,15 @@ Dynamic Media中的以下查看器支持概览：
 
    请在以下网站了解有关`setHandlers()`方法的更多信息：
 
-   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html?lang=zh-Hans)
-   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html?lang=zh-Hans)
+   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
+   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
 1. 配置`quickViewActivate`处理程序。
 
    `quickViewActivate`处理程序控制查看器中的概览视图。 该处理程序包含用于概览的变量列表和函数调用。 嵌入代码为概览中的SKU变量集提供映射，并提供示例`loadQuickView`函数调用。
 
    **变量映射**
-将网页中使用的变量映射到概览中包含的SKU值和通用变量：
+   将网页中使用的变量映射到概览中包含的SKU值和通用变量：
 
    `var *variable1*= inData.*quickviewVariable*`
 
@@ -130,7 +130,7 @@ Dynamic Media中的以下查看器支持概览：
    ```
 
    **函数调用**
-该处理程序还需要函数调用才能使概览正常工作。 假定主机页面可以访问函数。 嵌入代码提供了一个示例函数调用：
+   该处理程序还需要函数调用才能使概览正常工作。 假定主机页面可以访问函数。 嵌入代码提供了一个示例函数调用：
 
    `loadQuickView(sku)`
 
@@ -138,16 +138,16 @@ Dynamic Media中的以下查看器支持概览：
 
    请在以下网站了解有关`quickViewActivate`方法的更多信息：
 
-   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html?lang=zh-Hans)
-   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html?lang=zh-Hans)
-   * 交互式视频查看器中的交互式数据支持： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html?lang=zh-Hans)
+   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
+   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * 交互式视频查看器中的交互式数据支持： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. 执行以下操作：
 
    * 取消注释嵌入代码的setHandlers部分。
    * 映射概览中包含的任何其他变量。
 
-      * 如果要添加其他变量，请更新`loadQuickView(sku,*var1*,*var2*)`调用。
+     * 如果要添加其他变量，请更新`loadQuickView(sku,*var1*,*var2*)`调用。
 
    * 在页面上、查看器外部创建简单的`loadQuickView` ()函数。
 
@@ -215,8 +215,8 @@ Dynamic Media中的以下查看器支持概览：
 
    请在以下网站了解有关`init()`方法的更多信息：
 
-   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html?lang=zh-Hans)
-   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=zh-Hans](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html?lang=zh-Hans)
+   * 交互式图像查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
+   * 交互式视频查看器： [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
 1. 要将前面步骤中描述的弹出窗口附加到查看器，请使用以下代码：
 
@@ -261,7 +261,7 @@ Dynamic Media中的以下查看器支持概览：
    `*viewerInstance.*init()`
 
    **示例**
-此示例使用交互式图像查看器。
+   此示例使用交互式图像查看器。
 
    `s7interactiveimageviewer.init()`
 
