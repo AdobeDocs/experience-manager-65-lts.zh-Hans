@@ -1,5 +1,5 @@
 ---
-title: 为AEM贡献内容
+title: 参与 AEM 贡献
 description: AEM的开发遵循大型开源项目中经常使用的成熟方法
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,14 +11,14 @@ role: Developer
 exl-id: 1197dc8e-7fbe-4f74-942b-3aa9fafc07ac
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2642'
-ht-degree: 0%
+source-wordcount: '2738'
+ht-degree: 1%
 
 ---
 
-# 为AEM贡献内容{#contributing-to-aem}
+# 参与 AEM 贡献{#contributing-to-aem}
 
-## 开发方法 {#development-methodology}
+## 开发方法论 {#development-methodology}
 
 AEM的开发遵循大型开源项目中普遍采用的行之有效的方法体系。 AEM技术栈栈中的许多核心元素实际上是作为活动的开源项目来维护的，例如Sling和Jackrabbit，这些项目向Apache Software Foundation做出了贡献。 AEM中体现了这一精神的一个主要方面是，我们鼓励您使用可用的邮件列表和在线论坛与开发团队进行直接交互。
 
@@ -33,7 +33,7 @@ AEM的开发遵循大型开源项目中普遍采用的行之有效的方法体�
 在最高级别上，您应该充分了解：
 
 * [HTTP/1.1协议](https://www.ietf.org/rfc/rfc2616.txt)
-* HTML (首选[HTML5](https://html.spec.whatwg.org/))
+* HTML （首选[HTML5](https://html.spec.whatwg.org/)）
 * 级联样式表
 * 可扩展标记语言(XML)
 * 异步JavaScript和XML (AJAX)设计模式
@@ -152,7 +152,7 @@ JCR具有多种预定义的节点类型和属性类型，但通常打字系统�
 
 **Parsys，段落系统** — 段落系统(parsys)是一个复合组件，它允许作者向页面添加不同类型的组件，并包含其他段落组件。 每个段落类型都表示为一个组件。 段落系统本身也是一个组件，它包含其他段落组件。
 
-**微内核** — 存储库中的每个工作区都可以单独配置为通过特定的微内核（管理数据的读取和写入的类）存储其数据。 同样，也可以单独配置存储库范围的版本存储以使用特定的微内核。 有几种不同的微内核可用，能够以各种文件格式或关系数据库存储数据。 (例如，有MongoDB、DB2®或Oracle的持久性管理器) AEM的默认微内核是TarMK（请参阅下面的进一步说明）。
+**微内核** — 存储库中的每个工作区都可以单独配置为通过特定的微内核（管理数据的读取和写入的类）存储其数据。 同样，也可以单独配置存储库范围的版本存储以使用特定的微内核。 有几种不同的微内核可用，能够以各种文件格式或关系数据库存储数据。 （例如，有MongoDB、DB2®或Oracle的持久性管理器） AEM的默认微内核是TarMK（请参阅下面的进一步说明）。
 
 **发布实例** — 出于安全、管理和其他原因，生产站点通常会将AEM的实例划分为创作实例和发布实例。 有关部署架构（包括创作/发布实例）的更多信息，请参阅有关AEM实例的文档。
 
@@ -160,7 +160,7 @@ JCR具有多种预定义的节点类型和属性类型，但通常打字系统�
 
 首次启动快速入门时，会在后台创建一个整个JCR兼容存储库，这可能需要几分钟的时间。 初次启动后，后续启动会更加迅速，因为存储库基础架构已经建立。
 
-可以通过适当重命名快速入门文件来控制许多启动选项(例如活动端口号、相关AEM实例是否应为“发布”实例或“创作”实例；等等)。 要查看这方面的选项列表，请在命令行中使用“ — help”运行JAR：
+可以通过适当重命名快速入门文件来控制许多启动选项（例如活动端口号、相关AEM实例是否应为“发布”实例或“创作”实例；等等）。 要查看这方面的选项列表，请在命令行中使用“ — help”运行JAR：
 
 ```shell
 java -jar <quickstartfilename>.jar -help
@@ -178,6 +178,6 @@ java -jar <quickstartfilename>.jar -help
 
 **Tar存储(TarMK)** - TarMK是AEM中的默认持久性系统。 虽然AEM可以配置为使用其他持久性系统（例如MongoDB），但TarMK具有某些优势，即它针对典型JCR用例进行了性能优化（因此非常快速），使用行业标准数据格式，并且可以快速轻松地备份。
 
-**Template** — 在AEM中，Template指定特定类型的页面。 它定义页面的结构（通常还会指定缩略图图像以及各种属性）。 例如，您可以为产品页面、站点地图和联系人信息使用单独的模板。
+**Template** — 在AEM中，Template指定特定类型的页面。 它定义页面的结构（通常还会指定缩略图图像以及各种属性）。 例如，您可能会有产品页面、站点地图和联系信息的单独模板。
 
 **工作流** - AEM工作流系统允许创建涉及页面或资产的自动化进程。

@@ -11,8 +11,8 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 16798533-855d-4f14-8edb-edba79818dbf
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 4%
+source-wordcount: '1290'
+ht-degree: 6%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
 1. 导航到要复制其图像预设URL或查看器预设URL的&#x200B;*已发布*&#x200B;资产，然后选择资产以将其打开。
 
-   请注意，只有在首次&#x200B;*发布*&#x200B;资产&#x200B;*后*，才可复制 URL。此外，还必须发布查看器预设或图像预设。
+   请注意，只有在首次&#x200B;*发布*&#x200B;资产&#x200B;*后*，才可复制 URL。 此外，还必须发布查看器预设或图像预设。
 
    请参阅[发布资源](publishing-dynamicmedia-assets.md)。
 
@@ -112,9 +112,9 @@ Dynamic Media支持静态资源的交付，这些资源不仅仅是图像和视�
 
    * `The URL of the published static is the following:`
 
-      * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
+     * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
-        例如 `https://aem.com/is/content/adobe/image.gif`。
+       例如 `https://aem.com/is/content/adobe/image.gif`。
 
    * 选择&#x200B;**[!UICONTROL 资源]** > **[!UICONTROL 动态演绎版]**，然后选择静态资源的动态演绎版并复制URL。
 
@@ -139,7 +139,7 @@ Dynamic Media支持静态资源的交付，这些资源不仅仅是图像和视�
    例如，如果注册ID为`87654321|MyCompany`，则客户名称将为`MyCompany`。
 
 1. 在页面的左上角附近，选择&#x200B;**[!UICONTROL Cloud Services]**，然后选择Experience Manager徽标并导航到&#x200B;**[!UICONTROL 常规]** > **[!UICONTROL CRXDE Lite]**。
-1. 从JCR (Java™内容存储库)中向下复制整个视频演绎版路径。
+1. 从JCR （Java™内容存储库）中向下复制整个视频演绎版路径。
 
    例如，视频的演绎版路径可能如下所示：
 
@@ -157,7 +157,7 @@ Dynamic Media支持静态资源的交付，这些资源不仅仅是图像和视�
 
    此示例是已发布视频演绎版的完整视频URL。
 
-## 获取用于自适应比特率流的视频URL(DASH或HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## 获取用于自适应比特率流的视频URL（DASH或HLS） {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. 在Experience Manager中，导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL 部署]** > **[!UICONTROL 云]** > **[!UICONTROL 云服务]**。
 1. 在&#x200B;**[!UICONTROL 云服务]**&#x200B;页面上，向下滚动到&#x200B;**[!UICONTROL Dynamic Media云服务]**&#x200B;标题，然后选择&#x200B;**[!UICONTROL 显示配置]**。
@@ -170,7 +170,7 @@ Dynamic Media支持静态资源的交付，这些资源不仅仅是图像和视�
 
    （以上路径只是一个示例；它不是您复制的实际路径。）
 
-   * 在&#x200B;**[!UICONTROL 注册ID]**&#x200B;下，复制ID最后一部分中的客户名称。 在稍后这些步骤中，您需要复制的客户名称。
+   * 在&#x200B;**[!UICONTROL 注册 ID]** 下，复制 ID 最后一部分中的客户名称。 在稍后这些步骤中，您需要复制的客户名称。
 
      例如，如果注册ID为`87654321|demoCo`，则您复制的客户名称将是`demoCo`。
 

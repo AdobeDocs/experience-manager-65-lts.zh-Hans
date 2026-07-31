@@ -12,7 +12,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: d3699ddf-2a6e-4837-a98b-61b565de3d76
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3232'
+source-wordcount: '3404'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 若要将Dynamic Media功能添加到您在网站上使用的资产，您可以直接在页面上添加&#x200B;**Dynamic Media**、**Interactive Media**、**Media**&#x200B;或&#x200B;**Video 360 Media**&#x200B;组件。 您可以通过进入布局模式并启用Dynamic Media组件来添加组件。 然后，您可以将这些组件添加到页面，并将资产添加到该组件。 Dynamic media组件是智能的——它们知道您添加的是图像还是视频，可用的配置选项会相应地发生更改。
 
-如果您使用Adobe Experience Manager作为WCM，则可以直接将Dynamic Media资源添加到页面。 如果您为 WCM 使用第三方，请[链接](/help/assets/linking-urls-to-yourwebapplication.md)或[嵌入](/help/assets/embed-code.md)资产。有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
+如果您使用Adobe Experience Manager作为WCM，则可以直接将Dynamic Media资源添加到页面。 如果您为 WCM 使用第三方，请[链接](/help/assets/linking-urls-to-yourwebapplication.md)或[嵌入](/help/assets/embed-code.md)资产。 有关响应式第三方网站，请参阅[将优化的图像交付到响应式网站](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ ht-degree: 6%
 
   仅当满足以下条件时，才会显示&#x200B;**[!UICONTROL 为更高分辨率的设备优化]**&#x200B;选项：
 
-   * 在预设类型下，已选择&#x200B;**[!UICONTROL 图像预设]**，并从&#x200B;**[!UICONTROL 图像预设]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL RESS_IP]**。
+  * 在预设类型下，已选择&#x200B;**[!UICONTROL 图像预设]**，并从&#x200B;**[!UICONTROL 图像预设]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL RESS_IP]**。
 
   图像预设的![设备像素比设置](/help/assets/assets-dm/dpr-ress-ip.png)
 
@@ -213,10 +213,10 @@ ht-degree: 6%
 
   例如，使用查看器修饰符，您可以执行以下操作：
 
-   * 将字幕文件与视频关联：[字幕](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=zh-Hans)
-   * 将导航文件与视频关联： [导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html?lang=zh-Hans)
+  * 将字幕文件与视频关联：[字幕](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html?lang=zh-Hans)
+  * 将导航文件与视频关联： [导航](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html?lang=zh-Hans)
 
-     您可以通过选择组件中的&#x200B;**[!UICONTROL 编辑]**&#x200B;来编辑以下高级设置。
+    您可以通过选择组件中的&#x200B;**[!UICONTROL 编辑]**&#x200B;来编辑以下高级设置。
 
 * **[!UICONTROL 标题]** — 更改视频的标题。
 
@@ -250,7 +250,7 @@ ht-degree: 6%
 
   仅当满足以下条件时，才会显示&#x200B;**[!UICONTROL 为更高分辨率的设备优化]**&#x200B;选项：
 
-   * 在预设类型下，已选择&#x200B;**[!UICONTROL 智能裁切]**&#x200B;选项。
+  * 在预设类型下，已选择&#x200B;**[!UICONTROL 智能裁切]**&#x200B;选项。
 
   智能裁剪的![设备像素比设置](/help/assets/assets-dm/dpr-smartcrop.png)
 
