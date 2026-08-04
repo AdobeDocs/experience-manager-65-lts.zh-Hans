@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 992c178c97245aa3fef43137498dc45e5ab79c39
+source-git-commit: d61a24e1d493063283466b3a769eee14649282e6
 workflow-type: tm+mt
-source-wordcount: '7761'
-ht-degree: 96%
+source-wordcount: '7783'
+ht-degree: 90%
 
 ---
 
@@ -53,7 +53,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 增强了可视规则编辑器中的用户体验。 此次更新包括：
 
-  * 保存后自动重新加载摘要视图，以显示更新后的规则状态
+  * 要显示更新的规则状态，摘要视图会在保存后自动重新加载
 
   * 显示“添加”/“删除”按钮并允许进行切换，不再隐藏这两个按钮
 
@@ -63,7 +63,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 添加了自适应表单中对带有命名空间标记的 JavaScript 对象表示法 (JSON) 的支持。 此增强功能使用户能够更有效地使用 JSON 数据结构，从而提高数据集成和处理能力。 (FORMS-22519)
 
-* 在规则编辑器中添加了一个“下载记录文档（DoR）/表单提交”的开箱即用 (OOTB) 按钮。 通过此增强功能，客户无需编写自定义代码即可使用 downloadDoR 函数，从而提高此函数的可用性和效率。 (FORMS-21263)
+* 在规则编辑器中添加了下载记录文档(DoR) /表单提交作为标准按钮。 通过此增强功能，客户无需编写自定义代码即可使用 downloadDoR 函数，从而提高此函数的可用性和效率。 (FORMS-21263)
 
 * 添加了自适应表单中对带有命名空间标记的 JavaScript 对象表示法 (JSON) 的支持。 此增强功能使用户能够更准确、更高效地预填表单，从而增强数据集成，减少手动输入错误。 (FORMS-10883)
 
@@ -77,7 +77,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 当作者在编辑过程中将鼠标悬停在组件浏览器中的项目上时，“文本”组件会失去键盘焦点。 这会中断输入，并触发 WCAG 3.2.1 的一个无障碍性错误。 此修复防止了悬停样式移动焦点，在组件浏览器交互时保持“文本”组件获得焦点。 (SITES-35370)
 * 修正了“描述”富文本字段中的焦点管理，该字段阻止了通过 Tab 键前进导航。 用户在 RTE 中卡住，因为组件依赖非标准键盘命令来移动焦点，这破坏了预期的对话框导航。 此更改强制使用标准键盘进行交互操作，维护了整个对话框中符合逻辑的 Tab 排序。 （SITES-35228）
-* 修复了在 Sites 编辑器中创作页面时导致预期行为中断以及组件交互不一致的问题。 作者遇到不可靠的 UI 响应，这干扰了标准编辑任务，降低了工作流效率。 此更新改进了底层编辑器逻辑，恢复了受影响组件之间稳定、可预测的交互行为。 （SITES-35227）
+* 修复了在 Sites 编辑器中创作页面时导致预期行为中断以及组件交互不一致的问题。 作者遇到不可靠的 UI 响应，这干扰了标准编辑任务，降低了工作流效率。 此更新改进了编辑器逻辑，并恢复了受影响组件之间稳定、可预测的交互。 （SITES-35227）
 * 一个回归破坏了页面编辑器中的资产选择器，阻止了在特定的页面编辑场景中加载选择器。 现在，作者在编辑页面过程中选择或浏览资产时，可以正常打开并使用资产选择器。 此更改恢复了对因加载失败而中断的资产选择工作流的稳定访问。 （SITES-35226）
 * 消除了在 Sites 编辑器中导致页面交互行为不一致以及标准创作工作流中断的问题。 此错误导致了意外的 UI 响应，干扰了组件配置和内容更新。 此更新稳定了受影响的功能，恢复了在所有页面上可靠执行各种编辑操作。 （SITES-35225）
 * 解决了 Sites 创作界面中导致页面编辑过程中出现不一致行为并中断正常工作流的问题。 作者遇到了意外的 UI 响应，干扰了组件交互和内容更新。 此更新稳定了受影响的功能，恢复了在所有编辑场景中可靠、可预测的行为。 （SITES-35224）
@@ -100,8 +100,8 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 * 修复了 320px 宽度情况下的搜索模态布局问题。 模态内容现在可以整齐地重排，避免与树目录重叠。 用户可以查看结果，导航目录，没有被遮住的控件。 （SITES-25246）
 * 文本间距增加后，搜索模态文本不再被剪切。 树目录布局现在保持清晰的分隔，使标签和条目一直清晰可读。 用户现在可以在文本不重叠且不被截断的情况下完成搜索和导航。 （SITES-25245）
 * 现在，激活注释会将键盘焦点移动到注释内容，而不是退出注释的按钮。 Tab 键顺序遵循逻辑序列，不用反向导航即可到达相关控件。 （SITES-25241）
-* 在键盘导航过程中，“设置日期”和“退出时间扭曲”链接缺少可见的焦点指示器。 UI 现在渲染一种独特的高对比度的焦点样式，使用户能够一眼就识别活跃的链接。 （SITES-25232）
-* Teaser 模态标题不再阻止键盘用户移动对话框。 键盘控件现在允许拾取、移动和放置操作，这提高了屏幕阅读器的可用性和整体可操作性。 (SITES-25226)
+* 在键盘导航过程中，“设置日期”和“退出时间扭曲”链接缺少可见的焦点指示器。 UI现在呈现一种独特的高对比度焦点样式，以便用户轻松识别活动链接。 （SITES-25232）
+* Teaser 模态标题不再阻止键盘用户移动对话框。 键盘控件现在允许选择、移动和放置操作，从而提高屏幕阅读器的可用性和整体可操作性。 (SITES-25226)
 * AEM 现在为 Teaser 模态信息按钮使用一个有意义的无障碍标签。 屏幕阅读器会读出一个清晰的操作名称，而不是默认图标替换文本字符串。 （SITES-25223）
 * 屏幕阅读器现在会在用户按下编辑按钮时读出正确的操作。 NVDA 不再报告在键盘导航过程中导致误导性反馈和混淆的“按下了预览按钮”。 （SITES-25208）
 * 现在，展开左侧边栏会将键盘焦点移动到第一个左侧边栏控件。 Tab 序列不再跳转到辅助工具栏或落到中间列表上，使键盘用户不用反向导航即可访问左侧边栏的内容。 （SITES-24998）
@@ -144,7 +144,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 #### [!DNL Content Fragments] - 管理{#sites-admin-65-lts-sp2}
 
-* 调整了 Sites 创作界面中的组件处理，以防止页面更新时发生无规律行为。 此错误导致了不可预测的编辑器响应，干扰了常规内容更改，降低了工作流效率。 此更新使编辑器逻辑符合预期的交互模式，在创作活动中提供可靠的性能。 (SITES-35078) 重要
+* 调整了 Sites 创作界面中的组件处理，以防止页面更新时发生无规律行为。 此错误导致了不可预测的编辑器响应，干扰了常规内容更改，降低了工作流效率。 该更新使编辑器逻辑与预期的交互模式保持一致，并在创作活动期间提供可靠的性能。 (SITES-35078) 重要
 
 * 一个回归破坏了内容片段的 Assets 控制台列表视图，并在列表渲染时触发了错误。 此更新修正了移除预览信息后的列表视图逻辑，恢复了稳定的列表输出。 控制台现在可正常显示内容片段，不再出现任何错误，保持列表交互可正常使用。 (SITES-38683)
 * 内容片段编辑器现在会将标记标签本地化。 编辑器还会将收藏集标签本地化，因此 UI 文本符合选定的区域设置。 (SITES-977)
@@ -157,7 +157,7 @@ AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](ht
 
 * 在最近几次更改 UI 样式设置后，内容片段 RTE 显示出布局和可视化方面的问题。 服务包 2 改进了 RTE 样式设置，使工具栏和可编辑区域正确渲染，并保持清晰可读。 内容片段编辑器现在与页面编辑器的外观和行为保持一致。 (SITES-38684)
 * 从 Polaris 资产选择器中移除 IMS 范围后，破坏了内容片段与传递端点的集成。 打开远程资产选择器并选择资产时，作者会遇到错误。 此更新重新添加了所需的 IMS 范围，恢复了稳定的传递层访问。 （SITES-35837）
-* “关联内容”面板不再呈现硬编码的“未定义”占位符。内容片段编辑器现在通过本地化资源解析该文本，因此编辑器可以看到翻译的UI文本。(SITES-33675)
+* “关联的内容”面板不再渲染硬编码的“未定义”占位符。 内容片段编辑器现在通过本地化资源来解析此文本，因此编辑器可以看到翻译过的 UI 文本。 (SITES-33675)
   <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
 * 内容片段编辑器现在会在所有区域设置中都显示翻译过的“一般”选项卡标签。 编辑器会替换未本地化的选项卡文本，从选项卡标题中移除内部 ID。 (SITES-30715)
 * 对于未被允许的资产类型，内容片段编辑器现在会显示翻译过的名称。 作者配置内容引用限制时，选取器列表不再混合内部字符串和只用英语的标签。 (SITES-29699)
@@ -209,15 +209,15 @@ AEM Headless 需要一个专门的发布分支，以避免与主线版本之间�
 #### 发布项{#sites-launches-65-lts-sp2}
 
 * Sites 时间线在发布提升操作中显示硬编码的英语文本：“Created version ... before promoting launch”（在发布提升之前创建了版本…）。 此更新将硬编码的字符串替换为使用本地化的消息。 时间线现在显示本地化的文本，使此条目与标准 AEM 本地化行为保持一致。 (SITES-39157)
-* 当作者通过“提升当前页面和子页面”来提升子分区时，发布提升的范围发生偏移。 AEM 还提升了不相关的页面，导致实时网站发生意外更改。 此修复修正了发布范围的计算，确保只有选定的子树进行提升。 (SITES-38315)
+* 当作者通过“提升当前页面和子页面”来提升子分区时，发布提升的范围发生偏移。 AEM 还提升了不相关的页面，导致实时网站发生意外更改。 此修复程序更正了Launch作用域的计算，因此仅提升所选的子树。 (SITES-38315)
 * 发布中的内容片段未加入 `damAssetLucene` 索引，搜索结果和查询效率受到限制。 此更改将发布内容片段路径添加到索引定义中。 现在，搜索和自定义查询可找到 `/content/launches` 下的内容片段。 (SITES-35634)
 * 即使产品在触屏 UI 中不显示内容片段发布，发布 UI 仍然显示内容片段发布的控件。 此更改去除了 cq-launches-content 中的内容片段发布代码路径，调整了发布列表筛选。 作者现在可以看到一致的页面发布选项，而没有内容片段发布条目。 (SITES-35633)
 * AEM 6.5 LTS 快速启动缺少必需的发布捆绑包和先决条件，这阻止了发布 OpenAPI 的启用。 此更新添加了发布捆绑包和必需的依赖项，例如量度支持、DAM-cfm 更新和队列配置。 发布 API 现在可以在 6.5 LTS 快速启动上运行，且包含必需的运行时组件。 (SITES-35297)
-* CF 发布打包时提取了更新的依赖项版本和不必要的 GraphQL 库，这使 AEM 6.5 LTS 集成变得复杂。 此更改使依赖项版本符合 AEM 6.5 LTS 基线，去除了不使用的 GraphQL 依赖项。 捆绑包的解析现在保持一致，CF 发布的启动保持稳定。 (SITES-35295)
-* AEM 发布现在为 6.5 LTS 分支运行一个专门的 Jenkins 管道。 管道运行每晚构建版本，通过电子邮件发送错误警报。 此设置提高了测试覆盖范围，可尽早捕获回归错误。 (SITES-35293)
+* 内容片段启动项打包提取了较新的依赖项版本和不必要的GraphQL库，这会使AEM 6.5 LTS集成复杂化。 此更改使依赖项版本符合 AEM 6.5 LTS 基线，去除了不使用的 GraphQL 依赖项。 现在，捆绑包分辨率保持不变，内容片段启动保持稳定。 (SITES-35295)
+* AEM 发布现在为 6.5 LTS 分支运行一个专门的 Jenkins 管道。 管道运行每晚构建版本，通过电子邮件发送错误警报。 这种设置增加了测试覆盖率并及早识别回归。 (SITES-35293)
 * AEM 6.5 LTS 现在推出经过更新的工件版本一致的发布 API 捆绑包。 此捆绑包会跟踪主要代码行，同时保持正确的 6.5 LTS 发行版本。 此更新稳定了在 6.5 LTS 技术栈中各处的发布 API 消耗。 (SITES-35292)
 * AEM 6.5 LTS 现在包含一个经过更新的依赖项版本一致的发布核心捆绑包。 此更新添加了“片段 UUID”和“引用 UUID”两种数据类型的发布核心处理。 现在，发布处理可在所有发布和内容片段工作流中保持行为一致。 (SITES-35290)
-* 改进了 Sites 编辑器，解决了导致正常页面创作工作流中断的行为不一致的问题。 作者遇到意外的组件交互，这干扰了内容更新，降低了编辑可靠性。 此更改恢复了一致的 UI 状态管理，确保了在各种受影响的场景中可预测地正确执行创作操作。 (SITES-35138)
+* 为了解决会中断正常页面创作工作流的不一致行为，对站点编辑器进行了优化。 作者遇到意外的组件交互，这干扰了内容更新，降低了编辑可靠性。 此更改恢复了一致的 UI 状态管理，确保了在各种受影响的场景中可预测地正确执行创作操作。 (SITES-35138)
 * 发布编辑现在显示的是本地化的错误文本，而不是硬编码的 `Provided path is not a launch` 字符串。 现在，当“编辑”获得无效的发布路径时，UI 会在所有语言下渲染翻译过的消息。 (SITES-33360)
 * AEM 6.5 LTS 现在包含发布 OpenAPI 侧端口工作。 此更新将发布 API 捆绑包、内容包和所需的快速启动工件的版本对齐，并为内容片段发布 OpenAPI 场景启用了稳定的 CI 验证。 (SITES-32050)
 * 发布 UI 现在会将覆盖的模板标签本地化。 模板覆盖详细信息现在显示翻译过的文本，而不是只有英语的字符串。 (SITES-29525)
@@ -253,7 +253,7 @@ AEM Headless 需要一个专门的发布分支，以避免与主线版本之间�
 
 ### [!DNL Assets]{#assets-65-lts-sp2}
 
-Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 Relate 客户端逻辑可以正确处理包含空格的路径，避免在选择关系时出现 `undefined` 来源的错误。 现在，Relate 对话框会打开并保存关系，不再发生 UI 卡顿或出现旋转器。 DAM 用户无需重命名文件即可关联、获取资产以及将资产取消关联。 (Assets-56418)
+Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 Relate 客户端逻辑可以正确处理包含空格的路径，避免在选择关系时出现 `undefined` 来源的错误。 现在，Relate 对话框会打开并保存关系，不再发生 UI 卡顿或出现旋转器。 DAM用户可以创建、派生和删除资产关系，而无需重命名文件。 (Assets-56418)
 
 #### [!DNL Dynamic Media]{#assets-dm-65-lts-sp2}
 
@@ -271,16 +271,16 @@ Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 R
 * 升级到 AEM 6.5 LTS SP1 后，表单提交失败。 用户遇到缺少 com.adobe.cq.social.commons.CollabUtil 的情况，这导致出现 JSP 编译错误和电子邮件操作失败。 (FORMS-23457)
 * 用户遇到在基于基础组件的自适应表单中 hCaptcha 未正确翻译的问题。 这影响了非英语用户正确完成表单的能力。 (FORMS-23426)
 * 用户遇到表单提交失败的问题，出现了 SAXParseException：“序言中不允许包含内容” (HTTP 500)。 出现此问题的原因是预填充数据 XML 中有 null 值，导致服务器端 XML 解析失败。 (FORMS-22633)
-* 用户遇到了自适应表单未通过 Web 内容无障碍准则 (WCAG) 审核的问题。 原因是表单的 Tab 导航标记无效。 也就是说，非列表元素被渲染为一个只允许包含列表项的列表的直接子元素。 此问题使表单无法通过无障碍性验证器，影响了必须满足法律或内部合规性要求的组织。 (FORMS-22101)
+* 用户遇到了自适应表单未通过 Web 内容无障碍准则 (WCAG) 审核的问题。 原因是表单的选项卡导航标记无效。 也就是说，非列表元素被渲染为一个只允许包含列表项的列表的直接子元素。 此问题使表单无法通过无障碍性验证器，影响了必须满足法律或内部合规性要求的组织。 (FORMS-22101)
 * 用户遇到记录文档 (DoR) /提交 PDF 的无障碍性问题，文档中的空白表单字段未标记为表单元素。 这给屏幕阅读器带来了困难，影响了残障用户有效进行导航和完成表单的能力。 (FORMS-21989)
 * 用户遇到了在加载表单时子面板中组件的脚注不显示的问题。 当有脚注的项目是页面上的最后一个组件时，会发生此问题。 (FORMS-21925)
 * 用户在 AEM Forms 编辑器中选择组件时遇到问题。 在选项卡之间导航并返回到第一个选项卡时，有些容器变成不可选，使用户无法轻松地识别和交互。 (FORMS-21814)
-* 用户在自适应表单仪表板中遇到安全漏洞。 具体而言，在 startpointcontrol.js 文件中发现了一个跨网站脚本 (XSS) 问题，它可能会允许执行恶意脚本。 (FORMS-20679)
+* 用户在自适应表单仪表板中遇到安全漏洞。 具体而言，在startpointcontrol.js文件中发现了一个跨站点脚本(XSS)问题，该问题允许执行恶意脚本。 (FORMS-20679)
 * AEM Forms 6.5 LTS 在 JBoss® EAP 8 上的群集部署中，`domain/configuration/domain_oracle.xml`、`domain_mysql.xml` 和 `domain_mssql.xml` 文件不再包含重复的 `<security>` 标记，此标记导致了无效的 XML 并阻止了域控制器启动。 (FORMS-24687)
-* 在 Turnkey 模式下，现在可在全新安装和升级时正确应用数据库端口更新。 在全新安装模式下，用户可以从所有可用端口中进行选择，在升级模式下，可以在升级时正确引用 lc_turnkey.xml 中更新的数据库端口。 (FORMS-24689)
-* 在 Linux®上设置 JBoss® EAP 8.0 时，在 Windows 上更改的 Shell 脚本不再因 CRLF 行末尾而导致出现 `/bin/sh^M: bad interpreter or $'\r': command not found` 错误。 (FORMS-24688)
+* 在 Turnkey 模式下，现在可在全新安装和升级时正确应用数据库端口更新。 在全新安装模式下，用户从所有可用端口中进行选择，在升级模式下，在升级期间会正确引用lc_turnkey.xml中更新的数据库端口。 (FORMS-24689)
+* 在Linux®上设置JBoss® EAP 8.0时，在Windows上修改的shell脚本不再导致/bin/sh^M：解释器错误或$&#39;\r&#39;：由于CRLF行尾，命令未找到错误。 (FORMS-24688)
 * 在 JBoss® EAP 8 上运行的 Forms JEE LTS 部署中，Reader 扩展 UI 可能会失败，并显示内部服务器错误。 (FORMS-24894)
-* 在 Linux® 上，如果 Forms JEE LTS 配置管理器在运行时 `configurationManager/config/solcomp/LFS_Foundation.properties` 中的 `OSFileSetIntendedFor` 值未设置或不正确，会阻止为 Linux® 正确进行量身定制的配置，用户就会遇到运行时或部署问题。 安装之后并在运行配置管理器之前，请在这个文件中设置 `OSFileSetIntendedFor=Linux`。 (FORMS-24741)
+* 在Linux®上，当Forms JEE LTS Configuration Manager以未设置或不正确的`OSFileSetIntendedFor`运行时，用户遇到运行时或部署问题。 在`configurationManager/config/solcomp/LFS_Foundation.properties`中设置值，这会阻止针对Linux®正确定制配置。 安装之后并在运行配置管理器之前，请在这个文件中设置 `OSFileSetIntendedFor=Linux`。 (FORMS-24741)
 
 <!--
 #### Forms JEE 
@@ -308,7 +308,7 @@ Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 R
 #### Apache Felix {#foundation-apachefelix-65-lts-sp2}
 
 * Sling 资源访问安全现在在 1.1.2 版本上运行。 当多个 ResourceAccessGateHandler 服务注册时，ResourceAccessSecurityImpl 在初始化时不再抛出 ClassCastException。 现在可以可靠完成初始化，避免了在具有多个处理程序的环境中启动失败。 （NPR-42750）
-* JMX 控制台和网页控制台现在会为控制台 CSS 资源发送一个 `Content-Type: text/css header`。 严格的 MIME 检查不再阻止样式表加载，因此 `/system/console/jmx` UI 会以正常样式渲染。 (GRANITE-63677)
+* JMX控制台和Web控制台现在为控制台CSS资源发送一个Content-Type： text/css标头。 严格的 MIME 检查不再阻止样式表加载，因此 `/system/console/jmx` UI 会以正常样式渲染。 (GRANITE-63677)
 * AEM 现在会避免在生成的 `WEB-INF/resources/provisioning/model.txt` 中 `contributor` 组有重复的 ACL 条目。 WAR 输出现在包含一个一致的 ACL 块，这防止了混淆审阅时的权限区别。 (GRANITE-63269)
 * 在捆绑包刷新操作中，AEM 不再清除反序列化防火墙阻止列表和允许列表设置。 更新了筛选条件注册逻辑，使活跃的防火墙实例与已保存的配置保持一致，这样无需重新启动就能确保启用了保护。 (GRANITE-61382)
 * Felix 网页控制台在访问 `/system/console` 时不再间歇性抛出 `NullPointerException` 错误。 更新了 ServiceTracker 处理程序，防止出现 null 跟踪器状态。 在重复请求和自动验证时，控制台登录和导航保持稳定。 (GRANITE-61042)
@@ -323,9 +323,9 @@ Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 R
 #### Content distribution{#foundation-content-distribution-65-lts-sp2}
 -->
 
-#### CRX {#foundation-crx-65-lts-sp2}
+#### Adobe CRX {#foundation-crx-65-lts-sp2}
 
-服务包升级后，打开 JSP 文件时 CRXDE Lite 不再显示一个空白选项卡。 AEM 现在提供匹配的 CodeMirror 核心和附加组件代码，这可防止严重的浏览器错误，保持编辑器可用。 (GRANITE-64333)
+服务包升级后，打开 JSP 文件时 CRXDE Lite 不再显示一个空白选项卡。 AEM现在包括匹配的CodeMirror核心和附加代码，可防止严重的浏览器错误并确保编辑器保持正常运行。 (GRANITE-64333)
 
 #### Granite{#foundation-granite-65-lts-sp2}
 
@@ -366,9 +366,9 @@ AEM 6.5 LTS 服务包 2 需要 S3 连接器 1.60.10 或更高版本。 S3 数据
       这些较旧的配置使用属性，如 `whitelist.name` 和 `whitelist.bundles`。
 
   * Sling 仍为已弃用的 PID 提供部分向后兼容性，但不要将它们用于新配置。 请改用较新的 `LoginAdminAllowList.*` PID。
-  * 不要同时运行已弃用的和新的允许列表配置。 混合配置可能会产生歧义，导致意外行为。 如果您迁移到 AEM 6.5 LTS SP2，请完全移除已弃用的 PID。
+  * 不要同时运行已弃用的和新的允许列表配置。 混合配置可能会产生歧义，导致意外行为。 迁移到AEM 6.5 LTS SP2时，请删除已弃用的PID。
 
-  **您应该怎么做**
+  **要做什么**
 
   1. 查找使用 `LoginAdminWhitelist*` PID 的允许列表配置。
   1. 将它们替换为适当的新 PID：
@@ -462,7 +462,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 适合：安装服务包 2 (SP2) 的 AEM 6.5 LTS（内部部署）客户。 SP2 以 Quickstart JAR 形式交付。
 
 **为什么这个升级做法很重要**
-用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户可通过替换 Quickstart JAR、解压并重新启动的方式进行升级。 此方法与 Adobe 的就地升级流程保持一致。
+用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户通过替换Quickstart JAR、将其解压缩并重新启动来进行升级。 此方法与Adobe的标准升级过程保持一致。
 
 **推荐的升级流程（创作或发布实例）**
 
@@ -481,7 +481,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 1. 将解压后的 JAR 重命名以匹配对应角色和端口，例如 `cq-author-4502.jar` 或 `cq-publish-4503.jar`。
 1. 启动 AEM，并在用户界面（“帮助”>“关于”）及日志中确认升级是否成功。
 
-**良好维护规范**
+**最佳实践**
 
 * 在生产之前，先在较低环境/测试环境中运行升级。
 * 开始之前，请先进行完整的、可恢复的备份（存储库和任何外部数据存储库）。
@@ -550,7 +550,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 此部分列出了 AEM 6.5 LTS 中已移除的功能。 之前的版本中已将这些功能标记为已弃用。
 
-* 对 CRX 存储库持久性的 RDBMK 支持已移除。
+* 删除了对Adobe CRX存储库持久性的RDBMK支持。
 * 在群集环境中，MongoMK 现在是存储库持久性的唯一受支持的选项。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
@@ -579,8 +579,8 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 ### AEM Forms
 
 * 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将 JAR 文件添加到 adobe-livecycle-jboss.ear\lib 解决了这个问题。 (FORMS-24690)
-* 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能可能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
-* 在 JBoss®上运行的 Forms JEE LTS 上，与电子邮件相关的功能可能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-core-jboss.ear)安装修补程序以解决此问题。 (FORMS-24892)
+* 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
+* 在JBoss®上运行的Forms JEE LTS上，与电子邮件相关的功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-core-jboss.ear)安装修补程序。 (FORMS-24892)
 
 ### 离线压缩后，执行在线压缩时存储库损坏 (GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
 
@@ -600,11 +600,11 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控制如何解析OSGi捆绑包，并可阻止捆绑包解析为其他捆绑包，这对于限制公开的API很有用。
 
-从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-67640-1.0.zip)安装修补程序以使用此功能。
+若要使用此功能，请从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-67640-1.0.zip)安装修补程序。
 
 >[!NOTE]
 >
-> 安装该修补程序后，请验证所有已安装捆绑包的捆绑状态，以确保`com.adobe.granite.apicontroller`的默认配置未引入可能会影响现有自定义实施的意外解决限制。
+> 要确保`com.adobe.granite.apicontroller`的默认配置不会引入影响现有自定义实施的意外解决限制，请在安装修补程序后验证所有已安装捆绑包的捆绑状态。
 
 ### Sling-Initial-Content (SP2) 不再支持 JSON 注释 {#json-comments-no-longer-supported-in-sling-initial-content}
 
@@ -616,20 +616,20 @@ AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控�
 
 >[!CAUTION]
 >
-> 请移除您的 `Sling-Initial-Content` 捆绑包中 JSON 文件的所有注释，以免在升级到 AEM 6.5 LTS SP2 后内容加载失败。
+> 为避免在升级到AEM 6.5 LTS SP2后内容加载失败，请从`Sling-Initial-Content`捆绑包中的JSON文件中删除所有注释。
 
 ### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
 
 一些迁移到 Sites Headless 的 API 需要额外的 Oak 索引，才能提供完整功能。
 
-安装 `cq-dam-cfm-indices` 包，以使用以下功能：
+若要使用以下功能，请安装`cq-dam-cfm-indices`包：
 
 * 列出内容片段模型
 * 列出内容片段
 * 搜索 API
 * 工作流
 
-从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-dam-cfm-indices-1.1.2.zip)。
+从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip)。
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
@@ -637,7 +637,7 @@ AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控�
 >
 > 此问题仅出现在 AEM 6.5 LTS GA 版本中。
 
-在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。 启用此功能后，健康检查可能会失败，并且 Dispatcher 和 AEM 实例之间的通信可能会中断。 尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。 它与 SNI（服务器名称指示）验证问题有关。
+在 AEM 部署中启用仅 SSL 功能后，会发生一个影响 Dispatcher 与 AEM 实例之间连接的已知问题。 启用此功能后，运行状况检查将失败，Dispatcher实例与AEM实例之间的通信将中断。 尤其是当客户尝试通过 `https + IP` 将 Dispatcher 与 AEM 实例连接时，会出现此问题。 它与 SNI（服务器名称指示）验证问题有关。
 
 **影响**
 
@@ -655,7 +655,7 @@ AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控�
 
 **解决方案**
 
-如果您遇到这个问题，请联系 Adobe 客户支持部门。 有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。 采用必要的热修复之前，不要尝试启用仅 SSL 功能。
+如果您遇到此问题，请联系Adobe客户支持。 有一个热修复 [cq-6.5.lts.0-hotfix-CQ-4359803](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.0-hotfix-CQ-4359803-1.0.2.zip) 可以解决这个问题。 采用必要的热修复之前，不要尝试启用仅 SSL 功能。
 
 ## 包含的 OSGi 捆绑包和内容包{#osgi-bundles-and-content-packages-included}
 
