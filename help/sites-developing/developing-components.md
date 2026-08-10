@@ -1,5 +1,5 @@
 ---
-title: 开发AEM组件
+title: 开发 AEM 组件
 description: AEM组件用于保留、格式化和呈现网页上可用的内容。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -13,12 +13,12 @@ role: Developer
 exl-id: ff9c9e25-13a8-4ca7-a347-1da1352ef223
 source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
 workflow-type: tm+mt
-source-wordcount: '3200'
-ht-degree: 0%
+source-wordcount: '3540'
+ht-degree: 2%
 
 ---
 
-# 开发AEM组件{#developing-aem-components}
+# 开发 AEM 组件{#developing-aem-components}
 
 AEM组件用于保留、格式化和呈现网页上可用的内容。
 
@@ -74,7 +74,7 @@ AEM组件用于保留、格式化和呈现网页上可用的内容。
 
 ### 使用HTML模板语言 {#using-the-html-template-language}
 
-AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)取代了JSP (JavaServer Pages)，成为HTML的首选和推荐的服务器端模板系统。 对于需要构建强大企业网站的Web开发人员，HTL有助于提高安全性和开发效率。
+AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)取代了JSP (JavaServer Pages)，成为HTML的首选和推荐的服务器端模板系统。 对于需要构建强大企业网站的Web开发人员，HTL有助于提高安全性和开发效率。
 
 >[!NOTE]
 >
@@ -88,11 +88,11 @@ AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/do
 
 ### 使用Java {#using-java}
 
-[HTL Java Use-API允许HTL文件访问自定义Java类中的Helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=zh-Hans)。 这使您能够使用Java代码实施用于选择和配置组件内容的逻辑。
+[HTL Java Use-API允许HTL文件访问自定义Java类中的Helper方法](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html)。 这使您能够使用Java代码实施用于选择和配置组件内容的逻辑。
 
 ### 使用JavaScript {#using-javascript}
 
-[HTL JavaScript Use-API允许HTL文件访问使用JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=zh-Hans)编写的帮助程序代码。 这使您能够使用JavaScript代码实施用于选择和配置组件内容的逻辑。
+[HTL JavaScript Use-API允许HTL文件访问使用JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html)编写的帮助程序代码。 这使您能够使用JavaScript代码实施用于选择和配置组件内容的逻辑。
 
 ### 使用客户端HTML库 {#using-client-side-html-libraries}
 
@@ -132,15 +132,15 @@ AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/do
 
 * Coral UI
 
-   * 在所有云解决方案中提供一致的UI
-   * [AEM触屏优化UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Coral UI指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
+  * 在所有云解决方案中提供一致的UI
+  * [AEM触屏优化UI的概念 — Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+  * [Coral UI指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite UI
 
-   * 提供封装在Sling组件中的Coral UI标记，用于构建UI控制台和对话框
-   * [AEM触屏优化UI的概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+  * 提供封装在Sling组件中的Coral UI标记，用于构建UI控制台和对话框
+  * [AEM触屏优化UI的概念 — Granite UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
+  * [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 
 >[!NOTE]
 >
@@ -158,7 +158,7 @@ AEM 6.0中引入的[HTML模板语言(HTL)](https://experienceleague.adobe.com/do
 * 使用Granite UI框架。
 * 包含描述对话框中的字段的节点结构。
 
-   * 这些节点是`nt:unstructured`，具有所需的`sling:resourceType`属性。
+  * 这些节点是`nt:unstructured`，具有所需的`sling:resourceType`属性。
 
 示例节点结构可能是：
 
@@ -174,7 +174,7 @@ newComponent (cq:Component)
             description
 ```
 
-自定义对话框类似于开发组件，因为该对话框本身是一个组件（即组件脚本与客户端库提供的行为/样式一起呈现的标记）。
+自定义对话框与开发组件类似，因为对话框本身是一个组件（即组件脚本渲染的标记以及客户端库提供的行为/样式）。
 
 有关示例，请参阅：
 
@@ -183,7 +183,7 @@ newComponent (cq:Component)
 
 >[!NOTE]
 >
->如果组件没有为支持触摸的UI定义对话框，则会将经典UI对话框用作兼容性图层内的回退面板。 要自定义此类对话框，您需要自定义经典的UI对话框。 请参阅[AEM组件以获取经典UI](/help/sites-developing/developing-components-classic.md)。
+>如果组件没有为触控式UI定义对话框，则经典UI对话框会用作兼容性层中的回退。 要自定义此类对话框，您需要自定义经典UI对话框。 请参阅经典UI的[AEM组件](/help/sites-developing/developing-components-classic.md)。
 
 ### 自定义对话框字段 {#customizing-dialog-fields}
 
@@ -191,7 +191,7 @@ newComponent (cq:Component)
 >
 >请参阅：
 >
->* 有关[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=zh-Hans)的AEM Gems会话。
+>* 有关[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)的AEM Gems会话。
 >* [代码示例 — 如何自定义对话框字段](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)中涵盖的相关示例代码。
 >
 
@@ -229,7 +229,7 @@ newComponent (cq:Component)
 
 * `cqgems/customizingfield/components/colorpicker/clientlibs`
 
-   * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
+  * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
 
 #### 扩展（继承）字段 {#extending-inheriting-from-a-field}
 
@@ -252,7 +252,7 @@ newComponent (cq:Component)
 
 ### 处理字段事件 {#handling-field-events}
 
-在自定义客户端库[&#128279;](#listeners-in-a-custom-client-library)中通过[侦听器完成处理对话框字段上的事件的方法。 这是在内容结构](#listenersinthecontentstructureclassicui)中具有侦听器的旧方法的更改。
+在自定义客户端库](#listeners-in-a-custom-client-library)中通过[侦听器完成处理对话框字段上的事件的方法。 这是在内容结构](#listenersinthecontentstructureclassicui)中具有[侦听器的旧方法的更改。
 
 #### 自定义客户端库中的监听器 {#listeners-in-a-custom-client-library}
 
@@ -267,7 +267,7 @@ newComponent (cq:Component)
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield`
 
-   * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
+  * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
 
 #### 内容结构中的侦听器 {#listeners-in-the-content-structure}
 
@@ -306,15 +306,15 @@ Granite UI和Granite UI组件（等效于小组件）中的字段验证通过使
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield/js/validations.js`
 
-   * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
+  * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
 
 * `/libs/cq/gui/components/authoring/dialog/clientlibs/dialog/js/validations.js`
 
 ## 创建和配置设计对话框 {#creating-and-configuring-a-design-dialog}
 
-当组件具有可以在[设计模式](/help/sites-authoring/default-components-designmode.md)中编辑的设计详细信息时，会提供“设计”对话框。
+当组件具有可在[设计模式](/help/sites-authoring/default-components-designmode.md)中编辑的设计详细信息时，会提供“设计”对话框。
 
-该定义与用于编辑内容的[对话框](#creating-a-new-dialog)的定义非常相似，不同之处在于将其定义为节点：
+该定义与用于编辑内容](#creating-a-new-dialog)的[对话框的定义非常相似，不同之处在于它被定义为节点：
 
 * 节点名称： `cq:design_dialog`
 * 类型：`nt:unstructured`
@@ -358,7 +358,7 @@ Granite UI和Granite UI组件（等效于小组件）中的字段验证通过使
 
 ## 配置段落系统以便拖动资产可创建组件实例 {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
-AEM提供了在页面上配置段落系统的功能，以便当用户将某个资产（相应的）拖到该页面的实例上[&#128279;](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui)时，系统会自动创建新组件的实例（而不必始终将空组件拖到该页面上）。
+AEM提供了在页面上配置段落系统的功能，以便当用户将某个资产（相应的）拖到该页面的实例上](/help/sites-authoring/editing-content.md#insertingacomponenttouchoptimizedui)时，系统会自动创建[新组件的实例（而不必始终将空组件拖到该页面上）。
 
 此行为以及所需的资产到组件关系可以配置：
 
@@ -371,7 +371,7 @@ AEM提供了在页面上配置段落系统的功能，以便当用户将某个�
    * 名称：`cq:authoring`
    * 类型：`nt:unstructured`
 
-1. 在此项下，创建一个节点以保存所有资源到组件映射：
+1. 在此下，创建一个节点以保存所有资产到组件映射：
 
    * 名称：`assetToComponentMapping`
    * 类型：`nt:unstructured`
@@ -383,30 +383,30 @@ AEM提供了在页面上配置段落系统的功能，以便当用户将某个�
 
    每个配置文件均具有以下属性：
 
-   * `assetGroup`：
+   * `assetGroup`:
 
-      * 类型：`String`
-      * 值：相关资产所属的组；例如，`media`
+     * 类型：`String`
+     * 值：相关资产所属的组；例如，`media`
 
-   * `assetMimetype`：
+   * `assetMimetype`:
 
-      * 类型：`String`
-      * 值：相关资产的mime类型；例如，`image/*`
+     * 类型：`String`
+     * 值：相关资产的mime类型；例如，`image/*`
 
-   * `droptarget`：
+   * `droptarget`:
 
-      * 类型：`String`
-      * 值：放置目标；例如，`image`
+     * 类型：`String`
+     * 值：放置目标；例如，`image`
 
-   * `resourceType`：
+   * `resourceType`:
 
-      * 类型：`String`
-      * 值：相关的组件资源；例如，`foundation/components/image`
+     * 类型：`String`
+     * 值：相关的组件资源；例如，`foundation/components/image`
 
-   * `type`：
+   * `type`:
 
-      * 类型：`String`
-      * 值：类型，例如`Images`
+     * 类型：`String`
+     * 值：类型，例如`Images`
 
 有关示例，请参阅：
 
@@ -414,7 +414,7 @@ AEM提供了在页面上配置段落系统的功能，以便当用户将某个�
 * `/etc/designs/geometrixx-outdoors/jcr:content/page/par/cq:authoring`
 * `/etc/designs/geometrixx-media/jcr:content/article/article-content-par/cq:authoring`
 
-GITHUB代码
+GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
@@ -423,16 +423,16 @@ GITHUB代码
 
 >[!NOTE]
 >
->在使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)和可编辑模板时，现在可以在UI中轻松配置组件实例的自动创建。 有关定义哪些组件自动与给定媒体类型关联的更多信息，请参阅[创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)。
+>在使用[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和可编辑模板时，现在可以在UI中轻松配置组件实例的自动创建。 有关定义哪些组件自动与给定媒体类型关联的更多信息，请参阅[创建页面模板](/help/sites-authoring/templates.md#editing-a-template-structure-template-author)。
 
-## 使用AEM括号扩展 {#using-the-aem-brackets-extension}
+## 使用AEM Brackets扩展 {#using-the-aem-brackets-extension}
 
-[AEM Brackets扩展](/help/sites-developing/aem-brackets.md)为编辑AEM组件和客户端库提供了流畅的工作流程。 它基于[Brackets](https://brackets.io/)代码编辑器。
+[AEM Brackets扩展](/help/sites-developing/aem-brackets.md)为编辑AEM组件和客户端库提供了流畅的工作流。 它基于[Brackets](https://brackets.io/)代码编辑器。
 
-扩展名：
+扩展：
 
-* 简化同步（不需要Maven或File Vault）以帮助提高开发人员效率，并帮助掌握有限AEM知识的前端开发人员参与项目。
-* 提供一些[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)支持，这是旨在简化组件开发并提高安全性的模板语言。
+* 简化同步（不需要Maven或File Vault）以帮助提高开发人员效率，并帮助对AEM知识有限的前端开发人员参与项目。
+* 提供一些[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)支持，该模板语言旨在简化组件开发并提高安全性。
 
 >[!NOTE]
 >
@@ -444,24 +444,24 @@ GITHUB代码
 
 * HTL
 
-   * 不强制使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)，但是如果您的组件需要更新，则最好考虑将[从JSP迁移到HTL](/help/sites-developing/components-basics.md#htl-vs-jsp)。
+  * 不强制使用[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)，但是如果您的组件需要更新，则最好考虑将[从JSP迁移到HTL](/help/sites-developing/components-basics.md#htl-vs-jsp)。
 
 * 组件
 
-   * 迁移使用经典用户界面特定函数的[`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code)代码
-   * RTE插件，有关详细信息，请参阅[配置富文本编辑器](/help/sites-administering/rich-text-editor.md)。
-   * [迁移使用经典UI特定函数的`cq:listener`代码](#migrating-cq-listener-code)
+  * 迁移使用经典用户界面特定函数的[`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code)代码
+  * RTE插件，有关详细信息，请参阅[配置富文本编辑器](/help/sites-administering/rich-text-editor.md)。
+  * [迁移使用经典UI特定函数的`cq:listener`代码](#migrating-cq-listener-code)
 
 * 对话框
 
-   * 创建要在触屏UI中使用的对话框。 但是，出于兼容性目的，如果没有为触控式UI定义对话框，则触控式UI可以使用经典UI对话框的定义。
-   * 提供[AEM现代化工具](/help/sites-developing/modernization-tools.md)是为了帮助您扩展现有组件。
-   * [将ExtJS映射到Granite UI组件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)可以方便地概述ExtJS xtype和节点类型及其等效的Granite UI资源类型。
-   * 自定义字段，有关详细信息，请参阅[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=zh-Hans)上的AEM Gems会话。
-   * 从vtypes迁移到[Granite UI验证](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * 使用JS侦听器，有关详细信息，请参阅[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html?lang=zh-Hans)上的[处理字段事件](#handling-field-events)和AEM Gems会话。
+  * 创建要在触屏UI中使用的对话框。 但是，出于兼容性目的，如果没有为触控式UI定义对话框，则触控式UI可以使用经典UI对话框的定义。
+  * 提供[AEM现代化工具](/help/sites-developing/modernization-tools.md)是为了帮助您扩展现有组件。
+  * [将ExtJS映射到Granite UI组件](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components)可以方便地概述ExtJS xtype和节点类型及其等效的Granite UI资源类型。
+  * 自定义字段，有关详细信息，请参阅[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)上的AEM Gems会话。
+  * 从vtypes迁移到[Granite UI验证](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
+  * 使用JS侦听器，有关详细信息，请参阅[自定义对话框字段](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html)上的[处理字段事件](#handling-field-events)和AEM Gems会话。
 
-### 迁移cq：listener代码 {#migrating-cq-listener-code}
+### 正在迁移cq:listener代码 {#migrating-cq-listener-code}
 
 如果要迁移为经典UI设计的项目，则`cq:listener`代码（和组件相关的clientlibs）可能使用特定于经典UI的函数（如`CQ.wcm.*`）。 对于迁移，您必须使用触屏UI中的等效对象/函数更新此类代码。
 
