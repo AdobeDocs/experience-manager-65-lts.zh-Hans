@@ -1,25 +1,25 @@
 ---
 title: 在OSGi上升级到AEM 6.5 Forms LTS
-description: 您可以从AEM 6.5.22.0 Forms直接升级到AEM 6.5 Forms LTS。
+description: 您可以从AEM 6.5.17.0 Forms或更高版本直接升级到AEM 6.5 Forms LTS。
 content-type: reference
 role: Admin, User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, AEM Forms on OSGi, AEM Forms Upgrade
 exl-id: 9233d4b7-441c-4cbd-86f8-2c52b99c3330
-source-git-commit: b5db6129e83dd7a54516707bbdb8864dc709d54b
+source-git-commit: 818673651f736311d400c71bfeb635b73b25a034
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 8%
+source-wordcount: '1619'
+ht-degree: 7%
 
 ---
 
 # 在OSGi上升级到AEM 6.5 Forms LTS {#upgrade-to-aem-forms-osgi}
 
-要[从AEM 6.5升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)，请升级到AEM 6.5.22.0 Forms或更高版本。 支持从AEM 6.5.22.0直接升级到AEM 6.5 Forms LTS。
+要[从AEM 6.5升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)，请升级到AEM 6.5.17.0 Forms或更高版本。 支持从AEM 6.5.17.0（或更高版本）直接升级到AEM 6.5 Forms LTS。
 
 如果您使用的是AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms、AEM 6.3 Forms、AEM 6.4 Forms或AEM 6.5 Forms，则无法直接升级到AEM 6.5 Forms LTS。 有关详细升级路径，请参阅[升级路径](/help/forms/using/upgrade.md)文档。
 
-升级到Service Pack AEM Forms 6.5.22.0后，请按照以下步骤升级到AEM 6.5 LTS Forms：
+升级到AEM Forms 6.5.17.0或更高版本后，请按照以下步骤升级到AEM 6.5 LTS Forms：
 
 1. 安装AEM Forms附加组件包。 以下列出了这些步骤：
 
@@ -74,8 +74,8 @@ ht-degree: 8%
 
      在AEM 6.5 Forms中，jQuery的版本更新为3.2.1，jQuery UI的版本更新为1.12.1。 AEM表单在&#x200B;**noConflict**&#x200B;模式下使用JQuery。 因此，如果您使用的是任何其他jQuery版本，则在执行升级时不会显示任何问题。 但是，当您升级到AEM 6.5 Forms时：
 
-      * 确保您的自定义组件（如果有）与支持的jQuery版本兼容。
-      * 从自定义组件中删除不支持的API。 请参阅[升级指南](https://jquery.com/upgrade-guide/3.0/)以获取已删除的API列表。 例如，删除了对load()、.unload()和.error() API的支持。 使用.on()方法替换前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
+     * 确保您的自定义组件（如果有）与支持的jQuery版本兼容。
+     * 从自定义组件中删除不支持的API。 请参阅[升级指南](https://jquery.com/upgrade-guide/3.0/)以获取已删除的API列表。 例如，删除了对load()、.unload()和.error() API的支持。 使用.on()方法替换前面提到的API。 例如，将$(&quot;img&quot;)。load(fn)更改为$(&quot;img&quot;)。on(&quot;load&quot;， fn)。
 
    * **（如果仅从AEM 6.2 Forms或以前的版本升级）重新配置分析和报表**
 
@@ -87,9 +87,9 @@ ht-degree: 8%
    * **验证复制和反向复制：**&#x200B;发布、填写并提交一些迁移的表单。 同时验证提交的数据。
    * **验证对管理员和开发人员用户界面的访问权限：**&#x200B;从管理员帐户登录AEM实例，并验证您有权访问以下URL：
 
-      * `https://'[server]:[port]'/crx/packmgr`
-      * `https://'[server]:[port]'/crx/de`
-      * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
+     * `https://'[server]:[port]'/crx/packmgr`
+     * `https://'[server]:[port]'/crx/de`
+     * `https://'[server]:[port]'/aem/forms.html/content/dam/formsanddocuments`
 
    >[!NOTE]
    >
