@@ -11,8 +11,8 @@ feature: Adaptive Forms,Foundation Components
 exl-id: f9ff1458-6fc9-476a-a03e-c651464105d4
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 0%
+source-wordcount: '549'
+ht-degree: 2%
 
 ---
 
@@ -65,7 +65,7 @@ CustomToolbarLayoutDemo.zip
 
 1. 将复制的节点`mobileFixedToolbarLayout`重命名为`customToolbarLayout.`
 
-   此外，为节点提供相关描述。 例如，将节点的jcr：description更改为&#x200B;**自定义工具栏**&#x200B;的布局。
+   此外，为节点提供相关描述。 例如，将节点的jcr:description更改为&#x200B;**自定义工具栏**&#x200B;的布局。
 
    节点的`guideComponentType`属性确定布局类型。 在这种情况下，布局类型为工具栏，因此会显示在工具栏布局选择下拉列表中。
 
