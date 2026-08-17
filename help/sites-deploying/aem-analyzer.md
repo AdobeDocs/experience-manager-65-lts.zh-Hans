@@ -6,9 +6,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 87c30912-c89a-42f1-b37b-ec439e7318c7
-source-git-commit: 6b846e456466492f4be2c1e5a1f6b3913ae4dab4
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2098'
 ht-degree: 15%
 
 ---
@@ -52,7 +52,7 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 >为避免对业务关键型实例产生影响，建议您在自定义、配置、内容和用户应用程序方面尽可能接近生产环境的暂存环境中运行AEM Analyzer。 或者，也可以在克隆的生产“创作”环境中运行。
 
 * 生成AEM Analyzer报告内容可能需要相当长的时间，从几分钟到几小时不等。 所需的时间在很大程度上取决于AEM存储库内容的大小和性质、AEM版本以及其他因素
-* 由于生成报告内容可能需要花费大量时间，因此报告内容将由后台进程生成并保存在缓存中。 查看和下载报告的速度应该相对较快，因为该操作会利用内容缓存，直到报告过期或报告被明确刷新为止。在生成报告内容的过程中，您可以关闭浏览器选项卡，稍后在内容保存到缓存中后，再返回查看报告。
+* 由于生成报告内容可能需要花费大量时间，因此报告内容将由后台进程生成并保存在缓存中。 查看和下载报告的速度应该相对较快，因为该操作会利用内容缓存，直到报告过期或报告被明确刷新为止。 在生成报告内容的过程中，您可以关闭浏览器选项卡，稍后在内容保存到缓存中后，再返回查看报告。
 
 ## 查看AEM Analyzer报表 {#viewing-the-aem-analyzer-report}
 
@@ -88,13 +88,13 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 
 * **报告概述**：有关报告本身的信息，包括以下内容：
 
-   * **报告时间**：生成并首次提供报告内容的时间
-   * **过期时间**：报告内容缓存过期的时间
-   * **生成时间段**：生成报告的时间量
-   * **发现结果计数**：报告中包含的发现结果总数
+  * **报告时间**：生成并首次提供报告内容的时间
+  * **过期时间**：报告内容缓存过期的时间
+  * **生成时间段**：生成报告的时间量
+  * **发现结果计数**：报告中包含的发现结果总数
 
 * **系统概述**：有关运行分析器的AEM系统的信息
-* **发现结果类别**：多个部分，每个部分提供同一类别的一个或多个发现结果。每个部分包括：类别名称、子类型、发现结果计数和重要性、摘要、指向类别文档的链接以及单个发现结果信息。
+* **发现结果类别**：多个部分，每个部分提供同一类别的一个或多个发现结果。 每个部分包括：类别名称、子类型、发现结果计数和重要性、摘要、指向类别文档的链接以及单个发现结果信息。
 
   ![分析器报告摘要](/help/sites-deploying/assets/analyzer-report-summary.png)
 
@@ -102,14 +102,14 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 
 >[!NOTE]
 >
->要了解有关每个发现结果类别的更多信息，请参阅[模式检测器类别](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-pattern-detection/table-of-contents/aso)。
+>要了解有关每个发现结果类别的更多信息，请参阅[模式检测器类别](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/aso)。
 
 为了了解重要性级别，请遵循下表：
 
 | 重要性 | 描述 |
 |---|---|
 | 信息 | 此发现结果仅供参考。 |
-| 建议 | 此发现结果可能是一个升级问题。建议进一步调查。 |
+| 建议 | 此发现结果可能是一个升级问题。 建议进一步调查。 |
 | 关键 | 此发现结果极有可能是一个必须解决的升级问题，以防止功能或性能丢失。 |
 
 ## 解释AEM 6.5 LTS分析器CSV报告 {#interpreting-the-aem-65lts-analyzer-report}
@@ -118,7 +118,7 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 
 如果缓存已过期，则在生成并下载CSV文件之前会重新生成报表。
 
-CSV 格式的报告包括从模式检测器输出生成的信息，这些信息按类别类型、子类型和重要性级别进行排序和组织。其格式适合在 Microsoft Excel 等应用程序中查看和编辑。它旨在以可重复的格式提供所有发现结果信息，在比较不同时间的报告以衡量进度时，这些信息很有用。
+CSV 格式的报告包括从模式检测器输出生成的信息，这些信息按类别类型、子类型和重要性级别进行排序和组织。 其格式适合在 Microsoft Excel 等应用程序中查看和编辑。 它旨在以可重复的格式提供所有发现结果信息，在比较不同时间的报告以衡量进度时，这些信息很有用。
 
 CSV 格式的报告包含以下列：
 
@@ -164,7 +164,7 @@ curl -u admin:admin 'http://localhost:4502/apps/aem66-analyzer/analysis/report.c
 /apps/aem66-analyzer/content/modernizer/analyzer/jcr:content
 ```
 
-此属性的值便是缓存生命周期（以秒为单位）。管理员可以使用 CRX/DE Lite 调整缓存生命周期。
+此属性的值便是缓存生命周期（以秒为单位）。 管理员可以使用 CRX/DE Lite 调整缓存生命周期。
 
 ## 使用内容转换器 {#using-content-transformer}
 
@@ -184,7 +184,7 @@ Content Transformer与AEM 6.5 LTS Analyzer捆绑在一起，可以从软件分�
 
 ### 打开内容转换器 {#opening-the-content-transformer}
 
-1. 以管理员身份登录到源AEM实例，然后转到起始页：*https://host:port/aem/start.htm*
+1. 以管理员身份登录到源AEM实例，然后转到起始页： *https://host:port/aem/start.htm*
 1. 导航到&#x200B;**工具 — 操作 — 6.5 LTS现代化器**
 
    ![打开内容转换器1](/help/sites-deploying/assets/opening-content-transformer-1.png)
@@ -232,5 +232,5 @@ AEM Analyzer报告的剩余到期时间显示在侧边栏中。 建议使用最�
 
 ### 已知问题 {#known-issues}
 
-* 有时，删除操作可能会显示通知：*&quot;某些路径未成功删除，请检查日志并重试。“*”。 但是，如果实际删除了路径，则可以安全地忽略此消息
-* 同样，包操作可能会失败，并出现以下错误： *&quot;执行所需操作时出现错误，请检查日志并重试。“*”。 这可能是由于会话过期导致的。 在这种情况下，重试操作应该可以解决此问题。
+* 有时，删除操作可能会显示通知： *“某些路径未成功删除，请检查日志并重试。*”。 但是，如果实际删除了路径，则可以安全地忽略此消息
+* 同样，包操作可能会失败，并出现错误： *&quot;执行所需操作时出错，请检查日志并重试。*&quot;。 这可能是由于会话过期导致的。 在这种情况下，重试操作应该可以解决此问题。
