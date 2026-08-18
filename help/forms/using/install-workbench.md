@@ -100,7 +100,7 @@ Workbench是一个集成开发环境(IDE)，开发人员和表单作者使用它
 
 ### 支持的平台 {#supported-platforms}
 
-在[AEM Forms支持的平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65)上，查看Workbench支持的平台的完整列表。
+在[AEM Forms支持的平台](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65_cn)上，查看Workbench支持的平台的完整列表。
 
 ## Designer安装注意事项 {#designer-installation-considerations}
 

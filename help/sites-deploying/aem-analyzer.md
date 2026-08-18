@@ -102,7 +102,7 @@ AEM 6.5 LTS Analyzer报告包括以下类别：
 
 >[!NOTE]
 >
->要了解有关每个发现结果类别的更多信息，请参阅[模式检测器类别](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/aso)。
+>要了解有关每个发现结果类别的更多信息，请参阅[模式检测器类别](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-pattern-detection/table-of-contents/aso)。
 
 为了了解重要性级别，请遵循下表：
 
