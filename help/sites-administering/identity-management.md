@@ -12,7 +12,7 @@ role: Admin
 exl-id: 70a5429a-e805-49f6-9c2c-28720d9674ae
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1219'
 ht-degree: 1%
 
 ---
@@ -190,7 +190,7 @@ http://localhost:4502/content/geometrixx-outdoors/en/user/profile.html
 
 这些访问权限由以下通配符ACL定义：
 
-/home每个用户都允许jcr：read rep：glob = &#42;/profile&#42;
+/home每个人都允许jcr:read rep:glob = &#42;/profile&#42;
 
 这允许：
 

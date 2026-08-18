@@ -11,7 +11,7 @@ role: Admin
 exl-id: c0b285b7-3b20-4412-88b8-04de4a703f42
 source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2393'
 ht-degree: 1%
 
 ---
@@ -111,7 +111,7 @@ Apache Sling基于资源的发现服务在每个实例上运行，以控制Exper
 * 要将实例加入拓扑，请指定根成员的Topology Connector服务的URL。
 * 要启用实例以加入拓扑，请将该实例添加到根成员的拓扑连接器服务的允许列表中。
 
-使用Web控制台或sling：OsgiConfig节点配置org.apache.sling.discovery.impt.Config服务的以下属性：
+使用Web控制台或sling:OsgiConfig节点配置org.apache.sling.discovery.impt.Config服务的以下属性：
 
 <table>
  <tbody>
@@ -208,7 +208,7 @@ Experience Manager中安装了多个JobConsumer实施。 为其注册这些JobCo
 | 作业主题 | 服务 PID | 描述 |
 |---|---|---|
 | / | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | 随Apache Sling一起安装。 处理OSGi事件管理员生成的作业以实现向后兼容性。 |
-| com/day/cq/replication/job/&amp;amp；ast； | com.day.cq.replication.impl.AgentManagerImpl | 复制作业负载的复制代理。 |
+| com/day/cq/replication/job/&amp;ast； | com.day.cq.replication.impl.AgentManagerImpl | 复制作业负载的复制代理。 |
 
 <!--
 | com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
@@ -220,13 +220,13 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 
 **注意：**&#x200B;如果实例属于拓扑，则还可以在拓扑中的任何计算机上使用“卸载浏览器”来启用或禁用主题。
 
-创建已启用主题列表的逻辑首先允许允许列表中的所有主题，然后删除阻止列表上的主题。 默认情况下，将启用所有主题(允许列表值为`*`)，并且不会禁用任何主题(阻止列表没有值)。
+创建已启用主题列表的逻辑首先允许允许列表中的所有主题，然后删除阻止列表上的主题。 默认情况下，将启用所有主题（允许列表值为`*`），并且不会禁用任何主题（阻止列表没有值）。
 
 使用Web控制台或`sling:OsgiConfig`节点配置以下属性。 对于`sling:OsgiConfig`节点，作业使用者管理器服务的PID为org.apache.sling.event.impl.jobs.JobConsumerManager。
 
 | Web控制台中的属性名称 | osgi ID | 描述 |
 |---|---|---|
-| 主题允许列表 | job.consumermanager.whitelist | 本地JobManager服务处理的主题列表。 默认值&amp;amp；ast；会导致将所有主题发送到注册的TopicConsumer服务。 |
+| 主题允许列表 | job.consumermanager.whitelist | 本地JobManager服务处理的主题列表。 默认值&amp;ast；会导致将所有主题发送到注册的TopicConsumer服务。 |
 | 主题阻止列表 | job.consumermanager.blacklist | 本地JobManager服务不处理的主题列表。 |
 
 ## 创建用于卸载的复制代理 {#creating-replication-agents-for-offloading}
@@ -278,7 +278,7 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 1. 在作者上创建&#x200B;**复制代理**。 （请参阅有关复制代理的[文档](/help/sites-deploying/replication.md)）。 指定任何&#x200B;**标题**。 **名称**&#x200B;必须遵循命名约定。
 1. 使用以下属性创建代理：
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | “设置”>“序列化类型” | 默认 |
    | 传输>传输URI | https://*`<ip of target instance>`*：*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
@@ -289,10 +289,10 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 
 ### 创建反向代理 {#creating-the-reverse-agent}
 
-1. 在作者上创建&#x200B;**反向复制代理**。 （请参阅复制代理[&#128279;](/help/sites-deploying/replication.md)的文档。）指定任意&#x200B;**标题**。 **名称**&#x200B;必须遵循命名约定。
+1. 在作者上创建&#x200B;**反向复制代理**。 （请参阅有关复制代理[&#128279;](/help/sites-deploying/replication.md)的文档。） 指定任何&#x200B;**标题**。 **名称**&#x200B;必须遵循命名约定。
 1. 使用以下属性创建代理：
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | “设置”>“序列化类型” | 默认 |
    | 传输>传输URI | https://*`<ip of target instance>`*：*`<port>`*`/bin/receive?sling:authRequestLogin=1` |
@@ -302,10 +302,10 @@ Apache Sling作业使用者管理器服务提供主题允许列表和阻止列�
 
 ### 创建发件箱代理 {#creating-the-outbox-agent}
 
-1. 在辅助进程实例上创建&#x200B;**复制代理**。 （请参阅复制代理[&#128279;](/help/sites-deploying/replication.md)的文档。）指定任意&#x200B;**标题**。 **名称**&#x200B;必须为`offloading_outbox`。
+1. 在辅助进程实例上创建&#x200B;**复制代理**。 （请参阅有关复制代理[&#128279;](/help/sites-deploying/replication.md)的文档。） 指定任何&#x200B;**标题**。 **名称**&#x200B;必须为`offloading_outbox`。
 1. 使用以下属性创建代理。
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |---|---|
    | “设置”>“序列化类型” | 默认 |
    | 传输>传输URI | repo://var/replication/outbox |

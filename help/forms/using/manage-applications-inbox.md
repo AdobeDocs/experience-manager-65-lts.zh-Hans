@@ -1,5 +1,5 @@
 ---
-title: 在 AEM Inbox 中管理 Forms 应用程序和任务
+title: 在 AEM 收件箱中管理 Forms 应用程序和任务
 description: AEM收件箱允许您通过提交应用程序和管理任务来启动以Forms为中心的工作流。
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
@@ -7,16 +7,16 @@ role: Admin, User, Developer
 exl-id: 5454ee3d-45fb-4ed2-b2f2-1fa9e2460759
 source-git-commit: b8576049fba41b3bec16046316938274a5046513
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1091'
 ht-degree: 3%
 
 ---
 
-# 在 AEM Inbox 中管理 Forms 应用程序和任务{#manage-forms-applications-and-tasks-in-aem-inbox}
+# 在 AEM 收件箱中管理 Forms 应用程序和任务{#manage-forms-applications-and-tasks-in-aem-inbox}
 
 启动或触发以Forms为中心的工作流的多种方法之一，是通过AEM收件箱中的应用程序来启动。 要使Forms工作流可用作收件箱中的应用程序，请创建工作流应用程序。 有关工作流应用程序和其他启动Forms工作流的方法的更多信息，请参阅[在OSGi上启动以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md#launch)。
 
-此外，AEM收件箱可整合来自各种AEM组件(包括Forms工作流程)的通知和任务。 触发包含“分配”任务步骤的表单工作流时，关联的应用程序将作为任务列在被分配人的收件箱中。 如果被分派人是组，则该任务会出现在所有组成员的“收件箱”中，直到个人声明或委派该任务为止。
+此外，AEM收件箱可整合来自各种AEM组件（包括Forms工作流程）的通知和任务。 触发包含“分配”任务步骤的表单工作流时，关联的应用程序将作为任务列在被分配人的收件箱中。 如果被分派人是组，则该任务会出现在所有组成员的“收件箱”中，直到个人声明或委派该任务为止。
 
 收件箱用户界面提供列表和日历视图以查看任务。 您还可以配置视图设置。 您可以根据各种参数筛选任务。 有关视图和筛选器的详细信息，请参阅[您的收件箱](/help/sites-authoring/inbox.md)。
 

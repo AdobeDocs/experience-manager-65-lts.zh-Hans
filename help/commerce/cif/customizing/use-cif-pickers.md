@@ -11,7 +11,7 @@ role: Admin, Developer
 exl-id: 25442753-8309-452b-881a-d33ab159d5b2
 source-git-commit: d571dc696e42bae873cd58f2e7f321bd3002f42e
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ product字段允许导航到用户希望通过不同视图选择的产品。 默
 
 类别选取器可以在组件对话框中使用，其使用方式与产品选取器类似。
 
-以下代码片段可以在cq：dialog配置中使用：
+可以在cq:dialog配置中使用以下代码片段：
 
 ```xml
 <category jcr:primaryType="nt:unstructured" 

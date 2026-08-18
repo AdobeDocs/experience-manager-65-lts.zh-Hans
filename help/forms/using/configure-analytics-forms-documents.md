@@ -11,14 +11,14 @@ feature: Adaptive Forms
 exl-id: befc6b96-517b-4ca3-8007-2aa0fd6ed2cb
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 1%
+source-wordcount: '1546'
+ht-degree: 3%
 
 ---
 
 # 使用Cloud Service框架的Analytics {#analyticsusingcloudframework}
 
-AEM Forms与Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些量度背后的目的是，根据有关提高表单或文档可用性的更改数据做出明智的决策。
+AEM Forms与Analytics集成，允许您捕获和跟踪已发布表单和文档的性能指标。 分析这些指标的目的在于，根据有关使表单或文档更有用所需的更改的数据做出明智的决策。
 
 >[!NOTE]
 >
@@ -163,7 +163,7 @@ Adobe Analytics框架是Adobe Analytics变量与AEM变量之间的一组映射�
 1. 为以下字段指定适当的值，然后单击&#x200B;**保存**。
 
    * **SiteCatalyst框架**：选择您在设置跟踪框架部分中定义的框架/配置。
-   * **字段时间跟踪基线**：以秒为单位指定必须跟踪字段访问的持续时间。 默认值为 0。如果该值大于0（零），则会向Adobe Analytics服务器发送两个单独的跟踪事件。 第一个事件会指示Analytics服务器停止跟踪已退出的字段。 第二个事件在指定的持续时间过后发送。 第二个事件会指示Analytics服务器开始跟踪已访问的字段。 使用两个不同的事件有助于准确测量在字段上逗留的时间。 当值为0（零）时，单个跟踪事件将发送到Adobe Analytics服务器。
+   * **字段时间跟踪基线**：以秒为单位指定必须跟踪字段访问的持续时间。 默认值为 0。 如果该值大于0（零），则会向Adobe Analytics服务器发送两个单独的跟踪事件。 第一个事件会指示Analytics服务器停止跟踪已退出的字段。 第二个事件在指定的持续时间过后发送。 第二个事件会指示Analytics服务器开始跟踪已访问的字段。 使用两个不同的事件有助于准确测量在字段上逗留的时间。 当值为0（零）时，单个跟踪事件将发送到Adobe Analytics服务器。
 
    * **Analytics报告同步cron**：指定用于从Adobe Analytics获取报告的cron表达式。 默认值为0 0 2 ？&#42; &#42;。
 

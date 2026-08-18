@@ -9,7 +9,7 @@ role: User, Developer
 exl-id: 0860f059-d599-4f87-9611-e7fe1c6bc059
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2005'
+source-wordcount: '2045'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ AEM Forms附加组件包提供了一个现成的Chart组件。 您可以在自�
 1. 列
 1. 圆环图
 1. 条形图
-1. 线条
+1. 线形图
 1. 线和点
 1. 点
 1. 区域
@@ -149,10 +149,10 @@ Multiply(valueArray, category) {
 编写自定义函数后，请执行以下操作以使其可用于图表配置：
 
 1. 在与自适应表单或文档关联的客户端库中添加自定义函数。
-1. 在CRXDE Lite中，在apps文件夹中创建一个nt：unstructured节点，该节点具有以下属性：
+1. 在CRXDE Lite中，在apps文件夹中创建一个nt:unstructured节点，该节点具有以下属性：
    * 将guideComponentType设置为fd/af/reducer。 （必填）
    * 将值设置为自定义JavaScript函数的完全限定名称。 （必填）
-   * 将jcr：description设置为有意义的名称。 它出现在&#x200B;**使用函数**&#x200B;下拉列表中。 例如，**乘**。
+   * 将jcr:description设置为有意义的名称。 它出现在&#x200B;**使用函数**&#x200B;下拉列表中。 例如，**乘**。
    * 将qtip设置为函数的简短说明。 将鼠标指针悬停在“使用函数”下拉列表中的函数名称上时，它会显示为工具提示。
    * 单击&#x200B;**全部保存**&#x200B;以保存配置。
    * 函数现在可用于图表中。

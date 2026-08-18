@@ -1,5 +1,5 @@
 ---
-title: 创建自适应表单的自定义布局组件
+title: 为自适应表单创建自定义布局组件
 description: 为自适应表单创建自定义布局组件的过程。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -11,12 +11,12 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 9b934d95-f59f-46d5-9d13-4ad2561453b3
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 1%
+source-wordcount: '276'
+ht-degree: 6%
 
 ---
 
-# 创建自适应表单的自定义布局组件{#creating-custom-layout-components-for-adaptive-forms}
+# 为自适应表单创建自定义布局组件{#creating-custom-layout-components-for-adaptive-forms}
 
 ## 先决条件 {#prerequisite}
 

@@ -12,8 +12,8 @@ role: Developer
 exl-id: cafc7120-114e-487a-8b81-9c695318731e
 source-git-commit: a061c19dcb883b94ee61be21459c46e21eaf696a
 workflow-type: tm+mt
-source-wordcount: '2791'
-ht-degree: 1%
+source-wordcount: '2898'
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 1%
   - channels (string) multiple
 ```
 
-默认情况下，`cq:ClientLibraryFolder`节点可以放置在存储库的`/apps`、`/libs`和`/etc`子树中的任意位置(这些默认值和其他设置可通过[系统控制台](https://localhost:4502/system/console/configMgr)的&#x200B;**Adobe Granite HTML库管理器**&#x200B;面板进行控制)。
+默认情况下，`cq:ClientLibraryFolder`节点可以放置在存储库的`/apps`、`/libs`和`/etc`子树中的任意位置（这些默认值和其他设置可通过[系统控制台](https://localhost:4502/system/console/configMgr)的&#x200B;**Adobe Granite HTML库管理器**&#x200B;面板进行控制）。
 
 每个`cq:ClientLibraryFolder`都填充了一组JS和/或CSS文件以及几个支持文件（见下文）。 `cq:ClientLibraryFolder`的属性配置如下：
 
@@ -70,9 +70,9 @@ ht-degree: 1%
 
 * **css** — 仅加载引用的客户端库的CSS文件。
 * **js** — 仅加载引用的客户端库的JavaScript文件。
-* **all** — 加载引用的客户端库的所有文件(CSS和JavaScript)。
+* **all** — 加载引用的客户端库的所有文件（CSS和JavaScript）。
 
-每个帮助程序模板都需要一个 `categories` 选项来引用所需的客户端库。该选项可以是字符串值的数组，也可以是包含逗号分隔值列表的字符串。
+每个帮助程序模板都需要一个 `categories` 选项来引用所需的客户端库。 该选项可以是字符串值的数组，也可以是包含逗号分隔值列表的字符串。
 
 有关详细信息和使用示例，请参阅文档[HTML模板语言快速入门](https://helpx.adobe.com/cn/experience-manager/htl/using/getting-started.html#loading-client-libraries)。
 
@@ -91,17 +91,17 @@ ht-degree: 1%
 <ui:includeClientLib categories="cq.jquery"/>
 ```
 
-生成的HTML页包含以下代码：
+生成的HTML页面包含以下代码：
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/foundation/jquery.js"></script>
 ```
 
-有关完整信息（包括用于筛选JS、CSS或主题库的属性），请参阅[ui：includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
+有关完整的信息（包括筛选JS、CSS或主题库的属性），请参阅[ui:includeClientLib](/help/sites-developing/taglib.md#lt-ui-includeclientlib)。
 
 >[!CAUTION]
 >
->`<cq:includeClientLib>`以前常用于包含客户端库，但自AEM 5.6以来已弃用。应改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
+>`<cq:includeClientLib>`过去通常用于包含客户端库，但自AEM 5.6之后已弃用。 应改用[`<ui:includeClientLib>`](/help/sites-developing/taglib.md#lt-ui-includeclientlib)，如上所述。
 
 ## 创建客户端库文件夹 {#creating-client-library-folders}
 
@@ -206,7 +206,7 @@ Web客户端必须具有访问`cq:ClientLibraryFolder`节点的权限。 您还�
 
 * **名称：**&#x200B;依赖项
 * **类型：**&#x200B;字符串[]
-* **值：**&#x200B;当前库文件夹所依赖的cq：ClientLibraryFolder节点的categories属性值。
+* **值：**&#x200B;当前库文件夹所依赖的cq:ClientLibraryFolder节点的categories属性值。
 
 例如，/ `etc/clientlibs/myclientlibs/publicmain`依赖于`cq.jquery`库。 引用主客户端库的JSP将生成包含以下代码的HTML：
 
@@ -328,16 +328,16 @@ AEM允许可插拔的预处理器，并随附对CSS和JavaScript的[YUI Compress
 
 * 定义可以处理脚本源的ScriptProcessors
 * 处理器可通过选项进行配置
-* 处理器可用于缩减，也可用于非缩小的情况
-* 客户端库可以定义要使用的处理器
+* 处理器可用于缩小，也可用于非缩小情况
+* clientlib可以定义要使用的处理器
 
 >[!NOTE]
 >
->默认情况下，AEM使用YUI压缩器。 有关已知问题的列表，请参阅[YUI压缩器GitHub文档](https://github.com/yui/yuicompressor/issues)。 针对特定客户端库切换到GCC压缩程序可能会解决使用YUI时观察到的一些问题。
+>默认情况下，AEM使用YUI压缩程序。 有关已知问题的列表，请参阅[YUI压缩程序GitHub文档](https://github.com/yui/yuicompressor/issues)。 为特定clientlibs切换到GCC压缩程序可以解决使用YUI时观察到的一些问题。
 
 >[!CAUTION]
 >
->不要将缩小的库放入客户端库中。 而是应提供Raw库，如果需要缩减，请使用预处理器的选项。
+>请勿将缩小的库放置在客户端库中。 而是提供原始库，如果需要缩小，请使用预处理器的选项。
 
 ### 用途 {#usage}
 
@@ -345,7 +345,7 @@ AEM允许可插拔的预处理器，并随附对CSS和JavaScript的[YUI Compress
 
 * 在clientlibrary节点上添加多值属性`cssProcessor`和`jsProcessor`
 
-* 或通过&#x200B;**系统库管理器** OSGi配置定义HTML默认配置
+* 或通过&#x200B;**HTML Library Manager** OSGi配置定义系统默认配置
 
 clientlib节点上的预处理器配置优先于OSGI配置。
 
@@ -446,7 +446,7 @@ AEM提供了几种用于调试和测试客户端库文件夹的工具。
 
    * 在Web浏览器中打开以下URL（根据需要使用不同的主机和端口）：
 
-      * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
+     * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
 
    默认页面显示没有categories属性值的标记的输出。
 

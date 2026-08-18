@@ -1,6 +1,6 @@
 ---
 title: 管理包含引用和多个页面的复合资产
-description: 了解如何在 [!DNL Adobe InDesign]、 [!DNL Adobe Illustrator]和 [!DNL Adobe Photoshop]内创建对数字资源的引用。 使用页面查看器功能可查看多页文件(如PDF、INDD、PPT、PPTX和AI文件)的各个子资产页面。
+description: 了解如何在 [!DNL Adobe InDesign]、 [!DNL Adobe Illustrator]和 [!DNL Adobe Photoshop]内创建对数字资源的引用。 使用页面查看器功能可查看多页文件（如PDF、INDD、PPT、PPTX和AI文件）的各个子资产页面。
 contentOwner: AG
 role: User, Admin
 feature: Asset Management
@@ -8,7 +8,7 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 077dfd55-0193-41ff-97c0-9f6be978cc9f
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -100,14 +100,14 @@ ht-degree: 0%
 * 新资源： [!UICONTROL DAM更新Assets]工作流对上传到[!DNL Experience Manager]的任何新资源执行。 为新的多页面资源自动生成子资源。
 * 现有多页面资源：执行以下任一步骤后，手动执行[!UICONTROL DAM更新Assets]工作流：
 
-   * 选择资产并单击[!UICONTROL 时间轴]以打开左侧面板。 或者，使用键盘快捷键`alt + 3`。 单击[!UICONTROL 启动工作流]，选择[!UICONTROL DAM更新资产]，单击[!UICONTROL 启动]，然后单击[!UICONTROL 继续]。
-   * 选择一个资产，然后单击工具栏中的[!UICONTROL 创建] > [!UICONTROL 工作流]。 从弹出对话框中，选择[!UICONTROL DAM更新资产]工作流，单击[!UICONTROL 开始]，然后单击[!UICONTROL 继续]。
+  * 选择资产并单击[!UICONTROL 时间轴]以打开左侧面板。 或者，使用键盘快捷键`alt + 3`。 单击[!UICONTROL 启动工作流]，选择[!UICONTROL DAM更新资产]，单击[!UICONTROL 启动]，然后单击[!UICONTROL 继续]。
+  * 选择一个资产，然后单击工具栏中的[!UICONTROL 创建] > [!UICONTROL 工作流]。 从弹出对话框中，选择[!UICONTROL DAM更新资产]工作流，单击[!UICONTROL 开始]，然后单击[!UICONTROL 继续]。
 
 对于Microsoft Word文档，请执行&#x200B;**[!UICONTROL DAM解析Word文档]**&#x200B;工作流。 它从Microsoft Word文档的内容生成一个`cq:Page`组件。 从文档提取的图像是从`cq:Page`组件引用的。 即使禁用子资产生成，也会提取这些图像。
 
 >[!NOTE]
 >
->在[!UICONTROL 进程参数]的[!UICONTROL 创建子资产进程 — 步骤属性]中，您可以指定[!DNL Experience Manager]生成的子资产数。 默认值为 5。要生成所有子资产，请将该字段留空。 如果字段为负，则不会生成任何子资产。
+>在[!UICONTROL 进程参数]的[!UICONTROL 创建子资产进程 — 步骤属性]中，您可以指定[!DNL Experience Manager]生成的子资产数。 默认值为 5。 要生成所有子资产，请将该字段留空。 如果字段为负，则不会生成任何子资产。
 
 ## 查看子资产 {#viewing-subassets}
 

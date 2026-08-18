@@ -1,5 +1,5 @@
 ---
-title: 在AEM中创建Adobe Campaign Forms
+title: 在 AEM 中创建 Adobe Campaign 表单
 description: 通过AEM，您可以创建并使用与网站上的Adobe Campaign交互的表单。 可以将特定字段插入表单并映射到Adobe Campaign数据库。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: User
 exl-id: 3a39c4ba-353a-41ee-bfe6-e7eb4323f170
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 0%
+source-wordcount: '1224'
+ht-degree: 1%
 
 ---
 
-# 在AEM中创建Adobe Campaign Forms{#creating-adobe-campaign-forms-in-aem}
+# 在 AEM 中创建 Adobe Campaign 表单{#creating-adobe-campaign-forms-in-aem}
 
 通过AEM，您可以创建并使用与网站上的Adobe Campaign交互的表单。 可以将特定字段插入表单并映射到Adobe Campaign数据库。
 
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->当使用Adobe Campaign 6.1.x或Adobe Campaign Standard时，请确保将页面&#x200B;**jcr：content**&#x200B;节点上的&#x200B;**acMapping**&#x200B;属性分别设置为&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
+>当使用Adobe Campaign 6.1.x或Adobe Campaign Standard时，请确保将页面&#x200B;**jcr:content**&#x200B;节点上的&#x200B;**acMapping**&#x200B;属性分别设置为&#x200B;**mapRecipient**&#x200B;或&#x200B;**profile**
 >
 
 ### 创建表单 {#creating-a-form}

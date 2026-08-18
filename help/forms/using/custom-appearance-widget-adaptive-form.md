@@ -11,8 +11,8 @@ feature: Adaptive Forms,Foundation Components
 exl-id: c8745d19-139a-4cea-982a-537bc1dd207d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 0%
+source-wordcount: '1744'
+ht-degree: 1%
 
 ---
 
@@ -130,9 +130,9 @@ maven原型是创建自定义外观的起点。 要使用的原型的详细信�
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
-   <td>返回将HTML事件转换为XFA事件的映射。 <br /> <code class="code">&lbrace;
+   <td>返回将HTML事件转换为XFA事件的映射。<br /> <code class="code">&lbrace;
       blur: XFA_EXIT_EVENT,
-      &rbrace;</code><br />此示例显示<code>blur</code>是一个HTML事件，<code>XFA_EXIT_EVENT</code>是相应的XFA事件。 </td>
+      &rbrace;</code><br /> 此示例显示<code>blur</code>是一个HTML事件，<code>XFA_EXIT_EVENT</code>是相应的XFA事件。 </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>

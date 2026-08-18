@@ -1,5 +1,5 @@
 ---
-title: 为草稿和提交配置存储服务
+title: 配置草稿和提交的存储服务
 description: 了解如何为草稿和提交配置存储
 topic-tags: publish
 content-type: reference
@@ -10,12 +10,12 @@ role: Admin, User, Developer
 exl-id: 33769e4f-2213-442b-bd1c-1728cd917460
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 0%
+source-wordcount: '537'
+ht-degree: 3%
 
 ---
 
-# 为草稿和提交配置存储服务 {#configuring-storage-services-for-drafts-and-submissions}
+# 配置草稿和提交的存储服务 {#configuring-storage-services-for-drafts-and-submissions}
 
 ## 概述 {#overview}
 
@@ -51,7 +51,7 @@ AEM Forms Portal数据和元数据服务为草稿和提交提供支持。 默认
  <tbody>
   <tr>
    <th>属性</th>
-   <th>价值</th>
+   <th>值</th>
   </tr>
   <tr>
    <td>Forms门户草稿数据服务(草稿数据服务(<strong>draft.data.service</strong>)的标识符)</td>
@@ -80,7 +80,7 @@ AEM Forms Portal数据和元数据服务为草稿和提交提供支持。 默认
  <tbody>
   <tr>
    <th>属性</th>
-   <th>价值</th>
+   <th>值</th>
   </tr>
   <tr>
    <td>Forms门户草稿数据服务(草稿数据服务(<strong>draft.data.service</strong>)的标识符)</td>
