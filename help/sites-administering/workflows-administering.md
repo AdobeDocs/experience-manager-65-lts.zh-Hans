@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 exl-id: c86f66b3-6471-4fb6-81d6-3c0a4dcbe200
-source-git-commit: 'null'
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1015'
 ht-degree: 63%
@@ -96,7 +96,7 @@ ht-degree: 63%
 当工作流失败时，AEM会提供&#x200B;**故障**&#x200B;控制台，以便您进行调查，并在找到初始原因后执行适当的操作：
 
 * **失败详细信息**
-打开一个窗口以显示&#x200B;**失败消息**、**步骤**&#x200B;和&#x200B;**失败栈栈**。
+打开一个窗口以显示**失败消息**、**步骤**&#x200B;和&#x200B;**失败栈栈**。
 
 * **打开历史记录**
 显示工作流历史记录的详细信息。

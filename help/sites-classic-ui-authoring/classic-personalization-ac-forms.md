@@ -9,7 +9,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: 3a39c4ba-353a-41ee-bfe6-e7eb4323f170
-source-git-commit: 'null'
+source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 1%
