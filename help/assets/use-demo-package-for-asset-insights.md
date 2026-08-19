@@ -22,11 +22,11 @@ ht-degree: 2%
 1. 使用[配置Assets Insights](configure-asset-insights.md)中的说明配置Assets Insights。
 1. 从下方下载示例Assets包，并从CRXDE包管理器安装包。
 
-[获取文件](assets/insightsdemo.zip)
+   [获取文件](assets/insightsdemo.zip)
 
 1. 从下面下载包含示例网页的ZIP文件，并在本地文件系统上解压缩。
 
-[获取文件](assets/demosite.zip)
+   [获取文件](assets/demosite.zip)
 
 1. 单击在Web浏览器中打开的网页。
 
