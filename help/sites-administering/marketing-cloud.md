@@ -11,16 +11,16 @@ role: Admin
 exl-id: 456bcdf5-3d43-43d8-b243-70095e0cf58c
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 1%
+source-wordcount: '868'
+ht-degree: 2%
 
 ---
 
 # 与Adobe Experience Cloud集成{#integrating-with-the-adobe-marketing-cloud}
 
-[Adobe Experience Cloud](https://business.adobe.com/cn/products/marketing-cloud/main.html)包括功能强大的Web分析和网站优化产品，这些产品提供可操作的实时数据和见解，以推动成功的在线计划。 它为在线业务优化提供了一个集成的、开放的平台。 Cloud由集成的应用程序组成，这些应用程序用于收集和释放客户洞察力，从而优化客户获取、转化和保留工作以及内容的创建和分发。
+[Adobe Experience Cloud](https://business.adobe.com/cn/products/marketing-cloud/main.html)包含功能强大的Web分析和网站优化产品，这些产品可提供可操作的实时数据和见解，从而推动成功的在线计划。 它为在线业务优化提供了一个集成的、开放的平台。 Cloud由集成的应用程序组成，这些应用程序用于收集和释放客户insight的功能，从而优化客户获取、转化和保留工作以及内容的创建和分发。
 
-通过Adobe Experience Manager (AEM)，您可以无缝集成到Adobe Experience Cloud的以下产品：
+借助Adobe Experience Manager (AEM)，您可以无缝地与Adobe Experience Cloud的以下产品集成：
 
 * Adobe Analytics为营销人员提供了有关在线策略和营销活动的可操作实时信息。
 * Adobe Target使营销人员能够不断使其在线内容与其客户更相关，从而提高转化率。
@@ -80,7 +80,7 @@ Adobe Dynamic Media Classic是一个托管解决方案，用于发布、管理�
 
 有关Adobe Experience Manager如何与Dynamic Media Classic集成的更多信息，请参阅[与Dynamic Media Classic集成](/help/sites-administering/scene7.md)文档。
 
-## 与Adobe Dynamic Tag Management集成 {#integrating-with-adobe-dynamic-tag-management}
+## 与 Adobe 动态标记管理集成 {#integrating-with-adobe-dynamic-tag-management}
 
 [Adobe Dynamic Tag Management](https://business.adobe.com/cn/products/experience-platform/adobe-experience-platform.html)为营销人员提供了直观的工具，可快速轻松地管理无限数量的Adobe和第三方标签。 您拥有更大的控制能力和灵活性，几乎可以在线优化任何内容，同时减少对IT资源的依赖。
 
