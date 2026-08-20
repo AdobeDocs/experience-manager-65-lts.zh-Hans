@@ -5,10 +5,10 @@ feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
 exl-id: a4101e70-85cd-471c-9bf9-fd09bf5fc8e8
-source-git-commit: d5a7542f1404db662b53c19f2c956f4971a90e78
+source-git-commit: fd7199ca5efa15df0fd014b7a0cfc52cbd7173fe
 workflow-type: tm+mt
-source-wordcount: '2309'
-ht-degree: 60%
+source-wordcount: '2078'
+ht-degree: 58%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 60%
 
 在&#x200B;**变体**&#x200B;选项卡中，您可以执行以下操作：
 
-* 为片段[输入内容](#authoring-your-content)，
-* [创建和管理&#x200B;**主要**&#x200B;内容的变体](#managing-variations)，
+* [为您的片段输入内容](#authoring-your-content)
+* [创建和管理&#x200B;**主控**&#x200B;内容的变体](#managing-variations)
 
 根据正在编辑的数据类型执行一系列其他操作；例如：
 
@@ -31,8 +31,6 @@ ht-degree: 60%
 
 * [查看关键统计信息](#viewing-key-statistics)（关于多行文本）
 
-* [总结文本](#summarizing-text)
-
 * [使变体与主控内容同步](#synchronizing-with-master)
 
 >[!CAUTION]
@@ -41,7 +39,7 @@ ht-degree: 60%
 
 ## 创作内容 {#authoring-your-content}
 
-当您打开内容片段进行编辑时，**变体**&#x200B;选项卡会默认打开。在此，您可以为主要或任何变体创作内容。结构化片段包含在内容模型中定义的各种数据类型的各种字段。
+当您打开内容片段进行编辑时，**变体**&#x200B;选项卡会默认打开。 在此，您可以为主要或任何变体创作内容。 结构化片段包含在内容模型中定义的各种数据类型的各种字段。
 
 例如：
 
@@ -51,22 +49,22 @@ ht-degree: 60%
 
 * 直接在&#x200B;**变体**&#x200B;选项卡中编辑您的内容；每种数据类型都提供不同的编辑选项，例如：
 
-   * 对于&#x200B;**多行文本**&#x200B;字段，您还可以打开[全屏编辑器](#full-screen-editor)以：
+  * 对于&#x200B;**多行文本**&#x200B;字段，您还可以打开[全屏编辑器](#full-screen-editor)以：
 
-      * 选择[格式](#formats)
-      * 查看更多编辑选项([富文本](#rich-text)格式)
-      * 访问[操作](#actions)
+    * 选择[格式](#formats)
+    * 查看更多编辑选项([富文本](#rich-text)格式)
+    * 访问[操作](#actions)
 
-   * 对于&#x200B;**片段引用**&#x200B;字段，[编辑内容片段](#fragment-references-edit-content-fragment)选项可用，具体取决于模型定义。
+  * 对于&#x200B;**片段引用**&#x200B;字段，[编辑内容片段](#fragment-references-edit-content-fragment)选项可用，具体取决于模型定义。
 
 * 将&#x200B;**标记**&#x200B;分配给当前变量；可以添加、更新和删除标记
 
-   * [标记](/help/sites-authoring/tags.md)在组织片段时功能强大，因为它们可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
+  * [标记](/help/sites-authoring/tags.md)在组织片段时功能强大，因为它们可用于内容分类和分类。 标记可用于查找内容（按标记）和应用批量操作。
 
-      * 搜索标记将返回片段，并突出显示标记变量。
-      * 变体标记还可用于对特定内容分发网络（CDN）配置文件（用于 CDN 缓存）的变体进行分组，而不是使用变体名称。
+    * 搜索标记将返回片段，并突出显示标记变量。
+    * 变体标记还可用于对特定内容分发网络（CDN）配置文件（用于 CDN 缓存）的变体进行分组，而不是使用变体名称。
 
-     例如，您可以将相关片段标记为“圣诞节发布”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中再次发布。
+    例如，您可以将相关片段标记为“圣诞节发布”，以仅允许作为子集浏览这些片段，或复制这些片段以供将来在新文件夹中再次发布。
 
   >[!NOTE]
   >
@@ -101,8 +99,6 @@ ht-degree: 60%
 
 * [与主要内容同步](#synchronizing-with-master)（编辑变体时）
 
-* [总结文本](#summarizing-text)
-
 ### 格式 {#formats}
 
 用于编辑多行文本的选项取决于所选的格式：
@@ -130,17 +126,17 @@ ht-degree: 60%
 * 段落样式：段落，标题 1/2/3
 * [插入资源](#inserting-assets-into-your-fragment)
 * 打开全屏编辑器，其中提供了以下格式选项：
-   * 搜索
-   * 查找/替换
-   * 拼写检查程序
-   * [注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
+  * 搜索
+  * 查找/替换
+  * 拼写检查程序
+  * [注释](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [插入内容片段](#inserting-content-fragment-into-your-fragment)；当您的&#x200B;**多行文本**&#x200B;字段配置为&#x200B;**允许片段引用**&#x200B;时可用。
 
 也可以从全屏编辑器访问[操作](#actions)。
 
 ### 纯文本 {#plain-text}
 
-纯文本允许快速输入内容，而无需设置格式或标记信息。您还可以打开全屏编辑器以进一步[操作](#actions)。
+纯文本允许快速输入内容，而无需设置格式或标记信息。 您还可以打开全屏编辑器以进一步[操作](#actions)。
 
 >[!CAUTION]
 >
@@ -152,7 +148,7 @@ ht-degree: 60%
 >
 >有关完整信息，请参阅[Markdown](/help/assets/content-fragments/content-fragments-markdown.md)文档。
 
-这让您使用 Markdown 设置文本格式。您可以定义：
+这让您使用 Markdown 设置文本格式。 您可以定义：
 
 * 标题
 * 段落和换行符
@@ -217,60 +213,6 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 为了简化内容片段的创作过程，您可以上传在外部编辑器中准备的文本，并将其直接添加到片段中。
 
-### 摘要文本 {#summarizing-text}
-
-摘要文本旨在帮助用户将其文本的长度减少到预定义的字数，同时保留关键点和整体含义。
-
->[!NOTE]
->
->在更高的技术水平上，系统根据特定算法保持其认为提供&#x200B;*最佳信息密度和唯一性比*&#x200B;的句子。
-
->[!CAUTION]
->
->内容片段必须具有有效的语言文件夹（ISO 代码）作为祖先；这用于确定要使用的语言模型。
->
->例如，`en/`与以下路径相同：
->
->  `/content/dam/my-brand/en/path-down/my-content-fragment`
-
->[!CAUTION]
->
->英语是现成的。
->
->其他语言作为语言模型包从包共享中提供：
->
->* [法语 (fr)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [德语 (de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [意大利语 (it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [西班牙语 (es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
->
-
-1. 选择&#x200B;**主要变体**&#x200B;或所需的变体。
-1. 打开全屏编辑器。
-
-1. 从工具栏中选择&#x200B;**“摘要文本”**。
-
-   ![摘要](assets/cfm-variations-05.png)
-
-1. 指定目标字数并选 **开始**：
-1. 原始文本与建议的摘要并排显示：
-
-   * 任何要删除的句子都以红色高亮显示，并带有点进。
-   * 如果要将其保留在摘要内容中，请单击任何高亮显示的句子。
-   * 如果要删除未高亮显示的句子，请单击该句子。
-
-1. 选择&#x200B;**“摘要”**&#x200B;以确认更改。
-
-1. 原始文本与建议的摘要并排显示：
-
-   * 任何要删除的句子都以红色高亮显示，并带有点进。
-   * 如果要将其保留在摘要内容中，请单击任何高亮显示的句子。
-   * 如果要删除未高亮显示的句子，请单击该句子。
-   * 显示了总结统计信息：**实际**&#x200B;和&#x200B;**目标**-
-   * 您可以&#x200B;**预览**&#x200B;更改。
-
-   ![摘要比较](assets/cfm-variations-06.png)
-
 ### 批注内容片段 {#annotating-a-content-fragment}
 
 要对片段添加注释：
@@ -279,7 +221,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 1. 打开全屏编辑器。
 
-1. 顶部工具栏中有&#x200B;**注释**&#x200B;图标。您可以根据需要选择一些文本。
+1. 顶部工具栏中有&#x200B;**注释**&#x200B;图标。 您可以根据需要选择一些文本。
 
    ![注释](assets/cfm-variations-07.png)
 
@@ -295,11 +237,11 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
    ![注释](assets/cfm-variations-07b.png)
 
-1. 关闭全屏编辑器时，注释仍会高亮显示。如果选中，将打开一个对话框，以便您进一步编辑注释。
+1. 关闭全屏编辑器时，注释仍会高亮显示。 如果选中，将打开一个对话框，以便您进一步编辑注释。
 
 1. 选择&#x200B;**“保存”**。
 
-1. 关闭全屏编辑器时，注释仍会高亮显示。如果选中，将打开一个对话框，以便您进一步编辑注释。
+1. 关闭全屏编辑器时，注释仍会高亮显示。 如果选中，将打开一个对话框，以便您进一步编辑注释。
 
    ![注释](assets/cfm-variations-07c.png)
 
@@ -307,7 +249,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 注释：
 
-* 在编辑器的全屏和正常模式下，由文本上的高亮显示指示。然后，可通过单击高亮显示的文本来查看、编辑和/或删除注释的完整详细信息，此时将重新打开对话框。
+* 在编辑器的全屏和正常模式下，由文本上的高亮显示指示。 然后，可通过单击高亮显示的文本来查看、编辑和/或删除注释的完整详细信息，此时将重新打开对话框。
 
   >[!NOTE]
   >
@@ -331,7 +273,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 >无法在引用页面上移动或删除这些资源，必须在片段编辑器中完成此操作。
 >
->但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。资源在片段编辑器中的呈现形式仅用于创作内容流。
+>但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。 资源在片段编辑器中的呈现形式仅用于创作内容流。
 
 >[!NOTE]
 >
@@ -372,7 +314,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 >
 >无法在引用页面上移动或删除这些资源，必须在片段编辑器中完成此操作。
 >
->但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。资源在片段编辑器中的呈现形式仅用于创作内容流。
+>但是，必须在[页面编辑器](/help/sites-authoring/content-fragments.md)中编排资源格式（例如，大小）。 资源在片段编辑器中的呈现形式仅用于创作内容流。
 
 >[!NOTE]
 >
@@ -468,7 +410,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 >[!CAUTION]
 >
->同步仅可将更改&#x200B;*从&#x200B;**母版**&#x200B;复制到变体*。
+>同步仅可将更改&#x200B;*从&#x200B;**母版**复制到变体*。
 >
 >仅会同步变体的当前元素。
 >
@@ -478,7 +420,7 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 
 <!-- needs new screenshot for synchronize effect -->
 
-1. 在片段编辑器中打开内容片段。确保&#x200B;**母版**&#x200B;已编辑。
+1. 在片段编辑器中打开内容片段。 确保&#x200B;**母版**&#x200B;已编辑。
 
 1. 选择一个特定的变体，然后从以下任一位置选择相应的同步操作：
 

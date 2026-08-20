@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 0ce890503d43af340b6ee3c85b1b563613627c78
+source-git-commit: d4d05cf9f295e6c3740ebf1e3559b5d117898342
 workflow-type: tm+mt
-source-wordcount: '6749'
+source-wordcount: '6752'
 ht-degree: 26%
 
 ---
@@ -530,7 +530,6 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
-| Sites | 内容片段文本摘要 | 没有替代功能可用。 | |
 | 快速入门 | Mongo API | Mongo API 现已弃用，已计划在未来的发行版本中移除。 | 6.5 TS SP2 |
 | Sites | AEM Assets REST API 中的内容片段支持 | AEM 6.5 LTS SP2 为内容片段和模型管理提供了现代化的 OpenAPI，因此 AEM Assets REST API 中的旧版内容片段支持端点已弃用。<br>Adobe 打算在生命寿命结束公告之前保持这些旧版端点可用。 Adobe 不计划为已弃用的端点提供进一步的增强功能。 | 6.5 LTS SP2 |
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 在 AEM 中管理无头内容的首选编辑器有：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于进行可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于进行基于表单的编辑。 | 6.5 LTS GA |
@@ -545,6 +544,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
+| Sites | 内容片段文本摘要 | 没有替代功能可用。 | 6.5 LTS SP3 |
 | Commerce | 不支持 AEM CIF Classic。 | 迁移到 [AEM CIF](/help/commerce/cif/migration.md)。 | 6.5 LTS GA |
 | 解决方案 | 不支持社交/社区。 | 没有替代功能可用。 | 6.5 LTS GA |
 | Screens | 不支持 Screens。 | 没有替代功能可用。 | 6.5 LTS GA |
