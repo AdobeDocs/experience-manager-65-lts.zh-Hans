@@ -531,7 +531,7 @@ data-cq-component中的路径应为组件的resourceType。
 >
 >例如，如果默认配置为
 >
->>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
+>&#x200B;>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
 >您需要将`CQ_DESIGN_PATH`替换为搜索模式中的`VIPURL`，则您的搜索模式应如下所示：
 >
