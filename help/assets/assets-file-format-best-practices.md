@@ -8,12 +8,12 @@ solution: Experience Manager, Experience Manager Assets
 exl-id: 28765aeb-1303-40da-bde0-df1b4c625d37
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 0%
+source-wordcount: '481'
+ht-degree: 1%
 
 ---
 
-# Assets文件格式最佳实践 {#assets-file-format-best-practices}
+# 资产文件格式最佳做法 {#assets-file-format-best-practices}
 
 [!DNL Adobe Experience Manager Assets]支持许多专有和第三方文件格式库，以满足用户的各种文件支持要求。 支持的Adobe库包括[!DNL Adobe Camera Raw]、Gibson、Adobe PDF光栅器和[!DNL Adobe InDesign Server]。 此外，[!DNL Experience Manager Assets]还支持第三方库，包括[!DNL ImageMagick]、[!DNL TwelveMonkeys]等。
 

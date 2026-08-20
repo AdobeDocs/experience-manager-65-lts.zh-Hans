@@ -1,5 +1,5 @@
 ---
-title: 以编程方式使用AEM文档服务
+title: 以编程方式使用 AEM 文档服务
 description: 了解如何使用Document Services API对文档进行数字签名、加密、标记和生成PDF文档。
 feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
@@ -7,12 +7,12 @@ role: Admin, User, Developer
 exl-id: 5c6fa5ae-ac28-4d92-9123-f4f1404bdc4f
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '6439'
+source-wordcount: '6510'
 ht-degree: 1%
 
 ---
 
-# 以编程方式使用AEM文档服务  {#using-aem-document-services-programmatically}
+# 以编程方式使用 AEM 文档服务  {#using-aem-document-services-programmatically}
 
 本文档中的示例和示例可帮助您了解在OSGi环境上的AEM Forms上使用AEM Document Services 。 有关JEE环境上的AEM Forms的示例和示例，请参阅
 
@@ -68,7 +68,7 @@ DocAssurance服务包括以下服务：
 
 >[!NOTE]
 >
->所有这些服务都使用Document对象作为输入参数，可在URL [https://helpx.adobe.com/cn/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/cn/experience-manager/6-3/forms/javadocs/index.html)上找到该输入参数的Javadoc
+>所有这些服务都使用Document对象作为输入参数，可在URL [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)上找到该输入参数的Javadoc
 
 ### 添加不可见的签名字段 {#adding-an-invisible-signature-field}
 
@@ -1391,7 +1391,7 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 >[!NOTE]
 >
->AEM FormsPDF还支持对文档进行数字签名的&#x200B;*[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*&#x200B;规范。
+>AEM Forms还支持对文档进行数字签名的&#x200B;*[CAdES](https://en.wikipedia.org/wiki/CAdES_%28computing%29)*&#x200B;规范。
 
 **认证PDF文档**
 
@@ -4463,7 +4463,7 @@ PDF Generator服务提供一些API，用于将本机文件格式转换为PDF。 
 GeneratePDFService提供API以将各种文件格式(如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（已弃用）、.jpg、.bmp、.tif、.png、.html和许多其他文件格式)转换为PDF。 它还提供了API以将PDF导出为各种文件格式并优化PDF。 该服务支持以下API：
 
 * **createPDF**：将支持的文件类型转换为PDF文档。 它支持文件格式，如Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft Project。 除了这些应用程序外，任何第三方通用PDF生成应用程序类型也可以插入到API中。
-* **exportPDF**：将PDF文档转换为支持的文件类型。 方法接受PDF作为输入，并以指定的文件类型格式导出PDF的内容。 您可以导出Encapsulated PostScript( eps)、HTML 3.2( htm， html)、带有CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel工作簿( xlsx)、Microsoft PowerPoint演示文稿( pptx)、PNG( png)、PDF( ps)、富文本格式( rtf)文本（可访问）(txt)、文本（纯）(txt) HTML( tif， tiff)、XML 1.0( xml)、PostScript/A-1a(sRGB)、TIFF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF PDF PDF/A-3b(sRGB)格式。 您还可以为PDF输出指定[自定义印前检查配置文件](https://helpx.adobe.com/cn/acrobat/using/preflight-profiles-acrobat-pro.html)。
+* **exportPDF**：将PDF文档转换为支持的文件类型。 方法接受PDF作为输入，并以指定的文件类型格式导出PDF的内容。 您可以导出Encapsulated PostScript( eps)、HTML 3.2( htm， html)、带有CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel工作簿( xlsx)、Microsoft PowerPoint演示文稿( pptx)、PNG( png)、PDF( ps)、富文本格式( rtf)文本（可访问）(txt)、文本（纯）(txt) HTML( tif， tiff)、XML 1.0( xml)、PostScript/A-1a(sRGB)、TIFF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您还可以为PDF输出指定[自定义印前检查配置文件](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)。
 
 * **optimizePDF**：优化PDF文档，并将PDF文档从一种类型转换为另一种类型。 方法接受PDF文档作为输入。
 * **htmlToPdf2**：将HTML页面转换为PDF文档。 它接受HTML页面的URL作为输入。
@@ -4501,7 +4501,7 @@ GeneratePDFService提供API以将各种文件格式(如.doc、.docx、.ppt、.pp
    <td>✖</td>
   </tr>
   <tr>
-   <td>OCR PDF (可搜索的PDF)</td>
+   <td>OCR PDF （可搜索的PDF）</td>
    <td><strong>✓</strong></td>
    <td>✖</td>
   </tr>
@@ -4572,7 +4572,7 @@ createPDF服务引发以下异常：
   </tr>
   <tr>
    <td>settingsDoc</td>
-   <td>该文件包含生成PDF文档时应用的设置(如优化PDF文档以实现Web视图)以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
+   <td>该文件包含生成PDF文档时应用的设置（如优化PDF文档以实现Web视图）以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>
@@ -4774,7 +4774,7 @@ OptimizePDFResult optimizePDF(Document inputDoc, String fileTypeSettings, Docume
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>该文件包含生成PDF文档时应用的设置(如优化PDF文档以实现Web视图)以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
+   <td>该文件包含生成PDF文档时应用的设置（如优化PDF文档以实现Web视图）以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4864,7 +4864,7 @@ HtmlToPdfResult htmlToPdf2(String inputUrl, String fileTypeSettingsName, String 
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>该文件包含生成PDF文档时应用的设置(如优化PDF文档以实现Web视图)以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
+   <td>该文件包含生成PDF文档时应用的设置（如优化PDF文档以实现Web视图）以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -4985,7 +4985,7 @@ Map createPDF(Document inputDoc, String inputFileName, String pdfSettings, Strin
   </tr>
   <tr>
    <td>settingsDoc </td>
-   <td>该文件包含生成PDF文档时应用的设置(如优化PDF文档以实现Web视图)以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
+   <td>该文件包含生成PDF文档时应用的设置（如优化PDF文档以实现Web视图）以及创建PDF文档后应用的设置（如初始视图和安全性）。 它是一个可选参数。<br /> </td>
   </tr>
   <tr>
    <td>xmpDoc </td>

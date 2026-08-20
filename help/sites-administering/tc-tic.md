@@ -8,14 +8,14 @@ role: Admin
 exl-id: b89e2899-35b9-4105-bfa5-ca21dc6f4e14
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 44%
+source-wordcount: '1289'
+ht-degree: 45%
 
 ---
 
 # 配置翻译集成框架{#configuring-the-translation-integration-framework}
 
-翻译集成框架与第三方翻译服务集成，以编排AEM内容的翻译。
+翻译集成框架与第三方翻译服务集成，以编排 AEM 内容的译文。
 
 * 连接到您的翻译服务提供商。
 * 创建翻译集成框架配置。
@@ -29,7 +29,7 @@ ht-degree: 44%
 
 默认情况下，AEM包括[连接到Microsoft® Translator](/help/sites-administering/tc-msconf.md)的功能。 您可在[此处](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE)找到具有AEM连接器且是Adobe Exchange合作伙伴计划成员的其他翻译技术供应商。
 
-安装连接器软件包后，即可为连接器创建云配置。一般需要提供凭据，以便向翻译服务进行身份验证。有关为 Microsoft Translator 连接器添加云配置的信息，请参阅[与 Microsoft Translator 集成](/help/sites-administering/tc-msconf.md)。
+安装连接器软件包后，即可为连接器创建云配置。 一般需要提供凭据，以便向翻译服务进行身份验证。 有关为 Microsoft Translator 连接器添加云配置的信息，请参阅[与 Microsoft Translator 集成](/help/sites-administering/tc-msconf.md)。
 
 如果需要，可为同一连接器创建多个云配置。 例如，为您在同一供应商的每个帐户或项目都创建一个配置。
 
@@ -37,15 +37,15 @@ ht-degree: 44%
 
 ## 创建翻译集成配置 {#creating-a-translation-integration-configuration}
 
-创建翻译集成框架配置以指定如何翻译您的内容。该配置包括以下信息：
+创建翻译集成框架配置以指定如何翻译您的内容。 该配置包括以下信息：
 
 * 要使用的翻译服务提供商。
 * 要执行人工翻译还是机器翻译。
 * 是否翻译与页面或资产关联的其他内容，如标记。
 
-创建框架配置后，请将云配置与要根据该配置翻译的页面关联。开始翻译过程后，将根据关联的框架配置执行翻译工作流。
+创建框架配置后，请将云配置与要根据该配置翻译的页面关联。 开始翻译过程后，将根据关联的框架配置执行翻译工作流。
 
-当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。例如，多语言网站包括英语、西班牙语和日语版本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。因此，配置了两个框架配置。每个配置使用一个不同的翻译服务提供商。
+当网站的不同部分有不同的翻译要求时，请相应地创建多个框架配置。 例如，多语言网站包括英语、西班牙语和日语版本。 站点所有者使用两个不同的翻译服务提供商生成西班牙语和日语译文。 因此，配置了两个框架配置。 每个配置使用一个不同的翻译服务提供商。
 
 配置翻译集成框架后，可[将它与使用它的页面关联](/help/sites-administering/tc-prep.md)。
 
@@ -107,7 +107,7 @@ ht-degree: 44%
 
 ### 资源配置属性 {#assets-configuration-properties}
 
-资源属性控制如何配置资源。有关翻译资源的更多信息，请参阅[创建资源的语言副本](/help/assets/translation-projects.md)。
+资源属性控制如何配置资源。 有关翻译资源的更多信息，请参阅[创建资源的语言副本](/help/assets/translation-projects.md)。
 
 <table>
  <tbody>
@@ -169,9 +169,9 @@ ht-degree: 44%
 
 翻译集成框架云配置标识要用于连接到服务提供商的云配置。 将源页面与框架云配置关联时，该页面必须与该框架云配置使用的服务提供商云配置关联。
 
-将页面与云配置关联时，该页面的后代页面继承这种关联。例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则根据该框架翻译产品页面及其下的所有页面。
+将页面与云配置关联时，该页面的后代页面继承这种关联。 例如，如果将/content/geometrixx/en/products页面与翻译集成框架关联，则根据该框架翻译产品页面及其下的所有页面。
 
-必要时，可在后代页面上取代该关联。例如，网站的内容主要与服装有关。 但某个分支的页面介绍公司情况。站点的根页面与指定使用“服装”类别进行机器翻译的翻译集成框架关联。 描述公司情况的分支使用框架，该框架使用“常规”类别执行机器翻译。
+必要时，可在后代页面上取代该关联。 例如，网站的内容主要与服装有关。 但某个分支的页面介绍公司情况。 站点的根页面与指定使用“服装”类别进行机器翻译的翻译集成框架关联。 描述公司情况的分支使用框架，该框架使用“常规”类别执行机器翻译。
 
 ### 将页面与翻译提供商关联 {#associating-a-page-with-a-translation-provider}
 

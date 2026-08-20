@@ -1,5 +1,5 @@
 ---
-title: 与Salesforce集成
+title: 与 Salesforce 集成
 description: 了解如何将Adobe Experience Manager (AEM)与Salesforce集成。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Admin
 exl-id: 68003650-76d7-40b3-860b-70454c13211e
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1530'
-ht-degree: 0%
+source-wordcount: '1596'
+ht-degree: 5%
 
 ---
 
-# 与Salesforce集成 {#integrating-with-salesforce}
+# 与 Salesforce 集成 {#integrating-with-salesforce}
 
 将Salesforce与Adobe Experience Manager (AEM)集成提供了商机管理功能，并使用Salesforce提供的现成功能。 您可以配置AEM将潜在客户发布到Salesforce，并创建直接从Salesforce访问数据的组件。
 
@@ -29,7 +29,7 @@ AEM与Salesforce之间的双向可扩展集成使您能够：
 
 本文档将介绍以下内容：
 
-* 如何配置Salesforce云服务(配置AEM以与Salesforce集成)。
+* 如何配置Salesforce云服务（配置AEM以与Salesforce集成）。
 * 如何在Client Context和Personalization中使用Salesforce潜在客户/联系人信息。
 * 如何使用Salesforce工作流模型将AEM用户作为潜在客户发布到Salesforce。
 * 如何创建一个显示Salesforce中数据的组件。
@@ -46,7 +46,7 @@ AEM与Salesforce之间的双向可扩展集成使您能够：
 
 >[!CAUTION]
 >
->在继续此过程之前，请安装[Salesforce Force API](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=salesforce*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=2&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcom.adobe.cq.mcm.salesforce.content-1.0.4.zip)集成包。 有关如何使用包的更多详细信息，请参阅[如何使用包](/help/sites-administering/package-manager.md#package-share)页面。
+>在继续此过程之前，请安装[Salesforce Force API](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=salesforce*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=2&package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Ffeaturepack%2Fcom.adobe.cq.mcm.salesforce.content-1.0.4.zip)集成包。 有关如何使用包的更多详细信息，请参阅[如何使用包](/help/sites-administering/package-manager.md#package-share)页面。
 
 1. 在AEM中，导航到&#x200B;**云服务**。 在第三方服务中，单击&#x200B;**Salesforce**&#x200B;中的&#x200B;**立即配置**。
 
@@ -58,8 +58,8 @@ AEM与Salesforce之间的双向可扩展集成使您能够：
    >
    >新配置将重定向到新页面： **http://localhost:4502/etc/cloudservices/salesforce/developer.html**。 该值与在Salesforce中创建远程访问应用程序时必须在回调URL中指定的值完全相同。 这些值必须匹配。
 
-1. 登录到您的Salesforce帐户(或者，如果您没有帐户，请在[https://developer.salesforce.com](https://developer.salesforce.com)处创建一个帐户。)
-1. 在Salesforce中，导航到&#x200B;**创建** > **应用程序**&#x200B;以访问&#x200B;**连接的应用程序**(在以前版本的Salesforce中，工作流是&#x200B;**部署** > **远程访问**)。
+1. 登录到您的Salesforce帐户（或者，如果您没有帐户，请在[https://developer.salesforce.com](https://developer.salesforce.com)处创建一个帐户。）
+1. 在Salesforce中，导航到&#x200B;**创建** > **应用程序**&#x200B;以访问&#x200B;**连接的应用程序**（在以前版本的Salesforce中，工作流是&#x200B;**部署** > **远程访问**）。
 1. 单击&#x200B;**新建**，以便您可以将AEM与Salesforce连接。
 
    ![chlimage_1-71](assets/chlimage_1-71.png)
@@ -129,7 +129,7 @@ AEM与Salesforce之间的双向可扩展集成使您能够：
 
 要配置Salesforce.com导出工作流，请执行以下操作：
 
-1. 导航到`http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
+1. 导航至 `http://localhost:4502/cf#/etc/workflow/models/salesforce-com-export.html.`
 
    ![chlimage_1-16](assets/chlimage_1-16.jpeg)
 
@@ -227,7 +227,7 @@ AEM附带了一个示例搜索组件，该组件根据给定的条件在Salesfor
 
 要使用此组件，请执行以下操作：
 
-1. 导航到要使用此配置的页面。 打开页面属性并选择&#x200B;**云服务。**&#x200B;单击&#x200B;**添加服务**&#x200B;并选择&#x200B;**Salesforce**&#x200B;和相应的配置，然后单击&#x200B;**确定**。
+1. 导航到要使用此配置的页面。 打开页面属性并选择&#x200B;**云服务。** 单击&#x200B;**添加服务**，选择&#x200B;**Salesforce**&#x200B;和相应的配置，然后单击&#x200B;**确定**。
 
    ![chlimage_1-20](assets/chlimage_1-20.jpeg)
 

@@ -7,7 +7,7 @@ role: Developer
 exl-id: f9b3df58-c94b-4143-aeec-85ff031bac2e
 source-git-commit: 248e8aacff2d4971cdf485e892963d79f5b35fd7
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ App Builder自2020年夏季起通过Adobe的Developer Preview向企业客户和�
 
 ## 架构 {#architecture}
 
-Adobe Developer App Builder提供了一个通用、一致、标准化的开发平台，用于扩展Adobe Cloud解决方案(例如AEM)，而不是开箱即用的解决方案，该平台包括：
+Adobe Developer App Builder提供了一个通用、一致、标准化的开发平台，用于扩展Adobe Cloud解决方案（例如AEM），而不是开箱即用的解决方案，该平台包括：
 
 * Adobe Developer Console — 用于自定义微服务和扩展开发，允许开发人员在访问创建插件和集成所需的所有工具和API时构建和管理项目。
-* 开发人员工具 — 开源工具、SDK和库，允许开发人员轻松构建自定义扩展和集成。 使用React Spectrum(Adobe的UI工具包)为所有Adobe应用程序具有一个通用UI。
+* 开发人员工具 — 开源工具、SDK和库，允许开发人员轻松构建自定义扩展和集成。 使用React Spectrum（Adobe的UI工具包）为所有Adobe应用程序具有一个通用UI。
 * 服务 — 用于在Adobe的无服务器平台上托管基础架构的I/O运行时，以及用于基于事件的集成的I/O事件。 Adobe还为存储数据和文件提供开箱即用支持。
 * Adobe Experience Cloud — 开发人员可以提交要在其Experience Cloud组织中发布的扩展和集成。然后，系统管理员可以审核、管理和批准这些扩展。 发布后，您的自定义App Builder扩展和工具可以与其他Adobe Experience Cloud应用程序一起找到。
 
@@ -64,4 +64,4 @@ App Builder为开发人员提供了视频和文档，包括指南和参考文档
 
 准备好开始开发了吗？ 有许多示例应用程序可帮助您快速入门：
 
-* Adobe Developer网站上的[App Builder代码实验室](https://developer.adobe.com/app-builder/docs/resources/)
+* [Adobe Developer网站上的App Builder代码实验室](https://developer.adobe.com/app-builder/docs/resources/)

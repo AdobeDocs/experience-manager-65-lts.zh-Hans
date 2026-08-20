@@ -11,7 +11,7 @@ role: Admin
 exl-id: ee438c55-88cd-4f55-873e-16376b36fa7b
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '864'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ AEM附带[SAML](https://saml.xml.org/saml-specifications)身份验证处理程�
 
 >[!NOTE]
 >
->请参阅[AEM与SAML集成的演示](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17481.html?lang=zh-Hans)。
+>请参阅[AEM与SAML集成的演示](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17481.html)。
 
 ## 配置SAML 2.0身份验证处理程序 {#configuring-the-saml-authentication-handler}
 
@@ -86,7 +86,7 @@ IDP的&#x200B;**IDP URL** URL应将SAML身份验证请求发送到此处。 如�
 
 **添加到组**&#x200B;成功身份验证后是否应自动将用户添加到CRX组。
 
-**组成员资格**&#x200B;包含此用户应添加到的CRX组列表的saml：Attribute的名称。
+**组成员资格**&#x200B;包含此用户应添加到的CRX组列表的saml:Attribute的名称。
 
 ## 将IdP证书添加到AEM TrustStore {#add-the-idp-certificate-to-the-aem-truststore}
 
@@ -131,7 +131,7 @@ SAML断言经过签名并可选择进行加密。 为了使其生效，您必须
 
 ## 为SAML配置记录器 {#configure-a-logger-for-saml}
 
-您可以设置日志记录器，以调试因错误配置SAML导致的任何问题。 您可以执行以下操作来实现此目标：
+您可以设置日志记录器，以调试因错误配置SAML导致的任何问题。 您可以通过以下方式来实现：
 
 1. 转到Web控制台，网址为&#x200B;*http://localhost:4502/system/console/configMgr*
 1. 搜索并单击名为&#x200B;**Apache Sling日志记录器配置**&#x200B;的项目

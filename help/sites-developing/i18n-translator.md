@@ -11,8 +11,8 @@ role: Developer
 exl-id: 8f6936d0-051f-4966-84ed-87b348eab0b8
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 1%
+source-wordcount: '2344'
+ht-degree: 2%
 
 ---
 
@@ -178,11 +178,11 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 * **按文本筛选：**&#x200B;与英文字符串、注释或翻译匹配的模式。 只有与全部或部分阵列匹配的项才会出现在表中。
 * **更改： Any、Modified、New、Deleted：**&#x200B;显示已更改但未保存的项目。
 
-   * 任意：显示已修改、添加或删除的项目。
-   * 已修改：显示已更改的项目。
-   * 新增：显示已添加的项目。
-   * 已删除：显示要删除的项目。
-   * 多项选择：显示具有所有选定属性的项目。
+  * 任意：显示已修改、添加或删除的项目。
+  * 已修改：显示已更改的项目。
+  * 新增：显示已添加的项目。
+  * 已删除：显示要删除的项目。
+  * 多项选择：显示具有所有选定属性的项目。
 
 * **具有注释**：显示包含翻译人员注释的项。
 * **缺少翻译：**&#x200B;显示至少一种语言没有翻译的项目。
@@ -292,8 +292,8 @@ Translator工具底部的搜索栏提供了字符串选择选项：
    * **类型**：`Multi-String`
    * **值**：要显示的语言列表。 例如：
 
-      * fr
-      * es
+     * fr
+     * es
 
    >[!NOTE]
    >
@@ -303,7 +303,7 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
    >[!NOTE]
    >
-   >翻译人员将仅保存词典[&#128279;](#creating-a-dictionary)中实际存在的语言(即，在词典路径（如`/apps/myProject/i18n`）下)的翻译。
+   >翻译人员将仅保存词典](#creating-a-dictionary)中实际[存在的语言(即，在词典路径（如`/apps/myProject/i18n`）下)的翻译。
    >
    >确保这些语言与网格中显示的语言对应。
 
@@ -385,4 +385,4 @@ Translator工具底部的搜索栏提供了字符串选择选项：
 
 >[!NOTE]
 >
->使用Dispatcher时，您需要[使缓存的页面失效](https://helpx.adobe.com/cn/experience-manager/dispatcher/using/page-invalidate.html)才能在渲染的组件字符串中包含新词典字符串。
+>使用Dispatcher时，您需要[使缓存的页面失效](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)才能在渲染的组件字符串中包含新词典字符串。

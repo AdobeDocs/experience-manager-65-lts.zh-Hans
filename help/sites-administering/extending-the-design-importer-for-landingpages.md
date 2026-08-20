@@ -1,5 +1,5 @@
 ---
-title: 为登陆页面扩展和配置设计导入程序
+title: 扩展与配置登陆页面的设计导入器
 description: 了解如何为登陆页面配置设计导入程序。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -12,12 +12,12 @@ role: Admin
 exl-id: 1121af36-b07a-4e8d-a60b-6c5b91e56f82
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '3442'
-ht-degree: 0%
+source-wordcount: '3524'
+ht-degree: 1%
 
 ---
 
-# 为登陆页面扩展和配置设计导入程序{#extending-and-configuring-the-design-importer-for-landing-pages}
+# 扩展与配置登陆页面的设计导入器{#extending-and-configuring-the-design-importer-for-landing-pages}
 
 本节介绍如何配置，并根据需要扩展登陆页面的设计导入程序。 导入后使用登陆页面包含在[登陆页面中。](/help/sites-classic-ui-authoring/classic-personalization-campaigns-landingpage.md)
 
@@ -98,7 +98,7 @@ zip文件布局示例如下：
 
 ### 准备HTML以包含可编辑的AEM组件 {#preparing-the-html-to-include-editable-aem-components}
 
-导入登陆页面时，您可以选择按原样导入页面，这意味着在导入登陆页面后，您无法在AEM中编辑任何导入的项目(您仍然可以在页面上添加其他AEM组件)。
+导入登陆页面时，您可以选择按原样导入页面，这意味着在导入登陆页面后，您无法在AEM中编辑任何导入的项目（您仍然可以在页面上添加其他AEM组件）。
 
 在导入登陆页面之前，您可能需要转换登陆页面的某些部分，以便它们是可编辑的AEM组件。 这样，即使用户在导入了登陆页面设计之后，也可以快速编辑登陆页面的各个部分。
 
@@ -114,7 +114,7 @@ zip文件布局示例如下：
 
 在导入之前，请注意以下限制：
 
-### 不保留应用于&amp;amp；lt；body>标记的任何属性，如类或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
+### 不保留应用于&amp;lt；body>标记的任何属性，如类或id {#any-attribute-like-class-or-id-applied-on-the-amp-lt-body-tag-is-not-preserved}
 
 如果对body标记（例如`<body id="container">`）应用了id或类等任何属性，则在导入后不会保留该属性。 因此，要导入的设计不应与`<body>`标记上应用的属性有任何依赖关系。
 
@@ -134,7 +134,7 @@ Internet Explorer和Firefox 3.6及更早版本不支持拖放zip上传。 要在
 
 ### 假定仅HTML标记 {#html-only-markup-assumed}
 
-导入时，由于安全原因，将清理标记，以避免导入和发布无效的标记。 这假定仅HTML标记以及所有其他形式的元素(例如内联SVG或Web组件)将被过滤掉。
+导入时，由于安全原因，将清理标记，以避免导入和发布无效的标记。 这假定仅HTML标记以及所有其他形式的元素（例如内联SVG或Web组件）将被过滤掉。
 
 ### 文本 {#text}
 
@@ -235,9 +235,9 @@ HTML标记可在设计包内的HTML中插入图像组件(foundation/components/i
 
 否则，图像组件div之外的图像标记支持绝对URL图像。
 
-### 行动号召组件 {#call-to-action-components}
+### call-to-action组件 {#call-to-action-components}
 
-您可以将导入的登陆页面部分标记为“可编辑的行动号召组件” — 在导入登陆页面后，可以编辑此类导入的行动号召组件。 AEM包含以下CTA组件：
+您可以将部分登陆页面标记为导入为“可编辑的Call to action组件” — 在导入登陆页面后，可以编辑此类导入的call-to-action组件。 AEM包含以下CTA组件：
 
 * 点进链接 — 允许您添加文本链接，在单击该链接时，会将访客导向到目标URL。
 * 图形链接 — 允许您添加图像，单击该图像可将访客转到目标URL。
@@ -276,7 +276,7 @@ HTML标记，以在导入的zip文件中包含点进组件。 此处href映射�
 
 #### 图形链接 {#graphical-link}
 
-此CTA组件可用于添加登陆页面上带有链接的任何图形图像。 图像可以是简单的按钮，也可以是作为背景的任何图形图像。 单击图像时，用户将被带入组件属性中指定的目标URL。 它是“行动号召”小组的一部分。
+此CTA组件可用于添加登陆页面上带有链接的任何图形图像。 图像可以是简单的按钮，也可以是作为背景的任何图形图像。 单击图像时，用户将被带入组件属性中指定的目标URL。 它是“Call to action”组的一部分。
 
 支持的属性
 
@@ -316,17 +316,17 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 >具有关联的`css .hasbackground { background-image: pathtoimage }`
 >
 
-### 潜在客户表单 {#lead-form}
+### 销售线索表单 {#lead-form}
 
 商机表单是用于收集访客/商机的配置文件信息的表单。 此信息可以存储并用于以后根据此信息执行有效的营销。 此信息通常包括标题、姓名、电子邮件、出生日期、地址、兴趣等。 它是“CTA潜在客户表单”组的一部分。
 
 **支持的功能**
 
 * 预定义的潜在客户字段 — 名字、姓氏、地址、dob、性别、关于、用户ID、电子邮件ID、提交按钮在Sidekick中可用。 只需将所需的组件拖放到潜在客户表单中。
-* 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq：form或cta潜在客户表单字段添加额外的字段和名称，并根据要求进行设计。
+* 借助这些组件，作者可以设计独立的潜在客户表单，这些字段对应于潜在客户表单字段。 在独立或导入的zip应用程序中，用户可以使用cq:form或cta潜在客户表单字段、名称添加额外的字段，并根据要求进行设计。
 * 使用CTA潜在客户表单的特定预定义名称映射潜在客户表单字段，例如，潜在客户表单中的名字使用firstName等。
-* 未映射到潜在客户表单的字段将映射到cq：form组件 — 文本、单选、复选框、下拉列表、隐藏、密码。
-* 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式(仅适用于CTA潜在客户表单组件)。
+* 未映射到潜在客户表单映射到cq:form组件的字段 — 文本、单选、复选框、下拉列表、隐藏、密码。
+* 用户可以使用“label”标记提供标题，也可以使用样式属性“class”提供样式（仅适用于CTA潜在客户表单组件）。
 * 感谢页面和订阅列表可作为表单的隐藏参数提供（显示在index.htm中），也可以从“潜在客户表单开始”的编辑栏添加/编辑
 
   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thank_you&quot;/>
@@ -335,7 +335,7 @@ HTML标记，以在导入的zip文件中包含图形链接组件。 此处href�
 
 * 可以通过编辑每个组件的配置来提供所需的约束，例如 — 。
 
-HTML标记，以在导入的zip文件中包含图形链接组件。 此处“firstName”映射到潜在客户表单firstName，依此类推，但复选框除外 — 这两个复选框映射到cq：form下拉组件。
+HTML标记，以在导入的zip文件中包含图形链接组件。 此处“firstName”映射到潜在客户表单firstName，依此类推，但复选框除外 — 这两个复选框映射到cq:form下拉组件。
 
 ```xml
 <div id="cqcanvas">
@@ -387,7 +387,7 @@ HTML标记在设计包的HTML中插入Parsys组件( `foundation/components/parsy
 * 使用默认组件初始化sidekick。 通过将组件从Sidekick拖到Parsys组件上，可以将新组件添加到登陆页面。
 * 两个标题组件也是Parsys的一部分。
 
-### 目标 {#target}
+### Target {#target}
 
 目标组件显示页面上某个体验的内容。 可以在营销活动中创建许多体验，并且目标组件可以动态地向访问页面的各种用户显示不同体验的内容。
 
@@ -419,11 +419,11 @@ HTML标记在设计包的HTML中插入Parsys组件( `foundation/components/parsy
 
 ### 通过提取导入的HTML中定义的元数据来设置页面属性 {#setting-page-properties-by-extracting-metadata-defined-in-imported-html}
 
-设计导入程序应提取并保留在导入的HTML头中声明的以下元数据，作为属性“jcr：description”：
+设计导入程序应提取并保留在导入HTML的头中声明的以下元数据，作为属性“jcr:description”：
 
 * &lt;meta name=&quot;description&quot; content=&quot;>
 
-HTML标记中设置的Lang属性应由设计导入程序提取并保留为属性“jcr：language”
+设计导入程序应提取并保留HTML标记中设置的Lang属性作为属性“jcr:language”
 
 * &lt;html lang=&quot;en&quot;>
 
@@ -453,7 +453,7 @@ HTML标记中设置的Lang属性应由设计导入程序提取并保留为属性
 
 data-cq-component中的路径应为组件的resourceType。
 
-### 最佳实践 {#best-practices}
+### 最佳做法 {#best-practices}
 
 对于在导入时标记为组件转换的元素，不建议使用类似于以下内容的CSS选择器。
 
@@ -461,16 +461,16 @@ data-cq-component中的路径应为组件的resourceType。
 |---|---|---|
 | E + F | F元素前面紧跟一个E元素 | [相邻的同级组合器](https://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators) |
 | E ~ F | F元素，前面有E元素 | [常规同级组合器](https://www.w3.org/TR/css3-selectors/#general-sibling-combinators) |
-| E：root | E元素，文档的根 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-child(n) | E元素，其父元素的第n个子元素 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-child(n) | E元素，其父项的第n个子项，从最后一个元素开始计数 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-of-type(n) | E元素，其类型的第n个同级 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
-| E：nth-last-of-type(n) | E元素（其类型的第n个同级），从最后一个元素开始计数 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:root | E元素，文档的根 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-child(n) | E元素，其父元素的第n个子元素 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-last-child(n) | E元素，其父项的第n个子项，从最后一个元素开始计数 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-of-type(n) | E元素，其类型的第n个同级 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
+| E:nth-last-of-type(n) | E元素（其类型的第n个同级），从最后一个元素开始计数 | [构造伪类](https://www.w3.org/TR/css3-selectors/#structural-pseudos) |
 
 这是因为其他html元素（如&lt;div>标记）在导入后会添加到生成的Html。
 
 * 此外，不建议将依赖于上述结构的脚本与标记为转换为AEM组件的元素一起使用。
-* 不建议在标记标记上使用样式进行组件转换，如&lt;div data-cq-component=&quot;&amp;amp；ast；&quot;>。
+* 不建议在标记标记上使用样式进行组件转换，如&lt;div data-cq-component=&quot;&amp;ast；&quot;>。
 * 设计布局应遵循HTML5样板中的最佳实践。 阅读更多内容：[https://html5boilerplate.com/](https://html5boilerplate.com/)。
 
 ## 配置OSGI模块 {#configuring-osgi-modules}
@@ -494,7 +494,7 @@ data-cq-component中的路径应为组件的resourceType。
   <tr>
    <td>登陆页面设计导入程序</td>
    <td>提取筛选器</td>
-   <td>用于从提取中筛选文件的正则表达式的列表。 从提取中排除与任何指定模式匹配的<br />个Zip条目</td>
+   <td>用于从提取中筛选文件的正则表达式的列表。<br /> 与任何指定模式匹配的压缩条目将从提取中排除</td>
   </tr>
   <tr>
    <td>登陆页面生成器</td>
@@ -514,7 +514,7 @@ data-cq-component中的路径应为组件的resourceType。
   <tr>
    <td>登陆页面条目预处理程序</td>
    <td>搜索模式 </td>
-   <td>存档条目内容中要搜索的模式。 此正则表达式与条目内容逐行匹配。 匹配后，匹配的文本将替换为指定的替换模式。<br /> <br />请参阅下面有关登陆页面条目预处理程序的当前限制的注释。</td>
+   <td>存档条目内容中要搜索的模式。 此正则表达式与条目内容逐行匹配。 匹配后，匹配的文本将替换为指定的替换模式。<br /> <br /> 有关登陆页面条目预处理器的当前限制，请参阅下面的注释。</td>
   </tr>
   <tr>
    <td> </td>
@@ -531,7 +531,7 @@ data-cq-component中的路径应为组件的resourceType。
 >
 >例如，如果默认配置为
 >
->&#x200B;>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
+>>`/\* *CQ_DESIGN_PATH *\*/ *(['"])`
 >
 >您需要将`CQ_DESIGN_PATH`替换为搜索模式中的`VIPURL`，则您的搜索模式应如下所示：
 >
@@ -554,7 +554,7 @@ data-cq-component中的路径应为组件的resourceType。
 
 ### 导入后显示的警告 {#warnings-displayed-after-import}
 
-如果出现任何警告(例如，HTML引用包中不存在的图像)，则设计导入程序会导入zip文件，但同时会在结果窗格中显示问题/警告列表，单击问题链接将显示警告列表，并指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
+如果出现任何警告（例如，HTML引用包中不存在的图像），则设计导入程序会导入zip文件，但同时会在结果窗格中显示问题/警告列表，单击问题链接将显示警告列表，并指出设计包中的任何问题。 设计导入程序捕获并显示警告的不同情况如下：
 
 * HTML是指包中不存在的图像。
 * HTML引用的脚本在包中不存在。

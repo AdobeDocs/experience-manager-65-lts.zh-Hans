@@ -1,5 +1,5 @@
 ---
-title: 创建自定义Cloud Service
+title: 创建自定义云服务
 description: 可以使用自定义Cloud Service类型扩展默认的Cloud Services集
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -11,12 +11,12 @@ role: Developer
 exl-id: 7ae41982-8438-41a6-91f9-3b3b6755a39b
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 11%
+source-wordcount: '404'
+ht-degree: 13%
 
 ---
 
-# 创建自定义Cloud Service{#creating-a-custom-cloud-service}
+# 创建自定义云服务{#creating-a-custom-cloud-service}
 
 可以使用自定义Cloud Service类型扩展默认的Cloud Services集。 这样，您就可以采用一种结构化的方式将自定义标记注入页面中。 这主要适用于第三方分析提供商，例如Google Analytics、Chartbeat等。 Cloud Services从父页面继承到子页面，并能够在任何级别中断继承。
 
@@ -83,12 +83,12 @@ ht-degree: 11%
    * **类型**：`cq:Dialog`
    * **属性**：
 
-      * **名称**：`title`
-      * **类型**：`String`
-      * **值**：`Google Analytics Config`
-      * **名称**：`xtype`
-      * **类型**：`String`
-      * **值**：`dialog`
+     * **名称**：`title`
+     * **类型**：`String`
+     * **值**：`Google Analytics Config`
+     * **名称**：`xtype`
+     * **类型**：`String`
+     * **值**：`dialog`
 
 1. 在`/apps/acs/analytics/components/googleanalyticspage/dialog`下创建节点：
 
@@ -96,9 +96,9 @@ ht-degree: 11%
    * **类型**：`cq:Widget`
    * **属性**：
 
-      * **名称**：`xtype`
-      * **类型**：`String`
-      * **值**：`tabpanel`
+     * **名称**：`xtype`
+     * **类型**：`String`
+     * **值**：`tabpanel`
 
 1. 在`/apps/acs/analytics/components/googleanalyticspage/dialog/items`下创建节点：
 
@@ -111,9 +111,9 @@ ht-degree: 11%
    * **类型**：`cq:Panel`
    * **属性**：
 
-      * **名称**：`title`
-      * **类型**：`String`
-      * **值**：`Config`
+     * **名称**：`title`
+     * **类型**：`String`
+     * **值**：`Config`
 
 1. 在`/apps/acs/analytics/components/googleanalyticspage/dialog/items/items/tab1`下创建节点：
 
@@ -121,23 +121,23 @@ ht-degree: 11%
    * **类型**：`nt:unstructured`
    * **属性**：
 
-      * **名称**：`fieldLabel`
-      * **类型**：字符串
-      * **值**：帐户ID
+     * **名称**：`fieldLabel`
+     * **类型**：字符串
+     * **值**：帐户ID
 
-      * **名称**：`fieldDescription`
-      * **类型**：`String`
-      * **值**：`The account ID assigned by Google. Usually in the form UA-NNNNNN-N`
+     * **名称**：`fieldDescription`
+     * **类型**：`String`
+     * **值**：`The account ID assigned by Google. Usually in the form UA-NNNNNN-N`
 
-      * **名称**：`name`
-      * **类型**：`String`
-      * **值**：`./accountID`
-      * **名称**：`validateOnBlur`
-      * **类型**：`String`
-      * **值**：`true`
-      * **名称**：`xtype`
-      * **类型**：`String`
-      * **值**：`textfield`
+     * **名称**：`name`
+     * **类型**：`String`
+     * **值**：`./accountID`
+     * **名称**：`validateOnBlur`
+     * **类型**：`String`
+     * **值**：`true`
+     * **名称**：`xtype`
+     * **类型**：`String`
+     * **值**：`textfield`
 
 1. 将`/libs/cq/cloudserviceconfigs/components/configpage/body.jsp`复制到`/apps/acs/analytics/components/googleanalyticspage/body.jsp`并在第34行将`libs`更改为`apps`，并将第79行的脚本引用设置为完全限定的路径。
 1. 在`/apps/acs/analytics/templates/`下创建模板：
@@ -147,8 +147,8 @@ ht-degree: 11%
    * 具有&#x200B;**标题**= `Google Analytics Configuration`
    * 带有&#x200B;**allowedPath** = `/etc/cloudservices/googleanalytics(/.*)?`
    * 带有&#x200B;**allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
-   * 具有&#x200B;**sling：resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage`（在模板节点上，而不是jcr：content节点上）
-   * 使用&#x200B;**cq：designPath** = `/etc/designs/cloudservices/googleanalytics`（在jcr：content上）
+   * 具有&#x200B;**sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage`（在模板节点上，而不是jcr:content节点上）
+   * 带有&#x200B;**cq:designPath** = `/etc/designs/cloudservices/googleanalytics`（在jcr:content上）
 
 1. 创建组件： `/apps/acs/analytics/components/googleanalytics`。
 

@@ -11,8 +11,8 @@ role: Admin
 exl-id: a27cd5c7-c0ea-4b94-9d54-95b47671fb44
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 6%
+source-wordcount: '251'
+ht-degree: 12%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 * ExactTarget — 电子邮件营销
 * Facebook Connect — 社交网络
 * 通用Analytics代码片段 — analytics
-* Microsoft®翻译人员或其他机器翻译提供商
+* ®翻译人员或其他机器翻译提供商
 * Pushwoosh连接 — 应用程序 — 推送通知
 * Salesforce — 销售和CRM软件
 * Twitter — 社交网络
@@ -33,14 +33,14 @@ ht-degree: 6%
 
 此外，您可以将AEM与[Adobe Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)集成。
 
-## 与Salesforce集成 {#integrating-with-salesforce}
+## 与 Salesforce 集成 {#integrating-with-salesforce}
 
 Salesforce.com 作为一家企业云计算公司，引领着朝向社交企业转变的潮流。
 
 有关集成AEM站点和Salesforce的信息，请参阅[与Salesforce集成](/help/sites-administering/salesforce.md)。
 
 
-## 与ExactTarget集成 {#integrating-with-exacttarget}
+## 与 ExactTarget 集成 {#integrating-with-exacttarget}
 
 通过使用ExactTarget的电子邮件营销解决方案，各种规模的组织可以设计和提供具有较高针对性、任务关键型且完全集成的电子邮件营销活动。
 
