@@ -1,5 +1,5 @@
 ---
-title: 使用经理视图管理组织层次结构中的任务
+title: 使用管理器视图在组织层级中管理任务
 description: 经理和组织负责人如何在AEM Forms工作区的“待办事项”选项卡中访问和处理其直接报告和间接报告的任务。
 contentOwner: robhagat
 content-type: reference
@@ -12,12 +12,12 @@ role: Admin, User, Developer
 exl-id: 2fcb0241-8018-4bdd-b89d-44b8fc063ff3
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: '348'
+ht-degree: 5%
 
 ---
 
-# 使用经理视图管理组织层次结构中的任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
+# 使用管理器视图在组织层级中管理任务{#managing-tasks-in-an-organizational-hierarchy-using-manager-view}
 
 在AEM Forms工作区中，管理员现在可以访问其层次结构中分配给任何人的任务（直接或间接报告），并对其执行各种操作。 这些任务在AEM Forms工作区的“待办事项”选项卡中可用。 直接下属任务支持的操作包括：
 

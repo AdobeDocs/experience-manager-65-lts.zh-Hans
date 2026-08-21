@@ -1,409 +1,399 @@
 ---
-title: Adobe Experience Manager 6.5 LTS SP2 的最新发行说明
-description: 查找 Adobe Experience Manager 6.5 LTS 服务包 2 的当前版本信息。
+title: Adobe Experience Manager 6.5 LTS SP3的最新发行说明
+description: 查找Adobe Experience Manager 6.5 LTS Service Pack 3的最新发行信息。
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: d61a24e1d493063283466b3a769eee14649282e6
+source-git-commit: 79f3d3211a79ce62242273df0cdecd24cd8900cf
 workflow-type: tm+mt
-source-wordcount: '7783'
-ht-degree: 90%
+source-wordcount: '6705'
+ht-degree: 26%
 
 ---
 
 
-# Adobe Experience Manager 6.5 LTS SP2 的最新发行说明 {#release-notes}
+# Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
 
 ## 发行版信息 {#release-information}
 
 | 产品 | [!DNL Adobe Experience Manager] 6.5 LTS |
 |---|---|
-| 版本 | 服务包 2 (SP2) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| 版本 | Service Pack 3 (SP3) <!-- UPDATE FOR EACH NEW RELEASE --> |
 | 类型 | 服务包发行 |
-| 日期 | 2026 年 2 月 19 日 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.2.jar) |
+| 日期 | 2026年8月20日<!-- UPDATE FOR EACH NEW RELEASE --> |
+| 下载 URL | [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack-lts/cq-quickstart-6.6.3.jar) |
 
 
 <!-- UPDATE ABOVE FOR EACH NEW RELEASE -->
 
->[!IMPORTANT]
->
-> **强制热修复**：如要避免在安装 SP2 时发生离线压缩的 SNFE (SegmentNotFoundException) 问题，请安装[已知问题 – 在线压缩过程中存储库损坏](#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146)中描述的热修复程序。
+<!-- **Mandatory Hotfix** – To avoid SNFE (SegmentNotFoundException) issues with offline compaction when installing SP2, install the hotfix described in [Known issues – Repository corruption during online compaction](#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146). -->
 
-## [!DNL Adobe Experience Manager] 6.5 LTS SP2 中包含的内容 {#what-is-new}
+## [!DNL Adobe Experience Manager] 6.5 LTS SP3中包含的内容 {#what-is-new}
 
 <!-- UPDATE EACH RELEASE -->
 
-[!DNL Experience Manager] 6.5 LTS SP2 包含新功能、客户要求的重要增强功能以及错误修复。 还包括自 2025 年 3 月 6.5 LTS 首次发布以来推出的在性能、稳定性和安全性方面的改进。 在 6.5 LTS 上[安装此服务包](#install-update)。
+[!DNL Experience Manager] 6.5 LTS，SP3包括新增功能、客户请求的关键增强功能和错误修复。 自2025年3月6.5 LTS首次推出以来，它提高了整个平台的性能、安全性和本地化程度。 在 6.5 LTS 上[安装此服务包](#install-update)。
 
-## 主要功能和增强功能
+### 已修复问题概述 {#fixed-issues-overview}
 
-**AEM Sites**
+[!DNL Adobe Experience Manager] 6.5 LTS， SP3解决了跨[!DNL Sites]和[!DNL Experience Manager Foundation]的问题。 这些修复提高了可访问性、创作可靠性、Headless内容交付、多站点管理和平台稳定性。 后面的部分列出了每个修复及其参考编号。
 
-AEM 6.5 LTS SP2 现在包含 OpenAPI，可用于[内容片段和模型管理](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/65lts/)和[发布](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/launches/)。 使用这些 API 可访问内容片段和发布，以进行创作和计划。 它们使用与 AEM as a Cloud Service 相同的现代 OpenAPI。
+大多数更改适用于[!DNL Sites]：
 
-**AEM 表单**
+* 最大组的辅助功能改进。 这些更新加强了页面编辑器、Assets侧边栏、筛选器和相关创作界面中的键盘导航、屏幕阅读器反馈、焦点管理、语义标记、文本对比度和触屏目标大小调整。
+* [!DNL Content Fragments]中的修复跨越片段编辑器、模型编辑器、REST API和GraphQL API。 更新可更正本地化、字段验证、编辑行为和响应处理。
+* MSM Live Copies修复允许作者从Blueprint页面可靠地转出更改并保留现有转出配置。
+* Adobe Managed Services上提供跨渠道支持，包括所需的捆绑包、系统用户和配置。
+* 其他修复针对管理员和经典界面、核心组件、组件控制台、Campaign集成、体验片段和启动项。
 
-**AEM Forms 6.5 LTS SP2 中包含的内容**
+其余更改将应用于[!DNL Experience Manager Foundation]：
 
-* 添加了在 JBoss® EAP 8.0 中对 RDBMK 的支持。
+* 本地化更新跨运行状况报表、操作控制台和多个创作界面翻译以前仅含英文的文本。
+* 稳定性修复可恢复运行状况监控端点，在间歇性配置错误后保持邮件服务运行，并更正工作流变量和工作流包编辑。
+* 此版本还添加了AEM上下文服务支持，并解决了安全性、翻译和用户界面问题。
 
-* 添加了对WebSphere® Liberty Profile (WLP)的支持。 只有Oracle数据库和IBM® Sumeru JDK 21支持WLP。
+有关完整列表，请参阅[6.5 LTS Service Pack 3](#fixed-issues)中的已修复问题。
 
-* 增强了可视规则编辑器中的用户体验。 此次更新包括：
 
-  * 要显示更新的规则状态，摘要视图会在保存后自动重新加载
+<!-- ## Key features and enhancements -->
 
-  * 显示“添加”/“删除”按钮并允许进行切换，不再隐藏这两个按钮
 
-  * 保存规则的操作失败后，提供明确的反馈 (FORMS-21261)
-
-* 添加了运行时应用程序编程接口 (API)，以切换 AEM Forms 中的旧版可扩展标记语言 (XML) 导出模式，由此取代 `Dcom.adobe.fd.forms.export.legacy` 参数。 此增强功能使用户能够更有效地切换导出模式，从而提高工作流的灵活性。 (FORMS-23115)
-
-* 添加了自适应表单中对带有命名空间标记的 JavaScript 对象表示法 (JSON) 的支持。 此增强功能使用户能够更有效地使用 JSON 数据结构，从而提高数据集成和处理能力。 (FORMS-22519)
-
-* 在规则编辑器中添加了下载记录文档(DoR) /表单提交作为标准按钮。 通过此增强功能，客户无需编写自定义代码即可使用 downloadDoR 函数，从而提高此函数的可用性和效率。 (FORMS-21263)
-
-* 添加了自适应表单中对带有命名空间标记的 JavaScript 对象表示法 (JSON) 的支持。 此增强功能使用户能够更准确、更高效地预填表单，从而增强数据集成，减少手动输入错误。 (FORMS-10883)
 
 <!-- UPDATE THE EACH RELEASE -->
 
-## 6.5 LTS 服务包 2 中修复的问题 {#fixed-issues}
+## 修复了6.5 LTS Service Pack 3中的问题 {#fixed-issues}
 
-### [!DNL Sites]{#sites-65-LTS-SP2}
+### [!DNL Sites]{#sites-65-LTS-SP3}
 
-#### 辅助功能 {#sites-accessibility-65-lts-sp2}
-
-* 当作者在编辑过程中将鼠标悬停在组件浏览器中的项目上时，“文本”组件会失去键盘焦点。 这会中断输入，并触发 WCAG 3.2.1 的一个无障碍性错误。 此修复防止了悬停样式移动焦点，在组件浏览器交互时保持“文本”组件获得焦点。 (SITES-35370)
-* 修正了“描述”富文本字段中的焦点管理，该字段阻止了通过 Tab 键前进导航。 用户在 RTE 中卡住，因为组件依赖非标准键盘命令来移动焦点，这破坏了预期的对话框导航。 此更改强制使用标准键盘进行交互操作，维护了整个对话框中符合逻辑的 Tab 排序。 （SITES-35228）
-* 修复了在 Sites 编辑器中创作页面时导致预期行为中断以及组件交互不一致的问题。 作者遇到不可靠的 UI 响应，这干扰了标准编辑任务，降低了工作流效率。 此更新改进了编辑器逻辑，并恢复了受影响组件之间稳定、可预测的交互。 （SITES-35227）
-* 一个回归破坏了页面编辑器中的资产选择器，阻止了在特定的页面编辑场景中加载选择器。 现在，作者在编辑页面过程中选择或浏览资产时，可以正常打开并使用资产选择器。 此更改恢复了对因加载失败而中断的资产选择工作流的稳定访问。 （SITES-35226）
-* 消除了在 Sites 编辑器中导致页面交互行为不一致以及标准创作工作流中断的问题。 此错误导致了意外的 UI 响应，干扰了组件配置和内容更新。 此更新稳定了受影响的功能，恢复了在所有页面上可靠执行各种编辑操作。 （SITES-35225）
-* 解决了 Sites 创作界面中导致页面编辑过程中出现不一致行为并中断正常工作流的问题。 作者遇到了意外的 UI 响应，干扰了组件交互和内容更新。 此更新稳定了受影响的功能，恢复了在所有编辑场景中可靠、可预测的行为。 （SITES-35224）
-* AEM Sites 现在包括对图像的 `alt` 文本支持，以满足 ADA 和 WCAG 的要求。 页面输出不再忽略 `alt` 属性，确保屏幕阅读器获得正确的替换文本。 （SITES-27153）
-* 修复了 `Note Add` 工具栏布局，使“添加”按钮在 320px 视口宽度情况下不再与标题重叠。 改进了小屏幕重排，使控件在 400% 缩放时保持可读性和可用性。 （SITES-25376）
-* 修复了链接选择对话框错误导致的屏幕阅读器缺少公告的问题。 现在，UI 通过一个状态消息容器发布错误文本，因此 NVDA 会在消息出现时立即读取消息。 （SITES-25368）
-* 移除了侧边栏资产列表中的 ARIA 网格和单元格角色。 恢复了标准的列表语义和键盘焦点顺序，从而改进了屏幕阅读器的导航，减少了额外的 Tab 停止位。 (SITES-25361)
-* 修正了侧边栏资产中的焦点排序。 键盘用户现在可通过一致的 Tab 路径执行包括编辑在内的每一个资产操作。 （SITES-25360）
-* 修复了在 320px 视口宽度情况下搜索资产模态中的布局溢出问题。 模态内容现在会重排并保持可读，使控件不再重叠或溢出对话框。 （SITES-25330）
-* 修正了“编辑”按钮的 NVDA 输出。 NVDA 现在会公告“编辑”操作，而不是“已按下预览按钮”。 （SITES-25320）
-* 修复了未命名的“人口统计”工具栏文本输入框导致屏幕阅读器输出无声或通用输出的问题。 现在，每个输入框都有一个清晰的基于标签的可访问名称，改进了键盘和辅助技术的导航。 （SITES-25316）
-* 修正了布局预览导航时“人口统计”工具栏的键盘焦点顺序。 Tab 导航现在从“人口统计”按钮直接移动到工具栏控件，而不是跳到辅助工具栏。 （SITES-25305）
-* 修复了编辑布局尺子上“较小屏幕”和“平板电脑”标签的公告顺序错误的问题。 屏幕阅读器现在会在正确的尺子标记处公告这些标签，与页面布局相符。 (SITES-25291)
-* 修复了编辑布局工具栏在 200% 缩放时溢出的问题。 内容现在保留在视口中，可通过滚动方式访问。 （SITES-25288）
-* 解决了注释叠加中焦点顺序错误的问题。 现在可以使用键盘上的 Tab 键在叠加控件和注释项之间循环切换。 父页面不再从叠加的后面获得焦点。 （SITES-25282）
-* 修复了色板弹出窗口的焦点处理问题。 此对话框现在会将焦点移动到一个清晰的标题，在这个入口点开始屏幕阅读器输出。 NVDA 不再按错误顺序读取完整的对话框内容。 (SITES-25275)
-* 修复了日期选取器关闭后的时间扭曲模态焦点处理问题。 `Escape` 现在会将焦点返回到日期选取器按钮。 日期选择现在会将焦点放在日期选取器控件旁边的输入字段上，从而防止焦点丢失和访问背景页面。 （SITES-25264）
-* 修复了“删除注释”对话框的键盘焦点处理问题。 现在，“取消”会将焦点返回到打开此对话框的 `Delete` 控件，而不是“确认”十六进制值控件。 取消后，屏幕阅读器不再公告不相关的对话框内容。 （SITES-25258）
-* 修复了注释模态对话框的焦点处理问题。 现在，打开对话框会将焦点放在对话框标题上，阻止 NVDA 读取画布内容和无关的对话框文本。 键盘导航现在保留在对话框中，直到对话框关闭。 （SITES-25257）
-* 修复了 320px 宽度情况下的搜索模态布局问题。 模态内容现在可以整齐地重排，避免与树目录重叠。 用户可以查看结果，导航目录，没有被遮住的控件。 （SITES-25246）
-* 文本间距增加后，搜索模态文本不再被剪切。 树目录布局现在保持清晰的分隔，使标签和条目一直清晰可读。 用户现在可以在文本不重叠且不被截断的情况下完成搜索和导航。 （SITES-25245）
-* 现在，激活注释会将键盘焦点移动到注释内容，而不是退出注释的按钮。 Tab 键顺序遵循逻辑序列，不用反向导航即可到达相关控件。 （SITES-25241）
-* 在键盘导航过程中，“设置日期”和“退出时间扭曲”链接缺少可见的焦点指示器。 UI现在呈现一种独特的高对比度焦点样式，以便用户轻松识别活动链接。 （SITES-25232）
-* Teaser 模态标题不再阻止键盘用户移动对话框。 键盘控件现在允许选择、移动和放置操作，从而提高屏幕阅读器的可用性和整体可操作性。 (SITES-25226)
-* AEM 现在为 Teaser 模态信息按钮使用一个有意义的无障碍标签。 屏幕阅读器会读出一个清晰的操作名称，而不是默认图标替换文本字符串。 （SITES-25223）
-* 屏幕阅读器现在会在用户按下编辑按钮时读出正确的操作。 NVDA 不再报告在键盘导航过程中导致误导性反馈和混淆的“按下了预览按钮”。 （SITES-25208）
-* 现在，展开左侧边栏会将键盘焦点移动到第一个左侧边栏控件。 Tab 序列不再跳转到辅助工具栏或落到中间列表上，使键盘用户不用反向导航即可访问左侧边栏的内容。 （SITES-24998）
-* 现在，设备模拟器栏的内容在 320 px 视口宽度的情况下保持完全可见。 工具栏文本和控件自动换行，不再被截断，从而减少了重叠，提高了可读性。 （SITES-24953）
-* AEM 现在会在模拟器工具栏中显示完整的 iPhone 设备标签。 文本不再在默认宽度上截断，从而提高了可读性，设备选择更清晰。 （SITES-24952）
-* 列表视图表头现在通过 ARIA 显示排序状态。 进行列排序操作后，屏幕阅读器会读出升序或降序。 （SITES-24943）
-* 在文本间距更改过程中，AEM 现在保持卡片视图中的“更多操作”菜单标签可见。 菜单选项保持完整的文本，包括“快速发布”，在任何 WCAG 文本间距设置的过程中，菜单保持清晰可读。 （SITES-24941）
-* 卡片操作菜单栏现在会在卡片视图中显示一个无障碍名称。 屏幕阅读器会清晰读出菜单栏的用途，语音控制可以通过名称来定位控件。 （SITES-24938）
-* 卡片视图不再依赖会导致屏幕阅读器行为混乱的 ARIA 网格语义。 UI 现在为卡片内容和卡片操作栏提供有意义的角色和标签，这减少了键盘使用中缺少控件的情况。 (SITES-24933)
-* 现在，只要用户将鼠标悬停在工具提示图标上，就会显示 `Delete Modal` 工具提示。 现在，焦点操作会显示相同的工具提示文本，这改善了鼠标和键盘用户的重复访问。 (SITES-24778)
-* 用户配置边栏后，左边栏导航现在会遵循预期的键盘焦点顺序。 Tab 键焦点会落在选定的左侧边栏区域，而不是切换显示区域，这提高了屏幕阅读器的导航清晰度。 (SITES-24754)
-* 修复了在“用户首选项”模态中色板导航时发生错误 NVDA 反馈的问题。 NVDA 现在会读出获得焦点的色板的标签，从而消除了误导性的颜色输出。 色板集现在支持一致的键盘导航和清晰的选择感知。 （SITES-24739）
-* 减少了 `Spin` 控件的冗长 NVDA 输出。 移除了与输入标签重复的冗余组标签，因此 NVDA 只公告一次控件名称。 现在，键盘和屏幕阅读器导航功能可提供清晰的单次公告。 （SITES-24725）
-* 轮播对话框现在将焦点放在对话框标题上，而不是“项”选项卡上。 “取消”和“退出”会将焦点恢复到启动此对话框的控件上，这减少了冗长的 NVDA 输出。 (SITES-24716)
-* 现在，“链接选择”对话框会将程序化的标签与最后一级树项目的屏幕上标签对齐。 箭头键导航会为每一项触发可靠的屏幕阅读器公告，移除误导性的标签输出。 （SITES-24710）
-* 现在，链接打开选择对话框在 320 px 视口的情况下会正确重排。 内容不再溢出模态或被截断，模态也不再显示水平滚动条。 （SITES-24709）
-* 现在，链接打开选择对话框在“关闭”或“取消”后会将键盘焦点恢复到对话框的触发器。 焦点不再跳到链接输入，这可以保持屏幕阅读器上下文稳定，减少额外导航。 (SITES-24707)
-* 图像模态对话框现在遵循一个符合逻辑的焦点顺序。 取消后，焦点不再跳过之前的控件，也不会落到页面地标上，退出后用户会重新获得配置按钮的焦点。 (SITES-24693)
-* 引用边栏模态对话框现在会捕获键盘焦点。 Tab 键和 Shift+Tab 停留在对话框控件中，焦点不再转移到页面内容上。 屏幕阅读器仅读出对话框的内容。 (SITES-24683)
-* 对话框打开时，超链接路径选择模态现在会将焦点放在对话框标题上。 “取消”会关闭对话框，并将焦点恢复到“打开选择对话框”按钮，从而防止焦点丢失和屏幕阅读器冗余输出。 (SITES-24672)
-* 搜索字段现在使用一个永久性的屏幕上标签，而不是占位符文本。 标签在输入时保持可见，这为键盘、屏幕阅读器和语音用户提高了清晰度。 (SITES-24529)
-* 现在，Teaser 模态对话框在打开时会将焦点设置在对话框标题上。 关闭对话框会将焦点返回到 `Configure` 控件，从而防止焦点丢失和屏幕阅读器输出过多。 (SITES-24522)
-* 侧边栏资产面板现在包含一个“关闭”控件。 “关闭”将键盘焦点返回到侧边栏切换开关上，并阻止强制使用 Tab 键在面板内容之间切换。 （SITES-24489）
-* 现在可以使用键盘 Tab 键到达管理表格中的按钮和链接。 用户不再依赖箭头键单元格导航来找到交互式控件。 (SITES-24285)
-* 图像组件对话框不再将装饰性的帮助图标和全屏图标显示为图像。 屏幕阅读器现在会跳过这些图标，保持将焦点放在可操作控件和字段内容上。 (SITES-2940)
-* 网站管理员现在可以从文件夹缩略图图标中移除图像角色。 辅助性技术会跳过这些装饰性元素，保持将焦点放在文件夹名称和操作上。 （SITES-2852）
-* 内容树现在会将键盘焦点路由到活跃的树项目或第一个树项目上。 树容器不再用作空的 Tab 停止位，这防止了出现 Shift+Tab 焦点陷阱。 (SITES-1577)
-
-#### 管理员用户界面{#sites-adminui-65-lts-sp2}
-
-网站控制台列表视图设置未反映出列表视图中显示的列。 对话框打开后，复选框全部被清除，并且选中的列数不正确。 此修复将对话框状态与活跃的网格列同步，并更新计数器，以匹配实际的列可见性。 (SITES-38576)
-
-#### 经典用户界面{#sites-classicui-65-lts-sp2}
-
-升级后，经典 UI 文本组件编辑显示的是原始 HTML 标记，而不是富文本。 服务包 2 修正了经典 UI RTE（富文本编辑器）渲染，因此编辑器显示经过格式设置的内容，并保留存储的标记。 此修复还防止了在重复进行编辑和保存时标记扩展。 (SITES-38709)
-
-#### [!DNL Content Fragments]{#sites-contentfragments-65-lts-sp2}
-
-在 6.5 LTS 中，无头事件支持缺少内容片段和模型所需的 OSGi 事件。 此更新添加了事件捆绑包以及所需的依赖项，并包含了 6.5 LTS 版本。 内容片段和模型事件现在可以正确触发，并支持发布 API 工作流。 (SITES-35329)
-
-#### [!DNL Content Fragments] - 管理{#sites-admin-65-lts-sp2}
-
-* 调整了 Sites 创作界面中的组件处理，以防止页面更新时发生无规律行为。 此错误导致了不可预测的编辑器响应，干扰了常规内容更改，降低了工作流效率。 该更新使编辑器逻辑与预期的交互模式保持一致，并在创作活动期间提供可靠的性能。 (SITES-35078) 重要
-
-* 一个回归破坏了内容片段的 Assets 控制台列表视图，并在列表渲染时触发了错误。 此更新修正了移除预览信息后的列表视图逻辑，恢复了稳定的列表输出。 控制台现在可正常显示内容片段，不再出现任何错误，保持列表交互可正常使用。 (SITES-38683)
-* 内容片段编辑器现在会将标记标签本地化。 编辑器还会将收藏集标签本地化，因此 UI 文本符合选定的区域设置。 (SITES-977)
+* AEM 6.5 LTS Service Pack 3包括Crossswalk包、内容包、系统用户、服务用户映射、功能切换和所需的OSGi配置。 全新安装会自动提供交叉通路先决条件，并且只需要特定于客户的运行时配置。 (SITES-41596)
+* AEM 6.5 LTS，Service Pack 3更新`cq-wcm-core`以支持Adobe Managed Services上的交叉通行。 此更新添加了模板创建和通用编辑器访问权限，同时删除了过时的自定义代码和功能切换。 (SITES-37657)
 
 
-#### [!DNL Content Fragments] - 片段编辑器{#sites-fragments-editor-65-lts-sp2}
+#### 辅助功能 {#sites-accessibility-65-lts-sp3}
 
-* 当功能切换开关在重构后保持禁用状态时，内容片段变体标记消失。 此修复恢复了对变体标记的支持，包括切换开关保持关闭的情况下。 作者可以在内容片段编辑器中重新添加和查看变体标记。 (SITES-38682) 重要
-* 作者从内容片段编辑器导航返回后，编辑的内容片段从 Assets 控制台列表中消失。 浏览器缓存返回了一个过时的列表，隐藏了更新的片段，直到进行手动刷新。 此修复为编辑器返回路径添加了缓存控件处理，使列表正确重新加载，并保持编辑后的片段可见。 (SITES-35374) 重要
+* 页面编辑器画布现在支持仅键盘组件管理。 作者可以使用“插入组件”、“剪切”、“粘贴”和“删除”来添加、重新排序和删除组件。 (SITES-25359)关键
+* 现在，键盘用户无需使用拖放手势，即可在站点列表视图中重新排序表行。 键盘控件允许用户选择行，将其移动到其他位置，然后完成放置。 (SITES-24946)关键
 
-* 在最近几次更改 UI 样式设置后，内容片段 RTE 显示出布局和可视化方面的问题。 服务包 2 改进了 RTE 样式设置，使工具栏和可编辑区域正确渲染，并保持清晰可读。 内容片段编辑器现在与页面编辑器的外观和行为保持一致。 (SITES-38684)
-* 从 Polaris 资产选择器中移除 IMS 范围后，破坏了内容片段与传递端点的集成。 打开远程资产选择器并选择资产时，作者会遇到错误。 此更新重新添加了所需的 IMS 范围，恢复了稳定的传递层访问。 （SITES-35837）
-* “关联的内容”面板不再渲染硬编码的“未定义”占位符。 内容片段编辑器现在通过本地化资源来解析此文本，因此编辑器可以看到翻译过的 UI 文本。 (SITES-33675)
-  <!-- REMOVED FROM BUG LIST FEBRUARY 13, 2026 * Preview error messaging now uses localized strings instead of raw `Cannot print fragment's Json` text. The Content Fragment Editor now shows translated output across locales during GraphQL endpoint resolution failures. (SITES-33666)-->
-* 内容片段编辑器现在会在所有区域设置中都显示翻译过的“一般”选项卡标签。 编辑器会替换未本地化的选项卡文本，从选项卡标题中移除内部 ID。 (SITES-30715)
-* 对于未被允许的资产类型，内容片段编辑器现在会显示翻译过的名称。 作者配置内容引用限制时，选取器列表不再混合内部字符串和只用英语的标签。 (SITES-29699)
+* 自定义属性编辑器现在支持键盘交互及其格式控件。 作者可以在工具栏选项之间移动焦点、选择文本样式以及仅使用键盘设置属性值格式。 (SITES-40333)主要
 
-#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-65-lts-sp2}
+* 现在，当可用的交互需要拖放时，键盘焦点会跳过侧面板组件列表。 此更改可防止键盘用户输入无法使用的组件选择工作流。 (SITES-40752)
+* 现在，关闭叠加操作会将焦点恢复到其触发控制。 键盘和屏幕阅读器用户不再返回叠加图或失去其在界面中的位置。 (SITES-40819)
+* 键盘导航不再将焦点移动到隐藏的页面内容。 此更改将保持可预测的焦点顺序，并防止导航中断。 (SITES-41430)
+* “锁定”按钮现在可根据屏幕阅读器的标题提供精确的反馈。 用户会听到清晰的操作标签，而不是冗长的描述。 (SITES-41431)
+* 现在，有一个视觉指示器标识“更改文件或文件夹”列表框中的选定选项。 该指示器可帮助用户了解痕迹导航路径并识别当前文件夹。 (SITES-25532)
+* 屏幕阅读器现在会朗读一次升序或降序排序方向。 描述性标签清晰地标识按钮操作，并删除重复的反馈。 (SITES-25534)
+* AEM Sites现在跨常见的创作工作流提供更广泛的无障碍支持。 更新可改善键盘交互、界面标签、焦点管理和辅助技术反馈。 (SITES-38239)
+* 现在，工具栏项目在获得键盘焦点时会显示可见标签。 键盘用户可以在激活每个控件之前对其进行识别。 (SITES-40751)
+* 键盘和屏幕阅读器用户现在可以离开收件箱菜单，而无需将其保持打开状态。 菜单会自动关闭，并保留清晰的导航路径。 (SITES-25518)
+* 颜色样本现在显示具有足够对比度的选定状态图标。 更清晰的指示器可帮助用户识别不同背景颜色的活动色板。 (SITES-25523)
+* 现在，编辑布局工具栏向辅助技术准确报告当前设备。 设备按钮不再建议用户打开和关闭每个按钮。 (SITES-25524)
+* 搜索模式现在显示&#x200B;**排序依据**&#x200B;标签，并具有足够的文本对比度。 更新的样式提高了视力缺佳用户的可读性。 (SITES-25531)
+* 站点列表视图排序按钮现在满足最低对比度要求。 用户可以在表格背景中更轻松地识别每种排序控件及其状态。 (SITES-25372)
+* 当“筛选器”字段获得键盘焦点时，不再重新加载侧边栏Assets列表。 用户可以输入字段，而不会出现意外的内容移动或屏幕阅读器重复加载公告。 (SITES-25377)
+* 内容片段侧边栏选项卡现在提供了一致的可访问标签。 NVDA声明选项卡名称，而不是声明选定的子导航项目。 (SITES-25509)
+* 现在，当键盘或屏幕阅读器焦点移出帮助菜单时，该菜单将关闭。 用户可以继续导航标题控件或页面内容，而无需保持菜单打开。 (SITES-25517)
+* 现在，在人口统计工具栏字段中输入的文本满足最低对比度要求。 用户可以在文本字段的背景中更清楚地阅读配置文件值。 (SITES-25318)
+* “页面信息”菜单现在会显示具有足够文本对比度的聚焦选项。 更清晰的样式可帮助用户在整个菜单中跟踪键盘焦点。 (SITES-25321)
+* Teaser、Image和Carousel对话框中的复选框现在向屏幕阅读器显示其相关说明。 当键盘焦点出现在每个复选框上时，用户会听到支持描述。 (SITES-25364)
+* 文本编辑器控件现在将其当前状态传达给辅助技术。 屏幕阅读器标识活动段落格式和选定的超链接目标选项。 (SITES-25367)
+* 屏幕阅读器现在可清楚地朗读&#x200B;**旋转设备**&#x200B;按钮和当前设备方向。 激活控件会报告新的方向，而不使用描述相反操作的标签。 (SITES-25292)
+* 键盘导航现在会跳过折叠的人口统计工具栏中隐藏的控件。 用户可以在“布局预览”中移动，而不会遇到不可用的工具栏选项。 (SITES-25304)
+* 在布局预览过程中，“人口统计”工具栏中的文本标签现在满足最低对比度要求。 用户可以在工具栏后台更清楚地阅读标签，例如推荐。 (SITES-25307)
+* 人口统计工具栏现在显示具有足够对比度的按钮焦点指示器。 用户可以在键盘导航期间识别活动的Commerce、角色或设备控件。 (SITES-25308)
+* 编辑布局工具栏为设备选择器使用分组的焦点指示器。 大纲包括相关的&#x200B;**选择设备**&#x200B;和&#x200B;**旋转设备**&#x200B;控件作为预期工具栏行为的一部分。 (SITES-25283)
+* 当用户选择其他设备时，“编辑布局”工具栏不再截断&#x200B;**iPhone 8 Plus**&#x200B;标签。 在所有按钮状态中，完整设备名称都保持可见。 (SITES-25284)
+* 编辑布局标尺现在为屏幕阅读器提供测量上下文。 用户会听到描述性标签和测量格式，而不是无法解释的一系列数字。 (SITES-25287)
+* 当桌面视图处于活动状态时，“编辑布局”工具栏现在会突出显示&#x200B;**桌面**&#x200B;按钮。 视觉指示器使当前设备选择清晰。 (SITES-25290)
+* 现在，键盘焦点在所有可用颜色的色板按钮上保持可见。 添加间距可防止焦点指示器混合到选定样本中。 (SITES-25253)
+* 屏幕阅读器现在可以正确识别时间扭曲日期字段。 字段不再提供误导性反馈，这表示它将打开一个对话框。 (SITES-25263)
+* 现在，注释按钮标签在其默认和悬停状态下满足最低对比度要求。 用户可以在按钮背景中清楚地阅读标签。 (SITES-25267)
+* 屏幕阅读器现在在“注释”对话框中宣布了有意义的控件标签。 每个按钮都传达其操作，而不使用不必要的注释前缀。 (SITES-25277)
+* 现在，Assets侧边栏“编辑”按钮可提供更大的触控目标。 用户无需选择附近的元素，即可更可靠地激活控件。 (SITES-25221)
+* 页面编辑器现在使用逻辑标题层次结构。 屏幕阅读器将页面标题标识为主要标题，将侧边栏标题标识为从属标题。 (SITES-25222)
+* “注释”对话框现在会将其标题显示为语义标题。 屏幕阅读器用户可以识别标题，并通过标题命令导航对话框结构。 (SITES-25248)
+* 现在，屏幕阅读器用户在过滤插入新组件列表时收到反馈。 搜索字段描述其过滤行为，状态消息报告结果计数。 (SITES-25251)
+* 现在，侧边栏组件面板使用语义列表标记。 屏幕阅读器可以朗读项目数，并支持高效的列表导航。 (SITES-25214)
+* “信息”按钮现在使用“组件”面板中的大图标。 用户可以更轻松地查找和识别每个控件。 (SITES-25217)
+* 现在，当用户增加文本间距时，组件标题将保持可见。 长标题会换行，而不是截断或重叠附近的内容。 (SITES-25219)
+* Assets侧边栏&#x200B;**编辑**&#x200B;按钮现在指示它打开一个新的浏览器选项卡。 可视提示和屏幕阅读器提示可在导航之前准备用户。 (SITES-25220)
+* 现在，当工具栏打开时，“注释模式”将键盘焦点置于注释工具栏上。 键盘和屏幕阅读器用户可以按逻辑顺序移动控件，而无需从&#x200B;**关闭**&#x200B;按钮向后导航。 (SITES-24996)
+* 为路径和标记字段选择按钮时，不再使用复选框图标。 更新后的图标显示控件将打开一个选择对话框，而不是更改选中的状态。 (SITES-25210)
+* 现在，侧边栏组件面板中的过滤器字段已具有有效的可访问标签。 屏幕阅读器会朗读字段的用途，而不是依赖图标或占位符文本。 (SITES-25212)
+* Assets侧边栏现在隐藏屏幕阅读器中的装饰性缩略图。 用户在资源网格中导航时，不会再听到两次资源名称。 (SITES-25213)
+* 筛选器边栏中的折叠按钮现在显示具有足够对比度的焦点指示器。 键盘用户在导航筛选器类别时可以跟踪焦点。 (SITES-24986)
+* Filters边栏现在显示单选按钮周围的清晰键盘焦点。 增加的对比度可帮助用户在过滤器选项中跟踪其位置。 (SITES-24987)
+* 现在，在“过滤器”页面上加载状态消息符合最低文本对比度要求。 在卡片视图和列表视图之间切换时，用户可以阅读进度反馈。 (SITES-24991)
+* 编辑器画布中的页面标题现在使用语义标题标记。 辅助型技术可以宣布标题并将其包含在标题导航中。 (SITES-24993)
+* 现在，展开模拟器菜单可将键盘焦点移动到第一个菜单项。 折叠菜单可保持逻辑二级工具栏序列中的焦点。 (SITES-24954)
+* “实时视图”表中的文本现在满足最低对比度要求。 在正常和悬停状态下，用户可以清楚地阅读Live Copy详细信息。 (SITES-24956)
+* 引用边栏现在为其标题使用语义标题标记。 屏幕阅读器在初始加载期间和用户浏览文件夹时朗读标题。 (SITES-24967)
+* 现在，卡片链接可清楚地描述其目标。 屏幕阅读器用户可以识别每个链接，而无需听到卡片的完整元数据。 (SITES-24975)
+* 标题菜单按钮不再告诉屏幕阅读器它们打开了对话框。 屏幕阅读器而是会朗读每个按钮的展开或折叠状态，这可以准确描述菜单行为。 (SITES-24742)
+* “删除”按钮上的文本现在可以在其红色背景中提供足够的对比度。 在确认删除之前，用户可以更轻松地识别操作。 (SITES-24772)
+* 画布卡不再显示指向同一目标的单独图像和标题链接。 单个链接可减少重复的键盘停止和重复的屏幕阅读器公告。 (SITES-24947)
+* 列表视图现在显示具有更突出视觉效果的拖放按钮。 更新了图标大小、重量和对比度，使控件更易于查找和使用。 (SITES-24951)
+* 标题按钮现在提供简洁的辅助访问名称：搜索、应用程序、帮助、收件箱和用户。 屏幕阅读器不再在键盘导航期间朗读“可点击”或“图形”等冗余术语。 (SITES-24715)
+* 应用程序导航中的链接现在可显示更强的视觉重点。 增加文本大小和粗细，可提高视力缺佳或色觉差异的用户的可读性。 (SITES-24723)
+* 收件箱链接现在使用语义列表标记。 屏幕阅读器可以将链接识别为相关组，宣布项目计数，并支持更高效的导航。 (SITES-24730)
+* “用户首选项”对话框中的工具提示控件现在会公开可访问的描述性名称。 屏幕阅读器在阅读工具提示内容之前会朗读每个控件的目的，而不是说“空白”。 (SITES-24732)
+* 现在，每个过滤器边栏地标都包含一个唯一的可访问标签。 屏幕阅读器可以区分过滤器边栏和其他页面区域，并在导航期间对其进行识别。 (SITES-24686)
+* 编辑器对话框现在将帮助和切换全屏按钮与标题元素分隔开。 屏幕阅读器可准确识别这些交互控件，并且不再将它们作为标题发布。 (SITES-24696)
+* 现在， CSV报告按钮会在打开新的浏览器选项卡之前警告用户。 其可访问的标签可在激活之前将行为告知屏幕阅读器和键盘用户。 (SITES-24704)
+* 过滤器边栏现在会为保存的搜索加载标签，并且始终选择搜索目录。 在焦点、键盘或鼠标交互过程中，“过滤器”按钮不再插入标签元素。 (SITES-24706)
+* 现在，“关闭”和“删除位置”按钮提供了更大的接触目标。 用户无需选择相邻元素，即可更可靠地激活任一控件。 (SITES-24530)
+* “删除位置”按钮及其焦点指示器现在满足最低对比度要求。 更强的对比度可帮助用户识别控制并跟踪键盘焦点。 (SITES-24531)
+* 编辑器iframe现在包括画布、侧边栏、组件对话框和布局预览中的描述性标题。 屏幕阅读器可以在焦点进入时识别每个帧。 (SITES-24650)
+* 改进的文本对比度使引用边栏消息更易于阅读。 此更改阐明请求选择或报告不可用引用的提示。 (SITES-24666)
+* “组件”面板为每个信息图标提供了一个有意义的易访问标签。 屏幕阅读器可以一致地识别显示组件描述的控件。 (SITES-24500)
+* 键盘焦点现在围绕着Byline的整个“显示描述”按钮。 可见的大纲可帮助用户跟踪其位置并避免激活其他控件。 (SITES-24503)
+* Teaser组件对话框不再将帮助和切换全屏按钮作为标题显示。 屏幕阅读器将这两个控件朗读为按钮，并保留正确的标题结构。 (SITES-24525)
+* Adobe Experience Manager标题控件可正确报告其展开或折叠状态。 该控件打开和关闭导航内容，以便屏幕阅读器接收有效的状态信息。 (SITES-24528)
+* 筛选器结果将地球图标标记为装饰性并删除其可访问的名称。 屏幕阅读器会忽略这些图标，而不是宣布误导性的描述。 (SITES-3057)
+* “时间扭曲”对话框现在将时间条目错误与相应的“小时”或“分钟”字段相关联。 屏幕阅读器会在验证消息旁边朗读受影响的字段。 (SITES-10980)
+* 选定的内容树项目不再成为“更改文件”或“文件夹控制”标签的一部分。 屏幕阅读器可听到不含额外状态文本的清晰控件名称。 (SITES-24496)
+* Assets侧边栏中的区域地标现在会显示不同的可访问名称。 屏幕阅读器用户可以毫不含糊地识别和导航每个区域。 (SITES-24497)
+* 屏幕阅读器现在忽略轮播对话框的装饰性帮助和全屏图标。 键盘导航不再触发不必要的图标公告。 (SITES-2912)
+* 屏幕阅读器现在跳过Teaser对话框中的装饰性工具栏图标。 帮助、全屏、格式和链接控制不再产生多余的公告。 (SITES-2934)
 
-* 改进了 GraphQL 查询验证处理，以防止因筛选执行错误而导致部署失败。 此错误导致了应用程序启动时出现异常，使得在受影响的环境中部署不成功。 此修复确保了一致的验证行为，支持顺利部署，使运行时查询验证不再中断。 (SITES-34301) 重要
 
-* “编辑 GraphQL 端点”对话框现在显示本地化的 UI 字符串。 此对话框不再显示只用英语的文本，例如“GraphQL schema is taken from configuration”（从配置中获取 GraphQL 架构），相关标签可在所有区域设置中正确渲染。 (SITES-34018)
+#### 管理员用户界面{#sites-adminui-65-lts-sp3}
 
-#### [!DNL Content Fragments] - GraphQL 查询编辑器{#sites-graphql-query-editor-65-lts-sp2}
-
-* 改进了 GraphQL 查询验证处理，以防止因筛选执行错误而导致部署失败。 此错误导致了应用程序启动时出现异常，使得在受影响的环境中部署不成功。 此修复确保了一致的验证行为，支持顺利部署，使运行时查询验证不再中断。 (SITES-35529)
-* 当配置浏览器的名称中包含 CJK 字符时，GraphQL Explorer 不再出错。 端点创建和已保存查询的访问现在可正常工作，GraphQL 查询编辑器页面保持正确无误。 (SITES-31616)
-
-#### [!DNL Content Fragments] - 模型编辑器{#sites-model-editor-65-lts-sp2}
-
-* 当重构操作将此功能与禁用的切换开关绑定时，嵌套内容片段模型停止工作。 此修复恢复了嵌套模型支持，不再需要切换改变。 作者可以在模型编辑器中重新创建并使用嵌套模型。 (SITES-38681) 重要
-
-* 内容片段模型筛选面板不再显示未本地化的字符串。 AEM 现在会在所有区域设置下显示本地化的筛选标签和本地化的状态值。 (SITES-30863)
-* 内容片段模型编辑器现在会为锁定警告对话框渲染本地化的字符串。 UI 会在所有受支持的语言中用区域设置资源替换未本地化的英语消息。 (SITES-28592)
-
-#### [!DNL Content Fragments] - REST API{#sites-restapi-65-lts-sp2}
-
-AEM Headless 需要一个专门的发布分支，以避免与主线版本之间的依赖项及捆绑包版本的冲突。 此更新添加了一个 `release/6.5lts` 无头分支，使依赖集和捆绑包版本保持一致。 Jenkins 现在可以整齐地构建无头代码库，不再出现版本冲突。 (SITES-36585)
-
-<!-- #### Component console{#sites-component-console-65-lts-sp2} -->
-
-#### 内容 API{#sites-content-api-65-lts-sp2}
-
-一个功能切换错误导致误报了页面管理 API 状态。 此更新添加了一个专门的启用标志，将其与现有的切换开关一起进行评估。 页面管理 API 现在显示稳定的状态。 网站管理 API 保持试验性。 (SITES-39284)
-
-#### 核心后端{#sites-core-backend-65-lts-sp2}
-
-* 对 Sites 创作体验进行的更改，以解决导致标准页面编辑工作流中断的行为不一致的问题。 作者在组件交互过程中遇到意外结果，这干扰了内容更新，降低了可靠性。 此更改恢复了稳定的编辑器行为，确保了在各种受影响的场景中一致地执行创作操作。 (SITES-35162) 重要
-
-* 改进了 Sites 创作行为，解决了在组件交互时页面编辑中断并导致结果不一致的问题。 作者遇到了意外的 UI 响应，这干扰了内容更新，降低了工作流的可靠性。 此更改恢复了稳定的编辑器状态管理，确保了在各种受影响的场景中可预测地正确执行创作操作。 (SITES-34499)
-
-<!--
-#### Core Components{#sites-core-components-65-lts-sp2}
-
-#### Campaign integration{#sites-campaign-integration-65-lts-sp2}
-
-#### Experience Fragments{#sites-experiencefragments-65-lts-sp2}
-
-#### Foundation Components (Legacy){#sites-foundation-components-legacy-65-lts-sp2}
--->
-
-#### 发布项{#sites-launches-65-lts-sp2}
-
-* Sites 时间线在发布提升操作中显示硬编码的英语文本：“Created version ... before promoting launch”（在发布提升之前创建了版本…）。 此更新将硬编码的字符串替换为使用本地化的消息。 时间线现在显示本地化的文本，使此条目与标准 AEM 本地化行为保持一致。 (SITES-39157)
-* 当作者通过“提升当前页面和子页面”来提升子分区时，发布提升的范围发生偏移。 AEM 还提升了不相关的页面，导致实时网站发生意外更改。 此修复程序更正了Launch作用域的计算，因此仅提升所选的子树。 (SITES-38315)
-* 发布中的内容片段未加入 `damAssetLucene` 索引，搜索结果和查询效率受到限制。 此更改将发布内容片段路径添加到索引定义中。 现在，搜索和自定义查询可找到 `/content/launches` 下的内容片段。 (SITES-35634)
-* 即使产品在触屏 UI 中不显示内容片段发布，发布 UI 仍然显示内容片段发布的控件。 此更改去除了 cq-launches-content 中的内容片段发布代码路径，调整了发布列表筛选。 作者现在可以看到一致的页面发布选项，而没有内容片段发布条目。 (SITES-35633)
-* AEM 6.5 LTS 快速启动缺少必需的发布捆绑包和先决条件，这阻止了发布 OpenAPI 的启用。 此更新添加了发布捆绑包和必需的依赖项，例如量度支持、DAM-cfm 更新和队列配置。 发布 API 现在可以在 6.5 LTS 快速启动上运行，且包含必需的运行时组件。 (SITES-35297)
-* 内容片段启动项打包提取了较新的依赖项版本和不必要的GraphQL库，这会使AEM 6.5 LTS集成复杂化。 此更改使依赖项版本符合 AEM 6.5 LTS 基线，去除了不使用的 GraphQL 依赖项。 现在，捆绑包分辨率保持不变，内容片段启动保持稳定。 (SITES-35295)
-* AEM 发布现在为 6.5 LTS 分支运行一个专门的 Jenkins 管道。 管道运行每晚构建版本，通过电子邮件发送错误警报。 这种设置增加了测试覆盖率并及早识别回归。 (SITES-35293)
-* AEM 6.5 LTS 现在推出经过更新的工件版本一致的发布 API 捆绑包。 此捆绑包会跟踪主要代码行，同时保持正确的 6.5 LTS 发行版本。 此更新稳定了在 6.5 LTS 技术栈中各处的发布 API 消耗。 (SITES-35292)
-* AEM 6.5 LTS 现在包含一个经过更新的依赖项版本一致的发布核心捆绑包。 此更新添加了“片段 UUID”和“引用 UUID”两种数据类型的发布核心处理。 现在，发布处理可在所有发布和内容片段工作流中保持行为一致。 (SITES-35290)
-* 为了解决会中断正常页面创作工作流的不一致行为，对站点编辑器进行了优化。 作者遇到意外的组件交互，这干扰了内容更新，降低了编辑可靠性。 此更改恢复了一致的 UI 状态管理，确保了在各种受影响的场景中可预测地正确执行创作操作。 (SITES-35138)
-* 发布编辑现在显示的是本地化的错误文本，而不是硬编码的 `Provided path is not a launch` 字符串。 现在，当“编辑”获得无效的发布路径时，UI 会在所有语言下渲染翻译过的消息。 (SITES-33360)
-* AEM 6.5 LTS 现在包含发布 OpenAPI 侧端口工作。 此更新将发布 API 捆绑包、内容包和所需的快速启动工件的版本对齐，并为内容片段发布 OpenAPI 场景启用了稳定的 CI 验证。 (SITES-32050)
-* 发布 UI 现在会将覆盖的模板标签本地化。 模板覆盖详细信息现在显示翻译过的文本，而不是只有英语的字符串。 (SITES-29525)
-* AEM 解决了 **Sites** > **发布** > **编辑**&#x200B;中缺少本地化键的问题。 用户现在会看到翻译过的错误消息，而不是原始的“Unable to update launch source list”字符串（“无法更新发布源列表”）。 (SITES-21499)
-* 发布提升 UI 现在显示本地化的状态标签和操作。 预览区域现在显示翻译过的&#x200B;**已删除**、**新建**&#x200B;和&#x200B;**视图**&#x200B;文本，而不是原始的英语字符串。 (SITES-13540)
-* 现在，创建发布时会显示本地化的错误消息。 UI 不再显示原始的英语字符串，如 `Unable to create launch page`、`Source root resource is not a page` 或 `Mandatory parameter is missing`。 （SITES-13085）
+* AEM现在允许管理员组成员解锁页面并模拟用户。 组成员可以通过其现有访问权限完成这两项管理任务。 (SITES-14732)
+* 在作者在时间轴中选择&#x200B;**还原到此版本**&#x200B;后，Assets管理员视图现在会更新资产信息卡。 缩略图会立即显示还原的版本，并且不再显示过时的预览内容。 (SITES-46590)
 
 
-<!-- #### Link Checker{#sites-link-checker-65-lts-sp2} -->
+#### 经典用户界面{#sites-classicui-65-lts-sp3}
+
+印尼语语言副本属性显示正确的ID语言代码。 在作者创建或查看印度尼西亚语副本时，引用边栏不再取代IN。 (SITES-44918)
 
 
-#### MSM - 实时副本{#sites-msm-live-copies-65-lts-sp2}
+#### [!DNL Content Fragments]{#sites-contentfragments-65-lts-sp3}
 
-* 更改内容时，管理员对 MSM 推送更改处理的可见性受到限制。 此修复添加了有关 MSM 事件接收和转出执行的详细日志记录。 调试输出现在会显示哪些事件触发、哪些内容路径改变、谁触发了这些更改。 (SITES-38029)
-* AEM 修复了 Blueprint 转出日期字段上的本地化布局问题。 日期提示词现在适合控件，在所有受支持的语言（包括`fr_FR`）中确保可读性。 (SITES-14961)
+Assets控制台现在在用户应用搜索筛选器时进行响应。 更改内容片段模型筛选器会刷新结果，而不是保持当前资源列表不变。 (SITES-38686)主要
 
-<!-- #### Page editor{#sites-pageeditor-65-lts-sp2} -->
 
-#### 复制{#sites-replication-65-lts-sp2}
+#### [!DNL Content Fragments] - 管理{#sites-admin-65-lts-sp3}
 
-页面编辑器发布操作现在可以处理包含选择符或后缀的 URL。 所发布的请求现在会发送 JCR 页面路径，而不是选择符或后缀 URL 字符串，因此可完成激活，内容可上线。 复制操作现在会在失败时返回一个错误状态，从而防止出现“发布已开始”的假消息。 (NPR-43288)
+* Assets页面现在将锁定内容片段的工具提示本地化为本地化。 用户将鼠标悬停在锁定指示器上时，会看到翻译的&#x200B;**签出者**&#x200B;标签。 (SITES-42531)主要
 
-<!-- #### Rich Text Editor{#sites-rte-65-lts-sp2} -->
+* AEM在创建内容片段期间本地化提供的无效名称验证消息。 不支持的标题字符不再在非英语界面中触发英语文本。 (SITES-19796)
+* AEM在内容片段创建期间翻译内容片段模型字符串。 在本地化环境中，Assets界面不再显示该标签的英语文本。 (SITES-22336)
+* 内容片段服务不再依赖过时的功能切换逻辑。 简化的实施删除了依赖于切换的分支，并保持Service Pack行为一致。 (SITES-38688)
+* AEM在计划的内容片段发布期间翻译后一个选项。 发布工作流与活动界面语言匹配。 (SITES-42532)
+* AEM将翻译内容片段下载对话框中的主字符串。 元素部分与活动的界面语言匹配。 (SITES-42534)
 
-#### 模板编辑器{#sites-template-editor-65-lts-sp2}
 
-对于有些区域设置，模板状态文本会在&#x200B;**工具** > **一般** > **模板**&#x200B;中垂直显示。 “已过时”标签破坏了布局，显示为一列字符。 此修复修正了模板状态样式设置，使标签在一个水平线上渲染。 (SITES-36797)
+#### [!DNL Content Fragments] — 片段编辑器{#sites-fragments-editor-65-lts-sp3}
 
-#### 通用编辑器 {#sites-universal-editor-65-lts-sp2}
+* 内容片段编辑器现在正确放置富文本编辑器下拉菜单。 每个菜单都与其工具栏控件保持一致，并保持附近格式控件可见。 (SITES-44005)关键
 
-* OSGi 默认配置已设置为 `preview=true`，强制通用编辑器在预览模式下启动。 此更新修正了默认值，恢复了标准生产进入行为。 除非管理员明确启用预览模式，否则通用编辑器现在会在生产模式下打开。 (SITES-37193)
-* 在开发和暂存环境中，通用编辑器打开命令现在默认为预览模式。 此命令添加了 `preview=true`，这可以使作者检查与预览上下文保持一致，避免意外打开生产环境。 (SITES-33839)
+* 编辑内容片段按钮现在出现，并立即用于引用多字段条目。 作者在编辑嵌入片段之前不再需要保存、关闭和重新打开父内容片段。 (SITES-43733)主要
 
-### [!DNL Assets]{#assets-65-lts-sp2}
+* 当作者选择多行文本字段时，内容片段编辑器会显示一个焦点大纲。 大纲不再与附近控件重复或重叠。 (SITES-39253)
+* 内容片段创建显示不含斜体样式的CJK占位符文本。 日语、朝鲜语、简体中文和繁体中文字符保持其预期外观。 (SITES-43548)
+* 内容片段编辑器在作者保存或发布片段后刷新状态横幅。 作者可以确认“已修改”、“已保存”或“已发布”状态，而无需重新加载浏览器选项卡。 (SITES-45897)
+* 在Granite UI发生更改后，内容片段编辑器会一致地验证字段。 更新的客户端库将恢复预期的验证行为。 (SITES-46650)
 
-Assets Relate 现在可使用包含空格的文件名。 现在，更新后的 Relate 客户端逻辑可以正确处理包含空格的路径，避免在选择关系时出现 `undefined` 来源的错误。 现在，Relate 对话框会打开并保存关系，不再发生 UI 卡顿或出现旋转器。 DAM用户可以创建、派生和删除资产关系，而无需重命名文件。 (Assets-56418)
 
-#### [!DNL Dynamic Media]{#assets-dm-65-lts-sp2}
+#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-65-lts-sp3}
 
-* 新的 Dynamic Media 视频播放器集成（限量推出）：现在，AEM 6.6 快速启动中提供新的 Dynamic Media 视频播放器体验。 此增强功能目前仅作为可控推出功能的一部分为初始客户启用。 (Assets-60165)
-* 解决了视频属性对话框中的选择缩略图选项不能打开资产选取器的问题，恢复了用户为视频资产选择自定义缩略图的功能。 (Assets‑58926)
-* 在 Dynamic Media 视频中，在“字幕和音轨语言”下拉列表中增加了阿拉伯语选项，使作者能够直接在 AEM 中管理阿拉伯语字幕。 (Assets‑61771)
+* 当DAM文件名包含空格或非ASCII字符时，GraphQL JSON响应现在包括嵌入的图像引用。 客户端应用程序可以检索和渲染这些图像，而无需重命名资产。 (SITES-42191)主要
+* 内容片段GraphQL API现在包括若干查询处理和响应处理更新。 这些更改防止出现重复的缓存标头和值，改进编码，保留持久查询状态信息，处理空标头，并返回相应的端点错误。 (SITES-40159)主要
+* PersistedQueryServlet现在在有效的GraphQL Persisted查询中处理编码变量，而不记录虚假错误或警告。 查询会继续返回成功的响应，而日志会反映其实际执行状态。 (SITES-39354)主要
 
-<!-- #### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp2} -->
+* 重新加载“GraphQL端点”页面会保留本地化的空状态消息。 不存在端点时，页面不再恢复为英语。 (SITES-43586)
 
-### [!DNL Forms]{#forms-65-lts-sp2}
 
-* 用户遇到表单数据模型 (FDM) 编辑器 `Data Source / Enter Keyword` 功能方面的问题。 此问题影响了搜索和选择数据源的能力。 (FORMS-23971)
-* 在移动设备上，自适应表单中的表格组件在顶部渲染了一个隐藏的标题，导致屏幕阅读器读出错误的内容。 这影响了依赖屏幕阅读器进行导航的用户。 (FORMS-23754)
-* 用户遇到基于核心组件的自适应表单引用了标记为 granite:InternalArea 的资源类型的问题，这影响了内部部署表单附加组件中多个 granite 组件的功能。 (FORMS-23632)
-* 升级到 AEM 6.5 LTS SP1 后，表单提交失败。 用户遇到缺少 com.adobe.cq.social.commons.CollabUtil 的情况，这导致出现 JSP 编译错误和电子邮件操作失败。 (FORMS-23457)
-* 用户遇到在基于基础组件的自适应表单中 hCaptcha 未正确翻译的问题。 这影响了非英语用户正确完成表单的能力。 (FORMS-23426)
-* 用户遇到表单提交失败的问题，出现了 SAXParseException：“序言中不允许包含内容” (HTTP 500)。 出现此问题的原因是预填充数据 XML 中有 null 值，导致服务器端 XML 解析失败。 (FORMS-22633)
-* 用户遇到了自适应表单未通过 Web 内容无障碍准则 (WCAG) 审核的问题。 原因是表单的选项卡导航标记无效。 也就是说，非列表元素被渲染为一个只允许包含列表项的列表的直接子元素。 此问题使表单无法通过无障碍性验证器，影响了必须满足法律或内部合规性要求的组织。 (FORMS-22101)
-* 用户遇到记录文档 (DoR) /提交 PDF 的无障碍性问题，文档中的空白表单字段未标记为表单元素。 这给屏幕阅读器带来了困难，影响了残障用户有效进行导航和完成表单的能力。 (FORMS-21989)
-* 用户遇到了在加载表单时子面板中组件的脚注不显示的问题。 当有脚注的项目是页面上的最后一个组件时，会发生此问题。 (FORMS-21925)
-* 用户在 AEM Forms 编辑器中选择组件时遇到问题。 在选项卡之间导航并返回到第一个选项卡时，有些容器变成不可选，使用户无法轻松地识别和交互。 (FORMS-21814)
-* 用户在自适应表单仪表板中遇到安全漏洞。 具体而言，在startpointcontrol.js文件中发现了一个跨站点脚本(XSS)问题，该问题允许执行恶意脚本。 (FORMS-20679)
-* AEM Forms 6.5 LTS 在 JBoss® EAP 8 上的群集部署中，`domain/configuration/domain_oracle.xml`、`domain_mysql.xml` 和 `domain_mssql.xml` 文件不再包含重复的 `<security>` 标记，此标记导致了无效的 XML 并阻止了域控制器启动。 (FORMS-24687)
-* 在 Turnkey 模式下，现在可在全新安装和升级时正确应用数据库端口更新。 在全新安装模式下，用户从所有可用端口中进行选择，在升级模式下，在升级期间会正确引用lc_turnkey.xml中更新的数据库端口。 (FORMS-24689)
-* 在Linux®上设置JBoss® EAP 8.0时，在Windows上修改的shell脚本不再导致/bin/sh^M：解释器错误或$&#39;\r&#39;：由于CRLF行尾，命令未找到错误。 (FORMS-24688)
-* 在 JBoss® EAP 8 上运行的 Forms JEE LTS 部署中，Reader 扩展 UI 可能会失败，并显示内部服务器错误。 (FORMS-24894)
-* 在Linux®上，当Forms JEE LTS Configuration Manager以未设置或不正确的`OSFileSetIntendedFor`运行时，用户遇到运行时或部署问题。 在`configurationManager/config/solcomp/LFS_Foundation.properties`中设置值，这会阻止针对Linux®正确定制配置。 安装之后并在运行配置管理器之前，请在这个文件中设置 `OSFileSetIntendedFor=Linux`。 (FORMS-24741)
+<!--#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-65-lts-sp3}-->
+
+
+#### [!DNL Content Fragments] - 模型编辑器{#sites-model-editor-65-lts-sp3}
+
+* 内容片段模型控制台现在为名称包含本地化字符的配置显示上传的缩略图。 当配置名称使用非英语文本时，作者不再丢失缩略图预览。 (SITES-39242)主要
+
+* 当作者向画布中添加组件时，内容片段模型编辑器即显示本地化的&#x200B;**字段标签**&#x200B;文本。 作者不再需要保存和重新打开模型即可查看翻译。 (SITES-45383)
+* 内容片段模型编辑器对作者为复合组件选择无效模型类型时显示的验证消息进行本地化。 消息现在与活动区域设置匹配，而不是仅以英语显示。 (SITES-41117)
+* 内容片段模型编辑器将模型锁定对话框中的所有文本本地化。 该对话框不再将英文按钮标签和说明与翻译的界面文本混合在一起。 (SITES-28592)
+
+
+
+#### [!DNL Content Fragments] - REST API{#sites-restapi-65-lts-sp3}
+
+Headless内容片段REST API捆绑包删除过时的功能切换和相关条件代码。 支持的API行为保持不变，而捆绑包仅保留活动功能所需的切换。 (SITES-39113)
+
+
+
+#### 组件控制台{#sites-component-console-65-lts-sp3}
+
+内容查找器现在会列出名称中包含不可编码字符的资产，而不会失败或生成异常。 “组件实时使用情况”页面还连续加载大型结果集，而不会在滚动期间显示空行。 (SITES-44672)主要
 
 <!--
-#### Forms JEE 
+#### Content API{#sites-content-api-65-lts-sp3}
 
-#### Forms Captcha {#forms-captcha-65-lts-sp2}
-
-#### XMLFM {#forms-xmlfm-65-lts-sp2}
-
-#### [!DNL Adaptive Forms] {#adaptive-forms-65-lts-sp2}
-
-#### [!DNL Forms Designer] {#forms-designer-65-lts-sp2}
-
-#### Forms Designer
-
-#### AdaptIve Forms
-
-#### Forms Captcha
-
-#### Forms Management UI
+#### Core backend{#sites-core-backend-65-lts-sp3}
 -->
 
+#### 核心组件{#sites-core-components-65-lts-sp3}
 
-### 基础 {#foundation-65-lts-sp2}
+* 多字段组件现在为每个条目存储单独的远程资产选择。 作者可以选择、更改和保存远程图像，而无需跨每个多字段项目复制一个图像。 (SITES-42376)主要
+* ThumbnailServlet现在在重定向对缺少资源的请求后停止处理。 此更改可防止在DAM和控制台浏览期间出现重复的空指针异常和过度错误记录。 (SITES-41238)主要
 
-#### Apache Felix {#foundation-apachefelix-65-lts-sp2}
 
-* Sling 资源访问安全现在在 1.1.2 版本上运行。 当多个 ResourceAccessGateHandler 服务注册时，ResourceAccessSecurityImpl 在初始化时不再抛出 ClassCastException。 现在可以可靠完成初始化，避免了在具有多个处理程序的环境中启动失败。 （NPR-42750）
-* JMX控制台和Web控制台现在为控制台CSS资源发送一个Content-Type： text/css标头。 严格的 MIME 检查不再阻止样式表加载，因此 `/system/console/jmx` UI 会以正常样式渲染。 (GRANITE-63677)
-* AEM 现在会避免在生成的 `WEB-INF/resources/provisioning/model.txt` 中 `contributor` 组有重复的 ACL 条目。 WAR 输出现在包含一个一致的 ACL 块，这防止了混淆审阅时的权限区别。 (GRANITE-63269)
-* 在捆绑包刷新操作中，AEM 不再清除反序列化防火墙阻止列表和允许列表设置。 更新了筛选条件注册逻辑，使活跃的防火墙实例与已保存的配置保持一致，这样无需重新启动就能确保启用了保护。 (GRANITE-61382)
-* Felix 网页控制台在访问 `/system/console` 时不再间歇性抛出 `NullPointerException` 错误。 更新了 ServiceTracker 处理程序，防止出现 null 跟踪器状态。 在重复请求和自动验证时，控制台登录和导航保持稳定。 (GRANITE-61042)
+#### 营销活动集成{#sites-campaign-integration-65-lts-sp3}
+
+现在，Campaign ContentServlet在内容请求期间保留JSON响应内容类型。 此更改会停止在从AEM 6.5.24升级后出现的重复`WARN`和`ERROR`日志条目。 (SITES-46902)主要
+
+
+#### 体验片段{#sites-experiencefragments-65-lts-sp3}
+
+作者现在可以在创建体验片段变体时浏览40多个模板。 每个附加页面都会保留原始文件夹过滤器，并显示下一个匹配的模板。 (SITES-41531)主要
+
+
+<!-- #### Foundation Components (Legacy){#sites-foundation-components-legacy-65-lts-sp3} -->
+
+
+#### 发布项{#sites-launches-65-lts-sp3}
+
+启动项促销活动历史记录现在会在站点时间轴中显示本地化文本。 时间线在支持的区域设置中翻译消息“已创建的版本”和“提升启动项之前”。 (SITES-13389)
+
+
+<!-- #### Link Checker{#sites-link-checker-65-lts-sp3} -->
+
+
+
+#### MSM - 实时副本{#sites-msm-live-copies-65-lts-sp3}
+
+* 在作者保存未更改的属性时，内容片段Live Copy文件夹现在保留cq:rolloutConfigs。 作者以后可以更新转出设置，而不会丢失现有配置。 (SITES-43729)关键
+
+* 作者现在可以从Blueprint页面上的可编辑工具栏中转出组件更改。 转出完成时没有JavaScript错误，并且会将更改传播到Live Copy。 (SITES-46052)主要
+* 现在，作者可以在升级后从Blueprint页面完成MSM转出。 转出对话框将加载可用的活动副本，并启用其转出控件而不是保持永久加载状态。 (SITES-43116)主要
+
+* Live Copy概述现在可以在整个关系状态中应用本地化的日期格式。 **Live Copy Source上次修改时间**、**Live Copy上次修改时间**&#x200B;和&#x200B;**上次转出时间**&#x200B;字段与用户的区域设置匹配。 (SITES-40756)
+* 现在，在一个请求中停用Blueprint父页面及其子页面会为每个路径生成一个转出事件。 转出管理器不再为同一子页面运行重复操作。 (SITES-44987)
+
+
+#### 页面编辑器{#sites-pageeditor-65-lts-sp3}
+
+* 现在，作者可以在保存页面属性期间创建并应用带有大写字母或空格的标记。 AEM会立即存储规范化的标记值并保留页面分配。 (SITES-42550)关键
+
+* 滚动样式菜单不再从选定样式中删除高亮显示。 作者可以在查看其他可用选项时确认其当前选择。 (SITES-30874)主要
+
+* 现在，当作者通过HTTP访问AEM时，会打开富文本编辑器链接按钮。 链接创建不再触发`crypto.randomUUID`错误。 (SITES-39467)
+* 作者现在可以将配置的内容片段组件复制并粘贴到空布局容器中。 粘贴的组件保留其原始内容片段引用，不再显示&#x200B;*选择体验变量*&#x200B;错误。 (SITES-41586)
+* 图像编辑器现在在混合内联编辑期间遵循自定义裁切比率。 每个图像放置目标都使用自己的配置，因此裁切选择以正确的方式在全屏模式之外应用。 (SITES-45771)
 
 <!--
-#### Campaign{#foundation-campaign-65-lts-sp2}
+#### Replication{#sites-replication-65-lts-sp3}
 
-#### Cloud Services{#foundation-cloudservices-65-lts-sp2}
+#### Rich Text Editor{#sites-rte-65-lts-sp3}
 
-#### Communities {#foundation-communities-65-lts-sp2}
+#### Template Editor{#sites-template-editor-65-lts-sp3}
 
-#### Content distribution{#foundation-content-distribution-65-lts-sp2}
+#### Universal editor {#sites-universal-editor-65-lts-sp3}
+
+### [!DNL Assets]{#assets-65-lts-sp3}
+
+#### [!DNL Dynamic Media]{#assets-dm-65-lts-sp3}
+
+#### [!DNL Dynamic Media] - Hybrid Mode {#assets-dm-hybrid-65-lts-sp3}
 -->
 
-#### Adobe CRX {#foundation-crx-65-lts-sp2}
 
-服务包升级后，打开 JSP 文件时 CRXDE Lite 不再显示一个空白选项卡。 AEM现在包括匹配的CodeMirror核心和附加代码，可防止严重的浏览器错误并确保编辑器保持正常运行。 (GRANITE-64333)
-
-#### Granite{#foundation-granite-65-lts-sp2}
-
-表达式安全验证器现在能处理 OSGi 配置值为空或 null 的情况。 它应用安全默认值，忽略空数组，记录清晰的日志，从而防止 NullPointerException 和不可预测的验证结果。 (NPR-43163)
-
-<!-- #### HTL{#foundatoin-htl-5-lts-sp2} -->
-
-#### 集成{#foundation-integrations-65-lts-sp2}
-
-即使存在开始和结束日期，AEM 现在也会同步 Adobe Target 活动。 Target 负载现在可将活动日期的格式设置为完整的 ISO 8601 时间戳，包括秒、毫秒和时区。 Target 不再拒绝包含 `InvalidJson.Json` 的请求。 已计划的活动现在会迁移到一个同步状态，而不再保持不同步。 （CQ-4360733）
 
 <!--
-#### Jetty{#foundation-jetty-65-lts-sp2}
-
-#### Localization{#foundation-localization-65-lts-sp2} 
-
-#### Omnisearch{#foundation-omnisearch-65-lts-sp2}
-
-#### Platform{#foundation-platform-65-lts-sp2}
-
-#### Projects{#foundation-projects-65-lts-sp2}
+### [!DNL Forms]{#forms-65-lts-sp3}
 -->
 
-#### Oak {#foundation-oak-65-lts-sp2}
-
-AEM 6.5 LTS 服务包 2 需要 S3 连接器 1.60.10 或更高版本。 S3 数据存储库配置现在包括 `crossRegionAccess` 和 `mode`，因此管理员可以启用跨区域存储桶访问权限，并在需要时将存储库切换到 GCP。 `s3EndPoint` 现在需要一个与 `s3Region` 一致的区域，或者它保持为空，使驱动程序生成端点。 (GRANITE-64873)
 
 
-#### 快速入门{#foundation-quickstart-65-lts-sp2}
+### 基础 {#foundation-65-lts-sp3}
 
-* Sling 更新了管理登录允许列表，以使用包含的术语和新的配置 PID。 此更改与 Sling JCR Base 3.2.0 一致。 (GRANITE-63756)
+#### AEM Context Service {#foundation-aem-context-service-65-lts-sp3}
 
-  **影响**
+AEM 6.5 LTS引入了AEM Context Service支持。 此推出添加了服务API、代理集成、AMS配置、Experience Cloud集成、生产监控、操作Runbook和使用情况报告。 (GRANITE-65148)
 
-  * Sling 弃用了这些 PID，您应该从配置中将它们移除：
-    * 工厂 PID：`org.apache.sling.jcr.base.internal.LoginAdminWhitelist.fragment`
-    * 全局 PID： `org.apache.sling.jcr.base.internal.LoginAdminWhitelist`
-      这些较旧的配置使用属性，如 `whitelist.name` 和 `whitelist.bundles`。
+#### Apache Felix {#foundation-apachefelix-65-lts-sp3}
 
-  * Sling 仍为已弃用的 PID 提供部分向后兼容性，但不要将它们用于新配置。 请改用较新的 `LoginAdminAllowList.*` PID。
-  * 不要同时运行已弃用的和新的允许列表配置。 混合配置可能会产生歧义，导致意外行为。 迁移到AEM 6.5 LTS SP2时，请删除已弃用的PID。
-
-  **要做什么**
-
-  1. 查找使用 `LoginAdminWhitelist*` PID 的允许列表配置。
-  1. 将它们替换为适当的新 PID：
-
-     * 工厂 PID：`org.apache.sling.jcr.base.LoginAdminAllowList.fragment`
-     * 全局 PID：`org.apache.sling.jcr.base.LoginAdminAllowList`
-
-     有关其他详细信息，请参阅[已弃用的管理登录用允许列表捆绑包方法](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecated-approach-to-allowlist-bundles-for-administrative-login)。
-
-* AEM 6.5 LTS SP2 更新了 Sling、Oak 和 Felix 的基础层捆绑包集。 这些升级增强了核心运行时的稳定性，在整个平台上对齐了依赖项版本。 (GRANITE-61874)
+现在，当发生间歇性配置错误时，AEM邮件服务会继续发送电子邮件。 管理员不再需要重新启动Day Communique 5 Mailer捆绑包来恢复电子邮件投放。 (GRANITE-66817)主要
 
 <!--
-#### Security{#foundation-security-65-lts-sp2}
+#### Campaign{#foundation-campaign-65-lts-sp3}
 
-AEM now prevents NullPointerException errors when a logged-in user lacks read access for some groups and opens the Groups tab. The tab now hides groups without access and renders group membership details without a blank or unresponsive UI. (NPR-43311)
+#### Cloud Services{#foundation-cloudservices-65-lts-sp3}
+
+#### Communities {#foundation-communities-65-lts-sp3}
+
+#### Content distribution{#foundation-content-distribution-65-lts-sp3}
+
+#### CRX {#foundation-crx-65-lts-sp3}
+
+#### Granite{#foundation-granite-65-lts-sp3}
+
+#### HTL{#foundation-htl-5-lts-sp3}
+
+#### Integrations{#foundation-integrations-65-lts-sp3}
+
+#### Jetty{#foundation-jetty-65-lts-sp3}
 -->
 
-#### Sling{#foundation-sling-65-lts-sp2}
+#### 本地化{#foundation-localization-65-lts-sp3}
 
-AEM 现在包括 Sling Engine 2.16.6。 此更改消除了由安全工具标记的 XSS 违规，提高了核心渲染的安全性和稳定性。 （NPR-43105）
+* “操作”控制台现在可以在运行状况报表中对以前未翻译的文本进行本地化。 用户可看到已翻译的状态消息、警告、维护结果和性能信息。 (NPR-44280)主要
+
+* 审核日志维护任务现在显示本地化的免责声明。 管理员在配置自动审核日志清除之前，可以使用他们选择的语言查看合规性和法律指南。 (NPR-44188)
+* 现在，当用户重新排序修改后的配置文件时，“编辑用户”页面会显示一个本地化的错误。 该消息清楚地说明，在用户保存其更改之前，已更改的用户档案无法移动。 (NPR-44282)
+* AEM现在会在整个内容片段列表属性中将工具提示本地化。 翻译后的指南介绍了模型选择、标记过滤、内容路径、项目限制和排序设置。 (SITES-14969)
+* 模板编辑器中的组件帮助链接现在会打开本地化的文档。 作者获得的指南与其选择的语言（而非仅包含英语的组件页面）匹配。 (SITES-15058)
+* 组件策略编辑器现在对报告不可修改资源或节点创建失败的错误的本地化过程进行了说明。 模板作者会以他们选择的语言接收这些消息。 (SITES-17475)
+
+<!-- #### Omnisearch{#foundation-omnisearch-65-lts-sp3} -->
+
+#### 操作仪表板{#foundation-operations-dashboard-65-lts-sp3}
+
+在客户升级AEM LTS后，`/system/health/systemalive.json`端点现在仍然可用。 更正的servlet上下文配置会阻止HTTP 404响应，并支持依赖端点的运行状况监控系统。 (GRANITE-69457)关键
+
+#### 平台{#foundation-platform-65-lts-sp3}
+
+默认HTL表达式选项允许列表现在可识别`decorationTagName`和`cssClassName`。 呈现标准响应式网格时，`error.log`不再充满重复的未知选项警告。 (GRANITE-67152)
 
 <!--
-#### Translation{#foundation-translation-65-lts-sp2}
+#### Projects{#foundation-projects-65-lts-sp3}
 
-#### User interface{#foundation-ui-65-lts-sp2}
+#### Oak {#foundation-oak-65-lts-sp3}
+
+#### Quickstart{#foundation-quickstart-65-lts-sp3} 
 -->
 
-#### WCM{#foundation-wcm-65-lts-sp2}
 
-Java 17 或 Java 21 上的 AEM 翻译不再因 XLIFF 格式问题而失败。 导出管道现在可生成翻译提供程序接受的符合标准的 XLIFF。 此更改消除了翻译作业中断问题，恢复了 AEM 和翻译服务之间可预测的传递。 现在，翻译工作流在所有受支持的 Java 运行时保持稳定。 (CQ-4360217)
+#### 安全性{#foundation-security-65-lts-sp3}
 
-#### 工作流{#foundation-workflow-65-lts-sp2}
+**复制组**&#x200B;操作现在会打开预期的表单，而不是显示空白页面。 管理员可以输入新的组ID和说明，然后复制现有的安全组。 (NPR-44302)主要
 
-处理工作流通知时，EmailNotificationService 处理器不再反复触发“未找到区段”错误。 更新后的异常处理程序检测到 SegmentNotFoundException 后会停止处理循环，而不是继续无效读取。 访问收件箱和工作项时，工作流执行保持稳定，日志噪声下降。 (GRANITE-62635)
 
+<!-- #### Sling{#foundation-sling-65-lts-sp3} -->
+
+
+#### 翻译{#foundation-translation-65-lts-sp3}
+
+现在，翻译项目会随着工作流进度保持准确的状态计数。 启动项创建和状态传播遵循预期的工作流行为，从而消除不一致的项目元数据。 (NPR-43420)
+
+
+#### 用户界面{#foundation-ui-65-lts-sp3}
+
+* “国家/地区”标签现在以选定的界面语言显示。 本地化的界面不再显示英文标签。 (NPR-43883)
+* 选择同级页面现在会激活复合多字段路径选取器中的&#x200B;**Select**。 作者无需放大浏览器窗口或重复选择即可确认新路径。 (GRANITE-69323)
+
+
+<!-- #### WCM{#foundation-wcm-65-lts-sp3} -->
+
+
+#### 工作流{#foundation-workflow-65-lts-sp3}
+
+* 工作流包页面现在支持触屏UI页面编辑器中的内容树和可编辑的资源定义组件。 作者无需使用经典UI，即可导航包内容并检查或更新其组件。 (GRANITE-67348)主要
+* 触屏UI页面编辑器现在呈现工作流包页面的内容树。 作者可以通过同一编辑器检查包结构并编辑资源定义组件。 (GRANITE-67186)主要
+
+* 工作流变量对话框现在显示表单数据模型、JSON、XML和文档变量的正确控件。 作者在创建这些非原始变量时，不再看到原始HTML标记。 (GRANITE-67915)
 
 
 
@@ -421,7 +411,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 ### Uberjar 包装 {#uber-jar-packaging}
 
-用于 AEM 6.5 LTS SP2 的 UberJar 使用 AEM 6.5 LTS UberJar 版本 6.6.2。 您可以从 Maven 中央存储库检索相应的 UberJar 工件。 与 AEM 6.5 不同，AEM 6.5 LTS 将公共 API 和已弃用的 API 分开成两个不同的工件。
+适用于AEM 6.5 LTS SP3的UberJar使用AEM 6.5 LTS UberJar版本6.6.3。 您可以从 Maven 中央存储库检索相应的 UberJar 工件。 与 AEM 6.5 不同，AEM 6.5 LTS 将公共 API 和已弃用的 API 分开成两个不同的工件。
 
 要使用公共 API 进行编译，请使用以下方法：
 
@@ -429,7 +419,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 <dependency>
     <groupId>com.adobe.aem</groupId>
     <artifactId>uber-jar</artifactId>
-    <version>6.6.2</version>
+    <version>6.6.3</version>
     <classifier>apis</classifier>
     <scope>provided</scope>
 </dependency>
@@ -441,7 +431,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 <dependency>
     <groupId>com.adobe.aem</groupId>
     <artifactId>uber-jar</artifactId>
-    <version>6.6.2</version>
+    <version>6.6.3</version>
     <classifier>deprecated-apis</classifier>
     <scope>provided</scope>
 </dependency>
@@ -454,22 +444,22 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 * 有关升级过程的详细信息，请参阅[升级文档](/help/sites-deploying/upgrade.md)。
 * 有关详细的升级说明，请参阅 [JEE 上的 AEM Forms 6.5 LTS SP1 升级指南](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65-lts/content/forms/upgrade-aem-forms/upgrade)
 
-#### AEM 6.5 LTS 服务包升级最佳做法
+## AEM 6.5 LTS 服务包升级最佳做法
 
 <!-- THE INFORMATION UNDER THIS HEADING CAME FROM CQDOC-23078 -->
 
-**环境**
-适合：安装服务包 2 (SP2) 的 AEM 6.5 LTS（内部部署）客户。 SP2 以 Quickstart JAR 形式交付。
+适用于：安装Service Pack 3 (SP3)的AEM 6.5 LTS（内部部署）客户。 SP3作为快速入门JAR提供。
 
 **为什么这个升级做法很重要**
 用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户通过替换Quickstart JAR、将其解压缩并重新启动来进行升级。 此方法与Adobe的标准升级过程保持一致。
+
 
 **推荐的升级流程（创作或发布实例）**
 
 1. 验证您的 AEM 6.5 LTS 实例运行正常且可访问。
 1. 从软件分发下载 Quickstart JAR（例如 `cq-quickstart-6.6.x.jar`）。
 1. 停止正在运行的实例。
-1. 在 AEM 安装目录中（`crx-quickstart/` 目录之外），将原有的 Quickstart JAR 替换为 SP2 JAR。
+1. 在AEM安装目录（`crx-quickstart/`外部）中，将以前的快速入门JAR替换为SP3 JAR。
 1. 解压该 JAR 文件：
 
    ```java
@@ -536,15 +526,14 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 本节列出了 Adobe 在 AEM 6.5 LTS 中已弃用的功能。 通常情况下，Adobe 在未来版本中移除某些功能之前，会先弃用这些功能并提供替代方案。
 
-建议客户检查其当前部署中是否正在使用此功能。 制定更改实施的计划，改用提供的替代方案。
+建议客户检查其当前部署中是否使用了此类特性/功能。 制定计划以更改实施，从而使用提供的替代方案。
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
-| Sites | 内容片段文本摘要 | 没有替代功能可用。 | |
 | 快速入门 | Mongo API | Mongo API 现已弃用，已计划在未来的发行版本中移除。 | 6.5 TS SP2 |
 | Sites | AEM Assets REST API 中的内容片段支持 | AEM 6.5 LTS SP2 为内容片段和模型管理提供了现代化的 OpenAPI，因此 AEM Assets REST API 中的旧版内容片段支持端点已弃用。<br>Adobe 打算在生命寿命结束公告之前保持这些旧版端点可用。 Adobe 不计划为已弃用的端点提供进一步的增强功能。 | 6.5 LTS SP2 |
 | Sites | [SPA 编辑器](/help/sites-developing/spa-overview.md) | 在 AEM 中管理无头内容的首选编辑器有：<br>- [通用编辑器](/help/sites-developing/universal-editor/introduction.md)，用于进行可视化编辑。<br>- [内容片段编辑器](/help/assets/content-fragments/content-fragments-managing.md)，用于进行基于表单的编辑。 | 6.5 LTS GA |
-| [!DNL Foundation] | 支持 com.adobe.granite.oauth.server | Adobe IMS 集成 |  |
+| [!DNL Foundation] | 支持 com.adobe.granite.oauth.server | Adobe IMS 集成 | |
 
 ### 已移除的功能 {#removed-features}
 
@@ -555,6 +544,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 | 区域 | 专题 | 替换 | 版本（SP） |
 | --- | --- | --- | --- |
+| Sites | 内容片段文本摘要 | 没有替代功能可用。 | 6.5 LTS SP3 |
 | Commerce | 不支持 AEM CIF Classic。 | 迁移到 [AEM CIF](/help/commerce/cif/migration.md)。 | 6.5 LTS GA |
 | 解决方案 | 不支持社交/社区。 | 没有替代功能可用。 | 6.5 LTS GA |
 | Screens | 不支持 Screens。 | 没有替代功能可用。 | 6.5 LTS GA |
@@ -578,7 +568,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 ### AEM Forms
 
-* 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将 JAR 文件添加到 adobe-livecycle-jboss.ear\lib 解决了这个问题。 (FORMS-24690)
+* 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将JAR文件添加到Adobe-livecycle-jboss.ear\lib解决了此问题。 (FORMS-24690)
 * 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
 * 在JBoss®上运行的Forms JEE LTS上，与电子邮件相关的功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-core-jboss.ear)安装修补程序。 (FORMS-24892)
 
@@ -617,6 +607,17 @@ AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控�
 >[!CAUTION]
 >
 > 为避免在升级到AEM 6.5 LTS SP2后内容加载失败，请从`Sling-Initial-Content`捆绑包中的JSON文件中删除所有注释。
+
+### Jackson捆绑包升级会影响GlobalLink连接器 {#jackson-upgrade-globallink-connector}
+
+AEM 6.5 LTS SP3升级`jackson`捆绑包。 此更改会影响使用GlobalLink翻译连接器的部署。
+
+如果您在低于3.4.0的版本中使用`gs4tr-globallink-adaptors-aem.core`捆绑包，请将该捆绑包升级到兼容版本。 版本3.4.0或更高版本适用于SP3中已升级的`jackson`捆绑包。
+
+>[!NOTE]
+>
+> 在SP3更新之前或过程中，将`gs4tr-globallink-adaptors-aem.core`捆绑包升级到3.4.0或更高版本，以避免与GlobalLink连接器出现兼容性问题。
+
 
 ### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
 
@@ -661,8 +662,8 @@ AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控�
 
 以下zip文件包含文本文档，其中列出了此Experience Manager 6.5 LTS Service Pack版本中包含的OSGi包和内容包：
 
-* [OSGi包](/help/release-notes/assets/65lts_sp2_bundles.zip)
-* [内容包](/help/release-notes/assets/65lts_sp2_packages.zip)
+* [OSGi包](/help/release-notes/assets/65lts_sp3_bundles.zip)
+* [内容包](/help/release-notes/assets/65lts_sp3_packages.zip)
 
 ## 受限网站{#restricted-sites}
 

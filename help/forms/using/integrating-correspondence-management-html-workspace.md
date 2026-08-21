@@ -10,12 +10,12 @@ role: Admin, User, Developer
 exl-id: b383fa80-1643-41f3-bc6c-176727fea688
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 0%
+source-wordcount: '642'
+ht-degree: 1%
 
 ---
 
-# 在AEM Forms工作区中集成第三方应用程序{#integrating-third-party-applications-in-aem-forms-workspace}
+# 在 AEM Forms 工作区中集成第三方应用程序{#integrating-third-party-applications-in-aem-forms-workspace}
 
 AEM Forms工作区支持管理表单和文档的任务分配和完成活动。 这些表单和文档可以是以XDP、PDF、Flex®或Flex格式呈现的XDP Forms、HTML表单或指南（已弃用）。
 
@@ -101,7 +101,7 @@ AEM Forms工作区支持管理表单和文档的任务分配和完成活动。 �
    ```
 
    [获取文件](assets/dscsample.zip)
-下载DSC：上面附加的DSCSample.zip文件中提供了示例DSC。 下载并解压缩DSCSample.zip文件。 在使用DSC服务之前，必须对其进行配置。 请参阅[配置DSC服务](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
+   下载DSC：上面附加的DSCSample.zip文件中提供了示例DSC。 下载并解压缩DSCSample.zip文件。 在使用DSC服务之前，必须对其进行配置。 请参阅[配置DSC服务](../../forms/using/add-action-button-in-create-correspondence-ui.md#p-configure-the-dsc-service-p)。
 
    在“定义活动”对话框中，选择相应的活动（如getLetterInstanceInfo），然后单击&#x200B;**确定**。
 

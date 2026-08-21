@@ -1,5 +1,5 @@
 ---
-title: 呈现器的文档详细信息
+title: 渲染器的文档详细信息
 description: 有关渲染如何在AEM Forms工作区中用于渲染各种受支持表单和文件类型的概念信息。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ role: Admin, User, Developer
 exl-id: e1612298-721d-499c-96c9-fd4418725106
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 0%
+source-wordcount: '675'
+ht-degree: 1%
 
 ---
 
-# 呈现器的文档详细信息 {#document-details-for-renderer}
+# 渲染器的文档详细信息 {#document-details-for-renderer}
 
 ## 简介 {#introduction}
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 PDF forms由`PdfTaskForm View`渲染。
 
-将XDP表单渲染为PDF时，FormsAugmenter服务会添加`FormBridge`JavaScript™。 此JavaScript™(位于PDF表单内)有助于执行表单提交、表单保存或脱机表单等操作。
+将XDP表单渲染为PDF时，FormsAugmenter服务会添加`FormBridge`JavaScript™。 此™（位于PDF表单内）有助于执行表单提交、表单保存或脱机表单等操作。
 
 在AEM Forms工作区中，PDFTaskForm视图通过位于`/lc/libs/ws/libs/ws/pdf.html`的中间HTML与`FormBridge`JavaScript进行通信。 其流程为：
 
@@ -86,7 +86,7 @@ Flex Forms由SwfTaskForm渲染，参考线由HtmlTaskForm视图渲染。
 
 AEM Forms工作区监听`window.global.postMessage([Message],[Payload])`
 
-[消息]可以是指定为`SubmitMessage`的字符串| `CancelMessage`| `ErrorMessage`| `runtimeMap`中的`actionEnabledMessage`。 第三方应用程序必须使用此界面来根据需要通知AEM Forms工作区。 必须使用此界面，因为AEM Forms工作区必须知道在提交任务时，它才能清除任务窗口。
+[消息]可以是在`runtimeMap`中指定为`SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`的字符串。 第三方应用程序必须使用此界面来根据需要通知AEM Forms工作区。 必须使用此界面，因为AEM Forms工作区必须知道在提交任务时，它才能清除任务窗口。
 
 **AEM Forms工作区到第三方应用程序通信**
 

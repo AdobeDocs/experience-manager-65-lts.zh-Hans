@@ -1,5 +1,5 @@
 ---
-title: Forms用户管理 | 处理用户数据
+title: Forms用户管理 |处理用户数据
 description: 了解AEM Forms JEE用户管理组件如何让您创建、授权和管理需要访问AEM Forms的用户。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ feature: Adaptive Forms
 exl-id: 3f673798-7557-4cba-96b5-2f326e7e73a9
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
 
-# Forms用户管理 | 处理用户数据 {#forms-user-management-handling-user-data}
+# Forms用户管理 |处理用户数据 {#forms-user-management-handling-user-data}
 
 用户管理是一个AEM Forms JEE组件，允许创建、管理和授权AEM Forms用户访问AEM Forms。 用户管理使用域作为获取用户信息的目录。 支持以下域类型：
 
@@ -58,16 +58,16 @@ ht-degree: 0%
   </tr>
   <tr>
    <td><p><code>EdcPrincipalLocalAccountEntity</code></p> <p><code class="code">EdcPrincipalLocalAccount
-       </code>(Oracle和MS® SQL数据库)</p> </td>
+       </code>（Oracle和MS® SQL数据库）</p> </td>
    <td>仅存储本地用户的数据。</td>
   </tr>
   <tr>
    <td><p><code>EdcPrincipalEmailAliasEntity</code></p> <p><code class="code">EdcPrincipalEmailAliasEn
-       </code>(Oracle和MS® SQL数据库)</p> </td>
+       </code>（Oracle和MS® SQL数据库）</p> </td>
    <td>包含本地、企业和混合域中所有用户的条目。 它包含用户电子邮件ID。</td>
   </tr>
   <tr>
-   <td><p><code>EdcPrincipalGrpCtmntEntity</code></p> <p><code>EdcPrincipalGrpCtmntEnti</code><br /> (Oracle和MS® SQL数据库)</p> </td>
+   <td><p><code>EdcPrincipalGrpCtmntEntity</code></p> <p><code>EdcPrincipalGrpCtmntEnti</code><br /> （Oracle和MS® SQL数据库）</p> </td>
    <td>存储用户和组之间的映射。</td>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ ht-degree: 0%
    <td>存储用户和组的承担者与权限之间的映射。</td>
   </tr>
   <tr>
-   <td><p><code>EdcPrincipalMappingEntity</code></p> <p><code>EdcPrincipalMappingEntit</code><br /> (Oracle和MS® SQL数据库)</p> </td>
+   <td><p><code>EdcPrincipalMappingEntity</code></p> <p><code>EdcPrincipalMappingEntit</code><br /> （Oracle和MS® SQL数据库）</p> </td>
    <td>存储与主体对应的旧属性和新属性值。<br /> </td>
   </tr>
  </tbody>
@@ -111,7 +111,7 @@ select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_
 
 >[!NOTE]
 >
->以下命令使用My SQL和IBM® DB2®数据库中的数据库表名。 在Oracle和MS® SQL数据库上运行这些命令时，请在命令中替换以下表名：
+>以下命令使用My SQL和® DB2®数据库中的数据库表名。 在Oracle和MS® SQL数据库上运行这些命令时，请在命令中替换以下表名：
 >
 >* 将`EdcPrincipalLocalAccountEntity`替换为`EdcPrincipalLocalAccount`
 >
