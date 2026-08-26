@@ -1,5 +1,5 @@
 ---
-title: 在OSGi环境中强化和保护AEM表单
+title: 强化并保护 OSGi 环境下的 AEM Forms
 description: 了解在OSGi服务器上保护AEM Forms安全的建议和最佳实践。
 topic-tags: Security
 role: Admin,User
@@ -8,12 +8,12 @@ feature: Document Security,Adaptive Forms
 exl-id: 0225063b-9a57-4b3f-8216-295b1f2d4db5
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 0%
+source-wordcount: '1470'
+ht-degree: 1%
 
 ---
 
-# 在OSGi环境中强化和保护AEM表单 {#hardening-and-securing-aem-forms-on-osgi-environment}
+# 强化并保护 OSGi 环境下的 AEM Forms {#hardening-and-securing-aem-forms-on-osgi-environment}
 
 了解在OSGi服务器上保护AEM Forms安全的建议和最佳实践。
 
@@ -75,7 +75,7 @@ AEM Forms具有高度可自定义性，可以在许多不同的环境中工作�
     </ul> </td> 
   </tr>
   <tr>
-   <td>Forms Portal </td> 
+   <td>表单门户 </td> 
    <td>
     <ul> 
      <li>/content/forms/portal/</li> 
@@ -113,7 +113,7 @@ AEM Forms具有高度可自定义性，可以在许多不同的环境中工作�
    <td>/content/forms/fp/*</td> 
   </tr>
   <tr>
-   <td>Forms Workflow附加服务器(JEE服务器上的AEM Forms)</td> 
+   <td>Forms Workflow附加服务器（JEE服务器上的AEM Forms）</td> 
    <td>/soap/sdk</td> 
   </tr>
  </tbody>
@@ -123,9 +123,9 @@ AEM Forms具有高度可自定义性，可以在许多不同的环境中工作�
 
 默认情况下，发布节点上可用的资源可供所有人访问。 已为所有资源启用只读访问权限。 必须启用匿名访问。 如果您计划限制表单查看并仅向经过身份验证的用户提交访问权限，则使用通用组以允许仅经过身份验证的用户对发布节点上可用的资源具有只读访问权限。 以下位置/目录包含需要强化的forms资源（已验证用户的只读访问权限）：
 
-* /content/&amp;amp；ast；
-* /etc.clientlibs/fd/&amp;amp；ast；
-* /libs/fd/&amp;amp；ast；
+* /content/&amp;ast；
+* /etc.clientlibs/fd/&amp;ast；
+* /libs/fd/&amp;ast；
 
 ## 安全地处理表单数据  {#securely-handle-forms-data}
 
@@ -168,18 +168,18 @@ AEM Forms将数据存储到预定义的位置和临时文件夹。 您应该保�
 
 * 还有一组不同的预定义组，每个角色都具有特定权限。 将用户分配到组。
 
-   * 表单 — 用户组的用户：
+  * 表单 — 用户组的用户：
 
-      * 可以创建、填写、发布和提交表单。
-      * 无法创建基于XDP的自适应表单。
-      * 无权为自适应表单编写脚本。
-      * 无法导入XDP或任何包含XDP的包
+    * 可以创建、填写、发布和提交表单。
+    * 无法创建基于XDP的自适应表单。
+    * 无权为自适应表单编写脚本。
+    * 无法导入XDP或任何包含XDP的包
 
-   * 表单超级用户组的用户创建、填写、发布和提交所有类型的表单，编写自适应表单的脚本，导入包含XDP的包。
-   * 模板作者和模板超级用户可以预览和创建模板。
-   * fdm作者的用户可以创建和修改表单数据模型。
-   * cm-user-agent组的用户可以创建、预览和发布通信管理信件。
-   * 工作流编辑器组的用户可以创建收件箱应用程序和工作流模型。
+  * 表单超级用户组的用户创建、填写、发布和提交所有类型的表单，编写自适应表单的脚本，导入包含XDP的包。
+  * 模板作者和模板超级用户可以预览和创建模板。
+  * fdm作者的用户可以创建和修改表单数据模型。
+  * cm-user-agent组的用户可以创建、预览和发布通信管理信件。
+  * 工作流编辑器组的用户可以创建收件箱应用程序和工作流模型。
 
 **在处理作者时：**
 
@@ -188,7 +188,7 @@ AEM Forms将数据存储到预定义的位置和临时文件夹。 您应该保�
 
 ## AEM Forms环境的安全Intranet元素 {#secure-intranet-elements-of-an-aem-forms-environment}
 
-通常，处理群集和Forms Workflow加载项(JEE上的AEM Forms)在防火墙之后运行。 所以，这些被认为是安全的。 您仍然可以执行一些步骤来强化这些环境：
+通常，处理群集和Forms Workflow加载项（JEE上的AEM Forms）在防火墙之后运行。 所以，这些被认为是安全的。 您仍然可以执行一些步骤来强化这些环境：
 
 ### 安全处理群集 {#secure-processing-cluster}
 

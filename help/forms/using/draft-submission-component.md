@@ -11,8 +11,8 @@ role: Admin, User, Developer
 exl-id: 3d4ff4d1-aab6-47b9-9804-2a0f3438332d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 0%
+source-wordcount: '747'
+ht-degree: 8%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 0%
    <td>指定在加载表单门户页面时显示的选项卡。 您可以选择<strong>草稿Forms选项卡</strong>和<strong>提交的Forms选项卡</strong>。</td>
   </tr>
   <tr>
-   <td>草稿Forms选项卡配置</td>
+   <td>草稿表单选项卡配置</td>
    <td>自定义标题</td>
    <td>指定<strong>草稿Forms</strong>选项卡的标题。 默认值为<strong>草稿Forms。</strong></td>
   </tr>
@@ -80,7 +80,7 @@ ht-degree: 0%
    <td>指定用于草稿Forms列表的布局。</td>
   </tr>
   <tr>
-   <td>已提交Forms选项卡配置</td>
+   <td>已提交表单选项卡配置</td>
    <td>自定义标题 </td>
    <td>指定<strong>已提交的Forms </strong>选项卡的标题。 默认值为<strong>提交的Forms。</strong></td>
   </tr>
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 Forms portal提供开箱即用的服务(API)，用于在本地和远程AEM Forms发布实例的crx存储库上存储数据。 您可以使用自定义实施替换默认功能，如[为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md)文章中所述。 有关在自定义实施中将内容存储在安全位置所需方法的详细信息，请参阅[自定义草稿和提交数据服务](/help/forms/using/custom-draft-submission-data-services.md)和[草稿和提交组件的自定义存储](/help/forms/using/adding-custom-storage-provider-forms.md)。
 
-AEM Forms文档提供了一个用于将草稿和提交组件与数据库[&#128279;](integrate-draft-submission-database.md)集成的示例。 您可以使用示例实施来开发自己的自定义实施。
+AEM Forms文档提供了一个用于将草稿和提交组件与数据库](integrate-draft-submission-database.md)集成的[示例。 您可以使用示例实施来开发自己的自定义实施。
 
 ## 相关文章
 
@@ -110,5 +110,5 @@ AEM Forms文档提供了一个用于将草稿和提交组件与数据库[&#12827
 * [使用草稿和提交组件](/help/forms/using/draft-submission-component.md)
 * [自定义草稿和已提交表单的存储](/help/forms/using/draft-submission-component.md)
 * [将草稿和提交组件与数据库集成的示例](/help/forms/using/integrate-draft-submission-database.md)
-* [自定义表单门户组件的模板](/help/forms/using/customizing-templates-forms-portal-components.md)
-* [在门户上发布表单的简介](/help/forms/using/introduction-publishing-forms.md)
+* [自定义表单门户组件模板](/help/forms/using/customizing-templates-forms-portal-components.md)
+* [在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)

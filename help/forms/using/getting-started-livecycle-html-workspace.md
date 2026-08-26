@@ -1,5 +1,5 @@
 ---
-title: AEM Forms工作区快速入门
+title: AEM Forms 工作区快速入门
 description: 如何开始使用LiveCycle AEM Forms工作区来管理您的业务自动化流程。
 contentOwner: robhagat
 content-type: reference
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: b38cd444-80f2-4747-9a99-68f69bd87e34
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 0%
+source-wordcount: '1010'
+ht-degree: 1%
 
 ---
 
-# AEM Forms工作区快速入门 {#getting-started-with-aem-forms-workspace}
+# AEM Forms 工作区快速入门 {#getting-started-with-aem-forms-workspace}
 
 您可以使用AEM Forms工作区执行以下任务：
 

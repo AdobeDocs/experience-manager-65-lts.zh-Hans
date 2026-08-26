@@ -1,5 +1,5 @@
 ---
-title: 将表单另存为模板
+title: 将表单保存为模板
 description: 了解如何从包含重复所需数据的表单创建模板。
 contentOwner: khsingh
 content-type: reference
@@ -12,11 +12,11 @@ exl-id: 5e5ce783-8d0c-421c-b938-7020215682a0
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# 将表单另存为模板 {#save-forms-as-templates}
+# 将表单保存为模板 {#save-forms-as-templates}
 
 有时，当用户填写表单时，对几个字段的输入将保持不变。 对于这种情况，您可以填写每个实例中需要相同值的字段，并将表单或草稿另存为模板。 现在，每次创建模板的实例时，指定的字段都已填充了模板中指定的值。 这有助于节省填写表单所需的时间和精力。
 

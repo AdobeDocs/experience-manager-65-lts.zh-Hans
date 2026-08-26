@@ -10,8 +10,8 @@ feature: Adaptive Forms,Foundation Components
 exl-id: dd04ad5a-d750-4e27-8d49-97a728791fe9
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,7 @@ AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户�
 
 要自定义用户数据的存储，您必须实施[草稿数据](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)和[提交数据](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)服务。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 * 启用[Forms Portal组件](/help/forms/using/enabling-forms-portal-components.md)
 * 创建[Forms门户页面](/help/forms/using/creating-form-portal-page.md)

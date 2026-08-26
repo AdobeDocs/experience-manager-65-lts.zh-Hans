@@ -10,8 +10,8 @@ role: Admin, User, Developer
 exl-id: 047437c4-f642-4b77-b5e8-ab2aa34a83e5
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 7%
+source-wordcount: '499'
+ht-degree: 8%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 7%
 
 以下是交互式通信的主要功能：
 
-- 与表单数据模型的现成集成，支持对后端数据库和其他CRM系统(如MS® Dynamics)的轻松而简化的访问
+- 与表单数据模型的现成集成，支持对后端数据库和其他CRM系统（如MS® Dynamics）的轻松而简化的访问
 - 用于打印和Web渠道的集成创作界面，能够自动从打印渠道生成Web渠道
 - 以易于理解的可视格式在打印和Web中显示信息的图表
 - 文档片段支持规则编辑器和表单数据模型
@@ -86,7 +86,7 @@ ht-degree: 7%
   <tr>
    <td>架构</td>
    <td>表单数据模型 </td>
-   <td>数据字典 </td>
+   <td>数据词典 </td>
   </tr>
   <tr>
    <td>本地化</td>
@@ -123,7 +123,7 @@ ht-degree: 7%
    <td>支持</td>
   </tr>
    <tr>
-   <td>提交内容</td>
+   <td>提交</td>
    <td>支持</td>
    <td>支持</td>
   </tr>

@@ -11,7 +11,7 @@ exl-id: 7c9d2407-4255-4d04-a413-edf428b7564b
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 1. 转到&#x200B;**https://[服务器]：[端口]/system/console/configMgr**。
 1. 搜索&#x200B;**[!UICONTROL Adobe Granite令牌身份验证处理程序]**，然后单击&#x200B;**[!UICONTROL 编辑]**。
-1. 从下拉菜单中选择&#x200B;**[!UICONTROL SameSite属性的**&#x200B;[!UICONTROL &#x200B; None &#x200B;]&#x200B;**选项作为登录令牌Cookie]**&#x200B;属性。
+1. 从下拉菜单中选择&#x200B;**[!UICONTROL SameSite属性的**[!UICONTROL  None ]**选项作为登录令牌Cookie]**&#x200B;属性。
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
 ![将图像与AFA Android应用程序同步](/help/forms/using/assets/afaandroid.png)
