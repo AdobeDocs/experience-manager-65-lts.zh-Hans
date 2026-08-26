@@ -1,5 +1,5 @@
 ---
-title: 为HTML5表单启用附件
+title: 为 HTML5 Forms 启用附件功能
 description: 默认情况下，将禁用HTML5表单的附件支持。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,22 +12,22 @@ exl-id: dcc82582-0637-44ce-a2b4-68077cbc2200
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
-# 为HTML5表单启用附件 {#enabling-attachments-for-an-html-form}
+# 为 HTML5 Forms 启用附件功能 {#enabling-attachments-for-an-html-form}
 
 您可以使用HTML5 Forms上传、预览和提交附件。 默认情况下，附件支持处于禁用状态。 要启用附件支持：
 
 1. 创建具有`mfAttachmentOptions`多选字符串属性的[自定义配置文件](/help/forms/using/custom-profile.md)。 `mfAttachmentOptions`属性中的每个字符串必须具有`property=value`格式才能配置文件附件小部件的选项。 `property`和`value`可以具有以下任一值：
 
-   | 属性 | 价值 |
+   | 属性 | 值 |
    |--- |---|
    | multiSelect | true或false（默认为true） |
    | fileSizeLimit | 以MB为单位的数字（默认为2 MB）。 例如，5。 |
    | 按钮文本 | 弹出窗口的按钮文本（默认为“附加”） |
-   | 接受 | 要接受的文件类型的逗号分隔列表（默认为“audio/&amp;amp； ast；， video/&amp;amp； ast；， image/&amp;amp； ast；， text/&amp;amp； ast；， .pdf”） |
+   | 接受 | 要接受的文件类型的逗号分隔列表（默认为“audio/&amp;ast；， video/&amp;ast；， image/&amp;ast；， text/&amp;ast；， .pdf”） |
 
    例如：
 

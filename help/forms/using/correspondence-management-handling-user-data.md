@@ -1,5 +1,5 @@
 ---
-title: 通信管理 | 处理用户数据
+title: 通信管理 |处理用户数据
 description: 了解如何在Adobe Experience Manager Forms环境中进行通信管理和处理用户数据。
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ feature: Adaptive Forms,Form Data Model
 exl-id: 57385e88-9a3d-4d89-986b-9f254aa722ca
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
 
-# 通信管理 | 处理用户数据 {#correspondence-management-handling-user-data}
+# 通信管理 |处理用户数据 {#correspondence-management-handling-user-data}
 
 AEM Forms Correspondence Management使您能够创建、管理和简化安全和个性化的客户信函。 它为企业用户提供了一个直观的用户界面，以使用预批准的内容块和媒体元素创建对应。 有关创建通信的更多信息，请参阅[创建通信](/help/forms/using/create-correspondence.md)。
 

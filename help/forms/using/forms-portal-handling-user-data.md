@@ -1,5 +1,5 @@
 ---
-title: Forms门户 | 处理用户数据
+title: Forms门户 |处理用户数据
 description: 了解如何管理AEM Forms Portal上的用户数据，例如访问、删除和数据存储。
 contentOwner: vishgupt
 topic-tags: grdp
@@ -10,12 +10,12 @@ feature: Adaptive Forms
 exl-id: f9eb6e61-5669-4cb7-a528-f1c09e455a60
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
-# Forms门户 | 处理用户数据 {#forms-portal-handling-user-data}
+# Forms门户 |处理用户数据 {#forms-portal-handling-user-data}
 
 [!DNL AEM Forms]门户提供可用于在[!DNL AEM Sites]页面上列出自适应表单、HTML5表单和其他Forms资源的组件。 此外，您还可以将其配置为向登录用户显示草稿以及提交的自适应表单和HTML5表单。 有关Forms门户的更多信息，请参阅[在门户上发布表单简介](/help/forms/using/introduction-publishing-forms.md)。
 

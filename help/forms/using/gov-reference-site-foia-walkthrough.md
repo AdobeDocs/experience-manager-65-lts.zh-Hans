@@ -1,5 +1,5 @@
 ---
-title: We.Gov参考站点FOIA演练
+title: We.Gov 参考网站 FOIA 演示
 description: 请参阅We.Gov参考网站演练，以便您了解AEM Forms如何帮助政府接收和传递个人根据《信息自由法》请求的信息。
 topic-tags: introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,12 +9,12 @@ role: Admin, User, Developer
 exl-id: a2f79634-6eca-479a-89d7-e1ef2e4a6e6d
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 0%
+source-wordcount: '854'
+ht-degree: 1%
 
 ---
 
-# We.Gov参考站点FOIA演练 {#we-gov-reference-site-foia-walkthrough}
+# We.Gov 参考网站 FOIA 演示 {#we-gov-reference-site-foia-walkthrough}
 
 ## 参考站点《信息自由法》方案 {#reference-site-freedom-of-information-act-scenario}
 
@@ -36,7 +36,7 @@ We.Gov是一个国营组织，如果养父母收养了孩子，他们可登记�
 
 ## Sarah根据FOIA提出信息请求 {#sarah-initiates-request-for-information-under-foia}
 
-根据《信息自由法》，Sarah要求提供2013年至2016年儿童与家庭管理局案件记录副本。 Sarah将此请求提交给司法部 — 信息政策办公室，并暗示她可以支付高达100美元的印刷和邮资费用。
+根据《信息自由法》，Sarah要求提供2013年至2016年儿童与家庭管理局案件记录副本。 Sarah将此请求提交给美国司法部 — 信息政策办公室，同时表示她有权支付高达USD 100的印刷和邮资费用。
 
 ### 工作原理 {#how-it-works}
 
@@ -50,7 +50,7 @@ Sarah单击&#x200B;**申请**，在《信息自由法》申请表页面中，Sar
 
 * **代理：** Sarah将请求所针对的代理指定为司法部 — 信息政策办公室。
 
-* **将支付最多**： Sarah指定她愿意支付最多100美元的打印和邮资费用。
+* **将最多支付**： Sarah指定她将最多支付USD 100的打印和邮资费用。
 * **详细描述请求**： Sarah指定“请求2013至2016财政年度儿童和家庭管理案例的副本”。
 
 ![请求2013至2016财年的儿童和家庭管理案例记录的副本](assets/sarahfiosform.png)
@@ -73,7 +73,7 @@ John Jacobs会收到请求并将其路由到正确的人员。 通过AEM收件�
 
 ### 亲眼看看 {#see-it-yourself-1}
 
-您可以在https://&lt;***主机名***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html上访问AEM收件箱。 使用jjacobs/password作为John Jacobs的用户名/密码登录到AEM收件箱，并查看FOIA应用程序。 有关使用AEM收件箱执行以表单为中心的工作流任务的信息，请参阅[在Forms收件箱中管理AEM应用程序和任务](/help/forms/using/manage-applications-inbox.md)。
+您可以在https://&lt;***主机名***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html上访问AEM收件箱。 使用jjacobs/password作为John Jacobs的用户名/密码登录到AEM收件箱，并查看FOIA应用程序。 有关使用AEM收件箱执行以表单为中心的工作流任务的信息，请参阅[在Forms收件箱中管理AEM应用程序和任务](/help/forms/using/manage-applications-inbox.md)。
 
 ![johnjacobs](assets/johnjacobs.png)
 
@@ -99,7 +99,7 @@ John Jacobs可以从应用程序仪表板查看、批准或拒绝应用程序。
 
 ### 亲自查看 {#see-for-yourself}
 
-您可以在https://&lt;***主机名***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html？resource=/aem/inbox.html上访问AEM收件箱。 使用grios/password作为Gloria Rios的用户名/密码登录到AEM收件箱，并查看FOIS请求。
+您可以在https://&lt;***主机名***>：&lt;***PublishPort***>/content/we-finance/global/en/login.html?resource=/aem/inbox.html上访问AEM收件箱。 使用grios/password作为Gloria Rios的用户名/密码登录到AEM收件箱，并查看FOIS请求。
 
 Gloria打开请求并检查信息自由局请求的详细资料。 在查看了请求的详情并检查了提供所需文件的可行性之后，Gloria批准了该请求。
 

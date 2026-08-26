@@ -1,5 +1,5 @@
 ---
-title: 启动进程
+title: 启动流程
 description: 如何使用LiveCycle AEM Forms工作区 — 选择进程、添加注释和附件、保存草稿副本以及添加到收藏夹。
 contentOwner: robhagat
 content-type: reference
@@ -11,12 +11,12 @@ role: Admin, User, Developer
 exl-id: 074b0cb2-b060-4180-ab16-ff8f7a4ee625
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
 
-# 启动进程 {#starting-processes}
+# 启动流程 {#starting-processes}
 
 AEM Forms工作区按管理员或流程设计者设置的类别来组织流程。 您也可以将经常使用的进程放入“收藏夹”类别，以便快速找到它们。
 
@@ -58,7 +58,7 @@ AEM Forms工作区按管理员或流程设计者设置的类别来组织流程�
 
    Process Management将启动该流程，并将表单路由到需要完成该流程中下一个任务的相应人员的待办事项列表中。
 
-   如果必须在提交表单之前将其关闭，并且不会丢失输入的数据，请保存草稿并在流程允许时稍后完成。 如果表单和流程允许，您还可以单击&#x200B;**脱机**，稍后再从Adobe®Reader®或Adobe®Acrobat® Professional或Acrobat Standard提交它。
+   如果必须在提交表单之前将其关闭，并且不会丢失输入的数据，请保存草稿并在流程允许时稍后完成。 如果表单和流程允许，您还可以单击&#x200B;**脱机**，稍后再从®Reader®或Adobe®Acrobat® Professional或Acrobat Standard提交它。
 
    >[!NOTE]
    >

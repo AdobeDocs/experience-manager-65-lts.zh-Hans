@@ -1,5 +1,5 @@
 ---
-title: 用于访问书信实例的API
+title: 用于访问书信实例的 API
 description: 发现API并使用它们以编程方式访问AEM Forms环境中的信件实例。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ role: Admin, User, Developer
 exl-id: f698980d-d6f9-435d-853f-4d2827640aaf
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 1%
+source-wordcount: '604'
+ht-degree: 2%
 
 ---
 
-# 用于访问书信实例的API {#apis-to-access-letter-instances}
+# 用于访问书信实例的 API {#apis-to-access-letter-instances}
 
 ## 概述 {#overview}
 

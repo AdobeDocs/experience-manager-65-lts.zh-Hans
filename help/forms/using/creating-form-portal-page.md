@@ -11,8 +11,8 @@ role: User, Developer
 exl-id: 03430815-6459-469c-b3dd-4cd83b9eec5f
 source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 3%
+source-wordcount: '1711'
+ht-degree: 6%
 
 ---
 
@@ -78,7 +78,7 @@ Forms portal组件类别
    <td>配置使用AEM Forms UI上传资源的文件夹。 默认情况下，其中列出了所有上传的资源。 有关AEM Forms UI的详细信息，请参阅<a href="../../forms/using/introduction-managing-forms.md" target="_blank">管理表单简介</a>。</td>
   </tr>
   <tr>
-   <td><p><span class="uicontrol"><strong>显示区</strong></code></p> </td>
+   <td><p><span class="uicontrol"><strong>显示器</strong></code></p> </td>
    <td>标题文本</td>
    <td>Search &amp; Lister组件的标题。 默认标题为<strong>Forms门户。</strong></td>
   </tr>
@@ -115,7 +115,7 @@ Forms portal组件类别
   <tr>
    <td> </td>
    <td>Of 文本</td>
-   <td><p>将<strong>的</strong>一词替换为指定的文本（第1 <strong>页，共</strong>51页）。 默认值为<strong>个，共</strong>个。</p> <p>例如，如果在此字段中指定<strong>/</strong>，则文本将更改为第1页<strong>/</strong>51。</p> </td>
+   <td><p>将</strong>的<strong>一词替换为指定的文本（第1 <strong>页，共</strong>51页）。 默认值为<strong>个，共</strong>个。</p> <p>例如，如果在此字段中指定<strong>/</strong>，则文本将更改为第1页<strong>/</strong>51。</p> </td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>表单链接</strong></code></td>
@@ -124,12 +124,12 @@ Forms portal组件类别
   </tr>
   <tr>
    <td> </td>
-   <td>HTML配置文件</td>
+   <td>HTML 配置文件</td>
    <td>配置用于渲染的HTML配置文件。 下拉列表中列出了所有可用的配置文件。</td>
   </tr>
   <tr>
    <td> </td>
-   <td>提交URL</td>
+   <td>提交 URL</td>
    <td><p>配置提交表单数据的servlet。</p> <p><strong>注意：</strong> <em>可以在多个位置指定表单的提交URL，其优先顺序如下：</em></p>
     <ol>
      <li><em>表单中嵌入的提交URL（在提交按钮中）具有最高优先级。</em></li>
@@ -140,12 +140,12 @@ Forms portal组件类别
   <tr>
    <td> </td>
    <td>HTML渲染操作工具提示</td>
-   <td>配置工具提示的文本，当指针悬停在<img height="16" src="assets/aem6forms_panel-html.png" width="13" />上时，将显示工具提示(HTML5图标)。</td>
+   <td>配置工具提示的文本，当指针悬停在<img height="16" src="assets/aem6forms_panel-html.png" width="13" />上时，将显示工具提示（HTML5图标）。</td>
   </tr>
   <tr>
    <td> </td>
    <td>PDF渲染操作工具提示</td>
-   <td>配置工具提示的文本，当指针悬停在<img height="16" src="assets/aem6forms_panel-pdf.png" width="14" />上时，将显示工具提示的文本(PDF图标)。</td>
+   <td>配置工具提示的文本，当指针悬停在<img height="16" src="assets/aem6forms_panel-pdf.png" width="14" />上时，将显示工具提示的文本（PDF图标）。</td>
   </tr>
   <tr>
    <td><span class="uicontrol"><strong>样式</strong></code></td>

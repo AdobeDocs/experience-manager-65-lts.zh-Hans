@@ -1,5 +1,5 @@
 ---
-title: AEM Forms应用程序疑难解答
+title: AEM Forms 应用程序故障排查
 description: 了解AEM Forms应用程序的常见问题以及如何对其进行故障诊断。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,12 +10,12 @@ role: User, Developer
 exl-id: e63c1dc2-9843-47ca-8f3c-c49720659aa0
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 0%
+source-wordcount: '683'
+ht-degree: 2%
 
 ---
 
-# AEM Forms应用程序疑难解答 {#troubleshoot-aem-forms-app}
+# AEM Forms 应用程序故障排查 {#troubleshoot-aem-forms-app}
 
 本文介绍了构建AEM Forms应用程序时可能显示的错误消息以及解决这些消息的步骤。
 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 **分辨率：**&#x200B;打开&#x200B;**Gradle脚本** > **gradle-wrapper.properties**&#x200B;文件并编辑&#x200B;**distributionUrl**&#x200B;属性。
 
-例如，Android Studio控制台建议将Gradle版本降级为3.5。编辑&#x200B;**的** distributionUrl **中的版本。gradle-wrapper.properties**&#x200B;文件。
+例如，Android Studio控制台建议将Gradle版本降级为3.5。 编辑&#x200B;**的** distributionUrl **中的版本。gradle-wrapper.properties**&#x200B;文件。
 
 再次选择&#x200B;**生成** > **生成APK**&#x200B;以解决错误并生成.apk文件。
 

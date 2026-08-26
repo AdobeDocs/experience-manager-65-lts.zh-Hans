@@ -1,5 +1,5 @@
 ---
-title: 将HTML5表单另存为草稿
+title: 将 HTML5 Forms 保存为草稿
 description: 将HTML5表单另存为草稿，并在稍后阶段继续填写表单。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -12,11 +12,11 @@ exl-id: d03ea16d-0012-4f14-982a-70e2803ea211
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
 source-wordcount: '299'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
-# 将HTML5表单另存为草稿 {#saving-an-html-form-as-a-draft}
+# 将 HTML5 Forms 保存为草稿 {#saving-an-html-form-as-a-draft}
 
 您可以将HTML5表单另存为草稿，并在稍后阶段继续填写表单。 Forms Portal允许任何用户保存和恢复HTML5表单。 要启用另存为草稿功能，请将以下配置添加到配置文件节点：
 
