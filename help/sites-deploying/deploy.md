@@ -1,18 +1,13 @@
 ---
 title: 部署与维护
 description: 了解如何开始安装AEM。
-contentOwner: Guillaume Carlino
-products: SG_EXPERIENCEMANAGER/6.5/SITES
-content-type: reference
-topic-tags: deploying
-docset: aem65
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 4a2ada26-b859-4a32-9ab0-2d4c2b695245
-source-git-commit: add91325feaa96338526edcdde977d1f619e09d4
+source-git-commit: fc736c74bc5bd584059038ad5a54ffc814d095a2
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1437'
 ht-degree: 8%
 
 ---
@@ -23,20 +18,20 @@ ht-degree: 8%
 
 * [基本概念](#basic-concepts)
 
-   * [什么是AEM？](#what-is-aem)
-   * [典型部署](#typical-deployment-scenarios)
+  * [什么是AEM？](#what-is-aem)
+  * [典型部署](#typical-deployment-scenarios)
 
-      * [内部部署](#on-premise)
-      * [使用Cloud Manager的Managed Services](#managed-services-using-cloud-manager)
+    * [内部部署](#on-premise)
+    * [使用Cloud Manager的Managed Services](#managed-services-using-cloud-manager)
 
 * [快速入门](#getting-started)
 
-   * [先决条件](#prerequisites)
-   * [获取软件](#getting-the-software)
-   * [默认本地安装](#default-local-install)
-   * [创作和发布安装](#author-and-publish-installs)
-   * [解压缩的安装目录](#unpacked-install-directory)
-   * [启动和停止](#starting-and-stopping)
+  * [先决条件](#prerequisites)
+  * [获取软件](#getting-the-software)
+  * [默认本地安装](#default-local-install)
+  * [创作和发布安装](#author-and-publish-installs)
+  * [解压缩的安装目录](#unpacked-install-directory)
+  * [启动和停止](#starting-and-stopping)
 
 熟悉这些基础知识后，您便可以在以下子页面中找到更高级和详细的信息：
 
@@ -45,7 +40,7 @@ ht-degree: 8%
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动与停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 &#x200B;](/help/sites-deploying/configuring.md)
+* [配置](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作指南文章](/help/sites-deploying/ht-deploy.md)
 * [网页控制台](/help/sites-deploying/web-console.md)
@@ -89,7 +84,7 @@ AEM服务器基于&#x200B;**Java**，并且在支持该平台的大多数操作�
 
 这些实例在安装软件方面是相同的。 它们仅通过配置进行区分。 此外，大多数安装都使用Dispatcher：
 
-* **Dispatcher**：通过AEM Dispatcher模块增强的静态Web服务器(Apache httpd®Microsoft、IIS等)。 它缓存由发布实例生成的网页以提高性能。
+* **Dispatcher**：通过AEM Dispatcher模块增强的静态Web服务器（Apache httpd®Microsoft、IIS等）。 它缓存由发布实例生成的网页以提高性能。
 
 虽然此设置提供了许多高级选项和说明，但大多数部署的核心是创作、发布和Dispatcher的基本模式。 让我们从简单的设置开始。 随后将讨论高级部署选项。
 
@@ -107,7 +102,7 @@ AEM服务器基于&#x200B;**Java**，并且在支持该平台的大多数操作�
 
 ### 使用Cloud Manager的Managed Services {#managed-services-using-cloud-manager}
 
-<i>即将宣布。</i>
+对于Adobe Managed Services部署，AEM环境是通过[Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)部署和管理的。 要监视生产和非生产环境中的应用程序性能和基础架构运行状况，请参阅[可观察性分析](https://experienceleague.adobe.com/en/docs/ams-observability-insights/content/overview)。
 
 ## 快速入门 {#getting-started}
 
@@ -173,11 +168,11 @@ AEM需要几分钟时间来解压缩jar文件、安装自身并启动。 上述�
 
 **`https://localhost:4502`**
 
-创作实例中的结果将自动配置为连接到&#x200B;**上的**&#x200B;发布实例&#x200B;**`localhost:4503`**。
+创作实例中的结果将自动配置为连接到&#x200B;**`localhost:4503`**&#x200B;上的&#x200B;**发布实例**。
 
 ### 创作和发布安装 {#author-and-publish-installs}
 
-只需在首次启动&#x200B;**文件之前重命名该文件，即可更改默认安装（**&#x200B;上的&#x200B;**`localhost:4502`**&#x200B;作者`jar`实例）。 命名模式为：
+只需在首次启动`jar`文件之前重命名该文件，即可更改默认安装（**`localhost:4502`**&#x200B;上的&#x200B;**作者**&#x200B;实例）。 命名模式为：
 
 **`cq-<instance-type>-p<port-number>.jar`**
 
@@ -265,7 +260,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 登录后，您可以访问AEM。 有关详细信息，请参阅以下内容，具体取决于您的角色：
 
 * [创作](/help/sites-authoring/first-steps.md)
-* [管理 &#x200B;](/help/sites-administering/home.md)
+* [管理](/help/sites-administering/home.md)
 * [开发](/help/sites-developing/getting-started.md)
 * [管理](/help/managing/best-practices.md)
 
@@ -278,7 +273,7 @@ AEM启动，并自动将Web浏览器重定向到相应的页面（通常是登�
 * [自定义独立安装](/help/sites-deploying/custom-standalone-install.md)
 * [应用程序服务器安装](/help/sites-deploying/application-server-install.md)
 * [命令行启动与停止](/help/sites-deploying/command-line-start-and-stop.md)
-* [配置 &#x200B;](/help/sites-deploying/configuring.md)
+* [配置](/help/sites-deploying/configuring.md)
 * [升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)
 * [配置操作指南文章](/help/sites-deploying/ht-deploy.md)
 * [网页控制台](/help/sites-deploying/web-console.md)
