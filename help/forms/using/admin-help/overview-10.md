@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: ce1629f3-834d-466c-a0e1-aad7a4fff943
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 4%
@@ -29,7 +29,7 @@ Workspace允许用户启动、参与和跟踪业务流程。
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 >[!NOTE]
 >

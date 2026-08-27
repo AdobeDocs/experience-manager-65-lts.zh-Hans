@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: da8031f2-26ab-41e2-bf54-7032727ca192
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 0%
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 ### 为用户或组配置提醒 {#configure-reminders-for-users-or-groups}
 
@@ -199,7 +199,7 @@ For details, see [How to hide the 'DO-NOT-DELETE' tag with CSS](https://blogs.ad
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 如果解决方案部署在群集环境中，请将`@@notification-host@@`替换为群集地址。
 

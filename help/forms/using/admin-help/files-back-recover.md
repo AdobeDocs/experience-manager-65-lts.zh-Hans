@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: 2938a1c6-c8fc-420a-8fad-bb39e5a7936b
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '2131'
 ht-degree: 0%
@@ -82,7 +82,7 @@ AEM Forms Workspace与（已为JEE上的AEM Forms弃用）Flex Workspace的功�
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 它允许在没有Flash Player和Adobe Reader的客户端上进行任务管理。 它有助于演绎除HTML和Flex表单之外的PDF forms Forms。
 
