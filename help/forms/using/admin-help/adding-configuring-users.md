@@ -6,7 +6,7 @@ role: User, Developer
 feature: Adaptive Forms
 hide: true
 exl-id: b3f8e1d6-3e6e-4b2c-8528-3346bbda3396
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 0%
@@ -164,7 +164,7 @@ AEM表单无法区分用户ID和密码相同但属于不同域的用户帐户。
 * 通信管理解决方案
 * AEM forms Workspace
 
-  ***注意&#x200B;**：已为AEM Forms版本弃用Flex Workspace。*
+  ***注意&#x200B;**： AEM Forms版本已弃用Flex Workspace。*
 
 * 表单管理器
 * 流程报告

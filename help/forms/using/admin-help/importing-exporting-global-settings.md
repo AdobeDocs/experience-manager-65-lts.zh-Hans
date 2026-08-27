@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: f5b45667-87df-4069-8f08-2b6daf4bad1e
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 例如，您可以通过导出一个环境中的搜索模板定义和全局设置并将它们导入另一个环境，来从开发环境移动到生产环境。
 
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 Workspace全局设置文件包含以下设置：
 

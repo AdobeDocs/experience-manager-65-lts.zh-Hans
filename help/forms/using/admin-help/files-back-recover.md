@@ -10,7 +10,7 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 exl-id: 2938a1c6-c8fc-420a-8fad-bb39e5a7936b
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
 workflow-type: tm+mt
 source-wordcount: '2131'
 ht-degree: 0%
@@ -37,7 +37,7 @@ GDS是用于存储进程中使用的长期文件的目录。 长生命周期文�
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，一定要考虑承载GDS的文件系统的可靠性，并采用独立磁盘冗余阵列(RAID)或其他适合您的质量和服务级别要求的技术。
 
-GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储[&#128279;](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的备份选项。
+GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的[备份选项。
 
 ### GDS位置 {#gds-location}
 
@@ -82,7 +82,7 @@ AEM Forms Workspace与（已为JEE上的AEM Forms弃用）Flex Workspace的功�
 
 >[!NOTE]
 >
->AEM Forms版本弃用Flex工作区。
+>AEM Forms版本已弃用Flex Workspace。
 
 它允许在没有Flash Player和Adobe Reader的客户端上进行任务管理。 它有助于演绎除HTML和Flex表单之外的PDF forms Forms。
 
