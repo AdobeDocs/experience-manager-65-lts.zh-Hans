@@ -9,14 +9,18 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: f564bda3-4141-40b3-8c08-140d4da92e2c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 9c1795a90f0cd80dcf886477620a5330c5e3fbbf
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '676'
 ht-degree: 5%
 
 ---
 
 # Adobe 分类{#adobe-classifications}
+
+[!BADGE 已终止]{type=negative tooltip="此功能现已终止使用"}
+
+<div class="preview"> Adobe分类需要使用用户凭据（用户名和密码）的Adobe Analytics配置，由于<a href="https://developer.adobe.com/analytics-apis/docs/1.4/guides/eol/">Adobe Analytics 1.4 API生命周期已结束</a>，因此不再支持该配置。 因此，弃用Adobe分类。 </div>
 
 Adobe分类按计划方式将分类数据导出到[Adobe Analytics](/help/sites-administering/adobeanalytics.md)。 导出程序是&#x200B;**com.adobe.cq.scheduled.exporter.Exporter**&#x200B;的实现。
 
@@ -85,13 +89,13 @@ Adobe分类按计划方式将分类数据导出到[Adobe Analytics](/help/sites-
 
 * ID分类`nt:unstructured`
 
-   * 1 `nt:unstructured`
+  * 1 `nt:unstructured`
 
-      * 产品=我的产品名称（字符串）
-      * 价格= 120.90（字符串）
-      * 大小= M（字符串）
-      * 颜色=黑色（字符串）
-      * Color^Code = 101（字符串）
+    * 产品=我的产品名称（字符串）
+    * 价格= 120.90（字符串）
+    * 大小= M（字符串）
+    * 颜色=黑色（字符串）
+    * Color^Code = 101（字符串）
 
 **SAINT标题和记录：**
 
