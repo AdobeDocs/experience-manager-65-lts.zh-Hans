@@ -10,9 +10,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 8b3d8d0f-10f7-4736-881d-8f1f21c69182
-source-git-commit: a037dc7cbb13abfeb8a7289baded50d3d788cbf6
+source-git-commit: 76bd0f170b06a3f930d504b680342c954daae460
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,8 @@ ht-degree: 1%
 * [启用复制代理](#enable-replication-agents)
 
 * [启用自定义计划作业](#enable-custom-scheduled-jobs)
+
+* [重新安装或验证加载项](#reinstall-or-verify-add-ons)
 
 * [执行测试计划](#execute-test-plan)
 
@@ -92,6 +94,19 @@ ht-degree: 1%
 ### 启用自定义计划作业 {#enable-custom-scheduled-jobs}
 
 此时可以启用任何作为代码库一部分的计划作业。
+
+### 重新安装或验证加载项 {#reinstall-or-verify-add-ons}
+
+>[!IMPORTANT]
+>
+>从技术上讲，安装AEM 6.5 LTS Service Pack是完整的[就地升级](/help/sites-deploying/in-place-upgrade.md)（在应用更新之前，AEM快速入门jar已完全替换）。 因此，在任何就地升级期间运行的标准升级前清理任务现在也在应用Service Pack时运行。
+
+这些任务之一将删除`/libs`下任何位置找到的陈旧`install`文件夹（`install`和运行模式变量，如`install.author`或`install.publish`），以防止重新安装过时的包和配置。 如果您的解决方案依赖于在`/libs`下的`install`文件夹中保留其自身OSGi捆绑包或配置的加载项，则可以在应用Service Pack时删除该文件夹，即使过去在Service Pack升级中未观察到这种情况。
+
+应用Service Pack后：
+
+* 验证以前安装的所有加载项是否仍然存在，以及其OSGi捆绑包和配置是否处于活动状态。 检查`/system/console/bundles`以查找任何未启动的包。
+* 如果某个加载项的内容缺失，请重新安装该加载项的内容包以恢复它。
 
 ### 执行测试计划 {#execute-test-plan}
 

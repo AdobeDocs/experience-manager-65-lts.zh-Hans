@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
 exl-id: da8a1341-55a9-46bb-b78d-ced79e22e87e
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+source-git-commit: 23fa46e24f25f6aa889bc209b6742773d4535cc6
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 36%
+source-wordcount: '570'
+ht-degree: 28%
 
 ---
+
 
 # 个性化和内容定位 {#personalization}
 
@@ -18,9 +19,13 @@ ht-degree: 36%
 
 AEM提供了一个用于创作目标内容和呈现个性化体验的工具框架。
 
+>[!NOTE]
+>
+>定位模式和经典AEM定位组件使用基于ContextHub的AEM Target集成。 因此，专门依赖于AEP Web SDK的页面将不会呈现经典AEM定位组件。 [有关详细信息，请参阅开发人员文档。](/help/sites-developing/target.md)
+
 ## 定位模式 {#targeting-mode}
 
-可使用 AEM 的定位模式[创作目标内容](/help/sites-authoring/content-targeting-touch.md)。定位模式和 Target 组件提供了一些工具，用于为您的营销活动体验创建内容。
+可使用 AEM 的定位模式[创作目标内容](/help/sites-authoring/content-targeting-touch.md)。 定位模式和 Target 组件提供了一些工具，用于为您的营销活动体验创建内容。
 
 ## 活动 {#activities}
 
@@ -30,15 +35,15 @@ AEM提供了一个用于创作目标内容和呈现个性化体验的工具框�
 
 活动还识别您的页面使用的[定位引擎](/help/sites-authoring/personalization.md#targeting-engine)。
 
-使用[活动控制台](/help/sites-authoring/activitylib.md)创建和管理您品牌的活动。 您还可以在[创作目标内容](/help/sites-authoring/content-targeting-touch.md)时创建活动。
+使用[活动控制台](/help/sites-authoring/activitylib.md)创建和管理您品牌的活动。 您还可以在[创作目标内容时创建活动。](/help/sites-authoring/content-targeting-touch.md)
 
 ## 体验 {#experiences}
 
-对于每个活动，您可以定义一个或多个体验来识别要定位的受众。AEM 使您能够控制包含每个体验的内容。
+对于每个活动，您可以定义一个或多个体验来识别要定位的受众。 AEM 使您能够控制包含每个体验的内容。
 
 受众基于在AEM或Adobe Target中创建的营销区段。 当访客打开网页时，页面逻辑会确定访客所属的受众，并显示您为该受众创建的内容。
 
-例如，某项活动定义了针对两类不同受众的体验：30 岁以上的女性和 30 岁以下的女性。We.Retail网站的女性页面针对每种体验显示不同的产品。
+例如，某项活动定义了针对两类不同受众的体验：30 岁以上的女性和 30 岁以下的女性。 We.Retail网站的女性页面针对每种体验显示不同的产品。
 
 您可以为活动定义体验。 您可以使用[活动控制台](/help/sites-authoring/activitylib.md#adding-editing-an-activity-using-the-activities-console)或[定位模式](/help/sites-authoring/content-targeting-touch.md#adding-and-removing-experiences-using-targeting-mode)向活动添加体验。
 
@@ -48,7 +53,7 @@ AEM提供了一个用于创作目标内容和呈现个性化体验的工具框�
 
 例如，We.Retail示例网站的女性页面可以使用选件作为在页面顶部显示的Teaser图像。 30岁以上的女性体验和30岁以下女性体验使用了不同的预告。
 
-使用[优惠控制台](/help/sites-authoring/offerlib.md)创建可在多个体验中使用的优惠。 在[创作目标内容](/help/sites-authoring/content-targeting-touch.md)时，创建一次性选件或从选件库添加选件。
+使用[优惠控制台](/help/sites-authoring/offerlib.md)创建可在多个体验中使用的优惠。 在[创作目标内容时，创建一次性选件或从选件库添加选件。](/help/sites-authoring/content-targeting-touch.md)
 
 ## 定位引擎 {#targeting-engine}
 
@@ -63,6 +68,6 @@ AEM提供了一个内置定位引擎，用于处理页面请求并确定要显�
 Adobe Target定位引擎允许从Adobe Target中跟踪的页面访问收集信息。
 
 * 使用此定位引擎时，您可以使用从 Adobe Target 导入的区段来定义体验受众。
-* 使用 Adobe Target 引擎的活动会[同步到 Target](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)。
+* 使用Adobe Target引擎的活动已[同步到Target。](/help/sites-authoring/activitylib.md#synchronizing-activities-with-adobe-target)
 
-[与 Adobe Target 集成后](/help/sites-administering/opt-in.md)，您便可以使用此引擎。
+当您将[与Adobe Target集成时，可以使用此引擎。](/help/sites-administering/opt-in.md)

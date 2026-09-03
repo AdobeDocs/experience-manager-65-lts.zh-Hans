@@ -1,5 +1,5 @@
 ---
-title: 针对目标内容进行开发
+title: 开发定向内容
 description: 有关开发用于内容定位的组件的主题
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,48 +10,55 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 722c8052-6b1e-4b52-a332-b549f4a6bc05
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: 6360a0573f3683ad491c5e9edad5d34840f98ebb
 workflow-type: tm+mt
-source-wordcount: '1223'
-ht-degree: 3%
+source-wordcount: '1339'
+ht-degree: 4%
 
 ---
 
-# 针对目标内容进行开发{#developing-for-targeted-content}
+
+# 开发定向内容 {#developing-for-targeted-content}
 
 本节介绍有关开发用于内容定位的组件的主题。
 
-* 有关连接到Adobe Target的信息，请参阅[与Adobe Target集成](/help/sites-administering/target.md)。
-* 有关创作目标内容的信息，请参阅[使用定位模式创作目标内容](/help/sites-authoring/content-targeting-touch.md)。
+* 有关连接到Adobe Target的信息，请参阅[与Adobe Target集成。](/help/sites-administering/target.md)
+* 有关创作目标内容的信息，请参阅[使用定位模式创作目标内容。](/help/sites-authoring/content-targeting-touch.md)
 
 >[!NOTE]
 >
->在 AEM 创作实例中定位组件时，该组件会对 Adobe Target 进行一系列的服务器端调用，以便注册活动、设置产品建议和检索 Adobe Target 区段（如果已配置）。没有从 AEM Publish 到 Adobe Target 的服务器端调用。
+>在 AEM 创作实例中定位组件时，该组件会对 Adobe Target 进行一系列的服务器端调用，以便注册活动、设置产品建议和检索 Adobe Target 区段（如果已配置）。 没有从 AEM Publish 到 Adobe Target 的服务器端调用。
 
 ## 在您的页面上使用Adobe Target启用定位功能 {#enabling-targeting-with-adobe-target-on-your-pages}
 
-要在与Adobe Target交互的页面中使用目标组件，请在&lt;head>元素中包含特定的客户端代码。
+要在与Adobe Target交互的页面中使用目标组件，请在`<head>`元素中包含特定的客户端代码。
+
+>[!NOTE]
+>
+>定位模式和经典AEM定位组件使用基于[ContextHub](/help/sites-developing/contexthub.md)和`at.js`或`mbox.js`客户端库的AEM Target集成（请参阅下文），它不是[AEP Web SDK](https://github.com/adobe/alloy)投放机制。 因此，经典定位组件不会在仅加载AEP Web SDK的页面上渲染。
+>
+>使用AEP Web SDK的站点必须通过Web SDK（配置的数据流、通过Tags或Alloy的Web SDK，以及针对活动的决策范围使用`renderDecisions` / `applyPropositions`进行前端呈现）单独实施Target交付。 然后，AEM会提供选件（导出到Adobe Target的体验片段或内容片段），并在Adobe Target UI中创作活动。
 
 ### 头部部分 {#the-head-section}
 
-将以下两个代码块添加到页面的&lt;head>部分：
+将以下两个代码块添加到页面的`<head>`部分：
 
-```xml
+```html
 <!--/* Include Context Hub */-->
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 ```
 
-```xml
+```html
 <cq:include script="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 ```
 
 此代码添加所需的Analytics JavaScript对象，并加载与网站关联的云服务库。 对于Target服务，库是通过`/libs/cq/analytics/components/testandtarget/headlibs.jsp`加载的
 
-加载的库集取决于Target配置中使用的Target客户端库类型（mbox.js或at.js）：
+加载的库集取决于Target配置中使用的目标客户端库类型（`mbox.js`或`at.js`）：
 
 **对于默认mbox.js**
 
-```
+```html
 <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/mbox.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/personalization/integrations/commons.js"></script>
@@ -61,7 +68,7 @@ ht-degree: 3%
 
 **对于自定义mbox.js**
 
-```
+```html
 <script type="text/javascript" src="/etc/cloudservices/testandtarget/<CLIENT-CODE>/_jcr_content/public/mbox.js"></script>
         <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/personalization/integrations/commons.js"></script>
@@ -71,7 +78,7 @@ ht-degree: 3%
 
 用于at.js **的**
 
-```
+```html
 <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs-integration.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs.js"></script>
@@ -81,11 +88,11 @@ ht-degree: 3%
 >
 >仅支持产品附带的`at.js`版本。 通过查看位于以下位置的`at.js`文件，可以获得产品附带的`at.js`版本：
 >
->**/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js**。
+>`/libs/cq/testandtarget/clientlibs/testandtarget/atjs/source/at.js`
 
 **对于自定义at.js**
 
-```
+```html
 <script type="text/javascript" src="/etc/cloudservices/testandtarget/<CLIENT-CODE>/_jcr_content/public/at.js"></script>
     <script type="text/javascript" src="/libs/cq/foundation/testandtarget/parameters.js"></script>
  <script type="text/javascript" src="/libs/cq/foundation/testandtarget/atjs-integration.js"></script>
@@ -93,7 +100,7 @@ ht-degree: 3%
 
 客户端上的Target功能由`CQ_Analytics.TestTarget`对象管理。 因此，该页面将包含一些init代码，如以下示例中的：
 
-```
+```html
 <script type="text/javascript">
             if ( !window.CQ_Analytics ) {
                 window.CQ_Analytics = {};
@@ -125,9 +132,9 @@ ht-degree: 3%
  </div>
 ```
 
-JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的引用。 testandtarget.js文件包含mbox.js函数。 脚本生成的HTML类似于以下示例：
+JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的引用。 `testandtarget.js`文件包含mbox.js函数。 脚本生成的HTML类似于以下示例：
 
-```xml
+```html
 <script type="text/javascript">
         if ( !window.CQ_Analytics ) {
             window.CQ_Analytics = {};
@@ -144,23 +151,23 @@ JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的�
 
 #### 正文部分（开始） {#the-body-section-start}
 
-在&lt;body>标记之后立即添加以下代码，以将客户端上下文功能添加到页面：
+在`<body>`标记之后立即添加以下代码以将客户端上下文功能添加到页面：
 
-```xml
+```html
 <cq:include path="clientcontext" resourceType="cq/personalization/components/clientcontext"/>
 ```
 
 #### 主体部分（结束） {#the-body-section-end}
 
-紧接&lt;/body>结束标记之前添加以下代码：
+在`</body>`结束标记之前添加以下代码：
 
-```xml
+```html
 <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
 ```
 
 此组件的JSP脚本会生成对Target javascript API的调用，并实施其他所需的配置。 脚本生成的HTML类似于以下示例：
 
-```xml
+```html
 <div class="servicecomponents cloudservices">
   <div class="cloudservice testandtarget">
     <script type="text/javascript">
@@ -194,15 +201,15 @@ JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的�
 
 >[!NOTE]
 >
->默认情况下，mbox处于隐藏状态 — mboxDefault类决定此行为。 隐藏mbox可确保访客在切换默认内容之前不会看到该内容；但是，隐藏mbox会影响感知到的性能。
+>默认情况下，mbox处于隐藏状态 — mboxDefault类决定此行为。 隐藏mbox可确保访客在交换默认内容之前不会看到该内容。 但是，隐藏mbox会影响感知的性能。
 
-用于创建mbox的默认mbox.js文件位于/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js。 要使用客户mbox.js文件，请将该文件添加到Target云配置。 要添加文件，mbox.js文件必须在文件系统中可用。
+用于创建mbox的默认`mbox.js`文件位于`/etc/clientlibs/foundation/testandtarget/mbox/source/mbox.js`。 要使用自定义`mbox.js`文件，请将该文件添加到Target云配置。 若要添加文件，`mbox.js`文件必须在文件系统中可用。
 
-例如，如果要使用[Marketing Cloud ID服务](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)，您需要下载mbox.js，以便该服务包含基于您的租户的`imsOrgID`变量的正确值。 要与Marketing Cloud ID服务集成，需要此变量。 有关信息，请参阅[Adobe Analytics作为Adobe Target的报表Source](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)和[在实施之前](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=zh-Hans)。
+例如，如果要使用[Marketing Cloud ID服务，](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hans)，则需要下载`mbox.js`，以便它包含基于租户的`imsOrgID`变量的正确值。 要与Marketing Cloud ID服务集成，需要此变量。 有关详细信息，在实施之前，请参阅[Adobe Analytics作为Adobe Target的报表Source](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=zh-Hans)和[。](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=zh-Hans)
 
 >[!NOTE]
 >
->如果在Target配置中定义了自定义mbox，则每个人都必须拥有对发布服务器上&#x200B;**/etc/cloudservices**&#x200B;的读取访问权限。 如果没有此访问权限，在发布网站上加载mbox.js文件会导致404错误。
+>如果在Target配置中定义了自定义mbox，则每个人都必须拥有对发布服务器上`/etc/cloudservices`的读取访问权限。 如果没有此访问权限，在发布网站上加载`mbox.js`文件会导致404错误。
 
 1. 转到CQ **工具**&#x200B;页面并选择&#x200B;**云服务**。 ([https://localhost:4502/libs/cq/core/content/tools/cloudservices.html](https://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 1. 在树中选择Adobe Target，然后在配置列表中双击Target配置。
@@ -210,7 +217,7 @@ JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的�
 1. 对于“自定义mbox.js”属性，单击“浏览”并选择该文件。
 1. 要应用更改，请输入Adobe Target帐户的密码，单击“重新连接到Target”，然后在连接成功后单击“确定”。 然后，在“编辑组件”对话框中单击“确定”。
 
-您的Target配置包含一个自定义mbox.js文件，[您页面的head部分](/help/sites-developing/target.md#p-the-head-section-p)中所需的代码会将该文件添加到客户端库框架，而不是引用testandtarget.js库。
+您的Target配置包含一个自定义`mbox.js`文件，[页面的head部分](/help/sites-developing/target.md#p-the-head-section-p)中所需的代码将该文件添加到客户端库框架，而不是引用`testandtarget.js`库。
 
 ## 禁用组件的Target命令 {#disabling-the-target-command-for-components}
 
@@ -218,13 +225,13 @@ JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的�
 
 ![chlimage_1-21](assets/chlimage_1-21.png)
 
-要从上下文菜单中移除Target命令，请将以下属性添加到组件的cq：editConfig节点：
+要从上下文菜单中删除Target命令，请将以下属性添加到组件的`cq:editConfig`节点：
 
-* 名称：cq：disableTargeting
+* 名称：`cq:disableTargeting`
 * 类型：布尔值
 * 值： True
 
-例如，要禁用Geometrixx演示站点页面标题组件的定位，请将属性添加到/apps/geometrixx/components/title/cq：editConfig节点。
+例如，要禁用Geometrixx演示站点页面的标题组件的定位，请将该属性添加到`/apps/geometrixx/components/title/cq:editConfig`节点。
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -234,15 +241,15 @@ JSP将添加所需的Analytics JavaScript对象和对客户端JavaScript库的�
 >
 >如果您未使用DTM，则需要将订单确认发送到Adobe Target。
 
-为了跟踪网站的性能，请将订单确认页面中的购买信息发送到Adobe Target。 (请参阅[创建orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en)和[订单确认Mbox — 添加自定义参数。](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779?profile.language=zh-Hans))当您的MBox名称为`orderConfirmPage`时，Adobe Target会将mbox数据识别为订单确认数据，并使用以下特定参数名称：
+为了跟踪网站的性能，请将订单确认页面中的购买信息发送到Adobe Target。 请参阅[创建orderConfirmPage Mbox](https://developer.adobe.com/target/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager/?lang=en)和[订单确认Mbox — 添加自定义参数](https://experienceleaguecommunities.adobe.com/t5/adobe-target-questions/order-confirmation-mbox-add-custom-parameters/m-p/275779)以了解更多信息。 当MBox名称为`orderConfirmPage`时，Adobe Target将mbox数据识别为订单确认数据，并使用以下特定参数名称：
 
-* productPurchasedId：用于标识所购买产品的ID列表。
-* orderId：订单的ID。
-* orderTotal：采购的总金额。
+* `productPurchasedId`：识别所购买产品的ID列表。
+* `orderId`：订单的ID。
+* `orderTotal`：购买的总金额。
 
 在渲染的HTML页面上创建mbox的代码类似于以下示例：
 
-```xml
+```html
 <script type="text/javascript">
      mboxCreate('orderConfirmPage',
      'productPurchasedId=product1 product2 product3',
@@ -304,7 +311,7 @@ String orderID = session.getOrderId();
 
 当上一示例中的结账页面中包含该组件时，页面源中包含以下用于创建mbox的脚本：
 
-```
+```html
 <div class="mboxDefault"></div>
 <script type="text/javascript">
 
@@ -318,22 +325,22 @@ String orderID = session.getOrderId();
 
 ## 了解Target组件 {#understanding-the-target-component}
 
-利用Target组件，作者可以从CQ内容组件创建动态mbox。 （请参阅[内容定位](/help/sites-authoring/content-targeting-touch.md)。） Target组件位于/libs/cq/personalization/components/target。
+利用Target组件，作者可以从CQ内容组件创建动态mbox。 有关详细信息，请参阅[内容定位](/help/sites-authoring/content-targeting-touch.md)。 Target组件位于`/libs/cq/personalization/components/target`。
 
-target.jsp脚本可访问页面属性，以确定用于组件的定位引擎，然后执行相应的脚本：
+`target.jsp`脚本可访问页面属性以确定要用于该组件的定位引擎，然后执行相应的脚本：
 
-* Adobe Target： /libs/cq/personalization/components/target/engine_tnt.jsp
-* 使用AT.JS [Adobe Target](/help/sites-administering/target.md)： /libs/cq/personalization/components/target/engine_atjs.jsp
-* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)： /libs/cq/personalization/components/target/engine_cq_campaign.jsp
-* 客户端规则/ContextHub： /libs/cq/personalization/components/target/engine_cq.jsp
+* Adobe Target： /`libs/cq/personalization/components/target/engine_tnt.jsp`
+* 使用AT.JS的[Adobe Target](/help/sites-administering/target.md)： `/libs/cq/personalization/components/target/engine_atjs.jsp`
+* [Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)： `/libs/cq/personalization/components/target/engine_cq_campaign.jsp`
+* 客户端规则/ContextHub： `/libs/cq/personalization/components/target/engine_cq.jsp`
 
 ### Mbox的创建 {#the-creation-of-mboxes}
 
 >[!NOTE]
 >
->默认情况下，mbox处于隐藏状态 — mboxDefault类决定此行为。 隐藏mbox可确保访客在切换默认内容之前不会看到该内容；但是，隐藏mbox会影响感知到的性能。
+>默认情况下，mbox处于隐藏状态。 `mboxDefault`类确定此行为。 隐藏mbox可确保访客在交换默认内容之前不会看到该内容。 但是，隐藏mbox会影响感知的性能。
 
-当Adobe Target驱动内容定位时，engine_tnt.jsp脚本会创建包含目标体验内容的mbox：
+当Adobe Target驱动内容定位时，`engine_tnt.jsp`脚本会创建包含目标体验内容的mbox：
 
 * 按照Adobe Target API的要求添加类为`mboxDefault`的`div`元素。
 
@@ -349,8 +356,8 @@ target.jsp脚本可访问页面属性，以确定用于组件的定位引擎，�
 
 以下是可用的clientlib类别：
 
-* testandtarget.mbox
-* testandtarget.init
-* testandtarget.util
-* testandtarget.atjs
-* testandtarget.atjs-integration
+* `testandtarget.mbox`
+* `testandtarget.init`
+* `testandtarget.util`
+* `testandtarget.atjs`
+* `testandtarget.atjs-integration`
