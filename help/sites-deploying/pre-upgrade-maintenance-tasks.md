@@ -10,9 +10,9 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 1dd5d370-d1d4-4d15-9663-35b941b9076b
-source-git-commit: 8f7bbc3887601e10cf29e99ee54959a10c8a3f98
+source-git-commit: c93d78653e192d041830a84ea24fe5d3edde29e0
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1332'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 2%
 * [索引定义](#index-definitions)
 * [确保有足够的磁盘空间](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#ensure-sufficient-disk-space)
 * [完全备份AEM](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#fully-back-up-aem)
+* [检查过时的升级前备份](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#check-stale-pre-upgrade-backups)
 * [生成快速入门.properties文件](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#generate-quickstart-properties)
 * [配置工作流和审核日志清除](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#configure-wf-audit-purging)
 * [安装、配置和运行升级前任务](/help/sites-deploying/pre-upgrade-maintenance-tasks.md#install-configure-run-pre-upgrade-tasks)
@@ -46,6 +47,18 @@ ht-degree: 2%
 ## 完全备份AEM {#fully-back-up-aem}
 
 在开始升级之前，应完全备份AEM。 确保备份存储库、应用程序安装、数据存储和Mongo实例（如果适用）。 有关备份和还原AEM实例的详细信息，请参阅[备份和还原](/help/sites-administering/backup-and-restore.md)。
+
+## 检查过时的升级前备份 {#check-stale-pre-upgrade-backups}
+
+在升级之前，AEM会备份`/var/upgrade/PreUpgradeBackup/<timestamp>`下的某些路径（如`/etc/tags`），然后在升级完成后恢复这些路径。 每个备份节点都有一个合并状态属性： `INIT`表示已创建备份，但从未合并回来，而`COMPLETED`表示已成功完成合并。
+
+如果以前升级（例如，从6.4到6.5）的备份保留为`INIT`状态，则最新升级（从6.5到6.5 LTS）将恢复该旧的、未合并的备份。 这会静默地重新引入不再与当前存储库状态匹配的过时或过期内容，导致升级完成后出现意外问题。
+
+要避免此情况，请在开始升级之前：
+
+1. 使用CRXDE Lite (`/crx/de/index.jsp`)，检查`/var/upgrade/PreUpgradeBackup/`下任何预先存在的节点的源实例。
+2. 检查找到的每个备份节点的合并状态属性。
+3. 如果在以前的升级中发现处于`INIT`状态的节点，请在继续之前查看其内容并对其进行清理（删除或显式合并）。 这样做可以确保升级创建全新、准确的备份，而不是静默地恢复陈旧数据。
 
 ## 生成快速入门.properties文件 {#generate-quickstart-properties}
 
