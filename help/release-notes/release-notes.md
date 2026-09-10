@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 79f3d3211a79ce62242273df0cdecd24cd8900cf
+source-git-commit: aa819778006a3acb0d02772156c2af820ed353bb
 workflow-type: tm+mt
-source-wordcount: '6705'
-ht-degree: 26%
+source-wordcount: '7575'
+ht-degree: 23%
 
 ---
 
@@ -301,9 +301,57 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 
 
-<!--
 ### [!DNL Forms]{#forms-65-lts-sp3}
--->
+
+>[!NOTE]
+>
+> 现在提供了适用于OSGi部署的AEM Forms 6.5 LTS Service Pack 3 (SP3)。 其中包括错误修复、安全改进和增强功能。 稍后将发布适用于JEE部署的&#x200B;**AEM Forms 6.5 LTS Service Pack 3 (SP3)。**
+
+#### 增强功能 {#forms-enhancements-65-lts-sp3}
+
+* Forms-24360：添加了对Microsoft Office 2024的PDF Generator (PDFG)支持。
+* Forms-24949：在Forms 6.5 LTS中添加了AEM Forms Builder代理支持。 这会为代理所需的Forms Manager HTTP API和表单生成人工智能(GenAI) HTTP API提供支持。
+* Forms-25180：向AEM Forms用户界面添加了`daysUntilSigningDeadline`值，以便作者可以向收件人显示Adobe Sign签名截止日期前的剩余天数。
+* Forms-25182：现在，当使用单个用户帐户配置时，PDF Generator (PDFG)支持多线程文档转换。
+
+#### 修复的问题 {#forms-fixed-issues-65-lts-sp3}
+
+* Forms-23726：由于`xsom`库冲突，在自适应Forms属性中应用XML架构失败。 现在可以选择架构。
+* Forms-24296： Foundation组件文件附件字段在上传时接受了不允许的文件类型（例如`.xsd`），并且仅在提交时拒绝了这些类型，这与其他阻止的类型不同。 现在，不允许的类型在上传时会被阻止。
+* Forms-24603：在通信管理信函中，包含条件的文本片段在另存为草稿时丢失了行分隔符。 草稿现在保留原始换行符。
+* Forms-24783：从基于Open Services Gateway Initiative (OSGi)的Forms工作流中的`assignTask`步骤中删除了文件附件。 附件现在通过任务分配保留。
+* Forms-24877：应用显示模式时，日期选取器日历图标未显示任何可访问的标签，因此NVDA屏幕阅读器仅声明“可点击”。 图标现在提供描述性标签。
+* Forms-24913：在Adobe Sign步骤之后，AEM Forms工作流停止，因为从未返回签名状态。 现在，签名完成后，工作流会继续运行。
+* Forms-25033：在键盘选项卡顺序中跳过了涂写签名组件，这给仅使用键盘的用户造成了辅助功能障碍。 选项卡导航现在可到达字段。
+* Forms-25045：繁体中文（香港）翻译在升级后停止呈现，因此表单回退到默认语言。 现在，本地化文本可正确呈现。
+* Forms-25170：当开始实例计数为0时，调用`addInstance()`未显示动态添加的面板。 现在，已添加的面板会立即显示。
+* Forms-25225：服务器端重新验证移除了自适应Forms中片段外部的字段翻译，将标签恢复到基本语言。 这些翻译现在会被保留。
+* Forms-25233：在Open Services Gateway Initiative (OSGi)部署上，Assembler服务将主XDP与其直接片段拼合，但未解析嵌套片段引用，例如页眉、页脚和可重复使用的子表单，因此装配的输出中缺少这些引用。 嵌套片段现已解析。
+* Forms-25289： Forms渲染服务跨Service Pack针对相同的输入返回不同的输出，这将影响通信管理信件。 现在，渲染输出是一致的。
+* Forms-25290：重新打开时，已保存的通信管理信件会丢失空格，并且在某些位置显示误报的“x”。 保存的信件内容现在保持不变。
+* Forms-25346：升级Service Pack后，交互式通信(IC)字母在加载旋转图标上冻结，并且字母在预览中加载了丢失的间距。 现在可以正确加载和设置间距。
+* Forms-25431：“创建表单片段”向导在标题字段中的每个击键时发送一个网络请求。 已删除多余的呼叫。
+* Forms-25645：从内联上传的JSON架构创建基于核心组件的自适应表单片段失败，原因是“指定了ALC-FMG-700-009无效表单模型”。 现在接受内联JSON架构。
+* Forms-25646：根据JSON架构构建的基于核心组件的自适应表单片段在编辑器中显示了一个空的数据源面板。 该面板现在列出了架构数据源。
+* Forms-25674：交互式通信(IC)代理用户界面打开到一个空白页，因此代理无法查看IC内容。 代理用户界面现在呈现。
+* Forms-25686：在“创建自适应表单片段”向导中切换架构类型选项时，没有清除上一个选项的状态，从而产生架构不匹配。 向导现在会重置非活动选项。
+* Forms-25757：应用主题不会更新基础客户端库，因此主题更改似乎没有效果。 主题现在可更新基本客户端库。
+* Forms-25825：移动设备汉堡菜单未响应点击，导致导航在移动设备上不可用。 该菜单现在会按预期打开。
+* Forms-26333：取消发布表单后，发布操作消失，从而阻止重新发布。 现在，取消发布后即可发布。
+* Forms-26763：在Designer中，对静态文本对象内的超链接上的粗体格式在对文本进行任何编辑后丢失。 现在，粗体格式保留在编辑中。
+* Forms-26817：在自适应表单上单击“重置”会清除图像组件中作者配置的图像并留下损坏的图像，而其他字段会正确重置。 重置现在会保留配置的映像。
+* Forms-26852：在“代理”用户界面中，日期/时间字段显示的日期比存储的值早一天。 字段现在显示正确的日期。
+
+#### 已知问题 {#forms-known-issues-65-lts-sp3}
+
+此版本未报告任何已知问题。
+
+#### 安全修复 {#forms-security-fixes-65-lts-sp3}
+
+此版本解决了AEM Forms中的安全漏洞，包括多个跨站点脚本(XSS)修复、服务器端请求伪造(SSRF)修复、XML外部实体(XXE)修复以及第三方库更新。
+
+<!-- TODO: Add security bulletin link. Open question, pending information from Sunny Marwaha. -->
+
 
 
 
@@ -396,7 +444,6 @@ AEM 6.5 LTS引入了AEM Context Service支持。 此推出添加了服务API、�
 * 工作流变量对话框现在显示表单数据模型、JSON、XML和文档变量的正确控件。 作者在创建这些非原始变量时，不再看到原始HTML标记。 (GRANITE-67915)
 
 
-
 ## 关于 [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
 [!DNL Adobe Experience Manager] 6.5 LTS 的平台的构建基础是更新版本的基于 OSGi 的框架（Apache Sling 和 Apache Felix）和 Java™ 内容存储库：Apache Jackrabbit Oak 1.68.x。
@@ -407,7 +454,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 * 支持 Java™ 17 和 Java™ 21。
 * 为了获得最佳性能，请用其他值覆盖默认 GC 值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* 如果 Oracle 未公开提供，Adobe 会分配 Java™ 17 和 Java™ 21 维护更新，以便客户在 AEM 相关项目中使用。
+* 如果 Oracle 未公开提供，Adobe 会分发 Java™ 17 和 Java™ 21 维护更新，以供客户在 AEM 相关项目中使用。
 
 ### Uberjar 包装 {#uber-jar-packaging}
 
@@ -473,7 +520,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 **最佳实践**
 
-* 在生产之前，先在较低环境/测试环境中运行升级。
+* 在生产之前，先在较低级别环境和测试环境中运行升级。
 * 开始之前，请先进行完整的、可恢复的备份（存储库和任何外部数据存储库）。
 * 查看 Adobe 的就地升级指南及技术要求（LTS 建议使用 Java 17 或 21）。
 
@@ -514,12 +561,12 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 <!-- CARRY OVER EACH RELEASE -->
 
-Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供更高的客户价值。 这些更改在实施时，仔细考虑了向后兼容性。
+Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供更高的客户价值。 这些更改在实施时已仔细考虑向后兼容性。
 
 为了确保透明度，并允许进行充分的规划，Adobe 为 Adobe Experience Manager (AEM) 遵循了这种弃用流程：
 
 * 首先宣布弃用。 已弃用的功能仍然可用，但不再得到增强。
-* 不会在下一个主要版本发布之前移除。 单独通知计划好的移除时间线。
+* 不会在下一个主要版本发布之前移除。 计划的移除时间线将另行通知。
 * 在功能移除之前，至少会提供一个发布周期，以便客户过渡到受支持的替代方案。
 
 ### 已弃用的功能 {#deprecated-features}
@@ -555,7 +602,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 | Granite | 不支持 `com.adobe.granite.crx-explorer`。 | 没有替代功能可用。 | 6.5 LTS GA |
 | Granite | 不支持 `crx2oak`。 | 选择相关版本的 [Oak-upgrade](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade) | 6.5 LTS GA |
 | Adobe | 不支持 `com.adobe.cq.cq-searchpromote-integration`。 | 没有替代功能可用。 | 6.5 LTS GA |
-| Guava | 现在，AEM 中的所有 guava 依赖项都已移除，因此 `com.adobe.granite.osgi.wrapper.guava-15.0.0-0002` 捆绑包不再是 AEM 的一部分。 | 如果客户依赖 guava，可以自行添加 guava，或者在可能的情况下用 Java 收藏集或其他替代功能取代 guava 代码。 | 6.5 LTS GA |
+| Guava | 现在，AEM 中的所有 guava 依赖项都已移除，因此 `com.adobe.granite.osgi.wrapper.guava-15.0.0-0002` 捆绑包不再是 AEM 的一部分。 | 如果客户依赖 guava，可以自行添加 guava，或者在可能的情况下用 Java 集合或其他替代方案取代 guava 代码。 | 6.5 LTS GA |
 | `We.Retail` | 不支持 `We-retail` 示例网站。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 开源 | 不支持 `oak-solr-osgi` 捆绑包。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 开源 | 不支持 `org.apache.servicemix.bundles.abdera-parser`、`org.apache.servicemix.bundles.jdom` 和 `org.apache.sling.atom.taglib`。 | 没有替代功能可用。 | 6.5 LTS GA |
