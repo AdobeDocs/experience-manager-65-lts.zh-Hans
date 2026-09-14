@@ -14,9 +14,7 @@ source-git-commit: d49de63985f537da3e6b92dac5233c104b1ccdfe
 workflow-type: tm+mt
 source-wordcount: '5374'
 ht-degree: 70%
-
 ---
-
 
 # 使用定位模式创作目标内容 {#authoring-targeted-content-using-targeting-mode}
 
