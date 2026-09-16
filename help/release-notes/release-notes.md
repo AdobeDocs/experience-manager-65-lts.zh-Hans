@@ -5,13 +5,11 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: aa819778006a3acb0d02772156c2af820ed353bb
+source-git-commit: 3a17318df3ad11c44b87145011bb3337d1fe9ef9
 workflow-type: tm+mt
-source-wordcount: '7575'
-ht-degree: 23%
-
+source-wordcount: '7277'
+ht-degree: 22%
 ---
-
 
 # Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
 
@@ -618,30 +616,6 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 * 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将JAR文件添加到Adobe-livecycle-jboss.ear\lib解决了此问题。 (FORMS-24690)
 * 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
 * 在JBoss®上运行的Forms JEE LTS上，与电子邮件相关的功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-core-jboss.ear)安装修补程序。 (FORMS-24892)
-
-### 离线压缩后，执行在线压缩时存储库损坏 (GRANITE-65146) {#repository-corruption-during-online-compaction-after-offline-compaction-granite-65146}
-
-如果离线压缩以前是在 JCR 存储库上运行，在线压缩时用户可能会遇到存储库损坏的情况。 在这种场景中可能会发生 `SegmentNotFoundException` (SNFE)，可能导致存储库损坏。
-
-要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-65388-1.0.zip)安装热修复程序。 由于热修复程序包含一个低级 `oak-segment-tar` 捆绑包，因此实例会在安装后重新启动。
-
-应用程序时，计划好实例的停机时间。 对于离线压缩，请使用相应的 [`oak-run` jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)，也在软件分发中提供。
-
->[!NOTE]
->
-> * 对于任何 `oak-run` 操作，请使用 [`oak-run` 1.88.1-B006 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/oak-run-1.88.1-B006.jar)。
->
-> * 通过设置系统属性 `oak.compaction.legacy=true` 启动 AEM。
-
-### AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包(GRANITE-67640) {#missing-apicontroller-bundle-granite-67640}
-
-AEM 6.5 LTS SP2中缺少`com.adobe.granite.apicontroller`包。 此捆绑包控制如何解析OSGi捆绑包，并可阻止捆绑包解析为其他捆绑包，这对于限制公开的API很有用。
-
-若要使用此功能，请从[Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/cq-6.5.lts.2-hotfix-GRANITE-67640-1.0.zip)安装修补程序。
-
->[!NOTE]
->
-> 要确保`com.adobe.granite.apicontroller`的默认配置不会引入影响现有自定义实施的意外解决限制，请在安装修补程序后验证所有已安装捆绑包的捆绑状态。
 
 ### Sling-Initial-Content (SP2) 不再支持 JSON 注释 {#json-comments-no-longer-supported-in-sling-initial-content}
 
