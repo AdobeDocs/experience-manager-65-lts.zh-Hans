@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: 3a17318df3ad11c44b87145011bb3337d1fe9ef9
+source-git-commit: e123b8357097747e1fbb598075c05180487dabdc
 workflow-type: tm+mt
 source-wordcount: '7277'
 ht-degree: 22%
