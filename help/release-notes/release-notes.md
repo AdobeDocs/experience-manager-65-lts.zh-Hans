@@ -5,10 +5,10 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: e123b8357097747e1fbb598075c05180487dabdc
+source-git-commit: 63d8bb0652c6749164d51898119418c8b649e261
 workflow-type: tm+mt
 source-wordcount: '7277'
-ht-degree: 22%
+ht-degree: 21%
 ---
 
 # Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
@@ -532,7 +532,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 >[!NOTE]
 >
-> 如果您直接从旧版 6.5 SP 升级到 LTS SP1，请按照从 6.5 [升级](/help/sites-deploying/upgrade.md)到 6.5 LTS GA 的说明进行操作。
+> 如果您从旧的6.5 SP直接升级到LTS SP3，请按照6.5到6.5 LTS GA [升级](/help/sites-deploying/upgrade.md)的说明操作。
 
 
 有关详细说明，请参阅[升级文档](/help/sites-deploying/upgrade.md)，该文档适用于LTS Service Pack更新。
