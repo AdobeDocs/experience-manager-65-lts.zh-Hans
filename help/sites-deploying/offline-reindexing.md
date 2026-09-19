@@ -4,13 +4,12 @@ description: 了解如何使用离线重新索引方法为AEM存储库重新索�
 feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 076db19026a0992725062ec9965ff6c1cb84333e
+exl-id: 156f245f-b185-4da4-b9c6-6d0a98405119
+source-git-commit: c89b742e24734fc67883b9dec966f59a01062a2a
 workflow-type: tm+mt
-source-wordcount: '1165'
-ht-degree: 0%
-
+source-wordcount: '1230'
+ht-degree: 1%
 ---
-
 # 为AEM脱机重新编制索引 {#offline-reindexing-for-aem}
 
 ## 简介 {#introduction}
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 ## 概述 {#overview}
 
-由于索引定义更改、性能优化或内容发生重大更改等多种原因，AEM存储库通常需要重新索引。 由于资源中的文本(例如，PDF文件中的文本)被提取并编制索引，因此重新索引对于资源部署而言代价高昂。 使用MongoMK存储库，数据通过网络保留，从而进一步增加重新索引所花费的时间。 解决方案是使用Oak运行的工具对&#x200B;**脱机**&#x200B;执行重新索引，然后将预建索引导入正在运行的AEM实例中。 此方法可最大限度地缩短重新索引时间，并实现更好的资源管理。
+由于索引定义更改、性能优化或内容发生重大更改等多种原因，AEM存储库通常需要重新索引。 由于资源中的文本（例如，PDF文件中的文本）被提取并编制索引，因此重新索引对于资源部署而言代价高昂。 使用MongoMK存储库，数据通过网络保留，从而进一步增加重新索引所花费的时间。 解决方案是使用Oak运行的工具对&#x200B;**脱机**&#x200B;执行重新索引，然后将预建索引导入正在运行的AEM实例中。 此方法可最大限度地缩短重新索引时间，并实现更好的资源管理。
 
 ## 方法 {#approach}
 
@@ -38,7 +37,7 @@ ht-degree: 0%
 
 ### 文本提取 {#text-extraction}
 
-要在AEM中启用完整索引，将提取二进制文件(如PDF)中的文本并将其添加到索引中。 在索引过程中，这通常是代价高昂的步骤。 文本提取是尤其建议用于重新索引资产存储库（因为它们存储大量二进制文件）的优化步骤。
+要在AEM中启用完整索引，将提取二进制文件（如PDF）中的文本并将其添加到索引中。 在索引过程中，这通常是代价高昂的步骤。 文本提取是尤其建议用于重新索引资产存储库（因为它们存储大量二进制文件）的优化步骤。
 
 ![offline-reindexing-upgrade-text-extraction](assets/offline-reindexing-upgrade-text-extraction.png)
 
@@ -161,7 +160,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 如果存在MongoMK，则如果在更靠近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
 
-有关索引[的](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)Oak-run文档中可找到其他技术详细信息。
+有关索引[&#128279;](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)的Oak-run文档中可找到其他技术详细信息。
 
 ### 导入索引 {#importing-indexes}
 

@@ -4,14 +4,12 @@ description: JBoss EAP 8使用Elytron实现辅助节点与主域控制器的安�
 solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
-source-git-commit: f093f39fb535209297940cff13a99c7631812152
+exl-id: 212aa75c-7f2a-4140-8051-77643065e429
+source-git-commit: c89b742e24734fc67883b9dec966f59a01062a2a
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 3%
-
 ---
-
-
 # 辅助节点身份验证设置（基于Elytron）
 
 ## 使用Elytron配置辅助节点身份验证
@@ -23,7 +21,7 @@ JBoss EAP 8使用&#x200B;**Elytron**&#x200B;验证群集部署中&#x200B;**主�
 
 ## 先决条件
 
-* 必须在&#x200B;**主节点`secondary`**&#x200B;上创建名为&#x200B;**的**&#x200B;管理用户。
+* 必须在&#x200B;**主节点**&#x200B;上创建名为&#x200B;`secondary`**的**&#x200B;管理用户。
 * 仅在辅助节点&#x200B;**上执行此配置**。
 * 对群集中的&#x200B;**每个辅助节点**&#x200B;重复配置。
 * 主节点和辅助节点上的&#x200B;**JBoss必须完全停止**。
@@ -229,4 +227,3 @@ JBoss EAP 8使用&#x200B;**Elytron**&#x200B;验证群集部署中&#x200B;**主�
 * **选项2**&#x200B;使用自定义凭据存储密码提供更强的安全性。
 * 只能在辅助节点上完成&#x200B;**的配置**。
 * 主节点配置会在整个域中自动重用。
-
