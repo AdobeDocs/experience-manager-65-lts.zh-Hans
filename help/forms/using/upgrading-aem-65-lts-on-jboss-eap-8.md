@@ -1,13 +1,12 @@
 ---
 title: 在JBoss EAP 8上升级AEM 6.5 LTS (Windows)
 description: 本指南提供了使用JDK 21将现有Adobe Experience Manager (AEM) 6.5 LTS安装从Windows上的JBoss EAP 7.4升级到JBoss EAP 8的分步说明。
-source-git-commit: 835530039678bc16a6de87b8d580be91a2026f94
+exl-id: 23389613-0d9f-4e0b-b133-c8e598dd9cc9
+source-git-commit: d713aac72e764849d53e8feb98ed85b89f27a44d
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 3%
-
+source-wordcount: '1430'
+ht-degree: 2%
 ---
-
 # 在JBoss EAP 8上升级AEM 6.5 LTS (Windows)
 
 ## 概述
@@ -22,7 +21,7 @@ ht-degree: 3%
 >
 >这是一个关键的升级过程。 始终首先在非生产环境中执行此升级，并维护完整的备份。
 >
-> **先决条件：**&#x200B;在继续之前，必须完成系统备份和制定有文档记录的回滚计划。
+> **先决条件：**在继续之前，必须完成系统备份和制定有文档记录的回滚计划。
 
 ## 升级前要求
 
@@ -59,8 +58,8 @@ ht-degree: 3%
 ### 备份核对清单
 
 - [ ]现有JBoss EAP 7.4安装目录的完整备份
-- [ ]文件夹的`crx-repository`备份
-- [ ]文件夹的`crx-quickstart`备份
+- [ `crx-repository`文件夹的]备份
+- [ `crx-quickstart`文件夹的]备份
 - [ ]导出所有自定义配置
 - [ ]数据库备份（如果使用外部数据库）
 - [ ]记录当前系统状态和配置
@@ -503,7 +502,7 @@ del "C:\jboss-eap-8.0\bin\crx-repository\crx-quickstart\launchpad\sling_bootstra
 |-------|---------------|----------|
 | AEM无法启动 | Java版本不正确 | 验证`JAVA_HOME`指向JDK 21 |
 | 存储库损坏错误 | 存储库复制不完整 | 从备份中恢复并重新复制存储库 |
-| 内存不足错误 | 栈内存不足 | 在`-Xmx`中增加`standalone.conf.bat` |
+| 内存不足错误 | 栈内存不足 | 在`standalone.conf.bat`中增加`-Xmx` |
 | 处于“已安装”状态的包 | 缺少依赖项 | 在Web控制台中检查捆绑包依赖关系 |
 | 端口8080已在使用中 | 使用端口的其他服务 | 停止冲突的服务或更改JBoss端口 |
 
@@ -550,8 +549,8 @@ del "C:\jboss-eap-8.0\bin\crx-repository\crx-quickstart\launchpad\sling_bootstra
 ## 相关文档
 
 - [JBoss EAP 8迁移指南](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/8.0/html/migration_guide/)
-- [Adobe Experience Manager 6.5升级指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=zh-Hans)
-- [AEM正在安装Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html?lang=zh-Hans)
+- [《Adobe Experience Manager 6.5升级指南》](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html)
+- [AEM安装Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/service-pack/sp-release-notes.html)
 
 ## 文档信息
 
