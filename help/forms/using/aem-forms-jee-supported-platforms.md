@@ -9,13 +9,11 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
 exl-id: 63d0d345-a80b-4bfb-baab-c7f7aa648695
-source-git-commit: c532abc558084ee9b58e618b0fc16677f4c5b6a4
+source-git-commit: a4f151470c6042bfaaa3d8f4a3260074f007a4d9
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2949'
 ht-degree: 4%
-
 ---
-
 
 # AEM Forms on JEE的支持平台 {#supported-platforms-for-aem-forms-on-jee}
 
@@ -82,8 +80,8 @@ Adobe建议使用这些配置，并在标准软件维护协议中提供完全支
 
 >[!NOTE]
 >
->为帮助AEM Forms客户降低拥有成本、简化部署架构并使开发栈栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。Adobe通过减少的基础架构组件列表，继续支持AEM Forms JEE栈栈。
->对于新安装，如果可行，建议在现代OSGi栈栈上部署AEM Forms，以使用关于响应式自适应Forms的最新创新，实现使用表单数据模型的移动、多渠道交互式通信以及后端数据集成。
+>为帮助AEM Forms客户降低拥有成本、简化部署架构并使开发栈栈现代化，Adobe Experience Manager企业平台正在从基于应用程序服务器的部署转向基于OSGi的独立部署。 Adobe通过减少的基础架构组件列表，继续支持AEM Forms JEE栈栈。
+>对于新安装，建议在可行的情况下，在现代OSGi栈栈上部署AEM Forms，以使用有关响应式自适应Forms的最新创新，实现使用表单数据模型的移动、多渠道交互式通信以及后端数据集成。
 
 ### Java™虚拟机(JVM) {#java-virtual-machines-jvm}
 
@@ -225,7 +223,7 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 >[!NOTE]
 >
->只有Oracle Database和IBM® Sumeru JDK 21支持WebSphere® Liberty Profile (WLP)。
+>只有Oracle Database或Microsoft® SQL Server和IBM® Sumeru JDK 21支持WebSphere® Liberty Profile (WLP)。
 
 ### 服务器操作系统 {#server-operating-systems}
 
@@ -288,7 +286,7 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 1. CRX-repository支持TarMK和MongoDB类型的持久性。
 1. JEE上的AEM Forms不支持JBoss®基于角色的访问控制(RBAC)。
-1. JEE上的AEM Forms仅支持WebSphere® Liberty Profile (WLP)与Oracle数据库和IBM® Sumeru JDK 21。
+1. JEE上的AEM Forms仅支持WebSphere® Liberty Profile (WLP)与Oracle Database或Microsoft®SQL Server和IBM®Sumeru JDK 21。
 
 <!--
 1. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312) 
@@ -671,7 +669,10 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 -->
 
 
-<!--## Revision History {#revision-history}-->
+## 修订历史记录 {#revision-history}
+
+- 6.5 LTS SP3（2026年9月）
+  - **添加支持**：除了Oracle数据库之外，Microsoft® SQL Server现在还支持WebSphere® Liberty配置文件(WLP)。
 
 <!--
 
