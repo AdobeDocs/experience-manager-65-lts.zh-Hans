@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
-source-git-commit: a4f151470c6042bfaaa3d8f4a3260074f007a4d9
+source-git-commit: 2a5cba7da93b1915126223a7de2f9fc8198e5f08
 workflow-type: tm+mt
-source-wordcount: '7674'
+source-wordcount: '7586'
 ht-degree: 21%
 ---
 
@@ -633,8 +633,6 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 ### AEM Forms
 
 * 在配置管理器中，如果未选择模块或者只选择了有限的组件，在 AEM Forms 6.5 LTS JEE Turnkey 自定义模式下引导启动时数据库初始化失败。 失败原因是缺少依赖项 (xalan-2.7.2.jar) 而导致出现错误。 将JAR文件添加到Adobe-livecycle-jboss.ear\lib解决了此问题。 (FORMS-24690)
-* 在WebSphere® Liberty Profile上运行的Forms JEE LTS Service Pack 2部署中，电子邮件功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Could not convert socket to TLS`。 (FORMS-24692)
-* 在JBoss®上运行的Forms JEE LTS上，与电子邮件相关的功能会失败。 尝试使用电子邮件功能时，服务器记录错误： `Error IMAPProvider not a subtype`。 要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/adobe-core-jboss.ear)安装修补程序。 (FORMS-24892)
 
 ### Sling-Initial-Content (SP2) 不再支持 JSON 注释 {#json-comments-no-longer-supported-in-sling-initial-content}
 
