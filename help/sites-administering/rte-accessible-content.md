@@ -8,11 +8,9 @@ role: Admin
 exl-id: deba01bd-7a8d-48cd-956d-fbe8eb8671ba
 source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 0%
-
+source-wordcount: '970'
+ht-degree: 2%
 ---
-
 # 配置RTE以创建可访问的网页和站点 {#configure-rte-for-accessibility}
 
 Adobe Experience Manager支持符合各种辅助功能标准的多种标准辅助功能。 此外，开发人员可以自定义或扩展功能，以提供有助于使用使用富文本编辑器(RTE)的Experience Manager组件创建无障碍内容的功能。
@@ -62,7 +60,7 @@ RTE包含在启用了触屏操作的用户界面和Classic用户界面的各种�
 
 ## 使用源编辑功能 {#use-of-the-source-edit-feature}
 
-在某些情况下，内容作者会发现必须检查和调整使用RTE创建的HTML源代码。 例如，在RTE内创建的一段内容可能需要额外的标记以确保符合WCAG 2.0。可以使用RTE的[源编辑](/help/sites-administering/rich-text-editor.md#aboutplugins)选项完成此操作。 您可以在`misctools`插件[&#128279;](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定`sourceedit`功能。
+在某些情况下，内容作者会发现必须检查和调整使用RTE创建的HTML源代码。 例如，在RTE内创建的一段内容可能需要额外的标记以确保符合WCAG 2.0。 可以使用RTE的[源编辑](/help/sites-administering/rich-text-editor.md#aboutplugins)选项完成此操作。 您可以在`misctools`插件[&#128279;](/help/sites-administering/rich-text-editor.md#aboutplugins)上指定`sourceedit`功能。
 
 >[!CAUTION]
 >
