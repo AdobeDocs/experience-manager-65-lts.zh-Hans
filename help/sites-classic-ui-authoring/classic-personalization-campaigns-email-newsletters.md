@@ -9,13 +9,24 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: 03890f75-bfbc-4f73-85ae-07e991728115
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
-source-wordcount: '1106'
-ht-degree: 2%
-
+source-wordcount: '1135'
+ht-degree: 4%
 ---
-
 # 将电子邮件发布到电子邮件服务提供商{#publishing-an-email-to-email-service-providers}
 
 您可以将新闻稿发布到电子邮件服务，例如ExactTarget和Silverpop Engage。 本文档介绍如何配置AEM以向这些电子邮件服务发布新闻稿。
@@ -63,42 +74,42 @@ ExactTarget的&#x200B;**电子邮件工具**&#x200B;组件可以为您的电子�
 
 1. 从&#x200B;**选项**&#x200B;菜单中选择一个选项：
 
-<table>
- <tbody>
-  <tr>
-   <td>邮寄地址（必填）</td>
-   <td>此组件在电子邮件中插入贵组织的实际邮寄地址。</td>
-  </tr>
-  <tr>
-   <td>个人资料中心(必需)</td>
-   <td>用户档案中心是一个网页，订阅者可以在其中输入和维护您保留的有关他们的个人信息。</td>
-  </tr>
-  <tr>
-   <td>以网页的形式查看电子邮件</td>
-   <td>此组件允许用户以网页的形式查看电子邮件。</td>
-  </tr>
-  <tr>
-   <td>隐私政策</td>
-   <td>此组件在电子邮件中插入指向您的隐私策略的链接。<br /> </td>
-  </tr>
-  <tr>
-   <td>取消订阅中心</td>
-   <td>为用户提供了取消订阅您的邮件列表的选项。</td>
-  </tr>
-  <tr>
-   <td>订阅中心</td>
-   <td>订阅中心是一个网页，订阅者可以在其中控制从您的组织收到的消息。</td>
-  </tr>
-  <tr>
-   <td>跟踪电子邮件打开次数</td>
-   <td>允许您使用ExactTarget跟踪功能的隐藏组件。<br /> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td>邮寄地址（必填）</td>
+      <td>此组件在电子邮件中插入贵组织的实际邮寄地址。</td>
+   </tr>
+   <tr>
+      <td>个人资料中心(必需)</td>
+      <td>用户档案中心是一个网页，订阅者可以在其中输入和维护您保留的有关他们的个人信息。</td>
+   </tr>
+   <tr>
+      <td>以网页的形式查看电子邮件</td>
+      <td>此组件允许用户以网页的形式查看电子邮件。</td>
+   </tr>
+   <tr>
+      <td>隐私政策</td>
+      <td>此组件在电子邮件中插入指向您的隐私策略的链接。<br /> </td>
+   </tr>
+   <tr>
+      <td>取消订阅中心</td>
+      <td>为用户提供了取消订阅您的邮件列表的选项。</td>
+   </tr>
+   <tr>
+      <td>订阅中心</td>
+      <td>订阅中心是一个网页，订阅者可以在其中控制从您的组织收到的消息。</td>
+   </tr>
+   <tr>
+      <td>跟踪电子邮件打开次数</td>
+      <td>允许您使用ExactTarget跟踪功能的隐藏组件。<br /> </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->仅当对电子邮件应用了ExactTarget配置时，才会填充&#x200B;**选项**&#x200B;下拉菜单。 有关详细信息，请参阅[将电子邮件服务配置应用到电子邮件设置](#applying-e-mail-service-configuration-to-e-mail-settings)。
+   >[!NOTE]
+   >
+   >仅当对电子邮件应用了ExactTarget配置时，才会填充&#x200B;**选项**&#x200B;下拉菜单。 有关详细信息，请参阅[将电子邮件服务配置应用到电子邮件设置](#applying-e-mail-service-configuration-to-e-mail-settings)。
 
 1. 将电子邮件发布到ExactTarget。
 
@@ -143,7 +154,7 @@ ExactTarget的&#x200B;**电子邮件工具**&#x200B;组件可以为您的电子�
 
 1. 打开电子邮件。
 1. 在发布电子邮件之前，请确保已将正确的配置应用于电子邮件。
-1. 单击&#x200B;**发布**。这将打开&#x200B;**将新闻稿发布到电子邮件服务提供商**&#x200B;窗口。
+1. 单击&#x200B;**发布**。 这将打开&#x200B;**将新闻稿发布到电子邮件服务提供商**&#x200B;窗口。
 1. 填写&#x200B;**新闻稿名称**&#x200B;字段。 电子邮件/新闻稿将发布到此名称的电子邮件服务提供商。 如果未提供电子邮件名称，则使用AEM中新闻稿的页面名称发布电子邮件。
 1. 单击&#x200B;**发布**。
 
@@ -167,7 +178,7 @@ ExactTarget的&#x200B;**电子邮件工具**&#x200B;组件可以为您的电子�
 要更新已发布的电子邮件，请执行以下操作：
 
 1. 打开之前已发布到电子邮件服务提供商的电子邮件/新闻稿，在对电子邮件/新闻稿进行更改后，要重新发布该提供商。
-1. 单击&#x200B;**发布**。将显示&#x200B;**将新闻稿发布到电子邮件服务提供商**&#x200B;窗口。 单击&#x200B;**更新**。
+1. 单击&#x200B;**发布**。 将显示&#x200B;**将新闻稿发布到电子邮件服务提供商**&#x200B;窗口。 单击&#x200B;**更新**。
 
    要检查电子邮件/新闻稿是否已在ExactTarget上更新，请单击&#x200B;**查看发布的电子邮件**。 这会将您转到ExactTarget中发布的电子邮件。
 

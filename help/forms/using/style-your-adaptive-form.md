@@ -6,13 +6,29 @@ feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 5b3beaa6-ca0a-454e-85ee-c3653dd423fe
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2193'
 ht-degree: 10%
-
 ---
-
 # 为自适应表单设置样式 {#do-not-publish-style-your-adaptive-form}
 
 了解如何创建自定义主题、设置各个组件的样式以及在主题中使用Web Fonts。
@@ -23,7 +39,7 @@ ht-degree: 10%
 
 ## 关于本教程  {#about-the-tutorial}
 
-您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
+您可以使用主题为自适应表单提供独特的外观和样式。 您可以应用自适应表单编辑器提供的现成主题，或创建自己的自定义主题。 AEM [!DNL Forms]提供[主题编辑器](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html)以创建自定义主题。 单个主题可以为在移动设备、平板电脑或桌面上打开的相同自适应表单提供不同的外观。 使用主题编辑器不需要预先了解CSS或LESS，但需要使用。
 
 在本教程结束时，您应该能够执行以下操作：
 
@@ -444,16 +460,12 @@ ht-degree: 10%
 您可以使用各种字体设计自适应表单。 在查看自适应表单的所有设备上可能没有用于设计自适应表单的字体。 您可以使用Web字体服务将所需的字体交付给目标设备。
 
 [!DNL Adobe Fonts]是一项Web Fonts服务。 您可以在自适应表单中配置并使用服务。 要在自适应表单中使用[!DNL Adobe Fonts]，请执行以下操作：
-1. 浏览Adobe字体的[库](https://fonts.adobe.com/)并选择字体以设置表单的样式。
-<!--
->[!NOTE]
->
->![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).
--->
 
->[!NOTE]
->
-> 可添加标记或筛选器以优化字体列表。
+1. 浏览Adobe字体的[库](https://fonts.adobe.com/)并选择字体以设置表单的样式。
+
+   >[!NOTE]
+   >
+   > 可添加标记或筛选器以优化字体列表。
 
 1. 单击&lt;/>按钮将系列添加到Web项目中，以防您找到所需的字体。
 
@@ -463,31 +475,40 @@ ht-degree: 10%
 
    >[!NOTE]
    >
-   > 只有在Web项目中具有&lt;/>按钮时，才能添加字体。
+   >只有在Web项目中具有&lt;/>按钮时，才能添加字体。
 
-2. 命名您的Web项目。
-3. 选中复选框以选择要包括的字体粗细和样式。
+1. 命名您的Web项目。
+1. 选中复选框以选择要包括的字体粗细和样式。
 
    ![添加字体库](assets/add-a-font-window.png)
 
-4. 选择&#x200B;**单击**&#x200B;以创建项目。
-5. 从屏幕复制嵌入代码和URL。
+1. 选择&#x200B;**单击**&#x200B;以创建项目。
+1. 从屏幕复制嵌入代码和URL。
+
    ![嵌入代码和URL](assets/font-add-url.png)
 
-6. 单击&#x200B;**完成**&#x200B;以关闭Web项目窗口。
-7. 登录AEM实例并转到URL `http://server:port/crx/de/index.jsp#`
-8. 在CRXDE中创建文件夹结构，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
-9. 转到新创建的`clientlibs`文件夹并添加`allowProxy`和`categories`属性。
-10. 导航到`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`并创建css文件夹。
-11. 转到创建的CSS文件夹并创建一个文件。例如，创建一个文件作为`fonts.css`，并粘贴嵌入代码以及URL。
-    ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
-12. 保存更改。
+1. 单击&#x200B;**完成**&#x200B;以关闭Web项目窗口。
+1. 登录AEM实例并转到URL `http://server:port/crx/de/index.jsp#`
+1. 在CRXDE中创建文件夹结构，例如`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`。
+1. 转到新创建的`clientlibs`文件夹并添加`allowProxy`和`categories`属性。
+1. 导航到`/apps/[fontslibrary]/[customlibrary(clientlibrary)]`并创建css文件夹。
+1. 转到创建的CSS文件夹并创建一个文件。 例如，创建一个文件作为`fonts.css`，并粘贴嵌入代码以及URL。
+
+   ![文件夹结构](/help/forms/using/assets/fonts-add-in-crxde.png)
+
+1. 保存更改。
 
 >[!NOTE]
 >
 > 要在自适应表单中使用添加的自定义字体，请确保&#x200B;**[!UICONTROL 客户端库类别]**&#x200B;中的客户端库名称与clientlib文件夹的“类别”选项中指定的名称一致。
 
 自适应表单现在可通过以下自定义字体客户端库访问包含的字体。
+
+<!--
+>[!NOTE]
+>
+>![typekit-to-adobe-fonts](assets/typekit-to-adobe-fonts.png) [!DNL Typekit] is now called Adobe Fonts and is included with Creative Cloud and other subscriptions. [Learn more](https://fonts.adobe.com/).
+-->
 
 
 <!--

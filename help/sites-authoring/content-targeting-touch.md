@@ -10,7 +10,24 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User,Admin,Developer
 exl-id: 650ba9be-6546-46dc-b4ab-ea0b97abff40
-source-git-commit: d49de63985f537da3e6b92dac5233c104b1ccdfe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
 source-wordcount: '5374'
 ht-degree: 70%
@@ -152,7 +169,7 @@ ht-degree: 70%
 >
 >产品建议是目标组件的内容。
 
-体验显示在“受众”窗格中。 在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和**&#x200B;**&#x200B;** Female 30以下的体验。 此示例显示了目标图像组件的默认 **产品建议** 。
+体验显示在“受众”窗格中。 在以下示例中，体验包 **括Default**、 **Female**、Female 30 **岁以上的体验和****** Female 30以下的体验。 此示例显示了目标图像组件的默认 **产品建议** 。
 
 ![chlimage_1-12](assets/chlimage_1-12.png)
 
@@ -532,7 +549,7 @@ ht-degree: 70%
  </tbody>
 </table>
 
-有关成功量度的更多信息，请参阅 [Adobe Target 文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)
+有关成功量度的更多信息，请参阅 [Adobe Target 文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)
 
 ### 配置设置（AEM 定位） {#configuring-settings-aem-targeting}
 
@@ -565,19 +582,19 @@ ht-degree: 70%
    * **指定的日期和时间**：特定的时间。 选择此选项时，单击日历图标，选择日期，然后指定活动结束时间。
 
 1. 要指定活动的优先级，请使用滑块选择&#x200B;**低**、**标准**&#x200B;或&#x200B;**高。**
-1. 如果您已使用Adobe Target帐户配置Adobe Analytics，则会显示“报 **告源** ”下拉菜单。 选 **择Adobe Target**&#x200B;**或Adobe Analytics** 作为源。
+1. 如果您已使用Adobe Target帐户配置Adobe Analytics，则会显示“报 **告源** ”下拉菜单。 选 **择Adobe Target****或Adobe Analytics** 作为源。
 
    如果选择 **Adobe Analytics**，请选择公司和报表包。 如果选择 **Adobe Target**，则不需要执行任何操作。
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. 在“目 **标量度** ”区域的“我的主要目标 **&#x200B;**&#x200B;”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。 请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans) 。
+1. 在“目 **标量度** ”区域的“我的主要目标 **** ”下，选择要跟踪的成功量度——转化率、收入、参与度——并输入度量的度量方式（或受众采取什么操作指示已达到目标）。 请参阅上表中目标量度的定义，并参阅 [Adobe Target成功量度相关文档](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) 。
 
    您可以通过单击右上角的三个圆点，然后选择&#x200B;**重命名**&#x200B;来重命名目标。
 
    如果需要清除所有字段，请单击右上角的三个圆点，然后选择&#x200B;**清除所有字段**。
 
-   您还可以定义所有量度的高级设置。 选择&#x200B;**高级设置**&#x200B;可访问这些设置。 请参阅上一个表中成功量度计数方式的定义以及[Adobe Target文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=zh-Hans)
+   您还可以定义所有量度的高级设置。 选择&#x200B;**高级设置**&#x200B;可访问这些设置。 请参阅上一个表中成功量度计数方式的定义以及[Adobe Target文档。](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)
 
    >[!NOTE]
    >
@@ -660,82 +677,82 @@ ht-degree: 70%
 
 1. 请按下表中所述配置 Target 组件设置。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>选项</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td><strong>位置</strong></td>
-   <td><p>位置是一个字符串，它为目标内容位置提供一个名称，并将产品建议与其在页面上的放置位置（或组件）连接起来。</p> <p>此字段是一个通用值。</p> <p>如果您将产品建议放置在某个组件中，则产品建议会记住位置 ID。 执行页面时，引擎会对用户区段进行评估，并据此解析应显示的活跃营销活动中的体验。 然后，引擎会检查页面上的位置 ID，并尝试将产品建议与其对应的位置 ID 进行匹配。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>引擎</strong></td>
-   <td>根据您要使用的引擎，在<strong>客户端规则（无跟踪）、Adobe Target、ContextHub、</strong>和<strong> Adobe Campaign </strong>之间进行选择。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>选项</strong></td>
+      <td><strong>描述</strong></td>
+   </tr>
+   <tr>
+      <td><strong>位置</strong></td>
+      <td><p>位置是一个字符串，它为目标内容位置提供一个名称，并将产品建议与其在页面上的放置位置（或组件）连接起来。</p> <p>此字段是一个通用值。</p> <p>如果您将产品建议放置在某个组件中，则产品建议会记住位置 ID。 执行页面时，引擎会对用户区段进行评估，并据此解析应显示的活跃营销活动中的体验。 然后，引擎会检查页面上的位置 ID，并尝试将产品建议与其对应的位置 ID 进行匹配。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>引擎</strong></td>
+      <td>根据您要使用的引擎，在<strong>客户端规则（无跟踪）、Adobe Target、ContextHub、</strong>和<strong> Adobe Campaign </strong>之间进行选择。</td>
+   </tr>
+   </tbody>
+   </table>
 
-如果选择 Adobe Target 作为引擎：
+   如果选择 Adobe Target 作为引擎：
 
-![chlimage_1-39](assets/chlimage_1-39.png)
+   ![chlimage_1-39](assets/chlimage_1-39.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>选项</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td><strong>准确定位</strong></td>
-   <td><p>启用“准确定位”可告知组件等到客户端上下文或上下文中心数据可用之后，再将请求发送到 Adobe Target。 这可能会增加加载时间。 在创作时，“准确定位”始终处于启用状态。</p> <p>如果选中<strong>准确定位</strong>复选框，在数据可用后，mbox会先执行<code>mboxDefine</code>，然后再执行<code>mboxUpdate</code>，从而生成Ajax请求。</p> <p>如果未选中<strong>准确定位</strong>复选框，mbox将执行<code>mboxCreate</code>，从而立即生成同步请求（在这种情况下，并非所有上下文数据都可用）。</p> <p><strong>注意：</strong>对特定组件启用或禁用“准确定位”不会影响已设置的全局设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>包含已解析的区段</strong></td>
-   <td><p>选中此复选框可包括 mbox 调用中的所有已解析的区段以及页面和框架中配置的任何参数。</p> <p>这仅适用于通过 XML API 同步 AEM 区段的情况。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项让您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
-  </tr>
-  <tr>
-   <td><strong>继承的上下文参数</strong></td>
-   <td>列出从 Adobe Target 框架继承的与所选页面关联的上下文参数（如果有）。</td>
-  </tr>
-  <tr>
-   <td><strong>上下文参数</strong></td>
-   <td>单击<strong>添加字段</strong>可配置其他上下文参数（与Target框架中可用的参数相同）。 添加到该组件的上下文参数仅将<i>应用</i>到该组件，而不应用到其他组件，这与将上下文参数直接添加到框架的情况相同。</td>
-  </tr>
-  <tr>
-   <td><strong>静态参数</strong></td>
-   <td>单击<strong>添加字段</strong>可配置其他静态参数（与Target框架中可用的参数相同）。 添加到该组件的静态参数仅将<i>应用</i>到该组件，而不应用到其他组件，这与将静态参数直接添加到框架的情况相同。 静态参数不是来自于上下文（内容中心的客户端上下文）。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>选项</strong></td>
+      <td><strong>描述</strong></td>
+   </tr>
+   <tr>
+      <td><strong>准确定位</strong></td>
+      <td><p>启用“准确定位”可告知组件等到客户端上下文或上下文中心数据可用之后，再将请求发送到 Adobe Target。 这可能会增加加载时间。 在创作时，“准确定位”始终处于启用状态。</p> <p>如果选中<strong>准确定位</strong>复选框，在数据可用后，mbox会先执行<code>mboxDefine</code>，然后再执行<code>mboxUpdate</code>，从而生成Ajax请求。</p> <p>如果未选中<strong>准确定位</strong>复选框，mbox将执行<code>mboxCreate</code>，从而立即生成同步请求（在这种情况下，并非所有上下文数据都可用）。</p> <p><strong>注意：</strong>对特定组件启用或禁用“准确定位”不会影响已设置的全局设置。 您始终可以通过在组件中选择“准确定位”来覆盖全局设置。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>包含已解析的区段</strong></td>
+      <td><p>选中此复选框可包括 mbox 调用中的所有已解析的区段以及页面和框架中配置的任何参数。</p> <p>这仅适用于通过 XML API 同步 AEM 区段的情况。 如果您的 AEM 中存在不由 Adobe Target 处理的区段（如脚本区段），则此选项让您在 AEM 中解析这些区段，并发送信息告知 Adobe Target 这些区段处于活动状态。</p> </td>
+   </tr>
+   <tr>
+      <td><strong>继承的上下文参数</strong></td>
+      <td>列出从 Adobe Target 框架继承的与所选页面关联的上下文参数（如果有）。</td>
+   </tr>
+   <tr>
+      <td><strong>上下文参数</strong></td>
+      <td>单击<strong>添加字段</strong>可配置其他上下文参数（与Target框架中可用的参数相同）。 添加到该组件的上下文参数仅将<i>应用</i>到该组件，而不应用到其他组件，这与将上下文参数直接添加到框架的情况相同。</td>
+   </tr>
+   <tr>
+      <td><strong>静态参数</strong></td>
+      <td>单击<strong>添加字段</strong>可配置其他静态参数（与Target框架中可用的参数相同）。 添加到该组件的静态参数仅将<i>应用</i>到该组件，而不应用到其他组件，这与将静态参数直接添加到框架的情况相同。 静态参数不是来自于上下文（内容中心的客户端上下文）。</td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->选择某个组件并将其设为可定位后，AEM 还会替换该组件并插入一个 Adobe Target 组件。 Adobe Target组件不仅可在手动将其添加到页面时使用，还可在定位现有组件时使用。
+   >[!NOTE]
+   >
+   >选择某个组件并将其设为可定位后，AEM 还会替换该组件并插入一个 Adobe Target 组件。 Adobe Target组件不仅可在手动将其添加到页面时使用，还可在定位现有组件时使用。
 
-如果选择Client Context (client side)作为引擎：
+   如果选择Client Context (client side)作为引擎：
 
-![chlimage_1-40](assets/chlimage_1-40.png)
+   ![chlimage_1-40](assets/chlimage_1-40.png)
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>选项</strong></td>
-   <td><strong>描述</strong></td>
-  </tr>
-  <tr>
-   <td><strong>客户端选项 — 策略</strong></td>
-   <td><p>从以下选项中进行选择：</p>
-    <ul>
-     <li><strong>前</strong>：在营销活动中排序的列表中排名最前的体验。</li>
-     <li><strong>Random</strong>：已使用任何体验。</li>
-     <li><strong>点击流得分</strong>：使用在客户端上下文中跟踪的标记和相关标记点击。 比较Teaser页面上定义的标记的点击率。</li>
-    </ul> </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>选项</strong></td>
+      <td><strong>描述</strong></td>
+   </tr>
+   <tr>
+      <td><strong>客户端选项 — 策略</strong></td>
+      <td><p>从以下选项中进行选择：</p>
+      <ul>
+      <li><strong>前</strong>：在营销活动中排序的列表中排名最前的体验。</li>
+      <li><strong>Random</strong>：已使用任何体验。</li>
+      <li><strong>点击流得分</strong>：使用在客户端上下文中跟踪的标记和相关标记点击。 比较Teaser页面上定义的标记的点击率。</li>
+      </ul> </td>
+   </tr>
+   </tbody>
+   </table>
 
-如果要将 AEM 与 Adobe Campaign 集成，请选择 **Adobe Campaign** 作为引擎。 有关详细信息，请参阅[将AEM与Adobe Campaign集成](/help/sites-administering/campaign.md)。
+   如果要将 AEM 与 Adobe Campaign 集成，请选择 **Adobe Campaign** 作为引擎。 有关详细信息，请参阅[将AEM与Adobe Campaign集成](/help/sites-administering/campaign.md)。
 
-如果要使用 ContextHub 进行定位，请选择 **ContextHub** 作为引擎。 请参阅[配置ContextHub。](/help/sites-developing/ch-configuring.md)
+   如果要使用 ContextHub 进行定位，请选择 **ContextHub** 作为引擎。 请参阅[配置ContextHub。](/help/sites-developing/ch-configuring.md)

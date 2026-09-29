@@ -4,13 +4,23 @@ description: 使用AEM自适应表单核心组件向自适应表单添加注释�
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 53645880-92e2-4dfd-9c5d-50c849d6e32b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 0%
-
 ---
-
 # 对自适应表单进行版本控制、审核和注释
 
 <span class="preview">默认情况下不启用此功能。 您可以从官方地址写信到aem-forms-ea@adobe.com请求访问该功能。</span>
@@ -59,8 +69,8 @@ ht-degree: 0%
 审阅是一种允许一个或多个审阅人对表单进行评论的机制。 任何表单用户均可对表单进行注释或通过注释审阅表单。 若要评论表单，请选择&#x200B;**[!UICONTROL 表单]**，然后向表单添加&#x200B;**[!UICONTROL 评论]**。
 
 >[!NOTE]
-> 如上所述，在自适应表单核心组件中使用注释时，表单功能[向表单添加审阅者](/help/forms/using/create-reviews-forms.md)被禁用。
-
+>
+>如上所述，在自适应表单核心组件中使用注释时，表单功能[向表单添加审阅者](/help/forms/using/create-reviews-forms.md)被禁用。
 
 ![在表单上添加评论](assets/form-comments.png)
 
@@ -74,7 +84,7 @@ ht-degree: 0%
 1. 单击位于右上边栏的&#x200B;**添加图标**（如图像中所示）。
    ![批注](assets/annotation.png)
 
-1. 现在，单击位于左上边栏的&#x200B;**添加图标**&#x200B;以添加批注。
+1. 现在，单击位于左上边栏的&#x200B;**添加图标**以添加批注。
    ![添加批注](assets/add-annotation.png)
 
 1. 现在，您可以添加注释，用多种颜色绘制草图以形成组件。
