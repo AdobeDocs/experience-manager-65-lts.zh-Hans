@@ -33,7 +33,7 @@ Adobe Content Package Maven插件将构建的包部署到AEM，并自动执行�
 >
 >另请参阅以下内容：
 >
->* 有关如何部署Adobe应用程序的AEM as a Cloud Service文档中的[AEM内容包Maven插件](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/maven-plugin#developer-tools)文章。
+>* 有关如何部署Adobe应用程序的AEM as a Cloud Service文档中的[AEM内容包Maven插件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developer-tools/maven-plugin#developer-tools)文章。
 >* AEM as a Cloud Service文档中的[AEM项目结构](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure)一文，介绍了如何构建现代AEM项目。
 >* 有关如何使用原型启动新的AEM项目的[AEM项目原型](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/archetype/overview)文档。
 >
