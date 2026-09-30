@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '5215'
+source-wordcount: '5216'
 ht-degree: 17%
 ---
 # 性能优化 {#performance-optimization}
@@ -227,7 +227,7 @@ JVM和OS级别的调整通常不会导致性能的大幅提升，因此应在优
 
 <!-- TODO: Change the reference to 6.5 LTS javadocs -->
 * Granite工作流队列：大多数工作流步骤使用Granite工作流队列服务，例如处理DAM资产的步骤。
-* Granite工作流外部进程作业队列：此服务用于特殊外部工作流步骤，通常用于联系外部系统和轮询结果。 例如， InDesign媒体提取流程步骤作为外部流程实施。 工作流引擎使用外部队列处理轮询。 （请参阅[com.day.cq.workflow.exec.WorkflowExternalProcess](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。）
+* Granite工作流外部进程作业队列：此服务用于特殊外部工作流步骤，通常用于联系外部系统和轮询结果。 例如， InDesign媒体提取流程步骤作为外部流程实施。 工作流引擎使用外部队列处理轮询。 （请参阅[com.day.cq.workflow.exec.WorkflowExternalProcess](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkflowExternalProcess.html)。）
 
 配置这些服务以限制并发运行的工作流进程的最大数量。
 

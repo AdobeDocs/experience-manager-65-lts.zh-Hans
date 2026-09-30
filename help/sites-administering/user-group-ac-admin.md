@@ -23,9 +23,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '3107'
+source-wordcount: '3109'
 ht-degree: 3%
 ---
 # 用户、组和访问权限管理{#user-group-and-access-rights-administration}
@@ -72,7 +72,7 @@ CRX允许您配置用户和组帐户的访问权限。 然后将同样的基本�
 
 >[!NOTE]
 >
->CRX实现JSR-283[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定义的访问控制。
+>CRX实现JSR-283[&#128279;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)定义的访问控制。
 >
 >CRX存储库的标准安装配置为使用基于资源的访问控制列表。 这是JSR-283访问控制的一种可能实现以及Jackrabbit提供的实现之一。
 
@@ -503,7 +503,7 @@ CRX中的访问权限评估如下：
 
 ### 特权 {#privileges}
 
-添加访问控制条目时，可以选择以下权限（有关完整详细信息，请参阅[安全API](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)）：
+添加访问控制条目时，可以选择以下权限（有关完整详细信息，请参阅[安全API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/security/Privilege.html)）：
 
 <table>
  <tbody>

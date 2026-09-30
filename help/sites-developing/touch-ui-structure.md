@@ -20,10 +20,10 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 6%
+source-wordcount: '890'
+ht-degree: 5%
 ---
 # Adobe Experience Manager触屏优化UI的结构{#structure-of-the-aem-touch-enabled-ui}
 
@@ -176,4 +176,4 @@ AEM附带几个已为页面创作实施的层；例如，编辑、预览、批�
 
 有关触控式UI相关概念的更多详细信息，请阅读[AEM触控式UI的概念](/help/sites-developing/touch-ui-concepts.md)。
 
-有关更多技术信息，请参阅启用触屏的页面编辑器的[JS文档集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)。
+有关更多技术信息，请参阅启用触屏的页面编辑器的[JS文档集](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/jsdoc/ui-touch/editor-core/index.html)。

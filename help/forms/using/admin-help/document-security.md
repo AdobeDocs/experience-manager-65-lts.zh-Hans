@@ -20,9 +20,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3287'
 ht-degree: 0%
 ---
 # 关于文档安全 {#about-document-security}
@@ -283,4 +283,4 @@ Document Security管理员可以使用“用户管理”中的以下权限创建
 
   >[!NOTE]
   >
-  >您可以使用[getAllPolicysetnames()](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API检索最多1000个策略集名称。 在内部，API最多可检索1000个策略，而API调用器对这些策略具有文档发布者权限，然后可创建一组与检索到的策略关联的唯一策略集名称，并将其返回给您。 例如，当API检索1000个策略并且检索到的策略与总共200个策略集关联时，API仅返回200个策略集名称。
+  >您可以使用[getAllPolicysetnames()](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API检索最多1000个策略集名称。 在内部，API最多可检索1000个策略，而API调用器对这些策略具有文档发布者权限，然后可创建一组与检索到的策略关联的唯一策略集名称，并将其返回给您。 例如，当API检索1000个策略并且检索到的策略与总共200个策略集关联时，API仅返回200个策略集名称。

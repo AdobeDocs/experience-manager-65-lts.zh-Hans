@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 1%
 ---
 # 开发表单（经典 UI）{#developing-forms-classic-ui}
@@ -324,7 +324,7 @@ ht-degree: 1%
 
 ### 开发脚本以用于Forms {#developing-scripts-for-use-with-forms}
 
-有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
+有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
 
 您可以将此用于操作，例如在提交表单之前调用服务，并在服务失败时取消服务：
 

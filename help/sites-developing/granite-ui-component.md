@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '550'
 ht-degree: 2%
 ---
 # 创建新的 Granite UI 字段组件{#creating-a-new-granite-ui-field-component}
@@ -37,7 +37,7 @@ Granite UI提供一系列设计用于表单的组件；这些组件在Granite UI
 
 >[!NOTE]
 >
->有关字段的完整详细信息，请参阅[Granite用户界面文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)。
+>有关字段的完整详细信息，请参阅[Granite用户界面文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)。
 
 使用Granite UI Foundation框架来开发和/或扩展Granite组件。 这包含两个元素：
 
@@ -59,7 +59,7 @@ Granite UI提供一系列设计用于表单的组件；这些组件在Granite UI
 * `init.jsp`：处理常规处理；添加标签、描述，并提供呈现字段时所需的表单值。
 * `render.jsp`：这是执行字段的实际渲染的位置，必须覆盖您的自定义字段；由`init.jsp`包含。
 
-有关详细信息，请参阅[Granite UI文档 — 字段](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)。
+有关详细信息，请参阅[Granite UI文档 — 字段](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html)。
 
 有关示例，请参阅：
 

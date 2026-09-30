@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '857'
 ht-degree: 0%
 ---
 # [!DNL Assets] 代理开发 {#assets-proxy-development}
@@ -95,7 +95,7 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 
 ### 客户端API {#client-api}
 
-[`JobService`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html)可用作OSGi服务，它提供创建作业、删除作业以及从这些作业获取结果的方法。 此服务(`JobServiceImpl`)的默认实现使用HTTP客户端与远程代理servlet进行通信。
+[`JobService`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/index.html)可用作OSGi服务，它提供创建作业、删除作业以及从这些作业获取结果的方法。 此服务(`JobServiceImpl`)的默认实现使用HTTP客户端与远程代理servlet进行通信。
 
 以下是API用法的示例：
 
@@ -122,10 +122,10 @@ curl -u admin:admin -F":operation=remove" -F"jobid=xxxxxxxxxxxx"
 ### Cloud Service配置 {#cloud-service-configurations}
 
 <!--
-TBD: Cannot find com.day.cq.dam.api.proxy at https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
+TBD: Cannot find com.day.cq.dam.api.proxy at https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
 >
->Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
+>Reference documentation for the proxy API is available under [`com.day.cq.dam.api.proxy`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/dam/api/proxy/package-summary.html).
 -->
 
 代理和代理工作程序配置均可通过云服务配置使用，可从[!DNL Assets] **工具**&#x200B;控制台或`/etc/cloudservices/proxy`下访问。 每个代理辅助进程应在`/etc/cloudservices/proxy`下添加一个节点，用于辅助进程特定的配置详细信息（例如，`/etc/cloudservices/proxy/workername`）。

@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 7%
 ---
 # 使用隐藏条件 {#using-hide-conditions}
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 `com.adobe.granite.ui.components.FilteringResourceWrapper`负责根据位于要过滤的字段上的`granite:hide`属性的存在和值来过滤资源。 `/libs/cq/gui/components/authoring/dialog/dialog.jsp`的实现包括`FilteringResourceWrapper.`的实例
 
-该实现使用Granite [ELResolver API](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html)，并通过ExpressionCustomizer添加`cqDesign`自定义变量。
+该实现使用Granite [ELResolver API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html)，并通过ExpressionCustomizer添加`cqDesign`自定义变量。
 
 以下是位于`etc/design`下或作为内容策略的设计节点上隐藏条件的一些示例。
 

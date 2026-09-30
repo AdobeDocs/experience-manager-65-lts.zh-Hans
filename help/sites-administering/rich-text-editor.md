@@ -17,9 +17,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2978'
 ht-degree: 1%
 ---
 # 配置富文本编辑器 {#configure-the-rich-text-editor}
@@ -327,12 +327,12 @@ RTE中的可用选项会从用户界面配置下游流向内容策略。
 
 ## 更多信息 {#further-information}
 
-有关配置RTE的更多信息，请参阅[AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)参考。
+有关配置RTE的更多信息，请参阅[AEM Widget API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)参考。
 
 具体来说，要查看插件及相关可用选项，请执行以下操作：
 
-* [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)组件提供了一个表单字段，用于编辑样式化文本信息(RTF)。 要了解富文本表单的所有可用参数，请参阅配置选项。
-* 富文本组件使用[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的插件提供多种功能。 对于每个插件：
+* [CQ.form.RichText](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)组件提供了一个表单字段，用于编辑样式化文本信息(RTF)。 要了解富文本表单的所有可用参数，请参阅配置选项。
+* 富文本组件使用[CQ.form.rte.plugins.Plugin](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的插件提供多种功能。 对于每个插件：
 
   * 有关可以启用（或禁用）的功能的详细信息，请参阅功能
   * 有关相应插件的详细配置，请参阅所有可用参数的配置选项

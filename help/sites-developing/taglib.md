@@ -22,7 +22,7 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
 source-wordcount: '2466'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Granite标记库包含有用的函数。
 
 ### &lt;ui:includeClientLib> {#ui-includeclientlib}
 
-`<ui:includeClientLib>`标记包含AEM html客户端库，该库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在jsp中多次使用此标记。 此标记是` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`服务接口周围的方便包装。
+`<ui:includeClientLib>`标记包含AEM html客户端库，该库可以是js、css或主题库。 对于不同类型的多个包含项（例如js和css），必须在jsp中多次使用此标记。 此标记是` [com.adobe.granite.ui.clientlibs.HtmlLibraryManager](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/ui/clientlibs/HtmlLibraryManager.html)`服务接口周围的方便包装。
 
 它具有以下属性：
 

@@ -20,15 +20,15 @@ subfeature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 8%
+source-wordcount: '225'
+ht-degree: 3%
 ---
 
 # 自定义命名空间{#custom-namespaces}
 
-了解如何定义自定义[命名空间](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html)并将其部署到AEM 6.5 LTS。
+了解如何定义自定义[命名空间](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/1.0/4.5_Namespaces.html)并将其部署到AEM 6.5 LTS。
 
 自定义命名空间是`:`之前的JCR属性的可选部分。 AEM使用多个命名空间，例如：
 

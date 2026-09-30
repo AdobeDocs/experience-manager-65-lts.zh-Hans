@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '5032'
+source-wordcount: '5034'
 ht-degree: 3%
 ---
 # 创建功能全面的网站(JSP){#create-a-fully-featured-website-jsp}
@@ -532,9 +532,9 @@ static.css文件和图像的示例
 
 1. 将以下代码复制到`navimage.png.java.`此代码扩展AbstractImageServlet类：
 
-   * [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)创建用于存储当前资源属性的ImageContext对象。
+   * [AbstractImageServlet](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html)创建用于存储当前资源属性的ImageContext对象。
    * 资源的父页面是从ImageContext对象提取的。 然后获取页面标题和副标题。
-   * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/ImageHelper.html)用于从站点设计的navimage_bg.jpg文件、页面标题和页面子标题生成图像。
+   * [ImageHelper](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/commons/ImageHelper.html)用于从站点设计的navimage_bg.jpg文件、页面标题和页面子标题生成图像。
 
    ```java
    package apps.mywebsite.components.contentpage;

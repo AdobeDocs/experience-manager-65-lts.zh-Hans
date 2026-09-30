@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '3268'
+source-wordcount: '3270'
 ht-degree: 2%
 ---
 # 工作流步骤参考 {#workflow-step-reference}
@@ -349,7 +349,7 @@ function check(){
 
 1. **示例对话框定义**
 
-   以下XML代码段表示在有效负荷内容的`watchEmail`节点中存储`String`值的对话框。 标题节点表示[TextField](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html)组件：
+   以下XML代码段表示在有效负荷内容的`watchEmail`节点中存储`String`值的对话框。 标题节点表示[TextField](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/textfield/index.html)组件：
 
    ```xml
    jcr:primaryType="nt:unstructured"
@@ -437,7 +437,7 @@ function check(){
 
 * **OSGi服务**
 
-  服务必须实现[com.day.cq.workflow.exec.ParticipantStepChooser](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)接口。 该界面定义了以下成员：
+  服务必须实现[com.day.cq.workflow.exec.ParticipantStepChooser](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/workflow/exec/ParticipantStepChooser.html)接口。 该界面定义了以下成员：
 
   * `SERVICE_PROPERTY_LABEL`字段：使用此字段指定参与者选择器的名称。 该名称出现在&#x200B;**动态参与者步骤**&#x200B;属性的可用参与者选择器列表中。
 

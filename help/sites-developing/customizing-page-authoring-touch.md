@@ -20,10 +20,10 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 39%
+source-wordcount: '1472'
+ht-degree: 38%
 ---
 # 自定义页面创作{#customizing-page-authoring}
 
@@ -46,7 +46,7 @@ Adobe Experience Manager (AEM)提供了各种机制，允许您自定义创作�
 
 >[!NOTE]
 >
->有关详细信息，请参阅[JS文档集](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html)。
+>有关详细信息，请参阅[JS文档集](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/jsdoc/ui-touch/editor-core/index.html)。
 
 可以通过多种方式使用这些功能来扩展AEM实例中的页面创作功能。 下面介绍了所做的选择（在高级别）。
 
@@ -56,7 +56,7 @@ Adobe Experience Manager (AEM)提供了各种机制，允许您自定义创作�
 >
 >* 正在使用和创建[clientlibs](/help/sites-developing/clientlibs.md)。
 >* 使用和创建[叠加图](/help/sites-developing/overlays.md)。
->* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 >* [AEM触屏启用UI的结构](/help/sites-developing/touch-ui-structure.md)，了解有关用于页面创作的结构区域的详细信息。
 >
 
@@ -116,9 +116,9 @@ GITHUB上的代码
 
 创作页面时，用户通常必须从资源（例如，页面、组件和资产）中进行选择。 这可以采用列表形式，例如，作者必须从中选择项目。
 
-为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。 例如，如果使用[`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)组件允许用户选择特定资源的路径，则可以通过以下方式筛选显示的路径：
+为了使列表保持合理的大小并且与用例相关，可以通过自定义谓词的形式实施筛选条件。 例如，如果使用[`pathbrowser`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui)组件允许用户选择特定资源的路径，则可以通过以下方式筛选显示的路径：
 
-* 通过实施 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面来实施自定义谓词。
+* 通过实施 [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/commons/predicate/package-summary.html) 界面来实施自定义谓词。
 * 指定谓词的名称，并在使用 `pathbrowser` 时引用该名称。
 
 有关创建自定义谓词的详细信息，请参阅[为查询生成器实施自定义谓词计算器](/help/sites-developing/implementing-custom-predicate-evaluator.md)。

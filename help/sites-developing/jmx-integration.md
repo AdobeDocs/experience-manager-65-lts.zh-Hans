@@ -18,9 +18,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1673'
 ht-degree: 0%
 ---
 # 将服务与 JMX 控制台集成{#integrating-services-with-the-jmx-console}
@@ -47,11 +47,11 @@ ht-degree: 0%
 
 ### 使用注释提供MBean信息 {#using-annotations-to-provide-mbean-information}
 
-[com.adobe.granite.jmx.annotation](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)包提供了几个注释和类，以便轻松地将MBean元数据提供给JMX控制台。 使用这些注释和类，而不是直接向MBean的MBeanInfo对象添加信息。
+[com.adobe.granite.jmx.annotation](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)包提供了几个注释和类，以便轻松地将MBean元数据提供给JMX控制台。 使用这些注释和类，而不是直接向MBean的MBeanInfo对象添加信息。
 
 **注释**
 
-将注释添加到管理界面以指定MBean元数据。 该信息显示在JMX控制台中，供每个已部署的实现类使用。 有以下批注可用（有关完整信息，请参阅[com.adobe.granite.jmx.annotation JavaDocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)）：
+将注释添加到管理界面以指定MBean元数据。 该信息显示在JMX控制台中，供每个已部署的实现类使用。 有以下批注可用（有关完整信息，请参阅[com.adobe.granite.jmx.annotation JavaDocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/jmx/annotation/package-summary.html)）：
 
 * **描述：**&#x200B;提供MBean类或方法的描述。 在类声明上使用时，该说明将显示在MBean的“JMX控制台”页上。 在方法上使用时，说明显示为相应属性或操作的悬停文本。
 * **影响：**&#x200B;方法的影响。 有效参数值是由[javax.management.MBeanOperationInfo](https://docs.oracle.com/javase/1.5.0/docs/api/javax/management/MBeanOperationInfo.html)定义的字段。

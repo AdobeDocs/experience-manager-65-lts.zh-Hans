@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '3373'
+source-wordcount: '3379'
 ht-degree: 1%
 ---
 # AEM 核心概念 {#aem-core-concepts}
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 ## Java™内容存储库 {#java-content-repository}
 
-Java™ Content Repository (JCR)标准[JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html)指定了一种独立于供应商且独立于实施的方法，用于在内容存储库内的粒度级别双向访问内容。
+Java™ Content Repository (JCR)标准[JSR 283](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/index.html)指定了一种独立于供应商且独立于实施的方法，用于在内容存储库内的粒度级别双向访问内容。
 
 规范牵头机构为Adobe Research （瑞士） AG。
 
-[JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html)包javax.jcr.&amp;ast；用于直接访问和处理存储库内容。
+[JCR API 2.0](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/index.html)包javax.jcr.&amp;ast；用于直接访问和处理存储库内容。
 
 ## Experience Server (CRX)和Jackrabbit {#experience-server-crx-and-jackrabbit}
 
@@ -345,7 +345,7 @@ OSGi定义了一种用于开发和部署模块化应用程序和库的架构（�
 
 **项**&#x200B;项是节点或属性。
 
-有关处理Item对象的详细信息，请参阅接口javax.jcr.Item的[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html)
+有关处理Item对象的详细信息，请参阅接口javax.jcr.Item的[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Item.html)
 
 **节点（及其属性）**&#x200B;节点及其属性在JCR API 2.0规范(JSR 283)中定义。 它们存储内容、对象定义、渲染脚本和其他数据。
 
@@ -361,7 +361,7 @@ OSGi定义了一种用于开发和部署模块化应用程序和库的架构（�
 
 当前节点对象为currentNode。
 
-有关处理Node对象的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)。
+有关处理Node对象的详细信息，请参阅[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html)。
 
 **小组件**&#x200B;在AEM中，所有用户输入都由小组件管理。 这些通常用于控制内容的编辑。
 
@@ -400,7 +400,7 @@ AEM是使用ExtJS构件库开发的。
 
 S`tring pageName = currentPage.getName();`
 
-TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)。
+TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，请参阅[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)。
 
 **页面管理器**&#x200B;页面管理器是一个提供页面级操作方法的界面。
 
@@ -408,7 +408,7 @@ TcurrentPage是当前页面对象。 有关处理页面对象的详细信息，�
 
 页面myPage = pageManager.getContainingPage(myResource)；
 
-pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageManager.html)。
+pageManager是页面管理器对象，myResource是资源对象。 有关页面管理器所提供方法的详细信息，请参阅[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/api/PageManager.html)。
 
 ## 存储库中的结构 {#structure-within-the-repository}
 

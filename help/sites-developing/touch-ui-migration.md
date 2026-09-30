@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 11%
 ---
 # 迁移至触控用户界面{#migration-to-the-touch-ui}
@@ -152,7 +152,7 @@ ht-degree: 11%
 有关开发AEM的完整信息，请参阅以下内容下的资源收集：
 
 * [Developing用户指南](/help/sites-developing/getting-started.md)
-* [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [Granite UI文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites教程和视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hans)
 * [AEM Sites 开发入门——WKND 教程](/help/sites-developing/getting-started.md)
 * [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=zh-Hans)

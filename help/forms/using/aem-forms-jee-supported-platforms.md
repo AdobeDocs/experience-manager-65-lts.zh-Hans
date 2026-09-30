@@ -27,9 +27,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 7326db91b35209d8d1316d8e1e75e31359ee0316
 workflow-type: tm+mt
-source-wordcount: '2949'
+source-wordcount: '2993'
 ht-degree: 4%
 ---
 
@@ -425,6 +425,7 @@ AEM Forms应用程序现在支持Apache Cordova。 以下是受支持的特定�
 >- 如果® Office安装由于任何原因（例如由于批量许可安装无法在指定时间段内找到KMS主机）而停用或取消许可，则在重新许可并重新激活安装之前，转换可能会失败。
 >- PDF Generator不支持Microsoft® Office 365。
 >- Windows和Linux®均支持OpenOffice的PDF Generator转换。
+>- 在Red Hat® Enterprise Linux® 9上，32位OpenOffice内部版本需要`libcrypt.so.1`，默认情况下不安装该内部版本。 如果缺少它，则OpenOffice无法启动，并出现错误`soffice.bin: error while loading shared libraries: libcrypt.so.1: cannot open shared object file: No such file or directory`，并且OpenOffice到PDF的转换失败。 安装`libxcrypt-compat`包（32位）以提供库： `sudo dnf install -y libxcrypt-compat.i686`。
 >- 仅在Windows上支持OCR PDF、优化PDF和Export PDF功能。
 >- PDF Generator不支持Microsoft® Windows 11。
 >- ® Office 2021专业增强版支持已弃用。

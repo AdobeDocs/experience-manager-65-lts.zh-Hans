@@ -16,9 +16,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '4952'
+source-wordcount: '4955'
 ht-degree: 1%
 ---
 # Adobe Experience Manager (AEM)组件 — 基础知识{#aem-components-the-basics}
@@ -210,7 +210,7 @@ AEM组件的结构强大而灵活，主要考虑因素包括：
 
 组件的图标或缩写在开发人员创建组件时通过组件的JCR属性定义。 这些属性的计算顺序如下，并且使用找到的第一个有效属性。
 
-1. `cq:icon` — 字符串属性，指向要在组件浏览器中显示的[Coral UI库](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html)中的标准图标
+1. `cq:icon` — 字符串属性，指向要在组件浏览器中显示的[Coral UI库](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/coral-ui/coralui3/Coral.Icon.html)中的标准图标
    * 使用Coral图标的HTML属性的值。
 1. `abbreviation` — 用于自定义组件浏览器中组件名称的缩写的字符串属性
    * 缩写应限制为两个字符。
@@ -1042,7 +1042,7 @@ AEM中的组件遵循三个不同的层次结构：
 
 >[!NOTE]
 >
->对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅[`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar)和[`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover)构件文档的`before<action>`和`after<action>`事件部分。
+>对于经典UI，要查看哪些参数可以在处理程序中使用，请参阅[`CQ.wcm.EditBar`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.wcm.EditBar)和[`CQ.wcm.EditRollover`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover)构件文档的`before<action>`和`after<action>`事件部分。
 
 使用下列配置，在删除、编辑、插入或移动组件后刷新页面：
 

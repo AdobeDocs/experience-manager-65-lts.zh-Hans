@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2209'
 ht-degree: 1%
 ---
 # Adobe Experience Manager触屏优化UI的概念{#concepts-of-the-aem-touch-enabled-ui}
@@ -205,7 +205,7 @@ Granite UI和ExtJS（用于经典UI）之间的差异也令人感兴趣：
 
 ### Granite UI基础组件 {#granite-ui-foundation-components}
 
-[Granite UI基础组件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)提供了构建任何UI所需的基本构建块。 其中包括：
+[Granite UI基础组件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)提供了构建任何UI所需的基本构建块。 其中包括：
 
 * 按钮
 * 超链接
@@ -262,7 +262,7 @@ Granite UI和ExtJS（用于经典UI）之间的差异也令人感兴趣：
 
 ### Granite UI管理组件 {#granite-ui-administration-components}
 
-[Granite UI管理组件](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)构建在基础组件上，以提供任何管理应用程序都可以实现的通用构建块。 其中包括：
+[Granite UI管理组件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)构建在基础组件上，以提供任何管理应用程序都可以实现的通用构建块。 其中包括：
 
 * 全局导航栏
 * 边栏（骨架）

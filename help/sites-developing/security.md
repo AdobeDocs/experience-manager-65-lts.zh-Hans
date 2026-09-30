@@ -21,9 +21,9 @@ subfeature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 0%
 ---
 # 安全性{#security}
@@ -48,7 +48,7 @@ AEM提供的XSS保护机制基于[OWASP (Open Web Application Security Project)]
 
 >[!NOTE]
 >
->Adobe建议您始终使用AEM[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/xss/XSSAPI.html)提供的XSSAPI访问XSS保护API。
+>Adobe建议您始终使用AEM[&#128279;](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/xss/XSSAPI.html)提供的XSSAPI访问XSS保护API。
 
 此外，Web应用程序防火墙（如Apache的[mod_security](https://www.modsecurity.org)）可以对部署环境的安全提供可靠的集中控制，并保护用户免受以前未检测到的跨站点脚本攻击。
 

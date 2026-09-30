@@ -25,9 +25,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2268'
 ht-degree: 2%
 ---
 # 使用批处理API生成多个交互式通信 {#use-batch-api-to-generate-multiple-ic}
@@ -185,7 +185,7 @@ ht-degree: 2%
 
 ## 使用REST请求调用批处理API
 
-您可以通过代表性状态传输(REST)请求调用[批处理API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html)。 通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
+您可以通过代表性状态传输(REST)请求调用[批处理API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/index.html)。 通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
 
 在部署Java™ Servlet之前，请确保交互式通信以及相应的数据文件已准备就绪。 执行以下步骤，以便创建和部署Java™ Servlet：
 

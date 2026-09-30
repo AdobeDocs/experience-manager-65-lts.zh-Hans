@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '2058'
 ht-degree: 1%
 ---
 # 以编程方式与工作流交互{#interacting-with-workflows-programmatically}
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 使用工作流Java API {#using-the-workflow-java-api}
 
-工作流Java API包含[`com.adobe.granite.workflow`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/package-summary.html)包和多个子包。 API最重要的成员是`com.adobe.granite.workflow.WorkflowSession`类。 `WorkflowSession`类提供对设计时和运行时工作流对象的访问权限：
+工作流Java API包含[`com.adobe.granite.workflow`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/package-summary.html)包和多个子包。 API最重要的成员是`com.adobe.granite.workflow.WorkflowSession`类。 `WorkflowSession`类提供对设计时和运行时工作流对象的访问权限：
 
 * 工作流模型
 * 工作项
@@ -49,10 +49,10 @@ ht-degree: 1%
 
 | 特性 | 对象 |
 |---|---|
-| 访问工作流 | [`WorkflowSession`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
-| 执行和查询工作流实例 | [`Workflow`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
-| 管理工作流模型 | [`WorkflowModel`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
-| 工作流中某个节点（或不该节点）的信息 | [`WorkflowStatus`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
+| 访问工作流 | [`WorkflowSession`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/WorkflowSession.html) |
+| 执行和查询工作流实例 | [`Workflow`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/exec/Workflow.html)</br>[`WorkItem`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkItem.html)</br>[`WorkflowData`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html) |
+| 管理工作流模型 | [`WorkflowModel`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowModel.html)</br>[`WorkflowNode`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowNode.html)</br>[`WorkflowTransition`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/model/WorkflowTransition.html) |
+| 工作流中某个节点（或不该节点）的信息 | [`WorkflowStatus`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) |
 
 ## 在ECMA脚本中获取工作流对象 {#obtaining-workflow-objects-in-ecma-scripts}
 
@@ -567,7 +567,7 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 ### 检查工作流状态时筛选出系统工作流 {#filtering-out-system-workflows-when-checking-workflow-status}
 
-您可以使用[WorkflowStatus API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html)检索有关节点的工作流状态的信息。
+您可以使用[WorkflowStatus API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html)检索有关节点的工作流状态的信息。
 
 各种方法都具有参数：
 
@@ -818,7 +818,7 @@ wfSession.complete(workItem, routes.get(0));
 
 ### 侦听工作流事件 {#listening-for-workflow-events}
 
-使用OSGi事件框架来侦听[`com.adobe.granite.workflow.event.WorkflowEvent`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html)类定义的事件。 此类还提供了几种有用的方法来获取有关事件主体的信息。 例如，`getWorkItem`方法返回与事件有关的工作项的`WorkItem`对象。
+使用OSGi事件框架来侦听[`com.adobe.granite.workflow.event.WorkflowEvent`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html)类定义的事件。 此类还提供了几种有用的方法来获取有关事件主体的信息。 例如，`getWorkItem`方法返回与事件有关的工作项的`WorkItem`对象。
 
 以下示例代码定义了一个服务，该服务侦听工作流事件并根据事件类型执行任务。
 

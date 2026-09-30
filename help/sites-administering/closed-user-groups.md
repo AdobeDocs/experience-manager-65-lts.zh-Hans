@@ -24,9 +24,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '6780'
+source-wordcount: '6781'
 ht-degree: 1%
 ---
 # AEM 中的封闭用户组{#closed-user-groups-in-aem}
@@ -217,7 +217,7 @@ Oak文档介绍了新的CUG策略在存储库内容中的反映方式。 有关�
 
 ### 管理CUG策略 {#managing-cug-policies}
 
-使用JCR访问控制管理API管理用于限制CUG读取访问的新类型的访问控制策略，并遵循[JCR 2.0规范](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)中描述的机制。
+使用JCR访问控制管理API管理用于限制CUG读取访问的新类型的访问控制策略，并遵循[JCR 2.0规范](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)中描述的机制。
 
 #### 设置新的CUG策略 {#set-a-new-cug-policy}
 

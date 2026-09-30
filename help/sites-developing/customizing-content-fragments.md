@@ -22,9 +22,9 @@ subfeature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2826'
+source-wordcount: '2831'
 ht-degree: 2%
 ---
 # 自定义和扩展内容片段{#customizing-and-extending-content-fragments}
@@ -255,7 +255,7 @@ ht-degree: 2%
 
 您可以使用服务器端API访问内容片段；请参阅：
 
-[com.adobe.cq.dam.cfm](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
+[com.adobe.cq.dam.cfm](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/package-summary.html)
 
 >[!CAUTION]
 >
@@ -265,7 +265,7 @@ ht-degree: 2%
 
 以下三个接口可用作入口点：
 
-* **片段模板** ([FragmentTemplate](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
+* **片段模板** ([FragmentTemplate](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/FragmentTemplate.html))
 
   使用`FragmentTemplate.createFragment()`创建片段。
 
@@ -308,7 +308,7 @@ ht-degree: 2%
 
     * 获取基本数据（名称、标题、描述）
 
-* **内容片段** ([ContentFragment](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **内容片段** ([ContentFragment](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
   利用此界面，您可以以抽象方式处理内容片段。
 
@@ -340,7 +340,7 @@ ht-degree: 2%
 
   表示片段的主元素的接口包括：
 
-  * **Content元素** ([ContentElement](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+  * **Content元素** ([ContentElement](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
     * 获取基本数据（名称、标题、描述）
     * 获取/设置内容
@@ -354,7 +354,7 @@ ht-degree: 2%
 
     * 解决变体的快捷方式（如果指定的变体不适用于元素，则应用一些其他特定于实施的回退逻辑）
 
-  * **内容变量** ([ContentVariation](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+  * **内容变量** ([ContentVariation](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
     * 获取基本数据（名称、标题、描述）
     * 获取/设置内容

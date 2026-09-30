@@ -25,9 +25,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1698'
 ht-degree: 2%
 ---
 # 为自适应表单编写自定义提交操作{#writing-custom-submit-action-for-adaptive-forms}
@@ -157,7 +157,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    将post.POST.jsp脚本添加到操作中。 (/apps/custom_submit_action/store_and_mail/)。
 
-   运行现成的“存储”操作（post.POST.jsp脚本）。 使用CQ在您的代码中提供的[FormsHelper.runAction](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String,java.lang.String,org.apache.sling.api.resource.Resource,org.apache.sling.api.SlingHttpServletRequest,org.apache.sling.api.SlingHttpServletResponse))&#x200B;(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) API来运行存储操作。 在JSP文件中添加以下代码：
+   运行现成的“存储”操作（post.POST.jsp脚本）。 使用CQ在您的代码中提供的[FormsHelper.runAction](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction(java.lang.String,java.lang.String,org.apache.sling.api.resource.Resource,org.apache.sling.api.SlingHttpServletRequest,org.apache.sling.api.SlingHttpServletResponse))&#x200B;(java.lang.String， java.lang.String， org.apache.sling.api.resource.Resource， org.apache.sling.api.SlingHttpServletRequest， org.apache.sling.api.SlingHttpServletResponse) API来运行存储操作。 在JSP文件中添加以下代码：
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 
@@ -167,7 +167,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
    `String mailTo = properties.get("mailTo");`
 
-   最后，使用CQ Mail API发送电子邮件。 使用[SimpleEmail](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/commons/mail/SimpleEmail.html)类创建电子邮件对象，如下所述：
+   最后，使用CQ Mail API发送电子邮件。 使用[SimpleEmail](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/org/apache/commons/mail/SimpleEmail.html)类创建电子邮件对象，如下所述：
 
    >[!NOTE]
    >
