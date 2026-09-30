@@ -39,7 +39,7 @@ AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4
 * 数据字典
 * 自适应表单弃用的模板和页面
 
-有关详细信息，请参阅通过安装兼容包](../../forms/using/compatibility-package.md#assetsmadecompatible)使与AEM Forms 6.5兼容的[Assets。
+有关详细信息，请参阅通过安装兼容包[&#128279;](../../forms/using/compatibility-package.md#assetsmadecompatible)使与AEM Forms 6.5兼容的Assets。
 
 ## 在AEM Forms 6.5 LTS中添加对AEM Forms 6.5、6.4、6.3和6.2资源的支持 {#add-support-for-aem-forms-and-assets-in-aem-forms-6.5.lts}
 

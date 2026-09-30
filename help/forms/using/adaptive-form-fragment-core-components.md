@@ -46,7 +46,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
-> 您可以使用表单片段组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment)的[配置对话框和设计对话框轻松自定义用户的片段体验。
+> 您可以使用表单片段组件[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment)的配置对话框和设计对话框轻松自定义用户的片段体验。
 
 
 ## 创建表单片段 {#create-a-fragment}
