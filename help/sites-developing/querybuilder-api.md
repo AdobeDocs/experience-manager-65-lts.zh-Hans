@@ -34,7 +34,7 @@ REST API通过HTTP提供对相同功能的访问，响应以JSON发送。
 
 ## Gem会议 {#gem-session}
 
-[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html)是Adobe专家提供的一系列对Adobe Experience Manager的深入技术探讨。 专门用于查询生成器的此会话对于概述和使用工具非常有用。
+[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html?lang=zh-Hans)是Adobe专家提供的一系列对Adobe Experience Manager的深入技术探讨。 专门用于查询生成器的此会话对于概述和使用工具非常有用。
 
 >[!NOTE]
 >
