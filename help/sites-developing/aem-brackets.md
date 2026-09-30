@@ -1,5 +1,5 @@
 ---
-title: AEM Brackets扩展
+title: AEM Brackets 扩展
 description: 了解如何使用Brackets的Adobe Experience Manager扩展。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,22 +9,33 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
 exl-id: 103b6fde-e001-4332-9927-5cdf2acbc40c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 0%
-
+source-wordcount: '987'
+ht-degree: 4%
 ---
-
-# AEM Brackets扩展{#aem-brackets-extension}
+# AEM Brackets 扩展{#aem-brackets-extension}
 
 ## 概述 {#overview}
 
-AEM Brackets扩展提供了用于编辑AEM组件和客户端库的流畅工作流，并且使用了[Brackets](https://brackets.io/)代码编辑器的强大功能，该编辑器提供了从代码编辑器访问Photoshop文件和图层的权限。 由扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员效率，并且还有助于对AEM知识有限的前端开发人员参与项目。 此扩展还为[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)提供了一些支持，这消除了JSP的复杂性，使组件开发更容易、更安全。
+AEM Brackets扩展提供了用于编辑AEM组件和客户端库的流畅工作流，并且使用了[Brackets](https://brackets.io/)代码编辑器的强大功能，该编辑器提供了从代码编辑器访问Photoshop文件和图层的权限。 由扩展提供的轻松同步（不需要Maven或File Vault）提高了开发人员效率，并且还有助于对AEM知识有限的前端开发人员参与项目。 此扩展还为[HTML模板语言(HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)提供了一些支持，这消除了JSP的复杂性，使组件开发更容易、更安全。
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
-### 功能 {#features}
+### 特性 {#features}
 
 AEM Brackets扩展的主要功能包括：
 

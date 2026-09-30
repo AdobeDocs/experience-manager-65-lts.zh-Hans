@@ -5,13 +5,31 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 5c6fa5ae-ac28-4d92-9123-f4f1404bdc4f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '6510'
 ht-degree: 1%
-
 ---
-
 # 以编程方式使用 AEM 文档服务  {#using-aem-document-services-programmatically}
 
 本文档中的示例和示例可帮助您了解在OSGi环境上的AEM Forms上使用AEM Document Services 。 有关JEE环境上的AEM Forms的示例和示例，请参阅
@@ -68,7 +86,7 @@ DocAssurance服务包括以下服务：
 
 >[!NOTE]
 >
->所有这些服务都使用Document对象作为输入参数，可在URL [https://helpx.adobe.com/cn/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/cn/experience-manager/6-3/forms/javadocs/index.html)上找到该输入参数的Javadoc
+>所有这些服务都使用Document对象作为输入参数，可在URL [https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/index.html)上找到该输入参数的Javadoc
 
 ### 添加不可见的签名字段 {#adding-an-invisible-signature-field}
 
@@ -4463,7 +4481,7 @@ PDF Generator服务提供一些API，用于将本机文件格式转换为PDF。 
 GeneratePDFService提供API以将各种文件格式(如.doc、.docx、.ppt、.pptx、.xls、.xlsx、.odp、.odt、.ods、.swf（已弃用）、.jpg、.bmp、.tif、.png、.html和许多其他文件格式)转换为PDF。 它还提供了API以将PDF导出为各种文件格式并优化PDF。 该服务支持以下API：
 
 * **createPDF**：将支持的文件类型转换为PDF文档。 它支持文件格式，如Microsoft Word、Microsoft PowerPoint、Microsoft Excel和Microsoft Project。 除了这些应用程序外，任何第三方通用PDF生成应用程序类型也可以插入到API中。
-* **exportPDF**：将PDF文档转换为支持的文件类型。 方法接受PDF作为输入，并以指定的文件类型格式导出PDF的内容。 您可以导出Encapsulated PostScript( eps)、HTML 3.2( htm， html)、带有CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel工作簿( xlsx)、Microsoft PowerPoint演示文稿( pptx)、PNG( png)、PDF( ps)、富文本格式( rtf)文本（可访问）(txt)、文本（纯）(txt) HTML( tif， tiff)、XML 1.0( xml)、PostScript/A-1a(sRGB)、TIFF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您还可以为PDF输出指定[自定义印前检查配置文件](https://helpx.adobe.com/cn/acrobat/using/preflight-profiles-acrobat-pro.html)。
+* **exportPDF**：将PDF文档转换为支持的文件类型。 方法接受PDF作为输入，并以指定的文件类型格式导出PDF的内容。 您可以导出Encapsulated PostScript( eps)、HTML 3.2( htm， html)、带有CSS 1.0( htm， html)、JPEG( jpg， jpeg， jpe)、JPEG2000( jpf， jpx， jp2， j2k， j2c， jpc)、Microsoft Word Document( doc， docx) Microsoft Excel工作簿( xlsx)、Microsoft PowerPoint演示文稿( pptx)、PNG( png)、PDF( ps)、富文本格式( rtf)文本（可访问）(txt)、文本（纯）(txt) HTML( tif， tiff)、XML 1.0( xml)、PostScript/A-1a(sRGB)、TIFF/A-1b、PDF/A-2a(sRGB)、PDF/A-2b(sRGB)、PDF/A-3a(sRGB)、PDF/A-3b(sRGB)格式。 您还可以为PDF输出指定[自定义印前检查配置文件](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html)。
 
 * **optimizePDF**：优化PDF文档，并将PDF文档从一种类型转换为另一种类型。 方法接受PDF文档作为输入。
 * **htmlToPdf2**：将HTML页面转换为PDF文档。 它接受HTML页面的URL作为输入。

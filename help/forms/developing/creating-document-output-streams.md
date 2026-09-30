@@ -9,14 +9,31 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: a90ccd28-00ae-4317-bfda-c39acbdb835b
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '19156'
 ht-degree: 0%
-
 ---
-
 # 创建文档输出流  {#creating-document-output-streams}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -310,10 +327,10 @@ ht-degree: 0%
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -568,10 +585,10 @@ PDF/A文档必须使用在表单设计中指定的字体，且不能替换字体
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -768,9 +785,9 @@ Output服务可呈现基于表单设计的非交互式PDF表单，该表单通�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1092,9 +1109,9 @@ ResourceRepositoryClient
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给`OutputServiceClient.ClientCredentials.UserName.UserName`字段。
-      * 将相应的密码值分配给`OutputServiceClient.ClientCredentials.UserName.Password`字段。
-      * 将常量值`HttpClientCredentialType.Basic`分配给`BasicHttpBindingSecurity.Transport.ClientCredentialType`字段。
+     * 将AEM表单用户名分配给`OutputServiceClient.ClientCredentials.UserName.UserName`字段。
+     * 将相应的密码值分配给`OutputServiceClient.ClientCredentials.UserName.Password`字段。
+     * 将常量值`HttpClientCredentialType.Basic`分配给`BasicHttpBindingSecurity.Transport.ClientCredentialType`字段。
 
    * 将`BasicHttpSecurityMode.TransportCredentialOnly`常量值分配给`BasicHttpBindingSecurity.Security.Mode`字段。
 
@@ -1300,10 +1317,10 @@ ResourceRepositoryClient
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -1542,12 +1559,12 @@ ResourceRepositoryClient
 
    * 通过调用`OutputClient`对象的`generatePrintedOutput`方法并传递以下值来检索要打印的文档：
 
-      * 指定打印流的`PrintFormat`枚举值。 例如，要创建PostScript打印流，请传递`PrintFormat.PostScript`。
-      * 一个字符串值，它指定窗体设计的名称。
-      * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-      * 一个字符串值，它指定要使用的XDC文件的位置。
-      * 包含打印到文件所需的运行时选项的`PrintedOutputOptionsSpec`对象。
-      * 表示包含要与表单设计合并的表单数据的XML数据源的`com.adobe.idp.Document`对象。
+     * 指定打印流的`PrintFormat`枚举值。 例如，要创建PostScript打印流，请传递`PrintFormat.PostScript`。
+     * 一个字符串值，它指定窗体设计的名称。
+     * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
+     * 一个字符串值，它指定要使用的XDC文件的位置。
+     * 包含打印到文件所需的运行时选项的`PrintedOutputOptionsSpec`对象。
+     * 表示包含要与表单设计合并的表单数据的XML数据源的`com.adobe.idp.Document`对象。
 
      此方法返回包含操作结果的`OutputResult`对象。
 
@@ -1586,10 +1603,10 @@ ResourceRepositoryClient
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -1611,15 +1628,15 @@ ResourceRepositoryClient
 
    * 通过调用`OutputServiceService`对象的`generatePrintedOutput`方法并传递以下值来检索要打印的文档：
 
-      * 指定打印流的`PrintFormat`枚举值。 例如，要创建PostScript打印流，请传递`PrintFormat.PostScript`。
-      * 一个字符串值，它指定窗体设计的名称。
-      * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
-      * 一个字符串值，它指定要使用的XDC文件的位置。
-      * 包含向网络打印机发送打印流时使用的打印运行时选项的`PrintedOutputOptionsSpec`对象。
-      * 包含包含表单数据的XML数据源的`BLOB`对象。
-      * 由`generatePrintedOutput`方法填充的`BLOB`对象。 `generatePrintedOutput`方法使用所生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值。）
-      * 由`generatePrintedOutput`方法填充的`BLOB`对象。 `generatePrintedOutput`方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值。）
-      * 包含操作结果的`OutputResult`对象。 （只有Web服务调用才需要此参数值。）
+     * 指定打印流的`PrintFormat`枚举值。 例如，要创建PostScript打印流，请传递`PrintFormat.PostScript`。
+     * 一个字符串值，它指定窗体设计的名称。
+     * 一个字符串值，它指定相关附属文件（如图像文件）的位置。
+     * 一个字符串值，它指定要使用的XDC文件的位置。
+     * 包含向网络打印机发送打印流时使用的打印运行时选项的`PrintedOutputOptionsSpec`对象。
+     * 包含包含表单数据的XML数据源的`BLOB`对象。
+     * 由`generatePrintedOutput`方法填充的`BLOB`对象。 `generatePrintedOutput`方法使用所生成的描述文档的元数据填充此对象。 （只有Web服务调用才需要此参数值。）
+     * 由`generatePrintedOutput`方法填充的`BLOB`对象。 `generatePrintedOutput`方法使用结果数据填充此对象。 （只有Web服务调用才需要此参数值。）
+     * 包含操作结果的`OutputResult`对象。 （只有Web服务调用才需要此参数值。）
 
    * 通过获取`OutputResult`对象的`generatedDoc`方法的值，创建要发送到打印机的`BLOB`对象。 此方法返回一个包含`generatePrintedOutput`方法返回的PostScript数据的`BLOB`对象。
 
@@ -1881,10 +1898,10 @@ Output服务执行操作后，会返回用于指定操作是否成功的XML数�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -2113,10 +2130,10 @@ Output服务执行操作后，会返回用于指定操作是否成功的XML数�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 引用XML数据源。
 
@@ -2327,10 +2344,10 @@ Output服务执行操作后，会返回用于指定操作是否成功的XML数�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`OutputServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`OutputServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 检索交互式PDF文档。
 

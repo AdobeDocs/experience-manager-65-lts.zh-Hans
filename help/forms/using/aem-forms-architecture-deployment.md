@@ -9,20 +9,34 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 exl-id: 23ffbaa6-1bd9-48c3-afa3-19737bb15de0
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 1%
-
 ---
-
 # AEM Forms 的架构与部署拓扑 {#architecture-and-deployment-topologies-for-aem-forms}
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/aem-forms-cloud-service-architecture.html)。
 
 ## 架构 {#architecture}
 
@@ -36,9 +50,9 @@ AEM Forms的架构包含以下组件：
 * **Forms服务：**&#x200B;提供表单相关功能，例如创建、汇编、分发和存档PDF文档，添加数字签名以限制对文档的访问，以及对条形码表单进行解码。 这些服务可通过在AEM中联合部署的自定义代码公开使用。
 * **Web层：** JSP或Servlet，基于通用服务和表单服务构建，可提供以下功能：
 
-   * **前端创作**：用于创作和管理表单的表单创作和表单管理用户界面。
-   * **表单呈现和提交前端**：面向最终用户的界面，供AEM Forms的最终用户（例如，访问政府网站的公民）使用。 这提供了表单呈现（在Web浏览器中显示表单）和提交功能。
-   * **REST API**： JSP和Servlet导出表单服务的子集，以供基于HTTP的客户端（如表单移动SDK）远程使用。
+  * **前端创作**：用于创作和管理表单的表单创作和表单管理用户界面。
+  * **表单呈现和提交前端**：面向最终用户的界面，供AEM Forms的最终用户（例如，访问政府网站的公民）使用。 这提供了表单呈现（在Web浏览器中显示表单）和提交功能。
+  * **REST API**： JSP和Servlet导出表单服务的子集，以供基于HTTP的客户端（如表单移动SDK）远程使用。
 
 **OSGi上的AEM Forms：** OSGi环境上的AEM Forms是标准的AEM Author或AEM Publish，并在其上部署了AEM Forms包。 您可以在[单服务器环境、场设置和群集设置](/help/sites-deploying/recommended-deploys.md)中的OSGi上运行AEM Forms。 集群设置仅可用于AEM Author实例。
 

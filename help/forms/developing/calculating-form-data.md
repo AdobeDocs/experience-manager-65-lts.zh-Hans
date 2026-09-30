@@ -10,14 +10,29 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, APIs & Integrations
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 071a6ccb-8204-4cbc-a39b-143da52c16f7
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1870'
 ht-degree: 0%
-
 ---
-
 # 计算表单数据 {#calculating-form-data}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -150,10 +165,10 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
    * 要检索包含计算脚本的表单数据，请使用其构造函数创建`com.adobe.idp.Document`对象，并从构造函数中调用`javax.servlet.http.HttpServletResponse`对象的`getInputStream`方法。
    * 调用`FormsServiceClient`对象的`processFormSubmission`方法并传递以下值：
 
-      * 包含表单数据的`com.adobe.idp.Document`对象。
-      * 一个字符串值，它指定包含所有相关HTTP标头的环境变量。 通过为`CONTENT_TYPE`环境变量指定一个或多个值来指定要处理的内容类型。 例如，要处理XML和PDF数据，请为此参数指定以下字符串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
-      * 指定`HTTP_USER_AGENT`标头值的字符串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 存储运行时选项的`RenderOptionsSpec`对象。
+     * 包含表单数据的`com.adobe.idp.Document`对象。
+     * 一个字符串值，它指定包含所有相关HTTP标头的环境变量。 通过为`CONTENT_TYPE`环境变量指定一个或多个值来指定要处理的内容类型。 例如，要处理XML和PDF数据，请为此参数指定以下字符串值： `CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`
+     * 指定`HTTP_USER_AGENT`标头值的字符串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+     * 存储运行时选项的`RenderOptionsSpec`对象。
 
      `processFormSubmission`方法返回包含表单提交结果的`FormsResult`对象。
 
@@ -197,17 +212,17 @@ Forms服务可以计算用户在表单中输入的值并显示结果。 要计�
    * 使用构造函数创建`RenderOptionsSpec`对象。 通过调用`RenderOptionsSpec`对象的`setLocale`方法并传递指定区域设置值的字符串值来设置区域设置值。
    * 调用`FormsServiceClient`对象的`processFormSubmission`方法并传递以下值：
 
-      * 包含表单数据的`BLOB`对象。
-      * 一个字符串值，它指定包含所有相关HTTP标头的环境变量。 例如，您可以指定以下字符串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * 指定`HTTP_USER_AGENT`标头值的字符串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
-      * 存储运行时选项的`RenderOptionsSpec`对象。 有关更多信息， 。
-      * 方法填充的空`BLOBHolder`对象。
-      * 方法填充的空`javax.xml.rpc.holders.StringHolder`对象。
-      * 方法填充的空`BLOBHolder`对象。
-      * 方法填充的空`BLOBHolder`对象。
-      * 方法填充的空`javax.xml.rpc.holders.ShortHolder`对象。
-      * 方法填充的空`MyArrayOf_xsd_anyTypeHolder`对象。 此参数用于存储与表单一起提交的文件附件。
-      * 用提交表单的方法填充的空`FormsResultHolder`对象。
+     * 包含表单数据的`BLOB`对象。
+     * 一个字符串值，它指定包含所有相关HTTP标头的环境变量。 例如，您可以指定以下字符串值： `HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
+     * 指定`HTTP_USER_AGENT`标头值的字符串值；例如，`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`。
+     * 存储运行时选项的`RenderOptionsSpec`对象。 有关更多信息， 。
+     * 方法填充的空`BLOBHolder`对象。
+     * 方法填充的空`javax.xml.rpc.holders.StringHolder`对象。
+     * 方法填充的空`BLOBHolder`对象。
+     * 方法填充的空`BLOBHolder`对象。
+     * 方法填充的空`javax.xml.rpc.holders.ShortHolder`对象。
+     * 方法填充的空`MyArrayOf_xsd_anyTypeHolder`对象。 此参数用于存储与表单一起提交的文件附件。
+     * 用提交表单的方法填充的空`FormsResultHolder`对象。
 
      `processFormSubmission`方法使用表单提交结果填充`FormsResultHolder`参数。 `processFormSubmission`方法返回包含表单提交结果的`FormsResult`对象。
 

@@ -1,5 +1,5 @@
 ---
-title: 排查复制问题
+title: 复制疑难解答
 description: 本文介绍了如何解决复制问题。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 015def31-c7de-42b3-8218-1284afcb6921
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 0%
-
+source-wordcount: '928'
+ht-degree: 1%
 ---
-
-# 排查复制问题{#troubleshooting-replication}
+# 复制疑难解答{#troubleshooting-replication}
 
 本页提供有关如何解决复制问题的信息。
 
@@ -54,7 +63,7 @@ ht-degree: 0%
    1. 单击顶部菜单中的“工具”。
    1. 单击放大镜按钮。
    1. 选择“XPath”作为“类型”。
-   1. 在“查询”框中，输入此查询/jcr：root/var/eventing/jobs//element(&#42;，slingevent：Job) order by @slingevent：created
+   1. 在“查询”框中，输入此查询/jcr:root/var/eventing/jobs//element(&#42;，slingevent:Job)按@slingevent:created的顺序
    1. 单击“搜索”。
    1. 在结果中，排名最前的项目是最新的Sling事件作业。 单击每个，然后查找与队列顶部显示的内容匹配的停滞复制。
 
@@ -70,7 +79,7 @@ ht-degree: 0%
    * 日志文件：logs/replication.log
    * 记录器：com.day.cq.replication
 
-1. 如果您怀疑该问题与任何方式的Sling事件/作业相关，则还可以将此Java™包添加到类别：org.apache.sling.event下
+1. 如果您怀疑该问题与Sling事件/作业以任何方式相关，则还可以将此Java™包添加到categories:org.apache.sling.event下
 
 ## 暂停复制代理队列  {#pausing-replication-agent-queue}
 

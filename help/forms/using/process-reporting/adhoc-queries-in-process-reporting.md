@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 7380be9a-7f5c-46df-97f8-6309daa2a566
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 0%
-
 ---
-
 # 流程报告中的临时查询{#ad-hoc-queries-in-process-reporting}
 
 ## 进程报告中的临时查询 {#ad-hoc-queries-in-process-reporting-1}
@@ -150,7 +165,7 @@ ht-degree: 0%
    ![task_search_result](assets/task_search_result.png)
 
 1. 单击左上角的边栏按钮![lc_pr_rail_button](assets/lc_pr_rail_button.png)以折叠&#x200B;**我的筛选器**&#x200B;窗格并展开&#x200B;**报表**&#x200B;面板的可用空间。
-1. 使用&#x200B;**报表**&#x200B;面板右上角的选项对查询结果执行操作。
+1. 使用**报表**面板右上角的选项对查询结果执行操作。
 
    * **刷新**：使用存储中的最新数据刷新报告
 

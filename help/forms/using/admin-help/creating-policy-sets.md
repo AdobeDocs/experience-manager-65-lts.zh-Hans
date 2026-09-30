@@ -9,14 +9,26 @@ feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 7d975fe3-9444-4337-ba32-98a8cc2e03f3
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 0%
-
 ---
-
 # 创建和管理策略集 {#creating-and-managing-policy-sets}
 
 >[!NOTE]
@@ -71,11 +83,11 @@ ht-degree: 0%
    * 选中要添加的用户或组的复选框，然后单击“下一步”。
    * 选择策略集协调器权限，然后单击“添加”。 可以设置以下权限：
 
-      * 查看事件
-      * 管理文档（撤销和恢复对文档的访问，以及切换文档策略）
-      * 管理策略（创建、编辑和删除策略）
-      * 管理文档发布者（添加和删除文档发布者）
-      * 委派（添加和删除策略集协调员）
+     * 查看事件
+     * 管理文档（撤销和恢复对文档的访问，以及切换文档策略）
+     * 管理策略（创建、编辑和删除策略）
+     * 管理文档发布者（添加和删除文档发布者）
+     * 委派（添加和删除策略集协调员）
 
 1. 重复步骤5以添加更多策略集协调员。
 1. 查看策略集协调器设置，然后单击“下一步”。

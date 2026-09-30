@@ -1,5 +1,5 @@
 ---
-title: 将资源导入和导出到AEM Forms
+title: 在 AEM Forms 中导入和导出资产
 description: 您可以从中导入自适应表单和模板，也可以从中将其导出到AEM实例。 这有助于迁移表单或跨系统移动表单。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,30 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 exl-id: 98304115-1c27-4261-9c34-70a9d7e7cd53
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2450'
-ht-degree: 0%
-
+source-wordcount: '2481'
+ht-degree: 1%
 ---
-
-# 将资源导入和导出到AEM Forms{#importing-and-exporting-assets-to-aem-forms}
+# 在 AEM Forms 中导入和导出资产{#importing-and-exporting-assets-to-aem-forms}
 
 您可以在不同AEM Forms实例之间移动表单和相关资源、主题、数据字典、文档片段和字母。 将系统迁移或将表单从暂存服务器移动到生产服务器时，需要执行此类移动。 对于支持通过AEM Forms UI上传和导入的资源，建议使用Forms UI进行导出或导入。 不建议使用AEM包管理器导出或导入此类资源。
 
@@ -37,11 +53,11 @@ ht-degree: 0%
 1. 选择表单资源并选择&#x200B;**下载**&#x200B;图标。
 1. 在下载资产中，选择以下选项之一，然后选择&#x200B;**下载**。
 
-   * **下载为CRX包：**&#x200B;使用相应选项将所有选定的资源和相关依赖项从一个AEM Forms实例下载并移动到另一个实例。 它将所有资源和文件夹下载为crx包。 任何表单资源，包括在AEM中创作的表单（自适应表单、交互式通信和自适应表单片段）、表单集、表单模板、PDF文档和资源（XSD、XFS、图像），都可以从AEM Forms UI中作为包下载。
-将资源下载为包的优势在于，它还可以下载选定要下载的资源已使用的资源。 例如，如果您有一个自适应表单，该表单使用表单模板、XSD和图像。 当您选择此自适应表单并将其下载为包时，下载的包中还包含表单模板、XSD和图像。 与资源关联的所有元数据属性（包括自定义属性）也会下载。
+   * **下载为CRX包：**使用相应选项将所有选定的资源和相关依赖项从一个AEM Forms实例下载并移动到另一个实例。 它将所有资源和文件夹下载为crx包。 任何表单资源，包括在AEM中创作的表单（自适应表单、交互式通信和自适应表单片段）、表单集、表单模板、PDF文档和资源（XSD、XFS、图像），都可以从AEM Forms UI中作为包下载。
+     将资源下载为包的优势在于，它还可以下载选定要下载的资源已使用的资源。 例如，如果您有一个自适应表单，该表单使用表单模板、XSD和图像。 当您选择此自适应表单并将其下载为包时，下载的包中还包含表单模板、XSD和图像。 与资源关联的所有元数据属性（包括自定义属性）也会下载。
 
-   * **将资源下载为二进制文件：**&#x200B;使用选项仅下载表单模板(XDP)、PDF forms (PDF)、文档(PDF)和资源（图像、架构、样式表）。 您可以使用外部应用程序编辑这些资源。 它将具有二进制文件的表单资产（如XSD、XDP、图像、PDF和XDP）下载为.zip文件。
-无法使用&#x200B;**将资产下载为二进制文件**&#x200B;选项下载自适应表单、交互式通信、自适应表单片段、主题和表单集。 要下载这些资源，您应该使用&#x200B;**下载为CRX包**&#x200B;选项。
+   * **将资源下载为二进制文件：**使用选项仅下载表单模板(XDP)、PDF forms (PDF)、文档(PDF)和资源（图像、架构、样式表）。 您可以使用外部应用程序编辑这些资源。 它将具有二进制文件的表单资产（如XSD、XDP、图像、PDF和XDP）下载为.zip文件。
+     无法使用**将资产下载为二进制文件**&#x200B;选项下载自适应表单、交互式通信、自适应表单片段、主题和表单集。 要下载这些资源，您应该使用&#x200B;**下载为CRX包**&#x200B;选项。
 
    选定的资产将下载为存档（.zip文件）。
 

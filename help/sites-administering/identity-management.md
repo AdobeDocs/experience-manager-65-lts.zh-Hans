@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 70a5429a-e805-49f6-9c2c-28720d9674ae
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 1%
-
 ---
-
 # Identity Management{#identity-management}
 
 只有在您提供网站访问者登录功能后，才能识别这些访客。 您可能希望提供登录功能的原因有多种：
@@ -27,7 +36,7 @@ ht-degree: 1%
 
 * [Personalization](/help/sites-administering/personalization.md)允许访客配置访问您网站的特定方式。
 
-登录（和注销）功能由具有&#x200B;**个人资料**&#x200B;[&#128279;](#profiles-and-user-accounts)&#x200B;的帐户提供，该帐户保存有关已注册访客（用户）的其他信息。 注册和授权的实际流程可能有所不同：
+登录（和注销）功能由具有&#x200B;**个人资料**](#profiles-and-user-accounts)&#x200B;的[帐户提供，该帐户保存有关已注册访客（用户）的其他信息。 注册和授权的实际流程可能有所不同：
 
 * 从网站自助注册
 

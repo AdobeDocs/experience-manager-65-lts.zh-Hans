@@ -8,13 +8,26 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 23be6248-1013-488e-91e6-ac1f6fb7da50
-source-git-commit: c714e51f0c0368988ce552969747ab5fce5c186f
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '816'
 ht-degree: 4%
-
 ---
-
 # 通信管理配置属性 {#correspondence-management-configuration-properties}
 
 要配置这些属性，请在浏览器中打开以下URL： `https://<server>:<port>/<contextPath>/system/console/configMgr`并选择&#x200B;**通信管理配置**。
@@ -48,7 +61,7 @@ ht-degree: 4%
    <td><p>任意数字</p> </td>
   </tr>
   <tr>
-   <td>节目类型</td>
+   <td>演绎版类型</td>
    <td>应用程序用于呈现信件预览的演绎版类型。 </td>
    <td>HTML演绎版</td>
    <td>HTML呈现版本/ PDF呈现版本</td>
@@ -68,7 +81,7 @@ ht-degree: 4%
   <tr>
    <td><p>目标高亮颜色</p> </td>
    <td><p>应用程序中的目标高亮颜色。</p> </td>
-   <td><p>90；155；245</p> </td>
+   <td><p>90;155;245</p> </td>
    <td><p>R；G；B格式的任何RGB颜色</p> </td>
   </tr>
   <tr>
@@ -80,7 +93,7 @@ ht-degree: 4%
   <tr>
    <td><p>内容高亮颜色</p> </td>
    <td><p>应用程序中的内容高亮颜色。</p> </td>
-   <td><p>210；225；245</p> </td>
+   <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB颜色</p> </td>
   </tr>
   <tr>
@@ -92,7 +105,7 @@ ht-degree: 4%
   <tr>
    <td><p>字段高亮颜色</p> </td>
    <td><p>应用程序中的字段高亮颜色。</p> </td>
-   <td><p>210；225；245</p> </td>
+   <td><p>210;225;245</p> </td>
    <td><p>R；G；B格式的任何RGB颜色</p> </td>
   </tr>
   <tr>
@@ -127,7 +140,7 @@ ht-degree: 4%
   </tr>
   <tr>
    <td><p>PDF提交类型</p> </td>
-   <td><p>PDF提交类型(从应用程序提交时生成的PDF类型)。</p> </td>
+   <td><p>PDF提交类型（从应用程序提交时生成的PDF类型）。</p> </td>
    <td><p>非交互式</p> </td>
    <td><p>交互式/非交互式</p> </td>
   </tr>
@@ -152,7 +165,7 @@ ht-degree: 4%
   <tr>
    <td><p>数据显示格式</p> </td>
    <td><p>为数据指定区域设置特定的显示格式。</p> </td>
-   <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator=.； numberUseGroupSeparator=truelocale=fr_FR； dateFormat=dd-MM-yyyy； numberDecimalSeparator=，； numberGroupSeparator= ； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyy； numberDecimalSeparator=。； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
+   <td><p>locale=en_US； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=truelocale=de_DE； dateFormat=dd-MM-yyy； numberDecimalSeparator=，；； numberUseGroupSeparator=fr_FR； dateFormat=dd-MM-yyy； numberDecimalSeparator=； numberUseGroupSeparator=truelocale=ja_JP； dateFormat=dd-MM-yyyy； numberDecimalSeparator=.； numberGroupSeparator=，； numberUseGroupSeparator=true</p> </td>
    <td><p>--</p> </td>
   </tr>
   <tr>

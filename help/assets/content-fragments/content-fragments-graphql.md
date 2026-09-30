@@ -5,16 +5,32 @@ feature: Content Fragments,Headless,GraphQL
 role: User,Developer
 solution: Experience Manager, Experience Manager Assets
 exl-id: 8d0271c0-a795-4ff6-a2ae-72329f05a401
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 83%
-
+source-wordcount: '697'
+ht-degree: 80%
 ---
-
 # 通过 GraphQL 使用内容片段投放 Headless 内容 {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-借助Adobe Experience Manager (AEM)，您可以使用内容片段与AEM GraphQL API(一种自定义实现，基于标准GraphQL)一起，无头交付结构化内容以用于您的应用程序。 通过自定义单个 API 查询的功能，您可以检索和投放您想要/需要呈现的特定内容（作为对单个 API 查询的响应）。
+借助Adobe Experience Manager (AEM)，您可以使用内容片段与AEM GraphQL API（一种自定义实现，基于标准GraphQL）一起，无头交付结构化内容以用于您的应用程序。 通过自定义单个 API 查询的功能，您可以检索和投放您想要/需要呈现的特定内容（作为对单个 API 查询的响应）。
 
 <!--
 >[!NOTE]
@@ -33,15 +49,15 @@ ht-degree: 83%
 
 Headless 内容管理系统 (CMS) 包括：
 
-* “*Headless内容管理系统(或headless CMS)是从头开始构建的仅后端内容管理系统(CMS)，它是一个内容存储库，通过API访问内容以在任何设备上显示。*
+* “*Headless内容管理系统（或headless CMS）是从头开始构建的仅后端内容管理系统(CMS)，它是一个内容存储库，通过API访问内容以在任何设备上显示。*
 
   请参阅[维基百科](https://en.wikipedia.org/wiki/Headless_content_management_system)。
 
 在 AEM 中创作内容片段时，这意味着：
 
-* 您可以使用内容片段来创作主要不打算在格式化页面上直接发布 (1:1) 的内容。
+* 您可以使用内容片段来创作主要不打算在格式化页面上直接发布(1:1)的内容。
 
-* 您的内容片段的内容将以预先确定的方式构建 – 根据内容片段模型。这简化了对应用程序的访问，这将进一步处理您的内容。
+* 您的内容片段的内容将以预先确定的方式构建 – 根据内容片段模型。 这简化了对应用程序的访问，这将进一步处理您的内容。
 
 ## GraphQL — 概述 {#graphql-overview}
 
@@ -51,7 +67,7 @@ GraphQL 是：
 
   请参阅 [GraphQL.org](https://graphql.org)
 
-[AEM GraphQL API](#aem-graphql-api) 让您对[内容片段](/help/assets/content-fragments/content-fragments.md)执行（复杂）查询，每个查询都根据特定的模型类型。然后，您的应用程序可以使用返回的内容。
+[AEM GraphQL API](#aem-graphql-api) 让您对[内容片段](/help/assets/content-fragments/content-fragments.md)执行（复杂）查询，每个查询都根据特定的模型类型。 然后，您的应用程序可以使用返回的内容。
 
 ## AEM GraphQL API {#aem-graphql-api}
 
@@ -83,7 +99,7 @@ AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)�
 
 * 一旦&#x200B;**启用**，用于生成[架构](https://graphql.org/learn/schema/)。
 
-* 提供 GraphQL 所需的数据类型和字段。它们确保您的应用程序仅请求可能的内容，并接收预期内容。
+* 提供 GraphQL 所需的数据类型和字段。 它们确保您的应用程序仅请求可能的内容，并接收预期内容。
 
 * 数据类型&#x200B;**[片段引用](#fragment-references)**&#x200B;可在模型中使用来引用其他内容片段，因此可引入其他级别的结构。
 
@@ -99,7 +115,7 @@ AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)�
 
 * 让您检索结构化数据。
 
-   * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
+  * 定义为&#x200B;**多源**，则主片段可以引用（检索）多个子片段。
 
 ### JSON 预览 {#json-preview}
 
@@ -111,4 +127,4 @@ AEM GraphQL API 实施基于 [GraphQL Java 库](https://graphql.org/code/#java)�
 
 ## 教程 – AEM Headless 和 GraphQL 快速入门
 
-正在寻找实践教程？请查看 [AEM Headless 和 GraphQL 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=zh-Hans)端到端教程，其中说明了在 Headless CMS 场景中，如何使用 AEM GraphQL API 构建和公开内容并由外部应用程序使用。
+正在寻找实践教程？ 请查看 [AEM Headless 和 GraphQL 快速入门](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)端到端教程，其中说明了在 Headless CMS 场景中，如何使用 AEM GraphQL API 构建和公开内容并由外部应用程序使用。

@@ -5,13 +5,27 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Assets
 feature: Smart Imaging
 exl-id: 3b4f3624-d76d-4835-834b-e8610c2c40bd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: b39a6d56-d787-413f-8024-351803c28d44
+    internal-label: Smart Imaging
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '328'
 ht-degree: 0%
-
 ---
-
 # 关于使用客户端设备像素比(DPR)的智能成像 {#client-side-dpr}
 
 当前的智能成像解决方案使用用户代理字符串来确定正在使用的设备类型（台式机、平板电脑、移动设备等）。
@@ -57,7 +71,7 @@ ht-degree: 0%
    您可以将两个DPR脚本合并到一个脚本中，以避免多个网络请求。
 
    Adobe建议您在HTML页面的&#x200B;_之前加载这些脚本_。
-Adobe还建议您将应用程序Bootstrap在不同的HTML标记下，而不是在正文元素下。原因是`dprImageInjection.js`动态注入HTML页面中正文部分顶部的图像标记。
+   Adobe还建议您将应用程序Bootstrap在不同的HTML标记下，而不是在正文元素下。 原因是`dprImageInjection.js`动态注入HTML页面中正文部分顶部的图像标记。
 
 ## JavaScript文件下载 {#client-side-dpr-script}
 

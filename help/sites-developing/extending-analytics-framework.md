@@ -1,5 +1,5 @@
 ---
-title: 自定义Adobe Analytics框架
+title: 自定义 Adobe Analytics 框架
 description: 了解如何为Adobe Experience Manager自定义Adobe Analytics框架。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
 exl-id: 6a32bd9d-268d-4d03-b495-47ec6660c138
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1638'
 ht-degree: 0%
-
 ---
-
-# 自定义Adobe Analytics框架{#customizing-the-adobe-analytics-framework}
+# 自定义 Adobe Analytics 框架{#customizing-the-adobe-analytics-framework}
 
 Adobe Analytics框架确定使用Adobe Analytics跟踪的信息。 要自定义默认框架，请使用JavaScript添加自定义跟踪，集成Adobe Analytics插件，以及更改用于跟踪的框架中的常规设置。
 
@@ -24,7 +33,7 @@ Adobe Analytics框架确定使用Adobe Analytics跟踪的信息。 要自定义�
 
 当某个页面与Adobe Analytics框架关联，并且该页面包含[对Analytics模块](/help/sites-administering/adobeanalytics.md)的引用时，将自动为该页面生成analytics.sitecatalyst.js文件。
 
-页面中的JavaScript会创建一个`s_gi`对象(s_code.js Adobe Analytics库定义了该对象)并将值分配给其属性。 对象实例的名称为`s`。 此部分中的代码示例对该`s`变量进行了多次引用。
+页面中的JavaScript会创建一个`s_gi`对象（s_code.js Adobe Analytics库定义了该对象）并将值分配给其属性。 对象实例的名称为`s`。 此部分中的代码示例对该`s`变量进行了多次引用。
 
 以下示例代码类似于analytics.sitecatalyst.js文件中的代码：
 
@@ -122,7 +131,7 @@ s.trackingServerSecure = "xxxxxxx.net";
 
 `s.prop10= 'CONSTANT';`
 
-[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)文件中的代码(包括Adobe Analytics `s-code.js`文件的内容)包含以下代码：
+[analytics.sitecatalyst.js](/help/sites-developing/extending-analytics-components.md)文件中的代码（包括Adobe Analytics `s-code.js`文件的内容）包含以下代码：
 
 `if (s.usePlugins) s.doPlugins(s)`
 
@@ -185,7 +194,7 @@ s.doPlugins=s_doPlugins;
 */
 ```
 
-analytics.sitecatalyst.js文件中的代码(包括Adobe Analytics s_code.js文件的内容)包含以下代码：
+analytics.sitecatalyst.js文件中的代码（包括Adobe Analytics s_code.js文件的内容）包含以下代码：
 
 如果(s.usePlugins) s.doPlugins(s)
 
@@ -273,7 +282,7 @@ AEM会安装以下Adobe Analytics插件，以便默认情况下可以使用：
 
    * 名称：客户端库文件夹的名称，如my-plugins
 
-   * 类型：cq：ClientLibraryFolder
+   * 类型： cq:ClientLibraryFolder
 
 1. 选择您创建的客户端库文件夹，并使用右下方的属性栏添加以下属性：
 

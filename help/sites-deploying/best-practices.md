@@ -1,5 +1,5 @@
 ---
-title: 部署最佳实践
+title: 部署最佳做法
 description: 了解如何以尽可能高效和最有效的方式部署和维护Adobe Experience Manager (AEM)。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 4f830ee9-e0e3-48df-b67d-709258cb1991
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
-
+source-wordcount: '387'
+ht-degree: 24%
 ---
-
-# 部署最佳实践{#deploying-best-practices}
+# 部署最佳做法{#deploying-best-practices}
 
 部署最佳实践描述如何以尽可能高效和最有效的方式部署或维护Adobe Experience Manager (AEM)。 这一不断增加的主题列表包括AEM中的各个领域。
 
@@ -28,9 +37,9 @@ ht-degree: 5%
 
 有关管理、开发或创作的最佳实践，请参阅以下内容之一：
 
-* [管理最佳实践](/help/sites-administering/administer-best-practices.md)
-* [制定最佳实践](/help/sites-developing/best-practices.md)
-* [创作最佳实践](/help/sites-authoring/best-practices.md)
+* [管理最佳做法](/help/sites-administering/administer-best-practices.md)
+* [开发最佳做法](/help/sites-developing/best-practices.md)
+* [创作最佳做法](/help/sites-authoring/best-practices.md)
 
 下面的表格中介绍了特定文档并将其链接到该文档。
 
@@ -42,7 +51,7 @@ ht-degree: 5%
  <tbody>
   <tr>
    <td><p>可扩展性、性能和灾难恢复</p> </td>
-   <td><a href="/help/sites-deploying/performance.md">性能和可扩展性</a></td>
+   <td><a href="/help/sites-deploying/performance.md">性能与可扩展性</a></td>
    <td>提供一份白皮书，讨论技术灵活性、高性能和良好的灾难恢复功能</td>
   </tr>
   <tr>
@@ -85,17 +94,17 @@ AEM当前在同一版本中有两个UI：经典用户界面和触屏优化用户
   </tr>
   <tr>
    <td>将 Dispatcher 与 CDN 结合使用</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=zh-Hans#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a></td>
-   <td>内容交付网络(CDN)(如Akamai Edge Delivery或Amazon Cloud Front)从距离最终用户较近的位置交付内容。</td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">将 Dispatcher 与 CDN 结合使用</a></td>
+   <td>内容交付网络 (CDN)（如 Akamai Edge Delivery 或 Amazon Cloud Front）从距离最终用户较近的站点交付内容。</td>
   </tr>
   <tr>
    <td>性能优化</td>
    <td><a href="/help/sites-deploying/configuring-performance.md">性能优化</a></td>
-   <td>关键问题是网站响应访客请求所用的时间。</td>
+   <td>一个关键问题是网站对访客请求的响应时间。</td>
   </tr>
   <tr>
    <td>性能测试</td>
-   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试的最佳实践</a></td>
+   <td><a href="/help/sites-deploying/best-practices-for-performance-testing.md">性能测试最佳做法</a></td>
    <td>描述在AEM部署上运行性能测试的最佳实践。<br /> </td>
   </tr>
  </tbody>

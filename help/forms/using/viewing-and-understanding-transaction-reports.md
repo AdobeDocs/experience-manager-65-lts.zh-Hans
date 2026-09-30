@@ -8,13 +8,26 @@ feature: Transaction Reports
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 761c9946-bf8e-468e-b8f5-36c958d68e90
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: bcb3e79d-a57e-59a4-ad50-e03803c9f153
+    internal-label: Transaction Reports
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '890'
 ht-degree: 0%
-
 ---
-
 # 在OSGi上查看和了解AEM Forms的交易报表{#viewing-and-understanding-transaction-reports}
 
 通过事务报表，您可以捕获和跟踪已提交的表单、已处理的文档和已渲染文档的数量。 跟踪这些交易背后的目标是针对产品使用情况做出明智的决策，并重新平衡硬件和软件投资。 有关详细信息，请参阅[AEM Forms交易报告概述](../../forms/using/transaction-reports-overview.md)。
@@ -26,7 +39,7 @@ ht-degree: 0%
 * 在所有发布实例上启用反向复制
 * 启用交易报表
 * 提供查看交易报告的权限
-* （可选）配置事务刷新周期和发件箱[&#128279;](/help/forms/using/installing-configuring-aem-forms-osgi.md)
+* （可选）配置事务刷新周期和发件箱[](/help/forms/using/installing-configuring-aem-forms-osgi.md)
 
 >[!NOTE]
 >
@@ -65,7 +78,7 @@ ht-degree: 0%
 
 1. 以管理员身份登录到作者实例。 转到&#x200B;**工具** > **操作** > **Web控制台**。
 1. 找到并打开&#x200B;**Forms事务存储库存储提供程序**&#x200B;服务。
-1. 在&#x200B;**发件箱**&#x200B;字段中指定自定义发件箱的名称。 单击&#x200B;**保存**。将在所有创作实例上创建一个具有指定名称的发件箱。
+1. 在&#x200B;**发件箱**&#x200B;字段中指定自定义发件箱的名称。 单击&#x200B;**保存**。 将在所有创作实例上创建一个具有指定名称的发件箱。
 
 ## 查看事务处理报表 {#viewing-the-transaction-report}
 

@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: fbc73503-efa3-480b-bdc6-9f997c3f3474
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1824'
 ht-degree: 13%
-
 ---
-
 # 将AEM 6.5与Adobe Campaign Standard集成 {#integrating-with-adobe-campaign-standard}
 
 通过将AEM 6.5与Adobe Campaign Standard (ACS)集成，您可以直接在AEM中管理电子邮件投放、内容和表单。 需要同时完成Adobe Campaign Standard和AEM的配置步骤才能在解决方案之间实现双向通信。
@@ -24,27 +33,27 @@ ht-degree: 13%
 
 >[!INFO]
 >
->本文档详细介绍如何将Adobe Campaign Standard与AEM 6.5集成。有关其他Campaign集成，请参阅文档[将AEM 6.5与Adobe Campaign集成。](campaign.md)
+>本文档详细介绍如何将Adobe Campaign Standard与AEM 6.5集成。 有关其他Campaign集成，请参阅文档[将AEM 6.5与Adobe Campaign集成。](campaign.md)
 
 ## 集成步骤 {#integration-steps}
 
 配置AEM与Adobe Campaign Standard之间的集成需要在这两个解决方案中执行多个步骤。
 
-1. [配置 &#x200B;](#aemserver-user)
-1. [验证 &#x200B;](#resource-type-filter)
+1. [在Campaign中配置`aemserver`用户](#aemserver-user)
+1. [验证Campaign中的`AEMResourceTypeFilter`](#resource-type-filter)
 1. [在Campaign中创建特定于AEM的电子邮件投放模板](#aem-email-delivery-template)
 1. [在AEM中配置Campaign集成](#campaign-integration)
 1. [配置到AEM发布实例的复制](#replication)
 1. [配置 AEM 外部化器](#externalizer)
-1. [配置 &#x200B;](#campaign-remote-user)
+1. [在AEM中配置`campaign-remote`用户](#campaign-remote-user)
 1. [在Campaign中配置AEM外部帐户](#acc-external-user)
 
 本文档将详细介绍其中的每个步骤。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 * Adobe Campaign Standard的管理员访问权限
-   * 如果您需要有关如何设置和配置Adobe Campaign Standard的其他详细信息，请参阅[Adobe Campaign Standard文档。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html?lang=zh-Hans)
+  * 如果您需要有关如何设置和配置Adobe Campaign Standard的其他详细信息，请参阅[Adobe Campaign Standard文档。](https://experienceleague.adobe.com/docs/campaign-standard/using/campaign-standard-home.html)
 * AEM的管理员访问权限
 
 ## 在Campaign中配置aemserver用户 {#aemserver-user}
@@ -61,11 +70,11 @@ ht-degree: 13%
 
    Adobe Campaign中的![aemserver用户](assets/acs-aemserver-user.png)
 
-1. 点击&#x200B;**保存**&#x200B;即可保存更改。
+1. 单击&#x200B;**保存**&#x200B;即可保存更改。
 
 您的`aemserver`用户现在拥有必要的权限，以便AEM可以使用该用户与Adobe Campaign通信。
 
-但是，在AEM可以使用`aemserver`用户之前，必须设置其密码。 这不能通过Adobe Campaign完成。 必须由Adobe支持工程师执行。 [向Adobe客户关怀部门提交票证](https://experienceleague.adobe.com/zh-hans?support-tab=home#support)以请求重置`aemserver`密码。 获得Adobe客户关怀团队提供的密码后，请将其保存在安全位置。
+但是，在AEM可以使用`aemserver`用户之前，必须设置其密码。 这不能通过Adobe Campaign完成。 必须由Adobe支持工程师执行。 [向Adobe客户关怀部门提交票证](https://experienceleague.adobe.com/?support-tab=home#support)以请求重置`aemserver`密码。 获得Adobe客户关怀团队提供的密码后，请将其保存在安全位置。
 
 ## 验证Campaign中的AEMResourceTypeFilter {#resource-type-filter}
 
@@ -87,7 +96,7 @@ ht-degree: 13%
 
    ![AEMResourceTypeFilter](assets/acs-aem-resource-type-filter.png)
 
-1. 点击&#x200B;**保存**&#x200B;即可保存更改。
+1. 单击&#x200B;**保存**&#x200B;即可保存更改。
 
 您的`AEMResourceTypeFilter`现在配置为从AEM检索正确的内容。
 
@@ -141,7 +150,7 @@ AEM使用内置集成以及您在Adobe Campaign中配置的`aemserver`用户与A
 
 1. 会打开新窗口和对话框会，用以编辑配置。 提供必要的信息。
 
-   * **用户名** — 这是您在上一步中配置的Adobe Campaign中的[用户`aemserver`。](#aemserver-user)默认情况下，这是 `aemserver`。
+   * **用户名** — 这是您在上一步中配置的[Adobe Campaign中的`aemserver`用户。](#aemserver-user) 默认情况下，它为`aemserver`。
    * **密码** — 这是您在上一步中向Adobe Campaign客户关怀部门请求的[Adobe中`aemserver`用户的密码。](#aemserver-user)
    * **API 端点** – 这是 Adobe Campaign 实例 URL。
 
@@ -153,7 +162,7 @@ AEM 现在可以与 Adobe Campaign 通信。
 
 >[!NOTE]
 >
->确保您的 Adobe Campaign 服务器可以通过 Internet 访问。AEM无法访问专用网络。
+>确保您的 Adobe Campaign 服务器可以通过 Internet 访问。 AEM无法访问专用网络。
 
 ## 配置到AEM发布实例的复制 {#replication}
 
@@ -239,7 +248,7 @@ Campaign内容由内容作者在AEM创作实例上创建。 此实例通常仅�
 
 1. 确保选中&#x200B;**已启用**&#x200B;复选框，然后单击&#x200B;**保存**&#x200B;以保存更改。
 
-恭喜！您已完成AEM与Adobe Campaign Standard之间的集成！
+恭喜！ 您已完成AEM与Adobe Campaign Standard之间的集成！
 
 ## 后续步骤 {#next-steps}
 

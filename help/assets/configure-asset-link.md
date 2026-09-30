@@ -6,13 +6,22 @@ role: Admin
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 110b7175-d398-40ff-886e-5817a1df0ec9
-source-git-commit: ce0da5056e0821c94eb06a05c663a3939b37f940
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3056'
-ht-degree: 0%
-
+source-wordcount: '3217'
+ht-degree: 2%
 ---
-
 # 为Adobe Asset Link配置Experience Manager Assets {#adobe-asset-link}
 
 [Adobe Asset Link (AAL)](https://www.adobe.com/cn/creativecloud/business/enterprise/adobe-asset-link.html)可简化内容创建过程中创意专业人士与营销人员之间的协作。 它将Adobe Experience Manager Assets与Creative Cloud桌面应用程序Adobe InDesign、Adobe Photoshop和Adobe Illustrator连接起来。 Adobe Asset Link面板允许创意人员访问和修改存储在AEM Assets中的内容，而无需离开他们最熟悉的创意应用程序。
@@ -21,7 +30,7 @@ ht-degree: 0%
 
 1. 根据需要安装包。 详细信息位于[先决条件](#prerequisites)中。
 
-1. 手动配置Experience Manager [&#128279;](#manual-configuration)1&rbrace;或使用[包](#configure-using-package)。
+1. 手动配置Experience Manager [1}或使用[包](#configure-using-package)。](#manual-configuration)
 
 1. 要将Creative Cloud许可的用户映射到Experience Manager用户，请管理[用户访问控制](#user-access)。
 
@@ -33,7 +42,7 @@ ht-degree: 0%
 
 | Assets功能 | Experience Manager版本和支持要求 |
 |--- |--- |
-| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。 </br> Experience Manager 6.4.4和6.4.6或更高版本。 </br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)。 |
+| 默认情况下，Asset Link有效 | Experience Manager 6.5和6.5.2或更高版本。</br> Experience Manager 6.4.4和6.4.6或更高版本。</br> Adobe建议在使用AAL之前安装最新的[Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)。 |
 | Asset Link在安装包后工作 | 对于Experience Manager 6.4.0 - 6.4.3，请安装[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support)包。 |
 | Adobe Stock集成 | Experience Manager 6.4.2或更高版本 |
 | 视觉或相似性搜索 | Experience Manager 6.5.0或更高版本 |
@@ -54,7 +63,7 @@ Adobe建议您安装[adobe-asset-link-config](https://experience.adobe.com/#/dow
    设置以下属性并保存更改。
 
    * [!UICONTROL 组映射]：除非需要，否则留空。 有关详细信息，请参阅[组映射](#group-mapping)。
-   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/cn/enterprise/using/create-aal-user-group.html)。
+   * [!UICONTROL 组织]：输入您在Adobe Admin Console中使用的组织ID。 有关组织ID的详细信息，请参阅[创建用户组](https://helpx.adobe.com/enterprise/using/create-aal-user-group.html)。
 
 1. 找到&#x200B;**[!UICONTROL Adobe Granite Bearer Authentication Handler]**&#x200B;配置，然后单击以进行编辑。
 
@@ -282,11 +291,11 @@ Experience Manager提供仅用于置入(FPO)的演绎版。 这些FPO呈现版�
 * 确保您的部署满足先决条件。 具体来说，请确保安装了相应的功能包或软件包。
 * 联系贵组织的合作伙伴或系统集成商。
 * 如果您的Creative Cloud用户无法在已签出的资产中进行验证，请检查电子邮件ID中域名的大小写。 若要修复，请参阅[手动配置](#manual-configuration)。
-* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/cn/enterprise/kb/asset-link-troubleshooting.html)。
+* 有关详细信息，请参阅[Asset Link疑难解答](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html)。
 
 
 >[!MORELIKETHIS]
 >
 >* [关于 Adobe Asset Link](https://helpx.adobe.com/cn/enterprise/using/adobe-asset-link.html)
->* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/cn/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [在Creative Cloud桌面应用程序中使用Asset Link并管理资源](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [配置Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/cn/enterprise/using/configure-aem-assets-for-asset-link.html)。

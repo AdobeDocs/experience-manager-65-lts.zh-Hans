@@ -1,18 +1,36 @@
 ---
-title: 使用AEM Forms工作区
+title: 使用 AEM Forms 工作区
 description: 通过流程工作流的此快速概述开始使用AEM Forms工作区。
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: User, Developer
 exl-id: 7374797f-4154-402b-bb59-075134763c58
-source-git-commit: 823923ab074bae1705cc1991e4079897e4c5cac8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 0%
-
+source-wordcount: '996'
+ht-degree: 1%
 ---
-
-# 使用AEM Forms工作区{#working-with-aem-forms-workspace}
+# 使用 AEM Forms 工作区{#working-with-aem-forms-workspace}
 
 ## 简介 {#introduction}
 
@@ -24,7 +42,7 @@ AEM Forms工作区是AEM Forms的一部分。 Workspace除PDF forms之外还促�
 
 ## 熟悉 {#getting-familiar}
 
-要熟悉创建表单应用程序以实现业务流程自动化的端到端过程，请按照以下步骤进行操作。 按照演练后的步骤，您可以使用Workbench、Designer和AEM Forms工作区创建、管理和测试应用程序。 有关实施详细信息，请参阅[创建您的第一个AEM Forms应用程序](https://help.adobe.com/zh_CN/livecycle/11.0/CreateFirstApp/index.html)。
+要熟悉创建表单应用程序以实现业务流程自动化的端到端过程，请按照以下步骤进行操作。 按照演练后的步骤，您可以使用Workbench、Designer和AEM Forms工作区创建、管理和测试应用程序。 有关实施详细信息，请参阅[创建您的第一个AEM Forms应用程序](https://help.adobe.com/en_US/livecycle/11.0/CreateFirstApp/index.html)。
 
 ## 功能概述 {#functional-overview}
 
@@ -101,7 +119,7 @@ AEM Forms客户不支持Flex Workspace。 所有使用Flex Workspace的客户都
  </tbody>
 </table>
 
-Flex WorkspaceAEM Forms工作区中未提供的某些功能包括：消息和通知、欢迎页面、审批容器以及管理列标题的选项。 有关完整列表，请参阅[Flex Workspace在AEM Forms工作区中不可用的功能](/help/forms/using/features-flex-workspace-available-html.md)。
+Flex Workspace工作区中未提供的某些功能包括：消息和通知、欢迎页面、审批容器以及管理列标题的选项。 有关完整列表，请参阅[Flex Workspace在AEM Forms工作区中不可用的功能](/help/forms/using/features-flex-workspace-available-html.md)。
 
 ## 使用AEM Forms工作区进行开发 {#developing-with-aem-forms-workspace}
 

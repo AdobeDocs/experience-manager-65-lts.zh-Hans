@@ -6,13 +6,25 @@ feature: Multi Site Manager
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 907ed679-5a91-4581-b0ab-ed550586da71
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 37%
-
 ---
-
 # MSM 最佳实践{#msm-best-practices}
 
 ## 常规 {#general}
@@ -39,7 +51,7 @@ MSM 是用于自动化内容部署的可配置框架。 实施通常涉及网站
 >您还可以使用[引用组件](/help/sites-authoring/default-components-foundation.md#reference)重复使用单个页面或段落。 但请记住：
 >
 >* MSM更加灵活，允许对同步的内容以及同步时间进行细粒度控制。
->* 现在建议将[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)置于基础组件之上。
+>* 现在建议将[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)置于基础组件之上。
 >
 
 ## Live Copy 源和 Blueprint 配置 {#live-copy-sources-and-blueprint-configurations}
@@ -91,7 +103,7 @@ MSM 是用于自动化内容部署的可配置框架。 实施通常涉及网站
 
 * 要创建站点，您需要[Blueprint配置](/help/sites-administering/msm-livecopy.md#managing-blueprint-configurations)。
 * 要允许选择在新站点中创建的语言路径，相应的语言根必须存在于 Blueprint（源）中。
-* 将[新站点创建为Live Copy &#x200B;](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)（依次使用&#x200B;**Create**&#x200B;和&#x200B;**Site**）后，此Live Copy的前两个级别为&#x200B;*浅*。 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
+* 将[新站点创建为Live Copy ](/help/sites-administering/msm-livecopy.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration)（依次使用&#x200B;**Create**&#x200B;和&#x200B;**Site**）后，此Live Copy的前两个级别为&#x200B;*浅*。 页面的子级不属于实时关系，但如果找到与触发器匹配的实时关系，则转出仍会下降。
 
   这有助于避免：
 

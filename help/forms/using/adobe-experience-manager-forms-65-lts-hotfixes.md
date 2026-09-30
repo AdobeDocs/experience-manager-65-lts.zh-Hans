@@ -5,17 +5,33 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: e485100f-3e16-4fd4-a8ce-af771d765dd1
-source-git-commit: 989d83cfc56f7a7d4e2aea5a7ac1ca444d505859
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1137'
-ht-degree: 11%
+ht-degree: 13%
 ---
 # Adobe Experience Manager Forms 6.5 LTS修补程序{#aem-form-hotfix}
 
 本文列出为解决已知问题、提高系统稳定性和增强AEM Forms 6.5 LTS的整体性能而实施的关键修复。
 
 
-本文适用于AEM Forms 6.5 LTS。 对于AEM 6.5（非LTS）部署，请参阅[Adobe Experience Manager Forms修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)。
+本文适用于AEM Forms 6.5 LTS。 对于AEM 6.5（非LTS）部署，请参阅[Adobe Experience Manager Forms修补程序](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)。
 
 >[!NOTE]
 >

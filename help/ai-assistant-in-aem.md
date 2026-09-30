@@ -1,17 +1,33 @@
 ---
 title: AEM 6.5 LTS 中的 AI 助手
-description: 使用 AI 助手帮助您找到答案，并为 Adobe Experience Manager 中提供的解决方案修复错误。
+description: 使用 AI 助手帮助您查找答案，并针对 Adobe Experience Manager 中提供的解决方案进行故障排查。
 solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Authoring, AI Assistant, AI Tools
 role: Admin,Developer,User
 exl-id: 391d46e3-05c9-4af1-8882-ffd39b04a701
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
-workflow-type: ht
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+feature_v2:
+  - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
+    internal-label: AI Tools
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+workflow-type: tm+mt
 source-wordcount: '1380'
 ht-degree: 100%
-
 ---
-
 # AEM 6.5 LTS 中的 AI 助手 {#about-ai-assistant-in-aem}
 
 >[!IMPORTANT]
@@ -35,13 +51,13 @@ AI 助手支持 AEM as a Cloud Service，包括以下解决方案：
 
 以下这段时长 3 分 25 秒的视频分步介绍了 AEM 中的 AI 助手。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475368/?captions=chi_hans&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
-## 访问 AEM 中的 AI 助手{#get-access}
+## 获取 AEM 中 AI 助手的访问权限{#get-access}
 
-要获得 AEM 中 AI 助手的访问权限，客户必须：
+要获得 AEM 中 AI 助手的访问权限，客户必须具备以下条件：
 
-* 有权使用 AEM 中的 AI 助手获取产品知识。 此权限允许您在 AI 助手聊天中询问产品相关的问题。 此权限必须启用。
+* 在 AEM 中使用 AI 助手获取产品知识的权限。 此权限允许您在 AI 助手聊天中询问产品相关的问题。 此权限必须启用。
 * 有权打开支持工单，这需要&#x200B;**支持管理员**&#x200B;的角色。
 
 >[!NOTE]
@@ -50,7 +66,7 @@ AI 助手支持 AEM as a Cloud Service，包括以下解决方案：
 
 **要访问 AEM 中的 AI 助手：**
 
-1. 客户必须另外签订协议才能访问 Adobe Experience Manager 中的大多数 AI 驱动的代理式功能。 请联系您的 Adobe 代表，获取更多详情。
+1. 客户必须另外签订协议才能访问 Adobe Experience Manager 中的大多数 AI 驱动的和代理式功能。 请联系您的 Adobe 代表，获取更多详情。
 
 1. 要使用 AEM 中的 AI 助手，必须具有通过 AI 助手访问产品知识的权限。 此权限在默认情况下已开启。
 
@@ -72,7 +88,7 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 本文概述了您可以从 AEM 中的 AI 助手获得的特别重视可信度的各种功能：
 
 * AEM 中的 AI 助手不使用，也不会以训练为目的使用任何个人数据。
-* AEM 中的 AI 助手不会访问消费者数据。
+* AEM 中的 AI 助手无权访问消费者数据。
 * 需要明确的权限才能与 AEM 中的 AI 助手交互。
 * 用户提供的提示词（问题、查询等）不会与其他客户共享。
 
@@ -90,7 +106,7 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 | 疑难解答 | <ul><li>为什么无法访问通用编辑器？</li><li>我的管道为什么会失败？</li></ul> |
 | **创建支持工单** | **仅提供给支持管理员使用&#x200B;**<br>**示例** |
 | 自动创建支持工单，捕获 AI 助手聊天记录和上下文 | <ul><li>为我创建一个支持工单。</li></ul> |
-| 检索支持工单的状态 | <ul><li>显示我已打开的所有支持工单。</li><li>显示工单“E-----------”的状态</li></ul> |
+| 检索支持工单的状态 | <ul><li>显示我创建的所有支持工单。</li><li>显示工单“E-----------”的状态</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -110,7 +126,7 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 | --- | --- |
 | 运营洞察 | <ul><li>我的租户中有多少个开发环境？</li><li>谁启动了最后一个生产管道？</li></ul> |
 | 疑难解答 | <ul><li>为什么我的生产管道失败了？</li></ul> |
-| 任务和自动化 | <ul><li>为我从开发分支开始配置一个代码质量管道。</li></ul> |
+| 任务和自动化 | <ul><li>为我从开发分支配置一个代码质量管道。</li></ul> |
 
 
 ## 使用 AEM 中的 AI 助手 {#ai-use}
@@ -129,7 +145,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md).
 -->
@@ -137,7 +153,7 @@ See also [Custom Permissions](/help/implementing/cloud-manager/custom-permission
 
 ### 开始一个 AEM 中的 AI 助手对话
 
-如果您想更改主题，可以重置 AEM 中的 AI 助手，开始一个新的对话。 如果您在查询失败或提供错误信息的情况下想修正错误，这个功能就特别有用。
+如果您想更改主题，可以重置 AEM 中的 AI 助手，开始一个新的对话。 当您对失败或提供错误信息的查询进行故障排除时，此功能特别有用。
 
 **要开始一个 AEM 中的 AI 助手对话：**
 
@@ -184,7 +200,7 @@ AEM 中的 AI 助手包括一个可发现性功能，帮助您探索受支持的
 | 单击 | 描述 |
 | --- | --- |
 | ![点赞图标](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbUpOutline_18_N.svg) | 表示哪些方面做得很好，并分享正面反馈。 |
-| ![点踩图标](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbDownOutline_18_N.svg) | 提出改进建议。 添加关于您的体验的具体评论，这些评论每天都会审阅。 |
+| ![点踩图标](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ThumbDownOutline_18_N.svg) | 提出改进建议。 添加关于您的体验的具体评论，这些评论每天都会进行审阅。 |
 | ![旗帜图标](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Flag_18_N.svg) | 报告有关您与 AEM 中的 AI 助手交互的问题或提供相关详细反馈。 |
 
 ## 关于 AEM 中 AI 助手的常见问题解答 {#ai-faq}
@@ -198,7 +214,7 @@ AEM 中的 AI 助手包括一个可发现性功能，帮助您探索受支持的
 * **AEM 中的 AI 助手有哪些功能？**\
   AEM 中的 AI 助手可回答与 Adobe 产品知识相关的查询。
 * **AEM 中的 AI 助手是否会将个人信息用于训练数据？**\
-  不行。 AEM 中的 AI 助手不会将个人信息用于训练目的。 不用为 AEM 中的 AI 助手提供您或其他人的个人信息，包括姓名或联系方式。
+  不行。 AEM 中的 AI 助手不会将个人信息用于训练目的。 避免与 AEM 中的 AI 助手分享您自己或他人的个人信息，包括姓名或联系方式。
 
 <!--
 IS THE DOCUMENTATION BELOW STILL NEEDED? IF SO, GO AHEAD AND DELETE THE COMMENT TAGS!!

@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 281d8bd3-d6f2-42f8-8d77-b138f0ea5aae
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
-
 ---
-
 # 基架{#scaffolding}
 
 有时您可能需要创建大量共享结构但内容不同的页面。 通过标准Adobe Experience Manager (AEM)界面，您需要创建每个页面，将相应的组件拖动到页面上，然后单独填充每个组件。
@@ -91,7 +100,7 @@ ht-degree: 0%
 
 `./jcr:content/par/text/text`
 
-这是使用基架创建页面时要将此字段内容写入其中的属性的名称。 属性以节点中的相对路径表示，表示要创建的页面。 它指定节点文本下方的属性文本，该文本位于节点par之下，节点本身是页面节点之下jcr：content节点的子节点。
+这是使用基架创建页面时要将此字段内容写入其中的属性的名称。 属性以节点中的相对路径表示，表示要创建的页面。 它指定位于节点文本下方的属性文本，该文本位于节点par下方，它本身是页面节点下方jcr:content节点的子节点。
 
 这将为将输入到此字段的文本定义内容存储的位置。 但是，我们还需要为此内容指定两个其他特征：
 
@@ -153,7 +162,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->这与编辑页面内容[&#128279;](/help/sites-authoring/editing-content.md#inheritedcomponentsclassicui)时继承的组件类似。
+>这与编辑页面内容](/help/sites-authoring/editing-content.md#inheritedcomponentsclassicui)时[继承的组件类似。
 
 单击锁定符号或图像图标可中断继承：
 

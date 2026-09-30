@@ -9,18 +9,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 4a78de53-33bf-4999-ba3c-7d0bc33196a4
-source-git-commit: 24bd1f57da3f9ce613ee28276d1ae9465b6dfba6
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '6205'
 ht-degree: 0%
-
 ---
-
 # 使用xtype（经典UI）{#using-xtypes-classic-ui}
 
 本页介绍Adobe Experience Manager (AEM)可用的所有xtype。
 
-在ExtJS语言中，xtype是指定给类的符号名称。 您可以阅读ExtJS 2[&#128279;](https://docs.sencha.com/)概述中的“组件XTypes”段落，详细解释什么是xtype以及如何使用它。
+在ExtJS语言中，xtype是指定给类的符号名称。 您可以阅读ExtJS 2](https://docs.sencha.com/)概述中的“组件XTypes”段落，详细解释什么是xtype以及如何使用它。[
 
 有关AEM中所有可用小组件的更多信息，请参阅[小组件API文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)。
 

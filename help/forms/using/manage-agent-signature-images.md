@@ -9,13 +9,26 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 3081dedf-ba92-4205-af67-930524719e60
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 1%
-
+source-wordcount: '689'
+ht-degree: 3%
 ---
-
 # 管理代理签名图像{#manage-agent-signature-images}
 
 ## 概述 {#overview}
@@ -34,7 +47,7 @@ agentFolder DDE的值从Correspondence Management配置属性的CMUserRoot配置
 1. 确保代理签名图像与用户的AEM用户名同名。 （图像文件名不需要扩展名。）
 1. 在CRX的内容文件夹中，创建一个名为`cmUserRoot`的文件夹。
 
-   1. 转到`https://'[server]:[port]'/crx/de`。 如有必要，请以管理员身份登录。
+   1. 转到 `https://'[server]:[port]'/crx/de`. 如有必要，请以管理员身份登录。
 
    1. 右键单击&#x200B;**content**&#x200B;文件夹，然后选择&#x200B;**创建** > **创建文件夹**。
 
@@ -48,7 +61,7 @@ agentFolder DDE的值从Correspondence Management配置属性的CMUserRoot配置
 
 1. 在内容资源管理器中，导航到cmUserRoot文件夹并在其中添加代理签名图像。
 
-   1. 转到`https://'[server]:[port]'/crx/explorer/index.jsp`。 如有必要，以管理员身份登录。
+   1. 转到 `https://'[server]:[port]'/crx/explorer/index.jsp`. 如有必要，以管理员身份登录。
    1. 单击&#x200B;**内容资源管理器**。 内容资源管理器将在新窗口中打开。
    1. 在内容资源管理器中，导航到cmUserRoot文件夹并将其选定。 右键单击&#x200B;**cmUserRoot**&#x200B;文件夹并选择&#x200B;**新建节点**。
 
@@ -58,19 +71,19 @@ agentFolder DDE的值从Correspondence Management配置属性的CMUserRoot配置
 
       **名称：** JohnDoe（或代理签名文件的名称）
 
-      **类型：** nt：file
+      **类型：** nt:file
 
       在`cmUserRoot`文件夹下，将创建一个名为`JohnDoe`的新文件夹（或您在上一步中提供的名称）。
 
    1. 单击您已创建的新文件夹（此处`JohnDoe`）。 内容资源管理器将文件夹的内容显示为灰色。
 
-   1. 双击&#x200B;**jcr：content**&#x200B;属性，将其类型设置为&#x200B;**nt：resource**，然后单击绿色复选标记保存该条目。
+   1. 双击&#x200B;**jcr:content**&#x200B;属性，将其类型设置为&#x200B;**nt:resource**，然后单击绿色复选标记保存该条目。
 
-      如果属性不存在，请先创建一个名为jcr：content的属性。
+      如果属性不存在，请先创建名为jcr:content的属性。
 
-      ![jcr：content属性](assets/3_jcrcontentntresource.png)
+      ![jcr:content属性](assets/3_jcrcontentntresource.png)
 
-      jcr：content的子属性中包括jcr：data，它呈灰显状态。 双击jcr：data。 该属性将变为可编辑，并且条目中会显示“选择文件”按钮。 单击&#x200B;**选择文件**，然后选择要用作徽标的图像文件。 图像文件无需扩展名。
+      jcr:content的子属性中包含jcr:data，该子属性呈暗灰色。 双击jcr:data。 该属性将变为可编辑，并且条目中会显示“选择文件”按钮。 单击&#x200B;**选择文件**，然后选择要用作徽标的图像文件。 图像文件无需扩展名。
 
       ![JCR数据](assets/5_jcrdata.png)
 

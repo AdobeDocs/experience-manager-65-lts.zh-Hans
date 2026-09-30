@@ -9,31 +9,40 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 933ef22f-d023-44d2-8ec0-4bb47a46bba3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 6%
-
+source-wordcount: '533'
+ht-degree: 13%
 ---
-
-# 最佳实践{#best-practices}
+# 最佳做法{#best-practices}
 
 最佳实践描述如何以尽可能高效和最有效的方式开发、管理或使用AEM。 这一不断增加的主题列表包括AEM中的多个领域。
 
 以下区域提供了有关最佳实践的文档：
 
-* [资源](#assets)
+* [Assets](#assets)
 * [Sites](#sites)
 
 有关创作、部署和维护或开发的最佳实践，请参阅以下内容之一：
 
-* [创作最佳实践](/help/sites-authoring/best-practices.md)
-* [制定最佳实践](/help/sites-developing/best-practices.md)
+* [创作最佳做法](/help/sites-authoring/best-practices.md)
+* [开发最佳做法](/help/sites-developing/best-practices.md)
 * [部署最佳实践](/help/sites-deploying/best-practices.md)
 
 下面的表格中介绍了特定文档并将其链接到该文档。
 
-## 资源 {#assets}
+## Assets {#assets}
 
 以下主题介绍了有关Assets的最佳实践，包括Dynamic Media功能和Dynamic Media Classic集成：
 
@@ -76,7 +85,7 @@ ht-degree: 6%
   <tr>
    <td>GDPR合规性</td>
    <td><a href="/help/sites-administering/gdpr-compliance-sites.md">AEM Sites GDPR合规性</a></td>
-   <td>欧盟有关数据隐私权的《通用数据保护条例》自2018年5月起生效。 AEM Sites符合GDPR。 本页将指导客户完成在AEM Sites中处理GDPR请求的过程。 它描述了私有数据的存储位置，以及如何手动或使用代码删除私有数据。</td>
+   <td>欧盟《通用数据保护条例》关于数据隐私权的规定自 2018 年 5 月起正式生效。 AEM Sites符合GDPR。 此页面将指导客户完成在 AEM Sites 中处理 GDPR 请求的过程。 它描述了私有数据的存储位置，以及如何手动或使用代码移除私有数据。</td>
   </tr>
   <tr>
    <td>为您的实例定义默认UI。</td>
@@ -85,12 +94,12 @@ ht-degree: 6%
   </tr>
   <tr>
    <td>多站点管理</td>
-   <td><a href="/help/sites-administering/msm-best-practices.md">MSM 最佳实践</a></td>
+   <td><a href="/help/sites-administering/msm-best-practices.md">MSM 最佳做法</a></td>
    <td>使用MSM自动进行内容部署的最佳实践。 </td>
   </tr>
   <tr>
    <td>翻译内容</td>
-   <td><a href="/help/sites-administering/tc-bp.md">翻译最佳实践</a></td>
+   <td><a href="/help/sites-administering/tc-bp.md">翻译最佳做法</a></td>
    <td>规划和实施多语言站点的最佳实践。</td>
   </tr>
   <tr>

@@ -6,13 +6,27 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: cb5495f9-bc54-4515-ae15-55a5397500aa
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2387'
-ht-degree: 0%
-
+source-wordcount: '2476'
+ht-degree: 1%
 ---
-
 
 # 在Adobe Experience Manager中编辑外部SPA {#editing-external-spa-within-aem}
 
@@ -29,17 +43,17 @@ ht-degree: 0%
 先决条件很简单。
 
 * 确保AEM的实例正在本地运行。
-* 使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans&#available-properties)创建基本AEM SPA项目。
-   * 这构成了AEM项目的基础，该项目将进行更新以包含外部SPA。
-   * 本文档中的示例使用[WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-Hans#spa-editor)的起点。
+* 使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)创建基本AEM SPA项目。
+  * 这构成了AEM项目的基础，该项目将进行更新以包含外部SPA。
+  * 本文档中的示例使用[WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)的起点。
 * 准备好您想要集成的工作中的外部React SPA。
 
 ## 将SPA上传到AEM项目 {#upload-spa-to-aem-project}
 
 首先，您需要将外部SPA上传到AEM项目。
 
-1. 将`src`项目文件夹中的`/ui.frontend`替换为React应用程序的`src`文件夹。
-1. 在`package.json`文件中包括应用`/ui.frontend/package.json`的任何其他依赖项。
+1. 将`/ui.frontend`项目文件夹中的`src`替换为React应用程序的`src`文件夹。
+1. 在`/ui.frontend/package.json`文件中包括应用`package.json`的任何其他依赖项。
    * 确保SPA SDK依赖项为[建议的版本](spa-getting-started-react.md#dependencies)。
 1. 在`/public`文件夹中包括任何自定义项。
 1. 包括在`/public/index.html`文件中添加的任何内联脚本或样式。
@@ -72,9 +86,9 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
 这需要在应用程序的`src/index.js`文件中或在呈现应用程序根的位置完成。
 
-为此，请使用`initializationAsync`提供的`ModelManager` API。
+为此，请使用`ModelManager`提供的`initializationAsync` API。
 
-以下屏幕截图显示了如何在简单的React应用程序中启用`ModelManager`的初始化。 唯一的限制是必须在`initializationAsync`之前调用`ReactDOM.render()`。
+以下屏幕截图显示了如何在简单的React应用程序中启用`ModelManager`的初始化。 唯一的限制是必须在`ReactDOM.render()`之前调用`initializationAsync`。
 
 ![初始化ModelManager](assets/external-spa-initialize-modelmanager.png)
 
@@ -166,7 +180,7 @@ npm install --save @adobe/aem-spa-component-mapping @adobe/aem-spa-page-model-ma
 
    * `pagePath`：包含节点的页面，例如`/content/wknd-spa-react/us/en/home`
    * `itemPath`：页面中节点的路径，例如`root/responsivegrid/text`
-      * 由页面上包含项目的名称组成。
+     * 由页面上包含项目的名称组成。
 
    ![节点的路径](assets/external-spa-path.png)
 
@@ -248,7 +262,7 @@ mvn clean install -PautoInstallSinglePackage
 
 ![aem中的text_20节点](assets/external-spa-text20-aem.png)
 
-当内容作者更新此组件时，将在`text_20`中的`root/responsivegrid/text_20`创建一个新的`/content/wknd-spa-react/us/en/home`节点。
+当内容作者更新此组件时，将在`/content/wknd-spa-react/us/en/home`中的`root/responsivegrid/text_20`创建一个新的`text_20`节点。
 
 ![text20节点](assets/external-spa-text20-node.png)
 
@@ -260,9 +274,9 @@ mvn clean install -PautoInstallSinglePackage
 * 在`pagePath`中的路径中提供的页面节点必须存在于AEM项目中。
 * 要创建的节点的名称必须在`itemPath`中提供。
 * 可以在任何级别创建组件。
-   * 如果在上一个示例中提供了`itemPath='text_20'`，则新节点将直接在页面`/content/wknd-spa-react/us/en/home/jcr:content/text_20`下创建
+  * 如果在上一个示例中提供了`itemPath='text_20'`，则新节点将直接在页面`/content/wknd-spa-react/us/en/home/jcr:content/text_20`下创建
 * 通过`itemPath`提供时，指向在其中创建新节点的节点的路径必须有效。
-   * 在此示例中，`root/responsivegrid`必须存在，才能在其中创建新节点`text_20`。
+  * 在此示例中，`root/responsivegrid`必须存在，才能在其中创建新节点`text_20`。
 * 仅支持创建叶组件。 未来版本将支持虚拟容器和页面。
 
 ### 虚拟容器 {#virtual-containers}
@@ -281,13 +295,13 @@ mvn clean install -PautoInstallSinglePackage
 
 ![容器占位符](assets/container-placeholder.png)
 
-JCR![中的](assets/container-jcr-structure.png)容器位置
+JCR](assets/container-jcr-structure.png)中的![容器位置
 
 作者向容器添加子组件后，将使用JCR结构中的相应名称创建新容器节点。
 
 包含内容的![容器](assets/container-with-content.png)
 
-包含JCR![内容的](assets/container-with-content-jcr.png)容器
+包含JCR](assets/container-with-content-jcr.png)内容的![容器
 
 现在，可以根据作者的需要向容器中添加更多组件和内容，并且所做的更改将会保留。
 
@@ -297,8 +311,8 @@ JCR![中的](assets/container-jcr-structure.png)容器位置
 
 * 用于确定可以添加哪些组件的策略将从父容器继承。
 * 要创建的容器的直接父级必须已存在于AEM中。
-   * 如果AEM容器中已存在容器`root/responsivegrid`，则通过提供路径`root/responsivegrid/newContainer`可创建新容器。
-   * 但是`root/responsivegrid/newContainer/secondNewContainer`是不可能的。
+  * 如果AEM容器中已存在容器`root/responsivegrid`，则通过提供路径`root/responsivegrid/newContainer`可创建新容器。
+  * 但是`root/responsivegrid/newContainer/secondNewContainer`是不可能的。
 * 一次只能虚拟创建一个新级别的组件。
 
 ## 其他自定义项 {#additional-customizations}
@@ -307,13 +321,13 @@ JCR![中的](assets/container-jcr-structure.png)容器位置
 
 ### 根节点标识 {#root-node-id}
 
-默认情况下，我们假定React应用程序在元素ID `div`的`spa-root`内呈现。 如有必要，可以自定义标记。
+默认情况下，我们假定React应用程序在元素ID `spa-root`的`div`内呈现。 如有必要，可以自定义标记。
 
-例如，假设我们有一个SPA，其中应用程序在元素ID `div`的`root`中呈现。 这需要在三个文件中反映出来。
+例如，假设我们有一个SPA，其中应用程序在元素ID `root`的`div`中呈现。 这需要在三个文件中反映出来。
 
 1. 在React应用程序的`index.js`中（或调用`ReactDOM.render()`的位置）
 
-   index.js文件![中的](assets/external-spa-root-index.png)ReactDOM.render()
+   index.js文件](assets/external-spa-root-index.png)中的![ReactDOM.render()
 
 1. 在React应用程序的`index.html`
 
@@ -354,10 +368,10 @@ JCR![中的](assets/container-jcr-structure.png)容器位置
 
    ![路由帮助程序](assets/external-spa-router-helper.png)
 
-   * 由`toAEMPath`提供的`@adobe/cq-spa-page-model-manager`帮助程序可用于此目的。 当应用程序在AEM实例上打开时，它会转换为路由提供的路径，使其包含特定于AEM的部分。 它接受三个参数：
-      * 路由所需的路径
-      * 编辑SPA的AEM实例的源URL
-      * 第一步中确定的AEM上的项目根目录
+   * 由`@adobe/cq-spa-page-model-manager`提供的`toAEMPath`帮助程序可用于此目的。 当应用程序在AEM实例上打开时，它会转换为路由提供的路径，使其包含特定于AEM的部分。 它接受三个参数：
+     * 路由所需的路径
+     * 编辑SPA的AEM实例的源URL
+     * 第一步中确定的AEM上的项目根目录
 
    * 可以将这些值设置为环境变量，以获得更大的灵活性。
 
@@ -367,14 +381,14 @@ JCR![中的](assets/container-jcr-structure.png)容器位置
 
 ## 框架限制 {#framework-limitations}
 
-RemotePage组件希望该实施提供资产清单，如GitHub[上的](https://github.com/shellscape/webpack-manifest-plugin)webpack-manifest-plugin。 但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架（如Angular）远程加载应用程序。
+RemotePage组件希望该实施提供资产清单，如GitHub](https://github.com/shellscape/webpack-manifest-plugin)上的[webpack-manifest-plugin。 但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架（如Angular）远程加载应用程序。
 
 ## 其他资源 {#additional-resources}
 
 以下参考资料可能有助于了解AEM上下文中的SPA。
 
-* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)
-* [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=zh-hans)
+* [AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [WKND SPA项目](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
 * [在AEM中使用React快速入门SPA](spa-getting-started-react.md)
 * [SPA参考资料（API参考）](spa-reference-materials.md)
 * [SPA Blueprint和PageModelManager](spa-blueprint.md#pagemodelmanager)

@@ -5,13 +5,29 @@ role: User, Admin
 feature: Asset Management,Renditions
 solution: Experience Manager, Experience Manager Assets
 exl-id: b91173b4-f1d1-4aad-97d2-782bc8aeaeab
-source-git-commit: 47b82956b41c3f78bed5ae220c7e993ce29e0385
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 10%
-
+source-wordcount: '314'
+ht-degree: 11%
 ---
-
 # 传递 Dynamic Media 资产{#delivering-dynamic-media-assets}
 
 如何投放Dynamic Media资产（视频和图像）取决于网站的实施方式。
@@ -21,9 +37,9 @@ ht-degree: 10%
 * 如果您的网站托管在Adobe Experience Manager上，那么您需要将Dynamic Media资源直接添加到您的页面。
 * 如果您的网站不在Experience Manager上，则可以选择以下任一选项：
 
-   * 将视频或图像嵌入到网站中。
-   * 将URL链接到您的Web应用程序。 当您希望将视频播放器作为弹出窗口或模式窗口交付时，请使用链接。
-   * 如果您的网站是响应式的，您可以[交付优化的图像](/help/assets/responsive-site.md)。
+  * 将视频或图像嵌入到网站中。
+  * 将URL链接到您的Web应用程序。 当您希望将视频播放器作为弹出窗口或模式窗口交付时，请使用链接。
+  * 如果您的网站是响应式的，您可以[交付优化的图像](/help/assets/responsive-site.md)。
 
 >[!NOTE]
 >
@@ -36,7 +52,7 @@ ht-degree: 10%
 * [在 Dynamic Media 中激活热链接保护](/help/assets/hotlink-protection.md)
 * [将 URL 关联到您的 Web 应用程序](/help/assets/linking-urls-to-yourwebapplication.md)
 * [为响应式 Site 传送优化的图像](/help/assets/responsive-site.md)
-* [HTTP2内容交付](/help/assets/http2.md)
+* [基于 HTTP2 的内容传递](/help/assets/http2.md)
 * [使用规则集转换 URL](/help/assets/using-rulesets-to-transform-urls.md)
 
 ## Dynamic Media资产的HTTP/2交付 {#http-delivery-of-dynamic-media-assets}

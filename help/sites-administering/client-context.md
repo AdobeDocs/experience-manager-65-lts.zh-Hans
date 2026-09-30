@@ -1,5 +1,5 @@
 ---
-title: ClientContext
+title: Client Context
 description: 了解如何使用Client Context查看有关Adobe Experience Manager中当前页面和访客的信息。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
 exl-id: 976512a9-5edf-4d55-82c0-24fe97dc71a1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '2007'
 ht-degree: 0%
-
 ---
-
-# ClientContext{#client-context}
+# Client Context{#client-context}
 
 >[!NOTE]
 >
@@ -40,7 +51,7 @@ Client Context是一种机制，可为您提供有关当前页面和访客的特
 ![客户端上下文窗口的“编辑”、“加载”和“重置”图标](do-not-localize/clientcontext_icons.png)
 
 * **编辑**
-将打开一个新页面，允许您编辑、添加或删除配置文件属性[&#128279;](#editingprofiledetails)。
+将打开一个新页面，让您[编辑、添加或删除配置文件属性](#editingprofiledetails)。
 
 * **加载**
 您可以[从配置文件列表中进行选择并加载要测试的配置文件](#loading-a-new-user-profile)。

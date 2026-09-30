@@ -11,17 +11,31 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: f4a15b51-fbb9-454f-809d-b15ed8cbdd0c
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 9%
-
+source-wordcount: '548'
+ht-degree: 10%
 ---
-
 
 # 为 SPA 实施 React 组件{#implementing-a-react-component-for-spa}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。为此，开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在Adobe Experience Manager (AEM)中顺畅地为使用SPA框架构建的站点编辑内容。
+单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。 为此，开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在Adobe Experience Manager (AEM)中顺畅地为使用SPA框架构建的站点编辑内容。
 
 SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA。 本文介绍了如何调整简单的现有React组件以用于AEM SPA编辑器的示例。
 
@@ -33,12 +47,12 @@ SPA创作功能提供了一个全面的解决方案，用于在AEM中支持SPA�
 
 本文说明了We.Retail Journal示例SPA上的天气组件示例。
 
-在阅读本文之前，您应该熟悉AEM[的SPA应用程序的](/help/sites-developing/spa-getting-started-react.md)结构。
+在阅读本文之前，您应该熟悉AEM](/help/sites-developing/spa-getting-started-react.md)的SPA应用程序的[结构。
 
 >[!CAUTION]
 >本文档仅将[We.Retail Journal应用程序](https://github.com/adobe/aem-sample-we-retail-journal)用于演示目的。 请勿将其用于任何项目工作。
 >
->任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
+>任何 AEM 项目都应使用 [AEM 项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用 React 或 Angular 的 SPA 项目并利用 SPA SDK。
 
 ## 天气组件 {#the-weather-component}
 

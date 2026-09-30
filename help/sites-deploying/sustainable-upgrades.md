@@ -6,13 +6,22 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 hide: true
 exl-id: 5a93918b-3b5f-49e0-9283-86776f9d8fb4
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 0%
-
 ---
-
 # 可持续升级{#sustainable-upgrades}
 
 ## Customization Framework {#customization-framework}
@@ -85,7 +94,7 @@ CRXDE Lite中应用的Mixin将显示标记为`INTERNAL`的内容节点和树灰�
 
 AEM 6.5附带运行状况检查，如果以与内容分类不一致的方式使用叠加或引用的内容，该检查会提醒客户。
 
-**&#x200B; Sling/Granite Content Access Check**&#x200B;是一项新的运行状况检查，用于监视存储库以查看客户代码是否未正确访问AEM中的受保护节点。
+** Sling/Granite Content Access Check**是一项新的运行状况检查，用于监视存储库以查看客户代码是否未正确访问AEM中的受保护节点。
 
 此操作扫描&#x200B;**/应用程序**，通常需要几秒钟才能完成。
 

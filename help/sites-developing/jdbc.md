@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 0d5e1e83-9ecf-41d6-adbe-8b06a034943e
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 1%
-
 ---
-
 # 连接到 SQL 数据库{#connecting-to-sql-databases}
 
 访问外部SQL数据库，以便CQ应用程序可以与数据交互：
@@ -28,7 +37,7 @@ ht-degree: 1%
 
 某些数据库供应商在OSGi捆绑包中提供JDBC驱动程序，例如[MySQL](https://dev.mysql.com/downloads/connector/j/)。 如果数据库的JDBC驱动程序不能作为OSGi捆绑包使用，请获取驱动程序JAR并将其包装在OSGi捆绑包中。 捆绑包必须导出与数据库服务器交互所需的包。 捆绑包还必须导入其引用的包。
 
-以下示例使用Maven[&#128279;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的Bundle插件将HSQLDB驱动程序封装在OSGi捆绑包中。 POM指示插件嵌入标识为依赖项的hsqldb.jar文件。 将导出所有org.hsqldb软件包。
+以下示例使用Maven](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)的[Bundle插件将HSQLDB驱动程序封装在OSGi捆绑包中。 POM指示插件嵌入标识为依赖项的hsqldb.jar文件。 将导出所有org.hsqldb软件包。
 
 插件会自动确定要导入的包，并在包的MANIFEST.MF文件中列出这些包。 如果CQ服务器上没有任何软件包，则安装时不会启动捆绑包。 两种可能的解决方案如下：
 

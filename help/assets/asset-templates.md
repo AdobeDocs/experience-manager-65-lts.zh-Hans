@@ -1,17 +1,28 @@
 ---
 title: 资产模板
-description: 了解 [!DNL Adobe Experience Manager Assets] 中的资产模板以及如何使用资产模板创建营销宣传品。
+description: 了解[!DNL Adobe Experience Manager Assets]中的资产模板以及如何使用资产模板创建营销宣传品。
 role: User
 feature: Asset Management,Developer Tools
 solution: Experience Manager, Experience Manager Assets
 exl-id: 8584d5ea-6ef2-4e81-8b18-5aa2d4226ea6
-source-git-commit: 9ed889c74a886e1b41c379dac77bb570ef5c2c39
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1571'
 ht-degree: 2%
-
 ---
-
 # 资产模板 {#asset-templates}
 
 资产模板是一类特殊的资产，有助于快速调整视觉内容用途，以便用于数字和印刷媒体。 资产模板包括固定消息传递部分和可编辑部分两部分。 固定消息部分可以包含专有内容，例如禁用编辑的品牌徽标和版权信息。 可编辑部分可在可编辑以自定义消息传递的字段中包含可视和文本内容。
@@ -123,7 +134,7 @@ ht-degree: 2%
    >
    >要使[!DNL Experience Manager]能够解析图像，请执行以下操作：
    >
-   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/cn/indesign/using/graphics-links.html)）。
+   >* 创建[!DNL InDesign]模板时嵌入图像（请参阅[关于链接和嵌入的图形](https://helpx.adobe.com/indesign/using/graphics-links.html)）。
    >* 将[!DNL Experience Manager]装载到本地文件系统，然后将缺少的图标与[!DNL Experience Manager]中的现有资源进行映射。
 
 1. 要为宣传册生成PDF演绎版，请选择对话框中的Acrobat选项，然后单击&#x200B;**[!UICONTROL 继续]**。

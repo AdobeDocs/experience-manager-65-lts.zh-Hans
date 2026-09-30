@@ -1,5 +1,5 @@
 ---
-title: 资产映射
+title: 资源映射
 description: 了解如何使用资源映射为Adobe Experience Manager定义重定向、虚URL和虚拟主机。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 90558227-c2c2-4130-9031-03efda5b1d94
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 2%
-
+source-wordcount: '542'
+ht-degree: 4%
 ---
-
-# 资产映射{#resource-mapping}
+# 资源映射{#resource-mapping}
 
 资源映射用于为Adobe Experience Manager (AEM)定义重定向、虚URL和虚拟主机。
 
@@ -42,7 +51,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->有关详细信息，请参阅Sling文档以及资源解析[&#128279;](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)和[资源](https://sling.apache.org/documentation/the-sling-engine/resources.html)的映射。
+>有关详细信息，请参阅Sling文档以及资源解析](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)和[资源](https://sling.apache.org/documentation/the-sling-engine/resources.html)的[映射。
 
 ## 查看映射定义 {#viewing-mapping-definitions}
 
@@ -54,9 +63,9 @@ JCR资源解析器计算映射表单两个列表（自上而下）以查找匹�
 显示当前配置（如[Apache Sling资源解析程序](/help/sites-deploying/osgi-configuration-settings.md#apacheslingresourceresolver)所定义）。
 
 * 配置测试
-这可让您输入URL或资源路径。 单击&#x200B;**解析**&#x200B;或&#x200B;**映射**&#x200B;以确认系统将如何转换该条目。
+这可让您输入URL或资源路径。 单击**解析**&#x200B;或&#x200B;**映射**&#x200B;以确认系统将如何转换该条目。
 
-* **解析程序映射条目**
+* **解析器映射条目**
 ResourceResolver.resolve方法用于将URL映射到资源的条目列表。
 
 * **映射项**
@@ -105,7 +114,7 @@ ResourceResolver.map方法用来将资源路径映射到URL的条目列表。
 1. 创建节点：
 
    * **类型** `sling:Mapping`
-此节点类型适用于此类映射，但其用法不是强制性的。
+     此节点类型适用于此类映射，但其用法不是强制性的。
 
    * **名称** `localhost_any`
 
@@ -114,15 +123,15 @@ ResourceResolver.map方法用来将资源路径映射到URL的条目列表。
 
    * **名称** `sling:match`
 
-      * **类型** `String`
+     * **类型** `String`
 
-      * **值** `localhost.4503/`
+     * **值** `localhost.4503/`
 
    * **名称** `sling:internalRedirect`
 
-      * **类型** `String[]`
+     * **类型** `String[]`
 
-      * **值** `/content/`
+     * **值** `/content/`
 
 1. 单击&#x200B;**全部保存**。
 

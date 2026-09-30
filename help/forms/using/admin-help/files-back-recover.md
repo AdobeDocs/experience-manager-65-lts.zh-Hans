@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 2938a1c6-c8fc-420a-8fad-bb39e5a7936b
-source-git-commit: d75fc7712b1428471a081508cd5d1d68ec87d9c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '2131'
 ht-degree: 0%
-
 ---
-
 # 需要备份和恢复的文件 {#files-to-back-up-and-recover}
 
 >[!NOTE]
@@ -37,7 +52,7 @@ GDS是用于存储进程中使用的长期文件的目录。 长生命周期文�
 
 异步作业调用的输入文档也存储在GDS中，并且必须可用于处理请求。 因此，一定要考虑承载GDS的文件系统的可靠性，并采用独立磁盘冗余阵列(RAID)或其他适合您的质量和服务级别要求的技术。
 
-GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储[&#128279;](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的备份选项。
+GDS的位置是在AEM表单安装过程中确定的，或者以后使用管理控制台确定的。 除了为GDS保留一个高可用性位置之外，您还可以为文档启用数据库存储。 查看数据库用于文档存储](files-back-recover.md#backup-options-when-database-is-used-for-document-storage)时的[备份选项。
 
 ### GDS位置 {#gds-location}
 

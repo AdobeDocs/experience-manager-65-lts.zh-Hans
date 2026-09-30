@@ -1,5 +1,5 @@
 ---
-title: 创建和管理自适应表单的A/B测试
+title: 为自适应表单创建和管理 A/B 测试
 description: AEM Forms与Adobe Target集成，允许为自适应表单运行A/B测试，以增强客户体验并提高转化率。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,30 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: 5e7165e5-b2bf-4716-82d3-de02f669cd6e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 0%
-
+source-wordcount: '1613'
+ht-degree: 2%
 ---
-
-# 创建和管理自适应表单的A/B测试{#create-and-manage-a-b-test-for-adaptive-forms}
+# 为自适应表单创建和管理 A/B 测试{#create-and-manage-a-b-test-for-adaptive-forms}
 
 [!BADGE 已终止]{type=negative tooltip="此功能现已终止使用"}
 
@@ -26,7 +42,7 @@ ht-degree: 0%
 
 如果您的表单提供的体验不吸引人，则客户可能会放弃表单。 虽然这会让客户感到沮丧，但也会增加贵组织的支持量和成本。 确定并提供提高转化率的正确客户体验是关键而富有挑战性的。 Adobe Experience Manager Forms掌握着这个问题的关键。
 
-AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数字渠道提供个性化且引人入胜的客户体验。 Target的一项重要功能是A/B测试，它允许您快速设置并发A/B测试，向目标用户展示相关内容，并确定可提高转化率的体验。
+AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，跨多个数字渠道提供个性化且富有吸引力的客户体验。 Target的一项重要功能是A/B测试，它允许您快速设置并发A/B测试，向目标用户展示相关内容，并确定可提高转化率的体验。
 
 借助Adobe Experience Manager (AEM) Forms，您可以实时对自适应表单设置和运行A/B测试。 它还提供开箱即用和可自定义的报告功能，以可视化表单体验的实时性能，并确定可最大程度提高用户参与度和转化率的表单体验。
 
@@ -44,16 +60,16 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 
 1. 在AEM服务器上，转到https://&lt;*主机名*>：&lt;*端口*>/libs/cq/core/content/tools/cloudservices.html。
 
-1. 在&#x200B;**Adobe Target**&#x200B;部分中，单击&#x200B;**显示配置**，然后单击&#x200B;**+**&#x200B;图标以添加配置。
-如果您是首次配置目标，请单击&#x200B;**立即配置。**
+1. 在&#x200B;**Adobe Target**&#x200B;部分中，单击&#x200B;**显示配置**，然后单击&#x200B;**+**图标以添加配置。
+如果您是首次配置目标，请单击**立即配置。**
 
 1. 在“创建配置”对话框中，为配置指定一个&#x200B;**标题**&#x200B;和一个&#x200B;**名称**（可选）。
 
-1. 单击&#x200B;**创建**。将打开“编辑组件”对话框。
+1. 单击&#x200B;**创建**。 将打开“编辑组件”对话框。
 1. 指定您的Target帐户详细信息，如客户端代码、电子邮件和密码。
 1. 从“API类型”下拉列表中选择&#x200B;**Rest**。
 
-1. 单击&#x200B;**连接到Adobe Target**，以便您可以初始化与Target的连接。 如果连接成功，则将显示消息“连接成功”。 单击邮件上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。 已配置Target帐户。
+1. 单击&#x200B;**连接到Adobe Target**，以便您可以初始化与Target的连接。 如果连接成功，则将显示消息“连接成功”。 单击消息上的&#x200B;**确定**，然后单击对话框上的&#x200B;**确定**。 已配置Target帐户。
 
 1. 按照[添加框架](/help/sites-administering/target.md)中的说明创建Target框架。
 
@@ -62,7 +78,7 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 1. 单击&#x200B;**AEM Forms目标配置**。
 1. 选择&#x200B;**目标框架**。
 1. 在&#x200B;**目标URL**&#x200B;字段中，指定运行A/B测试的所有URL。 例如，OSGi上的AEM Forms Server的https://&lt;*主机名*>：&lt;*端口*>/，或者JEE上的AEM Forms Server的https://&lt;*主机名*>：&lt;*端口*>/lc/。
-假定您要为发布实例配置Target URL，并且您的客户可以使用主机名或IP地址访问它。 在这种情况下，您必须将两者都配置为Target URL — 使用主机名和IP地址。 如果仅配置其中一个URL，则不会为来自其他URL的客户运行A/B测试。 单击&#x200B;**+**&#x200B;指定多个URL。
+假定您要为发布实例配置Target URL，并且您的客户可以使用主机名或IP地址访问它。 在这种情况下，您必须将两者都配置为Target URL — 使用主机名和IP地址。 如果仅配置其中一个URL，则不会为来自其他URL的客户运行A/B测试。 单击**+**&#x200B;指定多个URL。
 
 1. 单击&#x200B;**保存**。
 
@@ -109,7 +125,7 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 1. 单击工具栏中的&#x200B;**选择**&#x200B;工具并选择自适应表单。
 1. 单击工具栏中的&#x200B;**更多**，然后选择&#x200B;**配置A/B测试**。 此时会打开配置A/B测试页面。
 
-[&#128279;](assets/ab-test-configure-1.png)
+[自适应表单的![A/B测试配置页面](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
 
 1. 为A/B测试指定&#x200B;**活动名称**。
 
@@ -126,7 +142,7 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
    * 字段的描述、标签和帮助文本
    * 不影响或中断提交流的脚本
    * 验证（客户端和服务器端）
-   * 体验B的主题。（您可以为体验B选择替代主题）
+   * 体验B的主题。 （您可以为体验B选择替代主题）
 
 1. 转到Forms和文档UI，选择自适应表单，单击&#x200B;**更多**，然后选择&#x200B;**启动A/B测试**。
 
@@ -153,10 +169,10 @@ AEM Forms与Adobe Experience Cloud解决方案Adobe Target集成，跨多个数�
 
 1. 选择自适应表单，单击&#x200B;**更多**，然后单击&#x200B;**A/B测试报告**。 此时会显示报表。
 
-[&#128279;](assets/ab-test-report-3.png)
+[![A/B测试报告](assets/ab-test-report-2.png)](assets/ab-test-report-3.png)
 
 1. 分析报表，并查看您是否有足够的数据点来将某个表现更好的体验声明为入选者。 您可以选择继续同一A/B测试更长时间，或声明入选者并结束A/B测试。
-1. 要声明入选者并结束A/B测试，请单击报表仪表板上的&#x200B;**结束A/B测试**&#x200B;按钮。 出现一个对话框，提示您声明两个体验之一为入选体验。 选择入选者并确认结束A/B测试。
-或者，您可以首先通过单击相应体验的&#x200B;**声明入选者**&#x200B;按钮来声明入选者。 它会提示您确认入选者。 单击&#x200B;**是**&#x200B;结束A/B测试。
+1. 要声明入选者并结束A/B测试，请单击报表仪表板上的&#x200B;**结束A/B测试**按钮。 出现一个对话框，提示您声明两个体验之一为入选体验。 选择入选者并确认结束A/B测试。
+或者，您可以首先通过单击相应体验的**声明入选者**&#x200B;按钮来声明入选者。 它会提示您确认入选者。 单击&#x200B;**是**&#x200B;结束A/B测试。
 
 如果您选择体验A作为入选者，则A/B测试将终止，并且以后，只有体验A会提供给受众。

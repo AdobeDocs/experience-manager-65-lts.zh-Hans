@@ -9,13 +9,27 @@ feature: Image Presets
 role: User,Admin
 solution: Experience Manager, Experience Manager Assets
 exl-id: f4d3a5f1-9348-433f-9c9f-84075a7ab912
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: a16e03b7-8456-4383-8860-31ab5ab00e9e
+    internal-label: Image presets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 3%
-
+source-wordcount: '346'
+ht-degree: 4%
 ---
-
 # 应用Dynamic Media图像预设 {#applying-image-presets}
 
 利用图像预设，资产可以动态交付不同大小、不同格式的图像，或者使用动态生成的其他图像属性交付图像。 可以在导出图像时选择预设。 预设按照管理员指定的规范重新格式化图像。
@@ -42,7 +56,7 @@ ht-degree: 3%
    >
    >* 静态演绎版显示在窗格的上半部分。 动态呈现版本将显示在下半部分。 仅通过动态演绎版，您可以使用URL显示图像。 仅当您选择动态呈现版本时，才会显示&#x200B;**[!UICONTROL URL]**&#x200B;按钮。 仅当您选择响应式图像预设时，才会显示&#x200B;**[!UICONTROL RESS]**&#x200B;按钮。
    >
-   >* 当您在资产的“详细信息”视图中选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示大量演绎版。 您可以增加可查看的预设数。请参阅[增加显示的图像预设数](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
+   >* 当您在资产的“详细信息”视图中选择&#x200B;**[!UICONTROL 演绎版]**&#x200B;时，系统会显示大量演绎版。 您可以增加可查看的预设数。 请参阅[增加显示的图像预设数](managing-image-presets.md#increasing-or-decreasing-the-number-of-image-presets-that-display)。
 
    ![chlimage_1-208](assets/chlimage_1-208.png)
 

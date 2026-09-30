@@ -11,22 +11,30 @@ thumbnail: 34350.jpg
 solution: Experience Manager,Commerce
 role: Admin, Developer
 exl-id: 5f6171f8-20ca-4c31-a99f-a5bc07a63baf
-source-git-commit: 093d38dbb1d3e2a2f63c1b7a88d9f31c9950e955
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 3%
-
+source-wordcount: '934'
+ht-degree: 10%
 ---
-
 # 高级URL配置 {#url}
 
 >[!NOTE]
 >
->搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。因此，必须解决许多AEM项目中的SEO问题。 请参阅[SEO和URL管理最佳实践](/help/managing/seo-and-url-management.md)以了解更多信息。
+>搜索引擎优化 (SEO) 已成为许多营销人员关注的重点。 因此，在众多 AEM 项目中必须解决与 SEO 相关的问题。 请参阅[SEO和URL管理最佳实践](/help/managing/seo-and-url-management.md)以了解更多信息。
 
-[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)提供了高级配置以自定义产品和类别页面的URL。 许多实施都会自定义这些URL，以实现搜索引擎优化(SEO)。 以下视频详细介绍如何配置`UrlProvider`Sling映射[的](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)服务和功能以自定义产品和类别页面的URL。
+[AEM CIF核心组件](https://github.com/adobe/aem-core-cif-components)提供了高级配置以自定义产品和类别页面的URL。 许多实施都会自定义这些URL，以实现搜索引擎优化(SEO)。 以下视频详细介绍如何配置[Sling映射](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)的`UrlProvider`服务和功能以自定义产品和类别页面的URL。
 
->[!VIDEO](https://video.tv.adobe.com/v/38584/?captions=chi_hans&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34350/?quality=12)
 
 ## 配置 {#configuration}
 
@@ -105,7 +113,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->此配置必须使用项目使用的外部域进行调整。 Sling映射基于主机名和域工作。 因此，此配置默认处于禁用状态，必须在部署之前启用。 为此，请根据使用的域名重命名`hostname.adobeaemcloud.com`中的Sling映射`ui.content/src/main/content/jcr_root/etc/map.publish/https`文件夹，并通过将`resource.resolver.map.location="/etc/map.publish"`添加到项目的`JcrResourceResolver`配置中来启用此配置。
+>此配置必须使用项目使用的外部域进行调整。 Sling映射基于主机名和域工作。 因此，此配置默认处于禁用状态，必须在部署之前启用。 为此，请根据使用的域名重命名`ui.content/src/main/content/jcr_root/etc/map.publish/https`中的Sling映射`hostname.adobeaemcloud.com`文件夹，并通过将`resource.resolver.map.location="/etc/map.publish"`添加到项目的`JcrResourceResolver`配置中来启用此配置。
 
 ## 其他资源
 

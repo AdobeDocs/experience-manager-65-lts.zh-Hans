@@ -5,13 +5,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: 73230415-078c-4933-8521-bc18e5490103
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 6%
-
 ---
-
 # 配置和配置浏览器 {#configuration-browser}
 
 AEM配置用于管理AEM中的设置，并用作工作区。
@@ -79,8 +88,8 @@ AEM管理员和作者可以将配置视为工作区。 通过实施这些功能�
 
    * **标题**&#x200B;应为描述性的。
    * **名称**&#x200B;会成为存储库中的节点名称。
-      * 它会根据标题自动生成，并根据 [AEM 命名约定](/help/sites-developing/naming-conventions.md)进行调整。
-      * 如有必要可以调整。
+     * 它会根据标题自动生成，并根据 [AEM 命名约定](/help/sites-developing/naming-conventions.md)进行调整。
+     * 如有必要可以调整。
 1. 检查要允许的配置类型。
    * [云配置](/help/sites-administering/configurations.md)
    * [上下文中心区段](/help/sites-administering/segmentation.md)
@@ -104,7 +113,7 @@ AEM管理员和作者可以将配置视为工作区。 通过实施这些功能�
    >
    >创建配置后，无法取消选择功能。
 
-1. 使用&#x200B;**有效权限**&#x200B;按钮查看角色矩阵以及当前授予配置的权限。
+1. 使用&#x200B;**有效权限**按钮查看角色矩阵以及当前授予配置的权限。
    ![有效权限窗口](assets/configuration-effective-permissions.png)
 1. 要分配新权限，请在&#x200B;**添加新权限**&#x200B;部分的&#x200B;**选择用户或组**&#x200B;字段中输入用户或组名称。
    * **选择用户或组**&#x200B;字段提供基于现有用户和角色的自动完成功能。

@@ -11,13 +11,27 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 470636ce-3934-4aac-80ff-1fe6bd84455e
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 6%
-
+source-wordcount: '718'
+ht-degree: 7%
 ---
-
 
 # SPA 页面组件{#spa-page-component}
 
@@ -27,7 +41,7 @@ ht-degree: 6%
 
 ## 简介 {#introduction}
 
-SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HTML元素。 此操作将委派给 SPA 框架。子组件的表示形式作为JSON数据结构（即模型）获取。 然后，根据提供的JSON模型将SPA组件添加到页面。 因此，页面组件初始正文构成不同于其预渲染的HTML对应正文。
+SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HTML元素。 此操作将委派给 SPA 框架。 子组件的表示形式作为JSON数据结构（即模型）获取。 然后，根据提供的JSON模型将SPA组件添加到页面。 因此，页面组件初始正文构成不同于其预渲染的HTML对应正文。
 
 ## 页面模型管理 {#page-model-management}
 
@@ -42,7 +56,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 
 ## 通信数据类型 {#communication-data-type}
 
-通信数据类型是使用`data-cq-datatype`属性在AEM Page组件中设置的HTML元素。 当通信数据类型设置为JSON时，GET请求会命中组件的Sling模型端点。 在页面编辑器中执行更新后，已更新组件的 JSON 表示形式将发送到页面模型库。然后，页面模型库会向SPA发出更新警告。
+通信数据类型是使用`data-cq-datatype`属性在AEM Page组件中设置的HTML元素。 当通信数据类型设置为JSON时，GET请求会命中组件的Sling模型端点。 在页面编辑器中执行更新后，已更新组件的 JSON 表示形式将发送到页面模型库。 然后，页面模型库会向SPA发出更新警告。
 
 **SPA页面组件 —`body.html`**
 
@@ -84,7 +98,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 * `cq:wcmmode`：编辑器的WCM模式（例如，页面、模板）
 * `cq:pagemodel_root_url`：应用程序的根模型的URL。 由于子页面模型是应用程序根模型的片段，因此直接访问子页面时至关重要。 然后，` [PageModelManager](/help/sites-developing/spa-page-component.md)`会系统地重新构建应用程序初始模型，使其从根入口点进入应用程序。
 
-* `cq:pagemodel_router`：启用或禁用` [ModelRouter](/help/sites-developing/spa-routing.md)`库的`PageModelManager`
+* `cq:pagemodel_router`：启用或禁用`PageModelManager`库的` [ModelRouter](/help/sites-developing/spa-routing.md)`
 
 * `cq:pagemodel_route_filters`：逗号分隔列表或正则表达式，用于提供` [ModelRouter](/help/sites-developing/spa-routing.md)`必须忽略的路由。
 
@@ -92,7 +106,7 @@ SPA的页面组件不通过JSP或HTL文件和资源对象提供其子组件的HT
 >
 >本文档仅将We.Retail日志应用程序用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，它支持使用React或Angular的SPA项目，并使用SPA SDK。AEM上的所有SPA项目都应基于Maven Archetype for SPA Starter Kit。
 
 ## 页面编辑器叠加同步 {#page-editor-overlay-synchronization}
 

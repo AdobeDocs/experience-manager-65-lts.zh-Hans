@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 29c20cf3-1694-4d06-ab7c-688018808c44
-source-git-commit: 4087a6f44bd87e3f841feb09220a9ea34ec1dc1c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1800'
 ht-degree: 1%
-
 ---
-
 # 性能测试最佳做法{#best-practices-for-performance-testing}
 
 ## 简介 {#introduction}
@@ -63,8 +72,8 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 
 * 测试移动或响应式网站时，必须使用一组单独的工具。 它们通过调节网络带宽来工作，模拟速度较慢的移动连接，如3G或EDGE。 使用范围更广的工具包括：
 
-   * **[网络链接调节器](https://nshipster.com/network-link-conditioner/)** — 它提供了易于使用的UI，并且在网络栈栈上以相当低的级别工作。 它包括OS X和iOS的版本；
-   * [**Charles**](https://www.charlesproxy.com/) - Web调试代理应用程序，除了多种其他用途之外，还提供网络调节。 为Windows、OS X和Linux®提供了版本。
+  * **[网络链接调节器](https://nshipster.com/network-link-conditioner/)** — 它提供了易于使用的UI，并且在网络栈栈上以相当低的级别工作。 它包括OS X和iOS的版本；
+  * [**Charles**](https://www.charlesproxy.com/) - Web调试代理应用程序，除了多种其他用途之外，还提供网络调节。 为Windows、OS X和Linux®提供了版本。
 
 #### 优化工具 {#optimization-tools}
 
@@ -74,7 +83,7 @@ AEM中的许多性能度量（如查询响应时间）都可能会受系统上�
 
 触屏UI中的&#x200B;**开发人员模式**
 
-AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=zh-Hans)。
+AEM 6触控UI中的一项新增功能是开发人员模式。 就像作者可以在编辑和预览模式之间切换一样，开发人员也可以在作者UI中切换到开发人员模式。 这样，您就可以查看页面上每个组件的渲染时间，并查看任何错误的栈栈跟踪。 有关开发人员模式的详细信息，请参阅此[CQ Gems演示](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html)。
 
 **使用rlog.jar读取请求日志**
 
@@ -86,7 +95,8 @@ ACS AEM工具中的[Explain查询工具](/help/sites-administering/operations-da
 
 **PageSpeed工具**
 
-Google的PageSpeed工具提供了网站分析功能，用于确保对页面性能最佳实践的遵守情况，以及可在Apache实例上与Dispatcher一起安装的插件，用于进行其他优化。请参阅[PageSpeed Tools网站](https://developers.google.com/speed)。
+Google的PageSpeed工具提供了网站分析功能，用于确保对页面性能最佳实践的遵守情况，以及可在Apache实例上与Dispatcher一起安装的插件，用于进行其他优化。
+请参阅[PageSpeed Tools网站](https://developers.google.com/speed)。
 
 ## 创作环境 {#author-environment}
 

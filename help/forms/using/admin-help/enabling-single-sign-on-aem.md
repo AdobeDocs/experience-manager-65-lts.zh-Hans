@@ -9,14 +9,31 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: ba02f9b1-209e-42f2-b1df-2ed64fc9fdbc
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1740'
 ht-degree: 0%
-
 ---
-
 # 在 AEM Forms 中启用单点登录{#enabling-single-sign-on-in-aem-forms}
 
 >[!NOTE]
@@ -85,13 +102,13 @@ AEM表单提供两种启用单点登录(SSO)的方法 — HTTP标头和SPNEGO。
    * 将LDAP添加为身份验证提供程序。
    * 将Kerberos添加为身份验证提供程序。 在Kerberos的“新建身份验证”或“编辑身份验证”页面上提供以下信息：
 
-      * **身份验证提供程序：** Kerberos
-      * **DNS IP：**&#x200B;运行AEM表单的服务器的DNS IP地址。 您可以在命令行上运行`ipconfig/all`来确定此IP地址。
-      * **KDC主机：**&#x200B;用于身份验证的Active Directory服务器的完全限定主机名或IP地址
-      * **服务用户：**&#x200B;传递到KtPass工具的服务主体名称(SPN)。 在前面使用的示例中，服务用户是`HTTP/lcserver.um.lc.com`。
-      * **服务领域：** Active Directory的域名。 在前面使用的示例中，域名是`UM.LC.COM.`
-      * **服务密码：**&#x200B;服务用户的密码。 在前面使用的示例中，服务密码为`password`。
-      * **启用SPNEGO：**&#x200B;允许将SPNEGO用于单点登录(SSO)。 选择此选项。
+     * **身份验证提供程序：** Kerberos
+     * **DNS IP：**&#x200B;运行AEM表单的服务器的DNS IP地址。 您可以在命令行上运行`ipconfig/all`来确定此IP地址。
+     * **KDC主机：**&#x200B;用于身份验证的Active Directory服务器的完全限定主机名或IP地址
+     * **服务用户：**&#x200B;传递到KtPass工具的服务主体名称(SPN)。 在前面使用的示例中，服务用户是`HTTP/lcserver.um.lc.com`。
+     * **服务领域：** Active Directory的域名。 在前面使用的示例中，域名是`UM.LC.COM.`
+     * **服务密码：**&#x200B;服务用户的密码。 在前面使用的示例中，服务密码为`password`。
+     * **启用SPNEGO：**&#x200B;允许将SPNEGO用于单点登录(SSO)。 选择此选项。
 
 1. 配置SPNEGO客户端浏览器设置。 （请参阅[配置SPNEGO客户端浏览器设置](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)。）
 
@@ -156,7 +173,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 要使基于SPNEGO的身份验证正常工作，客户端计算机必须是创建用户帐户的域的一部分。 您还必须将客户端浏览器配置为允许基于SPNEGO的身份验证。 此外，需要基于SPNEGO的身份验证的站点必须是受信任的站点。
 
-如果使用计算机名（如https://lcserver:8080）访问服务器，则Internet Explorer不需要任何设置。 如果您输入的URL不包含任何点(“。”)，则Internet Explorer会将该站点视为本地Intranet站点。 如果站点使用了完全限定的名称，则必须将该站点添加为受信任的站点。
+如果使用计算机名（如https://lcserver:8080 ）访问服务器，则Internet Explorer不需要任何设置。 如果您输入的URL不包含任何点(“。”)，则Internet Explorer会将该站点视为本地Intranet站点。 如果站点使用了完全限定的名称，则必须将该站点添加为受信任的站点。
 
 **配置Internet Explorer 6.x**
 
@@ -187,7 +204,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 
 1. 在JEE环境中登录到您的AEM Forms 。
 1. 在管理控制台中，单击设置>用户管理>域管理。
-1. 选择您的域配置，例如LDAP ，然后单击它。您可以在“目录”中找到所有已创建的用户和组。如果需要，您可以创建新用户或组。
+1. 选择您的域配置，例如LDAP ，然后单击它。 您可以在“目录”中找到所有已创建的用户和组。 如果需要，您可以创建新用户或组。
    ![域管理页](/help/forms/using/assets/domain-mgmt-page.png)
 1. 单击验证，在新页上选择一个验证提供程序，如LDAP。
 1. 导航到“域管理”页面，选择LDAP，然后单击&#x200B;**立即同步**，以将目录与您配置的身份验证方案同步，以便访问AEM。

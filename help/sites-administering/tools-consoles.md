@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: b81d2f39-1517-49f0-9d16-bcde514cc199
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 25%
-
 ---
-
 # 工具控制台{#tools-consoles}
 
 **工具**&#x200B;控制台提供对几个专用工具的访问权限，这些工具可帮助您管理网站、数字资产及内容存储库的其他方面。 当前&#x200B;**工具**&#x200B;控制台有两种风格取决于您使用的UI：

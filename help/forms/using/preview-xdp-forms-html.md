@@ -1,5 +1,5 @@
 ---
-title: 生成XDP表单的HTML5预览
+title: 生成 XDP 表单的 HTML5 预览
 description: LiveCycle Designer中的“预览HTML”选项卡可用于预览表单在浏览器中显示的效果。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
@@ -8,14 +8,29 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 8cab9656-3dda-4fdd-bb1a-df0bc4750e72
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 0%
-
+source-wordcount: '807'
+ht-degree: 3%
 ---
-
-# 生成XDP表单的HTML5预览{#generate-html-preview-of-an-xdp-form}
+# 生成 XDP 表单的 HTML5 预览{#generate-html-preview-of-an-xdp-form}
 
 在AEM Forms Designer中设计表单时，除了预览表单的PDF呈现版本之外，您还可以预览表单的HTML5呈现版本。 您可以使用&#x200B;**预览HTML**&#x200B;选项卡预览显示在浏览器中的表单。
 
@@ -35,15 +50,15 @@ ht-degree: 0%
 
 1. 根据您是在OSGi还是JEE上运行AEM Forms，在&#x200B;**身份验证要求**&#x200B;字段中添加以下内容：
 
-   * JEE上的AEM Forms
+   * JEE 上的 AEM Forms
 
-      * -/content/xfaforms
-      * -/etc/clientlibs
+     * -/content/xfaforms
+     * -/etc/clientlibs
 
    * OSGi上的AEM Forms
 
-      * -/content/xfaforms
-      * -/etc/clientlibs/fd/xfaforms
+     * -/content/xfaforms
+     * -/etc/clientlibs/fd/xfaforms
 
    >[!NOTE]
    >
@@ -74,14 +89,14 @@ ht-degree: 0%
    * **HTTP端口号**： AEM服务器端口。 默认值为 4502。
    * **HTML预览上下文：**&#x200B;用于呈现XFA表单的配置文件路径。 以下默认配置文件用于预览Designer中的表单。 但是，您还可以指定自定义配置文件的路径。
 
-      * `/content/xfaforms/profiles/default.html` (OSGi上的AEM Forms)
+     * `/content/xfaforms/profiles/default.html` （OSGi上的AEM Forms）
 
-      * `/lc/content/xfaforms/profiles/default.html` (JEE上的AEM Forms)
+     * `/lc/content/xfaforms/profiles/default.html` （JEE上的AEM Forms）
 
    * **Forms Manager上下文：**&#x200B;部署Forms Manager UI的上下文路径。 默认值为：
 
-      * `/aem/forms` (OSGi上的AEM Forms)
-      * `/lc/forms` (JEE上的AEM Forms)
+     * `/aem/forms` （OSGi上的AEM Forms）
+     * `/lc/forms` （JEE上的AEM Forms）
 
    >[!NOTE]
    >
@@ -105,13 +120,13 @@ ht-degree: 0%
 
    >[!CAUTION]
    >
-   >要测试真正的最终用户体验，还可以在外部浏览器(Google Chrome、Microsoft Edge、Mozilla Firefox等)中预览表单。 由于每个浏览器使用单独的引擎来呈现HTML，因此Designer中的表单预览方式可能与外部浏览器存在一些差异。
+   >要测试真正的最终用户体验，还可以在外部浏览器（Google Chrome、Microsoft Edge、Mozilla Firefox等）中预览表单。 由于每个浏览器使用单独的引擎来呈现HTML，因此Designer中的表单预览方式可能与外部浏览器存在一些差异。
 
 ## 使用示例数据预览表单 {#to-preview-a-form-using-sample-data}
 
 Designer允许您使用示例XML数据预览和测试表单。 建议您经常使用示例数据测试表单，以确保表单正确呈现。
 
-如果您没有示例数据，Designer可以创建它，也可以自己创建它。 （请参阅[自动生成预览表单的示例数据](https://help.adobe.com/zh_CN/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)和[创建预览表单的示例数据](https://help.adobe.com/zh_CN/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)。）
+如果您没有示例数据，Designer可以创建它，也可以自己创建它。 （请参阅[自动生成预览表单的示例数据](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2)和[创建预览表单的示例数据](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2)。）
 
 使用示例数据源测试表单可确保映射数据和字段，并确保重复的子表单按预期重复。 您可以创建一个平衡的表单布局，为每个对象提供适当的空间以显示合并的数据。
 

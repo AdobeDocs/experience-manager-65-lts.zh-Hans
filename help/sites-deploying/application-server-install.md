@@ -9,13 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 09d54b52-485a-453c-a2d0-535adead9e6c
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 1%
-
 ---
-
 # 应用程序服务器安装{#application-server-install}
 
 >[!NOTE]
@@ -104,7 +116,7 @@ AEM提供单个war文件来进行部署。
 
 * 让基本身份验证标头通过：
 
-   * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere®服务器的全局管理安全。 为此，请转到&#x200B;**安全>全局安全**&#x200B;并取消选中&#x200B;**启用管理安全复选框**，保存并重新启动服务器。
+  * 允许AEM对用户进行身份验证的一种方法是禁用WebSphere®服务器的全局管理安全。 为此，请转到&#x200B;**安全>全局安全**&#x200B;并取消选中&#x200B;**启用管理安全复选框**，保存并重新启动服务器。
 
 * 设置 `"JAVA_OPTS= -Xmx2048m"`
 * 如果要使用上下文根= /安装AEM，请更改现有默认Web应用程序的上下文根。
@@ -114,14 +126,14 @@ AEM提供单个war文件来进行部署。
 * 下载AEM war文件
 * 如有需要，在`web.xml`文件中进行配置。 有关详细信息，请参阅上面的[一般说明](#general-description)。
 
-   * 解压缩`WEB-INF/web.xml`文件
-   * 将`sling.run.modes`参数更改为`publish`
-   * 取消注释初始`sling.home`参数，并根据需要设置此路径
-   * 重新打包`web.xml`文件。
+  * 解压缩`WEB-INF/web.xml`文件
+  * 将`sling.run.modes`参数更改为`publish`
+  * 取消注释初始`sling.home`参数，并根据需要设置此路径
+  * 重新打包`web.xml`文件。
 
 * 部署AEM war文件
 
-   * 选择上下文根。 如果要设置sling运行模式，您需要选择部署向导的详细步骤，然后在向导的步骤6中指定该步骤。
+  * 选择上下文根。 如果要设置sling运行模式，您需要选择部署向导的详细步骤，然后在向导的步骤6中指定该步骤。
 
 * 启动AEM Web应用程序
 
@@ -131,64 +143,64 @@ AEM提供单个war文件来进行部署。
 
 * **准备Tomcat服务器**
 
-   * 增加VM内存设置：
+  * 增加VM内存设置：
 
-      * 在`bin/catalina.bat`中（在UNIX®上为`catalina.sh`）添加以下设置：
+    * 在`bin/catalina.bat`中（在UNIX®上为`catalina.sh`）添加以下设置：
 
-        ```
-        set "JAVA_OPTS= -Xmx2048m`
-        ```
+      ```
+      set "JAVA_OPTS= -Xmx2048m`
+      ```
 
-   * 在安装时，Tomcat不启用管理员或管理员访问权限。 因此，您必须手动编辑`tomcat-users.xml`以允许访问这些帐户：
+  * 在安装时，Tomcat不启用管理员或管理员访问权限。 因此，您必须手动编辑`tomcat-users.xml`以允许访问这些帐户：
 
-      * 编辑`tomcat-users.xml`以包括管理员和经理的访问权限。 该配置应类似于以下示例：
+    * 编辑`tomcat-users.xml`以包括管理员和经理的访问权限。 该配置应类似于以下示例：
 
-        ```xml
-        <?xml version='1.0' encoding='utf-8'?>
-        <tomcat-users>
-          <role rolename="manager"/>
-          <role rolename="tomcat"/>
-          <role rolename="admin"/>
-          <role rolename="role1"/>
-          <role rolename="manager-gui"/>
-          <user username="both" password="tomcat" roles="tomcat,role1"/>
-          <user username="tomcat" password="tomcat" roles="tomcat"/>
-          <user username="admin" password="admin" roles="admin,manager-gui"/>
-          <user username="role1" password="tomcat" roles="role1"/>
-        </tomcat-users>
-        ```
+      ```xml
+      <?xml version='1.0' encoding='utf-8'?>
+      <tomcat-users>
+        <role rolename="manager"/>
+        <role rolename="tomcat"/>
+        <role rolename="admin"/>
+        <role rolename="role1"/>
+        <role rolename="manager-gui"/>
+        <user username="both" password="tomcat" roles="tomcat,role1"/>
+        <user username="tomcat" password="tomcat" roles="tomcat"/>
+        <user username="admin" password="admin" roles="admin,manager-gui"/>
+        <user username="role1" password="tomcat" roles="role1"/>
+      </tomcat-users>
+      ```
 
-   * 如果要使用上下文根“/”部署AEM，则必须更改现有ROOT Web应用程序的上下文根：
+  * 如果要使用上下文根“/”部署AEM，则必须更改现有ROOT Web应用程序的上下文根：
 
-      * 停止并取消部署ROOT Web应用程序
-      * 重命名Tomcat webapps文件夹中的`ROOT.war`文件夹
-      * 再次启动Web应用程序
+    * 停止并取消部署ROOT Web应用程序
+    * 重命名Tomcat webapps文件夹中的`ROOT.war`文件夹
+    * 再次启动Web应用程序
 
-   * 如果您使用管理器gui安装AEM Web应用程序，则需要增加已上传文件的最大大小，因为默认仅允许50 MB的上传大小。 要实现打开管理器Web应用程序的`web.xml`：
+  * 如果您使用管理器gui安装AEM Web应用程序，则需要增加已上传文件的最大大小，因为默认仅允许50 MB的上传大小。 要实现打开管理器Web应用程序的`web.xml`：
 
-     `webapps/manager/WEB-INF/web.xml`
+    `webapps/manager/WEB-INF/web.xml`
 
-     并将`max-file-size`和`max-request-size`增加到至少500MB。 在下面的`web.xml`示例文件中查看以下`multipart-config`：
+    并将`max-file-size`和`max-request-size`增加到至少500MB。 在下面的`web.xml`示例文件中查看以下`multipart-config`：
 
-     ```xml
-     <multipart-config>
-     <!-- 500MB max -->
-     <max-file-size>524288000</max-file-size>
-     <max-request-size>524288000</max-request-size>
-     <file-size-threshold>0</file-size-threshold>
-     </multipart-config>
-     ```
+    ```xml
+    <multipart-config>
+    <!-- 500MB max -->
+    <max-file-size>524288000</max-file-size>
+    <max-request-size>524288000</max-request-size>
+    <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+    ```
 
 * **部署AEM Web应用程序**
 
-   * 下载AEM war文件。
-   * 如有需要，在`web.xml`文件中进行配置。
+  * 下载AEM war文件。
+  * 如有需要，在`web.xml`文件中进行配置。
 
-      * 解压缩`WEB-INF/web.xml`文件
-      * 将`sling.run.modes`参数更改为`publish`
-      * 取消注释初始`sling.home`参数，并根据需要设置此路径
-      * 重新打包`web.xml`文件。
+    * 解压缩`WEB-INF/web.xml`文件
+    * 将`sling.run.modes`参数更改为`publish`
+    * 取消注释初始`sling.home`参数，并根据需要设置此路径
+    * 重新打包`web.xml`文件。
 
-   * 如果要将AEM war文件部署为根Web应用程序，请将其重命名为`ROOT.war`。 如果要将`aemauthor`作为上下文根目录，请将其重命名为`aemauthor.war`。
-   * 将其复制到Tomcat的Webapps文件夹中
-   * 等待安装AEM。
+  * 如果要将AEM war文件部署为根Web应用程序，请将其重命名为`ROOT.war`。 如果要将`aemauthor`作为上下文根目录，请将其重命名为`aemauthor.war`。
+  * 将其复制到Tomcat的Webapps文件夹中
+  * 等待安装AEM。

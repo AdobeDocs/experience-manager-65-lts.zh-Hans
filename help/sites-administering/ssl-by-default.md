@@ -10,13 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 exl-id: 3fd6a54b-9220-4bb2-9625-4f459c4d3aa8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '871'
 ht-degree: 0%
-
 ---
-
 # 默认为SSL/TLS{#ssl-tls-by-default}
 
 为了持续提高AEM的安全性，Adobe默认引入了SSL功能。 其目的是鼓励使用HTTPS连接到AEM实例。
@@ -195,7 +207,7 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 >[!NOTE]
 >
->请参阅[将cURL与AEM结合使用](https://helpx.adobe.com/cn/experience-manager/6-4/sites/administering/using/curl.html)，获取AEM中有用cURL命令的集中列表。
+>请参阅[将cURL与AEM结合使用](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html)，获取AEM中有用cURL命令的集中列表。
 
 您还可以使用cURL工具自动配置SSL/TLS。 为此，您可以将配置参数发布到此URL：
 
@@ -236,7 +248,7 @@ curl -u user:password -F "keystorePassword=password" -F "keystorePasswordConfirm
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-执行命令后，验证所有证书是否都进入密钥库。 从以下位置检查&#x200B;**密钥库**&#x200B;条目：
+执行命令后，验证所有证书是否都进入密钥库。 从以下位置检查&#x200B;**密钥库**条目：
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### 启用TLS 1.3连接 {#enabling-tls-connection}

@@ -11,13 +11,30 @@ feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
 exl-id: 20de763d-dd07-4ba6-a54d-a2b3b9b7e1ec
 index: false
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2857'
+source-wordcount: '2879'
 ht-degree: 6%
-
 ---
-
 
 # Adobe Campaign 组件{#adobe-campaign-components}
 
@@ -40,7 +57,7 @@ ht-degree: 6%
 * 链接 (营销活动)
 * Scene7 图像模板（营销活动）
 * 目标引用（营销活动）
-* 文本与图像（营销活动）
+* 文本与图像（Campaign）
 * 文本与个性化（营销活动）
 
 下一节将介绍这些组件。
@@ -65,7 +82,7 @@ ht-degree: 6%
 * **标题**
 如果要使用页面标题以外的名称，请在此处输入该名称。
 
-* **标题级别(1， 2， 3， 4)**
+* **标题级别(1、2、3、4)**
 标题级别基于HTML标题大小1-4。
 
 以下示例显示了正在显示的标题（营销活动）组件。
@@ -94,7 +111,7 @@ ht-degree: 6%
 >
 >就地编辑器在编辑时使用图像的原始大小和纵横比。 您还可以指定高度和宽度属性。 在保存编辑更改时，将应用属性中定义的任何大小和纵横比限制。
 >
->根据您的实例，页面[的](/help/sites-developing/designer.md)设计也可能施加最小和最大限制；这些限制是在项目实施期间制定的。
+>根据您的实例，页面](/help/sites-developing/designer.md)的[设计也可能施加最小和最大限制；这些限制是在项目实施期间制定的。
 
 全屏编辑模式中提供了多个其他选项；例如，映射和缩放：
 
@@ -154,8 +171,8 @@ ht-degree: 6%
 * **链接工具提示**
 添加了关于如何使用链接的其他信息。
 
-* **LinkType**
-在下拉列表中，选择&#x200B;**自定义URL**&#x200B;和&#x200B;**自适应文档**。 此字段为必填字段。 如果您选择自定义URL，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
+* **链接类型**
+在下拉列表中，选择**自定义URL**&#x200B;和&#x200B;**自适应文档**。 该字段为必填项。 如果您选择自定义URL，则可以提供链接URL。 如果选择“自适应文档”，则可以提供文档路径。
 
 * **其他URL参数**
 添加任何其他URL参数。 单击“添加项目”可添加多个项目。
@@ -220,20 +237,20 @@ Dynamic Media Classic (Scene7)图像模板是分层的图像文件，其中的�
 * **图像属性** （**高级图像属性**）
 用于指定以下内容：
 
-   * **标题**
-块的标题；由mouseover显示。
+  * **标题**
+    块的标题；由mouseover显示。
 
-   * **替换文本**
-图像无法显示时要显示的替换文本。
+  * **替换文本**
+    图像无法显示时要显示的替换文本。
 
-   * **链接到**
-创建指向网站内资产或其他页面的链接。
+  * **链接到**
+    创建指向网站内资产或其他页面的链接。
 
-   * **描述**
-图像的描述。
+  * **描述**
+    图像的描述。
 
-   * **大小**
-设置图像的高度和宽度。
+  * **大小**
+    设置图像的高度和宽度。
 
 >[!NOTE]
 >
@@ -279,11 +296,11 @@ Dynamic Media Classic (Scene7)图像模板是分层的图像文件，其中的�
 
 * 复选框（营销活动）
 * 日期字段（营销活动）和日期字段/HTML5 （营销活动）
-* 已加密的主键（营销活动）
-* 错误显示（营销活动）
-* 隐藏的协调键（营销活动）
-* 数字字段（营销活动）
-* 选项字段（营销活动）
+* 已加密的主键（Campaign）
+* 错误显示（Campaign）
+* 隐藏的协调键（Campaign）
+* 数值字段（Campaign）
+* 选项字段（Campaign）
 * 订阅核对清单（营销活动）
 * 文本字段（营销活动）
 
@@ -361,7 +378,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 * **映射**
 选择适当的Adobe Campaign个性化字段。
 
-* **协调密钥**
+* **对帐密钥**
 如果此字段是对帐密钥的一部分，则选中此复选框。
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
@@ -396,7 +413,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 除了大多数Adobe Campaign组件通用的[设置](#settings-common-to-most-components)之外，您还可以配置以下设置：
 
-* **约束 — 约束**&#x200B;下拉列表
+* **约束 — 约束**下拉列表
 您可以选择 — **无**&#x200B;或&#x200B;**日期 —**&#x200B;以添加日期限制或无限制。 如果选择日期，则用户在字段中输入的答案必须采用日期格式。
 
 * **约束消息**&#x200B;此外，您可以添加约束消息，以便用户了解如何正确设置其答案的格式。
@@ -448,7 +465,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 除了大多数Adobe Campaign组件通用的[设置](#settings-common-to-most-components)之外，您还可以配置以下设置：
 
-* **约束 — 约束**&#x200B;下拉列表
+* **约束 — 约束**下拉列表
 您可以选择 — **无**&#x200B;或&#x200B;**数值 —**&#x200B;来添加数值或无约束的约束。 如果选择数字，则用户在字段中输入的答案必须是数字。
 
 * **约束消息**&#x200B;此外，您可以添加约束消息，以便用户了解如何正确设置其答案的格式。
@@ -492,7 +509,7 @@ Adobe Campaign组件具有所有组件中通用的设置（加密的主密钥和
 
 除了大多数Adobe Campaign组件通用的[设置](#settings-common-to-most-components)之外，您还可以配置以下设置：
 
-* **约束 — 约束**&#x200B;下拉列表
+* **约束 — 约束**下拉列表
 您可以选择 — **无、** **电子邮件**&#x200B;或&#x200B;**名称** （无变音） — 添加电子邮件地址、名称或无限制的约束。 如果选择电子邮件，则用户在字段中输入的答案必须是电子邮件地址。 如果选择名称，则必须为名称（不允许使用变音）。
 
 * **约束消息**&#x200B;此外，您可以添加约束消息，以便用户了解如何正确设置其答案的格式。

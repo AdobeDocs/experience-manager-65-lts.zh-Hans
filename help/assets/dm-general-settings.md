@@ -6,13 +6,27 @@ role: User, Admin
 mini-toc-levels: 4
 solution: Experience Manager, Experience Manager Assets
 exl-id: 99cd5f46-f1aa-46f5-b112-311724e00490
-source-git-commit: 298d0505a6c0561202e77008b3c352066d4e72b7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: afe09f80-87de-4606-96de-7aecd50f1a65
+    internal-label: Image profiles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2498'
+source-wordcount: '2530'
 ht-degree: 0%
-
 ---
-
 # 配置Dynamic Media常规设置
 
 配置&#x200B;**[!UICONTROL Dynamic Media常规设置]**&#x200B;仅适用于以下情况：
@@ -40,7 +54,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 1. 在“服务器”页面中，设置您的&#x200B;**[!UICONTROL 已发布的服务器名称]**&#x200B;和&#x200B;**[!UICONTROL 原始服务器名称]**，然后使用这五个选项卡配置用于图像编辑以及Postscript、Photoshop、PDF和Illustrator文件的默认上载选项。
 
    * [服务器](#server-general-setting)
-   * [上载到应用程序](#upload-to-application)
+   * [上传到应用程序](#upload-to-application)
    * [图像编辑](#image-editing-tab)选项卡
    * [PostScript](#postscript-tab)选项卡
    * [Photoshop](#photoshop-tab)选项卡
@@ -48,7 +62,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
    * [Illustrator](#illustrator-tab)选项卡
 
    ![Dynamic Media常规设置页面](/help/assets/assets-dm/dm-general-settings.png)
-   *Dynamic Media常规设置页面，已选择&#x200B;**[!UICONTROL 图像编辑]**&#x200B;选项卡。*<br><br>
+   *Dynamic Media常规设置页面，已选择&#x200B;**[!UICONTROL 图像编辑]**选项卡。*<br><br>
 
 1. 完成后，在页面的右上角附近，选择&#x200B;**[!UICONTROL 保存]**。
 
@@ -82,7 +96,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 
   控制任何现有手动裁切定义的保留。
 
-  另请参阅Dynamic Media查看器参考指南中的`preserveCrop`UploadPostJob[和](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html?lang=zh-Hans)ReprocessAssetsJob[中的](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html?lang=zh-Hans)。
+  另请参阅Dynamic Media查看器参考指南中的[UploadPostJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job.html)和[ReprocessAssetsJob](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job.html)中的`preserveCrop`。
 
 ## 默认上载选项 {#default-upload-options}
 
@@ -94,16 +108,16 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 
 | “USM锐化”选项 | 描述 |
 | --- | --- |
-| **[!UICONTROL 金额]** | 必需。<br>控制应用于边缘像素的对比度数量。<br>将其视为效果的强度。 Adobe Dynamic Media中钝化蒙版的量值与Adobe Photoshop中的量值的主要区别在于Photoshop的量范围为1%到500%。 而在Adobe Dynamic Media中，值范围为`0.0`到`5.0`。 Adobe Dynamic Media中的5.0值大致相当于Photoshop中的500%；0.9值相当于90%，依此类推。 |
+| **[!UICONTROL 金额]** | 必需。<br>控制应用于边缘像素的对比度大小。<br>将其视为效果的强度。 Adobe Dynamic Media中钝化蒙版的量值与Adobe Photoshop中的量值的主要区别在于Photoshop的量范围为1%到500%。 而在Adobe Dynamic Media中，值范围为`0.0`到`5.0`。 Adobe Dynamic Media中的5.0值大致相当于Photoshop中的500%；0.9值相当于90%，依此类推。 |
 | **[!UICONTROL 半径]** | 必需。<br>控制效果的半径。<br>值范围为`0`到`250`。 该效果在图像中的所有像素上运行，并从所有像素向各个方向辐射。 半径以像素为单位测量。 例如，要对2000 x 2000像素图像和500 x 500像素图像获得类似的锐化效果，应将2000 x 2000像素图像上的半径设置为2像素。 然后在500 x 500像素图像上设置一个像素的半径值。 较大的值适用于像素较多的图像。 |
-| **[!UICONTROL 阈值]** | 必需。<br>阈值是应用钝化蒙版滤镜时忽略的对比度范围。 这种效果非常重要，因此使用此滤波器时，图像不会引入“杂色”。 值范围为`0` - `255`，这是灰度图像中的亮度阶数。 `0`=黑色，`128`=50%灰色和`255`=白色。<br>阈值为`12`时，忽略肤色亮度的细微变化，以避免添加杂色，但仍会为相异区域（如睫毛与皮肤相遇的区域）添加边缘对比度。<br>如果您有某人的面部照片，则“钝化蒙版”会影响图像的对比度部分。 例如，睫毛和皮肤相遇可产生明显对比区域，而皮肤本身光滑。 即使最光滑的皮肤也会表现出亮度值的细微变化。 如果不使用阈值，则滤镜会强调外观像素中的这些细微变化。 反过来，在增加睫毛上的对比度的同时，产生噪音和不希望的效果，增强锐利度。<br>为了避免此问题，引入了一个阈值，该阈值告知滤镜忽略对比度没有显着变化的像素，如平滑外观。<br>在前面显示的拉链图形中，请注意拉链旁边的纹理。 由于阈值过低，图像噪声难以抑制。 |
-| **[!UICONTROL 单色]** | 选择以钝化蒙版图像亮度（强度）。<br>取消选择以分别取消锐化每个颜色分量的蒙版。 |
+| **[!UICONTROL 阈值]** | 必需。<br>阈值是在应用钝化蒙版滤镜时忽略的对比度范围。 这种效果非常重要，因此使用此滤波器时，图像不会引入“杂色”。 值范围为`0` - `255`，这是灰度图像中的亮度阶数。 `0`=黑色，`128`=50%灰色和`255`=白色。<br>阈值为`12`将忽略肤色亮度的细微变化，以避免添加杂色，但仍会为相差的区域（如睫毛与皮肤相遇的区域）添加边缘对比度。<br>如果您有某人的面部照片，则“钝化蒙版”会影响图像的对比度部分。 例如，睫毛和皮肤相遇可产生明显对比区域，而皮肤本身光滑。 即使最光滑的皮肤也会表现出亮度值的细微变化。 如果不使用阈值，则滤镜会强调外观像素中的这些细微变化。 反过来，在增加睫毛上的对比度的同时，产生噪音和不希望的效果，增强锐利度。<br>为了避免此问题，引入了一个阈值，该阈值告知滤镜忽略对比度没有显着变化的像素，如平滑外观。<br>在前面显示的拉链图形中，请注意拉链旁边的纹理。 由于阈值过低，图像噪声难以抑制。 |
+| **[!UICONTROL 单色]** | 选择此项可取消锐化蒙版图像亮度（强度）。<br>取消选择此项可单独取消锐化蒙版每个颜色组件。 |
 
 另请参阅[在Adobe Dynamic Media和图像服务器](/help/assets/assets/sharpening_images.pdf)上锐化图像。
 
 ### PostScript选项卡 {#postscript-tab}
 
-可以栅格化Adobe PostScript®文件、保持透明背景、选择分辨率以及选择颜色空间。
+可以栅格化®文件、保持透明背景、选择分辨率以及选择颜色空间。
 
 您可以在Adobe Dynamic Media中使用Adobe PostScript® (EPS)文件。 Adobe Dynamic Media提供上传这些文件时用于配置这些文件的命令。
 
@@ -114,11 +128,11 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 正在处理]** | 选择“栅格化”以将文件中的矢量图形转换为位图格式。 |
 | **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留文件的背景透明度。 |
 | **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
-| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留文件的颜色空间。<br>· **[!UICONTROL 强制作为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]** — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]** — 转换为灰度颜色空间。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留文件的色彩空间。<br>· **[!UICONTROL 强制为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]** — 转换为CMYK色彩空间。<br>· **[!UICONTROL 强制为灰度]** — 转换为灰度色彩空间。 |
 
 ### Photoshop选项卡 {#photoshop-tab}
 
-您可以从Adobe® Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定如何将图像锚定到模板中。
+您可以从® Photoshop®文件创建模板、维护图层、指定图层的命名方式、提取文本以及指定如何将图像锚定到模板中。
 
 | Photoshop选项 | 描述 |
 | --- | --- |
@@ -126,7 +140,7 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 创建模板]** | 从PSD文件中的图层创建模板。 |
 | **[!UICONTROL 提取文本]** | 提取文本，以便用户能够在查看器中搜索文本。 |
 | **[!UICONTROL 将图层扩展至背景大小]** | 将已翻录图像图层的大小扩展到背景图层的大小。 |
-| **[!UICONTROL 图层命名]** | 将已翻录图像图层的大小扩展到背景图层的大小。<br>· **[!UICONTROL 图层名称]** — 将图像命名为PSD文件中的图层名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、第1层、第2层等），则图像将根据PSD文件中的图层编号进行命名。 <br>· **[!UICONTROL Photoshop和图层编号]** — 将图像命名为PSD文件中的图层编号，忽略原始图层名称。 使用Photoshop文件名和附加的图层编号来命名图像。 例如，名为`Spring Ad.psd`的文件的第二层名为`Spring Ad_2`，即使它在Photoshop中具有非默认名称。<br>· **[!UICONTROL Photoshop和图层名称]** — 将图像命名为PSD文件后跟图层名称或图层编号。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，名为`Price Tag`的PSD文件中名为`SpringAd`的图层名为`Spring Ad_Price Tag`。 默认名称为Layer 2的层称为`Spring Ad_2`。 |
+| **[!UICONTROL 图层命名]** | 将翻录图像图层的大小扩展到背景图层的大小。<br>· **[!UICONTROL 图层名称]** — 在PSD文件中将图像命名为图层名称后面的名称。 例如，原始PSD文件中名为“Price Tag”的图层会变成名为“Price Tag”的图像。 但是，如果PSD文件中的图层名称是默认的Photoshop图层名称（背景、第1层、第2层等），则图像将根据PSD文件中的图层编号进行命名。 <br>· **[!UICONTROL Photoshop和图层编号]** — 将图像命名为PSD文件中的图层编号，忽略原始图层名称。 使用Photoshop文件名和附加的图层编号来命名图像。 例如，名为`Spring Ad.psd`的文件的第二层名为`Spring Ad_2`，即使它在Photoshop中具有非默认名称。<br>· **[!UICONTROL Photoshop和图层名称]** — 将图像命名为PSD文件后跟图层名称或图层编号。 如果PSD文件中的图层名称是默认的Photoshop图层名称，则使用图层编号。 例如，名为`SpringAd`的PSD文件中名为`Price Tag`的图层名为`Spring Ad_Price Tag`。 默认名称为Layer 2的层称为`Spring Ad_2`。 |
 | **[!UICONTROL 锚点]** | 指定如何在模板中定位图像，这些模板是从PSD文件生成的分层组合生成的。 默认情况下，锚点是中心。 中心锚点允许替换图像以最佳方式填充相同的空间，而不管替换图像的长宽比如何。 当引用模板并使用参数替换时，替换此图像的不同方面的图像有效地占用了相同的空间。 如果您的应用程序要求替换图像填充模板中分配的空间，请更改为其他设置。 |
 
 ### PDF选项卡 {#pdf-tab}
@@ -138,11 +152,11 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 正在处理]** | · **[!UICONTROL 无]** — 未对PDF进行任何处理。<br>· **[!UICONTROL 缩略图]** — 跳过PDF文件中的每个页面，并将其转换为缩略图图像。<br> · **[!UICONTROL 栅格化]** — 撕裂PDF文件中的页面，并将矢量图形转换为位图图像。 要创建eCatalog，请选择此选项。 |
 | **[!UICONTROL 提取]** | · **[!UICONTROL 无]** — 未从PDF中提取任何搜索词或链接。<br>· **[!UICONTROL 搜索词]** — 从PDF文件中提取搜索词，以便在eCatalog查看器中按关键字搜索该文件。<br>· **[!UICONTROL 链接]** — 从PDF文件中提取链接，并将其转换为在eCatalog查看器中使用的图像映射。<br>· **[!UICONTROL 搜索词和链接]** — 提取搜索词和链接以在eCatalog查看器中使用。 |
 | **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定PDF文件中每英寸显示的像素数。 默认值为150。 |
-| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留PDF文件的色彩空间。<br>· **[!UICONTROL 强制作为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]** — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]** — 转换为灰度颜色空间。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留PDF文件的色彩空间。<br>· **[!UICONTROL 强制作为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制作为CMYK]** — 转换为CMYK色彩空间。<br>· **[!UICONTROL 强制作为灰度]** — 转换为灰度色彩空间。 |
 
 ### Illustrator选项卡 {#illustrator-tab}
 
-可以栅格化Adobe Illustrator®文件、保持透明背景、选择分辨率以及选择颜色空间。
+可以栅格化®文件、保持透明背景、选择分辨率以及选择颜色空间。
 
 您可以在Adobe Dynamic Media中使用Adobe® Illustrator® (AI)文件。 Adobe Dynamic Media提供上传这些文件时用于配置这些文件的命令。
 
@@ -154,4 +168,4 @@ Dynamic Media常规设置旨在供经验丰富的网站开发人员和程序员�
 | **[!UICONTROL 正在处理]** | 选择“栅格化”以将文件中的矢量图形转换为位图格式。 |
 | **[!UICONTROL 在渲染的图像中保持透明背景]** | 保留文件的背景透明度。 |
 | **[!UICONTROL 分辨率（像素/英寸）]** | 确定分辨率设置。 此设置确定文件中每英寸显示的像素数。 |
-| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留文件的颜色空间。<br>· **[!UICONTROL 强制作为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]** — 转换为CMYK颜色空间。<br>· **[!UICONTROL 强制为灰度]** — 转换为灰度颜色空间。 |
+| **[!UICONTROL 色彩空间]** | · **[!UICONTROL 自动检测]** — 保留文件的色彩空间。<br>· **[!UICONTROL 强制为RGB]** — 转换为RGB色彩空间。<br>· **[!UICONTROL 强制为CMYK]** — 转换为CMYK色彩空间。<br>· **[!UICONTROL 强制为灰度]** — 转换为灰度色彩空间。 |

@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: cbcb9301-48c9-4394-b8c0-766eed76101d
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
-
 ---
-
 # 备份Adobe Experience Manager (AEM) Forms数据 {#backing-up-the-aem-forms-data}
 
 <!-- back up is two words when used as a verb; backup is one word when used as an adjective or noun. -->
@@ -56,10 +71,10 @@ GDS位置必须备份的频率取决于AEM Forms的使用方式以及可用的�
 
   备份创作实例和发布实例时，请考虑以下几点：
 
-   * 请确保同步创作实例和发布实例的备份，以便同时启动。 虽然在执行备份时您可以继续使用创作和发布实例，但建议不要在备份期间发布任何资产，以避免任何未捕获的更改。 等待创作实例和发布实例的备份结束，然后再发布新资产。
-   * 创作节点的完整备份包括Forms Manager和AEM Forms Workspace数据的备份。
-   * Workbench开发人员可以继续在本地处理其流程。 他们不应在备份阶段部署任何新流程。
-   * 应根据AEM Forms中所有数据（DB、GDS、AEM存储库和任何其他自定义数据）的备份总耗时来确定每个备份会话的长度（用于滚动备份模式）。
+  * 请确保同步创作实例和发布实例的备份，以便同时启动。 虽然在执行备份时您可以继续使用创作和发布实例，但建议不要在备份期间发布任何资产，以避免任何未捕获的更改。 等待创作实例和发布实例的备份结束，然后再发布新资产。
+  * 创作节点的完整备份包括Forms Manager和AEM Forms Workspace数据的备份。
+  * Workbench开发人员可以继续在本地处理其流程。 他们不应在备份阶段部署任何新流程。
+  * 应根据AEM Forms中所有数据（DB、GDS、AEM存储库和任何其他自定义数据）的备份总耗时来确定每个备份会话的长度（用于滚动备份模式）。
 
 备份AEM Forms数据库，包括任何事务日志。 请参阅[AEM Forms数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。
 

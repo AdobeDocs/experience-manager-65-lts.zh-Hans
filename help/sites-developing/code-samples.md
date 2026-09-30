@@ -9,18 +9,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 15471908-feb1-4178-a24d-7cefe7717820
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 4%
-
+source-wordcount: '178'
+ht-degree: 16%
 ---
-
 # 代码示例{#code-samples}
 
 Adobe Consulting服务团队已生成一系列Adobe Experience Manager (AEM)代码示例。 这些示例是广受注释的代码段，可帮助AEM开发人员了解AEM的关键构建块。 示例位于此处： [https://adobe-consulting-services.github.io/acs-aem-samples/](https://adobe-consulting-services.github.io/acs-aem-samples/)。
 
-专为不熟悉AEM的开发人员设计的多部分教程，涵盖项目设置、核心组件、可编辑模板、客户端库和组件开发等基本主题：[AEM Sites快速入门 — WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=zh-Hans)
+专为不熟悉AEM的开发人员设计的多部分教程，涵盖项目设置、核心组件、可编辑模板、客户端库和组件开发等基本主题：[AEM Sites快速入门 — WKND教程](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
 [在GitHub - AEM项目原型](https://github.com/adobe/aem-project-archetype)上提供了用于创建AEM项目作为开发您自己的功能起点的Maven模板。
 

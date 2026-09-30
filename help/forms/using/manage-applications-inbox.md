@@ -5,13 +5,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: 5454ee3d-45fb-4ed2-b2f2-1fa9e2460759
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 3%
-
 ---
-
 # 在 AEM 收件箱中管理 Forms 应用程序和任务{#manage-forms-applications-and-tasks-in-aem-inbox}
 
 启动或触发以Forms为中心的工作流的多种方法之一，是通过AEM收件箱中的应用程序来启动。 要使Forms工作流可用作收件箱中的应用程序，请创建工作流应用程序。 有关工作流应用程序和其他启动Forms工作流的方法的更多信息，请参阅[在OSGi上启动以Forms为中心的工作流](../../forms/using/aem-forms-workflow.md#launch)。
@@ -136,7 +152,7 @@ AEM收件箱仅显示活动任务。 已完成的任务未出现在列表中。 
      | allowExplicitSharing | allowExplicitSharing | Boolean |
 
 
-   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/developing/archetype/using)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
+   * 通过AEM包部署索引。 您可以使用[AEM Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using)项目创建可部署的AEM包。 使用以下示例代码将索引添加到AEM Archetype项目中：
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()

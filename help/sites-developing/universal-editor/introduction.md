@@ -4,13 +4,19 @@ description: 了解通用编辑器的灵活性，以及它如何帮助您使用A
 feature: Developing
 role: Developer
 exl-id: 495df631-5bdd-456b-b115-ec8561f33488
-source-git-commit: 49922325d3cc993d551683fac1effe9fc9590880
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 46%
-
 ---
-
 # 关于通用编辑器 {#universal-editor}
 
 了解通用编辑器的灵活性，以及它如何帮助您使用AEM 6.5 LTS增强Headless体验。
@@ -39,9 +45,9 @@ ht-degree: 46%
 以下内容支持通用编辑器：
 
 * AEM 6.5 LTS GA
-   * 支持内部部署和Adobe Managed Services (AMS)*托管。
+  * 支持内部部署和Adobe Managed Services (AMS)*托管。
 * [AEM 6.5](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
-   * 支持内部部署和AMS*托管。
+  * 支持内部部署和AMS*托管。
 * [AEM as a Cloud Service](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)（版本`2023.8.13099`或更高版本）
 
 本文档重点介绍对通用编辑器的AEM 6.5 LTS支持。 要将通用编辑器与AEM 6.5 LTS结合使用，您需要满足以下条件：
@@ -100,7 +106,7 @@ Universal Editor依赖于许多必须配置的服务。
 1. 定义应为哪些内容路径或 `sling:resourceTypes` 打开通用编辑器。
    * 在&#x200B;**通用编辑器打开映射**&#x200B;字段中，提供通用编辑器为其打开的路径。
    * 在应由通用编辑器&#x200B;**字段打开的** Sling:resourceTypes中，输入通用编辑器直接打开的资源的列表。
-1. 单击&#x200B;**保存**。
+1. 单击“**保存**”。
 1. 检查您的[外部化器配置](/help/sites-developing/externalizer.md)，并确保至少按照以下示例设置了本地、作者和发布环境：
 
    ```text
@@ -129,11 +135,11 @@ Universal Editor依赖于许多必须配置的服务。
 映射示例：
 
 * 打开 AEM 作者上 `/content/foo` 下的所有页面：
-   * `/content/foo:${author}${path}.html?login-token=${token}`
-   * 打开`https://localhost:4502/content/foo/x.html?login-token=<token>`的结果
+  * `/content/foo:${author}${path}.html?login-token=${token}`
+  * 打开`https://localhost:4502/content/foo/x.html?login-token=<token>`的结果
 * 打开远程 NextJS 服务器上 `/content/bar` 下的所有页面，提供所有变量的信息
-   * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
-   * 打开`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>`的结果
+  * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
+  * 打开`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>`的结果
 
 ### 设置通用编辑器服务 {#set-up-ue}
 

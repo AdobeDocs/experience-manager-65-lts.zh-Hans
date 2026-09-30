@@ -10,13 +10,27 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: AEM Forms on JEE,AEM Forms Upgrade
 exl-id: 67a96376-412e-4065-b7af-fbb720a4720a
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+subfeature_v2:
+  - id: b9cdd520-e7a7-4af9-a95f-296f28882b69
+    internal-label: AEM Forms upgrade
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 2%
-
 ---
-
 # 适用于AEM Forms on JEE的安装和升级工作流 {#aem-forms-jee-installation-upgrade-documentation}
 
 ## 应用到 {#applies-to}
@@ -52,7 +66,7 @@ ht-degree: 2%
 | 指南 | 描述 |
 | --- | --- |
 | [准备安装AEM Forms （单服务器） (PDF)](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/prepare-install-single-server.pdf) | 在&#x200B;**之前**&#x200B;使用&#x200B;**全新单服务器（非全包安装）安装**。 本文档列出了在单服务器拓扑中在JEE上安装AEM Forms的先决条件和环境准备步骤。 |
-| [在JEE for JBoss (PDF)上安装和部署AEM Forms &#x200B;](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成&#x200B;*准备安装AEM Forms （单服务器）*后**&#x200B;遵循本指南。 |
+| [在JEE for JBoss (PDF)上安装和部署AEM Forms ](https://helpx.adobe.com/content/dam/help/en/experience-manager/65LTS/forms/install-jboss.pdf) | 用于在JBoss （**非密钥**）上在JEE上逐步安装和部署&#x200B;**AEM Forms的**。 对于单服务器安装，请在&#x200B;**完成&#x200B;*准备安装AEM Forms （单服务器）*后**&#x200B;遵循本指南。 |
 
 <!--
 | Preparing to Install AEM Forms (Server Cluster) (PDF) (**TBD**) | Use **before** a **fresh cluster installation**. Describes prerequisites and environment preparation steps for installing AEM Forms on JEE in a server cluster topology. *(Link will be added once the PDF is available.)* |

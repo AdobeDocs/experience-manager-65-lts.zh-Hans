@@ -1,5 +1,5 @@
 ---
-title: 设置活动
+title: 设置营销活动
 description: 设置新的营销活动需要创建品牌来举办营销活动，创建营销活动来举办体验，最后定义新营销活动的属性。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: cf510635-6cbf-4f2b-b289-7ad31978c608
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2194'
-ht-degree: 0%
-
+source-wordcount: '2219'
+ht-degree: 1%
 ---
-
-# 设置活动{#setting-up-your-campaign}
+# 设置营销活动{#setting-up-your-campaign}
 
 设置新营销活动包括以下（通用）步骤：
 
@@ -30,22 +41,22 @@ ht-degree: 0%
 
 * 如果创建Teaser：
 
-   1. [创建Teaser体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience)。
-   1. [将内容添加到您的Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser)。
-   1. [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)（将您的Teaser添加到内容页面）。
+  1. [创建Teaser体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingateaserexperience)。
+  1. [将内容添加到您的Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttoyourteaser)。
+  1. [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)（将您的Teaser添加到内容页面）。
 
 * 如果创建新闻稿：
 
-   1. [创建新闻稿体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)。
-   1. [向新闻稿添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   1. [将新闻稿个性化。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   1. [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
-   1. [向订阅者或潜在客户发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
+  1. [创建新闻稿体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatinganewsletterexperience)。
+  1. [向新闻稿添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+  1. [将新闻稿个性化。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+  1. [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
+  1. [向订阅者或潜在客户发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
 
 * 如果创建Adobe Target（以前称为Test&amp;Target）选件：
 
-   1. [创建Adobe Target选件体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
-   1. [与 Adobe Target 集成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
+  1. [创建Adobe Target选件体验](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatesttargetofferexperience)。
+  1. [与 Adobe Target 集成](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#integratewithadobetesttarget)
 
 >[!NOTE]
 >
@@ -59,7 +70,7 @@ ht-degree: 0%
 
    ![chlimage_1-17](assets/chlimage_1-17.png)
 
-1. 单击&#x200B;**创建**。您的新品牌将显示在MCM中（带有默认图标）。
+1. 单击&#x200B;**创建**。 您的新品牌将显示在MCM中（带有默认图标）。
 
 ### 定义新品牌的属性 {#defining-the-properties-for-your-new-brand}
 
@@ -81,7 +92,7 @@ ht-degree: 0%
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
-1. 单击&#x200B;**创建**。您的新营销活动将显示在MCM中。
+1. 单击&#x200B;**创建**。 您的新营销活动将显示在MCM中。
 
 ### 定义新营销活动的属性 {#defining-the-properties-for-your-new-campaign}
 
@@ -90,9 +101,9 @@ ht-degree: 0%
 * **优先级：**&#x200B;此营销活动相对于其他营销活动的优先级。 当多个营销活动同时开启时，具有最高优先级的营销活动控制访客体验。
 * **开启和结束时间：**&#x200B;这些属性控制促销活动控制访客体验的时段。 开启时间属性控制营销活动开始控制体验的时间。 “关闭时间”属性控制营销活动何时停止控制体验。
 * **图像：**&#x200B;在AEM中表示该营销活动的图像。
-* **云服务：**&#x200B;与营销活动集成的Cloud Service配置。 (请参阅[与Adobe Marketing Cloud集成](/help/sites-administering/marketing-cloud.md)。)
+* **云服务：**&#x200B;与营销活动集成的Cloud Service配置。 （请参阅[与Adobe Marketing Cloud集成](/help/sites-administering/marketing-cloud.md)。）
 
-* **Adobe Target：**&#x200B;属性，用于配置与Adobe Target集成的营销活动。 (请参阅[与Adobe Target集成](/help/sites-administering/target.md)。)
+* **Adobe Target：**&#x200B;属性，用于配置与Adobe Target集成的营销活动。 （请参阅[与Adobe Target集成](/help/sites-administering/target.md)。）
 
 1. 从&#x200B;**营销活动**&#x200B;中，选择您的品牌。 在右窗格中，选择您的营销活动，然后单击&#x200B;**属性**。
 
@@ -122,19 +133,19 @@ ht-degree: 0%
 
 * [Teaser](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#teasers)：
 
-   * [将Teaser页面连接到访客区段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
-   * [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)（将您的Teaser添加到内容页面）。
+  * [将Teaser页面连接到访客区段。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#applyingasegmenttoyourteaser)
+  * [为您的Teaser创建接触点](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#creatingatouchpointforyourteaser)（将您的Teaser添加到内容页面）。
 
 * [新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#newsletters)：
 
-   * [向新闻稿添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
-   * [将新闻稿个性化。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
-   * [向订阅者或潜在客户发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
-   * [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
+  * [向新闻稿添加内容。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#addingcontenttonewsletters)
+  * [将新闻稿个性化。](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#personalizingnewsletters)
+  * [向订阅者或潜在客户发送新闻稿](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#sendingnewsletters)。
+  * [创建引人注目的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#settingupanewsletterlandingpage)。
 
 * [Adobe Target选件](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md#testtargetoffers)：
 
-   * [与 Adobe Target 集成](/help/sites-administering/target.md)
+  * [与 Adobe Target 集成](/help/sites-administering/target.md)
 
 ### 添加新接触点 {#adding-a-new-touchpoint}
 
@@ -234,11 +245,11 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at123055pm](assets/screen_shot_2012-02-21at123055pm.png)
 
-1. 单击&#x200B;**“下一个”。**&#x200B;在此，您可以预览潜在客户以确保其准确性。
+1. 单击&#x200B;**“下一步”。** 在此，您可以预览潜在客户以确保其准确性。
 
    ![screen_shot_2012-02-21at123104pm](assets/screen_shot_2012-02-21at123104pm.png)
 
-1. 单击&#x200B;**“下一个”。**&#x200B;选择要这些潜在客户所属的列表。 如果您不希望它们属于某个列表，请删除字段中的信息。 默认情况下，AEM会创建一个包含日期和时间的列表名称。 单击&#x200B;**导入**。
+1. 单击&#x200B;**“下一步”。** 选择要这些潜在客户所属的列表。 如果您不希望它们属于某个列表，请删除字段中的信息。 默认情况下，AEM会创建一个包含日期和时间的列表名称。 单击&#x200B;**导入**。
 
    ![screen_shot_2012-02-21at123123pm](assets/screen_shot_2012-02-21at123123pm.png)
 
@@ -254,7 +265,7 @@ ht-degree: 0%
 
    ![screen_shot_2012-02-21at123835pm](assets/screen_shot_2012-02-21at123835pm.png)
 
-1. 在&#x200B;**工具**&#x200B;菜单中，选择&#x200B;**添加到列表....** **添加到列表**&#x200B;窗口打开。
+1. 在&#x200B;**工具**&#x200B;菜单中，选择&#x200B;**添加到列表....**&#x200B;将打开&#x200B;**添加到列表**&#x200B;窗口。
 
    ![screen_shot_2012-02-21at124019pm](assets/screen_shot_2012-02-21at124019pm.png)
 

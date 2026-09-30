@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 72293e17-bf29-4b3c-81b4-cd8372694a0d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 2%
-
 ---
-
 # 排查集成问题{#troubleshooting-integration-issues}
 
 ## 一般疑难解答提示 {#general-troubleshooting-tips}
@@ -166,7 +175,7 @@ var s=s_gi(s_account)
 您可以尝试以下解决方案：
 
 * 确保在[页头](/help/sites-developing/target.md#enabling-targeting-with-adobe-target-on-your-pages)中同步执行加载类似DTM的库（进而加载Target库）的客户代码。
-* 如果站点配置为使用DTM交付Target库，请确保在站点的[Target配置](https://helpx.adobe.com/cn/experience-manager/6-3/sites/administering/using/target-configuring.html)中选中由DTM交付的&#x200B;**Clientlib**&#x200B;选项。
+* 如果站点配置为使用DTM交付Target库，请确保在站点的[Target配置](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/target-configuring.html)中选中由DTM交付的&#x200B;**Clientlib**&#x200B;选项。
 
 ### 使用AT.js 1.3+时，将始终显示默认选件，而不是正确的选件 {#a-default-offer-is-always-displayed-instead-of-correct-offer-when-using-at-js}
 
@@ -211,7 +220,7 @@ http://localhost:4502/etc/cloudservices/testandtarget/<YOUR-CONFIG>/jcr:content.
 }
 ```
 
-如果响应包含行`a4tEnabled:false`，请联系[Adobe客户关怀](https://helpx.adobe.com/cn/contact.html)以正确配置您的帐户。
+如果响应包含行`a4tEnabled:false`，请联系[Adobe客户关怀](https://helpx.adobe.com/contact.html)以正确配置您的帐户。
 
 ### 有用的Target API {#helpful-target-apis}
 

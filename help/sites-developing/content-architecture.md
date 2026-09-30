@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: eb47f730-ac26-47a0-9bd7-3b7e94c79ecd
-source-git-commit: cc96a14ebaf9f895a798b5f4904f5b4769b990bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 0%
-
 ---
-
 # 内容架构{#content-architecture}
 
 ## 遵循David的模型 {#follow-david-s-model}
@@ -46,7 +55,7 @@ David模型可在Jackrabbit维基百科上找到，网址为[https://wiki.apache
 
 ### 避免定义新节点类型 {#avoid-defining-new-node-types}
 
-节点类型在基础架构层的较低级别工作。 使用分配给`sling:resourceType`、`nt:unstructured`、`oak:Unstructured`或`sling:Folder`节点类型的`cq:Page`满足大多数要求。 节点类型等同于存储库中的架构，并且将来更改节点类型可能会很昂贵。
+节点类型在基础架构层的较低级别工作。 使用分配给`nt:unstructured`、`oak:Unstructured`、`sling:Folder`或`cq:Page`节点类型的`sling:resourceType`满足大多数要求。 节点类型等同于存储库中的架构，并且将来更改节点类型可能会很昂贵。
 
 ### 遵守JCR中的命名约定 {#adhere-to-naming-conventions-in-the-jcr}
 
@@ -54,14 +63,14 @@ David模型可在Jackrabbit维基百科上找到，网址为[https://wiki.apache
 
 * 节点名称
 
-   * 全部为小写。
-   * 使用连字符进行分词。
+  * 全部为小写。
+  * 使用连字符进行分词。
 
 * 属性名称
 
-   * 驼峰式大小写，以小写字母开头。
+  * 驼峰式大小写，以小写字母开头。
 
 * 组件(JSP/HTML)
 
-   * 全部为小写。
-   * 使用连字符进行分词。
+  * 全部为小写。
+  * 使用连字符进行分词。

@@ -1,5 +1,5 @@
 ---
-title: 从AEM工作流启动Document Services API
+title: 从 AEM 工作流中调用文档服务 API
 description: 了解如何在DDX或提供的输入上调用AEM文档服务。 另请参阅如何将PDF转换为PDF/A
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,14 +8,28 @@ solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 role: User, Developer
 exl-id: 22a7744e-0af6-4aac-a8a1-156b563c627c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 0%
-
+source-wordcount: '1173'
+ht-degree: 1%
 ---
-
-# 从AEM工作流启动Document Services API  {#initiate-document-services-apis-from-aem-workflow}
+# 从 AEM 工作流中调用文档服务 API  {#initiate-document-services-apis-from-aem-workflow}
 
 ## 汇编程序 {#assembler}
 
@@ -38,9 +52,9 @@ AEM Forms提供自定义工作流以调用以下Assembler服务API：
 
 * **DDX**：它是调用DDX工作流步骤的必需输入，可以通过从DDX输入下拉列表中选择以下选项之一来指定。
 
-   * *相对于有效负荷*： DDX输入文件相对于工作流项的有效负荷文件夹。
-   * *使用有效负载*：工作流项目的有效负载用作输入DDX文档。
-   * *绝对路径*： CRX存储库中DDX文档的绝对路径。
+  * *相对于有效负荷*： DDX输入文件相对于工作流项的有效负荷文件夹。
+  * *使用有效负载*：工作流项目的有效负载用作输入DDX文档。
+  * *绝对路径*： CRX存储库中DDX文档的绝对路径。
 
 * **从PayLoad创建映射**：在选中时，有效负荷文件夹下的所有文档都将添加到汇编程序中`invoke` API的输入文档映射中。 每个文档的节点名称在映射中用作键。
 

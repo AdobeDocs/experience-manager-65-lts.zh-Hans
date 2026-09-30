@@ -1,6 +1,6 @@
 ---
-title: 对Adobe Experience Manager Managed Services的Adobe IMS身份验证和 [!DNL Admin Console] 支持
-description: 了解如何在Adobe Experience Manager中使用 [!DNL Admin Console] 。
+title: 对Adobe Experience Manager Managed Services的Adobe IMS身份验证和[!DNL Admin Console]支持
+description: 了解如何在Adobe Experience Manager中使用[!DNL Admin Console]。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
@@ -9,13 +9,25 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 63f42a35-fbd5-4b1b-bba1-1bdcfd23dd33
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1601'
-ht-degree: 6%
-
+source-wordcount: '1702'
+ht-degree: 10%
 ---
-
 # 对AEM Managed Services的Adobe IMS身份验证和[!DNL Admin Console]支持 {#adobe-ims-authentication-and-admin-console-support-for-aem-managed-services}
 
 >[!NOTE]
@@ -36,7 +48,7 @@ AEM 6.4.3.0引入了[!DNL Admin Console]支持，以便&#x200B;**Identity Manage
 * [!DNL Admin Console]中的产品配置文件将决定用户可以访问哪些实例
 * 支持使用客户自己的符合SAML 2的身份提供程序的联合身份验证
 * 仅支持Enterprise ID或Federated ID（适用于客户的单点登录），不支持个人Adobe ID。
-* [!DNL User Management] (在Adobe [!DNL Admin Console]中)将继续由客户管理员拥有。
+* [!DNL User Management] （在Adobe [!DNL Admin Console]中）将继续由客户管理员拥有。
 
 ## 架构 {#architecture}
 
@@ -63,7 +75,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，客
 ![image2018-9-23_23-33-25](assets/image2018-9-23_23-33-25.png)
 
 1. 指定的系统管理员会收到登录到[!DNL Admin Console]的邀请
-1. 系统管理员声明域以确认域的所有权(在此示例中为acme.com)
+1. 系统管理员声明域以确认域的所有权（在此示例中为acme.com）
 1. 系统管理员设置用户目录
 1. 系统管理员在[!DNL Admin Console]中为SSO设置配置身份提供程序(IDP)。
 1. AEM管理员可以像往常一样管理本地组、权限和特权。 请参阅用户和组同步
@@ -86,7 +98,7 @@ AEM Managed Services客户应已设置组织，作为IMS设置的一部分，客
 
 可以在[!DNL Admin Console] UI中手动创建用户和组。 如果客户没有许多要管理的用户，则可以使用此方法。 例如，少于50名AEM用户。
 
-如果客户已在使用此方法管理其他Adobe产品(如Adobe Analytics、Adobe Target或Adobe Creative Cloud应用程序)，也可以手动创建用户。
+如果客户已在使用此方法管理其他Adobe产品（如Adobe Analytics、Adobe Target或Adobe Creative Cloud应用程序），也可以手动创建用户。
 
 ![image2018-9-23_20-39-9](assets/image2018-9-23_20-39-9.png)
 
@@ -171,7 +183,7 @@ AEM可以继续支持管理员用户在本地登录，因为登录屏幕提供�
 
 #### 基于IMS的登录 {#ims-based-login}
 
-对于其他用户，只需在实例上配置 IMS 即可使用基于 IMS 的登录。用户首次单击&#x200B;**使用Adobe**&#x200B;登录，如下所示：
+对于其他用户，只需在实例上配置 IMS 即可使用基于 IMS 的登录。 用户首次单击&#x200B;**使用Adobe**&#x200B;登录，如下所示：
 
 ![image2018-9-18_0-10-32](assets/image2018-9-18_0-10-32.png)
 
@@ -199,7 +211,7 @@ AEM存储库中的现有用户（通过LDAP或SAML本地获取）可以使用用
 
 ### 在AEM中管理权限和ACL {#managing-permissions-and-acls-in-aem}
 
-将继续在AEM中管理访问控制和权限，这可以通过将来自IMS的用户组(例如，以下示例中的AEM-GRP-008)与定义权限和访问控制的本地组分离来实现。 可以将从IMS同步的用户组分配给本地组并继承权限。
+将继续在AEM中管理访问控制和权限，这可以通过将来自IMS的用户组（例如，以下示例中的AEM-GRP-008）与定义权限和访问控制的本地组分离来实现。 可以将从IMS同步的用户组分配给本地组并继承权限。
 
 在以下示例中，我们将同步的组作为示例添加到本地 *Dam_Users* 组。
 

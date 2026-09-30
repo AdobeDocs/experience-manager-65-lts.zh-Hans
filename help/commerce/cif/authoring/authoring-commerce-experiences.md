@@ -5,13 +5,21 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: b749ec33-9a78-41d5-889f-73dbdb33ceed
-source-git-commit: 093d38dbb1d3e2a2f63c1b7a88d9f31c9950e955
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '726'
 ht-degree: 0%
-
 ---
-
 # 创作Commerce体验 {#authoring-commerce-experiences}
 
 ## 概述 {#overview}
@@ -68,7 +76,7 @@ CIF加载项通过特定于Commerce的功能扩展了AEM创作。 这使得作�
 
 ### 使用RTE在文本字段中添加链接 {#rte}
 
-CIF产品目录页面是动态渲染的虚拟页面。 因此，嵌入超链接(如用于常规AEM页面)是不可能的。 CIF向RTE（富文本编辑器）添加了新操作“Commerce链接”。 此操作的工作方式与常规的“超链接”操作完全相同，但允许作者使用选取器选择产品或类别。
+CIF产品目录页面是动态渲染的虚拟页面。 因此，嵌入超链接（如用于常规AEM页面）是不可能的。 CIF向RTE（富文本编辑器）添加了新操作“Commerce链接”。 此操作的工作方式与常规的“超链接”操作完全相同，但允许作者使用选取器选择产品或类别。
 
 ![RTE](/help/commerce/cif/assets/authoring/RTE.png)
 
@@ -80,7 +88,7 @@ CIF产品目录页面是动态渲染的虚拟页面。 因此，嵌入超链接(
 
 ### 访问关联的产品内容 {#associated-content}
 
-如果通用编辑器识别页面上的1:n个产品，侧面板将自动显示“关联的Commerce内容”选项卡。 此选项卡允许作者快速访问使用产品标记的AEM内容(有关更多信息，请参阅[扩充具有关联AEM内容的产品数据](./enrich-product-associated-content.md))。 此选项卡提供下拉列表，用于在页面上具有多个产品时根据内容类型和特定产品进行过滤。 使用内容的工作方式与使用“Assets”选项卡中的内容的工作方式完全相同。
+如果通用编辑器识别页面上的1:n个产品，侧面板将自动显示“关联的Commerce内容”选项卡。 此选项卡允许作者快速访问使用产品标记的AEM内容（有关更多信息，请参阅[扩充具有关联AEM内容的产品数据](./enrich-product-associated-content.md)）。 此选项卡提供下拉列表，用于在页面上具有多个产品时根据内容类型和特定产品进行过滤。 使用内容的工作方式与使用“Assets”选项卡中的内容的工作方式完全相同。
 
 ![产品数据侧面板](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 

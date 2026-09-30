@@ -1,5 +1,5 @@
 ---
-title: 编译测试计划
+title: 编写测试计划
 description: 单个测试用例合并到测试计划中
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: b2dfc8fb-7bc4-4b5e-8c8f-1463fdc18e50
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 0%
-
+source-wordcount: '194'
+ht-degree: 4%
 ---
-
-# 编译测试计划{#compiling-your-test-plan}
+# 编写测试计划{#compiling-your-test-plan}
 
 然后，各个测试用例将合并到您的测试计划中，该计划还将定义：
 

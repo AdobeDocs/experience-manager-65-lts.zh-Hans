@@ -9,20 +9,34 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 712590c6-2348-4c0d-93b9-686e6478ca03
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '2007'
 ht-degree: 2%
-
 ---
-
 # 管理表单元数据{#manage-form-metadata}
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/manage-metadata/manage-form-metadata.html)。
 
 ## 概述  {#overview-nbsp}
 
@@ -81,7 +95,7 @@ AEM Forms支持以下资源类型：
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>创建时间</td> 
+   <td>已创建</td> 
    <td>所有</td> 
    <td>指定资源创建时间的只读值。</td> 
   </tr> 
@@ -124,7 +138,7 @@ AEM Forms支持以下资源类型：
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>提交URL</td> 
+   <td>提交 URL</td> 
    <td><p>表单模板</p> <p>PDF表单</p> </td> 
    <td><p>配置用户指定的URL以将表单数据提交到servlet。</p> <p>可以使用以下任一方法配置提交URL，并按优先级顺序列出：</p> 
     <ul> 
@@ -145,7 +159,7 @@ AEM Forms支持以下资源类型：
     <ul> 
      <li>HTML</li> 
      <li>PDF</li> 
-     <li> 双向</li> 
+     <li>双向</li> 
     </ul> <p>此选项用于限制表单仅在Forms Portal上对最终用户可见。</p> </td> 
   </tr> 
   <tr> 
@@ -296,11 +310,11 @@ AEM Forms在此工具中公开受支持表单类型的元数据架构。 通过�
 1. 单击刚刚拖动的组件。 在右侧面板中打开的设置选项卡中，填写以下字段的信息：
 
    1. 指定字段标签，该标签用作位于架构中的字段上方的显示名称（例如：Department）
-   1. 在映射到属性字段下，您可以看到预填充的值&#x200B;**。/jcr:content/metadata/default“**”。 将“**default**”更改为所需的属性名称，该属性名称用于存储crx存储库中的属性(例如：“”。/jcr:content/metadata/department&#39;)
+   1. 在映射到属性字段下，您可以看到预填充值&#x200B;**。/jcr:content/metadata/default&#39;**。 将“**default**”更改为所需的属性名称，该名称用于在crx存储库中存储属性（例如：“。/jcr:content/metadata/department”）
 
       >[!NOTE]
       >
-      >请勿更改前缀&#39;。/jcr:content/metadata/&#39;，因为它定义了存储属性的路径。
+      >请勿更改前缀“。/jcr:content/metadata/”，因为它定义了存储属性的路径。
       >
       >此外，属性名称必须是唯一的，以避免在存储库中的同一位置写入两个或更多属性的值。 因此，建议您更改“default”值。
 

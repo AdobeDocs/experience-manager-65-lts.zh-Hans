@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: d44e6ea8-b4e5-4ed7-a6d0-de1da2709e18
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 0%
-
+source-wordcount: '2446'
+ht-degree: 2%
 ---
-
 # 开发Adobe Experience Manager (AEM)组件（经典UI）{#developing-aem-components-classic-ui}
 
 经典UI使用ExtJS创建提供组件外观的小部件。 由于这些构件的性质，组件与经典UI的交互方式与[触屏启用UI](/help/sites-developing/developing-components.md)存在一些差异。
@@ -29,7 +38,7 @@ ht-degree: 0%
 >
 >尽管HTML模板语言(HTL)和JSP都可以用于开发经典UI的组件，但此页说明了使用JSP进行的开发。 这完全是因为在经典UI中使用JSP的历史记录。
 >
->HTL现在是适用于AEM的推荐脚本语言。 请参阅[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)和[开发AEM组件](/help/sites-developing/developing-components.md)以比较方法。
+>HTL现在是适用于AEM的推荐脚本语言。 请参阅[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)和[开发AEM组件](/help/sites-developing/developing-components.md)以比较方法。
 
 ## 结构 {#structure}
 
@@ -63,20 +72,20 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
 * `<cq:defineObjects />`
 
-   * `slingRequest` — 包装的请求对象( `SlingHttpServletRequest`)。
-   * `slingResponse` — 包装的响应对象( `SlingHttpServletResponse`)。
-   * `resource` - Sling资源对象( `slingRequest.getResource();`)。
-   * `resourceResolver` - Sling资源解析程序对象( `slingRequest.getResoucreResolver();`)。
-   * `currentNode` — 请求的已解析JCR节点。
-   * `log` — 默认记录器()。
-   * `sling` - Sling脚本帮助程序。
-   * `properties` — 寻址的资源(`resource.adaptTo(ValueMap.class);`)的属性。
-   * `pageProperties` — 已寻址资源的页面的属性。
-   * `pageManager` — 用于访问AEM内容页面的页面管理器( `resourceResolver.adaptTo(PageManager.class);`)。
-   * `component` — 当前AEM组件的组件对象。
-   * `designer` — 用于检索设计信息的Designer对象(`resourceResolver.adaptTo(Designer.class);`)。
-   * `currentDesign` — 已寻址资源的设计。
-   * `currentStyle` — 已寻址资源的样式。
+  * `slingRequest` — 包装的请求对象( `SlingHttpServletRequest`)。
+  * `slingResponse` — 包装的响应对象( `SlingHttpServletResponse`)。
+  * `resource` - Sling资源对象( `slingRequest.getResource();`)。
+  * `resourceResolver` - Sling资源解析程序对象( `slingRequest.getResoucreResolver();`)。
+  * `currentNode` — 请求的已解析JCR节点。
+  * `log` — 默认记录器()。
+  * `sling` - Sling脚本帮助程序。
+  * `properties` — 寻址的资源(`resource.adaptTo(ValueMap.class);`)的属性。
+  * `pageProperties` — 已寻址资源的页面的属性。
+  * `pageManager` — 用于访问AEM内容页面的页面管理器( `resourceResolver.adaptTo(PageManager.class);`)。
+  * `component` — 当前AEM组件的组件对象。
+  * `designer` — 用于检索设计信息的Designer对象(`resourceResolver.adaptTo(Designer.class);`)。
+  * `currentDesign` — 已寻址资源的设计。
+  * `currentStyle` — 已寻址资源的样式。
 
 ### 访问内容 {#accessing-content}
 
@@ -92,7 +101,7 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
 * 通过`global.jsp`中引入的`currentPage`对象：
 
-  `currentPage`对象是页面的实例(请参阅[AEM API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html))。 page类提供了一些访问内容的方法。
+  `currentPage`对象是页面的实例（请参阅[AEM API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)）。 page类提供了一些访问内容的方法。
 
   示例：`String pageTitle = currentPage.getTitle();`
 
@@ -164,8 +173,8 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
    * 在对话框中添加字段
 
-      * `cq:dialog` — 触屏UI的对话框
-      * `dialog` — 经典UI的对话框
+     * `cq:dialog` — 触屏UI的对话框
+     * `dialog` — 经典UI的对话框
 
    * 替换`.jsp`文件（将其命名为新组件）
    * 或者完全重新处理整个组件（如果需要）
@@ -278,16 +287,16 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
    * 组件名称
 
-      * 将`jcr:description`设置为`Text Image Component (Extended)`
-      * 将`jcr:title`设置为`Text Image (Extended)`
+     * 将`jcr:description`设置为`Text Image Component (Extended)`
+     * 将`jcr:title`设置为`Text Image (Extended)`
 
    * 组，其中组件在Sidekick中列出（保持原样）
 
-      * 将`componentGroup`保留设置为`General`
+     * 将`componentGroup`保留设置为`General`
 
    * 新组件的父组件（标准文本时间组件）
 
-      * 将`sling:resourceSuperType`设置为`foundation/components/textimage`
+     * 将`sling:resourceSuperType`设置为`foundation/components/textimage`
 
    执行此步骤后，组件节点将如下所示：
 
@@ -305,24 +314,24 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
    * 对于前两个选项卡（tab1和tab2）：
 
-      * 将xtype更改为cqinclude（以继承自标准组件）。
-      * 分别添加值为`/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和`/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`的路径属性。
-      * 删除所有其他属性或子节点。
+     * 将xtype更改为cqinclude（以继承自标准组件）。
+     * 分别添加值为`/libs/foundation/components/textimage/dialog/items/tab1.infinity.json`和`/libs/foundation/components/textimage/dialog/items/tab2.infinity.json`的路径属性。
+     * 删除所有其他属性或子节点。
 
    * 对于选项卡3：
 
-      * 不更改属性和子节点
-      * 将字段定义添加到`tab3/items`，节点位置类型为`cq:Widget`
-      * 为新`tab3/items/position`节点设置以下属性（类型为String）：
+     * 不更改属性和子节点
+     * 将字段定义添加到`tab3/items`，节点位置类型为`cq:Widget`
+     * 为新`tab3/items/position`节点设置以下属性（类型为String）：
 
-         * `name`：`./imagePosition`
-         * `xtype`：`selection`
-         * `fieldLabel`：`Image Position`
-         * `type`：`select`
+       * `name`：`./imagePosition`
+       * `xtype`：`selection`
+       * `fieldLabel`：`Image Position`
+       * `type`：`select`
 
-      * 添加类型为`cq:WidgetCollection`的子节点`position/options`以表示两个图像放置选项，并在其下创建两个类型为`nt:unstructured`的节点o1和o2。
-      * 对于节点`position/options/o1`，将属性`text`设置为`Left`并将`value`设置为`left.`
-      * 对于节点`position/options/o2`，将属性`text`设置为`Right`并将`value`设置为`right`。
+     * 添加类型为`cq:WidgetCollection`的子节点`position/options`以表示两个图像放置选项，并在其下创建两个类型为`nt:unstructured`的节点o1和o2。
+     * 对于节点`position/options/o1`，将属性`text`设置为`Left`并将`value`设置为`left.`
+     * 对于节点`position/options/o2`，将属性`text`设置为`Right`并将`value`设置为`right`。
 
    * 删除Tab4。
 
@@ -378,7 +387,7 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
 1. 编辑组件元数据：
 
-   * 将&#x200B;**jcr：title**&#x200B;设置为`Image (Extended)`
+   * 将&#x200B;**jcr:title**&#x200B;设置为`Image (Extended)`
 
 1. 导航到 `/apps/geometrixx/components/image/dialog/items/image`。
 1. 添加属性：

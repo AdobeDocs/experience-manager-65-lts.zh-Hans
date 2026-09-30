@@ -9,20 +9,36 @@ feature: Adaptive Forms,Foundation Components
 role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 exl-id: 9c516c90-1b1d-406a-b42d-909aae8bb634
-source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 7%
-
+source-wordcount: '878'
+ht-degree: 6%
 ---
-
 # 为自适应表单本地化新增区域设置提供支持{#supporting-new-locales-for-adaptive-forms-localization}
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/supporting-new-language-localization.html)。
 
 ## 关于区域设置词典 {#about-locale-dictionaries}
 
@@ -40,18 +56,18 @@ ht-degree: 7%
 
 * 按指定顺序查看以下参数：
 
-   * 请求参数`afAcceptLang`
-要覆盖用户的浏览器区域设置，您可以传递`afAcceptLang`请求参数以强制实施区域设置。例如，以下URL强制以日语区域设置呈现表单：
-     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  * 请求参数 `afAcceptLang`
+要覆盖用户的浏览器区域设置，您可以传递`afAcceptLang`请求参数以强制实施区域设置。 例如，以下URL强制以日语区域设置呈现表单：
+    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-   * 使用`Accept-Language`标头在请求中指定的用户的浏览器区域设置。
+  * 使用`Accept-Language`标头在请求中指定的用户的浏览器区域设置。
 
-   * AEM中指定的用户的语言设置。
+  * AEM中指定的用户的语言设置。
 
-   * 默认情况下，浏览器区域设置处于启用状态。 要更改浏览器区域设置设置，
-      * 打开配置管理器。 URL是`http://[server]:[port]/system/console/configMgr`
-      * 找到并打开&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道]**&#x200B;配置。
-      * 更改&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;选项和&#x200B;**[!UICONTROL 保存]**&#x200B;配置的状态。
+  * 默认情况下，浏览器区域设置处于启用状态。 要更改浏览器区域设置设置，
+    * 打开配置管理器。 URL是`http://[server]:[port]/system/console/configMgr`
+    * 找到并打开&#x200B;**[!UICONTROL 自适应表单和交互式通信Web渠道]**&#x200B;配置。
+    * 更改&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;选项和&#x200B;**[!UICONTROL 保存]**&#x200B;配置的状态。
 
 标识区域设置后，自适应表单会选取特定于表单的词典。 如果未找到所请求区域设置的表单特定词典，则它会使用用于创作自适应表单的语言的词典。
 

@@ -10,14 +10,27 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 3f1f9ecb-be62-4428-8db8-23c57081b0f7
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
-
 ---
-
 # 渲染表单 {#rendering-forms}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -50,7 +63,7 @@ Forms服务允许您创建交互式数据捕获客户端应用程序，这些应
 * 根据片段渲染表单。 （请参阅[根据片段渲染Forms](/help/forms/developing/rendering-forms-based-fragments.md)。）
 * 渲染启用权限的表单。 （请参阅[渲染启用权限的Forms](/help/forms/developing/rendering-rights-enabled-forms.md)。）
 * 将表单渲染为HTML。 （请参阅[将Forms渲染为HTML](/help/forms/developing/rendering-forms-html.md)。）
-* 使用自定义CSS文件呈现HTML Forms （[使用自定义CSS文件呈现HTML Forms &#x200B;](/help/forms/developing/rendering-html-forms-using-custom.md)。）
+* 使用自定义CSS文件呈现HTML Forms （[使用自定义CSS文件呈现HTML Forms ](/help/forms/developing/rendering-html-forms-using-custom.md)。）
 * 处理提交的表单。 （请参阅[处理提交的Forms](/help/forms/developing/handling-submitted-forms.md)。）
 * 使用提交的XML数据创建PDF文档。 （请参阅[使用提交的XML数据创建PDF文档](/help/forms/developing/creating-pdf-documents-submitted-xml.md)。）
 * 预填充表单。 （请参阅[使用可流动布局预填充Forms](/help/forms/developing/prepopulating-forms-flowable-layouts.md)。）

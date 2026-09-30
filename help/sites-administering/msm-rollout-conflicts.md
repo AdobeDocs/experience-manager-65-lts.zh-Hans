@@ -9,13 +9,25 @@ feature: Multi Site Manager
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 3c207bfd-5d40-4355-8710-a620f0d66399
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '913'
 ht-degree: 20%
-
 ---
-
 # MSM 转出冲突{#msm-rollout-conflicts}
 
 如果在Blueprint分支和从属Live Copy分支中都创建了具有相同页面名称的新页面，则可能会发生冲突。
@@ -34,7 +46,7 @@ ht-degree: 20%
 
   Adobe Experience Manager (AEM)的默认行为（现成）是发布的内容不受影响。 因此，如果在Live Copy分支中手动创建的页面已发布，则该内容在冲突处理和转出后仍会发布。
 
-除了标准功能外，还可以添加自定义的冲突处理程序来实施其他规则。它们还允许将操作发布为单独的过程。
+除了标准功能外，还可以添加自定义的冲突处理程序来实施其他规则。 它们还允许将操作发布为单独的过程。
 
 ### 示例场景 {#example-scenario}
 
@@ -48,9 +60,9 @@ ht-degree: 20%
 
   在Live Copy分支中手动创建的页面；具有一个子页面`lc-level-1`。
 
-   * 在发布时作为`/b`与子页面一起激活。
+  * 在发布时作为`/b`与子页面一起激活。
 
-转出前&#x200B;**&#x200B;**
+转出前&#x200B;****
 
 <table>
  <tbody>
@@ -80,7 +92,7 @@ ht-degree: 20%
 
 * **处理与手动创建的页面冲突**：
 
-  (`rolloutmgr.conflicthandling.enabled`)
+  ( `rolloutmgr.conflicthandling.enabled`)
 
   如果转出管理器应处理Live Copy中创建的页面的名称与Blueprint中已存在的名称发生的冲突，则设置为true。
 
@@ -94,7 +106,7 @@ AEM 提供：
 
 * [默认冲突处理程序](#default-conflict-handler)：
 
-   * `ResourceNameRolloutConflictHandler`
+  * `ResourceNameRolloutConflictHandler`
 
 * 实施[自定义处理程序](#customized-handlers)的可能性。
 * 服务排名机制，允许您设置每个单独处理程序的优先级。 使用排名最高的服务。
@@ -108,21 +120,21 @@ AEM 提供：
 * 对于此处理程序，Blueprint 页面将获得优先权。
 * 此处理程序的服务排名设置得很低（即低于`service.ranking`属性的默认值），因为假设自定义处理程序需要更高的排名。 然而，排名并不是在必要时确保灵活性的绝对最低标准。
 
-此处理程序为 Blueprint 页面提供优先权。Live Copy页面`/b`已移动（在Live Copy分支中）到`/b_msm_moved`。
+此处理程序为 Blueprint 页面提供优先权。 Live Copy页面`/b`已移动（在Live Copy分支中）到`/b_msm_moved`。
 
 * Live Copy： `/b`
 
   已将（在Live Copy中）移动到`/b_msm_moved`。 这将充当备份，并确保不丢失任何内容。
 
-   * 不会移动 `lc-level-1`。
+  * 不会移动 `lc-level-1`。
 
 * Blueprint：`/b`
 
   转出到Live Copy页面`/b`。
 
-   * `bp-level-1`转出到Live Copy。
+  * `bp-level-1`转出到Live Copy。
 
-转出后&#x200B;**&#x200B;**
+转出后&#x200B;****
 
 <table>
  <tbody>
@@ -160,11 +172,11 @@ AEM 提供：
 * 根据您的要求开发/配置；例如，您可以开发一个处理程序，以便为Live Copy页面提供优先权。
 * 设计为使用[OSGi配置](/help/sites-deploying/configuring-osgi.md)进行配置；特别是：
 
-   * **服务排名**：
+  * **服务排名**：
 
-     定义与其他冲突处理程序(`service.ranking`)相关的顺序。
+    定义与其他冲突处理程序(`service.ranking`)相关的顺序。
 
-     默认值为 0。
+    默认值为 0。
 
 ### 冲突处理停用时的行为 {#behavior-when-conflict-handling-deactivated}
 

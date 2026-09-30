@@ -9,14 +9,23 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 55d4f34c-6766-48b7-86a1-689901e8871f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '718'
 ht-degree: 1%
-
 ---
-
-# Web 控制台{#web-console}
+# 网页控制台{#web-console}
 
 Adobe Experience Manager (AEM)中的Web控制台基于[Apache Felix Web管理控制台](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html)。 Apache Felix是社区努力实施OSGi R4服务平台，其中包括OSGi框架和标准服务。
 
@@ -65,8 +74,8 @@ Web控制台提供了一系列用于维护OSGi捆绑包的选项卡，包括：
 * **配置**
 允许您更新现有配置。 它们具有永久标识(PID)，可以是：
 
-   * 标准和AEM的组成部分；如果删除这些值，则会返回默认设置。
-   * 从“工厂配置”创建的实例；这些实例由用户创建，删除操作将删除该实例。
+  * 标准和AEM的组成部分；如果删除这些值，则会返回默认设置。
+  * 从“工厂配置”创建的实例；这些实例由用户创建，删除操作将删除该实例。
 
 * **工厂配置**
 允许您创建所需功能对象的实例。

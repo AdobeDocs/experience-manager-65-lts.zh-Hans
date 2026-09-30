@@ -1,5 +1,5 @@
 ---
-title: 使用Adobe Campaign 6.1和Adobe Campaign Standard
+title: 使用 Adobe Campaign 6.1 和 Adobe Campaign Standard
 description: 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: df3c15e0-549b-449f-9f50-bb40e1740159
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 0%
-
+source-wordcount: '1194'
+ht-degree: 3%
 ---
-
-# 使用Adobe Campaign 6.1和Adobe Campaign Standard{#working-with-adobe-campaign-and-adobe-campaign-standard}
+# 使用 Adobe Campaign 6.1 和 Adobe Campaign Standard{#working-with-adobe-campaign-and-adobe-campaign-standard}
 
 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容。 为此，您必须：
 
@@ -40,7 +51,7 @@ ht-degree: 0%
 可能存在两种情况：
 
 * 内容可以与Adobe Campaign中的投放同步。 这样，您就可以在投放中使用AEM内容。
-* (仅限Adobe Campaign内部部署)内容可以直接发送到Adobe Campaign，后者会自动生成新的电子邮件投放。 此模式具有限制。
+* （仅限Adobe Campaign内部部署）内容可以直接发送到Adobe Campaign，后者会自动生成新的电子邮件投放。 此模式具有限制。
 
 本文档中详述了相关说明。
 
@@ -86,7 +97,7 @@ ht-degree: 0%
    >
    >请确保在添加云服务后单击&#x200B;**确定**&#x200B;或&#x200B;**应用**。 这使得&#x200B;**Adobe Campaign**&#x200B;选项卡能够正常工作。
 
-1. 如果要应用默认&#x200B;**邮件**&#x200B;模板以外的特定电子邮件投放模板(来自Adobe Campaign)，请重新选择&#x200B;**页面属性**。 在&#x200B;**Adobe Campaign**&#x200B;选项卡中，在相关的Adobe Campaign实例中输入电子邮件投放模板的内部名称。
+1. 如果要应用默认&#x200B;**邮件**&#x200B;模板以外的特定电子邮件投放模板（来自Adobe Campaign），请重新选择&#x200B;**页面属性**。 在&#x200B;**Adobe Campaign**&#x200B;选项卡中，在相关的Adobe Campaign实例中输入电子邮件投放模板的内部名称。
 
    在Adobe Campaign Standard中，模板为&#x200B;**包含AEM内容的投放**。 在Adobe Campaign 6.1中，模板是包含AEM内容的&#x200B;**电子邮件投放**。
 

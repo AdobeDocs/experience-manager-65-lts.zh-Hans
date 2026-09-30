@@ -8,13 +8,22 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 69d94737-41d0-47bb-b914-f7606becd038
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3510'
 ht-degree: 2%
-
 ---
-
 # 在AEM 6.5 LTS中配置节点存储和数据存储{#configuring-node-stores-and-data-stores-in-aem}
 
 ## 简介 {#introduction}
@@ -110,7 +119,7 @@ customBlobStore=B"false"
 >
 >要启用自定义数据存储，您必须确保在相应的节点存储配置文件（[区段节点存储](/help/sites-deploying/data-store-config.md#segment-node-store)或[文档节点存储](/help/sites-deploying/data-store-config.md#document-node-store)）中将`customBlobStore`设置为`true`。
 
-### 文件数据存储 {#file-data-store}
+### 文件数据存储库 {#file-data-store}
 
 这是Jackrabbit 2中存在的[FileDataStore](https://jackrabbit.apache.org/api/trunk/org/apache/jackrabbit/core/data/FileDataStore.html)的实现。 它提供了一种将二进制数据作为普通文件存储在文件系统中的方法。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.FileDataStore` PID。
 
@@ -324,7 +333,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 1. 在传输URI中添加参数“ `binaryless`= `true`”。 进行更改后，URI应当类似于以下内容：
 
-   *https://localhost:4503/bin/receive？sling:authRequestLogin=1&amp;binaryless=true*
+   *https://localhost:4503/bin/receive?sling:authRequestLogin=1&amp;binaryless=true*
 
 1. 重新启动所有创作和发布实例，以使更改生效。
 
@@ -398,7 +407,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
    * 对于`FileDataStore`，将在数据存储文件夹的根路径下创建文件。
    * 对于`S3DataStore`，将在`META`文件夹下配置的S3存储段中创建文件。
 
-## Azure 数据存储 {#azure-data-store}
+## Azure 数据存储库 {#azure-data-store}
 
 可以将AEM配置为将数据存储在Microsoft®的Azure存储服务中。 它使用`org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config` PID进行配置。
 

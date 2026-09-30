@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 49e815e9-2087-4a42-b481-dc66de787d67
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 2%
-
 ---
-
 # 配置表单位置 {#configuring-locations-for-forms}
 
 >[!NOTE]
@@ -87,7 +102,7 @@ font-mapping文件用于为表单中的HTML转换创建自定义字体映射，�
 
 **默认位置：**&#x200B;这是默认选项。 如果选择该选项，则会在依赖于您正在使用的应用程序服务器的位置创建缓存：
 
-* **JBoss：**&#x200B;[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
+* **JBoss：**[JBoss主页]\server\[安装类型]\svcdata\FormServer\Cache
 * **WebLogic：** [WebLogic主页]\user_projects\domains\[aem-forms域名]\adobe\[Forms服务器名称]\FormServer\Cache
 * **WebSphere：** [IBM主页]\WebSphere\AppServer\installedApps\adobe\server1\FormServer\Cache
 

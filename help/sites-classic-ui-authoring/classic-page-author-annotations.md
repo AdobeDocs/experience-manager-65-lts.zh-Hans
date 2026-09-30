@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 9fe6be3b-2fd8-4023-9388-d5e80d22895c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 9%
-
+source-wordcount: '770'
+ht-degree: 11%
 ---
-
 # 编辑页面时的批注{#annotations-when-editing-a-page}
 
 向网站页面添加内容时，在实际发布之前通常会进行讨论。 为此，您可以添加注释，其中许多与内容直接相关的组件（例如，与布局相反）可以让您添加注释。
@@ -86,13 +95,13 @@ ht-degree: 9%
 * 当处于草绘模式时，光标将变为十字线。 您可以绘制多条不同的线。
 * 草图线反映注释颜色，可以是：
 
-   * 手绘
+  * 手绘
 
-     默认模式；释放鼠标按钮即可完成。
+    默认模式；释放鼠标按钮即可完成。
 
-   * 直：
+  * 直：
 
-     按住`ALT`并单击起点和终点；双击即可完成。
+    按住`ALT`并单击起点和终点；双击即可完成。
 
 * 退出草绘模式后，可单击草绘线以选取该草绘。
 * 通过选取草绘，然后将其拖动到所需位置来移动草绘。

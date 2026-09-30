@@ -7,13 +7,31 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 exl-id: a9cbab12-62a6-4779-955f-2858166945e6
-source-git-commit: 66696da39b1b790b2155b2ec08d936371f87b979
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2522'
 ht-degree: 1%
-
 ---
-
 # We.Gov和We.Finance引用站点演练 {#we-gov-reference-site-walkthrough}
 
 ## 先决条件 {#pre-requisites}
@@ -24,22 +42,22 @@ ht-degree: 1%
 
 * AEM Forms
 
-   * 自动化表单转换
-   * 创作
-   * 表单数据模型/数据源
+  * 自动化表单转换
+  * 创作
+  * 表单数据模型/数据源
 
 * AEM Forms
 
-   * 数据捕获
-   * （可选）数据集成(MS® Dynamics)
-   * （可选）Adobe Sign
+  * 数据捕获
+  * （可选）数据集成(MS® Dynamics)
+  * （可选）Adobe Sign
 
 * 工作流
 * 电子邮件通知
 * （可选）客户通信
 
-   * 打印渠道
-   * Web 渠道
+  * 打印渠道
+  * Web 渠道
 
 * Adobe Analytics
 * 数据Source集成
@@ -64,14 +82,14 @@ We.Gov演示包附带以下内置虚拟用户：
 
 * **We.Gov Forms用户**
 
-   * George Lang（会员）
-   * Camila Santos（成员）
+  * George Lang（会员）
+  * Camila Santos（成员）
 
 * **We.Gov用户**
 
-   * George Lang（会员）
-   * Camila Santos（成员）
-   * Aya Tan（会员）
+  * George Lang（会员）
+  * Camila Santos（成员）
+  * Aya Tan（会员）
 
 ### 演示概述术语图例 {#demo-overview-terms-legend}
 
@@ -227,7 +245,7 @@ Aya必须先在家查看一些文档，然后才能完成服务请求申请。 �
    1. **已婚**：显示婚姻依赖面板
    1. **已离婚**：显示亲属面板的旁边
    1. **丧偶**：显示亲属面板的旁边
-   1. **您有孩子吗？**： （是/否）单选按钮显示子依赖面板。
+   1. **您有子项吗？**： （是/否）用于显示子依赖面板的单选按钮。
 
       1. （添加/删除）按钮，用于添加/删除多个子依赖面板。
 
@@ -306,7 +324,7 @@ Aya必须先在家查看一些文档，然后才能完成服务请求申请。 �
 
    1. 或模拟：
 
-      1. 在`George`模拟为&#x200B;**字段中键入**。
+      1. 在&#x200B;**模拟为**&#x200B;字段中键入`George`。
 
       1. 单击“确定”以模拟。
 
@@ -365,7 +383,7 @@ George批准Aya的申请，并且借助现有的自动化工作流，还会向Ay
 
    1. 或模拟：
 
-      1. 在`Camila`模拟为&#x200B;**字段中键入**。
+      1. 在&#x200B;**模拟为**&#x200B;字段中键入`Camila`。
 
       1. 单击“确定”以模拟。
 
@@ -442,7 +460,7 @@ George批准Aya的申请，并且借助现有的自动化工作流，还会向Ay
 
 **此部分**： Camila将导航到“数据源”页，以验证服务器在Derby数据库中复制的数据。
 
-1. 用户体验完成且用户提交完成后，Camila将导航到AEM Forms中的“数据源”选项卡(**Forms** > **数据集成**)
+1. 用户体验完成且用户提交完成后，Camila将导航到AEM Forms中的“数据源”选项卡（**Forms** > **数据集成**）
 
 1. 然后，Camila选择AEM Forms We.gov FDM，然后编辑&#x200B;**We.gov注册FDM**。
 
@@ -490,7 +508,7 @@ George批准Aya的申请，并且借助现有的自动化工作流，还会向Ay
 
    ![分析和推荐](/help/forms/using/assets/analytics_recommendation.jpg)
 
-1. 在此页面上，您会看到从Adobe Analytics中获取的与AEM Sites页面相关的信息(注意：通过设计，这些信息会定期从Adobe Analytics中刷新，并且不会实时显示)。
+1. 在此页面上，您会看到从Adobe Analytics中获取的与AEM Sites页面相关的信息（注意：通过设计，这些信息会定期从Adobe Analytics中刷新，并且不会实时显示）。
 
    ![Adobe Analytics关键量度](/help/forms/using/assets/analytics_key_metrics.jpg)
 

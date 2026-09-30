@@ -1,5 +1,5 @@
 ---
-title: 将AEM Forms与Adobe LiveCycle连接
+title: 将 AEM Forms 与 Adobe LiveCycle 进行连接
 description: Adobe Experience Manager (AEM) LiveCycle Connector允许您从AEM应用程序和工作流中启动LiveCycle ES4 Acrobat Services。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,14 +8,28 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
 exl-id: f6530bd3-16cd-4d6b-b92b-6c96f01f1939
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1026'
-ht-degree: 0%
-
+source-wordcount: '1033'
+ht-degree: 1%
 ---
-
-# 将AEM Forms与Adobe LiveCycle连接 {#connecting-aem-forms-with-adobe-livecycle}
+# 将 AEM Forms 与 Adobe LiveCycle 进行连接 {#connecting-aem-forms-with-adobe-livecycle}
 
 Adobe Experience Manager (AEM) LiveCycle Connector允许从Adobe Web应用程序和工作流中无缝调用AEM LiveCycle ES4 Acrobat Services。 LiveCycle提供了一个富客户端SDK，允许客户端应用程序使用Java™ API启动LiveCycle服务。 AEM LiveCycle Connector在OSGi环境中使用这些API进行了简化。
 
@@ -44,7 +58,7 @@ AEM LiveCycle Connector是[AEM Forms附加组件包](/help/forms/using/installin
 
 ## 启动文档服务 {#starting-document-services}
 
-客户端应用程序可以使用Java™ API、Web服务、远程处理和REST以编程方式启动LiveCycle服务。 对于Java™客户端，应用程序可以使用LiveCycle SDK。 LiveCycle SDK提供了一个用于远程启动这些服务的Java™ API。 例如，要将Microsoft® Word文档转换为PDF，客户端将启动GeneratePDFervice。 调用流包含以下步骤：
+客户端应用程序可以使用Java™ API、Web服务、远程处理和REST以编程方式启动LiveCycle服务。 对于Java™客户端，应用程序可以使用LiveCycle SDK。 LiveCycle SDK提供了一个用于远程启动这些服务的Java™ API。 例如，要将® Word文档转换为PDF，客户端将启动GeneratePDFervice。 调用流包含以下步骤：
 
 1. 创建ServiceClientFactory实例。
 1. 每个服务都提供一个客户端类。 要启动服务，请创建服务的客户端实例。

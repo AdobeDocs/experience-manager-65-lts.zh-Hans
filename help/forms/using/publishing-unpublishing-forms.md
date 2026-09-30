@@ -1,5 +1,5 @@
 ---
-title: 发布和取消发布 Form 和文档
+title: 发布和取消发布表单和文档
 description: 您可以计划表单的发布和取消发布。 发布的表单将在发布实例上复制。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -10,14 +10,27 @@ solution: Experience Manager, Experience Manager Forms
 feature: Correspondence Management
 role: Admin, User, Developer
 exl-id: 475e3c95-913d-49ee-8245-b88b967f9b7e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1409'
 ht-degree: 1%
-
 ---
-
-# 发布和取消发布 Form 和文档{#publishing-and-unpublishing-forms-and-documents}
+# 发布和取消发布表单和文档{#publishing-and-unpublishing-forms-and-documents}
 
 通过AEM Forms，您可以轻松创建、发布和取消发布表单。 有关AEM Forms的详细信息，请参阅[管理表单简介](../../forms/using/introduction-managing-forms.md)。
 
@@ -33,7 +46,7 @@ AEM Forms支持以下类型的资源：
 * 主题
 * 表单模板（XFA表单）
 * PDF forms
-* 文档(平面PDF文档)
+* 文档（平面PDF文档）
 * 表单集
 * 资源（图像、架构和样式表）
 
@@ -48,12 +61,12 @@ AEM Forms支持以下类型的资源：
 * 仅当用户具有管理员权限时，才会激活其他Cloud Service配置。
 * 自定义。 这些包括但不限于：
 
-   * 自定义布局
-   * 自定义外观
-   * CSS文件 — 在自适应表单容器属性对话框中用作输入
-   * 客户端库类别 — 在自适应表单容器属性对话框中作为输入使用
-   * 可能包含在自适应表单模板中的任何其他客户端库。
-   * 设计路径
+  * 自定义布局
+  * 自定义外观
+  * CSS文件 — 在自适应表单容器属性对话框中用作输入
+  * 客户端库类别 — 在自适应表单容器属性对话框中作为输入使用
+  * 可能包含在自适应表单模板中的任何其他客户端库。
+  * 设计路径
 
 ## 资产状态 {#asset-states}
 

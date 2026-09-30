@@ -1,21 +1,30 @@
 ---
-title: 将 [!DNL Assets] 与活动流集成
-description: 描述 [!DNL Experience Manager] 的录制功能以及如何将其配置为录制特定事件。
+title: 将[!DNL Assets]与活动流集成
+description: 描述[!DNL Experience Manager]的记录功能以及如何将其配置为记录特定事件。
 contentOwner: AG
 role: Developer
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 44604607-e49d-469c-a6f1-dedbcd657d65
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '258'
 ht-degree: 0%
-
 ---
-
 # 将[!DNL Assets]与活动流集成 {#integrating-assets-with-activity-stream}
 
-[!DNL Adobe Experience Manager Assets]用户可执行许多操作，如创建、上传和删除资源。 可以记录这些操作，以便您能够提供用户所做操作的历史记录。 本节介绍[!DNL Experience Manager]的记录功能以及如何配置[!DNL Experience Manager]以记录特定事件。
+[!DNL Adobe Experience Manager Assets]用户可执行许多操作，如创建、上传和删除Assets。 可以记录这些操作，以便您能够提供用户所做操作的历史记录。 本节介绍[!DNL Experience Manager]的记录功能以及如何配置[!DNL Experience Manager]以记录特定事件。
 
 ## 性能注意事项和默认行为 {#performance-considerations-and-default-behavior}
 
@@ -28,7 +37,7 @@ ht-degree: 0%
 * 许可证已接受（已接受）
 * 已创建资产(ASSET_CREATED)
 * 已移动资产(ASSET_MOVED)
-* 资源已删除(ASSET_REMOVED)
+* 已删除资产(ASSET_REMOVED)
 * 许可证被拒绝（已拒绝）
 * 已下载（已下载）资产
 * 资产版本化（版本化）
@@ -38,8 +47,8 @@ ht-degree: 0%
 * 资产的原始更新（原始更新）
 * 已更新资产演绎版(RENDITION_UPDATED)
 * 已删除资源呈现版本(RENDITION_REMOVED)
-* 子资产已更新(SUBASSET_UPDATED)
-* 子资源已删除(SUBASSET_REMOVED)
+* 已更新子资产(SUBASSET_UPDATED)
+* 已删除子资产(SUBASSET_REMOVED)
 
 ## 配置[!DNL Assets]事件记录 {#configuring-aem-assets-events-recording}
 
@@ -59,4 +68,4 @@ ht-degree: 0%
 
 ## 读取录制的事件 {#reading-recorded-events}
 
-记录的事件作为活动存储。 您可以使用[ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以编程方式读取它们。
+记录的事件将作为活动存储。 您可以使用[ActivityManager API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/activitystreams/ActivityManager.html)以编程方式读取它们。

@@ -5,13 +5,21 @@ solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
 exl-id: f6e29287-a558-43ad-8465-ebf167c79c63
-source-git-commit: b4abf61e0d30396e78ecebf228114ad2bde30633
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 0%
-
+source-wordcount: '844'
+ht-degree: 1%
 ---
-
 # Database Credential Store安装指南（独立模式）
 
 ## 概述
@@ -44,11 +52,11 @@ ht-degree: 0%
    - 脚本使用`embed-server`，这要求停止服务器
    - 如果JBoss正在运行，脚本将失败
    - 检查JBoss是否正在运行：
-      - Windows：检查`java.exe`进程的任务管理器
-      - Linux： `ps aux | grep jboss`或`ps aux | grep java`
+     - Windows：检查`java.exe`进程的任务管理器
+     - Linux： `ps aux | grep jboss`或`ps aux | grep java`
    - 如果正在运行，则停止JBoss：
-      - 在运行JBoss的终端中按`Ctrl+C`
-      - 或者手动终止进程
+     - 在运行JBoss的终端中按`Ctrl+C`
+     - 或者手动终止进程
 
 2. **您已准备好数据库密码**
 
@@ -69,7 +77,7 @@ ht-degree: 0%
 
 **脚本：** `create-elytron-cred-standalone.bat`
 
-从`create-elytron-cred-standalone.bat`软件分发门户[下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)脚本。
+从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)下载`create-elytron-cred-standalone.bat`脚本。
 
 **脚本提示您输入：**
 1. **JBOSS_HOME路径** （例如，`C:\Adobe\Adobe_Experience_Manager_Forms\jboss`）
@@ -82,10 +90,10 @@ ht-degree: 0%
 - 创建凭据存储区： `JBOSS_HOME\standalone\configuration\cred-store.p12`
 - 临时修改配置文件以启用凭据存储创建
 - 使用数据库密码添加以下别名：
-   - `EncryptDBPassword`
-   - `EncryptDBPassword_IDP_DS`
-   - `EncryptDBPassword_EDC_DS`
-   - `EncryptDBPassword_AEM_DS`
+  - `EncryptDBPassword`
+  - `EncryptDBPassword_IDP_DS`
+  - `EncryptDBPassword_EDC_DS`
+  - `EncryptDBPassword_AEM_DS`
 - 将配置文件恢复为其原始状态
 - 验证是否已成功添加所有别名
 
@@ -93,7 +101,7 @@ ht-degree: 0%
 
 **脚本** `create-elytron-cred-standalone.sh`
 
-从`create-elytron-cred-standalone.sh`软件分发门户[下载](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)脚本。
+从[软件分发门户](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/full-installer/6-6-0-20251218-2-12345/6.5.1.LTS_Scripts.zip)下载`create-elytron-cred-standalone.sh`脚本。
 
 **脚本提示您输入：**
 
@@ -107,10 +115,10 @@ ht-degree: 0%
 - 创建凭据存储区： `JBOSS_HOME/standalone/configuration/cred-store.p12`
 - 临时修改配置文件以启用凭据存储创建
 - 使用数据库密码添加以下别名：
-   - `EncryptDBPassword`
-   - `EncryptDBPassword_IDP_DS`
-   - `EncryptDBPassword_EDC_DS`
-   - `EncryptDBPassword_AEM_DS`
+  - `EncryptDBPassword`
+  - `EncryptDBPassword_IDP_DS`
+  - `EncryptDBPassword_EDC_DS`
+  - `EncryptDBPassword_AEM_DS`
 - 将配置文件恢复为其原始状态
 - 验证是否已成功添加所有别名
 

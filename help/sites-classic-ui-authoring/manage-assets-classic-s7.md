@@ -10,16 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: e452c343-3bba-4774-b153-c5ba05f24362
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3545'
-ht-degree: 0%
-
+source-wordcount: '3578'
+ht-degree: 2%
 ---
-
 # 将Dynamic Media Classic (Scene7)功能添加到您的页面{#adding-scene-features-to-your-page}
 
-[Adobe Dynamic Media Classic (Scene7)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hans)是一个托管解决方案，用于管理、增强、发布富媒体资源并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
+[Adobe Dynamic Media Classic (Scene7)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)是一个托管解决方案，用于管理、增强、发布富媒体资源并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
 
 您可以在多种查看器中查看在Dynamic Media Classic (Scene7)中发布的Experience Manager资源：
 
@@ -148,7 +157,7 @@ Experience Manager中提供了以下Dynamic Media Classic (Scene7)组件：
 >
 >如果您正在创建和开发自定义S7查看器并使用内容查找器，则必须显式添加`allowfullscreen`参数。
 
-### Flash查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
+### Flash 查看器生命周期结束通知 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic (Scene7)正式终止对Flash查看器平台的支持。
 
@@ -166,7 +175,7 @@ Experience Manager中提供了以下Dynamic Media Classic (Scene7)组件：
 
 1. 将sidekick中&#x200B;**[!UICONTROL Dynamic Media Classic (Scene7)]**&#x200B;组中的组件拖动到所需位置的页面上。
 
-1. 选择&#x200B;***[!UICONTROL 编辑]**，以便打开该组件。
+1. 选择***[!UICONTROL 编辑]**，以便打开该组件。
 
 1. 根据需要编辑该组件并选择&#x200B;**[!UICONTROL 确定]**&#x200B;以保存更改。
 
@@ -205,13 +214,13 @@ Experience Manager中提供了以下Dynamic Media Classic (Scene7)组件：
 
 按+按钮时，HTML5缩放组件会显示较大的图像。
 
-资产底部有缩放工具。 选择要放大的&#x200B;**[!UICONTROL +]**。 选择要减少的&#x200B;**[!UICONTROL -]**。 选择&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可使图像恢复到导入图像的原始大小。 选择对角线箭头，以便全屏显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 通过此组件，您可以配置所有Dynamic Media Classic (Scene7)组件[&#128279;](#settings-common-to-all-scene-components)共有的设置。
+资产底部有缩放工具。 选择要放大的&#x200B;**[!UICONTROL +]**。 选择要减少的&#x200B;**[!UICONTROL -]**。 选择&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可使图像恢复到导入图像的原始大小。 选择对角线箭头，以便全屏显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 通过此组件，您可以配置所有Dynamic Media Classic (Scene7)组件](#settings-common-to-all-scene-components)共有的[设置。
 
 ![HTML5 Zoom组件内郁金香花的图像。](do-not-localize/chlimage_1-3.png)
 
 ### 弹出 {#flyout}
 
-在HTML5弹出组件中，资源显示为分屏；左侧的资源使用指定大小；右侧的缩放部分显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 通过此组件，您可以配置所有Dynamic Media Classic (Scene7)组件[&#128279;](/help/sites-administering/scene7.md#settingscommontoallscene7components)共有的设置。
+在HTML5弹出组件中，资源显示为分屏；左侧的资源使用指定大小；右侧的缩放部分显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 通过此组件，您可以配置所有Dynamic Media Classic (Scene7)组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)共有的[设置。
 
 >[!NOTE]
 >
@@ -225,7 +234,7 @@ Experience Manager中提供了以下Dynamic Media Classic (Scene7)组件：
 
 Dynamic Media Classic (Scene7)图像组件允许您将Dynamic Media Classic (Scene7)功能添加到图像，例如Dynamic Media Classic (Scene7)修饰符、图像或查看器预设以及锐化。 Dynamic Media Classic (Scene7)图像组件与Experience Manager中的其他图像组件类似，具有特殊的Dynamic Media Classic (Scene7)功能。 在此示例中，图像应用了Dynamic Media Classic (Scene7) URL修饰符`&op_invert=1`。
 
-Dynamic Media Classic (Scene 7)图像组件![&#128279;](do-not-localize/chlimage_1-4.png)中的球体图像
+Dynamic Media Classic (Scene 7)图像组件](do-not-localize/chlimage_1-4.png)中的球体图像![
 
 **标题，替换文本** — 在“高级”选项卡中，为已关闭图形的用户添加标题和替换文本。
 
@@ -251,7 +260,7 @@ Dynamic Media Classic (Scene 7)图像组件![&#128279;](do-not-localize/chlimage
 
 Dynamic Media Classic (Scene7)图像模板是导入Dynamic Media Classic (Scene7)的分层Photoshop内容，其中内容和属性进行了参数化以反映可变性。 通过&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件，您可以在Experience Manager中导入图像并动态更改文本。 此外，您可以将&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件配置为使用来自客户端上下文的值，以便每个用户以个性化的方式体验图像。
 
-选择&#x200B;**[!UICONTROL 编辑]** — 以配置该组件。 您可以配置所有Dynamic Media Classic (Scene7)组件[&#128279;](/help/sites-administering/scene7.md#settingscommontoallscene7components)共有的设置以及本节中描述的其他设置。
+选择&#x200B;**[!UICONTROL 编辑]** — 以配置该组件。 您可以配置所有Dynamic Media Classic (Scene7)组件](/help/sites-administering/scene7.md#settingscommontoallscene7components)共有的[设置以及本节中描述的其他设置。
 
 ![chlimage_1-55](assets/chlimage_1-55.png)
 

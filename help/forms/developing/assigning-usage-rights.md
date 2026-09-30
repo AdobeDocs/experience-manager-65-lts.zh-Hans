@@ -9,14 +9,31 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services, Reader Extensions
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: d8027b43-10c7-435c-8fb5-059508966d42
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 621ad6f8-3769-57bb-838c-1d26cfb18d50
+    internal-label: Reader Extensions
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '3973'
 ht-degree: 0%
-
 ---
-
 # 分配使用权限 {#assigning-usage-rights}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -125,14 +142,14 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
 
    * 使用构造函数创建`ReaderExtensionsOptionSpec`对象。 此对象包含Acrobat Reader DC扩展服务所需的运行时选项。 调用此构造函数时，必须指定以下值：
 
-      * 包含要应用于文档的使用权限的`UsageRights`对象。
-      * 一个字符串值，指定在Adobe Reader 7.x中打开启用了权限的PDF文档时用户看到的消息。 Adobe Reader 8.0中未显示此消息。
+     * 包含要应用于文档的使用权限的`UsageRights`对象。
+     * 一个字符串值，指定在Adobe Reader 7.x中打开启用了权限的PDF文档时用户看到的消息。 Adobe Reader 8.0中未显示此消息。
 
    * 通过调用`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法并传递以下值，将使用权限应用于PDF文档：
 
-      * 包含应用了使用权限的PDF文档的`com.adobe.idp.Document`对象。
-      * 一个字符串值，它指定可让您应用使用权限的凭据别名。
-      * 指定相应密码值的字符串值。 (当前忽略此参数。 您可以传递`null`。)
+     * 包含应用了使用权限的PDF文档的`com.adobe.idp.Document`对象。
+     * 一个字符串值，它指定可让您应用使用权限的凭据别名。
+     * 指定相应密码值的字符串值。 (当前忽略此参数。 您可以传递`null`。)
 
    * 包含运行时选项的`ReaderExtensionsOptionSpec`对象。
 
@@ -173,10 +190,10 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 检索PDF文档。
 
@@ -198,9 +215,9 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
    * 指定一个字符串值，该值指定在Adobe Reader中打开启用了权限的PDF文档时用户看到的消息到`ReaderExtensionsOptionSpec`对象的`message`数据成员。
    * 通过调用`ReaderExtensionsServiceClient`对象的`applyUsageRights`方法并传递以下值，将使用权限应用于PDF文档：
 
-      * 包含应用了使用权限的PDF文档的`BLOB`对象。
-      * 一个字符串值，它指定可让您应用使用权限的凭据别名。
-      * 指定相应密码值的字符串值。 (当前忽略此参数。 您可以传递`null`。)
+     * 包含应用了使用权限的PDF文档的`BLOB`对象。
+     * 一个字符串值，它指定可让您应用使用权限的凭据别名。
+     * 指定相应密码值的字符串值。 (当前忽略此参数。 您可以传递`null`。)
 
    * 包含运行时选项的`ReaderExtensionsOptionSpec`对象。
 
@@ -329,10 +346,10 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 检索PDF文档。
 
@@ -464,10 +481,10 @@ Acrobat Reader DC扩展服务通过扩展Adobe Reader的功能，使您的组织
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 检索PDF文档。
 

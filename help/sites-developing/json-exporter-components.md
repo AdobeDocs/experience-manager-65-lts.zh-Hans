@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: aeb8e954-dd6c-4e18-bb78-6eaac86fa4b9
-source-git-commit: cc96a14ebaf9f895a798b5f4904f5b4769b990bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 4%
-
+source-wordcount: '557'
+ht-degree: 10%
 ---
-
 # 为组件启用JSON导出{#enabling-json-export-for-a-component}
 
 组件可以适应为基于建模器框架生成其内容的JSON导出。
@@ -35,7 +44,7 @@ JSON导出基于[Sling模型](https://sling.apache.org/documentation/bundles/mod
 
 >[!NOTE]
 >
->有关使用Sling模型的示例，请参阅[在AEM中开发Sling模型导出程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter)。
+>有关使用Sling模型的示例，请参阅[在AEM中开发Sling模型导出程序](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter)。
 
 Sling模型实现类必须使用以下内容进行注释：
 
@@ -71,13 +80,13 @@ https://<server>:<port>/content/page.model.selector1.selector2.json
 
 为了使JSON导出器框架能够处理它，模型接口必须实现`ComponentExporter`接口（或容器组件的`ContainerExporter`）。
 
-随后将使用`MyComponent`Jackson注释[对相应的Sling模型接口(](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations))进行注释，以定义应如何导出（序列化）。
+随后将使用[Jackson注释](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)对相应的Sling模型接口(`MyComponent`)进行注释，以定义应如何导出（序列化）。
 
 必须正确注释模型接口以定义序列化的方法。 默认情况下，所有符合getter的常规命名约定的方法都将进行序列化，并从getter名称自然派生其JSON属性名称。 可以使用`@JsonIgnore`或`@JsonProperty`阻止或覆盖此方法以重命名JSON属性。
 
 ## 示例 {#example}
 
-自核心组件[的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)1.1.0版本以来，核心组件一直支持JSON导出，可以将其用作参考。
+自核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)的[1.1.0版本以来，核心组件一直支持JSON导出，可以将其用作参考。
 
 有关示例，请参阅图像核心组件的Sling模型实施及其注释的界面。
 
@@ -85,14 +94,14 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码
 
-* 在GitHub上[打开aem-core-wcm-components项目](https://github.com/adobe/aem-core-wcm-components)
+* [在GitHub上打开aem-core-wcm-components项目](https://github.com/adobe/aem-core-wcm-components)
 * 将项目下载为[ZIP文件](https://codeload.github.com/adobe/aem-core-wcm-components/zip/main)
 
 
 ## 相关文档 {#related-documentation}
 
-* Assets用户指南[中的](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-64/assets/home#)内容片段主题
+* Assets用户指南](https://experienceleague.adobe.com/en/docs/experience-manager-64/assets/home#)中的[内容片段主题
 * [内容片段模型](/help/assets/content-fragments/content-fragments-models.md)
 * [使用内容片段创作](/help/sites-authoring/content-fragments.md)
 * [内容服务的 JSON 导出器](/help/sites-developing/json-exporter.md)
-* [核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)和[内容片段组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/wcm-components/content-fragment-component)
+* [核心组件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-core-components/using/introduction)和[内容片段组件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/content-fragment-component)

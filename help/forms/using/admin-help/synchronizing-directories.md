@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 8bb1dd68-51ec-4458-9ff8-bfe6fb0b67fd
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1037'
 ht-degree: 0%
-
 ---
-
 # 同步目录 {#synchronizing-directories}
 
 >[!NOTE]
@@ -92,7 +107,7 @@ ht-degree: 0%
 1. 计划同步：
 
    * 要启用每日自动同步，请在Scheduler下，选择Occurs。 从列表中选择“每日”，并在相应的框中以24小时制键入时间。 保存设置时，此值将转换为Cron表达式，该表达式显示在Cron表达式框中。
-   * 要安排在一周或一个月中的某一天或某一特定月份进行同步，请选择Cron表达式，然后在框中键入相应的表达式。 例如，在每月最后一个星期五的凌晨1:30进行同步。
+   * 要安排在一周或一个月中的某一天或某一特定月份进行同步，请选择Cron表达式，然后在框中键入相应的表达式。 例如，在每月最后一个星期五凌晨1:30同步。
 
 cron表达式的使用基于Quartz开源作业调度系统1.4.0版。
 

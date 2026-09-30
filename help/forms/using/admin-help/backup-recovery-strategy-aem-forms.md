@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 2f34b48a-0b95-4994-ac4f-616620a5b211
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 3%
-
 ---
-
 # AEM Forms 的备份与恢复策略{#backup-and-recovery-strategy-for-aem-forms}
 
 如果您的AEM表单实施将其他自定义数据存储在其他数据库中，则您负责实施策略以备份此数据，并确保其与AEM表单数据保持同步。 此外，应用程序必须设计得足够强健，能够处理其他数据库不同步的情况。 强烈建议在事务上下文中执行任何数据库操作，以帮助保持一致状态。
@@ -45,9 +60,9 @@ AEM Forms备份策略涉及两种类型的备份：
 
 * **快照备份**&#x200B;模式表示AEM Forms系统处于无限期备份模式或在指定的分钟数内处于备份模式，此后不再启用备份模式。 要进入或退出快照备份模式，可以使用以下选项之一。 在恢复方案后，不应启用快照备份模式。
 
-   * 使用管理控制台中的“备份设置”页。 要进入快照模式，请选中“在安全备份模式下操作”复选框。 取消选中该复选框可退出快照模式。
-   * 使用LCBackupMode脚本（请参阅[备份数据库、GDS和内容存储根目录](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)）。 要退出快照备份模式，请在脚本参数中，将`continuousCoverage`参数设置为`false`或使用`leaveContinuousCoverage`选项。
-   * 使用提供的备份/恢复API。<!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
+  * 使用管理控制台中的“备份设置”页。 要进入快照模式，请选中“在安全备份模式下操作”复选框。 取消选中该复选框可退出快照模式。
+  * 使用LCBackupMode脚本（请参阅[备份数据库、GDS和内容存储根目录](/help/forms/using/admin-help/backing-aem-forms-data.md#back-up-the-database-gds-aem-repository-and-content-storage-root-directories)）。 要退出快照备份模式，请在脚本参数中，将`continuousCoverage`参数设置为`false`或使用`leaveContinuousCoverage`选项。
+  * 使用提供的备份/恢复API。<!-- Fix broken link(see AEM forms API Reference section on AEM Forms Help and Tutorials page).-->
 
 * **正在滚动备份**&#x200B;模式表示系统始终处于备份模式，一旦释放上一个会话，就会启动新的备份模式会话。 没有超时与滚动备份模式相关联。 当调用LCBackupMode脚本或API离开滚动备份模式时，将开始新的滚动备份模式会话。 此模式在支持连续备份时非常有用，但仍允许从GDS目录中清除旧文档和不需要的文档。 不支持通过“备份和恢复”页滚动备份模式。 恢复方案后，仍启用滚动备份模式。 您可以使用带有`leaveContinuousCoverage`选项的LCBackupMode脚本退出连续备份模式（滚动备份模式）。
 
@@ -82,7 +97,7 @@ AEM Forms备份策略涉及两种类型的备份：
 1. 在维护模式下启动系统。
 1. 执行以下操作以确保在维护模式下将表单管理器与AEM表单同步：
 
-   1. 转到https://&lt;*服务器*>：&lt;*端口*>/lc/fm并使用管理员/密码凭据登录。
+   1. 转到https://&lt;*server*>：&lt;*port*>/lc/fm并使用管理员/密码凭据登录。
    1. 单击右上角的用户（在此例中为“超级管理员”）名称。
    1. 单击&#x200B;**管理选项**。
    1. 单击&#x200B;**开始**&#x200B;从存储库同步资产。

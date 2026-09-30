@@ -9,20 +9,29 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 7b870221-2946-4e3d-b606-71a46bdfc568
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
-
+source-wordcount: '538'
+ht-degree: 5%
 ---
-
 # 创建自定义表单映射{#creating-custom-form-mappings}
 
 在Adobe Campaign中创建自定义表时，您可能希望在AEM中构建映射到该自定义表的表单。
 
 本文档介绍如何创建自定义表单映射。 当您完成本文档中的步骤时，将为用户提供事件页面，用户可在其中注册即将举行的事件。 然后，您可以通过Adobe Campaign跟进这些用户。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 您需要安装以下软件：
 
@@ -106,7 +115,7 @@ ht-degree: 0%
 
 配置字段后，您需要手动更改映射。
 
-在CRXDE-LITE中，转到&#x200B;**jcr：content**（页面的）节点，并将&#x200B;**acMapping**&#x200B;值更改为&#x200B;**目标映射**&#x200B;的内部名称。
+在CRXDE-LITE中，转到&#x200B;**jcr:content**（页面的）节点，并将&#x200B;**acMapping**&#x200B;值更改为&#x200B;**目标映射**&#x200B;的内部名称。
 
 ![chlimage_1-198](assets/chlimage_1-198.png)
 
@@ -122,7 +131,7 @@ ht-degree: 0%
 
 ## 疑难解答 {#troubleshooting}
 
-**“元素“@eventdate”的值“02/02/2015”的类型无效(类型为“Event ([adb：event])”的文档)”**
+**“元素&#39;@eventdate&#39; (类型为&#39;Event ([adb:event])&#39;的文档)的值&#39;02/02/2015&#39;的类型无效”**
 
 提交表单时，此错误记录在AEM的&#x200B;**error.log**&#x200B;中。
 

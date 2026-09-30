@@ -1,6 +1,6 @@
 ---
-title: 如何以编程方式访问AEM JCR
-description: 您可以通过编程方式修改位于AEM存储库(Adobe Experience Cloud的一部分)中的节点和属性
+title: 如何以编程方式访问 AEM JCR
+description: 您可以通过编程方式修改位于AEM存储库（Adobe Experience Cloud的一部分）中的节点和属性
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -9,16 +9,30 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,JCR
 role: Developer
 exl-id: 0b375003-183d-4007-b1a1-0c48607745d1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: cd14456d-a492-4b5c-8a82-1fbd4460dbd2
+    internal-label: Java Content Repository
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 0%
-
+source-wordcount: '603'
+ht-degree: 2%
 ---
+# 如何以编程方式访问 AEM JCR{#how-to-programmatically-access-the-aem-jcr}
 
-# 如何以编程方式访问AEM JCR{#how-to-programmatically-access-the-aem-jcr}
-
-您可以通过编程方式修改位于Adobe CQ存储库(Adobe Experience Cloud的一部分)中的节点和属性。 要访问CQ存储库，请使用Java™内容存储库(JCR) API。 您可以使用Java™ JCR API创建、替换、更新和删除Adobe CQ存储库中的(CRUD)内容。 有关Java™ JCR API的详细信息，请参阅[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html)。
+您可以通过编程方式修改位于Adobe CQ存储库（Adobe Experience Cloud的一部分）中的节点和属性。 要访问CQ存储库，请使用Java™内容存储库(JCR) API。 您可以使用Java™ JCR API创建、替换、更新和删除Adobe CQ存储库中的(CRUD)内容。 有关Java™ JCR API的详细信息，请参阅[https://jackrabbit.apache.org/jcr/jcr-api.html](https://jackrabbit.apache.org/jcr/jcr-api.html)。
 
 >[!NOTE]
 >

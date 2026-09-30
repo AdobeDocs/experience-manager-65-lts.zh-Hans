@@ -5,13 +5,21 @@ solution: Experience Manager
 feature: Deploying
 role: User,Admin,Developer
 exl-id: d7a9502b-8d6a-4d83-9b1f-0c82cbf34b70
-source-git-commit: 58f549aaf5f248c2382477790c825bba1d737137
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '377'
 ht-degree: 2%
-
 ---
-
 # 数据库凭据存储设置（基于Elytron）
 
 ## 使用Elytron配置数据库凭据存储
@@ -115,10 +123,10 @@ chmod +x create-elytron-cred-domain.sh
 
 * 创建以下凭据别名：
 
-   * `EncryptDBPassword`
-   * `EncryptDBPassword_IDP_DS`
-   * `EncryptDBPassword_EDC_DS`
-   * `EncryptDBPassword_AEM_DS`
+  * `EncryptDBPassword`
+  * `EncryptDBPassword_IDP_DS`
+  * `EncryptDBPassword_EDC_DS`
+  * `EncryptDBPassword_AEM_DS`
 * 验证是否成功添加了所有别名
 
 成功执行可确认凭据存储创建和别名验证。
@@ -140,7 +148,7 @@ chmod +x create-elytron-cred-domain.sh
   JAVA_OPTS="$JAVA_OPTS -DCS_PASS=YourCredStorePassword"
   ```
 
-* **Windows**
+* **窗口**
 编辑：
 
   ```

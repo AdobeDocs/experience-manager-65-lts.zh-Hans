@@ -9,13 +9,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 exl-id: 4531a41c-99fa-4e98-b4f4-f8fc92ed9095
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2905'
 ht-degree: 1%
-
 ---
-
 # 创意项目与 PIM 集成 {#creative-project-and-pim-integration}
 
 如果您是营销人员或创意专业人员，则可以使用Adobe Experience Manager (AEM)中的Creative项目工具来管理组织内与电子商务相关的产品摄影和相关创意流程。
@@ -49,7 +62,7 @@ Creative项目提供各种项目模板，以满足各种项目要求。 **产品
 
    ![项目详细信息](assets/chlimage_1-134a.png)
 
-1. 单击&#x200B;**创建**。确认消息会通知项目已创建。
+1. 单击&#x200B;**创建**。 确认消息会通知项目已创建。
 1. 单击&#x200B;**完成**&#x200B;以返回&#x200B;**项目**&#x200B;控制台。 或者，单击&#x200B;**打开**&#x200B;以查看项目中的资源。
 
 ## 在产品照片拍摄项目中开始工作 {#starting-work-in-a-product-photo-shoot-project}
@@ -194,7 +207,7 @@ Creative项目提供各种项目模板，以满足各种项目要求。 **产品
 
    ![查看拍摄列表](assets/chlimage_1-148a.png)
 
-   要编辑现有数据或添加新数据，请单击工具栏中的&#x200B;**编辑**。 只能编辑&#x200B;**Product**&#x200B;和&#x200B;**Description**&#x200B;字段。
+   要编辑现有数据或添加新数据，请单击工具栏中的&#x200B;**编辑**。 只能编辑&#x200B;**Product**&#x200B;和**Description**字段。
 
    ![编辑拍摄列表](assets/chlimage_1-149a.png)
 
@@ -240,7 +253,7 @@ Creative项目提供各种项目模板，以满足各种项目要求。 **产品
 
 如果您是编辑器，则可以上传在上一个任务中创建或上传的&#x200B;**shotlist.csv**&#x200B;文件中列出的产品的拍摄照片。
 
-要上载的图像的名称必须以`<ProductId_>`开头，其中`ProductId`是从&#x200B;**文件中的** Id`shotlist.csv`字段引用的。 例如，对于拍摄列表中具有&#x200B;**Id** `397122`的产品，您可以上载名称为`397122_highcontrast.jpg`、`397122_lowlight.png`等的文件。
+要上载的图像的名称必须以`<ProductId_>`开头，其中`ProductId`是从`shotlist.csv`文件中的&#x200B;**Id**&#x200B;字段引用的。 例如，对于拍摄列表中具有&#x200B;**Id** `397122`的产品，您可以上载名称为`397122_highcontrast.jpg`、`397122_lowlight.png`等的文件。
 
 您可以直接上传图像或上传包含图像的ZIP文件。 根据图像名称，图像将放置在照片拍摄文件夹中相应的产品文件夹中。
 
@@ -319,7 +332,7 @@ Creative项目将批准的资产与引用的产品关联。 资源元数据更�
 
    ![移动到路径](assets/chlimage_1-162a.png)
 
-1. 单击&#x200B;**移至生产环境**。 关闭确认消息。资产将移至所述的路径，并根据文件夹层次结构为每个产品的已批准资产自动创建一个旋转集。
+1. 单击&#x200B;**移至生产环境**。 关闭确认消息。 资产将移至所述的路径，并根据文件夹层次结构为每个产品的已批准资产自动创建一个旋转集。
 
 1. 单击工具栏中的&#x200B;**完成**&#x200B;图标。 工作流在最后一个步骤标记为完成时完成。
 

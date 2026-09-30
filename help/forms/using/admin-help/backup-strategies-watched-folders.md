@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 5955deb0-9d1c-4b61-a202-41ef03a23cf8
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
-
 ---
-
 # 观察文件夹的备份策略 {#backup-strategies-for-watched-folders}
 
 本内容将介绍监视的文件夹如何受不同的备份和恢复方案的影响，这些方案的局限性和结果，以及如何最大限度地减少数据丢失。
@@ -160,11 +175,11 @@ ht-degree: 1%
 * 如果可用的watched文件夹备份的时间早于处理作业所需的时间，则您应允许系统创建一个watched文件夹，并自动将文件放入输入文件夹中。
 * 如果最新的可用备份不够新，则备份时间少于处理文件所需的时间，并且会恢复监视文件夹，则会在以下不同阶段之一中处理文件：
 
-   * 输入文件夹中的&#x200B;**阶段1：**
-   * **阶段2：**&#x200B;已复制到阶段文件夹，但尚未调用进程
-   * **阶段3：**&#x200B;已复制到阶段文件夹并调用进程
-   * **阶段4：**&#x200B;操作正在进行中
-   * **阶段5：**&#x200B;返回的结果
+  * 输入文件夹中的&#x200B;**阶段1：**
+  * **阶段2：**&#x200B;已复制到阶段文件夹，但尚未调用进程
+  * **阶段3：**&#x200B;已复制到阶段文件夹并调用进程
+  * **阶段4：**&#x200B;操作正在进行中
+  * **阶段5：**&#x200B;返回的结果
 
   如果文件处于阶段1，则将对其进行操作。 如果文件位于阶段2或阶段3，请将它们放在输入文件夹中，以便再次进行操作。
 

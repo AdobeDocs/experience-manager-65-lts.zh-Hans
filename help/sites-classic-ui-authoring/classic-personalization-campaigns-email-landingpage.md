@@ -5,13 +5,24 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: 92f4946d-1f49-4286-a51e-84b2a46a6b8a
-source-git-commit: f69262246bafca44f88ff15a4c86125f5335507e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '612'
 ht-degree: 2%
-
 ---
-
 # 创建高效的新闻稿登录页面{#creating-an-effective-newsletter-landing-page}
 
 有效的新闻稿登陆页面可帮助您让尽可能多的人注册您的新闻稿（或其他电子邮件营销活动）。 您可以使用从新闻稿注册收集的信息来获取潜在客户。
@@ -60,7 +71,7 @@ ht-degree: 2%
 
 ### 创建感谢页面 {#creating-a-thank-you-page}
 
-当用户单击“立即订阅”**&#x200B;**&#x200B;时，您希望自动打开“感谢”页面。 在Geometrixx新闻稿页面中创建“感谢”页面。 创建新闻稿表单后，编辑表单组件并添加感谢页面的路径。
+当用户单击“立即订阅”****&#x200B;时，您希望自动打开“感谢”页面。 在Geometrixx新闻稿页面中创建“感谢”页面。 创建新闻稿表单后，编辑表单组件并添加感谢页面的路径。
 
 提交请求会将用户转到&#x200B;**感谢**&#x200B;页面，用户将在页面后收到电子邮件。 此感谢页面创建于/content/geometrixx/en/toolbar/newsletter/thank_you。
 

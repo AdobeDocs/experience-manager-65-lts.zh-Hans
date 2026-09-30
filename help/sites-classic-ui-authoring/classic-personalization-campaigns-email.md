@@ -10,13 +10,24 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: 19ff5414-5798-4a89-afab-e0bad0f58b51
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 0%
-
+source-wordcount: '1802'
+ht-degree: 2%
 ---
-
 # 电子邮件营销{#e-mail-marketing}
 
 >[!NOTE]
@@ -36,10 +47,10 @@ ht-degree: 0%
 
 本文档介绍了在AEM中创建新闻稿的基础知识。 有关如何使用电子邮件营销的更多详细信息，请参阅以下文档：
 
-* [创建有效的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
+* [创建高效的新闻稿登陆页面](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-landingpage.md)
 * [管理订阅](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-subscriptions.md)
 * [将电子邮件发布到电子邮件服务提供商](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-newsletters.md)
-* [跟踪退回的电子邮件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
+* [跟踪退回电子邮件](/help/sites-classic-ui-authoring/classic-personalization-campaigns-email-tracking-bounces.md)
 
 >[!NOTE]
 >
@@ -71,26 +82,26 @@ ht-degree: 0%
 
    ![页面属性对话框](assets/mcm_newnewsletterdialog.png)
 
-   * **来自名称**
-应作为新闻稿发件人显示的名称。
+   * **发件人姓名**
+     应作为新闻稿发件人显示的名称。
 
    * **发件人地址**
-应作为新闻稿发件人显示的邮件地址。
+     应作为新闻稿发件人显示的邮件地址。
 
    * **主题**
-新闻稿的主题。
+     新闻稿的主题。
 
    * **回复**
-邮件地址，负责处理已发送新闻稿的回复。
+     邮件地址，负责处理已发送新闻稿的回复。
 
    * **描述**
-新闻稿的说明。
+     新闻稿的说明。
 
-   * **开启时间**
-发送新闻稿的准时。
+   * **准时**
+     发送新闻稿的准时。
 
    * **默认收件人列表**
-应接收新闻稿的默认列表。
+     应接收新闻稿的默认列表。
 
    稍后可以从&#x200B;**属性……**&#x200B;对话框更新这些内容。
 
@@ -294,7 +305,7 @@ ht-degree: 0%
 
 ### 订阅新闻稿 {#subscribing-to-a-newsletter-1}
 
-要订阅新闻稿(以Geometrixx网站为例)，请执行以下操作：
+要订阅新闻稿（以Geometrixx网站为例），请执行以下操作：
 
 1. 单击&#x200B;**网站**&#x200B;并导航到Geometrixx **工具栏**&#x200B;并打开它。
 

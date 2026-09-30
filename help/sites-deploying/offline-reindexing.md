@@ -5,7 +5,18 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 156f245f-b185-4da4-b9c6-6d0a98405119
-source-git-commit: c89b742e24734fc67883b9dec966f59a01062a2a
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 1%
@@ -160,7 +171,7 @@ merge-index-definitions_target: JSON file having merged definitions for the targ
 
 如果存在MongoMK，则如果在更靠近MongoDB实例的实例中执行此步骤，则可以加快此进程。 如果在同一台计算机上运行，则可以避免网络开销。
 
-有关索引[&#128279;](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)的Oak-run文档中可找到其他技术详细信息。
+有关索引](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)的[Oak-run文档中可找到其他技术详细信息。
 
 ### 导入索引 {#importing-indexes}
 

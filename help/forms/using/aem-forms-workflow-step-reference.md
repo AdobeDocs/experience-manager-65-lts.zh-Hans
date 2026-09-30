@@ -5,13 +5,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
 exl-id: 13d84b04-dab6-453f-bc0d-62a5f557c4f2
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '7736'
 ht-degree: 0%
-
 ---
-
 # OSGi 上以表单为中心的工作流——步骤参考 {#forms-centric-workflow-on-osgi-step-reference}
 
 ## 应用到 {#applies-to}
@@ -73,7 +89,7 @@ Forms Workflow步骤在AEM工作流中执行特定于AEM Forms的操作。 这�
     * **选择输入JSON：**&#x200B;使用相对于有效负荷或存储在Document、JSON或表单数据模型数据类型的变量中的路径选择输入JSON文件。 如果从“类型”下拉列表中选择“交互式通信代理UI”或“交互式通信Web渠道文档”，则此选项可用。
     * **选择自定义预填充服务：**&#x200B;选择预填充服务以检索数据并预填充交互式通信Web渠道文档或代理UI。
     * **使用上面选择的交互式通信的预填充服务：**&#x200B;使用此选项可使用使用交互式通信下拉列表中定义的交互式通信的预填充服务。
-    * **请求属性映射：**&#x200B;使用“请求属性映射”部分定义请求属性[&#128279;](../../forms/using/work-with-form-data-model.md#bindargument)的名称和值。 根据请求中指定的属性名称和值从数据源检索详细信息。 您可以使用文本值或String数据类型的变量来定义请求属性值。\
+    * **请求属性映射：**&#x200B;使用“请求属性映射”部分定义请求属性](../../forms/using/work-with-form-data-model.md#bindargument)的[名称和值。 根据请求中指定的属性名称和值从数据源检索详细信息。 您可以使用文本值或String数据类型的变量来定义请求属性值。\
       仅当从“类型”下拉列表中选择“交互式通信代理UI”或“交互式通信Web渠道文档”时，预填充服务和请求属性映射选项才可用。
 
 * **提交的信息：**&#x200B;下面列出的以下字段用作任务的输出位置：

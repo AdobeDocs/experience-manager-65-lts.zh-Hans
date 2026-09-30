@@ -9,13 +9,25 @@ feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: a1f4823f-4861-4e99-88cd-4a686abe3f64
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '3107'
 ht-degree: 3%
-
 ---
-
 # 用户、组和访问权限管理{#user-group-and-access-rights-administration}
 
 启用对CRX存储库的访问涉及几个主题：
@@ -60,7 +72,7 @@ CRX允许您配置用户和组帐户的访问权限。 然后将同样的基本�
 
 >[!NOTE]
 >
->CRX实现JSR-283[&#128279;](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定义的访问控制。
+>CRX实现JSR-283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)定义的[访问控制。
 >
 >CRX存储库的标准安装配置为使用基于资源的访问控制列表。 这是JSR-283访问控制的一种可能实现以及Jackrabbit提供的实现之一。
 
@@ -70,22 +82,22 @@ CRX允许您配置用户和组帐户的访问权限。 然后将同样的基本�
 
 * **主体**&#x200B;是一个具有访问权限的实体。 承担者包括：
 
-   * 用户帐户
-   * 组帐户
+  * 用户帐户
+  * 组帐户
 
-     如果用户帐户属于一个或多个组，则它也会与每个组承担者相关联。
+    如果用户帐户属于一个或多个组，则它也会与每个组承担者相关联。
 
 * **subject**&#x200B;用于表示请求的源。
 
   它用于合并适用于该请求的访问权限。 这些源自：
 
-   * 用户主体
+  * 用户主体
 
-     您直接分配给用户帐户的权限。
+    您直接分配给用户帐户的权限。
 
-   * 与该用户关联的所有组主体
+  * 与该用户关联的所有组主体
 
-     所有权限都会分配给用户所属的任何组。
+    所有权限都会分配给用户所属的任何组。
 
   然后使用结果来允许或拒绝对请求资源的访问。
 
@@ -124,8 +136,8 @@ CRX中的访问权限评估如下：
 
 * 用户主体始终优先于组主体，不论如何：
 
-   * 在访问控制列表中的顺序
-   * 它们在节点层次结构中的位置
+  * 在访问控制列表中的顺序
+  * 它们在节点层次结构中的位置
 
 * 对于给定的主体，给定节点上最多有一个deny和1 allow条目。 该实施始终会清除冗余条目，并确保允许条目和拒绝条目中未列出相同的权限。
 

@@ -1,5 +1,5 @@
 ---
-title: 在We.Retail中尝试可编辑模板
+title: 在 We.Retail 中试用可编辑模板
 description: 了解如何使用We.Retail在Adobe Experience Manager中试用可编辑模板。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: f1141b8c-12a2-44a0-8c15-b614398b5174
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 0%
-
+source-wordcount: '495'
+ht-degree: 6%
 ---
-
-# 在We.Retail中尝试可编辑模板{#trying-out-editable-templates-in-we-retail}
+# 在 We.Retail 中试用可编辑模板{#trying-out-editable-templates-in-we-retail}
 
 使用可编辑模板，创建和维护模板不再只是开发人员的任务。 高级用户（称为模板作者）现在可以创建模板。 开发人员仍需要设置环境、创建客户端库和创建要使用的组件，但是，在这些基础知识到位后，模板作者就可以灵活地创建和配置模板，而无需开发项目。
 
@@ -57,10 +66,10 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
    * 选择现有策略或为容器创建策略
    * 定义在使用此组件时可供页面作者使用的功能，例如
 
-      * 允许的粘贴源
-      * 格式化选项
-      * 允许的段落样式
-      * 允许的特殊字符
+     * 允许的粘贴源
+     * 格式化选项
+     * 允许的段落样式
+     * 允许的特殊字符
 
    许多基于核心组件的组件允许通过可编辑的模板在组件级别配置选项，从而无需由开发人员进行自定义。
 
@@ -74,4 +83,4 @@ We.Retail中的所有页面都基于可编辑的模板，允许非开发人员�
 
 有关详细信息，请参阅创作文档[创建页面模板](/help/sites-authoring/templates.md)或开发人员文档页面[模板 — 可编辑](/help/sites-developing/page-templates-editable.md)，了解有关可编辑模板的完整技术详细信息。
 
-您可能还希望调查[核心组件](/help/sites-developing/we-retail-core-components.md)。 有关核心组件的功能概述，请参阅创作文档[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)；有关技术概述，请参阅开发人员文档[开发核心组件](https://helpx.adobe.com/cn/experience-manager/core-components/using/developing.html)。
+您可能还希望调查[核心组件](/help/sites-developing/we-retail-core-components.md)。 有关核心组件的功能概述，请参阅创作文档[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)；有关技术概述，请参阅开发人员文档[开发核心组件](https://helpx.adobe.com/experience-manager/core-components/using/developing.html)。

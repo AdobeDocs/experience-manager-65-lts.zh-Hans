@@ -1,5 +1,5 @@
 ---
-title: HTML5表单的渲染表单模板
+title: 为 HTML5 Forms 渲染表单模板
 description: HTML5表单配置文件与配置文件渲染关联。 配置文件渲染器是JSP页，负责通过调用HTML OSGi服务来生成表单的Forms表示形式。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,20 +9,35 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 45c6a654-c726-4a45-86a9-57f4ed24b4ca
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 1%
-
+source-wordcount: '543'
+ht-degree: 3%
 ---
-
-# HTML5表单的渲染表单模板 {#rendering-form-template-for-html-forms}
+# 为 HTML5 Forms 渲染表单模板 {#rendering-form-template-for-html-forms}
 
 ## 渲染端点 {#render-endpoint}
 
 HTML5表单具有&#x200B;**配置文件**&#x200B;的概念，这些配置文件公开为REST端点以启用表单模板的移动设备渲染。 这些配置文件已关联&#x200B;**配置文件渲染器**。 它们是JSP页，负责通过调用HTML OSGi服务来生成Forms表单表示形式。 “配置文件”节点的JCR路径决定了渲染端点的URL。 表单的默认渲染端点指向“default”配置文件，如下所示：
 
-https://&lt;*主机*>：&lt;*端口*>/content/xfaforms/profiles/default.html？contentRoot=&lt;*包含表单xdp*>&amp;template=&lt;*xdp*>的文件夹路径
+https://<*主机*>：<*端口*>/content/xfaforms/profiles/default.html?contentRoot=<*包含表单xdp*>&template=<*名称xdp*>的文件夹路径
 
 例如，`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 

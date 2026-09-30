@@ -1,5 +1,5 @@
 ---
-title: 在分配任务步骤中使用自定义电子邮件模板
+title: 在“分配任务”步骤中使用自定义电子邮件模板
 description: 表单工作流电子邮件通知的自定义电子邮件模板
 topic-tags: publish
 docset: aem65
@@ -7,14 +7,30 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: cb661ab6-5a76-421f-9fa7-e505fd629d45
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 1%
-
+source-wordcount: '518'
+ht-degree: 4%
 ---
-
-# 在分配任务步骤中使用自定义电子邮件模板{#use-custom-email-templates-in-an-assign-task-step}
+# 在“分配任务”步骤中使用自定义电子邮件模板{#use-custom-email-templates-in-an-assign-task-step}
 
 您可以使用“分配任务”步骤来创建任务并将其分配给用户或组。 将任务分配给用户或组时，会向定义的用户或定义的组的每个成员发送电子邮件通知。 典型的电子邮件通知包含已分配任务的链接以及与该任务相关的信息。 下图显示了一个示例电子邮件通知：
 
@@ -42,7 +58,7 @@ AEM Forms开箱即用地提供电子邮件通知模板。 模板提供已分配�
 
    电子邮件通知模板是[HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email)。 您可以使用自定义代码替换现有的html代码以更改模板的外观。
 
-1. 保存该文件。现在，自定义模板已可供使用。
+1. 保存该文件。 现在，自定义模板已可供使用。
 
 ## 创建电子邮件模板 {#create-an-email-template}
 
@@ -58,7 +74,7 @@ AEM Forms开箱即用地提供电子邮件通知模板。 模板提供已分配�
 
    电子邮件通知模板是[HTML电子邮件](https://en.wikipedia.org/wiki/HTML_email)。 您可以向文件中添加自定义HTML代码以创建模板。
 
-1. 保存该文件。该模板可以在“分配任务”步骤中使用。
+1. 保存该文件。 该模板可以在“分配任务”步骤中使用。
 
 ## 在“分配任务”步骤中使用电子邮件模板 {#use-an-email-template-in-an-assign-task-step}
 

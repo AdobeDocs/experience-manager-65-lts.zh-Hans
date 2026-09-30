@@ -9,13 +9,29 @@ feature: Context Hub,Developing,Personalization
 solution: Experience Manager, Experience Manager Sites
 role: Developer
 exl-id: 26cc4d84-ed76-44c7-a4e9-73ed48009568
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: db974db1-cf49-4452-872e-5a56c5f1d391
+    internal-label: Context Hub
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 2%
-
 ---
-
 # ContextHub JavaScript API 参考{#contexthub-javascript-api-reference}
 
 将[ContextHub组件添加到页面](/help/sites-developing/ch-adding.md#adding-contexthub-to-a-page-component)后，您的脚本即可使用ContextHub JavaScript API。
@@ -711,7 +727,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **参数**
 
-* **name：**&#x200B;要取消绑定函数的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名称。
+* **name：**&#x200B;要取消绑定函数的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名称。
 
 * **选择器：**&#x200B;标识绑定的选择器。 （查看[on](/help/sites-developing/contexthub-api.md#on-name-handler-selector-triggerforpastevents)和[once](/help/sites-developing/contexthub-api.md#once-name-handler-selector-triggerforpastevents)函数的`selector`参数）。
 
@@ -725,7 +741,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **参数**
 
-* **name：** （字符串）要绑定函数的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名称。
+* **name：** （字符串）要绑定函数的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名称。
 
 * **处理程序：** （函数）要绑定到事件的函数。
 * **选择器：** （字符串）绑定的唯一标识符。 如果要使用`off`函数移除绑定，则需要选择器识别绑定。
@@ -767,7 +783,7 @@ ContextHub.Utils.Cookie.setItem("name", "mycookie", {
 
 **参数**
 
-* **name：** （字符串）要绑定函数的事件[&#128279;](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的名称。
+* **name：** （字符串）要绑定函数的事件](/help/sites-developing/contexthub-api.md#contexthub-utils-eventing)的[名称。
 
 * **处理程序：** （函数）要绑定到事件的函数。
 * **选择器：** （字符串）绑定的唯一标识符。 如果要使用`off`函数移除绑定，则需要选择器识别绑定。

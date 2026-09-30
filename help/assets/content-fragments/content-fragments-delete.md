@@ -1,20 +1,32 @@
 ---
 title: 内容片段 – 关于删除的注意事项
-description: 在 AEM 中定义内容片段删除策略之前，请查看这些重要注意事项。内容片段是用于投放 headless 内容的强大工具，必须仔细考虑删除这些片段的影响。
+description: 在 AEM 中定义内容片段删除策略之前，请查看这些重要注意事项。 内容片段是用于投放 headless 内容的强大工具，必须仔细考虑删除这些片段的影响。
 feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
 exl-id: 1460872b-415f-4392-a480-c442790fd0d9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '518'
 ht-degree: 79%
-
 ---
-
 # 内容片段 – 删除注意事项 {#content-fragments-delete-considerations}
 
-在 AEM 中定义内容片段删除策略之前，请查看这些重要注意事项。内容片段是用于投放 headless 内容的强大工具，必须仔细考虑删除这些片段的影响。
+在 AEM 中定义内容片段删除策略之前，请查看这些重要注意事项。 内容片段是用于投放 headless 内容的强大工具，必须仔细考虑删除这些片段的影响。
 
 ## 权限 – 删除或不删除 {#permissions-delete-or-not-delete}
 
@@ -50,9 +62,9 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->编辑/更新内容片段所需的删除权限包含在通过用户和/或群组管理[&#128279;](/help/sites-administering/security.md#managing-permissions)分配的删除权限中。
+>编辑/更新内容片段所需的删除权限包含在通过用户和/或群组管理](/help/sites-administering/security.md#managing-permissions)分配的删除权限[中。
 
-编辑/更新片段所需的权限需要应用于包含内容片段的节点或适当的父节点（在 `/content/dam` 下的任何级别）。当分配给此类父节点时，权限将应用于该分支中的所有节点。
+编辑/更新片段所需的权限需要应用于包含内容片段的节点或适当的父节点（在 `/content/dam` 下的任何级别）。 当分配给此类父节点时，权限将应用于该分支中的所有节点。
 
 例如，将包含所有内容片段的文件夹，例如：
 
@@ -72,17 +84,17 @@ ht-degree: 79%
 
 * 对于内容片段节点或文件夹：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties`
+  * `jcr:addChildNodes`、`jcr:modifyProperties`
 
 * 对于 `jcr:content`所有内容片段的节点：
 
-   * `jcr:addChildNodes`、`jcr:modifyProperties` 和 `jcr:removeChildNodes`
+  * `jcr:addChildNodes`、`jcr:modifyProperties` 和 `jcr:removeChildNodes`
 
 * 对于所有内容片段的`jcr:content`以下的所有节点：
 
-   * `jcr:addChildNodes`, `jcr:modifyProperties` 和 `jcr:removeChildNodes`, `jcr:removeNode`
+  * `jcr:addChildNodes`, `jcr:modifyProperties` 和 `jcr:removeChildNodes`, `jcr:removeNode`
 
-这些`remove`权限必须由CRXDE Lite[&#128279;](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的访问控制列表管理。
+这些`remove`权限必须由CRXDE Lite](/help/sites-administering/user-group-ac-admin.md#access-right-management)中的访问控制列表[管理。
 
 `add`和`modify`权限也可以在CRXDE Lite中或使用“用户管理”控制台进行管理。
 

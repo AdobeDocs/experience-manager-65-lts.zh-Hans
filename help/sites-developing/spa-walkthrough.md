@@ -8,19 +8,33 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: aceec3ac-abdf-4ae2-b197-f58cb7faea5f
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1983'
 ht-degree: 66%
-
 ---
-
 
 # SPA 简介和演练 {#spa-introduction-and-walkthrough}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用 SPA 框架构建站点，而作者则希望能够在 AEM 中顺畅地为使用此类框架构建的站点编辑内容。
+单页面应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。 开发人员希望能够使用 SPA 框架构建网站，而作者则希望能够在 AEM 中顺畅地为使用此类框架构建的网站编辑内容。
 
-SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本文演练了如何使用基本 SPA 应用程序进行创作，并展示了它与底层 AEM SPA Editor 的关系。
+SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。 本文演练了如何使用基本 SPA 应用程序进行创作，并展示了它与底层 AEM SPA Editor 的关系。
 
 {{ue-over-spa}}
 
@@ -28,35 +42,35 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。本�
 
 ### 文章目标 {#article-objective}
 
-本文先介绍了 SPA 的基本概念，然后使用简单 SPA 应用程序来演示基本内容编辑，从而引导完成浏览 SPA 编辑器演练。随后，深入探究了页面构造以及 SPA 应用程序如何与 AEM SPA Editor 相关并与之交互。
+本文先介绍了 SPA 的基本概念，然后使用简单 SPA 应用程序来演示基本内容编辑，从而引导完成浏览 SPA 编辑器演练。 随后，深入探究了页面构造以及 SPA 应用程序如何与 AEM SPA Editor 相关并与之交互。
 
 此简介和演练的目标是，向 AEM 开发人员说明 SPA 为何相关及其通常如何工作、AEM SPA Editor 如何处理 SPA，以及它与标准 AEM 应用程序的差异。
 
 ## 要求 {#requirements}
 
-该演练基于标准 AEM 功能和示例 WKND SPA Project 应用程序。要完成本演练，您必须拥有以下资源。
+该演练基于标准 AEM 功能和示例 WKND SPA Project 应用程序。 要完成本演练，您必须拥有以下资源。
 
 * [AEM版本6.5.4或更高版本](/help/release-notes/release-notes.md)
-   * 您必须拥有系统的管理员权限。
-* [GitHub 上提供的示例 WKND SPA Project 应用程序](https://github.com/adobe/aem-guides-wknd-spa)
-   * 下载[最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases)其名称将类似于`wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`。
-   * 下载应用程序的[最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases)。 其名称类似于`wknd-spa-sample-images-X.Y.Z.zip`。
-   * [使用包管理器](/help/sites-administering/package-manager.md)像在AEM中安装任何其他包一样安装包。
-   * 在本演练中，无需使用 Maven 安装应用程序。
+  * 您必须拥有系统的管理员权限。
+* [GitHub上提供了示例WKND SPA项目应用程序](https://github.com/adobe/aem-guides-wknd-spa)
+  * 下载[最新版本的React应用程序。](https://github.com/adobe/aem-guides-wknd-spa/releases) 其名称类似于`wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`。
+  * 下载应用程序的[最新示例图像](https://github.com/adobe/aem-guides-wknd-spa/releases)。 其名称类似于`wknd-spa-sample-images-X.Y.Z.zip`。
+  * [使用包管理器](/help/sites-administering/package-manager.md)像在AEM中安装任何其他包一样安装包。
+  * 在本演练中，无需使用 Maven 安装应用程序。
 
 >[!CAUTION]
 >
 >本文档仅将[WKND Spa项目应用程序](https://github.com/adobe/aem-guides-wknd-spa)用于演示目的。 请勿用于任何项目工作。
 >
->任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=zh-Hans)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
+>任何AEM项目都应使用[AEM项目原型](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)，该原型支持使用React或Angular的SPA项目并使用SPA SDK。
 
 ### 什么是 SPA？ {#what-is-a-spa}
 
-单页应用程序 (SPA) 与传统页面的不同之处在于，它在客户端呈现且主要由 JavaScript 驱动，并且依靠 Ajax 调用来加载数据和动态更新页面。大多数内容或所有内容在单个页面加载中检索一次，并基于用户与页面的交互按需异步加载其他资源。
+单页应用程序 (SPA) 与传统页面的不同之处在于，它在客户端呈现且主要由 JavaScript 驱动，并且依靠 AJAX 调用来加载数据和动态更新页面。 大多数内容或所有内容在单个页面加载中检索一次，并基于用户与页面的交互按需异步加载其他资源。
 
-这减少了页面刷新需求，并为用户提供了一种无缝、快速且更类似于本机应用程序体验的体验。
+这减少了页面刷新需求，并为用户提供了一种无缝、快速且更类似于原生应用程序体验的体验。
 
-利用 AEM SPA Editor，前端开发人员可以创建可集成到 AEM 站点中的 SPA，从而允许内容作者像编辑任何其他 AEM 内容那样轻松地编辑 SPA 内容。
+利用 AEM SPA Editor，前端开发人员可以创建可集成到 AEM 网站中的 SPA，从而允许内容作者像编辑任何其他 AEM 内容那样轻松地编辑 SPA 内容。
 
 ### 为什么使用 SPA？ {#why-a-spa}
 
@@ -76,14 +90,14 @@ SPA 的工作方式的特性使其更快、更流畅且更类似于本机应用�
 
 **开发人员**
 
-* 开发人员希望完全分离内容和表示形式之间的关注点。
+* 开发人员希望内容和表示形式之间的关注点明确分离。
 * 干净的分隔使得系统更具可扩展性，并允许独立的前端开发。
 
 ### SPA 的工作原理是什么？ {#how-does-a-spa-work}
 
 SPA的主要思想是减少对服务器的调用和依赖以将服务器调用引起的延迟最小化，以便SPA接近本机应用程序的响应性。
 
-在传统的连续网页中，仅加载即时页面所需的数据。这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。当访客与页面上的元素交互时，可能需要额外调用。由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
+在传统的连续网页中，仅加载即时页面所需的数据。 这意味着，当访客移至另一个页面时，将调用服务器以获取其他资源。 当访客与页面上的元素交互时，可能需要额外调用。 由于页面必须与访客的请求同步，因此多次调用可能会给人一种滞后或延迟的感觉。
 
 ![screen_shot_2018-08-20at140449](assets/screen_shot_2018-08-20at140449.png)
 
@@ -123,7 +137,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    ![步骤4](assets/spa-walkthrough-step-4.png)
 
-1. 将保留更改。
+1. 更改会保留。
 
    ![步骤5](assets/spa-walkthrough-step-5.png)
 
@@ -131,7 +145,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
 >[!NOTE]
 >
->SPA 编辑器不修改应用程序的 DOM。SPA 本身负责 DOM。
+>SPA 编辑器不修改应用程序的 DOM。 SPA 本身负责 DOM。
 >
 >要了解其工作原理，请继续阅读本文的下一部分 [SPA 应用程序和 AEM SPA Editor](#spa-apps-and-the-aem-spa-editor)。
 
@@ -157,7 +171,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    ![步骤3](assets/spa-walkthrough-step-1-3.png)
 
-   在应用程序中从一个页面移至另一个页面时，几乎不产生流量。不会重新加载页面，而只请求新图像。
+   在应用程序中从一个页面移至另一个页面时，几乎不产生流量。 不会重新加载页面，而只请求新图像。
 
    SPA 完全在客户端管理内容和路由。
 
@@ -173,13 +187,13 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    ![步骤1](assets/spa-walkthrough-step-1-1.png)
 
-1. 使用浏览器的内置工具可查看页面的源。
+1. 使用浏览器的内置工具可查看页面源代码。
 1. 源的内容极其有限。
 
-   * 页面的正文中没有任何内容。它主要由样式表和对各种脚本（例如 `clientlib-react.min.js`）的调用构成。
+   * 页面的正文中没有任何内容。 它主要由样式表和对各种脚本（例如 `clientlib-react.min.js`）的调用构成。
    * 这些脚本是此应用程序的主要驱动程序，负责呈现所有内容。
 
-1. 可以使用浏览器的内置工具检查页面。查看完全加载的 DOM 的内容。
+1. 可以使用浏览器的内置工具检查页面。 查看完全加载的 DOM 的内容。
 
    ![步骤4](assets/spa-walkthrough-step-1-4.png)
 
@@ -197,7 +211,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    AEM SPA Editor 利用 [AEM 内容服务](/help/assets/content-fragments/content-fragments.md)将页面的全部内容作为 JSON 模型交付。
 
-   通过实施特定接口，Sling 模型为 SPA 提供了必要信息。将 JSON 数据的交付工作向下委派给每个组件（从页面到段落再到组件等）。
+   通过实施特定接口，Sling 模型为 SPA 提供了必要信息。 将 JSON 数据的交付工作向下委派给每个组件（从页面到段落再到组件等）。
 
    每个组件都会选择它公开的内容及其呈现方式（使用HTL的服务器端或使用React的客户端）。 本文重点介绍使用 React 进行客户端呈现。
 
@@ -209,7 +223,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    ![步骤7](assets/spa-walkthrough-step-1-7.png)
 
-1. 要查看这种行为差异，请重新加载页面并清除开发人员工具的网络活动。 导航到页面菜单中的 `page-1`，可以看到唯一的网络活动是请求 `page-1` 的图像。`page-1` 本身无需加载。
+1. 要查看这种行为差异，请重新加载页面并清除开发人员工具的网络活动。 导航到页面菜单中的 `page-1`，可以看到唯一的网络活动是请求 `page-1` 的图像。 `page-1` 本身无需加载。
 
    ![步骤8](assets/spa-walkthrough-step-1-8.png)
 
@@ -217,7 +231,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
 使用示例WKND SPA项目应用程序，可清楚地了解该应用程序在发布时的行为和加载方式，使用内容服务进行JSON内容交付和异步加载资源。
 
-此外，对于内容作者而言，在 AEM 中使用 SPA 编辑器创建内容是无缝操作。
+此外，对于内容作者而言，在 AEM 中使用 SPA 编辑器进行内容创建是无缝的。
 
 在下一部分中，我们将探究允许 SPA 编辑器将 SPA 中的组件与 AEM 组件相关联并实现此无缝编辑体验的合同。
 
@@ -225,7 +239,7 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
-1. 使用浏览器的内置开发人员工具检查页面内容。使用选择工具，在页面上选择一个可编辑的组件并查看元素详细信息。
+1. 使用浏览器的内置开发人员工具检查页面内容。 使用选择工具，在页面上选择一个可编辑的组件并查看元素详细信息。
 
    该组件具有新的数据属性`data-cq-data-path`。
 
@@ -237,9 +251,9 @@ SPA的主要思想是减少对服务器的调用和依赖以将服务器调用�
 
    此路径允许检索和关联每个组件的编辑上下文配置对象。
 
-   这是编辑器将组件识别为 SPA 中的可编辑组件所需的唯一标记属性。根据此属性，SPA编辑器将确定哪个可编辑配置与组件相关联，以便加载正确的框架、工具栏等。
+   这是编辑器将组件识别为 SPA 中的可编辑组件所需的唯一标记属性。 根据此属性，SPA编辑器将确定哪个可编辑配置与组件相关联，以便加载正确的框架、工具栏等。
 
-   还为标记占位符和资源拖放功能添加了一些特定的类名。
+   还为标记占位符和资产拖放功能添加了一些特定的类名。
 
    >[!NOTE]
    >

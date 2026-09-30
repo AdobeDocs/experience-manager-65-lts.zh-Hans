@@ -5,13 +5,22 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 8c4ffb0e-b4dc-4a81-ac43-723754cbc0de
-source-git-commit: a85b54d5a7c3b00f95f439941a390dcfee883187
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 0%
-
+source-wordcount: '580'
+ht-degree: 1%
 ---
-
 # 使用Oak将AEM 6.5迁移到AEM 6.5 LTS内容 {#aem-65-to-aem-65lts-content-migration-using-oak-upgrade}
 
 本文档介绍如何将Adobe Experience Manager从&#x200B;**6.5**&#x200B;升级到&#x200B;**6.5 LTS**，重点介绍如何迁移内容存储库。 它涵盖了使用Oak-upgrade工具在存储库之间传输内容时的精确性和控制性。
@@ -22,7 +31,7 @@ ht-degree: 0%
 
 1. Java兼容性：必须安装并配置AEM 6.5 LTS才能与Java™ 17一起运行。 设置后，启动AEM实例，并验证所有捆绑包是否处于活动状态且运行正常，没有出现问题
 1. 系统资源：确保在迁移过程中有足够的磁盘空间和内存来处理两个存储库
-1. Oak-upgrade工具：从`oak-upgrade`官方Maven存储库[下载](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade) jar。 确保版本与AEM 6.5 LTS中使用的Oak-core版本匹配。 Oak升级工具在Oracle® Java™ 11或更高版本上运行
+1. Oak-upgrade工具：从[官方Maven存储库](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade)下载`oak-upgrade` jar。 确保版本与AEM 6.5 LTS中使用的Oak-core版本匹配。 Oak升级工具在Oracle® Java™ 11或更高版本上运行
 
 ## 迁移过程 {#step-by-step-migration-process}
 
@@ -71,7 +80,7 @@ java -jar oak-upgrade-*.jar [options] /path/to/source/repository /path/to/destin
 
 ### 迁移检查点 {#migratiing-checkpoints}
 
-将旧的SegmentMK存储库(低于Oak 1.6版本)迁移到新的SegmentMK(Oak版本高于或等于1.6版本)时，也会迁移检查点。 首次在新存储库上运行Oak时，此过程可避免重新编制索引。 但是，在以下情况下不会迁移检查点：
+将旧的SegmentMK存储库（低于Oak 1.6版本）迁移到新的SegmentMK（Oak版本高于或等于1.6版本）时，也会迁移检查点。 首次在新存储库上运行Oak时，此过程可避免重新编制索引。 但是，在以下情况下不会迁移检查点：
 
 1. 指定了自定义包括、排除或合并路径，或者
 1. 系统通过引用复制二进制文件。 未指定源数据存储，两个不同的检查点在同一路径下包含不同的二进制文件。

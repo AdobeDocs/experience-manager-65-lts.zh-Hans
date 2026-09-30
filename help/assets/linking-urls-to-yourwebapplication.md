@@ -9,13 +9,24 @@ role: User, Admin
 feature: Configuration
 solution: Experience Manager, Experience Manager Assets
 exl-id: 16798533-855d-4f14-8edb-edba79818dbf
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 6%
-
+source-wordcount: '1300'
+ht-degree: 7%
 ---
-
 # 将 URL 关联到您的 Web 应用程序 {#linking-urls-to-your-web-application}
 
 您的网站和应用程序通过URL调用访问Dynamic Media服务。 发布资产后，Dynamic Media会激活引用该资产的URL字符串。 您可以将这些URL粘贴到Web浏览器中进行测试。

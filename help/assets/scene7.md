@@ -1,5 +1,5 @@
 ---
-title: 将Dynamic Media Classic功能添加到页面
+title: 在页面中添加 Dynamic Media Classic 功能
 description: 如何将Dynamic Media Classic功能和组件添加到Adobe Experience Manager中的页面。
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -10,16 +10,30 @@ role: User, Admin
 mini-toc-levels: 3
 solution: Experience Manager, Experience Manager Assets
 exl-id: 80ffa496-880a-4638-bf78-1aab0c052983
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: c12bda38-aa1a-4647-b62e-42cd4537dac6
+    internal-label: Dynamic Media Classic
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2844'
-ht-degree: 0%
-
+source-wordcount: '2902'
+ht-degree: 3%
 ---
+# 在页面中添加 Dynamic Media Classic 功能 {#adding-scene-features-to-your-page}
 
-# 将Dynamic Media Classic功能添加到页面 {#adding-scene-features-to-your-page}
-
-[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hans)是一个托管解决方案，用于管理、增强、发布富媒体资产，并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
+[Adobe Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)是一个托管解决方案，用于管理、增强、发布富媒体资产，并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
 
 您可以在多种查看器中查看在Dynamic Media Classic中发布的Experience Manager资源：
 
@@ -74,7 +88,7 @@ Experience Manager中提供了以下Dynamic Media Classic组件：
 >
 >如果您正在创建和开发自定义查看器并使用“内容查找器”，则必须显式添加`allowfullscreen`参数。
 
-### Flash查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
+### Flash 查看器生命周期结束通知 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic停止支持Flash查看器平台。
 
@@ -139,7 +153,7 @@ Experience Manager中提供了以下Dynamic Media Classic组件：
 
 按&#x200B;**[!UICONTROL +]**&#x200B;按钮时，HTML5缩放组件显示较大的图像。
 
-资产底部有缩放工具。 如果要放大，请选择&#x200B;**[!UICONTROL +]**；如果要缩小，请选择&#x200B;**[!UICONTROL -]**。 点按&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可将图像恢复到导入图像的原始大小。 选择对角线箭头，以便全屏显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 使用此组件，您可以配置所有[!UICONTROL Dynamic Media Classic]组件[&#128279;](#settings-common-to-all-scene-components)共有的设置。
+资产底部有缩放工具。 如果要放大，请选择&#x200B;**[!UICONTROL +]**；如果要缩小，请选择&#x200B;**[!UICONTROL -]**。 点按&#x200B;**[!UICONTROL x]**&#x200B;或重置缩放箭头可将图像恢复到导入图像的原始大小。 选择对角线箭头，以便全屏显示。 选择&#x200B;**[!UICONTROL 编辑]**，以便配置该组件。 使用此组件，您可以配置所有[!UICONTROL Dynamic Media Classic]组件](#settings-common-to-all-scene-components)共有的[设置。
 
 ![chlimage_1-227](/help/assets/assets/do-not-localize/chlimage_1-227.png)
 
@@ -177,13 +191,13 @@ Dynamic Media Classic **[!UICONTROL 图像]**&#x200B;组件允许您向图像添
 
 **[!UICONTROL 锐化]** — 选择要如何锐化图像。 在[图像预设最佳实践](/help/assets/managing-image-presets.md#image-preset-options)和[锐化最佳实践](/help/assets/assets/sharpening_images.pdf)中对锐化进行了详细解释。
 
-**[!UICONTROL URL修饰符]** — 您可以通过提供其他Dynamic Media Classic图像命令来更改图像效果。 [图像预设](/help/assets/managing-image-presets.md)和[命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=zh-Hans)中介绍了这些命令。
+**[!UICONTROL URL修饰符]** — 您可以通过提供其他Dynamic Media Classic图像命令来更改图像效果。 [图像预设](/help/assets/managing-image-presets.md)和[命令引用](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)中介绍了这些命令。
 
 **[!UICONTROL 断点]** — 如果您的网站有响应，则要调整断点。 断点必须以逗号( 、 )分隔。
 
 ### 图像模板 {#image-template}
 
-[Dynamic Media Classic图像模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html?lang=zh-Hans)是导入到Dynamic Media Classic的分层Photoshop内容，其中内容和属性已参数化为可变性。 通过&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件，您可以在Experience Manager中导入图像并动态更改文本。 此外，您可以将&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件配置为使用来自客户端上下文的值，以便每个用户以个性化的方式体验图像。
+[Dynamic Media Classic图像模板](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html)是导入到Dynamic Media Classic的分层Photoshop内容，其中内容和属性已参数化为可变性。 通过&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件，您可以在Experience Manager中导入图像并动态更改文本。 此外，您可以将&#x200B;**[!UICONTROL 图像模板]**&#x200B;组件配置为使用来自客户端上下文的值，以便每个用户以个性化的方式体验图像。
 
 如果要配置该组件，请选择&#x200B;**[!UICONTROL 编辑]**。 您可以配置所有Dynamic Media Classic组件通用的[设置](#settings-common-to-all-scene-components)以及本节中描述的其他设置。
 
@@ -236,7 +250,7 @@ Dynamic Media Classic **[!UICONTROL 图像]**&#x200B;组件允许您向图像添
 
 ### 视频组件 {#video-component}
 
-Dynamic Media Classic **[!UICONTROL 视频]**&#x200B;组件(可在sidekick的Dynamic Media Classic部分中使用)使用设备和带宽检测将正确的视频提供给每个屏幕。 此组件是一个HTML5视频播放器；它是一个可用于跨渠道的单个查看器。
+Dynamic Media Classic **[!UICONTROL 视频]**&#x200B;组件（可在sidekick的Dynamic Media Classic部分中使用）使用设备和带宽检测将正确的视频提供给每个屏幕。 此组件是一个HTML5视频播放器；它是一个可用于跨渠道的单个查看器。
 
 它可用于自适应视频集、单个MP4视频或单个F4V视频。
 
@@ -329,7 +343,7 @@ Dynamic Media Classic内容浏览器允许您直接在Experience Manager中查�
 >
 >* 在经典UI中，您还可以搜索&#x200B;**Flash**&#x200B;和&#x200B;**FXG**。 不支持在触屏优化UI中筛选这些类型。
 >
->* 搜索视频时，您将搜索单个演绎版。 结果会返回原始演绎版（仅&amp;amp；ast；.mp4）和编码的演绎版。
+>* 搜索视频时，您将搜索单个演绎版。 结果返回原始演绎版（仅&amp;ast；.mp4）和编码的演绎版。
 >* 搜索自适应视频集时，您将搜索文件夹和所有子文件夹，但前提是已向搜索添加了关键词。 如果尚未添加关键字，Experience Manager将不会搜索子文件夹。
 >
 

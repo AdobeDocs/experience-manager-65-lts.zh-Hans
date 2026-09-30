@@ -9,16 +9,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
 exl-id: d2f5fc90-7047-4a45-9c82-996f0da60782
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 65%
-
+source-wordcount: '620'
+ht-degree: 58%
 ---
-
 # 与 Adobe Target 集成{#integrating-with-adobe-target}
 
-作为 Adobe Marketing Cloud 的一部分，[Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 允许您通过在所有渠道中进行定位和衡量来提高内容相关性。营销人员使用 Adobe Target 来设计和执行在线测试、创建动态受众区段（基于行为）以及自动定位内容和在线体验。AEM采用了Adobe Target Standard中使用的定位工作流。 如果使用Target，您将熟悉AEM中的定位编辑环境。
+作为 Adobe Marketing Cloud 的一部分，[Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) 允许您通过在所有渠道中进行定位和衡量来提高内容相关性。 营销人员使用 Adobe Target 来设计和执行在线测试、创建动态受众区段（基于行为）以及自动定位内容和在线体验。 AEM采用了Adobe Target Standard中使用的定位工作流。 如果使用Target，您将熟悉AEM中的定位编辑环境。
 
 将 AEM Sites 与 Adobe Target 集成以个性化页面中的内容：
 
@@ -29,7 +40,7 @@ ht-degree: 65%
 
 要与 Target 集成，请执行以下任务：
 
-1. [执行必备任务](/help/sites-administering/target-requirements.md)：向 Adobe Target 注册并配置 AEM 创作实例的某些方面。您的Adobe Target帐户必须至少具有&#x200B;**审批者**&#x200B;级别的权限。 此外，您必须保护发布节点上的活动设置，以便用户无法访问。
+1. [执行必备任务](/help/sites-administering/target-requirements.md)：向 Adobe Target 注册并配置 AEM 创作实例的某些方面。 您的Adobe Target帐户必须至少具有**审批者**级别的权限。 此外，您必须保护发布节点上的活动设置，以便用户无法访问。
 
 1. 可以任选其一：
 
@@ -40,33 +51,33 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->另请参阅[使用DTM将AEM与Adobe TargetAdobe Analytics集成](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)。
+>另请参阅[使用DTM将AEM与Adobe Target集成](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html)。
 
 >[!NOTE]
 >
 >如果您将 Target 与自定义代理配置一起使用，则需要配置 HTTP 客户端代理配置，因为 AEM 的某些功能使用的是 3.x API，而其他一些功能使用的是 4.x API：
 >
->* 3.x 通过 [http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient) 进行配置
->* 4.x 通过 [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator) 进行配置
+>* 3.x使用[http://localhost:4502/system/console/configMgr/com.day.commons.httpclient](http://localhost:4502/system/console/configMgr/com.day.commons.httpclient)进行配置
+>* 4.x配置有[http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 
 >[!CAUTION]
 >
->确保发布实例中的活动设置节点 **cq:ActivitySettings** 安全，以使其不可由普通用户访问。该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
+>保护发布实例上的活动设置节点&#x200B;**cq:ActivitySettings**，使其不可由普通用户访问。 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 >
 >请参阅[与 Adobe Target 集成的先决条件](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node)，以了解详细信息。
 
-在集成完成后，您可以[创作目标内容](/help/sites-authoring/content-targeting-touch.md)来将访客数据发送到 Adobe Target。请注意，页面组件需要特定代码才能启用内容定位。（请参阅[针对目标内容进行开发](/help/sites-developing/target.md)。）
+在集成完成后，您可以[创作目标内容](/help/sites-authoring/content-targeting-touch.md)来将访客数据发送到 Adobe Target。 请注意，页面组件需要特定代码才能启用内容定位。 （请参阅[针对目标内容进行开发](/help/sites-developing/target.md)。）
 
 >[!NOTE]
 >
->在 AEM 创作实例中定位组件时，该组件会对 Adobe Target 进行一系列的服务器端调用，以便注册活动、设置产品建议和检索 Adobe Target 区段（如果已配置）。没有从 AEM Publish 到 Adobe Target 的服务器端调用。
+>在 AEM 创作实例中定位组件时，该组件会对 Adobe Target 进行一系列的服务器端调用，以便注册活动、设置产品建议和检索 Adobe Target 区段（如果已配置）。 没有从 AEM Publish 到 Adobe Target 的服务器端调用。
 
 ## 背景信息源 {#background-information-sources}
 
 将AEM与Adobe Target集成需要Adobe Target、AEM Activities管理和AEM Audiences管理的知识。 您应熟悉以下信息：
 
-* Adobe Target（请参阅 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=zh-Hans)）。
+* Adobe Target（请参阅 [Adobe Target 文档](https://experienceleague.adobe.com/docs/target/using/target-home.html)）。
 * AEM 活动控制台（请参阅[管理活动](/help/sites-authoring/activitylib.md)）。
 * AEM 受众（请参阅[管理受众](/help/sites-authoring/managing-audiences.md)）。
 

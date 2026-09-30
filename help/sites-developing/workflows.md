@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 625affd0-0e1a-4db8-812f-b6ce70cfe035
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1453'
-ht-degree: 3%
-
+source-wordcount: '1478'
+ht-degree: 4%
 ---
-
 # 开发和扩展工作流{#developing-and-extending-workflows}
 
 AEM提供了多种工具和资源，用于创建工作流模型、开发工作流步骤，以及用于以编程方式与工作流交互。
@@ -30,8 +39,8 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 * [扩展工作流功能](/help/sites-developing/workflows-customizing-extending.md)
 * [以编程方式与工作流交互](/help/sites-developing/workflows-program-interaction.md)
 * [工作流步骤参考](/help/sites-developing/workflows-step-ref.md)
-* [工作流过程参考](/help/sites-developing/workflows-process-ref.md)
-* [工作流最佳实践](/help/sites-developing/workflows-best-practices.md)
+* [工作流流程参考](/help/sites-developing/workflows-process-ref.md)
+* [工作流最佳做法](/help/sites-developing/workflows-best-practices.md)
 
 >[!NOTE]
 >
@@ -51,7 +60,7 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 
 工作流模型的版本已更新。 运行工作流实例时，它会使用和保留工作流的运行时模型（在工作流启动时可用）。
 
-在工作流模型编辑器[&#128279;](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中触发&#x200B;**同步**&#x200B;时，将生成运行时模型。
+在工作流模型编辑器](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)中触发&#x200B;**同步**&#x200B;时，将生成[运行时模型。
 
 对发生的工作流模型或生成的运行时模型（或两者）*之后*&#x200B;启动特定实例进行的编辑不应用于该实例。
 
@@ -66,7 +75,7 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 每一步都完成一个离散的任务。 有不同类型的工作流步骤：
 
 * 参与者（用户/组）：这些步骤将生成工作项并将其分配给用户或组。 用户必须完成工作项目才能推进工作流。
-* 进程(脚本、Java™方法调用)：这些步骤由系统自动执行。 ECMA脚本或Java™类将实施该步骤。 可以开发服务来侦听特殊的工作流事件，并根据业务逻辑执行任务。
+* 进程（脚本、Java™方法调用）：这些步骤由系统自动执行。 ECMA脚本或Java™类将实施该步骤。 可以开发服务来侦听特殊的工作流事件，并根据业务逻辑执行任务。
 * 容器（子工作流）：此类型的步骤会启动另一个工作流模型。
 * OR拆分/联接：使用逻辑来确定要在工作流中执行下一个步骤。
 * AND拆分/连接：允许同时执行多个步骤。
@@ -89,7 +98,7 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
 * `WorkItem`引用工作流实例。
 * 在存储库中，`WorkItem`存储在工作流实例下方。
 
-### 有效负荷 {#payload}
+### 负载 {#payload}
 
 引用必须通过工作流进行高级处理的资源。
 
@@ -197,14 +206,14 @@ AEM提供了多种工具和资源，用于创建工作流模型、开发工作�
    | 步骤 2 | 创建 |
    | 步骤 3 | 审阅 |
    | 步骤 4 | 批准 |
-   | 步骤 5 | 完成 |
-   | 步骤 6 | 完成 |
+   | 步骤 5 | 完整 |
+   | 步骤 6 | 完整 |
 
-1. 运行工作流时，用户可以根据舞台名称（而不是步骤名称）查看进度。 工作流进度显示在[收件箱](/help/sites-authoring/inbox.md)中列出的工作流项目[&#128279;](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任务详细信息窗口的工作流信息”选项卡中。
+1. 运行工作流时，用户可以根据舞台名称（而不是步骤名称）查看进度。 工作流进度显示在[收件箱](/help/sites-authoring/inbox.md)中列出的工作流项目](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions)的任务详细信息窗口的[工作流信息”选项卡中。
 
 ### 工作流和Forms {#workflows-and-forms}
 
-通常，工作流用于处理AEM中的表单提交。 它可以是标准AEM实例中提供的[核心组件表单组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=zh-Hans)，也可以是[AEM Forms解决方案](/help/forms/using/aem-forms-workflow.md)。
+通常，工作流用于处理AEM中的表单提交。 它可以是标准AEM实例中提供的[核心组件表单组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html)，也可以是[AEM Forms解决方案](/help/forms/using/aem-forms-workflow.md)。
 
 创建表单时，可以轻松将表单提交与工作流模型相关联。 例如，将内容存储在存储库的特定位置，或者通知用户表单提交及其内容。
 

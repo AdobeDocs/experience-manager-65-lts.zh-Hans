@@ -1,6 +1,6 @@
 ---
 title: 国际化 UI 字符串
-description: Java&amp；trade；和JavaScript API使您能够国际化字符串
+description: Java&trade；和JavaScript API使您能够国际化字符串
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: a18b1bc9-72a3-4836-a755-db586e56cf89
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1091'
 ht-degree: 0%
-
 ---
-
 # 国际化 UI 字符串 {#internationalizing-ui-strings}
 
 Java™和JavaScript API使您能够国际化以下资源类型中的字符串：
@@ -165,11 +174,11 @@ UI字符串通常基于JCR节点属性。 例如，页面的`jcr:title`属性通
 
 #### 指定JCR节点的翻译提示 {#specifying-translation-hints-for-jcr-nodes}
 
-与Java™ API[&#128279;](#using-translation-hints)中的翻译提示类似，您可以提供翻译提示以区分词典中的重复字符串。 提供翻译提示作为包含国际化属性的节点的属性。 hint属性的名称由带`_commentI18n`后缀的国际化属性名称组成：
+与Java™ API](#using-translation-hints)中的[翻译提示类似，您可以提供翻译提示以区分词典中的重复字符串。 提供翻译提示作为包含国际化属性的节点的属性。 hint属性的名称由带`_commentI18n`后缀的国际化属性名称组成：
 
 `${prop}_commentI18n`
 
-例如，`cq:page`节点包含正在本地化的jcr：title属性。 提示作为名为jcr：title_commentI18n的属性的值提供。
+例如，`cq:page`节点包含正在本地化的jcr:title属性。 提示作为名为jcr:title_commentI18n的属性的值提供。
 
 ### 测试国际化范围 {#testing-internationalization-coverage}
 

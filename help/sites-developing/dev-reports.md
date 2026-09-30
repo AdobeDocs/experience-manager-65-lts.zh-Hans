@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 6ca4f66d-993b-4cfb-9b09-84bb20a54d4c
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '5298'
 ht-degree: 2%
-
 ---
-
 # 开发报告 {#developing-reports}
 
 Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administering/reporting.md)，其中大多数报表基于报表框架。
@@ -82,7 +91,7 @@ Adobe Experience Manager (AEM)提供了一组[标准报表](/help/sites-administ
 报告页面为：
 
 * 标准CQ5页面。
-* 基于为报告[&#128279;](#report-template)配置的标准CQ5模板。
+* 基于为报告](#report-template)配置的[标准CQ5模板。
 
 ### 报表库 {#report-base}
 
@@ -361,7 +370,7 @@ N:charting
 
       * `totals` ( `Boolean`)
 
-        如果应显示其他显示&#x200B;**总计**&#x200B;的行，则为True。
+        如果应显示其他显示&#x200B;**总计**的行，则为True。
         默认： `false`
 
       * `series` ( `Long`)
@@ -668,11 +677,11 @@ N:definitions
 
   * `apply`
 
-    初始预处理阶段（处理队列[&#128279;](#processing-queue)的表示形式中的步骤3）。
+    初始预处理阶段（处理队列](#processing-queue)的表示形式中的[步骤3）。
 
   * `applyAfter`
 
-    预处理后应用（在处理队列[&#128279;](#processing-queue)的表示形式中步骤9）。
+    预处理后应用（在处理队列](#processing-queue)的表示形式中步骤9[）。
 
 #### 解析程序 {#resolvers}
 

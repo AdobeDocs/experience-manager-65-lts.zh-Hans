@@ -1,5 +1,5 @@
 ---
-title: 经典UI标记控制台
+title: 经典 UI 标记控制台
 description: 了解Adobe Experience Manager Classic UI标记控制台。
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 4d4c96ea-b7dd-49b9-86b5-2507e7518ba4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 2%
-
+source-wordcount: '905'
+ht-degree: 3%
 ---
-
-# 经典UI标记控制台{#classic-ui-tagging-console}
+# 经典 UI 标记控制台{#classic-ui-tagging-console}
 
 本节适用于经典UI标记控制台。
 
@@ -49,19 +58,19 @@ ht-degree: 2%
 1. 在这两种情况下，输入
 
    * **标题**
-（*必需*）标记的显示标题。 虽然可以输入任何字符，
-建议不要使用以下特殊字符：
+     （*必需*）标记的显示标题。 虽然可以输入任何字符，
+     建议不要使用以下特殊字符：
 
-      * `colon (:)` — 命名空间分隔符
-      * `forward slash (/)` — 子标记分隔符
+     * `colon (:)` — 命名空间分隔符
+     * `forward slash (/)` — 子标记分隔符
 
      如果输入，将不显示这些字符。
 
    * **名称**
-（*必需*）标记的节点名称。
+     （*必需*）标记的节点名称。
 
    * **描述**
-（*可选*）标记的说明。
+     （*可选*）标记的说明。
 
    * 选择&#x200B;**创建**
 

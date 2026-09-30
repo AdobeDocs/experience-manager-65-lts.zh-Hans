@@ -5,20 +5,36 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: ea10d2e1-9f17-4757-ae2e-67447ff0ad0a
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '865'
 ht-degree: 0%
-
 ---
-
 # 配置外出设置 {#configure-out-of-office-settings}
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/configure-out-of-office-settings.html)。
 
 如果您计划不在办公室，则可以指定在该期间分配给您的物料的情况。
 
@@ -41,7 +57,7 @@ ht-degree: 0%
 执行以下步骤以启用帐户的邮件答录机设置，并将收件箱项目委派给其他用户：
 
 1. 登录到您的AEM实例。 选择![收件箱](assets/bell.svg)图标，然后选择&#x200B;**[!UICONTROL 查看全部]**。 此时将显示收件箱项目的列表。
-1. 选择![创建](assets/viewlist.svg)按钮旁边的![视图选择器](assets/calendar.svg)或&#x200B;**[!UICONTROL 视图选择器]**&#x200B;图标，然后选择&#x200B;**[!UICONTROL 设置]**。 将显示“设置”对话框。
+1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;按钮旁边的![视图选择器](assets/viewlist.svg)或![视图选择器](assets/calendar.svg)图标，然后选择&#x200B;**[!UICONTROL 设置]**。 将显示“设置”对话框。
 1. 打开“设置”对话框中的&#x200B;**[!UICONTROL 外出]**&#x200B;选项卡。
 1. 选择&#x200B;**[!UICONTROL 启用/禁用]**&#x200B;按钮以启用“外出”设置。
 1. 为此设置指定&#x200B;**[!UICONTROL 开始时间]**&#x200B;和&#x200B;**[!UICONTROL 结束时间]**。 项目仅在指定的时间段内委派。 将&#x200B;**[!UICONTROL 结束时间]**&#x200B;字段保留为空以委托项目无限期。
@@ -59,14 +75,14 @@ ht-degree: 0%
    >
    >受让人的顺序很重要。 当将项目分配给启用了外出设置的用户时，将按照添加受分配人的顺序根据指定的受分配人列表评估项目。 当项目与条件匹配时，即会将其分配给被分配人，且不会选中下一个被分配人。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**。该设置将在指定的开始日期和时间生效。 如果您在办公室外时登录，则在更改设置之前，不会将您视为办公室成员。
+1. 选择&#x200B;**[!UICONTROL 保存]**。 该设置将在指定的开始日期和时间生效。 如果您在办公室外时登录，则在更改设置之前，不会将您视为办公室成员。
 
 现在，在“外出”时段分配给您的项目会自动分配给指定的被分配人。
 ![外出](assets/out-of-office.png)
 
 >[!NOTE]
 >
->(仅适用于以Forms为中心的工作流项目)启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**允许被分配人使用“外出”设置**&#x200B;选项进行委派。 只有启用了上述选项的项目才会委派给其他用户。
+>（仅适用于以Forms为中心的工作流项目）启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**允许被分配人使用“外出”设置**&#x200B;选项进行委派。 只有启用了上述选项的项目才会委派给其他用户。
 
 ## 限制 {#limitations}
 

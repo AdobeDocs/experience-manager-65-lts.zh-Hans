@@ -9,13 +9,24 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: 1a11407d-7261-4f1a-bcb9-4c06b8277af4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 0%
-
+source-wordcount: '947'
+ht-degree: 1%
 ---
-
 # 管理订阅{#managing-subscriptions}
 
 >[!NOTE]
@@ -64,7 +75,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >要使表单订阅正常工作，需要在发布实例[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上导出和导入来自作者的加密密钥。
+   >要使表单订阅正常工作，需要在发布实例](#exporting-keys-from-author-and-importing-on-publish)上导出和导入来自作者的[加密密钥。
 
 ## 从作者导出键并在发布时导入 {#exporting-keys-from-author-and-importing-on-publish}
 
@@ -114,6 +125,6 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >要使注册表单订阅正常运行，需要在发布实例[&#128279;](#exporting-keys-from-author-and-importing-on-publish)上导出和导入来自作者的加密密钥。
+   >要使注册表单订阅正常运行，需要在发布实例](#exporting-keys-from-author-and-importing-on-publish)上导出和导入来自作者的[加密密钥。
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)

@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: b60b198e-1683-4970-b9b4-f1d0178e00e1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '2207'
 ht-degree: 1%
-
 ---
-
 # Adobe Experience Manager触屏优化UI的概念{#concepts-of-the-aem-touch-enabled-ui}
 
 Adobe Experience Manager (AEM)为创作环境提供了带[响应式设计](/help/sites-authoring/responsive-layout.md)的触控式UI，该设计可在触控和桌面设备上运行。
@@ -28,24 +37,24 @@ Adobe Experience Manager (AEM)为创作环境提供了带[响应式设计](/help
 触屏优化UI包括：
 
 * 符合以下条件的包标头：
-   * 显示徽标
-   * 提供指向全局导航的链接
-   * 提供指向其他通用操作的链接；例如搜索、帮助、Experience Cloud解决方案、通知和用户设置。
+  * 显示徽标
+  * 提供指向全局导航的链接
+  * 提供指向其他通用操作的链接；例如搜索、帮助、Experience Cloud解决方案、通知和用户设置。
 * 左侧边栏（需要时显示，可隐藏），其中可显示：
-   * 时间线
-   * 引用
-   * 过滤器
+  * 时间线
+  * 引用
+  * 过滤器
 * 导航标头，同样是上下文相关的，可显示：
-   * 指示您当前在该控制台中使用哪个控制台，或您的位置，或同时使用两者
-   * 为左侧边栏选择
-   * 痕迹导航
-   * 访问适当的&#x200B;**创建**&#x200B;操作
-   * 查看选择
+  * 指示您当前在该控制台中使用哪个控制台，或您的位置，或同时使用两者
+  * 为左侧边栏选择
+  * 痕迹导航
+  * 访问适当的&#x200B;**创建**&#x200B;操作
+  * 查看选择
 * 内容区域：
-   * 列出内容项目（页面、资产、论坛帖子等）
-   * 可以根据请求设置格式，例如列、卡片或列表
-   * 使用响应式设计（显示器根据您的设备和/或窗口大小自动调整大小）
-   * 使用无限滚动（不再分页，所有项目都列在一个窗口中）
+  * 列出内容项目（页面、资产、论坛帖子等）
+  * 可以根据请求设置格式，例如列、卡片或列表
+  * 使用响应式设计（显示器根据您的设备和/或窗口大小自动调整大小）
+  * 使用无限滚动（不再分页，所有项目都列在一个窗口中）
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
@@ -241,14 +250,14 @@ Granite UI和ExtJS（用于经典UI）之间的差异也令人感兴趣：
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete`&#x200B;`cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **节点类型** | **Granite UI资源类型** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container`&#x200B;`granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI管理组件 {#granite-ui-administration-components}

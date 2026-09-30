@@ -5,28 +5,42 @@ solution: Experience Manager
 feature: Authoring, AI Assistant, AI Tools
 role: Admin,Developer,User
 exl-id: e653d37f-5802-4b0f-a71b-539b33ad5ca5
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
-workflow-type: ht
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
+    internal-label: AI Tools
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 100%
-
 ---
-
 # 配置 AEM 中的 AI 助手 {#aem-ai-asst-admin-setup}
 
 <!-- An Administrator must configure access, permissions, and settings before users in their organization can use the features in AI Assistant in AEM. -->
 
 <!-- badge: label="Beta" type="Positive" -->
 
-要使用 AEM (Adobe Experience Manager) 中的 AI 助手，必须具有通过 AI 助手访问产品知识的权限。此权限在默认情况下已开启。
+要使用 AEM (Adobe Experience Manager) 中的 AI 助手，必须具有通过 AI 助手访问产品知识的权限。 此权限在默认情况下已开启。
 
-如果您希望控制谁可以访问产品知识，请使用与您的 Adobe ID 相关联的电子邮件地址给 [aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com) 发送电子邮件。Adobe 可以启用用户级访问控制。启用后，您的管理员可以按照下述步骤授予用户级访问权限。
+如果您希望控制谁可以访问产品知识，请使用与您的 Adobe ID 相关联的电子邮件地址给 [aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com) 发送电子邮件。 Adobe 可以启用用户级访问控制。 启用后，您的管理员可以按照下述步骤授予用户级访问权限。
 
-如果您请求用户级访问控制，您的组织就必须通过 Adobe Admin Console 选择加入。产品管理员创建（或选择）一个用户组，然后授予其新的“AI 助手”权限。任何添加到该组的人都会立即获得访问 AEM 中 AI 助手的权限。如果目标是在全公司范围内使用，管理员只需将所有用户分配给这个组。
+如果您请求用户级访问控制，您的组织就必须通过 Adobe Admin Console 选择加入。 产品管理员创建（或选择）一个用户组，然后授予其新的“AI 助手”权限。 任何添加到该组的人都会立即获得访问 AEM 中 AI 助手的权限。 如果目标是在全公司范围内使用，管理员只需将所有用户分配给这个组。
 
-从员工的角度来说这个过程非常简单：确定您组织中 Adobe Experience Manager 的产品管理员，然后请求将自己添加到启用了 AI 的用户组。只要您出现在这个组中，您下次登录时就会自动显示“助手”图标。
+从员工的角度来说这个过程非常简单：确定您组织中 Adobe Experience Manager 的产品管理员，然后请求将自己添加到启用了 AI 的用户组。 只要您出现在这个组中，您下次登录时就会自动显示“助手”图标。
 
-管理员应牢记常规的 Cloud Manager 治理原则。在 Admin Console 中保持产品管理员创建配置文件、管理用户组的权限或编辑权限。如果用户还需要助手工具中内置的&#x200B;**创建支持工单**&#x200B;功能，可将标准的&#x200B;**支持管理员**&#x200B;角色（标准 Admin Console 角色）添加到相同的个人或组。
+管理员应牢记常规的 Cloud Manager 治理原则。 您必须在 Admin Console 中拥有产品管理员权限，才能创建配置文件、管理用户组或编辑权限。 如果用户还需要助手工具中内置的&#x200B;**创建支持工单**&#x200B;功能，可将标准的&#x200B;**支持管理员**&#x200B;角色（标准 Admin Console 角色）添加到相同的个人或组。
 
 AEM 中的 AI 助手配置过程包含以下步骤：
 
@@ -47,7 +61,7 @@ AEM 中的 AI 助手配置过程包含以下步骤：
 
 * 处理时间：Cloud Manager 中创建的资源可能需要 2 分钟才能显示在 Admin Console 中，用于进行权限配置。
 * 多个配置文件：用户可以是多个配置文件的一部分，所有已分配的配置文件中的权限都会合并在一起。
-* 组织范围：有些权限可能在所有计划中都在组织级别上应用。
+* 组织范围：某些权限可能会在所有程序中于组织级别应用。
 * 预定义的配置文件：不要从 Admin Console 删除预定义的权限配置文件。
 
 

@@ -1,5 +1,5 @@
 ---
-title: 启用对经典UI的访问
+title: 启用对经典 UI 的访问权限
 description: 了解如何在Adobe Experience Manager中启用对经典UI的访问。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 667ab9f1-4cff-4aef-94d5-adf478190bb4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 1%
-
+source-wordcount: '73'
+ht-degree: 17%
 ---
-
-# 启用对经典UI的访问{#enabling-access-to-classic-ui}
+# 启用对经典 UI 的访问权限{#enabling-access-to-classic-ui}
 
 由于触屏功能在AEM的许多区域中达到了与经典UI相当甚至超越后者的UI，因此默认情况下会禁用通过触屏界面访问经典UI的功能。 以下页面介绍了如何在必要时重新启用此访问权限。
 

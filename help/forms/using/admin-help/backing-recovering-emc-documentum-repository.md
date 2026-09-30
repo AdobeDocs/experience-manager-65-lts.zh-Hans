@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 054d31c3-bd58-4596-8c06-4909d75e9569
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 3%
-
 ---
-
 # 备份和恢复 EMC Documentum 存储库 {#backing-up-and-recovering-the-emc-documentum-repository}
 
 本节介绍备份和恢复为您的AEM Forms环境配置的EMC Documentum存储库所需的任务。
@@ -198,15 +213,15 @@ ht-degree: 3%
 
    * 完全数据库备份(nsrnmddbf.bat)：
 
-     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>*`-U` `[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
+     `NetWorker_database_module_root` `-s`*&lt;NetWorker服务器名称>* `-U``[username]` `-P`*[密码&#x200B;]*`-l full`*&lt;数据库名称>*
 
    * 增量数据库备份(nsrnmddbi.bat)：
 
-     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U` `[username]` `-P` `[password]` `-l 1 -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s`*&lt;NetWorker服务器名称>* `-U``[username]` `-P``[password]` `-l 1 -R`*&lt;数据库名称>*
 
    * 数据库日志备份(nsrnmddbl.bat)：
 
-     `[NetWorker_database_module_root]` `-s` `<NetWorker_Server_Name>` `-U` `[username]` `-P` `[password]` `-l incr -R`*&lt;数据库名称>*
+     `[NetWorker_database_module_root]` `-s``<NetWorker_Server_Name>` `-U``[username]` `-P``[password]` `-l incr -R`*&lt;数据库名称>*
 
      其中：
 

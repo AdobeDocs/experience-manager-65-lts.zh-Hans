@@ -9,13 +9,26 @@ solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
 exl-id: 3d4ff4d1-aab6-47b9-9804-2a0f3438332d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 8%
-
 ---
-
 # 草稿和提交组件{#drafts-and-submissions-component}
 
 草稿和提交组件列出了处于草稿状态的所有表单以及已提交的表单。 该组件具有用于草稿和已提交表单的单独部分（选项卡）。 用户只能查看其草稿和提交的表单。
@@ -100,7 +113,7 @@ ht-degree: 8%
 
 Forms portal提供开箱即用的服务(API)，用于在本地和远程AEM Forms发布实例的crx存储库上存储数据。 您可以使用自定义实施替换默认功能，如[为草稿和提交配置存储服务](/help/forms/using/configuring-draft-submission-storage.md)文章中所述。 有关在自定义实施中将内容存储在安全位置所需方法的详细信息，请参阅[自定义草稿和提交数据服务](/help/forms/using/custom-draft-submission-data-services.md)和[草稿和提交组件的自定义存储](/help/forms/using/adding-custom-storage-provider-forms.md)。
 
-AEM Forms文档提供了一个用于将草稿和提交组件与数据库[&#128279;](integrate-draft-submission-database.md)集成的示例。 您可以使用示例实施来开发自己的自定义实施。
+AEM Forms文档提供了一个用于将草稿和提交组件与数据库](integrate-draft-submission-database.md)集成的[示例。 您可以使用示例实施来开发自己的自定义实施。
 
 ## 相关文章
 

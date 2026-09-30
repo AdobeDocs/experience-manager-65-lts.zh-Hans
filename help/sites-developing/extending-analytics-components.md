@@ -1,5 +1,5 @@
 ---
-title: 将Adobe Analytics跟踪添加到组件
+title: 将 Adobe Analytics 跟踪添加到组件
 description: 了解如何将Adobe Analytics跟踪添加到Adobe Experience Manager中的组件。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
 exl-id: 94bdf379-d10f-4dd3-b250-f2d1a3e4c251
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 0%
-
+source-wordcount: '1279'
+ht-degree: 1%
 ---
-
-# 将Adobe Analytics跟踪添加到组件{#adding-adobe-analytics-tracking-to-components}
+# 将 Adobe Analytics 跟踪添加到组件{#adding-adobe-analytics-tracking-to-components}
 
 ## 在页面组件中包含Adobe Analytics模块 {#including-the-adobe-analytics-module-in-a-page-component}
 
@@ -109,7 +118,7 @@ $CQ(function(){
 </div>
 ```
 
-所有AEM示例网站(如Geometrixx Outdoors)都包含此代码。
+所有AEM示例网站（如Geometrixx Outdoors）都包含此代码。
 
 ### sitecatalystAfterCollect事件 {#the-sitecatalystaftercollect-event}
 
@@ -173,25 +182,25 @@ $CQ(document).trigger("sitecatalystAfterCollect");
 
 1. 将以下属性添加到Analytics节点，以便您可以命名跟踪事件：
 
-   * 名称：cq：trackevents
+   * 名称： cq:trackevents
    * 类型：字符串
    * 值： topnavClick
 
 1. 将以下属性添加到Analytics节点，以便您可以命名数据变量：
 
-   * 名称：cq：trackvars
+   * 名称： cq:trackvars
    * 类型：字符串
    * 值： topnavTarget，topnavLocation
 
 1. 将以下属性添加到Analytics节点以命名Sidekick的组件：
 
-   * 名称：cq：componentName
+   * 名称： cq:componentName
    * 类型：字符串
    * 值： topnav (tracking)
 
 1. 将以下属性添加到Analytics节点以命名Sidekick的组件组：
 
-   * 名称：cq：componentGroup
+   * 名称： cq:componentGroup
    * 类型：字符串
    * 值：常规
 

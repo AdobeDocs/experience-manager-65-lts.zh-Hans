@@ -6,13 +6,33 @@ role: Admin, User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, AEM Forms on OSGi, AEM Forms Upgrade
 exl-id: 9233d4b7-441c-4cbd-86f8-2c52b99c3330
-source-git-commit: 818673651f736311d400c71bfeb635b73b25a034
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: b9cdd520-e7a7-4af9-a95f-296f28882b69
+    internal-label: AEM Forms upgrade
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1620'
 ht-degree: 7%
-
 ---
-
 # 在OSGi上升级到AEM 6.5 Forms LTS {#upgrade-to-aem-forms-osgi}
 
 要[从AEM 6.5升级到AEM 6.5 LTS](/help/sites-deploying/upgrade.md)，请升级到AEM 6.5.17.0 Forms或更高版本。 支持从AEM 6.5.17.0（或更高版本）直接升级到AEM 6.5 Forms LTS。
@@ -52,7 +72,7 @@ ht-degree: 7%
 
      迁移实用程序使自适应表单和以前版本的通信管理资产与AEM 6.5表单兼容。 您可以从AEM Software Distribution下载该实用程序。 有关配置和使用迁移实用程序的逐步信息，请参阅[迁移实用程序](../../forms/using/migration-utility.md)。
 
-     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/cn/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
+     如果您使用[示例将草稿和提交组件](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html)与数据库集成并从以前的版本升级，请在执行升级后运行以下SQL查询：
 
      ```sql
      UPDATE metadata m, additionalmetadatatable am
@@ -93,7 +113,7 @@ ht-degree: 7%
 
    >[!NOTE]
    >
-   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
+   >在AEM 6.4 Forms中，crx-repository的结构发生了更改。 如果从6.3 Forms升级到AEM 6.5 Forms，请使用更改后的路径来重新创建自定义。 有关已更改路径的完整列表，请参阅[AEM中的Forms存储库重组](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/restructuring/forms-repository-restructuring-in-aem-6-5)。
 
 
 ## 在JBoss EAP 8上部署AEM (Windows)
@@ -395,8 +415,8 @@ Deployed "cq-quickstart.war" (runtime-name : "cq-quickstart.war")
 ### 相关文档
 
 * [JBoss EAP 8文档](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/8.0)
-* [Adobe Experience Manager文档](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=zh-Hans)
-* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=zh-Hans)
+* [Adobe Experience Manager文档](https://experienceleague.adobe.com/docs/experience-manager-65.html)
+* [AEM安装和部署指南](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)
 
 ### 文档信息
 

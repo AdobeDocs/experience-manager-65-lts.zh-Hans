@@ -1,5 +1,5 @@
 ---
-title: AEM 6中的审核日志维护
+title: AEM 6 中的审计日志维护
 description: 了解Adobe Experience Manager (AEM)中的审核日志维护。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: dd0f90f7-5e92-49d3-a5b4-17d99ed927b9
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '605'
-ht-degree: 0%
-
+ht-degree: 3%
 ---
-
-# AEM 6中的审核日志维护{#audit-log-maintenance-in-aem}
+# AEM 6 中的审计日志维护{#audit-log-maintenance-in-aem}
 
 符合审核日志记录条件的AEM事件会生成大量存档数据。 由于复制、资产上传和其他系统活动，这些数据会随着时间的推移而快速增长。
 

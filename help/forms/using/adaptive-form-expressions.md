@@ -8,16 +8,32 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 7192ee1d-dc3f-4d90-919f-6329b434e18b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2779'
-ht-degree: 2%
-
+source-wordcount: '2866'
+ht-degree: 3%
 ---
-
 # 自适应表单表达式{#adaptive-form-expressions}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 自适应表单为具有动态脚本编写功能的最终用户提供经过优化和简化的表单填写体验。 它允许您编写表达式以添加各种行为，如动态显示/隐藏字段和面板。 它还允许您添加计算字段、使字段只读、添加验证逻辑等。 动态行为基于用户输入或预填充的数据。
 
@@ -39,10 +55,10 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 * 自适应表单提供了一些特殊函数来简化可重复面板的计算，例如sum、count、min、max、filter等。 有关函数的完整列表，请参阅[自适应表单的JavaScript库API参考](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/index.html)
 * 用于处理重复面板的实例的API包括：
 
-   * 要添加面板实例： `panel1.instanceManager.addInstance()`
-   * 获取面板重复索引： `panel1.instanceIndex`
-   * 获取面板的instanceManager： `_panel1 or panel1.instanceManager`
-   * 要删除面板的实例： `_panel1.removeInstance(panel1.instanceIndex)`
+  * 要添加面板实例： `panel1.instanceManager.addInstance()`
+  * 获取面板重复索引： `panel1.instanceIndex`
+  * 获取面板的instanceManager： `_panel1 or panel1.instanceManager`
+  * 要删除面板的实例： `_panel1.removeInstance(panel1.instanceIndex)`
 
 ## 表达式类型 {#expression-types}
 
@@ -77,7 +93,7 @@ JavaScript是自适应表单的表达式语言。 所有表达式都是有效的
 
 **返回类型**：表达式返回与显示表达式结果的字段（例如，小数）兼容的值。
 
-**示例**：用于显示&#x200B;**field1**&#x200B;中两个字段之和的计算表达式是：
+**示例**：用于显示&#x200B;**field1**中两个字段之和的计算表达式是：
 `field2.value + field3.value`
 
 ### 单击表达式 {#click-expression}
@@ -137,7 +153,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 **应用于**：字段
 
-**返回类型**：表达式返回代表字段验证状态的布尔值。值&#x200B;**false**&#x200B;表示该字段无效，**true**&#x200B;表示该字段有效。
+**返回类型**：表达式返回代表字段验证状态的布尔值。 值&#x200B;**false**&#x200B;表示该字段无效，**true**表示该字段有效。
 **示例**：对于表示UK邮政编码的字段，验证表达式为：
 
 (**this.value**&#x200B;和&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
@@ -159,7 +175,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 **返回类型：**&#x200B;值提交脚本表达式未返回任何值。 如果有任何表达式返回值，则忽略该值。
 
-**示例：**&#x200B;若要在提交时将在字段中输入的字母的大小写转换为大写，值commit表达式为：
+**示例：**若要在提交时将在字段中输入的字母的大小写转换为大写，值commit表达式为：
 `this.value=this.value.toUpperCase()`
 
 >[!NOTE]
@@ -184,7 +200,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 **返回类型**：表达式返回布尔值，表示当前面板是否有效。 **True**&#x200B;表示当前面板有效，用户可以导航到下一个面板。
 
-**示例**：在以各种面板组织的表单中，导航到下一个面板之前，将验证当前面板。在这种情况下，将使用步骤完成表达式。通常，这些表达式使用GuideBridge验证API。步骤完成表达式的示例如下：
+**示例**：在以各种面板组织的表单中，导航到下一个面板之前，将验证当前面板。 在这种情况下，将使用步骤完成表达式。 通常，这些表达式使用GuideBridge验证API。 步骤完成表达式的示例如下：
 `window.guideBridge.validate([],this.panel.navigationContext.currentItem.somExpression)`
 
 ## 自适应表单中的验证 {#validations-in-adaptive-form}
@@ -281,7 +297,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 创建一个文件夹以保留您的自定义模式。 在/apps目录下，创建sling:folder类型的节点。 例如，创建名为`customPatterns`的节点。 在此节点下，创建另一个类型为`nt:unstructed`的节点并将其命名为`textboxpatterns`。 此节点包含要添加的各种自定义模式。
 1. 打开已创建节点的属性选项卡。 例如，打开`textboxpatterns`的“属性”选项卡。 将`guideComponentType`属性添加到此节点，并将其值设置为&#x200B;*fd/af/components/formatter/guideTextBox*。
 
-1. 此属性的值因要定义模式的字段而异。对于数值字段，`guideComponentType`属性的值为&#x200B;*fd/af/components/formatter/guideNumericBox*。Datepicker字段的值为&#x200B;*fd/af/components/formatter/guideDatepicker*。
+1. 此属性的值因要定义模式的字段而异。 对于数值字段，`guideComponentType`属性的值为&#x200B;*fd/af/components/formatter/guideNumericBox*。 日期选取器字段的值为&#x200B;*fd/af/components/formatter/guideDatepicker*。
 &quot;
 1. 您可以通过为`textboxpatterns`节点分配属性来添加自定义模式。 添加具有名称（例如，`pattern1`）的属性，并将其值设置为要添加模式。 例如，添加值为Fax=text{99-999-9999999}的属性`pattern1`。 该模式适用于您在自适应Forms中使用的所有文本框。
 

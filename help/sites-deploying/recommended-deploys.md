@@ -1,5 +1,5 @@
 ---
-title: 建议的部署
+title: 推荐的部署
 description: 本文介绍了推荐的AEM拓扑。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,20 +10,32 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 9baa4111-831a-4b68-9ce5-82aeeb06e07f
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1493'
-ht-degree: 0%
-
+source-wordcount: '1531'
+ht-degree: 1%
 ---
-
-# 建议的部署{#recommended-deployments}
+# 推荐的部署{#recommended-deployments}
 
 >[!NOTE]
 >
 >本页介绍AEM推荐的拓扑。 有关群集功能以及如何配置这些功能的更多信息，请参阅[Apache Sling发现API文档](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)。
 
-从AEM 6.2开始，MicroKernels充当持久性管理器。根据您的需要选择一种部署类型，具体取决于实例的用途和您考虑的部署类型。
+从AEM 6.2开始，MicroKernels充当持久性管理器。 根据您的需要选择一种部署类型，具体取决于实例的用途和您考虑的部署类型。
 
 以下示例旨在指示在大多数常见的AEM设置中，它们有哪些推荐用途。
 
@@ -137,7 +149,7 @@ ht-degree: 0%
 
 您可以使用这些决策矩阵来建立适合您需求的最佳部署类型。
 
-Adobe强烈建议将TarMK作为客户在所有部署方案中(对于AEM创作实例和发布实例)使用的默认持久性技术，但以下列出的用例除外。
+Adobe强烈建议将TarMK作为客户在所有部署方案中（对于AEM创作实例和发布实例）使用的默认持久性技术，但以下列出的用例除外。
 
 ### 在创作实例上选择AEM MongoMK而非TarMK的异常 {#exceptions-for-choosing-aem-mongomk-over-tarmk-on-author-instances}
 
@@ -178,7 +190,7 @@ MongoDB的最低部署通常涉及以下拓扑：
 
 1. MongoDB部署架构和规模调整必须在熟悉AEM的Adobe Consulting或MongoDB架构师的帮助下成为项目实施的一部分；
 1. 合作伙伴或客户团队中必须具备MongoDB专业知识，才能有信心维持和维护现有或新的MongoDB环境；
-1. 您可以选择部署MongoDB的商业版本或开源版本(AEM同时支持两者)，但必须直接从MongoDB Inc.购买MongoDB维护和支持合同；
+1. 您可以选择部署MongoDB的商业版本或开源版本（AEM同时支持两者），但必须直接从MongoDB Inc.购买MongoDB维护和支持合同；
 1. AEM和MongoDB的总体架构和基础架构应由Adobe AEM架构师明确定义和验证；
 1. 查看包含MongoDB的AEM部署的支持模型。
 
