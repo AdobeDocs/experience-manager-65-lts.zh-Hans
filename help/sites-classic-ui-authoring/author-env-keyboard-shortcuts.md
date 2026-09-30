@@ -1,6 +1,6 @@
 ---
 title: 控制台的键盘快捷键
-description: 在整个 AEM 环境中都可以使用各种键盘快捷键。有些可应用于控制台的使用，另一些可应用于页面编辑。
+description: 在整个 AEM 环境中都可以使用各种键盘快捷键。 有些可应用于控制台的使用，另一些可应用于页面编辑。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -9,16 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 2fd45cb4-33e0-47b0-a4cc-4ae039b78e36
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 34%
-
+source-wordcount: '115'
+ht-degree: 24%
 ---
-
 # 控制台的键盘快捷键{#keyboard-shortcuts-for-consoles}
 
-用户在整个 AEM 环境中都可以使用各种键盘快捷键。其中一些快捷键适用于控制台，还有一些则适用于[页面编辑](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
+在整个 AEM 环境中都可以使用各种键盘快捷键。 有些可应用于控制台的使用，其他应用于[页面编辑](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md)。
 
 >[!NOTE]
 >

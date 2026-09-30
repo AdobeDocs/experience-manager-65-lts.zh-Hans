@@ -6,13 +6,27 @@ role: User, Admin
 mini-toc-levels: 4
 solution: Experience Manager, Experience Manager Assets
 exl-id: 9cad4bbc-64f6-4ea2-a9b2-b6b9aaa72f11
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: afe09f80-87de-4606-96de-7aecd50f1a65
+    internal-label: Image profiles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '3748'
 ht-degree: 0%
-
 ---
-
 # 为图像服务器配置Dynamic Media发布设置
 
 只有在满足以下条件时，才能配置Dynamic Media发布设置选项：
@@ -40,7 +54,7 @@ ht-degree: 0%
 | 发布上下文 | 描述 |
 | --- | --- |
 | 图像服务 | 指定发布设置的上下文。 |
-| 提供测试图像 | 指定用于测试发布设置的上下文。<br>仅对于新的Dynamic Media帐户，默认&#x200B;**[!UICONTROL 客户端地址]**&#x200B;字段自动设置为`127.0.0.1`。<br>在公开资产之前查看[测试资产](#test-assets-before-making-public)。 |
+| 测试图像服务 | 指定用于测试发布设置的上下文。<br>仅对于新的Dynamic Media帐户，默认&#x200B;**[!UICONTROL 客户端地址]**&#x200B;字段自动设置为`127.0.0.1`。<br>在公开资产之前查看[测试资产](#test-assets-before-making-public)。 |
 
 1. 使用五个选项卡可配置默认发布上下文设置。
 

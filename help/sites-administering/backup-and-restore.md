@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 exl-id: 3150a605-f735-4187-ad69-a6fe330dcd4e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2326'
 ht-degree: 0%
-
 ---
-
 # 备份和恢复{#backup-and-restore}
 
 在AEM中备份和恢复存储库内容的方法有两种：
@@ -106,8 +115,8 @@ ht-degree: 0%
 
 **延迟**&#x200B;表示时间延迟（以毫秒为单位），因此存储库性能不受影响。 默认情况下，存储库备份以全速运行。 您可以减慢创建联机备份的速度，这样就不会减慢其他任务的速度。
 
-如果延迟时间非常长，请确保在线备份不会超过24小时。如果是，则放弃此备份，因为它可能不包含所有二进制文件。
-1毫秒的延迟通常导致10%的CPU使用率，而10毫秒的延迟通常导致不到3%的CPU使用率。总延迟时间（以秒为单位）的估计如下：存储库大小（以MB为单位），乘以延迟时间（以毫秒为单位），再除以2（如果使用zip选项），或再除以4（备份到目录时）。这意味着对具有1毫秒延迟的200 MB存储库的目录的备份将备份时间增加约50秒。
+如果延迟时间非常长，请确保在线备份不会超过24小时。 如果是，则放弃此备份，因为它可能不包含所有二进制文件。
+1毫秒的延迟通常导致10%的CPU使用率，而10毫秒的延迟通常导致不到3%的CPU使用率。 总延迟时间（以秒为单位）的估计如下：存储库大小（以MB为单位），乘以延迟时间（以毫秒为单位），再除以2（如果使用zip选项），或再除以4（备份到目录时）。 这意味着对具有1毫秒延迟的200 MB存储库的目录的备份将备份时间增加约50秒。
 
 >[!NOTE]
 >

@@ -1,5 +1,5 @@
 ---
-title: AEM Forms工作区疑难解答指南
+title: AEM Forms 工作区故障排查指南
 description: 启用日志并在浏览器中使用Debugger对AEM Forms Workspace进行故障诊断。
 contentOwner: robhagat
 content-type: reference
@@ -9,14 +9,30 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: d0494d5b-7b03-47e2-a461-7ef8c865069d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 0%
-
+source-wordcount: '788'
+ht-degree: 6%
 ---
-
-# AEM Forms工作区疑难解答指南 {#troubleshooting-guidelines-for-aem-forms-workspace}
+# AEM Forms 工作区故障排查指南 {#troubleshooting-guidelines-for-aem-forms-workspace}
 
 本文讨论如何通过启用日志记录以及在浏览器中使用调试器来调试AEM Forms工作区。 它还介绍了在使用AEM Forms工作区时可能会遇到的一些常见问题及其解决方法。
 
@@ -37,7 +53,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 ## AEM Forms工作区日志记录 {#aem-forms-workspace-nbsp-logging}
 
@@ -168,7 +184,7 @@ ht-degree: 0%
 
 1. PDF表单未在Google Chrome中渲染或提交。
 
-   1. 安装Adobe® Reader®插件。
+   1. 安装® Reader®插件。
    1. 在Chrome中，打开chrome://plugins以查看可用的插件。
    1. 禁用Chrome PDF Viewer插件，并启用Adobe Reader插件。
 

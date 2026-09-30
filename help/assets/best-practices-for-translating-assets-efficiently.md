@@ -1,19 +1,28 @@
 ---
-title: 翻译资产的最佳实践
+title: 翻译资产的最佳做法
 description: 高效管理资产的最佳实践，以同步各种翻译版本并简化翻译工作流。
 contentOwner: AG
 role: Admin
 feature: Asset Management
 solution: Experience Manager, Experience Manager Assets
 exl-id: 21771c11-ecce-4eff-be5b-f55835a5644e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 1%
-
+source-wordcount: '423'
+ht-degree: 3%
 ---
-
-# 翻译资产的最佳实践 {#best-practices-for-translating-assets-efficiently}
+# 翻译资产的最佳做法 {#best-practices-for-translating-assets-efficiently}
 
 [!DNL Adobe Experience Manager Assets]支持多语言工作流，以将数字资源的二进制文件、元数据和标记翻译成多个区域设置并管理已翻译的资源。 有关详细信息，请参阅[多语言Assets](multilingual-assets.md)。
 

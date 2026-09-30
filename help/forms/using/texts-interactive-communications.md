@@ -5,13 +5,27 @@ feature: Interactive Communication
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: ca18b9f4-9d06-4b15-81dd-68a6821e2e3e
-source-git-commit: 6db207b08535c063e41b333054561036481e8db9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '2482'
 ht-degree: 1%
-
 ---
-
 # 交互式通信中的文本{#texts-in-interactive-communications}
 
 ## 概述 {#overview}
@@ -50,9 +64,9 @@ ht-degree: 1%
    * [规则编辑器](#rules)
    * [格式化选项](#formatting)
 
-      * [从其他应用程序复制粘贴带格式的文本](#paste)
+     * [从其他应用程序复制粘贴带格式的文本](#paste)
 
-      * [突出显示文本的各个部分](#highlight)
+     * [突出显示文本的各个部分](#highlight)
 
    * [重复](/help/forms/using/cm-inline-condition.md)
    * [特殊字符](#special)

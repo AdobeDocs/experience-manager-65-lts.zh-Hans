@@ -7,13 +7,33 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin,Developer,User
 exl-id: 6dbc943b-3bca-4926-896d-f1471a49a70f
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+feature_v2:
+  - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
+    internal-label: AI Tools
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
+  - id: f551224f-631f-46f8-b8fc-67744f995ba0
+    internal-label: Onboarding
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 100%
-
 ---
-
 # 关于 Experience Hub {#aem-experience-hub}
 
 Experience Hub 为在 Adobe Experience Manager 中管理内容、资产和网站引入了一个集中的起点。 Experience Hub 旨在提供个性化体验，让您可以根据自己的角色和目标在 AEM 生态系统中无缝导航。 作为指南，它可以提供关键洞察和建议操作，帮助您高效实现目标。 Experience Hub 采用清晰的、以用户画像为导向的布局，可确保快速访问基本工具，有助于在 AEM 的所有功能中提供简化、高效的体验。
@@ -52,15 +72,15 @@ Adobe Experience Manager 页面已更新，包含增强的导航和交互式小�
 >
 >显示的小组件、工具和工件取决于用户画像、权限和 AEM 部署类型（AEM as a Cloud Service 或 Managed Services 6.5/6.5 LTS）。
 
-这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主要导航区域。 此外，通过新的导航元素可快速访问专为已启用的解决方案提供的主要 Adobe Experience Manager 功能。 这些解决方案包括 Assets、Sites、Forms、内容片段、发布等。
+这些解决方案现已移至&#x200B;**工具**&#x200B;或&#x200B;**服务**&#x200B;下的主要导航区域。 此外，新的导航元素可快速访问与已启用解决方案对应的主要 Adobe Experience Manager 功能。 这些解决方案包括 Assets、Sites、Forms、内容片段、发布等。
 
 ![Experience Hub 环境](/help/assets/assets-experience-hub/experience-hub-author-environments-ams.png)
 
-这些功能适用于那些您有权访问的主要生产环境。 或者，如果您有权访问多个 AEM 实例，您也可以选择一个想作为目标的特定环境。
+这些功能适用于您有权访问的主要生产环境。 或者，如果您有权访问多个 AEM 实例，您也可以选择一个想作为目标的特定环境。
 
 ![生产和暂存环境](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
-作为 Adobe Experience Manager 的中心枢纽，Experience Hub 页面可扩展，包含为每个用户角色量身定制的额外小组件和操作。 该页面可完全自定义，允许您为屏幕选择最佳布局。 可以筛选小组件，只将选定的小组件显示在主要页面上，确保提供个性化体验。
+作为 Adobe Experience Manager 的中心枢纽，Experience Hub 页面可扩展，包含为每个用户角色量身定制的额外小组件和操作。 该页面可完全自定义，允许您为屏幕选择最佳布局。 可以筛选小组件，只将选定的小组件显示在主页面上，确保提供个性化体验。
 
 ![定制的 Experience Hub](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
 
@@ -78,7 +98,7 @@ Adobe Experience Manager 页面已更新，包含增强的导航和交互式小�
 
 ![Experience Hub 快捷方式](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
 
-如果生产 AEM Cloud Service 或 Managed Services 环境不存在，选择选项就会显示为灰色（不可用）。
+如果不存在生产 AEM Cloud Service 或 Managed Services 环境，选择选项就会显示为灰色（不可用）。
 
 ![Experience Hub 无生产环境](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
@@ -98,13 +118,13 @@ Experience Hub 为作者、资产库管理员、管理员和 IT 提供基于角�
 
 +++**Experience Hub 的导航和布局有哪些功能？**
 
-Experience Hub 使用统一的左侧导航方法来排列核心 AEM 功能、可自定义的小组件和快速操作。 这个布局形成了一个有条有理、高效的工作区。
+Experience Hub 使用统一的左侧导航来组织核心 AEM 功能、可自定义的小组件和快速操作。 这个布局形成了一个有条有理、高效的工作区。
 
 +++
 
 +++**用户如何个性化自己的 Experience Hub 工作区？**
 
-用户可以添加和移除小组件、调整其大小、将其重新排列，可以自定义快速操作，根据自己的需求和偏好定制工作区。
+用户可以添加和移除小组件、调整其大小并重新排列，还可以自定义快速操作，根据自己的需求和偏好定制工作区。
 
 +++
 
@@ -134,7 +154,7 @@ Experience Hub 中的小组件是可自定义的元素，可帮助用户高效�
 
 +++**AI 助手在 AEM 中起到什么作用？**
 
-AEM 中的 AI 助手提供给具备所有前提条件的用户使用，在组织内提供额外的支持和洞察。
+AEM 中的 AI 助手可供已满足先决条件的用户使用，在组织内提供额外的支持和洞察。
 
 +++
 

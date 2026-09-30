@@ -10,18 +10,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: 8028e74e-29df-4081-a567-5eb87ae362d4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 0%
-
+source-wordcount: '1174'
+ht-degree: 1%
 ---
-
 # 批量编辑器{#the-bulk-editor}
 
 当不需要可视页面上下文时，批量编辑器允许进行有效编辑，因为它允许您：
 
-* 搜索（和显示）多个页面中的内容；可使用GQL(Google查询语言)完成此操作
+* 搜索（和显示）多个页面中的内容；可使用GQL（Google查询语言）完成此操作
 * 直接在批量编辑器中编辑此内容
 * 保存更改（到原始页面）
 * 将此内容导出到以制表符分隔的(.tsv)电子表格文件
@@ -76,7 +85,7 @@ Geometrixx网站中包含一个说明此用例的示例：
   </tr>
   <tr>
    <td>根路径</td>
-   <td>指示批量编辑器搜索的根路径。<br />例如，<code>/content/geometrixx/en</code>。 批量编辑器将搜索所有子节点。</td>
+   <td>指示批量编辑器搜索的根路径。<br /> 例如，<code>/content/geometrixx/en</code>。 批量编辑器将搜索所有子节点。</td>
   </tr>
   <tr>
    <td>查询参数</td>
@@ -121,7 +130,7 @@ Geometrixx网站中包含一个说明此用例的示例：
 * **路径：**&#x200B;仅搜索此路径下的节点。 如果指定了多个带有路径前缀的术语，则只考虑最后一个术语。
 * **类型：**&#x200B;仅返回给定节点类型的节点。 这包括主要和mixin类型。 您可以指定多个逗号分隔的节点类型。 GQL返回任何指定类型的节点。
 * **顺序：**&#x200B;按给定属性对结果进行排序。 您可以指定多个以逗号分隔的属性名称。 要以降序排序结果，只需在属性名称的前面加一个减号即可。 例如，order：-name。 使用加号将按升序返回结果，这也是默认设置。
-* **限制：**&#x200B;使用间隔限制结果的数量。 例如，limit：10..20间隔从零开始，开始是包含的，结束是排除的。 您还可以指定打开的`interval:limit:10..`或`limit:..20`
+* **限制：**&#x200B;使用间隔限制结果的数量。 例如，limit：10..20间隔从零开始，开始是包含的，结束是排除的。 您还可以指定打开的`interval:limit:10..`或 `limit:..20`
 如果省略这些点并且只指定了一个值，则GQL最多返回此数量的结果。 例如，`limit:10` （返回前十个结果）。
 
 ### 导出内容 {#exporting-content}
@@ -140,7 +149,7 @@ Geometrixx网站中包含一个说明此用例的示例：
    ![正在导出结果](assets/srchrsesultexport.png)
 
 1. 选择位置并确认您要下载该文件。
-1. 下载文件后，您可以从电子表格程序(例如，Microsoft® Excel)中打开它。 电子表格程序会导入文件并将其转换为电子表格格式。
+1. 下载文件后，您可以从电子表格程序（例如，® Excel）中打开它。 电子表格程序会导入文件并将其转换为电子表格格式。
 
    ![在电子表格中导出结果](assets/exportinexcel.png)
 

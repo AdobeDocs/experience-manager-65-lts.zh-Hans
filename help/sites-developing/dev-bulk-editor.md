@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 3ce50030-86c7-4291-98fa-0cc9cb63f45c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1840'
 ht-degree: 2%
-
 ---
-
 # 开发批量编辑器{#developing-the-bulk-editor}
 
 本节介绍如何开发批量编辑器工具以及如何扩展产品列表组件（基于批量编辑器）。
@@ -433,7 +442,7 @@ ht-degree: 2%
   </tr>
   <tr>
    <td>colsMetadata</td>
-   <td>列元数据配置。可能的属性（应用于列的所有单元格）： <br />
+   <td>列元数据配置。 可能的属性包括（应用于列的所有单元格）： <br />
     <ul>
      <li>cellStyle： html样式 </li>
      <li>cellCls： css类 </li>

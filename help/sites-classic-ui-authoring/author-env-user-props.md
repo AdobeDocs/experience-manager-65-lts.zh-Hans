@@ -1,5 +1,5 @@
 ---
-title: 配置帐户环境
+title: 配置您的帐户环境
 description: Adobe Experience Manager (AEM) 提供了配置帐户和创作环境的某些方面的功能。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,25 +10,34 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 19930920-ffa5-4cfc-a564-ae004320e143
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 32%
-
+source-wordcount: '229'
+ht-degree: 42%
 ---
-
-# 配置帐户环境{#configuring-your-account-environment}
+# 配置您的帐户环境{#configuring-your-account-environment}
 
 Adobe Experience Manager (AEM) 提供了配置帐户和创作环境的某些方面的功能。
 
 使用[帐户设置](#account-settings)和[用户首选项](#user-preferences)，可以定义以下选项和首选项：
 
-* **正在编辑工具栏**
+* **编辑工具栏**
 选择是否要具有全局编辑工具栏。 此工具栏显示在浏览器窗口的顶部，为您提供了&#x200B;**复制**、**剪切**、**粘贴**、**删除**&#x200B;按钮，以便与该页面上的段落组件一起使用：
 
-   * 需要时显示（默认）
-   * 始终显示
-   * 保持隐藏
+  * 需要时显示（默认）
+  * 始终显示
+  * 保持隐藏
 
 * **模拟为**
 通过[模拟为](/help/sites-administering/security.md#impersonating-another-user)的功能，用户可以代表其他用户工作。
@@ -39,10 +48,10 @@ Adobe Experience Manager (AEM) 提供了配置帐户和创作环境的某些方�
 * **窗口管理**
 选择：
 
-   * 多窗口（默认）
-页面将在新窗口中打开。
-   * 单一窗口
-页面将在当前窗口中打开。
+  * 多窗口（默认）
+    页面会在新窗口中打开。
+  * 单窗口
+    页面会在当前窗口中打开。
 
 ## 帐户设置 {#account-settings}
 

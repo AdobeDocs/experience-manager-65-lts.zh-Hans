@@ -11,13 +11,22 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 6b94caf1-97b7-4430-92f1-4f4d0415aef3
-source-git-commit: c1935b95d4e9e8e3773f2ff9825c759f97738304
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1104'
 ht-degree: 1%
-
 ---
-
 # 升级代码与自定义项{#upgrading-code-and-customizations}
 
 在计划升级时，必须调查并解决实施的以下方面。
@@ -73,7 +82,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 
 **主要区别： AEM 6.5与AEM 6.5 LTS Uber Jar**
 
-* 在AEM 6.5中，如果同时需要公共的和已弃用的API，则可以在`uber-jar-6.5.x-apis-with-deprecations.jar`文件中使用包含单个jar `pom.xml`。
+* 在AEM 6.5中，如果同时需要公共的和已弃用的API，则可以在`pom.xml`文件中使用包含单个jar `uber-jar-6.5.x-apis-with-deprecations.jar`。
 * 在AEM 6.5 LTS中，如果您同时需要公共API和已弃用的API，则必须包含两个单独的jar，即公共API的`uber-jar-6.6.x-apis.jar`和已弃用的API的`uber-jar-6.6.x-deprecated-apis.jar`。
 
 已弃用的API Jar的&#x200B;**Maven坐标**
@@ -92,7 +101,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
 
 * AEM 6.5 LTS不包括现成的Google guava库，可以根据需要安装所需的版本。
 * Sling XSS包现在使用Java HTML清理器库，应使用`XSSAPI#filterHTML()`方法安全地呈现HTML内容，而不是将数据传递到其他API。
-* 更新到Apache Felix HTTP SSL过滤器配置：在AEM 6.5 LTS中，`org.apache.felix.http.sslfilter`捆绑包已从版本1.2.6升级到2.0.2。作为此升级的一部分，OSGi配置PID `org.apache.felix.http.sslfilter.SslFilter`已被弃用，并替换为新的PID： `org.apache.felix.http.sslfilter.Configuration`。 如果部署中使用了SSL筛选器，则必须使用OSGi Configuration Manager (`/system/console/configMgr`)将现有配置手动迁移到新PID。 未能迁移配置可能会导致升级后无法按预期应用SSL过滤器。
+* 更新到Apache Felix HTTP SSL过滤器配置：在AEM 6.5 LTS中，`org.apache.felix.http.sslfilter`捆绑包已从版本1.2.6升级到2.0.2。 作为此升级的一部分，OSGi配置PID `org.apache.felix.http.sslfilter.SslFilter`已被弃用，并替换为新的PID： `org.apache.felix.http.sslfilter.Configuration`。 如果部署中使用了SSL筛选器，则必须使用OSGi Configuration Manager (`/system/console/configMgr`)将现有配置手动迁移到新PID。 未能迁移配置可能会导致升级后无法按预期应用SSL过滤器。
 
 ## 测试过程 {#testing-procedure}
 
@@ -130,7 +139,7 @@ AEM Uber jar将所有AEM API作为单个依赖项包含在您的Maven项目的`p
   </tr>
   <tr>
    <td>身份验证、安全和权限</td>
-   <td>任何身份验证机制（如LDAP/SAML）都应进行验证。应在创作层和发布层<br />上测试<br />权限和组。</td>
+   <td>任何身份验证机制（如LDAP/SAML）都应进行验证。<br /> 应在创作层和发布层<br />上测试权限和组。</td>
   </tr>
   <tr>
    <td>查询</td>

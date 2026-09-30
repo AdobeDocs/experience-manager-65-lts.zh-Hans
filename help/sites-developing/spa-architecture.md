@@ -11,17 +11,31 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 8670d700-6ccd-4809-b719-8580d6fb2cf8
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2018'
-ht-degree: 5%
-
+source-wordcount: '2074'
+ht-degree: 6%
 ---
-
 
 # 为 AEM 开发 SPA{#developing-spas-for-aem}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在Adobe Experience Manager (AEM)中顺畅地为使用此类框架构建的站点编辑内容。
+单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。 开发人员希望能够使用SPA框架构建站点，而创作者则希望能够在Adobe Experience Manager (AEM)中顺畅地为使用此类框架构建的站点编辑内容。
 
 本文介绍了在让前端开发人员为AEM开发SPA时应考虑的重要问题，并概述了AEM有关在AEM上部署SPA的架构。
 
@@ -29,7 +43,7 @@ ht-degree: 5%
 
 ## AEM的SPA开发原则 {#spa-development-principles-for-aem}
 
-在 AEM 上开发单页应用程序时，假定前端开发人员在创建 SPA 时遵循标准最佳实践。作为前端开发人员，如果您遵循这些一般最佳实践和一些AEM特定原则，则您的SPA将可以使用[AEM及其内容创作功能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa)。
+在 AEM 上开发单页应用程序时，假定前端开发人员在创建 SPA 时遵循标准最佳实践。 作为前端开发人员，如果您遵循这些一般最佳实践和一些AEM特定原则，则您的SPA将可以使用[AEM及其内容创作功能](/help/sites-developing/spa-walkthrough.md#content-editing-experience-with-spa)。
 
 * **[可移植性](/help/sites-developing/spa-architecture.md#portability) -**&#x200B;与任何组件一样，组件应尽可能构建为可移植的。 应使用可移植且可重用的组件构建 SPA。
 * **[AEM 推动站点结构](/help/sites-developing/spa-architecture.md#aem-drives-site-structure)** – 前端开发人员创建组件并拥有其内部结构，但依赖 AEM 来定义站点的内容结构。
@@ -70,7 +84,7 @@ SPA应仅依赖内容的动态渲染。 这是默认预期，AEM会获取并呈�
 
 ## SPA设计模型 {#spa-design-models}
 
-如果遵循AEM[中开发SPA的](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)原则，则您的SPA将可以使用所有受支持的AEM内容创作功能。
+如果遵循AEM[&#128279;](/help/sites-developing/spa-architecture.md#spa-development-principles-for-aem)中开发SPA的原则，则您的SPA将可以使用所有受支持的AEM内容创作功能。
 
 但是，在某些情况下，这并非完全必要。 下表概述了各种设计模型及其优点和缺点。
 
@@ -192,8 +206,8 @@ SPA应仅依赖内容的动态渲染。 这是默认预期，AEM会获取并呈�
 
   这是签出SPA应用程序源和组件源的位置。
 
-   * NPM clientlib生成器从SPA项目创建一个客户端库。
-   * 该库由Maven获取，并由Maven Build插件与组件部署到AEM Author。
+  * NPM clientlib生成器从SPA项目创建一个客户端库。
+  * 该库由Maven获取，并由Maven Build插件与组件部署到AEM Author。
 
 * **AEM作者**
 
@@ -201,11 +215,11 @@ SPA应仅依赖内容的动态渲染。 这是默认预期，AEM会获取并呈�
 
   在创作环境中使用SPA编辑器编辑SPA时：
 
-   1. SPA请求外部HTML。
-   1. CSS已加载。
-   1. 加载SPA应用程序的JavaScript。
-   1. 执行SPA应用程序时，将请求JSON，以允许应用程序构建包含`cq-data`属性的页面的DOM。
-   1. 此`cq-data`属性允许编辑器加载其他页面信息，以便它知道哪些编辑配置可用于组件。
+  1. SPA请求外部HTML。
+  1. CSS已加载。
+  1. 加载SPA应用程序的JavaScript。
+  1. 执行SPA应用程序时，将请求JSON，以允许应用程序构建包含`cq-data`属性的页面的DOM。
+  1. 此`cq-data`属性允许编辑器加载其他页面信息，以便它知道哪些编辑配置可用于组件。
 
 * **AEM发布**
 
@@ -215,8 +229,8 @@ SPA应仅依赖内容的动态渲染。 这是默认预期，AEM会获取并呈�
 
   Dispatcher将用作网站访客的AEM的缓存层。
 
-   * 处理请求的方式与在AEM创作实例中处理请求的方式类似，但不会请求页面信息，因为只有编辑器才需要这样做。
-   * JavaScript、CSS、JSON和HTML已缓存，优化页面以实现快速交付。
+  * 处理请求的方式与在AEM创作实例中处理请求的方式类似，但不会请求页面信息，因为只有编辑器才需要这样做。
+  * JavaScript、CSS、JSON和HTML已缓存，优化页面以实现快速交付。
 
 >[!NOTE]
 >

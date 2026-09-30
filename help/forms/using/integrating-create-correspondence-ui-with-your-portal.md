@@ -9,13 +9,26 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 496b125b-b091-4843-ba9f-2479dbeba07b
-source-git-commit: 16f57ae1663f035d1dc39005d37426c7a0d8dc16
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '404'
 ht-degree: 4%
-
 ---
-
 # 将`Create Correspondence`解决方案与您的自定义门户集成{#integrating-create-correspondence-ui-with-your-custom-portal}
 
 ## 概述 {#overview}
@@ -35,7 +48,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->以这种方式调用并不安全，因为必需的参数是作为GET请求传递的，方法是在URL中公开相同的（可见）。
+>这样调用并不安全，因为必需的参数是作为GET请求传递的，方法是在URL中公开相同的（可见）。
 
 >[!NOTE]
 >

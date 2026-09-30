@@ -9,13 +9,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 exl-id: 53400e3d-542f-4abc-9909-45eb11b0cfcc
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 18%
-
+source-wordcount: '970'
+ht-degree: 20%
 ---
-
 # 管理项目 {#managing-projects}
 
 在&#x200B;**项目**&#x200B;控制台中，您可以访问和管理您的项目。
@@ -41,11 +54,11 @@ ht-degree: 18%
 
    ![创建项目向导](assets/create-project-wizard.png)
 
-1. 定义&#x200B;**标题**&#x200B;和&#x200B;**描述**，并根据需要添加&#x200B;**缩略图**&#x200B;图像。 您还可以添加或删除用户及其所属的组。
+1. 定义&#x200B;**标题**&#x200B;和&#x200B;**描述**，并根据需要添加&#x200B;**缩略图**&#x200B;图像。 您还可以添加或删除用户以及他们所属的组。
 
    向导的![属性步骤](assets/create-project-wizard-properties.png)
 
-1. 单击&#x200B;**创建**。确认对话框会询问您是要打开新项目还是要返回到控制台。
+1. 单击&#x200B;**创建**。 确认对话框会询问您是要打开新项目还是要返回到控制台。
 
 对于所有项目模板，创建项目的过程都是相同的。 项目类型之间的差异与可用的[用户角色](/help/sites-authoring/projects.md)和[工作流有关。](/help/sites-authoring/projects-with-workflows.md)
 
@@ -60,11 +73,11 @@ ht-degree: 18%
 
    ![添加拼贴](assets/project-add-tile.png)
 
-1. 单击&#x200B;**创建**。您的资源随即会链接到项目，从现在开始，您便可以从项目中访问该资源。
+1. 单击&#x200B;**创建**。 您的资源随即会链接到项目，从现在开始，您便可以从项目中访问该资源。
 
 ### 向拼贴中添加一些项 {#adding-items-to-a-tile}
 
-在某些拼贴中，您可能想要添加多个项。例如，您可能会一次运行多个工作流或多个体验。
+在某些拼贴中，您可能想要添加多个项。 例如，您可能会一次运行多个工作流或多个体验。
 
 要将项目添加到拼贴，请执行以下操作：
 
@@ -96,7 +109,7 @@ ht-degree: 18%
 
 ### 查看项目时间线 {#viewing-a-project-timeline}
 
-项目时间线提供了项目中的资源上次使用时间的相关信息。要查看项目时间线，请执行以下步骤。
+项目时间线提供了项目中的资源上次使用时间的相关信息。 要查看项目时间线，请执行以下步骤。
 
 1. 在&#x200B;**项目**&#x200B;控制台的左上角边栏选择器中，单击&#x200B;**时间轴**。
    ![选择时间线模式](assets/projects-timeline-rail.png)
@@ -107,7 +120,7 @@ Assets会显示在边栏中。 完成后，使用边栏选择器返回到普通�
 
 ### 查看不活动的项目 {#viewing-active-inactive-projects}
 
-要在[项目](#making-projects-inactive-or-active)控制台中的活动项目和&#x200B;**非活动项目**&#x200B;之间切换，请单击工具栏中的&#x200B;**切换活动项目**&#x200B;图标。
+要在&#x200B;**项目**&#x200B;控制台中的活动项目和[非活动项目](#making-projects-inactive-or-active)之间切换，请单击工具栏中的&#x200B;**切换活动项目**&#x200B;图标。
 
 ![切换活动项目图标](assets/projects-toggle-active.png)
 
@@ -133,7 +146,7 @@ Assets会显示在边栏中。 完成后，使用边栏选择器返回到普通�
 
 ### 正在停用项目 {#making-projects-inactive-or-active}
 
-如果项目已完成，但您仍要保留有关该项目的信息，则可能需要将其标记为非活动状态。 默认情况下，[非活动项目现在会在](#viewing-active-inactive-projects)项目&#x200B;**控制台中显示**。
+如果项目已完成，但您仍要保留有关该项目的信息，则可能需要将其标记为非活动状态。 默认情况下，[非活动项目现在会在&#x200B;**项目**&#x200B;控制台中显示](#viewing-active-inactive-projects)。
 
 要使项目处于非活动状态，请执行以下步骤。
 

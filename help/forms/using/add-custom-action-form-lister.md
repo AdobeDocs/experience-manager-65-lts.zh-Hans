@@ -1,5 +1,5 @@
 ---
-title: 添加对表单列表程序项的自定义操作
+title: 在表单列表项上添加自定义操作
 description: 表单开发人员可以在表单门户页面上向表单列表添加更多操作。 默认情况下，表单列表允许您访问表单、填写并提交表单。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,30 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components
 exl-id: 4678557b-904d-43c4-b53c-5710ab081f0f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 0%
-
+source-wordcount: '265'
+ht-degree: 5%
 ---
-
-# 添加对表单列表程序项的自定义操作{#adding-custom-action-on-form-lister-items}
+# 在表单列表项上添加自定义操作{#adding-custom-action-on-form-lister-items}
 
 在AEM Forms中，您可以创建一个门户页面，其中列出可用的表单。 默认情况下，您可以在门户页面上搜索和列出表单。 您可以打开表单填写并提交您的信息。 仅为门户页面上列出的表单提供现成的渲染操作。 要了解有关门户页面上可用操作的更多信息，请参阅[创建表单门户页面](../../forms/using/creating-form-portal-page.md)。
 

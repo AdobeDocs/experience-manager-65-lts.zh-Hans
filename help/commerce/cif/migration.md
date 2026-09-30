@@ -1,17 +1,25 @@
 ---
-title: 迁移到AEM Commerce integration framework (CIF)加载项
-description: 如何从旧版本迁移到AEM Commerce integration framework (CIF)加载项。
+title: 迁移到AEM Commerce Integration Framework (CIF)加载项
+description: 如何从旧版本迁移到AEM Commerce Integration Framework (CIF)加载项。
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: 847c33c1-17d6-447a-9f2c-91f2a81a3f04
-source-git-commit: 981b175b039fd7ffbddf558a77d2da2fed52ad79
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 4%
-
+source-wordcount: '320'
+ht-degree: 5%
 ---
-
 # Experience Manager加载项的迁移指南 {#cif-migration}
 
 本指南帮助确定您需要为Experience Manager加载项迁移更新的区域。

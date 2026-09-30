@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: e1771229-b2ce-406a-95a5-99b11fafbe34
-source-git-commit: 24bd1f57da3f9ce613ee28276d1ae9465b6dfba6
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 5%
-
+source-wordcount: '521'
+ht-degree: 4%
 ---
-
 # 与Adobe Target集成的先决条件{#prerequisites-for-integrating-with-adobe-target}
 
 作为AEM与Adobe Target的[集成的一部分，](/help/sites-administering/target.md)您需要向Adobe Target注册、配置复制代理并在发布节点上配置安全活动设置。
@@ -52,12 +61,12 @@ ht-degree: 5%
 
 保护发布实例上的活动设置节点&#x200B;**cq:ActivitySettings**，使其不可由普通用户访问。 该活动设置节点应当只能由负责将活动同步到 Adobe Target 的服务访问。
 
-**cq:ActivitySettings**&#x200B;节点在CRXDE Lite中的`/content/campaigns/*nameofbrand*`节点下的`jcr:content`* *下可用。 例如，`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`。此节点仅在定向组件后创建。
+**cq:ActivitySettings**&#x200B;节点在CRXDE Lite中的`jcr:content`节点下的`/content/campaigns/*nameofbrand*`* *下可用。 例如，`/content/campaign/we-retail/master/myactivity/jcr:content/cq:ActivitySettings`。 此节点仅在定向组件后创建。
 
-活动的&#x200B;**下的:ActivitySettings** cq`jcr:content`节点受以下ACL保护：
+活动的`jcr:content`下的&#x200B;**cq:ActivitySettings**&#x200B;节点受以下ACL保护：
 
 * 拒绝所有人。
-* 允许`jcr:read,rep:write`使用`target-activity-authors`（作者是此开箱即用组的成员）。
+* 允许`target-activity-authors`使用`jcr:read,rep:write`（作者是此开箱即用组的成员）。
 * 允许`jcr:read,rep:write`用于`targetservice`。
 
 这些设置可确保普通用户无权访问节点属性。 在创作实例和发布实例上使用相同的ACL。 有关详细信息，请参阅[用户管理和安全性](/help/sites-administering/security.md)。

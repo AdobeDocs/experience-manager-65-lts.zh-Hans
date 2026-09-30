@@ -6,13 +6,25 @@ role: Admin
 hide: true
 solution: Experience Manager, Experience Manager Assets
 exl-id: 22a2428d-3ebd-4368-983e-d140f99de2dd
-source-git-commit: 62ca090edf7c6200eadf27bb4edbd9c03e34de76
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: e00c7c12-7035-41fe-ad76-1ec82c8c3f01
+    internal-label: Brand Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 8%
-
 ---
-
 # 使用Brand Portal配置AEM Assets {#configure-integration-65}
 
 | 版本 | 文章链接 |
@@ -318,7 +330,7 @@ To configure the IMS account:
 
    ![Brand Portal配置窗口](assets/create-cloud-service.png)
 
-1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。 将创建云配置。
+1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。 云配置已创建。
 
    您的AEM Assets创作实例现在已配置有Brand Portal租户。
 

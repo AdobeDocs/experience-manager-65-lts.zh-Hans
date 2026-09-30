@@ -7,13 +7,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
 exl-id: 64d4ef01-ee33-4c8b-977f-0c9b31755820
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 0%
-
+source-wordcount: '899'
+ht-degree: 2%
 ---
-
 # 在电子邮件通知中使用元数据 {#use-metadata-in-an-email-notification}
 
 您可以使用“分配任务”步骤来创建任务并将其分配给用户或组。 将任务分配给用户或组时，会向定义的用户或定义的组的每个成员发送电子邮件通知。 典型的[电子邮件通知](../../forms/using/use-custom-email-template-assign-task-step.md)包含已分配任务的链接以及与该任务相关的信息。
@@ -184,14 +200,14 @@ AEM Forms应用程序提供了多个开箱即用的元数据变量（键值对�
 
    如果未指定标题，自定义元数据字段将显示ECMAScript文件的完整路径。 执行以下步骤，为脚本指定有意义的标题：
 
-   1. 展开脚本节点，右键单击&#x200B;**[!UICONTROL jcr：content]**&#x200B;节点，然后单击&#x200B;**[!UICONTROL Mixins]**。
-   1. 在“编辑Mixin”对话框中键入mix：title并单击&#x200B;**+**。
+   1. 展开脚本节点，右键单击&#x200B;**[!UICONTROL jcr:content]**&#x200B;节点，然后单击&#x200B;**[!UICONTROL Mixins]**。
+   1. 在“编辑Mixin”对话框中键入mix:title，然后单击&#x200B;**+**。
    1. 添加具有以下值的属性。
 
       | 名称 | jcr:title |
       |---|---|
       | 类型 | 字符串 |
-      | 价值 | 指定脚本的标题。 例如，策略持有者的自定义元数据。 指定的值将显示在分配任务步骤中。 |
+      | 值 | 指定脚本的标题。 例如，策略持有者的自定义元数据。 指定的值将显示在分配任务步骤中。 |
 
 ### 使用OSGi捆绑包和Java界面添加自定义元数据 {#use-an-osgi-bundle-and-java-interface-to-add-custom-metadata}
 

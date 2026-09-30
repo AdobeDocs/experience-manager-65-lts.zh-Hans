@@ -1,5 +1,5 @@
 ---
-title: SharePoint连接器
+title: SharePoint 连接器
 description: 适用于Microsoft SharePoint 2010和Microsoft SharePoint 2013的Day JCR连接器版本4.0。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,20 @@ docset: aem65
 feature: Integration
 role: Admin
 exl-id: 3f8ec723-2705-4ce5-8cb2-e7e6bfe94512
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1482'
-ht-degree: 1%
-
+source-wordcount: '1625'
+ht-degree: 2%
 ---
-
-# SharePoint连接器{#sharepoint-connector}
+# SharePoint 连接器{#sharepoint-connector}
 
 本文介绍了适用于Adobe SharePoint 2010和Microsoft SharePoint 2013版本4.0的Microsoft JCR连接器。
 
@@ -72,12 +78,12 @@ SharePoint连接器可从[软件分发](https://experience.adobe.com/#/downloads
 
 * AEM版本：
 
-   * AEM 6.4、6.3
+  * AEM 6.4、6.3
 
 * Microsoft SharePoint版本：
 
-   * Microsoft Office SharePoint Server (MOSS) 2010
-   * Microsoft Office SharePoint Server (MOSS) 2013
+  * Microsoft Office SharePoint Server (MOSS) 2010
+  * Microsoft Office SharePoint Server (MOSS) 2013
 
 * 如果您需要支持连接器的自定义部署（OEM、特殊要求、自定义身份验证方法），请与您所在地区的Adobe办事处联系。
 
@@ -194,7 +200,7 @@ Sharepoint包括经典身份验证方法和基于声明的身份验证方法，�
 * 索赔 — 基本
 * 基于Claims-Forms
 
-适用于AEM SharePoint 2010和Microsoft SharePoint 2013的Microsoft JCR连接器版本4.0。支持基于声明的身份验证(由Microsoft建议)，该身份验证以下列模式运行：
+适用于Microsoft SharePoint 2010和Microsoft SharePoint 2013的AEM JCR连接器，版本4.0。 支持基于声明的身份验证（由Microsoft建议），该身份验证以下列模式运行：
 
 * **基本/NTLM身份验证**：连接器首先尝试使用基本身份验证连接。 如果不可用，它会切换到基于NTLM的身份验证。
 * **基于Forms的身份验证**： Sharepoint根据用户在登录表单（通常是网页）中键入的凭据来验证用户。 该系统为经验证的请求发出一个令牌，该令牌包含用于为后续请求重新建立身份的密钥。
@@ -230,7 +236,7 @@ Sharepoint包括经典身份验证方法和基于声明的身份验证方法，�
 1. 单击“安全”。
 1. 单击“用户”。
 1. 单击&#x200B;**创建用户**。
-1. 提供用户ID(在SharePoint上具有访问权限的用户名)。
+1. 提供用户ID（在SharePoint上具有访问权限的用户名）。
 1. 提供相应的密码。
 1. 单击绿色勾号符号以创建用户。
 

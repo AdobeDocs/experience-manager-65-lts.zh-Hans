@@ -1,5 +1,5 @@
 ---
-title: HTML5 Forms的Picture子句支持
+title: HTML5 Forms 的 Picture 子句支持
 description: HTML5 forms支持XFA Picture子句用于显示日期、文本和数字符号的值以及格式化的值。
 contentOwner: robhagat
 content-type: reference
@@ -10,19 +10,34 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 21afdc66-0b27-4c73-9cb4-1efd5c0aefae
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 0%
-
+source-wordcount: '652'
+ht-degree: 3%
 ---
-
-# HTML5 Forms的Picture子句支持 {#picture-clause-support-for-html-forms}
+# HTML5 Forms 的 Picture 子句支持 {#picture-clause-support-for-html-forms}
 
 HTML5 forms支持XFA Picture子句用于显示日期、文本和数字符号的值以及格式化的值。 支持以下Picture子句表达式：
 
-* category(locale){picture-clause} | category(locale){picture-clause} | category(locale){picture-clause}
-* category.subcategory{}
+* 类别（区域设置）{picture-clause} |类别（区域设置）{picture-clause} |类别（区域设置）{picture-clause}
+* 类别子类别{}
 
 >[!NOTE]
 >
@@ -35,9 +50,9 @@ Date Picture子句支持的表达式：
 * date.long{}
 * date.short{}
 * date.medium{}
-* date.full{}
+* 日期。全部{}
 * date.short{}
-* date{date Picture子句符号}
+* 日期{date Picture Clause symbols}
 
 >[!NOTE]
 >
@@ -115,8 +130,8 @@ HTML5表单支持数字图片符号。 但是，PDF forms与HTML Forms之间的�
 * num.integer{}
 * num.decimal{}
 * num.currency{}
-* num.percent{}
-* num{Numeric Picture子句符号}
+* 数字。%{}
+* 数字{Numeric Picture Clause Symbols}
 
 <table>
  <tbody>
@@ -207,7 +222,7 @@ HTML5表单支持数字图片符号。 但是，PDF forms与HTML Forms之间的�
 
 HTML5 Forms支持以下Text Picture子句表达式：
 
-* text{text Picture子句符号}
+* text{text Picture clause symbols}
 
 | **符号** | **解释** |
 |---|---|

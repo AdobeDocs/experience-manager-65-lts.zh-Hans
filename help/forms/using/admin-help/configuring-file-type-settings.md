@@ -8,14 +8,26 @@ feature: PDF Generator
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 68896dab-2d46-4998-9918-40efb8554143
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b26425d0-6fde-5e02-bfd6-e560e2fa86c9
+    internal-label: PDF Generator
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '6249'
+source-wordcount: '6255'
 ht-degree: 0%
-
 ---
-
 # 配置文件类型设置 {#configuring-file-type-settings}
 
 >[!NOTE]
@@ -417,7 +429,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **文件扩展名**：指定此应用程序可接受的以逗号分隔的文件类型的文件扩展名。 默认为 `xls,xlsx`。 不要在扩展之前添加句点，也不要在扩展之间添加空格。
 
-**创建与PDF/A-1a兼容的文件**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
+**创建与PDF/A-1a兼容的文件**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
 
 **将书签添加到Adobe PDF**：将Excel工作表名称转换为书签。 默认情况下，该选项处于选中状态。
 
@@ -471,7 +483,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 将隐藏的幻灯片转换为PDF页面]**：转换隐藏的幻灯片。
 
-**[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。 在生成PDF文件时，有些PowerPoint功能未得到转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 转换页面过渡和项目符号飞入。
+**[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。 在生成PDF文件时，有些PowerPoint功能未得到转换。 如果PowerPoint过渡在Acrobat中没有等效过渡，则会替换类似的过渡。 如果同一幻灯片中有多个动画效果，则使用单个效果。 转换页面过渡和项目符号飞入。
 
 ## Microsoft项目设置（仅限Windows） {#microsoft-project-settings-windows-only}
 
@@ -481,7 +493,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 1. **[!UICONTROL 转换文档信息]**：从源文件的“属性”对话框添加文档信息，包括标题、主题、作者、关键字、经理、公司、类别和注释。 默认情况下，该选项处于选中状态。
 1. **[!UICONTROL 将Source文件附加到Adobe PDF]**：将源文件作为附件添加到PDF文件。
-1. **[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
+1. **[!UICONTROL 创建与PDF/A-1a兼容的文件]**：强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
 1. **[!UICONTROL 自动运行宏]**：在转换文档之前运行Microsoft项目文档中的任何宏（例如插入当前时间的宏）。
 
 ## Microsoft Word设置（仅限Windows） {#microsoft-word-settings-windows-only}
@@ -502,7 +514,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **[!UICONTROL 启用带有标记的Adobe PDF的辅助功能并重排]**：将标记嵌入到PDF文件中。 默认情况下，该选项处于选中状态。
 
-**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：如果选定该项，将强制使用PDF/A-1b:2005 RGB Adobe PDF设置。
+**[!UICONTROL 创建符合PDF/A-1a标准的文件]**：如果选定该选项，将强制使用PDF/A-1b：2005 RGB Adobe PDF设置。
 
 **[!UICONTROL 自动运行宏]**：在转换文档之前运行Word文档中的任何宏（例如插入当前时间的宏）。
 
@@ -544,7 +556,7 @@ NOTE to WRITER: Unfinished sentence above.
 
 **在Adobe Acrobat中查看时打开图层面板**：如果Visio图层未拼合，将打开一个窗口，您可以在其中指定使用Acrobat打开时保留在PDF文件中的图层。 默认情况下，该选项处于选中状态。
 
-**创建符合PDF/A-1b的文件**：强制使用Adobe PDF设置PDF/A-1b:2005 (RGB)。
+**创建与PDF/A-1b兼容的文件**：强制使用Adobe PDF设置PDF/A-1b：2005 (RGB)。
 
 **将注释转换为Adobe PDF注释**：将Visio注释转换为PDF注释。
 

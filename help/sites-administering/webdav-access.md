@@ -1,5 +1,5 @@
 ---
-title: WebDAV访问
+title: WebDAV 访问权限
 description: 了解如何使用WebDAV访问Adobe Experience Manager。
 contentOwner: Chiradeep Majumdar
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 7aa0e3b3-69de-4991-a1c8-06c9de5404c4
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 0%
-
+source-wordcount: '1123'
+ht-degree: 2%
 ---
-
-# WebDAV访问{#webdav-access}
+# WebDAV 访问权限{#webdav-access}
 
 要使用KDE通过WebDAV连接到AEM，请执行以下操作：
 
@@ -103,11 +112,11 @@ http://localhost:4502/crx/repository/staging
 
 * [Windows](/help/sites-administering/webdav-access.md#windows)
 * [macOS](/help/sites-administering/webdav-access.md#macos)
-* [Linux](/help/sites-administering/webdav-access.md#linux)
+* [Linux®](/help/sites-administering/webdav-access.md#linux)
 
 ### Windows {#windows}
 
-要成功地将Microsoft® Windows 7（及更高版本）系统连接到不使用SSL保护的AEM实例，必须在Windows中明确启用通过不安全的网络建立基本身份验证的选项。 此功能要求在WebClient的Windows注册表中进行更改。
+要成功地将® Windows 7（及更高版本）系统连接到不使用SSL保护的AEM实例，必须在Windows中明确启用通过不安全的网络建立基本身份验证的选项。 此功能要求在WebClient的Windows注册表中进行更改。
 
 在更新注册表后，可以将AEM实例映射为驱动器。
 
@@ -209,7 +218,7 @@ macOS现在已通过WebDAV连接到AEM，您可以将其用作Mac上的任何其
 1. 在&#x200B;**文件夹**&#x200B;中，输入`/dav`
 1. 输入用户名`admin`。 Adobe建议您使用预配置的管理员帐户进行测试。
 1. 将端口保留为空，并为连接输入任意名称。
-1. 单击&#x200B;**连接**。AEM会提示您输入密码。
+1. 单击&#x200B;**连接**。 AEM会提示您输入密码。
 1. 输入密码`admin`并单击&#x200B;**连接**。
 
 GNOME现在已将AEM作为卷装入，您可以像使用任何其他卷一样使用它。

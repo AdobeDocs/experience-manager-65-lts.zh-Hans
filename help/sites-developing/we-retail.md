@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 71a49353-5273-46ee-a1ff-5bbfe5b6b0b4
-source-git-commit: c0bf6864bb344e582c4f88371c892d401ce2827c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 9%
-
+source-wordcount: '786'
+ht-degree: 10%
 ---
-
 # `We.Retail`参考实现{#we-retail-reference-implementation}
 
 ## 简介 {#introduction}
@@ -58,7 +67,7 @@ ht-degree: 9%
 
 ### 首要步骤 {#first-steps}
 
-1. 启动AEM（和/或安装`We.Retail`）后，**`We.Retail`**&#x200B;站点控制台[中将出现站点](/help/sites-authoring/basic-handling.md#global-navigation)。
+1. 启动AEM（和/或安装`We.Retail`）后，[站点控制台](/help/sites-authoring/basic-handling.md#global-navigation)中将出现站点&#x200B;**`We.Retail`**。
 1. 例如，可以打开以下页面，它应如下面[附录](#appendix)中所示：
 
    `https://<server name>:<port number>/editor.html/content/we-retail/language-masters/en.html`
@@ -69,7 +78,7 @@ Geometrixx及其许多化身是AEM早期版本的示例内容。 从版本6.3开
 
 `We.Retail`站点在技术上更加稳健，它利用最新的AEM技术变得更加灵活和可扩展，同时还演示了该产品的最新功能。
 
-### 功能对比  {#feature-comparison}
+### 功能对比 {#feature-comparison}
 
 下表概述了与Geometrixx相比，`We.Retail`中可用的主要功能。
 
@@ -104,7 +113,7 @@ GITHUB上的代码
 
 您可以在GitHub上找到此页面的代码。
 
-* 在GitHub上[打开aem-sample-we-retail项目](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
+* [在GitHub上打开aem-sample-we-retail项目](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail)
 * 将项目下载为[ZIP文件](https://codeload.github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/zip/refs/heads/master)
 
 最新版本也可以[直接下载](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases/tag/we.retail.reactor-4.0.0)为可安装的包。

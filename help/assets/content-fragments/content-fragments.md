@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 solution: Experience Manager, Experience Manager Assets
 exl-id: 7b5a9485-8d07-434e-9871-5f97d6781eaf
-source-git-commit: 233657ff246bfdb20d7a4bda77ec24e599aac7d8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '2359'
 ht-degree: 60%
-
 ---
-
 # 使用内容片段 {#working-with-content-fragments}
 
 通过Adobe Experience Manager (AEM)，内容片段允许您设计、创建、策划和[发布独立于页面的内容](/help/sites-authoring/content-fragments.md)。 它们允许您准备内容以准备在多个位置/多个渠道上使用，非常适用于Headless投放。

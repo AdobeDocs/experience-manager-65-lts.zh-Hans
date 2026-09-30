@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: fc2aa62a-3fc4-491d-aff5-74896998d7d6
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 3%
-
+source-wordcount: '441'
+ht-degree: 7%
 ---
-
-# 最佳实践{#best-practices}
+# 最佳做法{#best-practices}
 
 ## 开发人员最佳实践 — 快速入门 {#best-practices-for-developers-getting-started}
 
@@ -26,8 +35,8 @@ Adobe工程和咨询团队开发了一组面向AEM开发人员的全面的最佳
 
 * [开发实践](/help/sites-developing/development-practices.md)
 * [内容架构](/help/sites-developing/content-architecture.md)
-* [软件体系结构](/help/sites-developing/software-architecture.md)
-* [编码提示](/help/sites-developing/coding-tips.md)
+* [软件架构](/help/sites-developing/software-architecture.md)
+* [编码技巧](/help/sites-developing/coding-tips.md)
 * [代码陷阱](/help/sites-developing/code-pitfalls.md)
 * [JCR交互](/help/sites-developing/jcr-integration.md)
 * [OSGi包](/help/sites-developing/osgi-bundles.md)
@@ -44,8 +53,8 @@ Adobe工程和咨询团队开发了一组面向AEM开发人员的全面的最佳
 
 有关管理、部署和维护或创作的最佳实践，请参阅以下内容之一：
 
-* [管理最佳实践](/help/sites-administering/administer-best-practices.md)
-* [创作最佳实践](/help/sites-authoring/best-practices.md)
+* [管理最佳做法](/help/sites-administering/administer-best-practices.md)
+* [创作最佳做法](/help/sites-authoring/best-practices.md)
 * [部署最佳实践](/help/sites-deploying/best-practices.md)
 
 ## Sites {#sites}
@@ -79,7 +88,7 @@ Adobe工程和咨询团队开发了一组面向AEM开发人员的全面的最佳
 
 ## 工具/HTL {#tooling-htl}
 
-HTML模板语言(HTL)是随AEM 6.0引入的新HTML模板系统。它取代了JSP和ESP作为AEM的首选模板系统。
+HTML模板语言(HTL)是随AEM 6.0引入的新HTML模板系统。 它取代了JSP和ESP作为AEM的首选模板系统。
 
 |  |  |  |
 |---|---|---|

@@ -9,22 +9,34 @@ feature: Multi Site Manager
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: ddd50c64-0f17-4638-a57e-17ededaca27b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 31%
-
 ---
-
 # Live Copy 概述控制台{#live-copy-overview-console}
 
 通过&#x200B;**Live Copy概述**，您可以：
 
 * 跨站点查看/管理继承：
 
-   * 查看Blueprint树和相应的Live Copy结构，以及它们的继承状态
-   * 更改继承状态；例如，暂停、恢复
-   * 查看Blueprint和Live Copy属性
+  * 查看Blueprint树和相应的Live Copy结构，以及它们的继承状态
+  * 更改继承状态；例如，暂停、恢复
+  * 查看Blueprint和Live Copy属性
 
 * 执行转出操作
 
@@ -79,11 +91,11 @@ ht-degree: 31%
 
 * 编辑
 
-   * 打开Blueprint页面以进行编辑。
+  * 打开Blueprint页面以进行编辑。
 
 * [转出](/help/sites-administering/msm.md#rollout-and-synchronize)
 
-   * 执行转出以将更改从源推送到LiveCopy。
+  * 执行转出以将更改从源推送到LiveCopy。
 
 ### 适用于 Live Copy 页面的操作 {#actions-for-a-live-copy-page}
 
@@ -93,31 +105,31 @@ ht-degree: 31%
 
 * 编辑
 
-   * 打开Live Copy页面以进行编辑。
+  * 打开Live Copy页面以进行编辑。
 
 * [关系状态](#relationship-status)
 
-   * 查看有关状态和继承的信息。
+  * 查看有关状态和继承的信息。
 
 * [同步](/help/sites-administering/msm.md#rollout-and-synchronize)
 
-   * 同步Live Copy以将更改从源拉入Live Copy。
+  * 同步Live Copy以将更改从源拉入Live Copy。
 
 * [重置](/help/sites-administering/msm-livecopy.md#resetting-a-live-copy-page)
 
-   * 重置Live Copy页面以删除所有继承取消，并使页面恢复到与源页面相同的状态。
+  * 重置Live Copy页面以删除所有继承取消，并使页面恢复到与源页面相同的状态。
 
 * [暂停](/help/sites-administering/msm.md#suspending-and-cancelling-inheritance-and-synchronization)
 
-   * 暂时停用Live Copy与其Blueprint页面之间的实时关系。
+  * 暂时停用Live Copy与其Blueprint页面之间的实时关系。
 
 * [继续](/help/sites-administering/msm-livecopy.md#resuming-inheritance-for-a-page)
 
-   * 恢复允许您恢复暂停的关系。
+  * 恢复允许您恢复暂停的关系。
 
 * [分离](/help/sites-administering/msm.md#detaching-a-live-copy)
 
-   * 永久删除Live Copy与其Blueprint页面之间的实时关系。
+  * 永久删除Live Copy与其Blueprint页面之间的实时关系。
 
 ## 关系状态 {#relationship-status}
 

@@ -1,17 +1,31 @@
 ---
 title: 使用智能内容服务配置资产标记
-description: 了解如何使用智能内容服务在 [!DNL Adobe Experience Manager]中配置智能标记和增强型智能标记。
+description: 了解如何使用智能内容服务在[!DNL Adobe Experience Manager]中配置智能标记和增强型智能标记。
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: be7c294c-149b-4825-8376-573f9e2987e2
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 752f9248-f39f-5793-a7dd-5ddafcd403c7
+    internal-label: Tagging
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: f0e3b2ca-813f-4b7a-81df-52339e17ddcf
+    internal-label: Smart Tags
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1980'
-ht-degree: 19%
-
+source-wordcount: '1992'
+ht-degree: 20%
 ---
-
 # 准备[!DNL Assets]以进行智能标记 {#configure-asset-tagging-using-the-smart-content-service}
 
 在使用Smart Content Services开始标记资源之前，请将[!DNL Experience Manager Assets]与Adobe Developer Console集成以使用[!DNL Adobe AI]的智能服务。 配置完毕后，请使用一些图像和标记来训练服务。
@@ -61,13 +75,13 @@ ht-degree: 19%
 有关如何执行此配置的详细信息，请参阅Developer Console文档，具体取决于您的要求：
 
    * 概述：
-      * [服务器到服务器身份验证](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
+     * [服务器到服务器身份验证](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
 
    * 创建新的 OAuth 凭据：
-      * [OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+     * [OAuth服务器到服务器凭据实施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 
    * 将现有的 JWT 凭据迁移到 OAuth 凭据：
-      * [从服务帐户(JWT)凭据迁移到OAuth服务器到服务器凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
+     * [从服务帐户(JWT)凭据迁移到OAuth服务器到服务器凭据](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
 
 
 1. 在&#x200B;**[!UICONTROL 选择产品配置文件]**&#x200B;页面中，选择&#x200B;**[!UICONTROL 智能内容服务]**。 单击&#x200B;**[!UICONTROL 保存配置的 API]**。
@@ -251,7 +265,7 @@ ht-degree: 19%
 1. 在&#x200B;**[!UICONTROL 资产报表]**&#x200B;页面中，选择生成的报表。 要查看报告，请单击工具栏中的&#x200B;**[!UICONTROL 查看]**。
 1. 查看报告的详细信息。
 
-   报表显示您培训的标记的培训状态。 **[!UICONTROL 培训状态]**&#x200B;列中的绿色表示已为标记培训“智能内容服务”。 黄色表示服务未针对特定标记进行完整培训。 在这种情况下，使用特定标记添加更多图像并运行培训工作流以在标签上完整地培训服务。
+   报表显示您培训的标记的培训状态。 **[!UICONTROL 培训状态]**&#x200B;列中的绿色表示已为标记培训“智能内容服务”。 黄色表示服务未针对特定标记进行完整培训。 在这种情况下，为该特定标记添加更多图像，并运行训练工作流，以便针对该标记对服务进行完整训练。
 
    如果您未在此报表中看到您的标记，请再次运行这些标记的培训工作流。
 
@@ -261,9 +275,9 @@ ht-degree: 19%
 
 * 增强型智能标记基于图像及其标记的学习模型。 这些模型在识别标记方面并不总是完美的。 当前版本的智能内容服务具有以下限制：
 
-   * 无法识别图像中的细微差异。 例如，超薄衬衫和普通衬衫。
-   * 无法根据图像的微小模式/部分识别标记。 例如，T恤上的徽标。
-   * 支持[!DNL Experience Manager]的区域设置支持标记。
+  * 无法识别图像中的细微差异。 例如，超薄衬衫和普通衬衫。
+  * 无法根据图像的微小模式/部分识别标记。 例如，T恤上的徽标。
+  * 支持[!DNL Experience Manager]的区域设置支持标记。
 
 * 要搜索带有智能标记（常规或增强）的资产，请使用[!DNL Assets] Omnisearch（全文搜索）。 智能标记没有单独的搜索谓词。
 

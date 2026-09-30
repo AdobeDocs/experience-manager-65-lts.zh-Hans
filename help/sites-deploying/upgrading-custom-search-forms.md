@@ -6,13 +6,22 @@ solution: Experience Manager, Experience Manager Sites
 role: Admin
 hide: true
 exl-id: 9df608f8-cdd0-4820-aab1-eab9fd70f961
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 3%
-
 ---
-
 # 升级自定义搜索表单{#upgrading-custom-search-forms}
 
 在AEM 6.2中，Customized Search Forms在存储库中的存储位置已更改。 升级后，这些用户档案会从6.1中的以下位置移动：
@@ -156,13 +165,13 @@ ht-degree: 3%
 * 删除`pagestatuspredicate`节点
 * 复制节点
 
-   * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
-   * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+  * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
+  * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * 复制节点
 
-   * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
-   * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
+  * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
+  * 至`/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
 * 确保将`analyticspredicate`节点的`listOrder`属性设置为“**8**”。 这是避免冲突所必需的。
 
@@ -359,7 +368,7 @@ ht-degree: 3%
 
 **操作：**&#x200B;调整`resourceType`属性（添加“**/coral**”，如上面所示的6.2位置）。
 
-## 资产管理员搜索边栏 {#assets-admin-search-rail}
+## Assets 管理员搜索边栏 {#assets-admin-search-rail}
 
 以下节点引用`/conf/global/settings/dam/search/facets/assets/items`中的名称
 

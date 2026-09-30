@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: e452c343-3bba-4774-b153-c5ba05f24362
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3545'
-ht-degree: 0%
-
+source-wordcount: '3578'
+ht-degree: 2%
 ---
-
 # 将Dynamic Media Classic (Scene7)功能添加到您的页面{#adding-scene-features-to-your-page}
 
 [Adobe Dynamic Media Classic (Scene7)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=zh-Hans)是一个托管解决方案，用于管理、增强、发布富媒体资源并将其交付给Web、移动设备、电子邮件和连接到Internet的显示和打印。
@@ -148,7 +157,7 @@ Experience Manager中提供了以下Dynamic Media Classic (Scene7)组件：
 >
 >如果您正在创建和开发自定义S7查看器并使用内容查找器，则必须显式添加`allowfullscreen`参数。
 
-### Flash查看器生命周期终止通知 {#flash-viewers-end-of-life-notice}
+### Flash 查看器生命周期结束通知 {#flash-viewers-end-of-life-notice}
 
 自2017年1月31日起，Adobe Dynamic Media Classic (Scene7)正式终止对Flash查看器平台的支持。
 

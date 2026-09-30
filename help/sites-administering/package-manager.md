@@ -9,13 +9,22 @@ content-type: reference
 docset: aem65
 solution: Experience Manager, Experience Manager Sites
 exl-id: 6c0238ca-568e-4a46-a3cc-0b08a10cf324
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3568'
-ht-degree: 1%
-
+source-wordcount: '3576'
+ht-degree: 2%
 ---
-
 # 包管理器 {#working-with-packages}
 
 利用资源包，可以导入和导出存储库内容。 您可以使用包安装新内容、安装新功能、在实例之间传输内容以及备份存储库内容。
@@ -64,8 +73,8 @@ Package Manager分为四个主要功能区域：
 * **左侧导航面板** — 此面板允许您对包列表进行筛选和排序。
 * **包列表** — 这是实例上的包列表，按照左侧导航面板中的选择进行筛选和排序。
 * **活动日志** — 此面板最初最小化，并展开以详细说明包管理器的活动，如生成或安装包时。 在“活动日志”选项卡中，还有其它按钮用于：
-   * **清除日志**
-   * **显示/隐藏**
+  * **清除日志**
+  * **显示/隐藏**
 * **工具栏** — 工具栏包含用于左侧导航面板和包列表的刷新按钮以及用于搜索、创建和上传包的按钮。
 
 ![包管理器UI](assets/package-manager-ui.png)
@@ -174,7 +183,7 @@ Official Service Pack
 | include | Include将包括指定目录中与正则表达式匹配的所有文件和文件夹。 Include **将不会**&#x200B;包含指定根路径下的其他文件或文件夹。 |
 | 排除 | 排除将排除与正则表达式匹配的所有文件和文件夹。 |
 
-最常在首次[创建包时定义包筛选器。](#creating-a-new-package)但是，以后也可以编辑它们，此后应重新构建包以根据新的筛选器定义更新其内容。
+最常在您[创建包时定义包筛选器。](#creating-a-new-package) 但是，它们也可以稍后进行编辑，之后应重建包以根据新的筛选器定义更新其内容。
 
 >[!TIP]
 >
@@ -243,7 +252,7 @@ Official Service Pack
 
    ![新包](assets/new-package.png)
 
-1. 单击&#x200B;**编辑**&#x200B;以定义[包内容。完成编辑设置后，](#package-contents)单击&#x200B;**保存**。
+1. 单击&#x200B;**编辑**&#x200B;以定义[包内容。](#package-contents) 完成编辑设置后，单击&#x200B;**保存**。
 
 1. 您现在可以[生成](#building-a-package)您的包。
 
@@ -577,7 +586,7 @@ curl -v -X POST --user admin:admin -F file=@/Users/SomeGuy/Desktop/core.wcm.comp
 
 1. 将复制资源包，并在活动日志中报告详细信息。
 
-## Software Distribution {#software-distribution}
+## 软件分发 {#software-distribution}
 
 AEM包可用于在AEM环境中创建和共享内容。
 

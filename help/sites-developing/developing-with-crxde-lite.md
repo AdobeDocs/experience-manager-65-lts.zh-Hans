@@ -1,5 +1,5 @@
 ---
-title: 使用CRXDE Lite进行开发
+title: 使用 CRXDE Lite 进行开发
 description: CRXDE Lite已嵌入到Adobe Experience Manager (AEM)中，并允许您在浏览器中执行标准开发任务
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
 exl-id: a022067a-3bbe-4bce-9d49-b813fcbf0c6f
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2113'
-ht-degree: 1%
-
+source-wordcount: '2116'
+ht-degree: 2%
 ---
-
-# 使用CRXDE Lite进行开发{#developing-with-crxde-lite}
+# 使用 CRXDE Lite 进行开发{#developing-with-crxde-lite}
 
 本节介绍如何使用CRXDE Lite开发Adobe Experience Manager (AEM)应用程序。
 
@@ -72,7 +83,7 @@ CRXDE Lite提供以下功能：
   </tr>
   <tr>
    <td>编辑窗格</td>
-   <td><p><strong>主页</strong>选项卡：允许您搜索内容和/或文档并访问开发人员资源（文档、开发人员博客、知识库）和支持(Adobe主页和支持中心)。<br /> </p> <p>双击<strong>资源管理器</strong>窗格中的文件，以便显示其内容。 例如，.jsp或.java文件。 然后，您可以修改它并保存更改。</p> <p>在<strong>编辑</strong>窗格中编辑文件后，工具栏上有以下工具： <br /> </p> - <strong>在树中显示： </strong>在存储库树中显示文件。<br /> - <strong>搜索/替换……</strong>：执行搜索或替换。<br /> <br />双击<strong>编辑</strong>窗格的状态行打开<strong>转到行</strong>对话框，以便输入要转到的特定行号。<br /> </td>
+   <td><p><strong>主页</strong>选项卡：允许您搜索内容和/或文档并访问开发人员资源（文档、开发人员博客、知识库）和支持（Adobe主页和支持中心）。<br /> </p> <p>双击<strong>资源管理器</strong>窗格中的文件，以便显示其内容。 例如，.jsp或.java文件。 然后，您可以修改它并保存更改。</p> <p>在<strong>编辑</strong>窗格中编辑文件后，工具栏上有以下工具： <br /> </p> - <strong>在树中显示： </strong>在存储库树中显示文件。<br /> - <strong>搜索/替换……</strong>：执行搜索或替换。<br /> <br /> 双击<strong>编辑</strong>窗格的状态行打开<strong>转到行</strong>对话框，以便输入要转到的特定行号。<br /> </td>
   </tr>
   <tr>
    <td>“属性”选项卡<br /> </td>
@@ -161,7 +172,7 @@ CRXDE Lite提供以下功能：
 
 1. 输入模板的&#x200B;**标签**、**标题**、**描述**、**资源类型**&#x200B;和&#x200B;**排名**。 单击&#x200B;**下一步**。
 
-1. 此步骤是可选的：设置&#x200B;**允许的路径**。 单击&#x200B;**下一步**
+1. 此步骤是可选的：设置&#x200B;**允许的路径**。 点击&#x200B;**下一个**
 
 1. 此步骤是可选的：设置&#x200B;**允许的父项**。 单击&#x200B;**下一步**。
 
@@ -282,7 +293,7 @@ CRXDE Lite提供以下功能：
 1. 如果要更新现有定义，请选中&#x200B;**允许更新**。
 1. 单击&#x200B;**导入**。
 
-## 日志记录 {#logging}
+## 记录 {#logging}
 
 使用CRXDE Lite，您可以显示文件系统上位于`<crx-install-dir>/crx-quickstart/server/logs`的文件`error.log`，并使用适当的日志级别对其进行筛选。 按照以下步骤操作：
 

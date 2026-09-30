@@ -10,13 +10,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 exl-id: 4c6d1d6a-c000-48cf-9d86-306245a3c10c
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 58%
-
+source-wordcount: '524'
+ht-degree: 57%
 ---
-
 # 搜索{#searching}
 
 AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类型。
@@ -45,7 +58,7 @@ AEM 的创作环境提供了多种内容搜索机制，具体取决于资源类�
 
 要搜索和筛选您的资源，请执行以下操作：
 
-1. 打开&#x200B;**搜索**（使用工具栏中的放大镜）并输入您的搜索词。将提出建议并可进行选择：
+1. 打开&#x200B;**搜索**（使用工具栏中的放大镜）并输入您的搜索词。 将提出建议并可进行选择：
 
    ![s-01](assets/s-01.png)
 

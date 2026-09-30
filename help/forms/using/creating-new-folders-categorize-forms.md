@@ -8,13 +8,27 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: cc84c92b-d1a3-4314-a079-7dcbf013712a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 0%
-
+source-wordcount: '387'
+ht-degree: 3%
 ---
-
 # 创建新文件夹以对表单进行分类 {#create-new-folders-to-categorize-forms}
 
 您可以使用文件夹更好地组织资源。 由于AEM Forms支持多种类型的资源（表单模板、PDF、文档、资源和自适应表单以及各种元数据），因此您可以使用文件夹根据所需的标准对表单进行分类。
@@ -25,7 +39,7 @@ AEM Forms允许您更改文件夹的标题。 标题与存储库中存储文件�
 
 您可以通过以下方式之一在AEM Forms中创建文件夹：
 
-* 上传包含所需文件夹结构中的资源的ZIP文件(请参阅[在AEM Forms中获取XDP和PDF文档](/help/forms/using/get-xdp-pdf-documents-aem.md))
+* 上传包含所需文件夹结构中的资源的ZIP文件（请参阅[在AEM Forms中获取XDP和PDF文档](/help/forms/using/get-xdp-pdf-documents-aem.md)）
 
 * 创建空文件夹
 

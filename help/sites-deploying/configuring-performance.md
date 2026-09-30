@@ -9,13 +9,22 @@ feature: Configuring
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c46d9569-23e7-44e2-a072-034450f14ca2
-source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
 source-wordcount: '5215'
 ht-degree: 17%
-
 ---
-
 # 性能优化 {#performance-optimization}
 
 >[!NOTE]
@@ -544,7 +553,7 @@ www.myCompany.com/pictures/gallery.christmas.1.html
 
 如果您允许用户更改字体大小（或任何其他版面自定义设置），请确保各种自定义设置都反映在 URL 中。
 
-例如，由于不会缓存 cookie，因此如果您将字体大小存储在 cookie（或类似机制）中，则不会为缓存的页面保留字体大小。 因此，Dispatcher 会随机返回任意字体大小的文档。
+例如，由于不会缓存 Cookie，因此如果您将字体大小存储在 Cookie（或类似机制）中，则不会为缓存的页面保留字体大小。 因此，Dispatcher 会随机返回任意字体大小的文档。
 
 在 URL 中包含字体大小作为选择器可避免出现此问题：
 
@@ -579,7 +588,7 @@ www.myCompany.com/news/main.large.html
 
 #### 使用于导航的图像文件失效 {#invalidating-image-files-used-for-navigation}
 
-如果将图片用于导航条目，则方法基本上与标题相同，但会稍微复杂一些。 将所有导航图像与目标页面一起存储。 如果将两张图片用于一般或活动场景，则可以使用以下脚本：
+如果将图片用于导航条目，则方法基本上与标题相同，但会稍微复杂一些。 将所有导航图像与目标页面一起存储。 如果将两张图片分别用于普通和活跃状态，则可以使用以下脚本：
 
 * 一个正常显示页面的脚本。
 * 一个处理“.normal”请求并返回正常图片的脚本。
@@ -593,15 +602,17 @@ www.myCompany.com/news/main.large.html
 
 建议您将个性化限制在必要的地方。 原因如下：
 
-* 如果您使用可随意自定义的开始页面，则用户每次请求该页面时都必须对它进行编辑。
+* 如果您使用可随意自定义的开始页面，则用户每次请求该页面时都必须重新生成该页面。
 * 相反，如果您有十个不同的开始页面可供选择，则可以缓存其中的每个页面，从而提高性能。
 
 >[!TIP]
+>
 >有关配置Dispatcher缓存的更多详细信息，请参阅[AEM Dispatcher缓存教程](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=zh-Hans)及其有关[缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html?lang=zh-Hans#dispatcher-tips-and-tricks)的部分。
 
 例如，如果将用户名放入标题栏中对每个页面进行个性化，则会影响性能。
 
 >[!TIP]
+>
 >有关缓存受保护内容的信息，请参阅Dispatcher指南中的[缓存受保护内容](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=zh-hans)。
 
 关于在单个页面上混合受限内容和公共内容，请考虑以下策略：在Dispatcher中使用服务器端包含，或者在浏览器中通过Ajax使用客户端包含。

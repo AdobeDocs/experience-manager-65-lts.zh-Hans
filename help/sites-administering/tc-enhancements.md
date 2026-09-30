@@ -7,13 +7,25 @@ feature: Language Copy
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 59b4d716-37a2-4f67-88eb-68c93359242c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '669'
-ht-degree: 26%
-
+source-wordcount: '687'
+ht-degree: 29%
 ---
-
 # 翻译增强功能{#translation-enhancements}
 
 本页介绍AEM翻译管理功能的增量增强和细化。
@@ -66,7 +78,7 @@ ht-degree: 26%
 
    ![screen_shot_2018-04-22at234430](assets/screen_shot_2018-04-22at234430.jpg)
 
-1. 列表视图显示每个已编辑的文本组件的源和翻译的并排比较。选择应将哪些翻译更新同步到翻译记忆库，然后选择&#x200B;**更新记忆库**。
+1. 列表视图显示每个已编辑的文本组件的源和翻译的并排比较。 选择应将哪些翻译更新同步到翻译记忆库，然后选择&#x200B;**更新记忆库**。
 
    ![screen_shot_2018-04-22at235024](assets/screen_shot_2018-04-22at235024.jpg)
 
@@ -80,8 +92,8 @@ AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 
 * TMS 必须配置为可与 AEM 一起使用。
 * 连接器需要执行该方法[`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html)。
-   * 此方法中的代码确定翻译记忆更新请求的情况。
-   * AEM 翻译框架通过实施该方法来将字符串值对（原始和更新的翻译）发送回 TMS。
+  * 此方法中的代码确定翻译记忆更新请求的情况。
+  * AEM 翻译框架通过实施该方法来将字符串值对（原始和更新的翻译）发送回 TMS。
 
 对于使用专有翻译记忆的情况，可以拦截翻译记忆更新并将其发送到自定义目标。
 
@@ -93,7 +105,7 @@ AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 
 >[!CAUTION]
 >
->仅允许一个级别。例如，以下内容将不允许“es”页面解析为语言副本：
+>仅允许一个级别。 例如，以下内容将不允许“es”页面解析为语言副本：
 >
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
@@ -102,7 +114,7 @@ AEM 会更新已配置的 TMS 的翻译记忆中现有字符串的翻译。
 
 >[!NOTE]
 >
->语言根可以具有任何页面名称，而不仅仅是语言的ISO代码。 AEM将始终首先检查路径和名称，但如果页面名称未标识语言，则AEM将检查页面的cq：language属性以标识语言。
+>语言根可以具有任何页面名称，而不仅仅是语言的ISO代码。 AEM将始终首先检查路径和名称，但如果页面名称未标识语言，AEM将检查页面的cq:language属性以标识语言。
 
 ## 翻译状态报告 {#translation-status-reporting}
 

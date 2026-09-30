@@ -1,19 +1,33 @@
 ---
-title: 恢复AEM表单数据
+title: 恢复 AEM Forms 数据
 description: 本文档介绍恢复AEM表单数据所需的步骤。
 contentOwner: admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 6345edda-cdc6-4e13-ade6-2dd6de9d9616
-source-git-commit: f7adcbe7700d0ea9cbd18eb0b59bcd76f56e8cc5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 0%
-
+source-wordcount: '1168'
+ht-degree: 2%
 ---
-
-# 恢复AEM表单数据 {#recovering-the-aem-forms-data}
+# 恢复 AEM Forms 数据 {#recovering-the-aem-forms-data}
 
 本节介绍恢复AEM表单数据所需的步骤。 另请参阅[备份和恢复的特殊注意事项](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)。
 
@@ -50,12 +64,12 @@ AEM forms应该能够从以下故障中可靠恢复：
 1. 如果正在运行，请停止AEM Forms服务和应用程序服务器。
 1. 如有必要，从系统映像重新创建物理系统。 例如，如果恢复的原因是数据库服务器故障，则可能不需要执行此步骤。
 1. 将自生成图像以来应用的修补程序或更新应用到AEM表单。 此信息记录在备份过程中。 AEM表单必须修补到与系统备份时相同的修补程序级别。
-1. (WebSphere®应用程序服务器)如果要恢复到WebSphere®应用程序服务器的新实例，请运行restoreConfig.bat/sh命令。
-1. 首先使用数据库备份文件运行数据库还原操作，然后将事务重做日志应用于已恢复的数据库，以恢复AEM表单数据库。 (请参阅[AEM表单数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。)有关详细信息，请参阅以下知识库文章之一：
+1. （WebSphere®应用程序服务器）如果要恢复到WebSphere®应用程序服务器的新实例，请运行restoreConfig.bat/sh命令。
+1. 首先使用数据库备份文件运行数据库还原操作，然后将事务重做日志应用于已恢复的数据库，以恢复AEM表单数据库。 （请参阅[AEM表单数据库](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)。） 有关更多信息，请参阅以下知识库文章之一：
 
-   * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
+   * [DB2®适用于AEM表单的备份和恢复](/help/forms/using/admin-help/files-back-recover.md#db2)
    * [适用于AEM表单的Oracle备份和恢复](/help/forms/using/admin-help/files-back-recover.md#oracle)
-   * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
+   * [适用于AEM表单的Microsoft® SQL Server备份和恢复](/help/forms/using/admin-help/files-back-recover.md#sql-server)
    * [适用于AEM表单的MySQL备份和恢复](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
 1. 通过首先删除AEM表单现有安装上的GDS目录的内容，然后从备份的GDS中复制GDS目录的内容来恢复GDS目录。 如果更改了GDS目录位置，请参阅[在恢复期间更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。
@@ -116,15 +130,15 @@ AEM forms应该能够从以下故障中可靠恢复：
 
 >[!NOTE]
 >
->只有在这种情况下，您才应使用此脚本来更改GDS位置。 要在AEM表单运行时更改GDS位置，请使用Administration Console。 (请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。)
+>只有在这种情况下，您才应使用此脚本来更改GDS位置。 要在AEM表单运行时更改GDS位置，请使用Administration Console。 （请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。）
 
 >[!NOTE]
 >
->如果GDS目录位于驱动器根目录(例如，D:\)，则组件部署将在Windows上失败。 对于GDS，必须确保目录不在驱动器的根目录下，而是位于子目录中。 例如，目录应该是D:\GDS而不是简单的D:\。
+>如果GDS目录位于驱动器根目录（例如，D:\），则组件部署将在Windows上失败。 对于GDS，必须确保目录不在驱动器的根目录下，而是位于子目录中。 例如，目录应该是D:\GDS而不是简单的D:\。
 
 ## 将GDS恢复到群集环境 {#recovering-the-gds-to-a-clustered-environment}
 
-要更改群集环境中的GDS位置，请关闭整个群集并在群集的单个节点上运行LCSetGDS脚本。 （请参阅[在恢复期间更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。）仅启动该节点。 当该节点完全启动时，群集中的其他节点可以安全启动，并正确地指向新的GDS。
+要更改群集环境中的GDS位置，请关闭整个群集并在群集的单个节点上运行LCSetGDS脚本。 （请参阅[在恢复期间更改GDS位置](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)。） 仅启动该节点。 当该节点完全启动时，群集中的其他节点可以安全启动，并正确地指向新的GDS。
 
 >[!NOTE]
 >

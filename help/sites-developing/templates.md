@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 3b3cff43-4edc-4250-8e6d-08eb5906ffcd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 2%
-
 ---
-
 # 模板{#templates}
 
 模板在AEM中的各个时间点使用：
@@ -45,9 +54,9 @@ AEM现在提供了两种用于创建页面的基本模板类型：
 
 * 引入后，您可以为使用该模板创建的任何页面定义以下内容：
 
-   * 结构
-   * 初始内容
-   * 内容策略
+  * 结构
+  * 初始内容
+  * 内容策略
 
 * 创建新页面后，页面和模板之间会保持动态连接。 此连接意味着对模板结构的更改会反映在使用该模板创建的任何页面上；对初始内容的更改不会反映在页面上。
 * 使用内容策略（从模板编辑器编辑）来保留设计属性（不使用页面编辑器中的设计模式）。

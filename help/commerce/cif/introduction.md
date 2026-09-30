@@ -6,13 +6,21 @@ solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: 88be03c6-2342-4441-836d-f13b8cdfd629
-source-git-commit: 79cce324382bada2e9aec107b8e494723bf490e9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 87%
-
 ---
-
 # Content and Commerce {#content-commerce}
 
 借助 Adobe Experience Manager Content and Commerce，品牌可以更快地扩展和创新，区分商务体验并捕获快速增长的在线支出。 AEM Content and Commerce 将 Experience Manager 中的沉浸式、全渠道和个性化体验与任意数量的商务解决方案相结合，为购物历程的各个部分带来差异化的体验，缩短价值实现时间并加快实现更高的转化率。

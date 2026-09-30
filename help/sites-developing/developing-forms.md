@@ -1,5 +1,5 @@
 ---
-title: 开发Forms（经典UI）
+title: 开发表单（经典 UI）
 description: 了解如何为Adobe Experience Manager经典UI开发表单
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: d1475168-6625-4d27-9c3b-01e415c2f398
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1930'
-ht-degree: 0%
-
+source-wordcount: '1951'
+ht-degree: 1%
 ---
-
-# 开发Forms（经典UI）{#developing-forms-classic-ui}
+# 开发表单（经典 UI）{#developing-forms-classic-ui}
 
 表单的基本结构为：
 
@@ -39,7 +48,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->本文档重点介绍如何在经典UI中使用[Foundation组件](/help/sites-authoring/default-components-foundation.md)来开发表单。 Adobe建议在触屏UI中使用新的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-hans)和[隐藏条件](/help/sites-developing/hide-conditions.md)进行表单开发。
+>本文档重点介绍如何在经典UI中使用[Foundation组件](/help/sites-authoring/default-components-foundation.md)来开发表单。 Adobe建议在触屏UI中使用新的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)和[隐藏条件](/help/sites-developing/hide-conditions.md)进行表单开发。
 
 ## 预载表单值 {#preloading-form-values}
 
@@ -117,9 +126,9 @@ ht-degree: 0%
 
    * 可选：
 
-      * `jcr:title` — 指定您选择的标题，该标题将显示在下拉选择列表中。 如果未设置，则会显示节点名称
+     * `jcr:title` — 指定您选择的标题，该标题将显示在下拉选择列表中。 如果未设置，则会显示节点名称
 
-      * `jcr:description` — 输入您选择的描述
+     * `jcr:description` — 输入您选择的描述
 
 1. 在文件夹中创建对话框节点：
 
@@ -128,12 +137,12 @@ ht-degree: 0%
 1. 在文件夹中，创建：
 
    1. 后脚本。
-脚本的名称为`post.POST.<extension>`，例如`post.POST.jsp`
-在提交表单以处理表单时调用后脚本，该后脚本包含用于处理表单`POST`中到达的数据的代码。
+      脚本的名称为`post.POST.<extension>`，例如， `post.POST.jsp`
+      在提交表单以处理表单时调用后脚本，该后脚本包含处理从表单`POST`到达的数据的代码。
 
    1. 添加在提交表单时调用的转发脚本。
-脚本的名称为`forward.<extension`>，例如`forward.jsp`
-此脚本可以定义路径。 然后，当前请求将转发到指定的路径。
+      脚本的名称为`forward.<extension`>，例如， `forward.jsp`
+      此脚本可以定义路径。 然后，当前请求将转发到指定的路径。
 
    必要的调用是`FormsHelper#setForwardPath`（2个变量）。 典型案例是执行一些验证或逻辑以查找目标路径，然后转发到该路径，让默认的Sling POST servlet在JCR中执行实际存储。
 
@@ -148,35 +157,35 @@ ht-degree: 0%
 
    * 在呈现表单(`GET`)时：
 
-      1. `init.jsp`
-      1. 对于所有字段的约束： `clientvalidation.jsp`
-      1. 表单的validationRT： `clientvalidation.jsp`
-      1. 表单通过加载资源加载（如果设置）
-      1. 在渲染`<form></form>`内部时`addfields.jsp`
+     1. `init.jsp`
+     1. 对于所有字段的约束： `clientvalidation.jsp`
+     1. 表单的validationRT： `clientvalidation.jsp`
+     1. 表单通过加载资源加载（如果设置）
+     1. 在渲染`<form></form>`内部时`addfields.jsp`
 
    * 处理表单`POST`时：
 
-      1. `init.jsp`
-      1. 对于所有字段的约束： `servervalidation.jsp`
-      1. 表单的validationRT： `servervalidation.jsp`
-      1. `forward.jsp`
-      1. 如果设置了转发路径(`FormsHelper.setForwardPath`)，则转发请求，然后调用`cleanup.jsp`
+     1. `init.jsp`
+     1. 对于所有字段的约束： `servervalidation.jsp`
+     1. 表单的validationRT： `servervalidation.jsp`
+     1. `forward.jsp`
+     1. 如果设置了转发路径(`FormsHelper.setForwardPath`)，则转发请求，然后调用`cleanup.jsp`
 
-      1. 如果未设置转发路径，则调用`post.POST.jsp`（在此结束，未调用`cleanup.jsp`）
+     1. 如果未设置转发路径，则调用`post.POST.jsp`（在此结束，未调用`cleanup.jsp`）
 
 1. 再次在文件夹中（可选）添加：
 
    1. 用于添加字段的脚本。
-脚本的名称为`addfields.<extension>`，例如`addfields.jsp`
-在写入表单起始HTML后，将立即调用`addfields`脚本。 这允许操作在表单中添加自定义输入字段或其他此类HTML。
+      脚本的名称为`addfields.<extension>`，例如， `addfields.jsp`
+      在写入表单起始HTML后立即调用`addfields`脚本。 这允许操作在表单中添加自定义输入字段或其他此类HTML。
 
    1. 初始化脚本。
-脚本的名称为`init.<extension>`，例如`init.jsp`
-此脚本在渲染表单时调用。 它可用于初始化操作细节。
+      脚本的名称为`init.<extension>`，例如， `init.jsp`
+      此脚本在渲染表单时调用。 它可用于初始化操作细节。
 
    1. 清理脚本。
-脚本的名称为`cleanup.<extension>`，例如`cleanup.jsp`
-此脚本可用于执行清理。
+      脚本的名称为`cleanup.<extension>`，例如， `cleanup.jsp`
+      此脚本可用于执行清理。
 
 1. 在Parsys中使用&#x200B;**Forms**&#x200B;组件。 **操作类型**&#x200B;下拉列表现在将包含您的新操作。
 
@@ -212,18 +221,18 @@ ht-degree: 0%
 
    * 可选：
 
-      * `jcr:title` — 指定您选择的标题，该标题将显示在选择列表中。 如果未设置，则会显示节点名称
-      * `hint` — 用户有关如何使用字段的其他信息
+     * `jcr:title` — 指定您选择的标题，该标题将显示在选择列表中。 如果未设置，则会显示节点名称
+     * `hint` — 用户有关如何使用字段的其他信息
 
 1. 在此文件夹内，可能需要以下脚本：
 
    * 客户端验证脚本：
-脚本的名称为`clientvalidation.<extension>`，例如`clientvalidation.jsp`
-在渲染表单字段时会调用此项。 它可用于创建客户端javascript，以验证客户端上的字段。
+     脚本的名称为`clientvalidation.<extension>`，例如， `clientvalidation.jsp`
+     在渲染表单字段时会调用此项。 它可用于创建客户端javascript，以验证客户端上的字段。
 
    * 服务器验证脚本：
-脚本的名称为`servervalidation.<extension>`，例如`servervalidation.jsp`
-在提交表单时会调用此方法。 提交字段后，可使用该字段验证服务器上的字段。
+     脚本的名称为`servervalidation.<extension>`，例如， `servervalidation.jsp`
+     在提交表单时会调用此方法。 提交字段后，可使用该字段验证服务器上的字段。
 
 >[!NOTE]
 >
@@ -281,8 +290,8 @@ ht-degree: 0%
 
    * 在顶行末尾的下拉列表中，选择：
 
-      * **all** — 如果所有条件都必须为true才能显示或隐藏组件
-      * **any** — 如果只有一个或多个条件必须为true才能显示或隐藏组件
+     * **all** — 如果所有条件都必须为true才能显示或隐藏组件
+     * **any** — 如果只有一个或多个条件必须为true才能显示或隐藏组件
 
    * 在条件行（默认显示一个）中，选择组件、运算符，然后指定一个值。
    * 如果需要，通过单击&#x200B;**添加条件**&#x200B;添加更多条件。
@@ -322,4 +331,4 @@ ht-degree: 0%
 * 定义验证资源类型
 * 包含用于验证的脚本：
 
-   * 在JSP中，调用Web服务并创建包含错误消息的`com.day.cq.wcm.foundation.forms.ValidationInfo`对象。 如果出现错误，将不会发布表单数据。
+  * 在JSP中，调用Web服务并创建包含错误消息的`com.day.cq.wcm.foundation.forms.ValidationInfo`对象。 如果出现错误，将不会发布表单数据。

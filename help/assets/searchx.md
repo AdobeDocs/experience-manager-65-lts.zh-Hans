@@ -1,18 +1,27 @@
 ---
 title: 扩展搜索功能
-description: 将 [!DNL Adobe Experience Manager Assets] 的搜索功能扩展到默认搜索功能之外。
+description: 将[!DNL Adobe Experience Manager Assets]的搜索功能扩展到默认搜索功能之外。
 contentOwner: AG
 role: Developer
 feature: Search
 solution: Experience Manager, Experience Manager Assets
 exl-id: 92efe52b-8fa5-4006-bd68-2472b4ba04f6
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '814'
-ht-degree: 16%
-
+source-wordcount: '827'
+ht-degree: 7%
 ---
-
 # 扩展资产搜索 {#extending-assets-search}
 
 您可以扩展[!DNL Adobe Experience Manager Assets]搜索功能。 开箱即用，[!DNL Experience Manager Assets]按字符串搜索资源。
@@ -140,7 +149,7 @@ ht-degree: 16%
    </script>
    ```
 
-1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
+1. 为了使组件可用，您需要能够对其进行编辑。 若要使组件可编辑，请在CRXDE中添加主类型&#x200B;**cq:EditConfig**&#x200B;的节点&#x200B;**cq:editConfig**。 为了删除段落，请添加单值为&#x200B;**DELETE**&#x200B;的多值&#x200B;**cq:actions**。
 1. 导航到浏览器，并在示例页面（例如，**press.html**）上切换到设计模式并为谓词段落系统启用新组件（例如，**left**）。
 
 1. 在&#x200B;**编辑**&#x200B;模式下，新组件现在可在Sidekick中使用（可在&#x200B;**搜索**&#x200B;组中找到）。 在&#x200B;**Predicates**&#x200B;列中插入组件并键入搜索词，例如&#x200B;**Diamond**，然后单击放大镜开始搜索。
@@ -244,7 +253,7 @@ ht-degree: 16%
        });
    ```
 
-1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在 CRXDE 中添加主类型 **cq:EditConfig** 的 **cq:editConfig** 节点。为了删除段落，请添加带有单个值 **DELETE** 的多值属性 **cq:actions**。
+1. 为了使组件可用，您需要能够对其进行编辑。 若要使组件可编辑，请在CRXDE中添加主类型&#x200B;**cq:EditConfig**&#x200B;的节点&#x200B;**cq:editConfig**。 为了删除段落，请添加单值为&#x200B;**DELETE**&#x200B;的多值&#x200B;**cq:actions**。
 1. 导航到浏览器，并在示例页面（例如，**press.html**）上切换到设计模式并为谓词段落系统启用新组件（例如，**left**）。
 1. 在&#x200B;**编辑**&#x200B;模式下，新组件现在可在Sidekick中使用（可在&#x200B;**搜索**&#x200B;组中找到）。 在&#x200B;**Predicates**&#x200B;列中插入组件。
 

@@ -1,5 +1,5 @@
 ---
-title: 在经典UI中创作
+title: 在经典 UI 中进行创作
 description: 经典UI是自CQ5以来提供的面向桌面的用户界面。 以下有关创作的文档侧重于此UI。 基于触摸的UI是AEM的新标准用户界面，专为触摸和桌面设备而设计。 有关更多信息，请参阅标准创作文档。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,18 +9,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: f600102e-87cd-464e-90d4-8e5d2a5608da
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 0%
-
+source-wordcount: '190'
+ht-degree: 5%
 ---
-
-# 在经典UI中创作{#authoring-in-the-classic-ui}
+# 在经典 UI 中进行创作{#authoring-in-the-classic-ui}
 
 ## 经典UI和触屏UI {#classic-ui-and-touch-enabled-ui}
 
-经典UI是自CQ5(AEM的前身)以来提供的面向桌面的用户界面。 以下有关创作的文档侧重于此UI。
+经典UI是自CQ5（AEM的前身）以来提供的面向桌面的用户界面。 以下有关创作的文档侧重于此UI。
 
 触屏优化UI是AEM新的标准用户界面，专为触摸和桌面设备而设计。 有关详细信息，请参阅[标准创作文档](/help/sites-authoring/author.md)。
 

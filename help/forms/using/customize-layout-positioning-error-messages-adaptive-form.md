@@ -1,5 +1,5 @@
 ---
-title: 自定义自适应表单的错误消息的布局和位置
+title: 自定义自适应表单错误消息的布局与位置
 description: 您可以自定义自适应对象的错误消息的布局和位置。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,14 +9,30 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components
 exl-id: 9347f22a-166f-4403-9ca9-c29139384b2b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 0%
-
+source-wordcount: '530'
+ht-degree: 5%
 ---
-
-# 自定义自适应表单的错误消息的布局和位置{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
+# 自定义自适应表单错误消息的布局与位置{#customize-layout-and-positioning-of-error-messages-of-an-adaptive-form}
 
 您可以自定义自适应表单的错误消息的布局和位置。 您可以执行以下自定义设置：
 
@@ -51,11 +67,11 @@ ht-degree: 0%
 
 ## 创建自定义字段布局 {#create-a-custom-field-layout}
 
-1. 打开CRXDE Lite。 默认URL为https://&#39;[服务器]：[端口]&#39;/crx/de。
+1. 打开 CRXDE Lite。 默认URL为https://&#39;[服务器]：[端口]&#39;/crx/de。
 1. 将字段布局从/libs/fd/af/layouts/field节点（例如defaultFieldLayout）复制到/apps节点（例如/apps/af-field-layout）。
 1. 重命名复制的节点和defaultFieldLayout.jsp文件。 例如，errorOnRight.jsp。
 
-1. 更改所复制节点的qtip和jcr：description属性的值。 例如，将属性的值更改为Error On Right
+1. 更改所复制节点的qtip和jcr:description属性的值。 例如，将属性的值更改为Error On Right
 
 1. 要添加新样式和行为，请在/etc节点中创建客户端库。
 

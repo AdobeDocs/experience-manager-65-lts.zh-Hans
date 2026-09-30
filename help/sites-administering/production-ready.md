@@ -1,5 +1,5 @@
 ---
-title: 在生产就绪模式下运行AEM
+title: 在生产就绪模式下运行 AEM
 description: 了解如何在生产就绪模式下运行AEM。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 99724bd6-41b4-4491-9958-1f5d9e1f5050
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 3%
-
+source-wordcount: '383'
+ht-degree: 7%
 ---
-
-# 在生产就绪模式下运行AEM{#running-aem-in-production-ready-mode}
+# 在生产就绪模式下运行 AEM{#running-aem-in-production-ready-mode}
 
 在AEM 6.1中，Adobe引入了新的`"nosamplecontent"`运行模式，旨在自动执行准备AEM实例以在生产环境中部署所需的步骤。
 

@@ -1,5 +1,5 @@
 ---
-title: 定位Adobe Campaign
+title: 面向 Adobe Campaign 的目标选择
 description: 设置分段包括创建区段、品牌、营销活动和体验。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: e6446c01-a34d-4fed-886a-8983cb7edd0d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 0%
-
+source-wordcount: '816'
+ht-degree: 1%
 ---
-
-# 定位Adobe Campaign{#targeting-your-adobe-campaign}
+# 面向 Adobe Campaign 的目标选择{#targeting-your-adobe-campaign}
 
 要定位Adobe Campaign新闻稿，您需要先设置分段，该功能仅在经典UI中可用。 之后，您可以为Adobe Campaign创建定位体验。
 

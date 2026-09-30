@@ -1,18 +1,34 @@
 ---
-title: 教程：创建第一个自适应表单
+title: 教程：创建您的第一个自适应表单
 description: 了解如何创建企业级、交互式和响应式表单。
 feature: Adaptive Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: caa79def-4a29-4746-9a35-c362ea1c3c0c
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 6%
-
+source-wordcount: '1007'
+ht-degree: 8%
 ---
-
-# 教程：创建第一个自适应表单 {#tutorial-create-your-first-adaptive-form}
+# 教程：创建您的第一个自适应表单 {#tutorial-create-your-first-adaptive-form}
 
 ## 应用到 {#applies-to}
 
@@ -100,7 +116,7 @@ ht-degree: 6%
 
 ![adaptive-form-styling](/help/forms/using/assets/09-style-your-adaptive-form-small.png)
 
-自适应表单提供主题和[编辑器](../../forms/using/themes.md)以创建自适应表单的主题。 主题包含组件和面板的样式详细信息，您可以在不同的表单中重复使用主题。 样式包括背景颜色、状态颜色、透明度、对齐方式和大小等属性。将主题应用于表单时，指定的样式会反映在表单的相应组件上。 自适应表单还支持特定于表单的样式的内联样式。
+自适应表单提供主题和[编辑器](../../forms/using/themes.md)以创建自适应表单的主题。 主题包含组件和面板的样式详细信息，您可以在不同的表单中重复使用主题。 样式包括背景颜色、状态颜色、透明度、对齐方式和大小等属性。 将主题应用于表单时，指定的样式会反映在表单的相应组件上。 自适应表单还支持特定于表单的样式的内联样式。
 
 目标：
 
@@ -114,12 +130,12 @@ ht-degree: 6%
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 
-您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[!DNL Site]Forms门户[在AEM &#x200B;](../../forms/using/introduction-publishing-forms.md)上列出。
+您可以将自适应表单发布为独立表单（单页应用程序）、包含在AEM [Sites页面](/help/forms/using/embed-adaptive-form-aem-sites.md)中，或使用[Forms门户](../../forms/using/introduction-publishing-forms.md)在AEM [!DNL Site]上列出。
 
 目标：
 
 * 将自适应表单发布为AEM页面。
 * 将自适应表单嵌入到AEM [!DNL Sites]页面中。
-* 将自适应表单嵌入到外部网页(托管在AEM外部的非AEM网页)中。
+* 将自适应表单嵌入到外部网页（托管在AEM外部的非AEM网页）中。
 
 [![请参阅指南](assets/see-the-guide-sm.png)](publish-your-adaptive-form.md)

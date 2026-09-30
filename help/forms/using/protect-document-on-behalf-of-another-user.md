@@ -1,18 +1,31 @@
 ---
 title: 代表其他用户保护文档
-description: 了解AEM Forms Document Security Java&amp；trade； SDK如何为用户帐户提供API以代表其他用户保护文档。
+description: 了解AEM Forms Document Security Java&trade；SDK如何为用户帐户提供API以代表其他用户保护文档。
 geptopics: SG_AEMFORMS/categories/working_with_document_security
 feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 56280931-c88b-46ea-bee6-f5a5494d715a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '391'
-ht-degree: 0%
-
+ht-degree: 4%
 ---
-
 # 代表其他用户保护文档 {#protect-a-document-on-behalf-of-another-user}
 
 AEM Forms Document Security Java™ SDK提供了API，以允许用户帐户代表其他用户保护文档，而无需获得编辑文档的权限。 您可以在工作流流程中使用API，或以编程方式将API用作文档服务。 新API包括：

@@ -11,19 +11,33 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: b179ca99-c9c6-435a-b000-c7f3fd15cd53
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 85%
-
+source-wordcount: '1653'
+ht-degree: 84%
 ---
-
 
 # SPA 编辑器概述{#spa-editor-overview}
 
-单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。开发人员希望能够使用 SPA 框架构建站点，而作者则希望能够在 AEM 中顺畅地为使用此类框架构建的站点编辑内容。
+单页应用程序 (SPA) 可以为网站用户提供引人入胜的良好体验。 开发人员希望能够使用 SPA 框架构建网站，而作者则希望能够在 AEM 中顺畅地为使用此类框架构建的网站编辑内容。
 
-SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。此页面概述了 SPA 支持在 AEM 中的结构、SPA 编辑器的工作原理以及 SPA 框架和 AEM 保持同步的方式。
+SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。 此页面概述了 SPA 支持在 AEM 中的结构、SPA 编辑器的工作原理以及 SPA 框架和 AEM 保持同步的方式。
 
 {{ue-over-spa}}
 
@@ -33,7 +47,7 @@ SPA 编辑器提供了一个全面的解决方案来支持 AEM 中的 SPA。此�
 
 要在 AEM 中启用 SPA 编辑，需要 SPA 的 JSON 输出与 AEM 存储库中的内容模型之间的映射以保存对内容所做的更改。
 
-AEM 中的 SPA 支持引入了一个薄的 JS 层，该层在页面编辑器中加载时与 SPA JS 代码进行交互，从而发送事件并激活编辑控件的位置以允许进行上下文编辑。此功能基于内容服务 API 端点概念构建，因为来自 SPA 的内容需要通过内容服务进行加载。
+AEM 中的 SPA 支持引入了一个薄的 JS 层，该层在页面编辑器中加载时与 SPA JS 代码进行交互，从而发送事件并激活编辑控件的位置以允许进行上下文编辑。 此功能基于内容服务 API 端点概念构建，因为来自 SPA 的内容需要通过内容服务进行加载。
 
 有关 AEM 中的 SPA 的更多详细信息，请参阅以下文档：
 
@@ -42,19 +56,19 @@ AEM 中的 SPA 支持引入了一个薄的 JS 层，该层在页面编辑器中�
 
 ## 设计 {#design}
 
-SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素。此操作将委派给 SPA 框架。从 JCR 中以 JSON 数据结构形式获取子组件或模型的呈现。之后，根据该结构将 SPA 组件添加到页面。此行为将页面组件的初始主体构图与非 SPA 对应项区分开来。
+SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素。 此操作将委派给 SPA 框架。 从 JCR 中以 JSON 数据结构形式获取子组件或模型的呈现。 之后，根据该结构将 SPA 组件添加到页面。 此行为将页面组件的初始正文构成与非 SPA 对应项区分开来。
 
 ### 页面模型管理 {#page-model-management}
 
-页面模型的解析和管理工作将委派给提供的 `PageModel` 库。SPA必须使用页面模型库进行初始化，并由SPA编辑器进行创作。 页面模型库通过 `aem-react-editable-components` npm 间接提供给 AEM 页面组件。页面模型是 AEM 和 SPA 之间的解释器，因此必须始终存在。在创作页面时，必须添加其他库`cq.authoring.pagemodel.messaging`才能启用与页面编辑器的通信。
+页面模型的解析和管理工作将委派给提供的 `PageModel` 库。 SPA必须使用页面模型库进行初始化，并由SPA编辑器进行创作。 页面模型库通过 `aem-react-editable-components` npm 间接提供给 AEM 页面组件。 页面模型是 AEM 和 SPA 之间的解释器，因此必须始终存在。 在创作页面时，必须添加其他库`cq.authoring.pagemodel.messaging`才能启用与页面编辑器的通信。
 
 如果 SPA 页面组件继承自页面核心组件，则可通过两个选项使 `cq.authoring.pagemodel.messaging` 客户端库类别可用：
 
 * 如果模板是可编辑的，请将它添加到页面策略中。
 * 或者，使用 `customfooterlibs.html` 添加类别。
 
-对于已导出模型中的每个资源，SPA 将映射一个用于呈现的实际组件。
-随后使用容器中的组件映射呈现以JSON表示的模型。
+对于导出模型中的每个资源，SPA将映射一个实际组件，该组件将
+呈现。 之后，使用容器内的组件映射呈现以 JSON 形式表示的模型。
 ![screen_shot_2018-08-20at144152](assets/screen_shot_2018-08-20at144152.png)
 
 >[!CAUTION]
@@ -63,13 +77,13 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 
 ### 通信数据类型 {#communication-data-type}
 
-在将 `cq.authoring.pagemodel.messaging` 类别添加到页面时，它会向页面编辑器发送一条消息以建立 JSON 通信数据类型。当通信数据类型设置为 JSON 时，GET 请求将与组件的 Sling 模型端点进行通信。在页面编辑器中执行更新后，已更新组件的 JSON 表示形式将发送到页面模型库。之后，页面模型库会将更新告知 SPA。
+在将 `cq.authoring.pagemodel.messaging` 类别添加到页面时，它会向页面编辑器发送一条消息以建立 JSON 通信数据类型。 当通信数据类型设置为 JSON 时，GET 请求将与组件的 Sling 模型端点进行通信。 在页面编辑器中执行更新后，已更新组件的 JSON 表示形式将发送到页面模型库。 之后，页面模型库会将更新告知 SPA。
 
 ![screen_shot_2018-08-20at143628](assets/screen_shot_2018-08-20at143628.png)
 
 ## 工作流 {#workflow}
 
-您可以通过将 SPA 编辑器视为 SPA 和 AEM 之间的介质来理解两者之间的交互流程。
+您可以将 SPA 编辑器视为 SPA 和 AEM 之间的中介，从而理解两者之间的交互流程。
 
 * 页面编辑器和 SPA 之间的通信采用的是 JSON 而不是 HTML。
 * 页面编辑器通过 iframe 和消息 API 向 SPA 提供最新版本的页面模型。
@@ -90,7 +104,7 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 1. SPA 编辑器检测呈现的组件并生成叠加。
 1. 作者单击叠加，这将显示组件的编辑工具栏。
 1. SPA 编辑器通过向服务器发出 POST 请求来保存编辑内容。
-1. SPA 编辑器向 SPA 编辑器请求更新的 JSON，后者通过 DOM 事件发送到 SPA。
+1. SPA 编辑器请求更新后的 JSON，并通过 DOM 事件将其发送到 SPA。
 1. SPA 重新呈现相关组件，并更新其 DOM。
 
 >[!NOTE]
@@ -152,13 +166,13 @@ SPA 的页面组件不通过 JSP 或 HTL 文件提供其子组件的 HTML 元素
 1. **6a** 页面模型向页面编辑器提供更新后的创作数据。
 
    **6b** 页面模型将更改发送到组件编排器。
-1. 组件编排器将获取组件映射。
-1. 组件编排器将更新页面内容。
+1. 组件编排器获取组件映射。
+1. 组件编排器更新页面内容。
 1. 当 SPA 更新完页面内容时，页面编辑器将加载创作环境。
 
 ## 要求和限制 {#requirements-limitations}
 
-要使作者能够使用页面编辑器编辑 SPA 的内容，必须实施您的 SPA 应用程序以便与 AEM SPA Editor SDK 进行交互。请参阅[AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md)，了解运行它所需了解的最少信息。
+要使作者能够使用页面编辑器编辑 SPA 的内容，必须实施您的 SPA 应用程序以便与 AEM SPA Editor SDK 进行交互。 请参阅[AEM中的SPA快速入门](/help/sites-developing/spa-getting-started-react.md)，了解运行它所需了解的最少信息。
 
 ### 支持的框架 {#supported-frameworks}
 
@@ -171,18 +185,18 @@ SPA 编辑器 SDK 支持以下最低版本：
 
 ### 其他框架 {#additional-frameworks}
 
-可以实施其他 SPA 框架以与 AEM SPA Editor SDK 结合使用。请参阅[SPA Blueprint](/help/sites-developing/spa-blueprint.md)，了解框架必须满足哪些要求才能创建由模块、组件和服务组成的框架特定层以使用AEM SPA Editor。
+可以实施其他 SPA 框架以与 AEM SPA Editor SDK 结合使用。 请参阅[SPA Blueprint](/help/sites-developing/spa-blueprint.md)，了解框架必须满足哪些要求才能创建由模块、组件和服务组成的框架特定层以使用AEM SPA Editor。
 
 ### 使用多个选择器 {#multiple-selectors}
 
-可以定义其他自定义选择器并将其用作针对 AEM SPA SDK 开发的 SPA 的一部分。但是，此支持要求`model`选择器是第一个选择器，扩展名为`.json`，因为JSON导出程序需要[。](json-exporter-components.md#multiple-selectors)
+可以定义其他自定义选择器并将其用作针对 AEM SPA SDK 开发的 SPA 的一部分。 但是，此支持要求`model`选择器是第一个选择器，扩展名为`.json`，因为JSON导出程序需要[。](json-exporter-components.md#multiple-selectors)
 
 ### 文本编辑器要求 {#text-editor-requirements}
 
 如果您想使用在 SPA 中创建的文本组件的就地编辑器，则需要进行额外配置。
 
-1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。如果存在WKND日志示例内容，则它是`<div>`元素，并且已使用的选择器是`data-rte-editelement`。
-1. 在指向该选择器的相应 AEM 文本组件的 `cq:InplaceEditingConfig` 上设置配置 `editElementQuery`，例如 `data-rte-editelement`。这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
+1. 在包含文本 HTML 的容器包装器元素上设置属性（可以是任意属性）。 如果存在WKND日志示例内容，则它是`<div>`元素，并且已使用的选择器是`data-rte-editelement`。
+1. 在指向该选择器的相应 AEM 文本组件的 `cq:InplaceEditingConfig` 上设置配置 `editElementQuery`，例如 `data-rte-editelement`。 这可让编辑器知道哪个 HTML 元素包装了 HTML 文本。
 
 有关如何完成此操作的示例，请参阅[WKND日志示例内容。](https://github.com/adobe/aem-sample-we-retail-journal/pull/16/files)
 
@@ -195,7 +209,7 @@ AEM SPA Editor SDK随AEM 6.4 Service Pack 2引入。 它由Adobe提供全面支�
 * 目标架构
 * ContextHub
 * 内联图像编辑
-* 编辑配置（例如侦听器）
+* 编辑配置（例如 侦听器）
 * 还原/重做
 * 页面差异和时间扭曲
 * 执行HTML重写服务器端的功能，如链接检查器、CDN重写器服务、URL缩短等。

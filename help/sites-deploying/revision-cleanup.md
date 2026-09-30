@@ -9,13 +9,22 @@ feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 114a77bc-0b7e-49ce-bca1-e5195b4884dc
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '5313'
+source-wordcount: '5314'
 ht-degree: 1%
-
 ---
-
 # 修订版清理{#revision-cleanup}
 
 ## 简介 {#introduction}
@@ -167,7 +176,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>哪些因素决定了联机修订版清理的持续时间？</strong></td>
-   <td>因素为：<br />
+   <td>这些因素包括：<br />
     <ul>
      <li>存储库大小</li>
      <li>在系统上加载（每分钟请求数，特别是写操作）</li>
@@ -380,7 +389,7 @@ TarMK GC: no base state available, running full compaction instead
   </tr>
   <tr>
    <td><strong>根据运行状况检查和日志条目，联机修订清理连续三次未成功完成。 成功完成联机修订清理需要什么条件？</strong></td>
-   <td>您可以执行几个步骤来查找并修复问题：<br />
+   <td>您可以采取几个步骤来查找并修复问题：<br />
     <ul>
      <li>首先，检查日志条目<br /> </li>
      <li>根据日志中的信息，采取适当措施：

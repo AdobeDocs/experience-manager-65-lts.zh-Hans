@@ -9,22 +9,31 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 6659ca39-f297-40b9-88e2-d942aa653e9b
-source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1745'
-ht-degree: 10%
-
+source-wordcount: '1771'
+ht-degree: 11%
 ---
-
 # 管理标记 {#administering-tags}
 
-标记是用于对网站中的内容进行分类的简单快捷方法。它们可以被视为关键字或标签（元数据），从而允许更快地找到作为搜索结果的内容。
+标记是用于对网站中的内容进行分类的简单快捷方法。 它们可以被视为关键字或标签（元数据），从而允许更快地找到作为搜索结果的内容。
 
 在Adobe Experience Manager (AEM)中，标记可以是
 
 * 页面的内容节点（请参阅[使用标记](/help/sites-authoring/tags.md)）
 
-* 资源的元数据节点(请参阅[管理数字Assets的元数据](/help/assets/metadata.md))
+* 资源的元数据节点（请参阅[管理数字Assets的元数据](/help/assets/metadata.md)）
 
 ## 标记功能 {#tag-features}
 
@@ -34,22 +43,22 @@ AEM中的标记的一些功能包括：
 * 新创建标记的主要限制是，它们必须在特定命名空间中是唯一的。
 * 标记的标题不应包含标记路径分隔字符（如果存在，也不会显示）
 
-   * 冒号`:` — 分隔命名空间标记
-   * 正斜杠`/` — 分隔子标记
+  * 冒号`:` — 分隔命名空间标记
+  * 正斜杠`/` — 分隔子标记
 
 * 标记可由作者和网站访客应用。 在分配给页面或进行搜索时，所有形式的标记都可供选择，而无论标记创建者如何。
 * “tag-administrators”组的成员以及对`/content/cq:tags`具有修改权限的成员可以创建标记并修改其分类。
 
-   * 包含子标记的标记称为容器标记
-   * 不是容器标记的标记称为叶标记
-   * 标记命名空间是叶标记或容器标记
+  * 包含子标记的标记称为容器标记
+  * 不是容器标记的标记称为叶标记
+  * 标记命名空间是叶标记或容器标记
 
 * 标记由[搜索组件](https://helpx.adobe.com/cn/experience-manager/core-components/using/quick-search.html)使用，以便于查找内容。
 * 标记由[Teaser组件](https://helpx.adobe.com/cn/experience-manager/core-components/using/teaser.html)使用，该组件监视用户的标记云以提供目标内容。
 * 如果标记是内容的一个重要方面
 
-   * 确保将标记与使用它们的页面一起打包
-   * 确保[标记权限](#setting-tag-permissions)启用读取访问权限
+  * 确保将标记与使用它们的页面一起打包
+  * 确保[标记权限](#setting-tag-permissions)启用读取访问权限
 
 ## 标记控制台 {#tagging-console}
 
@@ -63,9 +72,9 @@ AEM中的标记的一些功能包括：
 * 使用管理权限登录
 * 从全局导航
 
-   * 选择&#x200B;**`Tools`**
-   * 选择&#x200B;**`General`**
-   * 选择&#x200B;**`Tagging`**
+  * 选择&#x200B;**`Tools`**
+  * 选择&#x200B;**`General`**
+  * 选择&#x200B;**`Tagging`**
 
 ![managing_tags_usingthetagasministrationconsole](assets/managing_tags_usingthetagasministrationconsolea.png)
 
@@ -218,7 +227,7 @@ AEM中的标记的一些功能包括：
 >
 >合并后，最初选择的&#x200B;**路径**&#x200B;将（实际上）不再存在。
 >
->移动或合并引用的标记时，不会实际删除该标记，因此可以保留引用。
+>在移动或合并引用的标记时，该标记不会被物理删除，以便能够维护引用。
 
 ### 发布标记 {#publishing-tags}
 
@@ -238,7 +247,7 @@ AEM中的标记的一些功能包括：
 
 ![chlimage_1-203](assets/chlimage_1-203.png)
 
-选择命名空间或其他标记后，选择&#x200B;**删除**&#x200B;图标将从创作环境中永久移除该标记。 如果标记已发布，也会将其从发布环境中删除。如果所选标记是容器标记，则也将移除其所有子标记。
+选择命名空间或其他标记后，选择&#x200B;**删除**&#x200B;图标将从创作环境中永久移除该标记。 如果标记已发布，也会将其从发布环境中删除。 如果所选标记是容器标记，则也将移除其所有子标记。
 
 ## 设置标记权限 {#setting-tag-permissions}
 
@@ -246,30 +255,30 @@ AEM中的标记的一些功能包括：
 
 * 在创作实例上
 
-   * 使用管理权限登录
-   * 访问[安全控制台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)，
+  * 使用管理权限登录
+  * 访问[安全控制台](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)，
 
-      * 例如，浏览到http://localhost:4502/useradmin
+    * 例如，浏览到http://localhost:4502/useradmin
 
-   * 在左窗格中，选择要为其授予[读取权限](/help/sites-administering/security.md#permissions)的组（或用户）
-   * 在右侧窗格中，找到标记命名空间的&#x200B;**Path**
+  * 在左窗格中，选择要为其授予[读取权限](/help/sites-administering/security.md#permissions)的组（或用户）
+  * 在右侧窗格中，找到标记命名空间的&#x200B;**Path**
 
-      * 例如，`/content/cq:tags/mycommunity`
+    * 例如，`/content/cq:tags/mycommunity`
 
-   * 在`checkbox`读取&#x200B;**列中选择**
-   * 选择&#x200B;**保存**
+  * 在&#x200B;**读取**&#x200B;列中选择`checkbox`
+  * 选择&#x200B;**保存**
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
 
 * 确保所有发布实例都具有相同的权限
 
-   * 一种方法是在“作者”上[创建命名空间包](/help/sites-administering/package-manager.md#package-manager)
+  * 一种方法是在“作者”上[创建命名空间包](/help/sites-administering/package-manager.md#package-manager)
 
-      * 在`Advanced`选项卡上，为`AC Handling`选择`Overwrite`
+    * 在`Advanced`选项卡上，为`AC Handling`选择`Overwrite`
 
-   * 复制包
+  * 复制包
 
-      * 从包管理器中选择`Replicate`
+    * 从包管理器中选择`Replicate`
 
 ## 管理不同语言的标记 {#managing-tags-in-different-languages}
 
@@ -277,7 +286,7 @@ AEM中的标记的一些功能包括：
 
 ### 定义多种语言的标记标题 {#defining-tag-titles-in-multiple-languages}
 
-以下介绍如何将`title`Animals **标记的**&#x200B;从英语翻译为德语和法语。
+以下介绍如何将&#x200B;**Animals**&#x200B;标记的`title`从英语翻译为德语和法语。
 
 首先，选择&#x200B;**Stock Photography**&#x200B;命名空间下的标记，然后选择&#x200B;**`Edit`**&#x200B;图标（请参阅[编辑标记](#editing-tags)部分）。
 

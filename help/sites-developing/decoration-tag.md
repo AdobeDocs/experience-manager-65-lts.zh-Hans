@@ -1,28 +1,37 @@
 ---
 title: 修饰标记
-description: 呈现网页中的组件后，可以生成一个 HTML 元素，以将呈现的组件封装在其中。对于开发人员而言，AEM 可提供清晰而简单的逻辑来控制用于封装所包含组件的修饰标记。
+description: 呈现网页中的组件后，可以生成一个 HTML 元素，以将呈现的组件封装在其中。 对于开发人员而言，AEM 可提供清晰而简单的逻辑来控制用于封装所包含组件的修饰标记。
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 085192a0-0415-4861-8bea-a66cd50d9487
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 7%
-
+source-wordcount: '890'
+ht-degree: 10%
 ---
-
 # 修饰标记{#decoration-tag}
 
-呈现网页中的组件后，可以生成一个 HTML 元素，以将呈现的组件封装在其中。这主要有两个目的：
+呈现网页中的组件后，可以生成一个 HTML 元素，以将呈现的组件封装在其中。 这主要有两个目的：
 
 * 仅当组件使用HTML元素封装时，才能对其进行编辑。
 * 包装元素用于应用提供以下功能的HTML类：
 
-   * 布局信息
-   * 样式信息
+  * 布局信息
+  * 样式信息
 
-对于开发人员而言，AEM可提供清晰而简单的逻辑来控制用于封装所包含组件的修饰标记。 是否以及如何呈现修饰标记取决于两个因素的组合，本页将深入探讨这两个因素：
+对于开发人员而言，AEM 可提供清晰而简单的逻辑来控制用于封装所包含组件的修饰标记。 是否以及如何呈现修饰标记取决于两个因素的组合，本页将深入探讨这两个因素：
 
 * 组件本身可以使用一组属性配置其修饰标记。
 * 包含组件（HTL、JSP、Dispatcher等）的脚本可以使用包含参数定义修饰标记的方面。
@@ -43,9 +52,9 @@ ht-degree: 7%
 
 * **`cq:htmlTag`节点：**&#x200B;此节点可以添加到组件下，并且可以具有以下属性：
 
-   * **`cq:tagName {String}`：**&#x200B;这可用于指定用于封装组件的自定义HTML标记，而不是默认DIV元素。
-   * **`class {String}`：**&#x200B;这可用于指定要添加到包装器的CSS类名。
-   * 其他属性名称将添加为HTML属性，其字符串值与提供的值相同。
+  * **`cq:tagName {String}`：**&#x200B;这可用于指定用于封装组件的自定义HTML标记，而不是默认DIV元素。
+  * **`class {String}`：**&#x200B;这可用于指定要添加到包装器的CSS类名。
+  * 其他属性名称将添加为HTML属性，其字符串值与提供的值相同。
 
 ## 脚本控件 {#script-controls}
 

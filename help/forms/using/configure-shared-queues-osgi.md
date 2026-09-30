@@ -8,20 +8,38 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
 role: Admin, User, Developer
 exl-id: 085fa402-d521-4863-876d-c674317b9ade
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 1%
-
+source-wordcount: '847'
+ht-degree: 2%
 ---
-
-# 共享和请求访问用户的收件箱项目 {#share-and-request-access}
+# 共享并请求访问某用户的收件箱项目 {#share-and-request-access}
 
 队列是用户的AEM收件箱中的项目列表。 这些项目可以是分配给用户的项目，也可以是共享给用户所属的组的项目。 您可以访问收件箱以查看收件箱项目并对其执行操作。 例如，与其他用户共享项目。
 
 您还可以与其他用户共享收件箱项目。 一旦其他用户有权访问您的收件箱项目，该用户可以声明共享项目并对其采取适当措施。 同样，您可以向其他用户请求对收件箱项目的访问权限。
 
-## 前提条件 {#pre-requisites}
+## 先决条件 {#pre-requisites}
 
 登录用户必须是`workflow-users`组的成员。 只有登录用户对其具有读取权限的用户或者已启用公共配置文件的用户才能共享项目或请求访问项目。
 
@@ -41,7 +59,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->(仅适用于以Forms为中心的工作流项目)启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**[允许被分配人通过收件箱共享](aem-forms-workflow-step-reference.md)**&#x200B;选项进行共享。 只有启用了上述选项的项目才会显示给其他用户。
+>（仅适用于以Forms为中心的工作流项目）启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**[允许被分配人通过收件箱共享](aem-forms-workflow-step-reference.md)**&#x200B;选项进行共享。 只有启用了上述选项的项目才会显示给其他用户。
 
 ### 共享单个项目
 
@@ -55,7 +73,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->(仅适用于以Forms为中心的工作流项目)启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**[允许被分配者在收件箱](aem-forms-workflow-step-reference.md)**&#x200B;中显式共享。 只有启用了上述选项的项目才会显示给其他用户。
+>（仅适用于以Forms为中心的工作流项目）启用工作流中&#x200B;**分配任务**&#x200B;步骤的&#x200B;**[允许被分配者在收件箱](aem-forms-workflow-step-reference.md)**&#x200B;中显式共享。 只有启用了上述选项的项目才会显示给其他用户。
 
 ## 请求访问收件箱项目 {#request-access}
 
@@ -64,7 +82,7 @@ ht-degree: 1%
 1. 登录到您的AEM实例。 选择![查看选择器](assets/bell.svg)图标并选择&#x200B;**[!UICONTROL 查看全部]**。
 1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;按钮旁边的![视图选择器](assets/viewlist.svg)或![视图选择器](assets/calendar.svg)图标，然后选择&#x200B;**[!UICONTROL 设置]**。 将显示“设置”对话框。
 1. 在&#x200B;**[!UICONTROL 请求访问用户的收件箱项目]**&#x200B;文本框中输入用户的名称，然后选择&#x200B;**[!UICONTROL 请求]**。 请求将发送给用户，并根据用户名显示请求状态。 重复该步骤以添加更多用户。
-1. 选择&#x200B;**[!UICONTROL 保存]**。该请求将作为收件箱项目发送给用户。 用户可以选择该项目，并选择批准或拒绝以授予或拒绝访问权限。
+1. 选择&#x200B;**[!UICONTROL 保存]**。 该请求将作为收件箱项目发送给用户。 用户可以选择该项目，并选择批准或拒绝以授予或拒绝访问权限。
 
 
 ## 其他用户共享的声明项 {#claim-items}

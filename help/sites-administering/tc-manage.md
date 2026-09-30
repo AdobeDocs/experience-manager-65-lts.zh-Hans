@@ -5,13 +5,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Language Copy
 role: Admin
 exl-id: 901bd212-3daf-4b1e-a7c3-afb832959913
-source-git-commit: a0272acbf803ff40b3af9aa292ca0a4532b20a55
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '3546'
 ht-degree: 42%
-
 ---
-
 # 管理翻译项目{#managing-translation-projects}
 
 在准备内容以进行翻译后，您需要通过创建缺少的语言副本来完成语言结构，并创建翻译项目。
@@ -43,8 +55,8 @@ AEM 检测是否正在为内容的初始翻译创建翻译项目，或更新已�
 * **语言副本不包含页面：** AEM 将此情况视为初始翻译。 该页面将立即复制到语言副本，并包含在项目中。 将翻译后的页面导入 AEM 后，AEM 会将此页面直接复制到语言副本。
 * **语言副本已包含页面：** AEM 将此情况视为更新后的翻译。 将创建一个启动项，页面副本将添加到该启动项，并包含在项目中。 利用启动项，您可以先查看更新后的翻译，然后再将它提交给语言副本：
 
-   * 将翻译后的页面导入 AEM 时，它将覆盖启动项中的页面。
-   * 翻译后的页面仅在提升启动项时覆盖语言副本。
+  * 将翻译后的页面导入 AEM 时，它将覆盖启动项中的页面。
+  * 翻译后的页面仅在提升启动项时覆盖语言副本。
 
 例如，/content/geometrixx/fr语言根是为/content/geometrixx/en主语言的法语翻译创建的。 法语副本中没有任何其他页面。
 

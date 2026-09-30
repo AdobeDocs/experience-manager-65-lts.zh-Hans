@@ -6,13 +6,24 @@ role: User, Admin
 feature: Developer Tools
 solution: Experience Manager, Experience Manager Assets
 exl-id: a74c52bc-f639-4fc2-90e5-bac24fbb9ade
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '694'
 ht-degree: 12%
-
 ---
-
 # 扩展资产编辑器 {#extending-asset-editor}
 
 资产编辑器是一个页面，单击通过资产共享找到的资产时，将打开该页面，以便用户编辑资产的方面，如元数据、缩略图、标题和标记。
@@ -197,11 +208,11 @@ Geometrixx中包含以下示例页面：
    </div>
    ```
 
-1. 为了使组件可用，您需要能够对其进行编辑。要使组件可编辑，请在CRXDE Lite中添加主类型`cq:EditConfig`的节点`cq:editConfig`。 为了删除段落，请添加一个单值为`DELETE`的多值属性`cq:actions`。
+1. 为了使组件可用，您需要能够对其进行编辑。 要使组件可编辑，请在CRXDE Lite中添加主类型`cq:EditConfig`的节点`cq:editConfig`。 为了删除段落，请添加一个单值为`DELETE`的多值属性`cq:actions`。
 
 1. 导航到浏览器，在示例页面（例如，`asseteditor.html`）上切换到设计模式并为段落系统启用新组件。
 
-1. 在&#x200B;**编辑**&#x200B;模式中，新组件（例如，**示例元数据**）现在可在 Sidekick 中使用（位于&#x200B;**资产编辑器**&#x200B;组中）。插入组件。要能够存储元数据，必须将其添加到元数据表单中。
+1. 在&#x200B;**编辑**&#x200B;模式中，新组件（例如，**示例元数据**）现在可在 Sidekick 中使用（位于&#x200B;**资产编辑器**&#x200B;组中）。 插入组件。 要能够存储元数据，必须将其添加到元数据表单中。
 
 ## 修改元数据选项 {#modifying-metadata-options}
 

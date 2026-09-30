@@ -11,13 +11,27 @@ role: User, Admin
 mini-toc-levels: 3
 solution: Experience Manager, Experience Manager Assets
 exl-id: b7ee16db-fde2-4d06-b06c-945b6d876f8d
-source-git-commit: ad4c80af0d9aa88837164ba1a8d6be2042b2c0d4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: d8ea7e82-d45e-442f-bb04-b3788a7abcb0
+    internal-label: Video profiles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3711'
+source-wordcount: '3747'
 ht-degree: 5%
-
 ---
-
 # 视频配置文件 {#video-profiles}
 
 Dynamic Media已随附预定义的自适应视频编码配置文件。 此现成配置文件中的设置已经过优化，可为客户提供最佳观看体验。 当您使用自适应视频编码配置文件对主要源视频进行编码时，视频播放器会优化播放质量。 它可根据客户的Internet连接速度自动调整视频流。 此功能称为自适应比特率流。
@@ -38,7 +52,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件。 此现成
 
 >[!NOTE]
 >
->要生成视频的元数据和关联的视频图像缩略图，视频本身必须在Dynamic Media中完成编码过程。 在Adobe Experience Manager中，如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。请参阅[监控视频编码和YouTube发布进度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 （如果您未使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。）
+>要生成视频的元数据和关联的视频图像缩略图，视频本身必须在Dynamic Media中完成编码过程。 在Adobe Experience Manager中，如果您已启用Dynamic Media并设置了视频云服务，则&#x200B;**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流会对视频进行编码。 此工作流会捕获工作流进程历史记录和失败信息。 请参阅[监控视频编码和YouTube发布进度](/help/assets/video.md#monitoring-video-encoding-and-youtube-publishing-progress)。 如果您已启用Dynamic Media并设置了视频云服务，则在您上传视频时，**[!UICONTROL Dynamic Media编码视频]**&#x200B;工作流将自动生效。 （如果您未使用Dynamic Media，则&#x200B;**[!UICONTROL DAM更新资产]**&#x200B;工作流将生效。）
 >
 >在搜索资源时，元数据很有用。 缩略图是在编码期间生成的静态视频图像。 Experience Manager系统需要这些视频并在用户界面中使用它们，以帮助您在“卡片”视图、“搜索结果”视图和“资源列表”视图中直观地识别视频。 选择已编码视频的“演绎版”图标（画板面板）时，您可以查看生成的缩略图。
 
@@ -109,7 +123,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件。 此现成
 * 每秒30帧(FPS)。
 * 300 MB文件大小。
 
-Adobe AI限制为9000帧。 即，30 FPS时为5分钟。 如果视频的FPS较高，则支持的最大视频持续时间会缩短。 例如，Adobe AI和智能裁剪仅支持60 FPS视频，但前提是视频长度至少为2.5分钟。
+Adobe AI限制为9000帧。 即，30 FPS时为5分钟。 如果视频的FPS较高，则支持的最大视频持续时间会缩短。 例如，Adobe AI和智能裁剪仅支持60 FPS视频，但其长度至少为两分半钟。
 
 ![视频的智能裁剪](assets/smart-crop-video.png)
 
@@ -221,13 +235,13 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（MP4 H.264�
 1. 执行以下操作：
    * 在&#x200B;**[!UICONTROL 宽度]**&#x200B;字段中，输入&#x200B;**[!UICONTROL 自动]**。
    * 在&#x200B;**[!UICONTROL 高度]**&#x200B;字段中，输入像素值。
-为了帮助您可视化视频大小，请选择“高度”的信息图标以打开&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面根据需要进一步设置视频维度（蓝框）。 完成后，在对话框的右上角，选择&#x200B;**[!UICONTROL X]**。
+     为了帮助您可视化视频大小，请选择“高度”的信息图标以打开&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面。 使用&#x200B;**[!UICONTROL 大小计算器]**&#x200B;页面根据需要进一步设置视频维度（蓝框）。 完成后，在对话框的右上角，选择&#x200B;**[!UICONTROL X]**。
 1. （可选）执行以下操作之一：
 
    * 选择&#x200B;**[!UICONTROL 高级]**&#x200B;选项卡，并确保选中&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框（推荐）。
 
    * 清除&#x200B;**[!UICONTROL 使用默认值]**&#x200B;复选框，并指定所需的视频设置和音频设置。
-选择每个选项旁边的信息图标。 您可以阅读基于所选视频格式编解码器的其他说明或推荐的设置。
+     选择每个选项旁边的信息图标。 您可以阅读基于所选视频格式编解码器的其他说明或推荐的设置。
 
 1. 在页面的右上角，选择&#x200B;**[!UICONTROL 保存]**&#x200B;以保存预设。
 1. 执行下列操作之一：
@@ -281,7 +295,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（MP4 H.264�
   </tr>
   <tr>
    <td><code>keyframe</code></td>
-   <td>关键帧之间的目标帧数。 计算此值以便每2-10秒生成一次关键帧。 例如，以每秒30帧的速度显示，关键帧间隔应为60-300。<br /> <br />较低的关键帧间隔改善了自适应视频编码的流搜寻和流切换行为，并且可能还提高了高运动视频的质量。 但是，由于关键帧会增加文件的大小，因此较低的关键帧间隔通常会导致在给定比特率下整体视频质量较低。</td>
+   <td>关键帧之间的目标帧数。 计算此值以便每2-10秒生成一次关键帧。 例如，以每秒30帧的速度计算，关键帧间隔应为60-300。<br /> <br /> 较低的关键帧间隔改善了自适应视频编码的流搜寻和流切换行为，并且还可以提高具有高运动特性的视频的质量。 但是，由于关键帧会增加文件的大小，因此较低的关键帧间隔通常会导致在给定比特率下整体视频质量较低。</td>
    <td><code>String</code></td>
    <td><p>正数。</p> <p>默认值为300。</p> <p>DASH或HLS的推荐值为60-90。</p> </td>
   </tr>
@@ -346,7 +360,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（MP4 H.264�
 1. 在“视频配置文件”页面上，检查一个视频配置文件名称。
 1. 在工具栏上，选择&#x200B;**[!UICONTROL 复制]**。
 1. 在视频编码配置文件页面上，输入配置文件的新名称。
-1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 选择信息图标以获取自适应比特率流的描述。 （如果要复制渐进式视频轮廓，请勿选中此复选框。）
+1. 作为最佳实践，请确保选中“自 **[!UICONTROL 适应流播放的编码]** ”复选框。 选择信息图标以获取自适应比特率流的描述。 （如果要复制渐进式视频配置文件，请勿选中此复选框。）
 
    在Dynamic Media — 混合模式下，如果WebM视频预设是视频配置文件的一部分，则无法为自适应流进行&#x200B;**[!UICONTROL 编码]**，因为所有预设都必须是MP4。
 1. 在“视频编码预设”标题下，添加、编辑或删除构成配置文件的视频编码预设。
@@ -399,7 +413,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（MP4 H.264�
 1. 选择&#x200B;**[!UICONTROL 视频配置文件]**&#x200B;选项卡，然后从下拉菜单中选择配置文件，然后选择&#x200B;**[!UICONTROL 保存并关闭]**。 用户界面在卡片名称中显示配置文件名称，以指示文件夹已分配配置文件。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
-您可以[监视视频配置文件处理作业](#monitoring-the-progress-of-an-encoding-job)的进度。
+   您可以[监视视频配置文件处理作业](#monitoring-the-progress-of-an-encoding-job)的进度。
 
 ### 全局应用视频配置文件 {#applying-a-video-profile-globally}
 
@@ -418,7 +432,7 @@ Dynamic Media已随附预定义的自适应视频编码配置文件（MP4 H.264�
 
 将显示处理指示器（或进度条），以便您可以直观地监视视频配置文件处理作业的进度。
 
-您还可以查看`error.log`文件以监视编码作业的进度，查看编码是否已完成，或查看任何作业错误。 在安装Experience Manager实例的`error.log`文件夹中找到`logs`。
+您还可以查看`error.log`文件以监视编码作业的进度，查看编码是否已完成，或查看任何作业错误。 在安装Experience Manager实例的`logs`文件夹中找到`error.log`。
 
 ## 从文件夹中删除视频配置文件 {#removing-a-video-profile-from-folders}
 

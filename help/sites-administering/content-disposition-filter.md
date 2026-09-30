@@ -1,5 +1,5 @@
 ---
-title: 内容处置过滤器
+title: 内容处置筛选条件
 description: 了解如何使用内容处置过滤器来防御XSS攻击。
 contentOwner: trushton
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 exl-id: 997cb6f3-1ef8-409c-acea-157d5b27a6b2
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 0%
-
+source-wordcount: '244'
+ht-degree: 2%
 ---
-
-# 内容处置过滤器 {#content-disposition-filter}
+# 内容处置筛选条件 {#content-disposition-filter}
 
 内容处置过滤器是一项安全功能，可抵御对SVG文件的XSS攻击。
 

@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 802130c3-9cb8-46b7-98c2-fd9e83d18ec3
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '497'
 ht-degree: 2%
-
 ---
-
 # Adobe Experience Manager疑难解答 {#troubleshooting-aem}
 
 以下部分涵盖您在使用AEM (Adobe Experience Manager)时可能遇到的一些问题，以及有关如何解决这些问题的建议。
@@ -101,7 +110,7 @@ ht-degree: 2%
 在为AEM WCM开发功能时，可能会打开JCR会话（相当于打开数据库连接）。 如果打开的会话从未关闭，则您的系统可能会遇到以下症状：
 
 * 系统变慢了。
-* 您可以看到许多CacheManager： resizeAll条目（在日志文件中）；以下数字(size=&lt;x>)显示高速缓存数，每个会话打开多个高速缓存。
+* 您可以看到许多CacheManager： resizeAll条目在日志文件中；以下数字（大小=&lt;x>) shows the number of caches, each session opens several caches.）
 * 系统有时内存不足（在数小时、数天或数周后，具体取决于严重程度）。
 
 要开始分析未关闭的会话，请参阅知识库文章[未关闭的资源解析程序](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-23761)。

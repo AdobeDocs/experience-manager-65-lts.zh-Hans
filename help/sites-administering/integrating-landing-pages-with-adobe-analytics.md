@@ -1,5 +1,5 @@
 ---
-title: 将Landing Pages与Adobe Analytics集成
+title: 将登陆页面与 Adobe Analytics 集成
 description: 了解如何将登陆页面与Adobe Analytics集成。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,29 +9,38 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 24ab494d-4a11-408e-8dc0-de16508edfac
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 0%
-
+source-wordcount: '380'
+ht-degree: 5%
 ---
+# 将登陆页面与 Adobe Analytics 集成{#integrating-landing-pages-with-adobe-analytics}
 
-# 将Landing Pages与Adobe Analytics集成{#integrating-landing-pages-with-adobe-analytics}
-
-AEM已使用以下行动号召(CTA)组件将登陆页面解决方案与[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)集成：
+AEM已通过使用以下call-to-action (CTA)组件将登陆页面解决方案与[Adobe Analytics](https://www.omniture.com/en/products/analytics/sitecatalyst)集成：
 
 1. 点进组件
 1. 图形链接组件
 
 这些组件展示某些可通过Adobe Analytics变量（流量、转化变量）和成功事件映射的属性，以将信息发送到Adobe Analytics。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 Adobe建议您通过[现有AEM-Adobe Analytics集成](/help/sites-administering/adobeanalytics.md)了解此集成的工作方式。
 
 ## 可用于映射的组件 {#components-available-for-mapping}
 
-在AEM中，sidekick中此处显示的&#x200B;**行动号召**&#x200B;组件 — **ClickThroughLink**&#x200B;和&#x200B;**GraphicLink** — 可以映射到Adobe Analytics变量。
+在AEM中，显示在sidekick中的&#x200B;**Call to action**&#x200B;组件（**ClickThroughLink**&#x200B;和&#x200B;**GraphicLink**）可以映射到Adobe Analytics变量。
 
 ![chlimage_1-21](assets/chlimage_1-21a.jpeg)
 
@@ -40,7 +49,7 @@ Adobe建议您通过[现有AEM-Adobe Analytics集成](/help/sites-administering/
 要将登陆页面组件映射到Adobe Analytics，请执行以下操作：
 
 1. 在创建Adobe Analytics配置并创建框架后，从下拉菜单中选择相应的报表包。 这会导致提取Adobe Analytics变量并在内容查找器中显示它们。
-1. 根据需要，将行动号召(CTA)组件从Sidekick拖放到页面中部的映射区域。
+1. 根据需要，将Call to action (CTA)组件从Sidekick拖放到页面中部的映射区域。
 
 <table>
  <tbody>

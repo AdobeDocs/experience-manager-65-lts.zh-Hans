@@ -10,13 +10,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: af957cd7-ad3d-46f2-9ca5-e175538104f1
-source-git-commit: 929a2175449a371ecf81226fedb98a0c5c6d7166
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '6331'
+source-wordcount: '6333'
 ht-degree: 0%
-
 ---
-
 # 带有MongoDB的Adobe Experience Manager{#aem-with-mongodb}
 
 >[!NOTE]
@@ -80,7 +92,7 @@ RAM不足会导致性能显着降低。 工作集和数据库的大小与应用�
 
 为了帮助执行负载测试过程，可以假定工作集与数据库总大小的比率如下：
 
-* 1:10用于SSD存储
+* 固态硬盘存储为1:10
 * 硬盘存储为1:3
 
 这些比率意味着对于SSD部署，2 TB的数据库需要200 GB的RAM。
@@ -242,7 +254,7 @@ MongoDB运行在多种操作系统上，包括各种Linux®风格、Windows和ma
 * 关闭透明的hugepages和碎片整理。 有关详细信息，请参阅[透明大页面设置](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/)。
 * [调整存储数据库文件的设备上的预读设置](https://docs.mongodb.com/manual/administration/production-notes/#readahead)，以适合您的使用案例。
 
-   * 对于WiredTiger存储引擎，无论存储介质类型（旋转、SSD等）如何，均将预读设置为0。 通常，使用推荐的预读设置，除非测试显示可在更高的预读值中获得可衡量、可重复和可靠的好处。 [MongoDB专业支持](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可以提供有关非零预读配置的建议和指导。
+  * 对于WiredTiger存储引擎，无论存储介质类型（旋转、SSD等）如何，均将预读设置为0。 通常，使用推荐的预读设置，除非测试显示可在更高的预读值中获得可衡量、可重复和可靠的好处。 [MongoDB专业支持](https://docs.mongodb.com/manual/administration/production-notes/#readahead)可以提供有关非零预读配置的建议和指导。
 
 * 如果在虚拟环境中运行RHEL 7 / CentOS 7，请禁用优化工具。
 * 当RHEL 7/CentOS 7在虚拟环境中运行时，优化工具会自动调用从性能吞吐量派生的性能配置文件，该配置文件会自动将预读设置设置为4 MB。 此设置可能会对性能产生负面影响。
@@ -255,9 +267,9 @@ MongoDB运行在多种操作系统上，包括各种Linux®风格、Windows和ma
 * 对[dbPath](https://docs.mongodb.com/manual/reference/configuration-options/#storage.dbPath)装入点使用noatime。
 * 为部署配置足够的文件句柄(fs.file-max)、内核pid限制(kernel.pid_max)和每个进程的最大线程数(kernel.threads-max)。 对于大型系统，以下值是一个很好的起点：
 
-   * fs.file-max值98000，
-   * kernel.pid_max值64000，
-   * andkernel.threads-64000的最大值
+  * fs.file-max值98000，
+  * kernel.pid_max值64000，
+  * andkernel.threads-64000的最大值
 
 * 确保系统已配置交换空间。 有关适当大小的详细信息，请参阅操作系统的文档。
 * 确保正确设置系统默认的TCP keepalive。 值为300通常为副本集和共享群集提供更好的性能。 请参阅：[TCP keepalive时间是否影响MongoDB部署？](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) ，以了解更多信息。

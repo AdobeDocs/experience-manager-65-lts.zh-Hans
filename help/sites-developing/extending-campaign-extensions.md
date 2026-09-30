@@ -10,13 +10,22 @@ feature: Developing
 role: Developer
 exl-id: 7cdce721-ca00-43ac-a543-85bfad382821
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '533'
 ht-degree: 3%
-
 ---
-
 
 # 自定义 Adobe Campaign 扩展 {#creating-custom-extensions}
 
@@ -167,11 +176,11 @@ AEM提供了开箱即用的API，用于检索可在站点管理员资源管理�
 
 对于资源管理器中的每个节点，都有一个API链接到该节点。 例如，对于节点：
 
-* [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommended](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
+* [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
 API是：
 
-* [http://localhost:4502/content/campaigns/geometrixx/scott-recommended.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
+* [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 URL **.1.json**&#x200B;的末尾可以替换为&#x200B;**.2.json**、**.3.json**（根据您感兴趣的子级别数）。 若要获取所有关键字，可以使用&#x200B;**infinity**：
 

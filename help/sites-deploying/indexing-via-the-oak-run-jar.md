@@ -8,13 +8,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
 exl-id: a6344463-7796-4ee3-8b2e-b3bfd2aec99a
-source-git-commit: 408f6aaedd2cc0315f6e66b83f045ca2716db61d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '985'
 ht-degree: 0%
-
 ---
-
 # 通过Oak-run Jar编制索引 {#indexing-via-the-oak-run-jar}
 
 Oak-run支持命令行上的所有索引用例，而无需从JMX级别操作。 oak-run方法的优点包括：
@@ -62,7 +71,7 @@ Oak-run支持命令行上的所有索引用例，而无需从JMX级别操作。 
 
 ### SegmentNodeStore和DocumentNodeStore的文本预提取 {#textpre-extraction}
 
-[文本预提取](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction)(自AEM 6.3以来一直存在的功能)可用于减少重新索引的时间。 文本预提取可用于所有重新索引方法。
+[文本预提取](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-perform-text-pre-extraction)（自AEM 6.3以来一直存在的功能）可用于减少重新索引的时间。 文本预提取可用于所有重新索引方法。
 
 根据`oak-run.jar`索引方法，下图中的“执行重新索引”步骤的每一侧都有各种步骤。
 
@@ -92,11 +101,11 @@ SegmentNodeStore和DocumentNodeStore的![文本预提取](assets/4.png)
 
 * **冷待机注意事项(TarMK)**
 
-   * 冷备用没有特殊注意事项；冷备用实例同步会照常更改。
+  * 冷备用没有特殊注意事项；冷备用实例同步会照常更改。
 
 * **AEM发布场（AE发布场应始终为TarMK）**
 
-   * 对于发布场，必须为全部完成或在单个发布上执行步骤。 然后，克隆其他人的设置(在克隆AEM实例时执行所有常规弃用；sling.id — 应链接到此处某些内容)。
+  * 对于发布场，必须为全部完成或在单个发布上执行步骤。 然后，克隆其他人的设置（在克隆AEM实例时执行所有常规弃用；sling.id — 应链接到此处某些内容）。
 
 ### TarMK的在线重新索引 {#onlinere-indexingfortarmk}
 

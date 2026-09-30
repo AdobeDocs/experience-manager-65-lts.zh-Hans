@@ -5,13 +5,26 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
 exl-id: 508f9dfb-1a4e-45bd-acdd-48cc910bdd0f
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '721'
 ht-degree: 1%
-
 ---
-
 # 选择您的 UI{#selecting-your-ui}
 
 Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户可能会想要切换到[经典UI](/help/sites-classic-ui-authoring/classicui.md)。 执行此操作有多种选项。
@@ -39,7 +52,7 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 >
 >从以前的版本升级的实例会保留用于页面创作的经典UI。
 >
->升级后，页面创作不会自动切换到触控式UI，但您可以使用[WCM创作UI模式服务](/help/sites-deploying/configuring-osgi.md) （**服务）的** OSGi配置`AuthoringUIMode`配置此设置。 查看编辑器[的](#ui-overrides-for-the-editor)UI覆盖。
+>升级后，页面创作不会自动切换到触控式UI，但您可以使用&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)配置此设置。 查看编辑器[&#128279;](#ui-overrides-for-the-editor)的UI覆盖。
 
 ## 为实例配置默认UI {#configuring-the-default-ui-for-your-instance}
 
@@ -103,21 +116,21 @@ Adobe Experience Manager (AEM)触屏优化UI是标准UI。 但是，有时用户
 
 * 创作页面时：
 
-   * 在URL中使用`cf#`访问页面时，强制使用经典编辑器。 例如：
-     `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
+  * 在URL中使用`cf#`访问页面时，强制使用经典编辑器。 例如：
+    `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * 在URL中使用`/editor.html`或使用触控设备时，会强制使用已启用触控功能的编辑器。 例如：
-     `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
+  * 在URL中使用`/editor.html`或使用触控设备时，会强制使用已启用触控功能的编辑器。 例如：
+    `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 任何强制都是临时的，并且仅对浏览器会话有效
 
-   * Cookie集的设置取决于使用的是已启用触屏(`editor.html`)还是经典(`cf#`)。
+  * Cookie集的设置取决于使用的是已启用触屏(`editor.html`)还是经典(`cf#`)。
 
 * 通过`siteadmin`打开页面时，会检查是否存在以下内容：
 
-   * Cookie
-   * 用户首选项
-   * 如果两者都不存在，则默认为[WCM创作UI模式服务](/help/sites-deploying/configuring-osgi.md) （**服务）的** OSGi配置`AuthoringUIMode`中设置的定义。
+  * Cookie
+  * 用户首选项
+  * 如果两者都不存在，则默认为&#x200B;**WCM创作UI模式服务** （`AuthoringUIMode`服务）的[OSGi配置](/help/sites-deploying/configuring-osgi.md)中设置的定义。
 
 >[!NOTE]
 >

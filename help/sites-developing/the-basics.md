@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: fe3735ff-5c9b-4eb8-bf1d-f2189ec7e26f
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '3366'
+source-wordcount: '3373'
 ht-degree: 1%
-
 ---
-
 # AEM 核心概念 {#aem-core-concepts}
 
 >[!NOTE]
@@ -28,10 +37,10 @@ ht-degree: 1%
 
 * Web应用程序技术的基本知识，包括：
 
-   * request -response (XMLHttpRequest / XMLHttpResponse)循环
-   * HTML
-   * CSS
-   * JavaScript
+  * request -response (XMLHttpRequest / XMLHttpResponse)循环
+  * HTML
+  * CSS
+  * JavaScript
 
 * 具有Experience Server (CRX)的工作知识，包括Content Explorer
 * 对于在经典UI中进行开发，还需要JSP的基础知识(JavaServer Pages)，包括理解和修改简单JSP示例的能力。
@@ -86,8 +95,8 @@ Sling 采用&#x200B;*以内容为中心*&#x200B;的框架。 这意味着处理�
 * RESTful，而不仅仅是在曲面上；资源和表示在服务器内正确建模
 * 删除一个或多个数据模型
 
-   * 以前需要用到的URL结构、业务对象、数据库架构；
-   * 现在简化为： URL =资源= JCR结构
+  * 以前需要用到的URL结构、业务对象、数据库架构；
+  * 现在简化为： URL =资源= JCR结构
 
 ### URL分解 {#url-decomposition}
 
@@ -160,11 +169,11 @@ Sling还允许将JCR节点以外的内容作为资源，但这是一项高级功
 * 当需要方法(GET、POST)时，将按照HTTP规范（例如jobs.POST.esp）以大写形式指定（请参阅下文）
 * 支持各种脚本引擎：
 
-   * HTL（HTML模板语言 — Adobe Experience Manager为HTML首选和推荐的服务器端模板系统）： `.html`
-   * ECMAScript (JavaScript)页面（服务器端执行）： `.esp, .ecma`
-   * Java™服务器页面（服务器端执行）： `.jsp`
-   * Java™ Servlet编译器（服务器端执行）： `.java`
-   * JavaScript模板（客户端执行）： `.jst`
+  * HTL（HTML模板语言 — Adobe Experience Manager为HTML首选和推荐的服务器端模板系统）： `.html`
+  * ECMAScript (JavaScript)页面（服务器端执行）： `.esp, .ecma`
+  * Java™服务器页面（服务器端执行）： `.jsp`
+  * Java™ Servlet编译器（服务器端执行）： `.java`
+  * JavaScript模板（客户端执行）： `.jst`
 
 Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列出了给定的AEM实例支持的脚本引擎列表。
 
@@ -198,19 +207,19 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
 * 如果未定义sling:resourceType，则：
 
-   * 内容路径用于搜索适当的脚本（如果基于路径的ResourceTypeProvider处于活动状态）。
+  * 内容路径用于搜索适当的脚本（如果基于路径的ResourceTypeProvider处于活动状态）。
 
-     例如，`../content/corporate/jobs/developer.html`的脚本将在`/apps/content/corporate/jobs/`中生成搜索。
+    例如，`../content/corporate/jobs/developer.html`的脚本将在`/apps/content/corporate/jobs/`中生成搜索。
 
-   * 使用主节点类型。
+  * 使用主节点类型。
 
 * 如果未找到脚本，则使用默认脚本。
 
   默认演绎版支持纯文本(.txt)、HTML (.html)和JSON (.json)，所有这些演绎版都列出了节点的属性（格式适当）。 扩展名.res或不带请求扩展名的请求的默认演绎版是假脱机资源（如果可能）。
 * 对于http错误处理（代码403或404），Sling会在以下位置查找脚本：
 
-   * [自定义脚本](/help/sites-developing/customizing-errorhandler-pages.md)的/apps/sling/servlet/errorhandler位置
-   * 或标准脚本/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
+  * [自定义脚本](/help/sites-developing/customizing-errorhandler-pages.md)的/apps/sling/servlet/errorhandler位置
+  * 或标准脚本/libs/sling/servlet/errorhandler/403.esp或404.esp的位置。
 
 如果给定请求应用了多个脚本，则会选择具有最佳匹配的脚本。 匹配项越具体，其效果就越好；换句话说，无论请求扩展名或方法名称是否匹配，选择器越匹配越好。
 
@@ -243,30 +252,30 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
 * /
 
-   * a
-   * b
+  * a
+  * b
 
-      * sling:resourceSuperType = a
+    * sling:resourceSuperType = a
 
-   * c
+  * c
 
-      * sling:resourceSuperType = b
+    * sling:resourceSuperType = b
 
-   * x
+  * x
 
-      * sling:resourceType = c
+    * sling:resourceType = c
 
-   * y
+  * y
 
-      * sling:resourceType = c
-      * sling:resourceSuperType = a
+    * sling:resourceType = c
+    * sling:resourceSuperType = a
 
 类型层次结构：
 
 * `/x`
-   * 为`[ c, b, a, <default>]`
+  * 为`[ c, b, a, <default>]`
 * 当`/y`时
-   * 层次结构为`[ c, a, <default>]`
+  * 层次结构为`[ c, a, <default>]`
 
 这是因为`/y`具有`sling:resourceSuperType`属性，而`/x`没有，因此其超类型取自其资源类型。
 
@@ -278,8 +287,8 @@ Felix管理控制台(`http://<host>:<port>/system/console/slingscripting`)上列
 
 * 自动处理GET以外的http方法，包括：
 
-   * POST、PUT、通过sling默认实现处理的DELETE
-   * sling:resourceType位置中的`POST.jsp`脚本
+  * POST、PUT、通过sling默认实现处理的DELETE
+  * sling:resourceType位置中的`POST.jsp`脚本
 
 * 您的代码架构不再像以前那样干净或结构清晰；这对于大规模开发至关重要
 
@@ -470,9 +479,9 @@ FileVault为JCR存储库提供文件系统映射和版本控制。 它可用于�
 * 高效地管理网站的不同语言版本。
 * 根据源站点自动更新一个或多个站点：
 
-   * 实施通用的基础结构并在多个站点间使用通用内容。
-   * 最大限度地利用可用资源。
-   * 保持统一的外观和风格。
-   * 将工作重点放在管理不同站点之间的内容上。
+  * 实施通用的基础结构并在多个站点间使用通用内容。
+  * 最大限度地利用可用资源。
+  * 保持统一的外观和风格。
+  * 将工作重点放在管理不同站点之间的内容上。
 
 有关详细信息，请参阅[多站点管理器](/help/sites-administering/msm.md)。

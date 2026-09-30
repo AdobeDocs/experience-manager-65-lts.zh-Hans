@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 68a4d4b2-91a3-4545-a491-2a1ec08ceec5
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2082'
 ht-degree: 7%
-
 ---
-
 # 配置搜索表单{#configuring-search-forms}
 
 使用&#x200B;**搜索Forms**&#x200B;可自定义搜索面板中使用的搜索谓词选择，这些面板可在各种AEM控制台和/或创作环境的面板中使用。 自定义这些面板可根据您的特定需求使搜索功能通用。
@@ -26,9 +35,9 @@ ht-degree: 7%
 
 * **工具**
 
-   * **常规**
+  * **常规**
 
-      * **搜索Forms**
+    * **搜索Forms**
 
 首次访问此控制台时，您可以看到所有配置都有一个挂锁符号。 这表示相应的配置是默认（现成）配置 — 无法删除。 自定义配置后，锁定将消失，除非您[删除自定义配置](#deleting-a-configuration-to-reinstate-the-default)。 在这种情况下，将恢复缺省值（和挂锁指示器）。
 

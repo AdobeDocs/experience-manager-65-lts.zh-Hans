@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 7eae83bd-7982-4051-821f-b43f65c5af2b
-source-git-commit: cf22b13e0f7c8e66b598f85aab81b022480e60bc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 2%
-
+source-wordcount: '2529'
+ht-degree: 1%
 ---
-
 # 使用Sling适配器{#using-sling-adapters}
 
 [Sling](https://sling.apache.org)提供[适配器模式](https://sling.apache.org/documentation/the-sling-engine/adapters.html)以方便翻译实现[可适应](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29)接口的对象。 此接口提供了一个通用[adaptTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29)方法，它将对象转换为作为参数传递的类类型。
@@ -72,11 +81,11 @@ Node node = resource.adaptTo(Node.class);
 
   对象仍必须实现`Adaptable`接口，并且必须扩展[`SlingAdaptable`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/sling/adapter/SlingAdaptable.html)（它将`adaptTo`调用传递到中央适配器管理器）。
 
-  挂接到现有类（如`adaptTo`）的`Resource`机制。
+  挂接到现有类（如`Resource`）的`adaptTo`机制。
 
 * 两者的组合。
 
-对于第一种情况，Java™文档可以说明哪些`adaptTo-targets`是可能的。 但是，对于特定的子类（如基于JCR的资源），通常不可能执行此操作。 在后一种情况下，`AdapterFactory`的实现通常是捆绑包的私有类的一部分，因此未在客户端API中公开或列在Java™文档中。 从理论上讲，可以从`AdapterFactory`OSGi[服务运行时访问所有](/help/sites-deploying/configuring-osgi.md)实现并查看其“可适应的”（源和目标）配置，但不能将它们相互映射。 最后，它取决于内部逻辑，必须记录该逻辑。 因此，请参考。
+对于第一种情况，Java™文档可以说明哪些`adaptTo-targets`是可能的。 但是，对于特定的子类（如基于JCR的资源），通常不可能执行此操作。 在后一种情况下，`AdapterFactory`的实现通常是捆绑包的私有类的一部分，因此未在客户端API中公开或列在Java™文档中。 从理论上讲，可以从[OSGi](/help/sites-deploying/configuring-osgi.md)服务运行时访问所有`AdapterFactory`实现并查看其“可适应的”（源和目标）配置，但不能将它们相互映射。 最后，它取决于内部逻辑，必须记录该逻辑。 因此，请参考。
 
 ## 引用 {#reference}
 
@@ -168,7 +177,7 @@ Node node = resource.adaptTo(Node.class);
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/dam/api/Rendition.html">演绎版</a></td>
-   <td>如果它是<code>dam:Asset</code>节目（<code>nt:file</code>的节目文件夹下的<code>dam:Asset</code>）</td>
+   <td>如果它是<code>dam:Asset</code>节目（<code>dam:Asset</code>的节目文件夹下的<code>nt:file</code>）</td>
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/tagging/Tag.html">标记</a></td>
@@ -313,7 +322,7 @@ Node node = resource.adaptTo(Node.class);
 | [节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) | 组件的节点。 |
 | ... | 组件资源可以适应的一切。 |
 
-**模板[2&rbrace;](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Template.html)适应：**
+**模板[2&rbrace;**&#x200B;适应：](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Template.html)
 
 <table>
  <tbody>
@@ -338,7 +347,7 @@ Node node = resource.adaptTo(Node.class);
 
 #### 安全性 {#security}
 
-**可授权**、&lbrace;User&#x200B;**和&#x200B;**&#x200B;组**&#x200B;适应：
+**可授权**、&lbrace;User **和**&#x200B;组**适应：
 
 | [节点](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html) | 返回用户/组主节点。 |
 | --- | --- |
@@ -364,4 +373,4 @@ Node node = resource.adaptTo(Node.class);
 
 #### 其他 {#other}
 
-此外，Sling / JCR / OCM还为自定义OCM （` [AdapterFactory](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory)`对象内容映射[）对象提供了](https://jackrabbit.apache.org/jcr/object-content-mapping.html)。
+此外，Sling / JCR / OCM还为自定义OCM （[对象内容映射](https://jackrabbit.apache.org/jcr/object-content-mapping.html)）对象提供了` [AdapterFactory](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory)`。

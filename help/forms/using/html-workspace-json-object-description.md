@@ -8,13 +8,33 @@ solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 exl-id: 1b6c09f7-6f89-4fe9-8217-bf1a301bf9cb
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 8%
-
 ---
-
 # AEM Forms 工作区 JSON 对象描述 {#aem-forms-workspace-json-object-description}
 
 下面介绍了AEM Forms工作区中使用的JSON对象。
@@ -23,49 +43,49 @@ ht-degree: 8%
 
    类别显示在工作区的启动进程选项卡中。 这些类别用于对起点进行分类。
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>属性</strong></td>
-   <td><strong>仅限客户端</strong></td>
-   <td><strong>评论</strong></td>
-  </tr>
-  <tr>
-   <td>name</td>
-   <td>周五</td>
-   <td>类别名称</td>
-  </tr>
-  <tr>
-   <td>id</td>
-   <td>周五</td>
-   <td>类别ID<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>描述<br type="_moz" /> </td>
-   <td>周五</td>
-   <td>类别描述<br type="_moz" /> </td>
-  </tr>
-  <tr>
-   <td>parentOid<br type="_moz" /> </td>
-   <td>周五</td>
-   <td>包含父类别<br type="_moz" />的oid </td>
-  </tr>
-  <tr>
-   <td>startPointsList<br type="_moz" /> </td>
-   <td>周二</td>
-   <td>包含某个类别中存在的所有起点的列表</td>
-  </tr>
-  <tr>
-   <td>categorylist</td>
-   <td>周二</td>
-   <td>包含类别<br type="_moz" />的直接子类别的列表 </td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td><strong>属性</strong></td>
+      <td><strong>仅限客户端</strong></td>
+      <td><strong>评论</strong></td>
+   </tr>
+   <tr>
+      <td>name</td>
+      <td>周五</td>
+      <td>类别名称</td>
+   </tr>
+   <tr>
+      <td>id</td>
+      <td>周五</td>
+      <td>类别ID<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>描述<br type="_moz" /> </td>
+      <td>周五</td>
+      <td>类别描述<br type="_moz" /> </td>
+   </tr>
+   <tr>
+      <td>parentOid<br type="_moz" /> </td>
+      <td>周五</td>
+      <td>包含父类别<br type="_moz" />的oid </td>
+   </tr>
+   <tr>
+      <td>startPointsList<br type="_moz" /> </td>
+      <td>周二</td>
+      <td>包含某个类别中存在的所有起点的列表</td>
+   </tr>
+   <tr>
+      <td>categorylist</td>
+      <td>周二</td>
+      <td>包含类别<br type="_moz" />的直接子类别的列表 </td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->所有“起点”和“收藏”都是在客户端定义的类别。 收藏类别包含用户标记为收藏的所有起点。 “所有起点”类别包含所有起点。
+   >[!NOTE]
+   >
+   >所有“起点”和“收藏”都是在客户端定义的类别。 收藏类别包含用户标记为收藏的所有起点。 “所有起点”类别包含所有起点。
 
 1. 起点
 

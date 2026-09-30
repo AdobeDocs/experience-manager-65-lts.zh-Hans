@@ -9,13 +9,30 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
 exl-id: 1d621e12-6da5-4b49-98c9-3fb9b8189ff7
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2769'
+source-wordcount: '2794'
 ht-degree: 2%
-
 ---
-
 # 使用 Adobe Campaign Classic 和 Adobe Campaign Standard{#working-with-adobe-campaign-classic-and-adobe-campaign-standard}
 
 您可以在AEM中创建电子邮件内容，并在Adobe Campaign电子邮件中处理这些内容。 为此，您必须：
@@ -198,7 +215,7 @@ ht-degree: 2%
 
    >[!NOTE]
    >
-   >如果您使用Adobe Campaign Standard并使用示例模板，则在交付期间导入内容时，显示初始内容的两个个性化块（ **&quot;&lt;%@ include view=&quot;MirrorPage&quot; %>&quot;**&#x200B;和&#x200B;**&quot;&lt;%@ include view=&quot;UnsubscriptionLink&quot; %>&quot;**）将会引发错误。 您可以使用个性化块选取器选择相应的块来调整这些内容。
+   >如果您使用Adobe Campaign Standard并使用示例模板，则在交付期间导入内容时，显示初始内容的两个个性化块（**&quot;&lt;%@ include view=&quot;MirrorPage&quot; %>&quot;**&#x200B;和&#x200B;**&quot;&lt;%@ include view=&quot;UnsubscriptionLink&quot; %>&quot;**）将会引发错误。 您可以使用个性化块选取器选择相应的块来调整这些内容。
 
 1. 要预览个性化，请单击/点按工具栏中的相应图标以打开ContextHub。 个性化字段标记现在由所选角色的种子数据替换。 了解在ContextHub中切换角色时变量如何适应。
 
@@ -323,7 +340,7 @@ ht-degree: 2%
 >
 >[!NOTE]
 >
->AEM 6.1已弃用工作流步骤&#x200B;**发布到Adobe Campaign**。此步骤是AEM 6.0与Adobe Campaign集成的一部分，不再需要。
+>AEM 6.1已弃用工作流步骤&#x200B;**发布到Adobe Campaign**。 此步骤是AEM 6.0与Adobe Campaign集成的一部分，不再需要。
 
 要将AEM中创建的内容与Adobe Campaign中的投放同步，请执行以下操作：
 

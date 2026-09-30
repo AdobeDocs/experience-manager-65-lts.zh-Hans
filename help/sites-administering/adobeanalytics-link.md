@@ -1,5 +1,5 @@
 ---
-title: 为Adobe Analytics配置链接跟踪
+title: 为 Adobe Analytics 配置链接跟踪
 description: 了解如何为SiteCatalyst配置链接跟踪。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: d9318173-c598-4de0-bbbe-2c094da8afa6
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 0%
-
+source-wordcount: '1645'
+ht-degree: 1%
 ---
-
-# 为Adobe Analytics配置链接跟踪{#configuring-link-tracking-for-adobe-analytics}
+# 为 Adobe Analytics 配置链接跟踪{#configuring-link-tracking-for-adobe-analytics}
 
 当用户单击网站页面上的链接时，您可以在Adobe Analytics中捕获相关信息。 例如，使用链接跟踪功能了解用户如何与您的网站进行交互、跟踪文件下载以及跟踪退出链接。
 
@@ -187,7 +196,7 @@ s.linkTrackVars= 'prop4';
    <th>Adobe Analytics变量</th>
   </tr>
   <tr>
-   <td>eventdata.keyword</td>
+   <td>事件数据。关键字</td>
    <td>自定义eVar 2 (eVar2)</td>
    <td>EVAR2</td>
   </tr>

@@ -1,6 +1,6 @@
 ---
 title: 使用标记
-description: 标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资源或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
+description: 标记是用于对网站中的内容进行分类的简单快捷方法。 可以将标记视为可附加到页面、资源或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -9,16 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 6489c2cf-d4a5-452e-a554-5e814aa196b7
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 41%
-
+source-wordcount: '714'
+ht-degree: 42%
 ---
-
 # 使用标记{#using-tags}
 
-标记是用于对网站中的内容进行分类的简单快捷方法。可以将标记视为可附加到页面、资源或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
+标记是用于对网站中的内容进行分类的简单快捷方法。 可以将标记视为可附加到页面、资源或其他内容，以便在进行搜索时能够找到该内容及相关内容的关键字或标签。
 
 * 有关创建和管理标记以及已将标记应用于哪些内容的信息，请参阅[管理标记](/help/sites-administering/tags.md)。
 * 有关标记框架以及在自定义应用程序中包括和扩展标记的信息，请参阅[针对开发人员的标记](/help/sites-developing/tags.md)。
@@ -34,7 +43,7 @@ ht-degree: 41%
 1. 启用SEO ：作为页面属性应用的标记将自动显示在页面的元标记中，以对搜索引擎可见。
 1. 化繁为简：可以简单地通过一个词语和触摸按钮来创建标记。 之后，可以添加标题、描述和无限数量的标签以向标记提供更多语义。
 1. 核心一致性：标记系统是AEM的核心组件，可供所有AEM功能用来对内容进行分类。 此外，开发人员可以使用标记 API 来创建支持标记的应用程序，以便访问相同的分类。
-1. 结构化与灵活性相结合：鉴于对页面和路径的嵌套，AEM非常适合处理结构化信息。 凭借内置的全文搜索功能，它在处理非结构化信息时也非常强大。标记兼具结构化和灵活性的强大优势。
+1. 结构化与灵活性相结合：鉴于对页面和路径的嵌套，AEM非常适合处理结构化信息。 凭借内置的全文搜索功能，它在处理非结构化信息时也非常强大。 标记兼具结构化和灵活性的强大优势。
 
 在设计站点的内容结构和资源的元数据架构时，请考虑使用标记提供的轻量级可行方法。
 

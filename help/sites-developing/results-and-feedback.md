@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 29dfc265-e5e4-413f-b488-57366b000f4e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
-
+source-wordcount: '160'
+ht-degree: 6%
 ---
-
 # 跟踪结果并提供反馈{#tracking-results-and-providing-feedback}
 
 如何定义测试用例以及定义测试计划的位置由您自行决定；有许多可用的工具。
@@ -24,10 +33,10 @@ ht-degree: 0%
 
 * 应为：
 
-   * 仅限于跟踪测试用例及其结果。 这可确保维护保持简单明了，并且文档可以清楚地概述测试进度。
-   * 维护为单个副本，可供项目团队的所有适当成员使用。
-   * 中性的，并限于测试结果。 项目经理有责任对测试结果产生的任何操作做出决策。
+  * 仅限于跟踪测试用例及其结果。 这可确保维护保持简单明了，并且文档可以清楚地概述测试进度。
+  * 维护为单个副本，可供项目团队的所有适当成员使用。
+  * 中性的，并限于测试结果。 项目经理有责任对测试结果产生的任何操作做出决策。
 
 * 不应该：
 
-   * 扩展以包含跟踪信息 — 既不包括错误、新增功能，也不包括后续操作。 这些信息应在其他地方进行维护，同样有许多可用的工具。
+  * 扩展以包含跟踪信息 — 既不包括错误、新增功能，也不包括后续操作。 这些信息应在其他地方进行维护，同样有许多可用的工具。

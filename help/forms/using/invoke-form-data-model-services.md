@@ -8,20 +8,36 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: e36be2da-af72-485f-87a6-cef6172037c6
-source-git-commit: 86ca5b498d0a51e21e247d07ce186d8a01c95baa
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 13%
-
+source-wordcount: '543'
+ht-degree: 15%
 ---
-
 # 从自适应表单调用表单数据模型服务的 API {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 概述 {#overview}
 
-AEM Forms允许表单作者通过从自适应表单字段中调用在表单数据模型中配置的服务，进一步简化和增强表单填写体验。 要调用数据模型服务，您可以在可视编辑器中创建规则，或在`guidelib.dataIntegrationUtils.executeOperation`规则编辑器[的代码编辑器中使用](/help/forms/using/rule-editor.md) API指定JavaScript。
+AEM Forms允许表单作者通过从自适应表单字段中调用在表单数据模型中配置的服务，进一步简化和增强表单填写体验。 要调用数据模型服务，您可以在可视编辑器中创建规则，或在[规则编辑器](/help/forms/using/rule-editor.md)的代码编辑器中使用`guidelib.dataIntegrationUtils.executeOperation` API指定JavaScript。
 
 本文档侧重于使用`guidelib.dataIntegrationUtils.executeOperation` API编写JavaScript以调用服务。
 
@@ -92,9 +108,9 @@ API结构指定了有关服务操作的以下详细信息。
 
 ## 用于调用服务的示例脚本 {#sample-script-to-invoke-a-service}
 
-以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`getAccountById`表单数据模型中配置的`employeeAccount`服务操作。
+以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`employeeAccount`表单数据模型中配置的`getAccountById`服务操作。
 
-`getAccountById`操作将`employeeID`表单字段中的值作为`empId`参数的输入，并返回相应员工的员工姓名、帐号和帐户余额。 输出值会填充到指定的表单字段中。 例如，`name`参数中的值在`fullName`表单元素中填充，在`accountNumber`表单元素中为`account`参数填充值。
+`getAccountById`操作将`employeeID`表单字段中的值作为`empId`参数的输入，并返回相应员工的员工姓名、帐号和帐户余额。 输出值会填充到指定的表单字段中。 例如，`name`参数中的值在`fullName`表单元素中填充，在`account`表单元素中为`accountNumber`参数填充值。
 
 ```javascript
 var operationInfo = {
@@ -124,7 +140,7 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, c
 
 ### 包含成功和失败回调函数的示例脚本 {#callback-function-success-failure}
 
-以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`GETOrder`表单数据模型中配置的`employeeOrder`服务操作。
+以下示例脚本使用`guidelib.dataIntegrationUtils.executeOperation` API调用在`employeeOrder`表单数据模型中配置的`GETOrder`服务操作。
 
 `GETOrder`操作将`Order ID`表单字段中的值作为`orderId`参数的输入并返回`success`回调函数中的订货量值。  如果`success`回调函数未返回订单数量，`failure`回调函数将显示`Error occurred`消息。
 

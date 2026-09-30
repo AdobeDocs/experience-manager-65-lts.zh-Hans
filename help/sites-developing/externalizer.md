@@ -1,5 +1,5 @@
 ---
-title: 将URL外部化
+title: 外部化 URL
 description: 外部化器是一种OSGI服务，它允许您以编程方式将资源路径转换为外部和绝对URL
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 5beeae99-7ef4-49a0-aaad-3ab07429ebc2
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 0%
-
+source-wordcount: '504'
+ht-degree: 2%
 ---
-
-# 将URL外部化{#externalizing-urls}
+# 外部化 URL{#externalizing-urls}
 
 在Adobe Experience Manager (AEM)中，**外部化器**&#x200B;是一个OSGI服务，它允许您通过为路径添加预配置的DNS作为前缀，以编程方式将资源路径（例如`/path/to/my/page`）转换为外部和绝对URL（例如`https://www.mycompany.com/path/to/my/page`）。
 
@@ -51,8 +60,8 @@ ht-degree: 0%
 
    * **方案**&#x200B;是http或https，但也可以是ftp等。
 
-      * 如果需要，可使用https强制执行https链接
-      * 如果客户端代码在请求URL外部化时未覆盖方案，则使用此选项。
+     * 如果需要，可使用https强制执行https链接
+     * 如果客户端代码在请求URL外部化时未覆盖方案，则使用此选项。
 
    * **server**&#x200B;是主机名（可以是域名或ip地址）。
    * **端口** （可选）是端口号。

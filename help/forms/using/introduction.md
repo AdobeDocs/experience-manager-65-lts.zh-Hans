@@ -1,5 +1,5 @@
 ---
-title: HTML5表单简介
+title: HTML5 Forms 简介
 description: HTML5 forms是Adobe Experience Manager 6.0 (AEM 6.0)软件中的一项新功能，可渲染HTML5格式的XFA表单模板。
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
@@ -8,14 +8,29 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 69e96a98-20f2-4baf-a9eb-988c06eaa63c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 0%
-
+source-wordcount: '422'
+ht-degree: 1%
 ---
-
-# HTML5表单简介{#introduction-to-html-forms}
+# HTML5 Forms 简介{#introduction-to-html-forms}
 
 HTML5 forms是Adobe Experience Manager 6.0 (AEM 6.0)软件中的一项新功能，可渲染HTML5格式的XFA表单模板。 凭借此功能，可以在那些不支持基于XFA的PDF的移动设备和桌面浏览器上渲染表单。 HTML5 forms不仅支持XFA表单模板的现有功能，还增加了适用于移动设备的新功能，如涂写签名。
 
@@ -45,4 +60,4 @@ AEM还为使用AEM Forms UI列出和管理所有表单模板提供了一个统�
 
 ### Forms自定义 {#forms-customization}
 
-HTML5表单使用标准HTML5结构呈现表单模板。 这使得使用Web技术(主要是CSS和JavaScript)以HTML5格式自定义和扩展表单变得简单。 您可以轻松自定义现有构件的外观，创建自己的自定义构件，或在表单中使用自定义样式。 有关创建自定义构件和自定义现有构件的更多信息，请参阅[使用HTML5表单插入自定义构件](../../forms/using/custom-widgets.md)。
+HTML5表单使用标准HTML5结构呈现表单模板。 这使得使用Web技术（主要是CSS和JavaScript）以HTML5格式自定义和扩展表单变得简单。 您可以轻松自定义现有构件的外观，创建自己的自定义构件，或在表单中使用自定义样式。 有关创建自定义构件和自定义现有构件的更多信息，请参阅[使用HTML5表单插入自定义构件](../../forms/using/custom-widgets.md)。

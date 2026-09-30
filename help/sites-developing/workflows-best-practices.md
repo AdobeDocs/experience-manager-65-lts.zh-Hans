@@ -5,13 +5,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: f7d67e71-3148-4b27-a61e-ff64d3bf9b72
-source-git-commit: 887d76effd8af7ff4d061fb15d5a3572b51af20c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1948'
 ht-degree: 1%
-
 ---
-
 # 工作流最佳做法{#workflow-best-practices}
 
 借助工作流，您可以自动化Adobe Experience Manager (AEM)活动。
@@ -239,8 +248,8 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 * 在工作流进程内，如果`WorkflowSession`正用于修改存储库，则不要显式保存会话 — 工作流完成时将保存会话。
 * 不应从工作流步骤中调用`Session.Save`：
 
-   * 建议调整工作流JCR会话；然后`save`不是必需的，因为工作流引擎会在工作流执行完成后自动保存会话。
-   * 建议不要对流程步骤创建自己的JCR会话。
+  * 建议调整工作流JCR会话；然后`save`不是必需的，因为工作流引擎会在工作流执行完成后自动保存会话。
+  * 建议不要对流程步骤创建自己的JCR会话。
 
 * 通过消除不必要的保存，您可以减少开销，从而使工作流更加高效。
 
@@ -303,7 +312,7 @@ public void execute(WorkItem item, WorkflowSession workflowSession, MetaDataMap 
 * 确保在升级实例之前备份任何自定义工作流模型。
 * 确认您的自定义工作流没有存储在[位置](#locations)下：
 
-   * `/libs/settings/workflow/models/projects`
+  * `/libs/settings/workflow/models/projects`
 
 ## 系统工具 {#system-tools}
 

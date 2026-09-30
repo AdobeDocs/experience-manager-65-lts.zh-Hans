@@ -5,13 +5,27 @@ role: Admin,User
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 3a529a82-e2fd-423c-96c1-a5accc87775e
-source-git-commit: 2e0cbe62754866d31de69547f9af1f2f63930f2c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 3%
-
+source-wordcount: '410'
+ht-degree: 19%
 ---
-
 # 兼容包{#compatibility-package}
 
 ## 概述 {#overview}
@@ -42,7 +56,7 @@ AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4
 
    >[!NOTE]
    >
-   > 建议使用`Ctrl + C`命令重新启动SDK。 使用替代方法（例如，停止Java流程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+   > 建议使用`Ctrl + C`命令重新启动SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
    有关详细信息，请参阅[迁移实用程序](../../forms/using/migration-utility.md)。
 
@@ -52,24 +66,24 @@ AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4
 
 * AEM 6.4及更早版本中的通信管理Assets：
 
-   * [书信](../../forms/using/create-letter.md)
-   * [数据字典](/help/forms/using/data-dictionary.md)
-   * 文档片段
+  * [书信](../../forms/using/create-letter.md)
+  * [数据字典](/help/forms/using/data-dictionary.md)
+  * 文档片段
 
 * 自适应表单已弃用的模板：
 
-   * /libs/fd/af/templates/blankTemplate2
-   * /libs/fd/af/templates/simpleEnrollmentTemplate
-   * /libs/fd/af/templates/simpleEnrollmentTemplate2
-   * /libs/fd/af/templates/surveyTemplate
-   * /libs/fd/af/templates/surveyTemplate2
-   * /libs/fd/af/templates/tabbedEnrollmentTemplate
-   * /libs/fd/af/templates/tabbedEnrollmentTemplate2
-   * /libs/fd/afaddon/templates/advancedEnrollmentTemplate
-   * /libs/fd/afaddon/templates/advancedEnrollmentTemplate2
+  * /libs/fd/af/templates/blankTemplate2
+  * /libs/fd/af/templates/simpleEnrollmentTemplate
+  * /libs/fd/af/templates/simpleEnrollmentTemplate2
+  * /libs/fd/af/templates/surveyTemplate
+  * /libs/fd/af/templates/surveyTemplate2
+  * /libs/fd/af/templates/tabbedEnrollmentTemplate
+  * /libs/fd/af/templates/tabbedEnrollmentTemplate2
+  * /libs/fd/afaddon/templates/advancedEnrollmentTemplate
+  * /libs/fd/afaddon/templates/advancedEnrollmentTemplate2
 
 * 自适应表单已弃用页面：
 
-   * /libs/fd/af/components/page/survey
-   * /libs/fd/af/components/page/tabbedenrollment
-   * /libs/fd/afaddon/components/page/advancedenrollment
+  * /libs/fd/af/components/page/survey
+  * /libs/fd/af/components/page/tabbedenrollment
+  * /libs/fd/afaddon/components/page/advancedenrollment

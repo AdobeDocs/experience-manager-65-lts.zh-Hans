@@ -10,13 +10,22 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 3fe5421e-e97e-43c4-b34b-b84bf189a779
-source-git-commit: f015c4fb30bbba2ec0de7290d37ee56e182d2ddc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 0%
-
 ---
-
 # 升级规划 {#planning-your-upgrade}
 
 ## AEM升级概述 {#aem-upgrade-overview}
@@ -113,7 +122,7 @@ New features in AEM 6.5 can be found in [the AEM section of adobe.com](/help/rel
 
 每个客户的AEM实施都是独一无二的，并且已经过自定义以满足其业务要求。 因此，必须确定已对系统所做的所有自定义设置，以便将其包含在测试计划中。
 
-需要复制确切的生产环境，并且应在升级后对其执行测试，以确保所有应用程序和自定义代码仍按需运行。 回退所有自定义设置并运行性能、负载和安全测试。 在组织测试计划时，除了开箱即用的UI和日常操作中使用的工作流之外，还要确保涵盖针对系统所做的所有自定义设置。 这些集成包括自定义OSGI服务和Servlet、与Adobe Experience Cloud的集成、通过AEM连接器与第三方的集成、自定义第三方集成、自定义组件和模板、AEM中的自定义UI叠加以及自定义工作流。 此外，仍应测试自定义查询，以确保其索引在升级后继续有效工作。
+需要复制确切的生产环境，并且应在升级后对其执行测试，以确保所有应用程序和自定义代码仍按需运行。 回退所有自定义设置并运行性能、负载和安全测试。 在组织测试计划时，除了开箱即用的UI和日常操作中使用的工作流之外，还要确保涵盖针对系统所做的所有自定义设置。 这些集成包括自定义OSGI服务和Servlet、与Adobe Experience Cloud的集成、通过AEM连接器与第三方集成、自定义第三方集成、自定义组件和模板、AEM中的自定义UI叠加以及自定义工作流。 此外，仍应测试自定义查询，以确保其索引在升级后继续有效工作。
 
 ### 评估升级复杂性 {#assessing-upgrade-complexity}
 

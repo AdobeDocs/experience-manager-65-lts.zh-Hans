@@ -6,13 +6,27 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 95cc8c29-7494-4326-934d-6def59875d71
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '786'
 ht-degree: 1%
-
 ---
-
 
 # SPA 中的复合组件 {#composite-components-in-spas}
 
@@ -51,7 +65,7 @@ ht-degree: 1%
 首先，创建将构成复合组件的组件，即图像及其文本的组件。
 
 1. 在AEM项目中创建文本组件。
-1. 在组件的`resourceType`节点中，从项目中添加相应的`editConfig`。
+1. 在组件的`editConfig`节点中，从项目中添加相应的`resourceType`。
 
    ```text
     resourceType: 'wknd-spa/components/text' 
@@ -125,7 +139,7 @@ function Home() {
 }
 ```
 
-这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值的值时，它们存储在指定的页面路径中，即`/content/wknd-spa/home`中指定的根级别的`itemPath`。
+这将在编辑器中显示文本和图像的空占位符。 使用编辑器输入这些值的值时，它们存储在指定的页面路径中，即`itemPath`中指定的根级别的`/content/wknd-spa/home`。
 
 编辑器中的![复合卡组件](assets/composite-card.png)
 
@@ -133,11 +147,11 @@ function Home() {
 
 在这种情况下，卡组件已在包含标题和图像节点的AEM项目中创建了。 子节点（文本和图像）具有相应的资源类型。
 
-卡组件![的](assets/composite-node-structure.png)节点结构
+卡组件![&#128279;](assets/composite-node-structure.png)的节点结构
 
 然后，您可以将其添加到SPA并检索其内容。
 
-1. 在SPA中为此创建相应的组件。 确保子组件映射到SPA项目中的相应AEM资源类型。 在此示例中，我们使用与上一个示例中详细的`AEMText`相同的`AEMImage`和[组件。](#component-does-not-exist)
+1. 在SPA中为此创建相应的组件。 确保子组件映射到SPA项目中的相应AEM资源类型。 在此示例中，我们使用与上一个示例中详细的[相同的`AEMText`和`AEMImage`组件。](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -181,4 +195,4 @@ function Home() {
 
 ![节点结构中的复合路径](assets/composite-path.png)
 
-`AEMCard`组件与上一个使用案例中定义的[相同。](#content-does-not-exist)此处，在AEM项目的上述位置中定义的内容包含在SPA中。
+`AEMCard`组件与上一个使用案例中定义的[相同。](#content-does-not-exist) 此处，在AEM项目的上述位置定义的内容包含在SPA中。

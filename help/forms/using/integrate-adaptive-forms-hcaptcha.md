@@ -1,16 +1,24 @@
 ---
 title: 如何在AEM 6.5 Forms中使用hCaptcha&reg；？
-description: 使用 hCaptcha&reg; 服务轻松增强表单安全性。 里面有分步指南！
+description: 使用 hCaptcha&reg; 服务轻松增强表单安全性。 内含分步指南！
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: da0f8fc5-732e-41de-b73c-0355ec723d26
-source-git-commit: a5cfba70cedd1e0d1f8d5e5b447aa2941a23840f
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '903'
 ht-degree: 20%
-
 ---
-
 # 使用hCaptcha连接AEM Forms环境® {#connect-your-forms-environment-with-hcaptcha-service}
 
 
@@ -56,7 +64,7 @@ AEM 6.5自适应Forms支持hCaptcha&amp;reg。 您可以用它来在提交表单
 1. 配置云服务：
    1. 在您的AEM创作实例上，转到![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]**，然后单击&#x200B;**[!UICONTROL hCaptcha®]**。
       ui中的![hCaptcha®](assets/hcaptcha-in-ui.png)
-   1. 选择已创建或已更新的配置容器，如上一节所述。选择&#x200B;**[!UICONTROL 创建]**。
+   1. 选择已创建或已更新的配置容器，如上一节所述。 选择&#x200B;**[!UICONTROL 创建]**。
       ![配置hCaptcha®](assets/config-hcaptcha.png)
    1. 指定&#x200B;**[!UICONTROL 标题]**，<!--**[!UICONTROL Name]**--> 在必备项[&#128279;](#prerequisite)中获取的hCaptcha®服务的&#x200B;**[!UICONTROL 站点密钥]**&#x200B;和&#x200B;**[!UICONTROL 密钥]**。
    1. 单击&#x200B;**[!UICONTROL 创建]**。

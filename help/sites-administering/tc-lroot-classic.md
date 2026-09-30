@@ -1,19 +1,31 @@
 ---
-title: 使用经典UI创建语言根
+title: 使用经典 UI 创建语言根
 description: 了解如何使用Classic UI在Adobe Experience Manager中创建语言根。
 contentOwner: Guillaume Carlino
 feature: Language Copy
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: c6e00da5-804f-46cf-b7a9-52e667574394
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 0%
-
+source-wordcount: '328'
+ht-degree: 5%
 ---
-
-# 使用经典UI创建语言根{#creating-a-language-root-using-the-classic-ui}
+# 使用经典 UI 创建语言根{#creating-a-language-root-using-the-classic-ui}
 
 以下过程使用经典UI创建站点的语言根。 有关详细信息，请参阅[创建语言根](/help/sites-administering/tc-prep.md#creating-a-language-root)。
 

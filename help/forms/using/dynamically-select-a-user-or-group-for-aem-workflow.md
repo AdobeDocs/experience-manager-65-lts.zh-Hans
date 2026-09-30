@@ -7,26 +7,42 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Document Services
 exl-id: b3b3567f-df0a-4a24-849c-dcc0b745de63
-source-git-commit: 5995dda0aac101e6c0d506ac5bba786674b0735b
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '945'
 ht-degree: 3%
-
 ---
-
 # 为以 AEM Forms 为中心的工作流步骤动态选择用户或用户组 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
 
 了解如何在运行时为AEM Forms工作流选择用户或组。
 
 在大型组织中，需要动态地为流程选择用户。 例如，根据代理与客户的接近程度选择现场代理为客户提供服务。 在这种情况下，将动态选择代理。
 
-在OSGi[上分配任务和](/help/forms/using/aem-forms-workflow.md)以Forms为中心的工作流的Adobe Sign步骤，提供了用于动态选择用户的选项。 您可以使用ECMAScript或OSGi捆绑包为“分配任务”步骤动态选择被分配人，或为“签名文档”步骤选择签名者。
+在OSGi[&#128279;](/help/forms/using/aem-forms-workflow.md)上分配任务和以Forms为中心的工作流的Adobe Sign步骤，提供了用于动态选择用户的选项。 您可以使用ECMAScript或OSGi捆绑包为“分配任务”步骤动态选择被分配人，或为“签名文档”步骤选择签名者。
 
 ## 使用ECMAScript动态选择用户或组 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
 ECMAScript是一种脚本语言。 它用于客户端脚本和服务器应用程序。 执行以下步骤，使用ECMAScript动态选择用户或组：
 
-1. 打开CRXDE Lite。 URL是`https://'[server]:[port]'/crx/de/index.jsp`
+1. 打开 CRXDE Lite。 URL是`https://'[server]:[port]'/crx/de/index.jsp`
 1. 在以下路径创建扩展名为.ecma的文件。 如果路径（节点结构）不存在，请创建路径：
 
    * （分配任务步骤的路径） `/apps/fd/dashboard/scripts/participantChooser`

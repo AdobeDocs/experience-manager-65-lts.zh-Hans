@@ -9,25 +9,34 @@ solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
 exl-id: a8b1fab9-1a63-4f99-87e1-48f6167e9953
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '820'
 ht-degree: 3%
-
 ---
-
 # 启动工作流{#starting-workflows}
 
 管理工作流时，您可以使用各种方法启动它们：
 
 * 手动:
 
-   * 来自[工作流模型](#workflow-models)。
-   * 正在使用工作流包进行[批次处理](#workflow-packages-for-batch-processing)。
+  * 来自[工作流模型](#workflow-models)。
+  * 正在使用工作流包进行[批次处理](#workflow-packages-for-batch-processing)。
 
 * 自动：
 
-   * 响应节点更改；[使用启动器](#workflows-launchers)。
+  * 响应节点更改；[使用启动器](#workflows-launchers)。
 
 >[!NOTE]
 >
@@ -35,7 +44,7 @@ ht-degree: 3%
 >
 >* [将工作流应用到页面](/help/sites-authoring/workflows-applying.md)
 >* [如何将工作流应用于DAM资源](/help/assets/assets-workflow.md)
->* [AEM Forms](https://helpx.adobe.com/cn/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM 表单](https://helpx.adobe.com/cn/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻译项目](/help/sites-administering/tc-manage.md)
 >
 
@@ -65,7 +74,7 @@ ht-degree: 3%
 * `/var/mobile`
 * `/var/statistics`
 
-   * 异常：对`/var/statistics/tracking` *do*&#x200B;下的节点所做的更改会导致工作流启动。
+  * 异常：对`/var/statistics/tracking` *do*&#x200B;下的节点所做的更改会导致工作流启动。
 
 标准安装包含各种定义。 这些资源用于数字资产管理和社会协作任务：
 
@@ -122,9 +131,9 @@ ht-degree: 3%
 
      启动工作流的事件类型：
 
-      * 已创建
-      * 修改时间
-      * 已删除
+     * 已创建
+     * 修改时间
+     * 已移除
 
    * **节点类型**
 
@@ -164,8 +173,8 @@ ht-degree: 3%
 
      控制是否激活工作流启动器：
 
-      * 选择&#x200B;**启用**&#x200B;以在满足配置属性时启动工作流。
-      * 选择&#x200B;**当工作流不应执行时禁用**（即使满足配置属性时也不应执行）。
+     * 选择&#x200B;**启用**&#x200B;以在满足配置属性时启动工作流。
+     * 选择&#x200B;**当工作流不应执行时禁用**（即使满足配置属性时也不应执行）。
 
    * **排除列表**
 
@@ -173,8 +182,8 @@ ht-degree: 3%
 
      此启动器属性是以逗号分隔的项目列表：&#39;&#39;
 
-      * `property-name`忽略在指定的属性名称上触发的任何`jcr`事件。&quot;
-      * `event-user-data:<*someValue*>`忽略任何包含通过[`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))设置的`*<someValue*`> `user-data`的事件。
+     * `property-name`忽略在指定的属性名称上触发的任何`jcr`事件。 &quot;
+     * `event-user-data:<*someValue*>`忽略任何包含通过[`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))设置的`*<someValue*`> `user-data`的事件。
 
      例如：
 

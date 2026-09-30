@@ -5,13 +5,22 @@ feature: Upgrading
 solution: Experience Manager, Experience Manager Sites
 role: Admin
 exl-id: 2a5d9026-49bc-4766-bcbe-38d834c14f72
-source-git-commit: e5acea11254a6c4dbd24ff2a6d8ae3578b6690da
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 0%
-
+source-wordcount: '511'
+ht-degree: 1%
 ---
-
 # 应用程序服务器安装的升级步骤(WLP) {#upgrade-steps-for-application-server-installations-wlp}
 
 >[!NOTE]
@@ -26,7 +35,7 @@ ht-degree: 0%
 
 ### 迁移先决条件 {#migration-prerequisites}
 
-* **所需的最低Java版本**：确保已在WLP服务器上安装了IBM® Sumeru JRE 17/21。
+* **所需的最低Java版本**：确保已在WLP服务器上安装了® Sumeru JRE 17/21。
 
 ### 执行升级 {#performing-the-upgrade}
 
@@ -35,7 +44,7 @@ ht-degree: 0%
    1. **就地升级**：如果当前WLP服务器支持Servlet 6，则可以执行就地升级并继续执行步骤3。
    1. **Sidegrade**：如果您喜欢全新设置或WLP服务器不支持Servlet 6，请使用AEM 6.5 LTS设置新的WLP实例，并按照[AEM 6.5到AEM 6.5 LTS的内容迁移使用Oak-upgrade](/help/sites-deploying/aem-65-to-aem-65lts-content-migration-using-oak-upgrade.md)指南中的说明迁移内容，然后跳到[部署升级后的代码库](#deploy-upgraded-codebase)部分
 
-1. 停止AEM实例。 通常可以通过以下命令来完成：
+1. 停止 AEM 实例。 通常可以通过以下命令来完成：
 
    ```shell
    <path-to-wlp-directory>/bin/server stop server_name
@@ -94,7 +103,7 @@ ht-degree: 0%
 
    1. 通过运行`<path-to-wlp-directory>/bin/server stop server_name`停止AEM实例
    1. 将您的自定义`sling.properties`更改应用到新生成的`sling.properties`文件（通过引用在步骤5中创建的备份文件）
-   1. 启动AEM实例。 通常可以通过运行`<path-to-wlp-directory>/bin/server start server_name`来完成
+   1. 启动 AEM 实例。 通常可以通过运行`<path-to-wlp-directory>/bin/server start server_name`来完成
 
 ## 部署已升级的代码库 {#deploy-upgraded-codebase}
 

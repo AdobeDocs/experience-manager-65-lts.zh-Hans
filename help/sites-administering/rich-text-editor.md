@@ -6,13 +6,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 5511817e-dcf8-463d-8e62-cbbef64ad162
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2817'
+source-wordcount: '2975'
 ht-degree: 1%
-
 ---
-
 # 配置富文本编辑器 {#configure-the-rich-text-editor}
 
 富文本编辑器(RTE)为作者提供了一系列广泛的功能来编辑其文本内容。 提供了图标、选择框、工具栏和菜单，以提供WYSIWYG文本编辑体验。
@@ -88,8 +97,8 @@ Experience Manager组件能够以全屏视图打开，该视图会隐藏页面�
 
 * `features`属性：
 
-   * 用于激活或停用该插件的基本功能
-   * 可使用标准化的程序进行配置
+  * 用于激活或停用该插件的基本功能
+  * 可使用标准化的程序进行配置
 
 * 在适当时，需要专门配置的其他属性和选项。
 
@@ -109,14 +118,14 @@ RTE的基本功能由相应插件专属的节点上的`features`属性值激活�
 | 图像 | 图像 | 基本图像支持（从内容或内容查找器拖动）。 根据浏览器的不同，支持的作者行为也有所不同 |
 | 键 |  | 若要定义此值，请参阅[选项卡大小](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tabsize)。 |
 | 两端对齐 | justifyleft justifycenter justifyright | 段落对齐方式。 |
-| 链接 | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles)。 |
+| 多个链接 | modifylink取消链接锚点 | [超链接和锚点](/help/sites-administering/configure-rich-text-editor-plug-ins.md#linkstyles)。 |
 | 列表 | 有序无序缩进缩进 | 此插件同时控制[缩进和列表](/help/sites-administering/configure-rich-text-editor-plug-ins.md#indentmargin)；包括嵌套列表。 |
 | misctools | specialchars sourceedit | 其他工具允许作者输入[特殊字符](/help/sites-administering/configure-rich-text-editor-plug-ins.md#spchar)或编辑HTML源。 此外，如果要定义自己的列表，可以添加整个[范围的特殊字符](/help/sites-administering/configure-rich-text-editor-plug-ins.md#definerangechar)。 |
 | 参数格式 | paraformat | 默认段落格式为段落、标题1、标题2和标题3 （`<p>`、`<h1>`、`<h2>`和`<h3>`）。 您可以[添加更多段落格式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#paraformats)或扩展列表。 |
 | 拼写检查 | 复选文本 | [语言感知拼写检查器](/help/sites-administering/configure-rich-text-editor-plug-ins.md#adddict)。 |
 | 样式 | 样式 | 支持使用CSS类进行样式设置。 如果要添加（或扩展）自己的样式范围以用于文本，请[添加新文本样式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#textstyles)。 |
 | 下标 | 下标上标 | 基本格式的扩展，可添加子脚本和超级脚本。 |
-| 表 | 表删除表插入行删除插入列删除列cellprops mergecells拆分单元选择列选择列 | 如果要为整个表或单个单元格添加自己的样式，请参阅[配置表样式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)。 |
+| 表格 | 表删除表插入行删除插入列删除列cellprops mergecells拆分单元选择列选择列 | 如果要为整个表或单个单元格添加自己的样式，请参阅[配置表样式](/help/sites-administering/configure-rich-text-editor-plug-ins.md#tablestyles)。 |
 | 撤消 | 撤消重做 | [撤消和重做](/help/sites-administering/configure-rich-text-editor-plug-ins.md#undohistory)操作的历史记录大小。 |
 
 >[!NOTE]
@@ -145,7 +154,7 @@ RTE的基本功能由相应插件专属的节点上的`features`属性值激活�
 
 配置以下仅适用于Touch UI中的对话框编辑模式的属性：
 
-* `useFixedInlineToolbar`：将在RTE节点（sling：resourceType= `cq/gui/components/authoring/dialog/richtext`的节点）上定义的此Boolean属性设置为`True`，以使RTE工具栏固定而不是浮动。
+* `useFixedInlineToolbar`：将在RTE节点（sling:resourceType= `cq/gui/components/authoring/dialog/richtext`的节点）上定义的此Boolean属性设置为`True`，以使RTE工具栏固定而非浮动。
 
   当此属性为true时，默认情况下，富文本编辑会在“foundation-contentloaded”事件中启动。
 
@@ -325,8 +334,8 @@ RTE中的可用选项会从用户界面配置下游流向内容策略。
 * [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)组件提供了一个表单字段，用于编辑样式化文本信息(RTF)。 要了解富文本表单的所有可用参数，请参阅配置选项。
 * 富文本组件使用[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的插件提供多种功能。 对于每个插件：
 
-   * 有关可以启用（或禁用）的功能的详细信息，请参阅功能
-   * 有关相应插件的详细配置，请参阅所有可用参数的配置选项
+  * 有关可以启用（或禁用）的功能的详细信息，请参阅功能
+  * 有关相应插件的详细配置，请参阅所有可用参数的配置选项
 
 * 此外，还提供了有关HTML Rules for Links的更多信息。
 

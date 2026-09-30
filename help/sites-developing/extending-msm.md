@@ -10,13 +10,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 46300f72-730e-444c-8677-352a890e9910
-source-git-commit: c033a676eb746befd43803d1ae00c564890cb945
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2605'
-ht-degree: 52%
-
+source-wordcount: '2654'
+ht-degree: 51%
 ---
-
 # 扩展多网站管理器{#extending-the-multi-site-manager}
 
 此页面可帮助您扩展多站点管理器的功能：
@@ -52,28 +61,28 @@ ht-degree: 52%
 
   ![Blueprint](assets/chlimage_1-74.png)
 
-   * 使用 Blueprint 配置 (`Blueprint`) 是可选的，但是：
+  * 使用 Blueprint 配置 (`Blueprint`) 是可选的，但是：
 
-      * 允许作者在源上使用&#x200B;**转出**&#x200B;选项(以（显式）将修改推送到从此源继承的活动副本)。
-      * 允许作者使用&#x200B;**创建站点**；这允许用户轻松选择语言并配置Live Copy的结构。
-      * 为任何生成的活动副本定义默认转出配置。
+    * 允许作者在源上使用&#x200B;**转出**&#x200B;选项(以（显式）将修改推送到从此源继承的活动副本)。
+    * 允许作者使用&#x200B;**创建站点**；这允许用户轻松选择语言并配置Live Copy的结构。
+    * 为任何生成的活动副本定义默认转出配置。
 
 * **`LiveRelationship`**
 
   `LiveRelationship`指定Live Copy分支中的资源与其等效的源/Blueprint资源之间的连接（关系）。
 
-   * 这些关系会在实现继承和转出时使用。
-   * `LiveRelationship` 对象提供对与关系相关的转出配置 (`RolloutConfig`), `LiveCopy`, 和 `LiveStatus` 对象的访问（引用）。
+  * 这些关系会在实现继承和转出时使用。
+  * `LiveRelationship` 对象提供对与关系相关的转出配置 (`RolloutConfig`), `LiveCopy`, 和 `LiveStatus` 对象的访问（引用）。
 
-   * 例如，Live Copy 会在 `/content/copy/us` 中从 `/content/we-retail/language-masters` 的源/Blueprint 进行创建。 资源 `/content/we.retail/language-masters/en/jcr:content` 和 `/content/copy/us/en/jcr:content` 建立关系。
+  * 例如，Live Copy 会在 `/content/copy/us` 中从 `/content/we-retail/language-masters` 的源/Blueprint 进行创建。 资源 `/content/we.retail/language-masters/en/jcr:content` 和 `/content/copy/us/en/jcr:content` 建立关系。
 
 * **`LiveCopy`**
 
   `LiveCopy`包含Live Copy资源及其源/Blueprint资源之间关系(`LiveRelationship`)的配置详细信息。
 
-   * 使用 `LiveCopy` 类来访问页面路径、源/Blueprint 页面的路径、转出配置以及 `LiveCopy` 中是否也包含子页面。
+  * 使用 `LiveCopy` 类来访问页面路径、源/Blueprint 页面的路径、转出配置以及 `LiveCopy` 中是否也包含子页面。
 
-   * 每次使用&#x200B;**创建站点**&#x200B;或&#x200B;**创建 Live Copy** 时，都会创建一个 `LiveCopy` 节点。
+  * 每次使用&#x200B;**创建站点**&#x200B;或&#x200B;**创建 Live Copy** 时，都会创建一个 `LiveCopy` 节点。
 
 * **`LiveStatus`**
 
@@ -83,7 +92,7 @@ ht-degree: 52%
 
   `LiveAction`是对转出中涉及的每个资源执行的操作。
 
-   * LiveActions仅由RolloutConfigs生成。
+  * LiveActions仅由RolloutConfigs生成。
 
 * **`LiveActionFactory`**
 
@@ -93,7 +102,7 @@ ht-degree: 52%
 
   `RolloutConfig`包含一个`LiveActions`的列表，将在触发时使用。 `LiveCopy` 继承了 `RolloutConfig`，而结果则显示在 `LiveRelationship` 中。
 
-   * 首次设置Live Copy时也会使用RolloutConfig（触发LiveActions）。
+  * 首次设置Live Copy时也会使用RolloutConfig（触发LiveActions）。
 
 ## 创建新的同步操作 {#creating-a-new-synchronization-action}
 
@@ -106,16 +115,16 @@ ht-degree: 52%
 
 * `LiveAction` 类包括以下方法：
 
-   * `getName`：返回操作的名称。 名称用于引用操作，例如在转出配置中。
-   * `execute`：执行操作的任务。
+  * `getName`：返回操作的名称。 名称用于引用操作，例如在转出配置中。
+  * `execute`：执行操作的任务。
 
 * `LiveActionFactory` 类包括以下成员：
 
-   * `LIVE_ACTION_NAME`：包含关联`LiveAction`的名称的字段。 此名称必须与 `LiveAction` 类的 `getName` 方法返回的值一致。
+  * `LIVE_ACTION_NAME`：包含关联`LiveAction`的名称的字段。 此名称必须与 `LiveAction` 类的 `getName` 方法返回的值一致。
 
-   * `createAction`：创建`LiveAction`的实例。 可选的 `Resource` 参数可用于提供配置信息。
+  * `createAction`：创建`LiveAction`的实例。 可选的 `Resource` 参数可用于提供配置信息。
 
-   * `createsAction`：返回关联`LiveAction`的名称。
+  * `createsAction`：返回关联`LiveAction`的名称。
 
 ### 访问 LiveAction 配置节点 {#accessing-the-liveaction-configuration-node}
 
@@ -203,19 +212,19 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
    * **类型**：`cq:RolloutConfig`
 
 1. 向该节点添加以下属性：
-   * **名称**：`jcr:title`
-     **类型**：`String`
+   * **名称**： `jcr:title`
+     **类型**： `String`
      **值**：将显示在UI中的标识标题。
-   * **名称**：`jcr:description`
-     **类型**：`String`
+   * **名称**： `jcr:description`
+     **类型**： `String`
      **值**：可选描述。
-   * **名称**：`cq:trigger`
-     **类型**：`String`
+   * **名称**： `cq:trigger`
+     **类型**： `String`
      **值**：要使用的[转出触发器](/help/sites-administering/msm-sync.md#rollout-triggers)。 选择自：
-      * `rollout`
-      * `modification`
-      * `publish`
-      * `deactivate`
+     * `rollout`
+     * `modification`
+     * `publish`
+     * `deactivate`
 
 1. 单击&#x200B;**全部保存**。
 
@@ -233,7 +242,7 @@ Node sourcenode = source.adaptTo(javax.jcr.Node.class);
 1. **创建**&#x200B;具有以下节点属性的节点：
 
    * **名称**：同步操作的节点名称。
-该名称必须与[同步操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)下的表中的&#x200B;**操作名称**&#x200B;相同，例如，`contentCopy`或`workflow`。
+     该名称必须与[同步操作](/help/sites-administering/msm-sync.md#installed-synchronization-actions)下的表中的&#x200B;**操作名称**&#x200B;相同，例如，`contentCopy`或`workflow`。
    * **类型**：`cq:LiveSyncAction`
 
 1. 根据需要添加和配置任意数量的同步操作节点。 重新排列操作节点，使其顺序与您希望它们发生的顺序相一致。 最顶层的操作节点首先出现。
@@ -655,11 +664,11 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
 
 * 联系电子邮件:
 
-   * 此属性不需要推出，因为每个国家/地区（或品牌等）中的此属性将有所不同。
+  * 此属性不需要推出，因为每个国家/地区（或品牌等）中的此属性将有所不同。
 
 * 主要视觉风格：
 
-   * 项目要求是推出此属性，因为此属性（通常）对所有国家/地区（或品牌等）通用。
+  * 项目要求是推出此属性，因为此属性（通常）对所有国家/地区（或品牌等）通用。
 
 那么您需要确保：
 
@@ -675,28 +684,28 @@ MSM 使用存储的语言和国家/地区代码列表来确定与页面语言版
 
 * `cq-msm-lockable`
 
-   * 适用于触屏UI对话框中的项目
-   * 将在对话框中创建链链接符号
-   * 仅当取消继承（链链接已断开）时才允许编辑
-   * 仅适用于资源的第一个子级别
-      * **类型**：`String`
+  * 适用于触屏UI对话框中的项目
+  * 将在对话框中创建链链接符号
+  * 仅当取消继承（链链接已断开）时才允许编辑
+  * 仅适用于资源的第一个子级别
+    * **类型**：`String`
 
-      * **值**：包含正在考虑的属性的名称(可与属性`name`的值比较；例如，请参阅
-        `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
+    * **值**：包含正在考虑的属性的名称(可与属性`name`的值比较；例如，请参阅
+      `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 当定义了 `cq-msm-lockable` 时，断开/闭合链的操作会通过以下方式与 MSM 相互作用：
 
 * 如果`cq-msm-lockable`的值为：
 
-   * **相对**（例如，`myProperty` 或 `./myProperty`）
+  * **相对**（例如，`myProperty` 或 `./myProperty`）
 
-      * 它将从`cq:propertyInheritanceCancelled`添加和删除属性。
+    * 它将从`cq:propertyInheritanceCancelled`添加和删除属性。
 
-   * **绝对**（例如，`/image`）
+  * **绝对**（例如，`/image`）
 
-      * 通过将`cq:LiveSyncCancelled` mixin添加到`./image`并将`cq:isCancelledForChildren`设置为`true`，中断链将取消继承。
+    * 通过将`cq:LiveSyncCancelled` mixin添加到`./image`并将`cq:isCancelledForChildren`设置为`true`，中断链将取消继承。
 
-      * 关闭链将恢复继承。
+    * 关闭链将恢复继承。
 
 >[!NOTE]
 >

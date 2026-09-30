@@ -5,14 +5,31 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 30ed51ad-4f69-41eb-9fca-d29d644aa4ba
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
-source-wordcount: '17116'
+source-wordcount: '17115'
 ht-degree: 0%
-
 ---
-
 # 对文档进行数字签名和认证 {#digitally-signing-and-certifying-documents}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -128,11 +145,11 @@ ht-degree: 0%
    * 如果需要，创建一个`FieldMDPOptions`对象，该对象指定在将数字签名应用于签名字段时锁定的字段。
    * 通过调用`SignatureServiceClient`对象的`addSignatureField`方法并传递以下值，向PDF文档添加签名字段：
 
-      * `com.adobe.idp`。 表示已向其添加签名字段的PDF文档的`Document`对象。
-      * 一个字符串值，它指定签名字段的名称。
-      * 一个`java.lang.Integer`值，表示向其中添加签名字段的页码。
-      * 指定签名字段位置的`PositionRectangle`对象。
-      * `FieldMDPOptions`对象，它指定PDF文档中在对签名字段应用数字签名后锁定的字段。 此参数值是可选的，您可以传递`null`。
+     * `com.adobe.idp`。 表示已向其添加签名字段的PDF文档的`Document`对象。
+     * 一个字符串值，它指定签名字段的名称。
+     * 一个`java.lang.Integer`值，表示向其中添加签名字段的页码。
+     * 指定签名字段位置的`PositionRectangle`对象。
+     * `FieldMDPOptions`对象，它指定PDF文档中在对签名字段应用数字签名后锁定的字段。 此参数值是可选的，您可以传递`null`。
 
    * 指定各种运行时值的`PDFSeedValueOptions`对象。 此参数值是可选的，您可以传递`null`。
 
@@ -171,10 +188,10 @@ ht-degree: 0%
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取添加了签名字段的PDF文档
 
@@ -318,10 +335,10 @@ ht-degree: 0%
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取包含签名字段的PDF文档
 
@@ -403,11 +420,11 @@ ht-degree: 0%
 * **筛选器**：指定与签名字段一起使用的筛选器。 例如，您可以使用Adobe.PPKLite过滤器。
 * **标记选项**：指定与此签名字段关联的标记值。 值为1表示签名者必须仅使用指定的条目值。 值为0表示允许使用其他值。 以下是Bit位置：
 
-   * **1（筛选器）：**&#x200B;用于对签名字段签名的签名处理程序
-   * **2 (SubFilter)：**&#x200B;一个名称数组，表示签名时可以使用的编码
-   * **3 (V)**：用于签名字段的签名处理程序所需的最低版本号
-   * **4（原因）：**&#x200B;字符串数组，用于指定签署文档的可能原因
-   * **5 (PDFLegalWarnings)：**&#x200B;指定可能合法证明的字符串数组
+  * **1（筛选器）：**&#x200B;用于对签名字段签名的签名处理程序
+  * **2 (SubFilter)：**&#x200B;一个名称数组，表示签名时可以使用的编码
+  * **3 (V)**：用于签名字段的签名处理程序所需的最低版本号
+  * **4（原因）：**&#x200B;字符串数组，用于指定签署文档的可能原因
+  * **5 (PDFLegalWarnings)：**&#x200B;指定可能合法证明的字符串数组
 
 * **法律证明**：文档经过认证后，将自动扫描特定类型的内容，这些内容可能会使文档的可见内容不明确或产生误导。 例如，注释可能会遮蔽对了解所认证的内容非常重要的文本。 扫描过程会生成指示存在此类内容的警告。 它还提供了可能生成警告的内容的其他说明。
 * **权限**：指定可在PDF文档上使用但不使签名失效的权限。
@@ -500,10 +517,10 @@ ht-degree: 0%
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取包含要修改的签名字段的PDF文档
 
@@ -594,9 +611,9 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
 
 将此配置值添加到cknfastrc文件后，无需重新启动J2EE应用程序服务器即可使用新凭据。
 
-    >[！NOTE]
-    >
-    >建议使用“Ctrl + C”命令重新启动SDK。 使用替代方法（例如停止Java进程）重新启动AEM SDK可能会导致AEM开发环境不一致。
+>[!NOTE]
+>
+> 建议使用 “Ctrl + C” 命令重新启动 SDK。 如果使用其他方式（例如停止 Java 进程）重新启动 AEM SDK，则可能会导致 AEM 开发环境出现不一致情况。
 
 **签名不受信任**
 
@@ -767,10 +784,10 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取PDF文档以进行签名
 
@@ -924,11 +941,11 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 创建用于设置运行时选项的`PDFFormRenderSpec`对象。 调用`PDFFormRenderSpec`对象的`setGenerateServerAppearance`方法并传递`true`。
    * 调用`FormsServiceClient`对象的`renderPDFForm2`方法并传递以下值：
 
-      * 包含要呈现的PDF表单的`com.adobe.idp.Document`对象。
-      * 包含要与表单合并的数据的`com.adobe.idp.Document`对象。
-      * 存储运行时选项的`PDFFormRenderSpec`对象。
-      * 包含Forms服务所需URI值的`URLSpec`对象。 您可以为此参数值指定`null`。
-      * 存储文件附件的`java.util.HashMap`对象。 这是一个可选参数，如果您不想将文件附加到表单，则可以指定`null`。
+     * 包含要呈现的PDF表单的`com.adobe.idp.Document`对象。
+     * 包含要与表单合并的数据的`com.adobe.idp.Document`对象。
+     * 存储运行时选项的`PDFFormRenderSpec`对象。
+     * 包含Forms服务所需URI值的`URLSpec`对象。 您可以为此参数值指定`null`。
+     * 存储文件附件的`java.util.HashMap`对象。 这是一个可选参数，如果您不想将文件附加到表单，则可以指定`null`。
 
      `renderPDFForm2`方法返回包含表单数据流的`FormsResult`对象
 
@@ -991,9 +1008,9 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
 
    * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
@@ -1016,14 +1033,14 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 创建用于设置运行时选项的`PDFFormRenderSpec`对象。 将值`true`分配给`PDFFormRenderSpec`对象的`generateServerAppearance`字段。
    * 调用`FormsServiceClient`对象的`renderPDFForm2`方法并传递以下值：
 
-      * 包含要呈现的PDF表单的`BLOB`对象。
-      * 包含要与表单合并的数据的`BLOB`对象。
-      * 存储运行时选项的`PDFFormRenderSpec`对象。
-      * 包含Forms服务所需URI值的`URLSpec`对象。 您可以为此参数值指定`null`。
-      * 存储文件附件的`java.util.HashMap`对象。 这是一个可选参数，如果您不想将文件附加到表单，则可以指定`null`。
-      * 用于存储表单中页数的长输出参数。
-      * 用于区域设置值的字符串输出参数。
-      * `FormResult`值，是用于存储交互式表单的输出参数。
+     * 包含要呈现的PDF表单的`BLOB`对象。
+     * 包含要与表单合并的数据的`BLOB`对象。
+     * 存储运行时选项的`PDFFormRenderSpec`对象。
+     * 包含Forms服务所需URI值的`URLSpec`对象。 您可以为此参数值指定`null`。
+     * 存储文件附件的`java.util.HashMap`对象。 这是一个可选参数，如果您不想将文件附加到表单，则可以指定`null`。
+     * 用于存储表单中页数的长输出参数。
+     * 用于区域设置值的字符串输出参数。
+     * `FormResult`值，是用于存储交互式表单的输出参数。
 
    * 通过调用`FormsResult`对象的`outputContent`字段检索PDF表单。 此字段存储表示交互式表单的`BLOB`对象。
 
@@ -1231,10 +1248,10 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取PDF文档以进行认证
 
@@ -1468,10 +1485,10 @@ PDF文档采用公钥技术签名。 签名者有两个密钥：公钥和私钥�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取包含要验证的签名的PDF文档
 
@@ -1683,10 +1700,10 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取包含要验证的签名的PDF文档
 
@@ -1847,10 +1864,10 @@ AEM Forms提供了验证PDF文档中的所有数字签名的方法。 假设PDF�
    * 将`System.ServiceModel.BasicHttpBinding`对象的`MessageEncoding`字段设置为`WSMessageEncoding.Mtom`。 此值可确保使用MTOM。
    * 通过执行以下任务启用基本HTTP身份验证：
 
-      * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
-      * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
-      * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
-      * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
+     * 将AEM表单用户名分配给字段`SignatureServiceClient.ClientCredentials.UserName.UserName`。
+     * 将相应的密码值分配给字段`SignatureServiceClient.ClientCredentials.UserName.Password`。
+     * 将常量值`HttpClientCredentialType.Basic`分配给字段`BasicHttpBindingSecurity.Transport.ClientCredentialType`。
+     * 将常量值`BasicHttpSecurityMode.TransportCredentialOnly`分配给字段`BasicHttpBindingSecurity.Security.Mode`。
 
 1. 获取包含要删除的签名的PDF文档
 

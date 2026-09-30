@@ -1,18 +1,32 @@
 ---
 title: 使用智能内容服务配置资产标记
-description: 了解如何使用智能内容服务在 [!DNL Adobe Experience Manager]中配置智能标记和增强型智能标记。
+description: 了解如何使用智能内容服务在[!DNL Adobe Experience Manager]中配置智能标记和增强型智能标记。
 role: Admin
 feature: Tagging,Smart Tags
 solution: Experience Manager, Experience Manager Assets
 exl-id: 26371d15-b0e1-4892-9c52-bc9829e462ca
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 752f9248-f39f-5793-a7dd-5ddafcd403c7
+    internal-label: Tagging
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: f0e3b2ca-813f-4b7a-81df-52339e17ddcf
+    internal-label: Smart Tags
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 7%
-
+source-wordcount: '1079'
+ht-degree: 9%
 ---
-
-# OAuth凭据的智能标记疑难解答 {#oauth-config}
+# 排查智能标记的 OAuth 凭据问题 {#oauth-config}
 
 需要开放授权配置才能同意[!DNL Adobe Experience Manager]应用程序以安全方式与智能内容服务交互。
 
@@ -33,14 +47,14 @@ ht-degree: 7%
 
 在执行此方法中的任何步骤之前，您需要实施以下内容：
 
-### 前提条件 {#prereqs-config-oauth-onprem}
+### 先决条件 {#prereqs-config-oauth-onprem}
 
 OAuth配置需要以下先决条件：
 
 * 在[Developer Console](https://developer.adobe.com/console/user/servicesandapis)中创建新的OAuth集成。 在以下步骤中使用`ClientID`、`ClientSecret`、`OrgID`和其他属性：
 * 在此路径`/apps/system/config in crx/de`上可找到以下文件：
-   * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
-   * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
+  * `com.**adobe**.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`
+  * `com.adobe.granite.auth.ims.impl.IMSAccessTokenRequestCustomizerImpl.<randomnumber>.config`
 
 ### 现有AMS和On Prem用户的OAuth配置 {#steps-config-oauth-onprem}
 
@@ -52,7 +66,6 @@ OAuth配置需要以下先决条件：
    * `auth.token.provider.orgId="<OrgID>"`
    * `auth.token.provider.default.claims=("\"iss\"\ :\ \"<OrgID>\"")`
    * `auth.token.provider.scope="read_pc.dma_smart_content,\ openid,\ AdobeID,\ additional_info.projectedProductContext"`
-
      `auth.token.validator.type="adobe-ims-similaritysearch"`
    * 使用新OAuth配置的客户端ID更新`auth.token.provider.client.id`。
    * 将`auth.access.token.request`更新至`"https://ims-na1.adobelogin.com/ims/token/v3"`
@@ -110,7 +123,7 @@ OAuth配置需要以下先决条件：
 
    **[!UICONTROL 服务URL]**： `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`
 
-   例如，`https://smartcontent.adobe.io/apac`。您可以将`na`、`emea`或`apac`指定为承载Experience Manager创作实例的区域。
+   例如，`https://smartcontent.adobe.io/apac`。 您可以将`na`、`emea`或`apac`指定为承载Experience Manager创作实例的区域。
 
    >[!NOTE]
    >
@@ -137,13 +150,13 @@ OAuth配置需要以下先决条件：
 
 ## 创建Adobe Developer Console集成 {#create-adobe-i-o-integration}
 
-要使用Smart Content Service API，请在Adobe Developer Console中创建集成，以获取[!DNL Experience Manager]中云配置的[!UICONTROL Assets智能标记服务设置]的[!UICONTROL API密钥]&#x200B;(在Adobe Developer Console集成的[!UICONTROL 客户端ID]字段中生成)、[!UICONTROL 技术帐户ID]、[!UICONTROL 组织ID]和[!UICONTROL 客户端密钥]。
+要使用Smart Content Service API，请在Adobe Developer Console中创建集成，以获取[!DNL Experience Manager]中云配置的[!UICONTROL Assets智能标记服务设置]的[!UICONTROL API密钥]（在Adobe Developer Console集成的[!UICONTROL 客户端ID]字段中生成）、[!UICONTROL 技术帐户ID]、[!UICONTROL 组织ID]和[!UICONTROL 客户端密钥]。
 
 1. 在浏览器中访问[https://developer.adobe.com/console/](https://developer.adobe.com/console/)。 选择相应的帐户并验证关联的组织角色是否为系统管理员。
 
-1. 创建具有任何所需名称的项目。单击&#x200B;**[!UICONTROL 添加 API]**。
+1. 创建具有任何所需名称的项目。 单击&#x200B;**[!UICONTROL 添加 API]**。
 
-1. 在&#x200B;**[!UICONTROL 添加 API]** 页面中，依次选择 **[!UICONTROL Experience Cloud]** 和&#x200B;**[!UICONTROL 智能内容]**。单击&#x200B;**[!UICONTROL 下一步]**。
+1. 在&#x200B;**[!UICONTROL 添加 API]** 页面中，依次选择 **[!UICONTROL Experience Cloud]** 和&#x200B;**[!UICONTROL 智能内容]**。 单击&#x200B;**[!UICONTROL 下一步]**。
 
 1. 选择&#x200B;**[!UICONTROL OAuth服务器到服务器]**&#x200B;身份验证方法。
 
@@ -161,7 +174,7 @@ OAuth配置需要以下先决条件：
    *Figure: Details of integration in Adobe Developer Console*
 -->
 
-![oauth配置](assets/oauth-config.png)
+![OAuth配置](assets/oauth-config.png)
 *图：在Adobe Developer Console中配置了OAuth服务器到服务器*
 
 ## 配置智能内容服务 {#configure-smart-content-service}

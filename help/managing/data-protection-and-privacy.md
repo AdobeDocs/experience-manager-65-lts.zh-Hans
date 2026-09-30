@@ -5,13 +5,29 @@ solution: Experience Manager, Experience Manager 6.5 LTS
 feature: Compliance
 role: Developer,Leader,User
 exl-id: 6faf8e4f-ca2a-4d68-a354-fb0aa6c2644b
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: ae206583-dab1-444b-b978-a37aad4a988c
+    internal-label: Experience Manager 6.5 LTS
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 97%
-
 ---
-
 # Adobe Experience Manager 对数据保护与数据隐私法规的合规性准备 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
@@ -60,19 +76,19 @@ Adobe Experience Manager 的实例以及其上运行的应用程序由 Adobe 客
 
 * 实例以及其上运行的应用程序由客户拥有并运营。
 
-   * 客户负责管理合规相关角色，包括企业实体与服务提供商、数据控制者和数据处理者等。
+  * 客户负责管理合规相关角色，包括企业实体与服务提供商、数据控制者和数据处理者等。
 
-   * Adobe Experience Platform Privacy Service 不在 AEM 的工作流中，如下图所述。
+  * Adobe Experience Platform Privacy Service 不在 AEM 的工作流中，如下图所述。
 
 * AEM 包括面向客户隐私管理员和/或 AEM 管理员的文档和过程，可手动或通过 API（在可用时）执行隐私监管请求。
 
 * 未添加新的服务或 UI。
 
-   * 而是记载了由处理隐私监管请求的客户 UI/门户使用的过程和 API。
+  * 而是记载了由处理隐私监管请求的客户 UI/门户使用的过程和 API。
 
 * AEM 不包括任何现成的工具来支持隐私请求工作流。
 
-   * Adobe 为客户的隐私管理员和 AEM 管理员提供文档和操作程序，使其能够手动执行与隐私法规相关的请求。
+  * Adobe 为客户的隐私管理员和 AEM 管理员提供文档和操作程序，使其能够手动执行与隐私法规相关的请求。
 
 Adobe 提供了在 Adobe Experience Manager 中处理与访问、删除和退出相关的隐私请求的操作程序。 在某些情况下，可以使用客户自建的门户或脚本调用 API，以协助实现自动化。
 

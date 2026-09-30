@@ -5,13 +5,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 3fafb5e6-f5ac-4c11-809f-6cb2c5269377
-source-git-commit: abda4a719676f45388e91bbdec1421152433fce8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 1%
-
+source-wordcount: '992'
+ht-degree: 3%
 ---
-
 # 链接检查器 {#the-link-checker}
 
 内容作者无需自行验证他们包含在内容页面中的每个链接。
@@ -35,7 +44,7 @@ Link Checker会自动运行以帮助内容作者使用其链接，包括：
 内部链接是指向AEM存储库中其他内容的链接。 可以使用RTE中的路径选择器或使用自定义组件添加内部链接。 例如：
 
 * 您的页面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在`/content/wknd/us/en/adventures/extreme-ironing.html`文本组件中包含指向[的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
+* 在[文本组件中包含指向`/content/wknd/us/en/adventures/extreme-ironing.html`的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
 
 内容作者向页面添加内部链接后，将立即验证内部链接。 如果链接无效：
 
@@ -49,7 +58,7 @@ Link Checker会自动运行以帮助内容作者使用其链接，包括：
 外部链接是指向AEM存储库外部内容的链接。 可以使用RTE或使用自定义组件添加外部链接。 例如：
 
 * 您的页面`/content/wknd/us/en/adventures/ski-touring.html`
-* 在`https://bunwarmerthermalunderwear.com`文本组件中包含指向[的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
+* 在[文本组件中包含指向`https://bunwarmerthermalunderwear.com`的链接。](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans)
 
 验证外部链接的语法和检查其可用性。 此检查在可配置的内部异步完成。 如果Link Checker发现外部链接无效：
 
@@ -72,14 +81,14 @@ Link Checker会自动运行以帮助内容作者使用其链接，包括：
 将显示以下信息：
 
 * **状态** — 链接的验证状态，可以是以下状态之一：
-   * **有效** — 链接检查器可以访问外部链接
-   * **挂起** — 外部链接已添加到站点内容，但尚未通过链接检查器验证
-   * **无效** — 链接检查器无法访问外部链接
+  * **有效** — 链接检查器可以访问外部链接
+  * **挂起** — 外部链接已添加到站点内容，但尚未通过链接检查器验证
+  * **无效** — 链接检查器无法访问外部链接
 * **URL** — 外部链接
 * **反向链接** — 包含外部链接的内容页面
-   * 如果配置，则仅填充[。](#configuring)
+  * 如果配置，则仅填充[。](#configuring)
 * **上次检查时间** — 上次链接检查器验证外部链接的时间
-   * 可配置检查链接的频率[。](#configuring)
+  * 可配置检查链接的频率[。](#configuring)
 * **上次状态** — 链接检查上次检查外部链接时返回的最后HTML状态代码
 * **上次可用时间** — 链接检查器上次使用该链接的时间
 * **上次访问时间** — 自上次在创作界面中访问带有外部链接的页面以来的时间
@@ -97,8 +106,8 @@ Link Checker会自动运行以帮助内容作者使用其链接，包括：
 1. 事件处理程序遍历`/content`下的所有内容，检查新链接或更新后的链接，并将它们添加到链接检查器的缓存中。
 1. 然后，**Day CQ Link Checker Service**&#x200B;会定期执行以检查缓存中的条目是否为有效语法。
 1. 经过语法验证的链接随后显示在[外部链接检查器](#external-link-checker)窗口中。 但是，它们将处于&#x200B;**挂起**&#x200B;状态。
-1. 然后，定期执行&#x200B;**Day CQ Link Checker任务**，以通过进行GET调用来验证链接。
-1. **天CQ链接检查器任务**&#x200B;随后会使用GET调用的结果更新外部链接检查器窗口中的条目。
+1. 然后，定期执行&#x200B;**Day CQ Link Checker任务**&#x200B;以通过进行GET调用来验证链接。
+1. **天CQ链接检查器任务**&#x200B;随后将外部链接检查器窗口中的条目更新为GET调用的结果。
 
 ## 配置链接检查器 {#configuring}
 

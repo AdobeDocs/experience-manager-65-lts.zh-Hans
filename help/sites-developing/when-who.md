@@ -1,5 +1,5 @@
 ---
-title: 测试 — 何时与谁？
+title: 测试——何时进行以及与谁进行？
 description: 各种角色可以参与测试和项目开发的各个阶段。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 631ca939-81f4-49f5-b29a-f4633f2888aa
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 0%
-
+source-wordcount: '270'
+ht-degree: 3%
 ---
-
-# 测试 — 何时与谁？{#testing-when-and-with-whom}
+# 测试——何时进行以及与谁进行？{#testing-when-and-with-whom}
 
 各种角色可以参与测试和项目开发的各个阶段。
 

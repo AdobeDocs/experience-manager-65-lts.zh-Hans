@@ -9,13 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
 exl-id: f33950b1-6164-4e02-b666-50af84647852
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 0%
-
+source-wordcount: '783'
+ht-degree: 7%
 ---
-
 # 封装令牌支持{#encapsulated-token-support}
 
 ## 简介 {#introduction}
@@ -70,22 +82,22 @@ ht-degree: 0%
 要跨实例复制密钥，您需要：
 
 1. 访问AEM实例，通常是创作实例，其中包含要复制的关键资料；
-1. 在本地文件系统中找到`com.adobe.granite.crypto.file`包。 例如，在此路径下：
+1. 在本地文件系统中找到`com.adobe.granite.crypto.file`包。 例如，路径如下：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
    每个文件夹中的`bundle.info`文件将标识包名称。
 
-1. 导航到数据文件夹。 例如：
+1. 进入数据文件夹。 例如：
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
-1. 复制HMAC和主文件。
-1. 然后，转到要将HMAC密钥复制到的目标实例，并导航到数据文件夹。 例如：
+1. 复制 HMAC 与主文件。
+1. 随后进入要复制 HMAC 密钥的目标实例，并导航到数据文件夹。 例如：
 
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
-1. 粘贴您之前复制的两个文件。
+1. 粘贴先前复制的两个文件。
 
 1. 对要向其复制密钥的所有实例重复上述步骤。
 

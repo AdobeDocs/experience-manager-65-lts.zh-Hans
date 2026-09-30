@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 456bcdf5-3d43-43d8-b243-70095e0cf58c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 2%
-
 ---
-
 # 与Adobe Experience Cloud集成{#integrating-with-the-adobe-marketing-cloud}
 
 [Adobe Experience Cloud](https://business.adobe.com/cn/products/marketing-cloud/main.html)包含功能强大的Web分析和网站优化产品，这些产品可提供可操作的实时数据和见解，从而推动成功的在线计划。 它为在线业务优化提供了一个集成的、开放的平台。 Cloud由集成的应用程序组成，这些应用程序用于收集和释放客户insight的功能，从而优化客户获取、转化和保留工作以及内容的创建和分发。

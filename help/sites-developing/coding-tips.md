@@ -1,5 +1,5 @@
 ---
-title: 编码提示
+title: 编码技巧
 description: 了解在Adobe Experience Manager中编码最佳实践的一些提示。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: e431a240-45a2-4222-b854-32b90e5cd100
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '861'
 ht-degree: 0%
-
 ---
-
-# 编码提示{#coding-tips}
+# 编码技巧{#coding-tips}
 
 ## 尽可能使用taglibs或HTL {#use-taglibs-or-htl-as-much-as-possible}
 
@@ -79,7 +88,7 @@ CSS规则应该特定于应用程序上下文中的目标元素。 例如，应�
 
 ### 为安全而转义资源路径 {#escape-resource-paths-for-safety}
 
-虽然JCR中的路径不应包含空格，但它们的存在不应导致代码中断。 Jackrabbit提供了包含&#x200B;*escape()*&#x200B;和&#x200B;*escapePath()*&#x200B;方法的文本实用程序类。 对于JSP，Granite UI公开&#x200B;*granite：encodeURIPath() EL*&#x200B;函数。
+虽然JCR中的路径不应包含空格，但它们的存在不应导致代码中断。 Jackrabbit提供了包含&#x200B;*escape()*&#x200B;和&#x200B;*escapePath()*&#x200B;方法的文本实用程序类。 对于JSP，Granite UI公开&#x200B;*granite:encodeURIPath() EL*&#x200B;函数。
 
 ### 使用XSS API和/或HTL防止跨站点脚本攻击 {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 

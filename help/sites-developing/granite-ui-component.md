@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: e49d1d3d-984c-4b08-b0e5-2016fbff0b80
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 2%
-
 ---
-
 # 创建新的 Granite UI 字段组件{#creating-a-new-granite-ui-field-component}
 
 Granite UI提供一系列设计用于表单的组件；这些组件在Granite UI词汇中称为&#x200B;*字段*。 标准Granite表单组件在以下位置提供：
@@ -34,16 +43,16 @@ Granite UI提供一系列设计用于表单的组件；这些组件在Granite UI
 
 * 服务器端：
 
-   * 基础组件的集合
+  * 基础组件的集合
 
-      * 基础 — 模块化、可组合、可分层、可重用
-      * 组件 — Sling组件
+    * 基础 — 模块化、可组合、可分层、可重用
+    * 组件 — Sling组件
 
-   * 帮助应用程序开发的辅助程序
+  * 帮助应用程序开发的辅助程序
 
 * 客户端：
 
-   * clientlibs的集合，提供一些词汇（即HTML语言的扩展）以通过超媒体驱动的用户界面实现通用交互模式。
+  * clientlibs的集合，提供一些词汇（即HTML语言的扩展）以通过超媒体驱动的用户界面实现通用交互模式。
 
 通用Granite UI组件`field`由两个感兴趣的文件组成：
 
@@ -56,7 +65,7 @@ Granite UI提供一系列设计用于表单的组件；这些组件在Granite UI
 
 * `cqgems/customizingfield/components/colorpicker`
 
-   * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
+  * 由[代码示例](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)提供
 
 * `granite/ui/components/foundation/form`
 

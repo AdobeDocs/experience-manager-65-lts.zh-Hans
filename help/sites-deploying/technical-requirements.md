@@ -6,13 +6,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: f65dd129-9e28-4de1-acca-dd31eaf3c19b
-source-git-commit: f5a36877c0d051de5c96a8ab89b2886b28865249
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '3090'
 ht-degree: 6%
-
 ---
-
 # 技术要求{#technical-requirements}
 
 Adobe支持平台上的(AEM) Adobe Experience Manager，如本文档中的以下信息所述。
@@ -155,7 +167,7 @@ Adobe Experience Manager可与以下服务器平台配合使用以用于生产�
 | **平台** | **支持级别** |
 |---|---|
 | **Linux®，基于Red Hat®分发** | A：支持的`[1]` `[2]` |
-| Linux®，基于Debian分布，包括 乌班图 | A：支持的`[1]` |
+| Linux®，基于Debian分布，包括Ubuntu | A：支持的`[1]` |
 | Linux®，基于SUSE®分发 | A：支持的`[1]` |
 | Microsoft® Windows Server 2022 | R：支持 |
 
@@ -441,9 +453,9 @@ Adobe Experience Manager（实例、Dispatcher）的所有元素都可以安装�
 
 * **操作系统：**
 
-   * Linux®（在64位系统上支持32位和32位应用程序）。
-   * Windows Server
-   * macOS X（64位）
+  * Linux®（在64位系统上支持32位和32位应用程序）。
+  * Windows Server
+  * macOS X（64位）
 
 * **文件格式**：JPEG、PNG、TIFF、PDF、INDD、AI和EPS。
 

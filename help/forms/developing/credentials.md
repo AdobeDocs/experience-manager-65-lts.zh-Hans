@@ -9,14 +9,31 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: b3a0eb20-5b85-45a3-a416-a16a9f44acc5
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
-
 ---
-
 # 使用凭据 {#working-with-credentials}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -119,10 +136,10 @@ ht-degree: 1%
    * 创建一个包含一个元素的字符串数组。 将值`truststore.usage.type.sign`分配给元素。
    * 调用`CredentialServiceClient`对象的`importCredential`方法并传递以下值：
 
-      * 指定凭据的别名值的字符串值。
-      * 存储凭据的`com.adobe.idp.Document`实例。
-      * 一个字符串值，它指定与凭据关联的密码。
-      * 包含用法值的字符串数组。 例如，您可以指定此值`truststore.usage.type.sign`。 要导入Reader扩展凭据，请指定`truststore.usage.type.lcre`。
+     * 指定凭据的别名值的字符串值。
+     * 存储凭据的`com.adobe.idp.Document`实例。
+     * 一个字符串值，它指定与凭据关联的密码。
+     * 包含用法值的字符串数组。 例如，您可以指定此值`truststore.usage.type.sign`。 要导入Reader扩展凭据，请指定`truststore.usage.type.lcre`。
 
 **另请参阅**
 

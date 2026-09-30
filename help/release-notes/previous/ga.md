@@ -1,17 +1,31 @@
 ---
-title: ' [!DNL Adobe Experience Manager] 6.5 LTS 的发行说明'
+title: '[!DNL Adobe Experience Manager] 6.5 LTS的发行说明'
 description: 查找 Adobe Experience Manager 6.5 LTS 的当前版本信息。
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: dfda31ac-765b-401d-98d0-c19f0de22aab
-source-git-commit: e3106e87f72484568667873c1772abd30a108e51
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 100%
-
+source-wordcount: '1161'
+ht-degree: 99%
 ---
-
 # Adobe Experience Manager 6.5 LTS 的最新发行说明 {#release-notes}
 
 ## 发行版信息 {#release-information}
@@ -24,9 +38,9 @@ ht-degree: 100%
 
 ## 新增功能 {#what-s-new}
 
-[!DNL Adobe Experience Manager] 6.5 LTS 是 [!DNL Adobe Experience Manager] 6.5 代码库的升级发行版本。 它提供关键客户修复、高优先级客户增强功能以及增强产品稳定性的一般错误修复。 它还包括达到 SP22 的 [!DNL Adobe Experience Manager] 6.5 Service Pack 发行版本。
+[!DNL Adobe Experience Manager] 6.5 LTS 是 [!DNL Adobe Experience Manager] 6.5 代码库的升级发行版本。 它提供关键客户修复、高优先级客户增强功能以及面向产品稳定化的一般错误修复。 它还包括达到 SP22 的 [!DNL Adobe Experience Manager] 6.5 Service Pack 发行版本。
 
-下表提供了一个概述，接下来几页列出了完整的详细信息。
+下面的列表提供了一个概述，接下来几页列出了完整的详细信息。
 
 ### [!DNL Experience Manager Foundation] {#experience-manager-foundation}
 
@@ -38,7 +52,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 * 支持 Java™ 17 和 Java™ 21。
 * 为了获得最佳性能，请用其他值覆盖默认 GC 值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
-* 如果 Oracle 未公开提供，Adobe 会分配 Java™ 17 和 Java™ 21 维护更新，以便客户在 AEM 相关项目中使用。
+* 如果 Oracle 未公开提供，Adobe 会分发 Java™ 17 和 Java™ 21 维护更新，以供客户在 AEM 相关项目中使用。
 
 #### Uberjar 包装 {#uber-jar-packaging}
 
@@ -73,7 +87,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 沟通有关即将删除或取代 Adobe Experience Manager（AEM）功能的消息时，适用以下规则：
 
 1. 首先发布弃用公告。 功能在弃用阶段仍可使用，但不会再进行改进。
-1. 最早会在下一个主要版本中移除已弃用的功能。 移除的实际目标日期会计划稍后公布。
+1. 最早会在下一个主要版本中移除已弃用的功能。 实际移除目标日期计划稍后公布。
 
 在实际移除之前，此过程将为客户提供至少一个发布周期时间，使客户的实施能够适应功能弃用后的新版本或后续版本。
 
@@ -104,7 +118,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 | Granite | 不支持 `com.adobe.granite.crx-explorer`。 | 没有替代功能可用。 | 6.5 LTS GA |
 | Granite | 不支持 `crx2oak`。 | 选择相关版本的 [Oak-upgrade](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-upgrade) | 6.5 LTS GA |
 | Adobe | 不支持 `com.adobe.cq.cq-searchpromote-integration`。 | 没有替代功能可用。 | 6.5 LTS GA |
-| Guava | 现在，AEM 中的所有 guava 依赖项都已移除，因此 `com.adobe.granite.osgi.wrapper.guava-15.0.0-0002` 捆绑包不再是 AEM 的一部分。 | 如果客户依赖 guava，可以自行添加 guava，或者在可能的情况下用 Java 收藏集或其他替代功能取代 guava 代码。 | 6.5 LTS GA |
+| Guava | 现在，AEM 中的所有 guava 依赖项都已移除，因此 `com.adobe.granite.osgi.wrapper.guava-15.0.0-0002` 捆绑包不再是 AEM 的一部分。 | 如果客户依赖 guava，可以自行添加 guava，或者在可能的情况下用 Java 集合或其他替代方案取代 guava 代码。 | 6.5 LTS GA |
 | `We.Retail` | 不支持 `We-retail` 示例网站。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 开源 | 不支持 `oak-solr-osgi` 捆绑包。 | 没有替代功能可用。 | 6.5 LTS GA |
 | 开源 | 不支持 `org.apache.servicemix.bundles.abdera-parser`、`org.apache.servicemix.bundles.jdom` 和 `org.apache.sling.atom.taglib`。 | 没有替代功能可用。 | 6.5 LTS GA |
@@ -115,7 +129,7 @@ Adobe 不断审查产品功能，通过更新或取代旧功能来提高客户�
 
 ## 已知问题 {#known-issues}
 
-### AEM 6.5.21-6.5.23 和 AEM 6.5 LTS GA 中的 JSP 脚本包问题
+### AEM 6.5.21-6.5.23 和 AEM 6.5 LTS GA 中的 JSP 脚本捆绑包问题
 
 AEM 6.5.21、6.5.22、6.5.23 和 AEM 6.5 LTS GA 附带 `org.apache.sling.scripting.jsp:2.6.0` 捆绑包，其中包含一个已知问题。 此问题经常在 AEM 实例处理许多并发请求而导致高负载的情况下发生。
 

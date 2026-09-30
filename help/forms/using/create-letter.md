@@ -7,13 +7,26 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: b866ff4a-251c-4402-b426-9c4d97fd181d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '4013'
 ht-degree: 2%
-
 ---
-
 # 创建书信 {#create-letter}
 
 ## 通信管理工作流 {#correspondence-management-workflow}
@@ -152,10 +165,10 @@ ht-degree: 2%
 * 通信模板多久更改一次？ 是每年、每季度更新，还是仅在特定法规发生更改时更新？ 需要什么类型的更改？ 是否需要执行更改以修复拼写错误、更改布局、添加更多字段、添加更多段落等。
 * 在规划通信需求时，收集新通信模板的列表。 对于每个通信模板，您需要：
 
-   * 文本子句、图像和表
-   * 来自后端系统的数据值
-   * 通信布局和片段布局
-   * 内容在信件中的显示顺序以及包含和排除内容的规则
+  * 文本子句、图像和表
+  * 来自后端系统的数据值
+  * 通信布局和片段布局
+  * 内容在信件中的显示顺序以及包含和排除内容的规则
 
 * 索赔理算员或案例处理员等业务用户修改信件内容或部分的条件。
 * 方案是描述使用信件解决方案的用户体验、要求和好处的叙述。

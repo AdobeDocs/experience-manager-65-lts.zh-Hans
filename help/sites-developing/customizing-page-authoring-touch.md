@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 8d53072b-826d-4ff4-843b-09204fb5a455
-source-git-commit: a869ffbc6015fd230285838d260434d9c0ffbcb0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1468'
 ht-degree: 39%
-
 ---
-
 # 自定义页面创作{#customizing-page-authoring}
 
 >[!CAUTION]
@@ -28,8 +37,8 @@ Adobe Experience Manager (AEM)提供了各种机制，允许您自定义创作�
 
   Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函数、对象和方法。 定制时，您可以在 `/apps.` 下创建自己的 clientlib。新的 clientlib 必须：
 
-   * 取决于创作clientlib `cq.authoring.editor.sites.page`
-   * 属于相应的`cq.authoring.editor.sites.page.hook`类别
+  * 取决于创作clientlib `cq.authoring.editor.sites.page`
+  * 属于相应的`cq.authoring.editor.sites.page.hook`类别
 
 * 叠加
 
@@ -151,12 +160,12 @@ GITHUB上的代码
 
      例如：
 
-      * `/libs/foundation/components/text/cq:editConfig`
-      * `/libs/foundation/components/image/cq:editConfig`
+     * `/libs/foundation/components/text/cq:editConfig`
+     * `/libs/foundation/components/image/cq:editConfig`
 
-         * 属性：`editorType`
+       * 属性：`editorType`
 
-           定义触发对该组件进行就地编辑时使用的内联编辑器的类型；例如，`text`, `textimage`, `image`, `title`。
+         定义触发对该组件进行就地编辑时使用的内联编辑器的类型；例如，`text`, `textimage`, `image`, `title`。
 
 1. 可以使用包含配置的`config`节点和包含必要插件配置详细信息的`plugin`节点来配置编辑器的其他配置详细信息。
 

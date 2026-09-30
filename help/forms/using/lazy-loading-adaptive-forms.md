@@ -8,16 +8,32 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 768f2f8a-6ac7-4a20-8500-bcfc960861ce
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 6%
-
+source-wordcount: '1123'
+ht-degree: 7%
 ---
-
 # 使用延迟加载改进大型表单的性能{#improve-performance-of-large-forms-with-lazy-loading}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。这些组件代表有关创建自适应表单的重大改进，确保实现令人印象深刻的用户体验。本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
@@ -77,7 +93,7 @@ Forms包含某些字段和部分，不适用于所有用户且在所有条件下
 处理延迟加载时要牢记的一些限制、建议和要点如下：
 
 * 在基于XFA的自适应表单上使用基于XSD架构的自适应表单来配置大型表单上的延迟加载。 在基于XFA的自适应表单中，由于延迟加载实施导致的性能增益相对低于在基于XSD的自适应表单中的增益。
-* 对于自适应表单中片段没有根面板的导航&#x200B;**[!UICONTROL 布局，而在一页上使用]** Responsive -everything，请勿对该片段进行延迟加载。 作为响应式布局配置的结果，所有片段将以自适应表单同时加载。 它还会导致性能降低。
+* 对于自适应表单中片段没有根面板的导航&#x200B;**布局，而在一页上使用** Responsive -everything，请勿对该片段进行延迟加载。 作为响应式布局配置的结果，所有片段将以自适应表单同时加载。 它还会导致性能降低。
 * 建议不要在自适应表单的第一个片段上配置延迟加载。
 * 建议不要在加载自适应表单时呈现的第一个面板中为片段配置延迟加载。
 * 片段层次结构中最多支持两个级别的延迟加载。

@@ -1,5 +1,5 @@
 ---
-title: 新渲染和提交服务
+title: 新的渲染和提交服务
 description: 在Workbench中定义渲染和提交服务，以根据从中访问XDP的设备将XDP表单渲染为HTML或PDF。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,23 +9,43 @@ solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
 exl-id: c7b91bc0-8369-44de-996c-7beaa3828c4e
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 0%
-
+source-wordcount: '898'
+ht-degree: 1%
 ---
-
-# 新渲染和提交服务{#new-render-and-submit-service}
+# 新的渲染和提交服务{#new-render-and-submit-service}
 
 ## 简介 {#introduction}
 
-在Workbench中，当您定义`AssignTask`操作时，请指定特定表单(XDP或PDF表单)。 此外，通过操作配置文件指定一组渲染和提交服务。
+在Workbench中，当您定义`AssignTask`操作时，请指定特定表单（XDP或PDF表单）。 此外，通过操作配置文件指定一组渲染和提交服务。
 
 XDP可以呈现为PDF表单或HTML表单。 新功能包括：
 
 * 以HTML身份呈现和提交XDP表单
-* 在桌面上以PDF的形式呈现和提交XDP表单，在移动设备(例如，iPad)上以HTML的形式呈现和提交
+* 在桌面上以PDF的形式呈现和提交XDP表单，在移动设备（例如，iPad）上以HTML的形式呈现和提交
 
 ### 新的HTML Forms服务 {#new-html-forms-service}
 

@@ -6,13 +6,27 @@ feature: Developing,SPA Editor
 role: Developer
 exl-id: 9c8dff52-3860-4f71-a0d9-993574f1d654
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 3%
-
+source-wordcount: '409'
+ht-degree: 2%
 ---
-
 
 # RemotePage 组件 {#remote-page-component}
 
@@ -36,9 +50,9 @@ RemotePage组件从应用程序生成的`asset-manifest.json`中获取所有必�
 * 在页面属性中配置远程URL
 * 在AEM中渲染SPA
 * Web应用程序必须使用类似于以下内容的捆绑器资产清单，并在域根目录下公开asset-manifest.json文件，该文件在入口点属性中列出要加载的所有CSS和JS文件：
-   * https://github.com/shellscape/webpack-manifest-plugin
-   * https://github.com/webdeveric/webpack-assets-manifest
-   * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
+  * https://github.com/shellscape/webpack-manifest-plugin
+  * https://github.com/webdeveric/webpack-assets-manifest
+  * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
 
   ![入口点](assets/asset-manifest-entrypoints.png)
 
@@ -46,7 +60,7 @@ RemotePage组件从应用程序生成的`asset-manifest.json`中获取所有必�
 
 ## 限制 {#limitations}
 
-* RemotePage组件希望该实施提供与此处所找到的[类似的资产清单。](https://github.com/shellscape/webpack-manifest-plugin)但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架（如Angular）远程加载应用程序。
+* RemotePage组件希望该实施提供与此处找到的[类似的资产清单。](https://github.com/shellscape/webpack-manifest-plugin) 但是，RemotePage组件仅经过测试可用于React框架（和通过remote-page-next组件的Next.js），因此不支持从其他框架（如Angular）远程加载应用程序。
 * 在AEM中进行远程呈现时，在应用程序的根HTML文件中定义的内部CSS和根DOM节点上的内联CSS将不可用。
 
 ## 技术详细信息 {#technical-details}

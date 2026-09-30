@@ -10,13 +10,28 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: e57d51de-9d98-4b20-8180-22fa81fad4fd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2051'
 ht-degree: 2%
-
 ---
-
 # HTML5 Forms 的架构{#architecture-of-html-forms}
 
 ## 架构 {#architecture}
@@ -182,5 +197,5 @@ Sling包包含与配置文件和配置文件渲染器相关的内容。
 
 如上所述，配置文件渲染器JSP通过sling include调用Forms服务。 此JSP还根据管理员配置或请求参数设置各种调试选项。
 
-利用HTML5表单，开发人员可创建配置文件和配置文件渲染器以自定义表单的外观。例如，利用HTML表单，开发人员可以将表单集成到现有HTML门户的面板或&lt;div>部分中。
+利用HTML5表单，开发人员可创建配置文件和配置文件渲染器以自定义表单的外观。 例如，利用HTML表单，开发人员可以将表单集成到现有HTML门户的面板或&lt;div>部分中。
 有关创建自定义配置文件的更多详细信息，请参阅[创建自定义配置文件](/help/forms/using/custom-profile.md)。

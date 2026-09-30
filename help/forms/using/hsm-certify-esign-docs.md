@@ -9,13 +9,29 @@ feature: Document Services
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 20bd6c24-ac9d-4f8d-b5c0-9b7935d4bdf8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 8%
-
 ---
-
 # 使用 HSM 对文档进行数字签名或认证 {#use-hsm-to-digitally-sign-or-certify-documents}
 
 硬件安全模块(HSM)和令牌是专门、强化和防篡改的计算设备，旨在安全地管理、处理和存储数字密钥。 这些设备直接连接到计算机或网络服务器。

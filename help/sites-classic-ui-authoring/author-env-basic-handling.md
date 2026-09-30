@@ -1,6 +1,6 @@
 ---
 title: 基本操作
-description: 有关使用Adobe Experience Manager创作环境时基本处理的概述。 它使用站点控制台作为基础。
+description: 有关使用Adobe Experience Manager创作环境时基本处理的概述。 它使用 Sites 控制台作为基础。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: bc424dcd-f3a7-48f5-848d-1b14b8e26862
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 4%
-
+source-wordcount: '1188'
+ht-degree: 5%
 ---
-
 # 基本处理{#basic-handling}
 
 >[!NOTE]
@@ -53,8 +62,8 @@ ht-degree: 4%
    <td>这些控制台允许您导入和<a href="/help/sites-classic-ui-authoring/classicui-assets.md">管理数字资产</a>，如图像、视频、文档和音频文件。 随后，这些资源便可由同一AEM实例上运行的任何网站使用。 </td>
   </tr>
   <tr>
-   <td><strong>启动项</strong></td>
-   <td>这有助于您管理<a href="/help/sites-classic-ui-authoring/classic-launches.md">启动项</a>；这些启动项使您能够开发内容以供将来发布一个或多个激活的网页。<br /> <i>注意：在触屏优化UI中，站点控制台中提供了许多相同的功能，以及引用边栏。</i> <i>如有必要，可以从“工具”控制台中使用此控制台；请依次选择“操作”和“启动”。</i></td>
+   <td><strong>发布项</strong></td>
+   <td>这有助于您管理您的<a href="/help/sites-classic-ui-authoring/classic-launches.md">启动项</a>；这些启动项使您能够为一个或多个激活的网页的未来版本开发内容。<br /> <i>注意：在触屏UI中，站点控制台中提供了许多相同的功能，以及引用边栏。</i> <i>如有必要，可以从“工具”控制台中使用此控制台；请依次选择“操作”和“启动”。</i></td>
   </tr>
   <tr>
    <td><strong>收件箱 </strong></td>
@@ -117,10 +126,10 @@ ht-degree: 4%
 
 * 单击左窗格中的页面名称会执行以下操作：
 
-   * 在右侧窗格中列出子页面
-   * 展开左窗格中的结构。
+  * 在右侧窗格中列出子页面
+  * 展开左窗格中的结构。
 
-     出于性能原因，此操作取决于子节点的数量。 在标准安装中，当子节点数为`30`或更少时，此扩展方法可正常工作。
+    出于性能原因，此操作取决于子节点的数量。 在标准安装中，当子节点数为`30`或更少时，此扩展方法可正常工作。
 
 * 双击页面名称（左窗格）可展开树，不过由于该页面同时打开，因此这种效果并不明显。
 

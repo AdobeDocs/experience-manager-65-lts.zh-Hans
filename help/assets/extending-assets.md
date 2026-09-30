@@ -1,18 +1,27 @@
 ---
-title: 自定义和扩展 [!DNL Assets]
+title: 自定义和扩展[!DNL Assets]
 description: 了解自定义和扩展Asset Share和Asset Editor的方法，为用户提供专门定制的界面和功能集。
 contentOwner: AG
 role: Developer
 feature: Developer Tools
 solution: Experience Manager, Experience Manager Assets
 exl-id: d4826314-a714-47b2-bf4d-029dc47982ce
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 0%
-
+source-wordcount: '252'
+ht-degree: 1%
 ---
-
 # 自定义和扩展[!DNL Assets] {#customizing-and-extending-assets}
 
 资产编辑器是Adobe Enterprise Manager网站的用户用于查找、查看和处理存储库中数字资产的主要访问点。

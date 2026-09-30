@@ -1,5 +1,5 @@
 ---
-title: 单点登录和超时处理程序
+title: 单点登录与超时处理程序
 description: 如何设置AEM Forms工作区的会话超时值。
 contentOwner: robhagat
 content-type: reference
@@ -9,16 +9,30 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: c6bdfa6f-0d9b-4473-a2e1-6cad73fbd1ed
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 0%
-
+source-wordcount: '192'
+ht-degree: 6%
 ---
+# 单点登录与超时处理程序 {#single-sign-on-and-timeout-handlers}
 
-# 单点登录和超时处理程序 {#single-sign-on-and-timeout-handlers}
-
-AEM Forms工作区已启用SSO。 如果用户已登录到AEM Forms应用程序(如Forms Manager或PDF Generator用户界面)，并在同一浏览器会话中访问AEM Forms工作区，则用户将登录到AEM Forms工作区，反之亦然。
+AEM Forms工作区已启用SSO。 如果用户已登录到AEM Forms应用程序（如Forms Manager或PDF Generator用户界面），并在同一浏览器会话中访问AEM Forms工作区，则用户将登录到AEM Forms工作区，反之亦然。
 
 ## 在AEM Forms工作区中处理服务器超时 {#handling-server-timeout-in-nbsp-aem-forms-workspace}
 

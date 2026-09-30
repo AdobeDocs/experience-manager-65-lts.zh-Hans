@@ -9,13 +9,22 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 62b6d299-f44e-4af3-b5e1-b0e92ca0598a
-source-git-commit: cc96a14ebaf9f895a798b5f4904f5b4769b990bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 5%
-
+source-wordcount: '604'
+ht-degree: 7%
 ---
-
 # 在We.Retail中试用核心组件{#trying-out-core-components-in-we-retail}
 
 核心组件是灵活的新式组件，具有轻松的扩展性并允许轻松集成到项目中。 核心组件是围绕几个主要设计原则构建的，例如HTL、开箱即用的可用性、可配置性、版本控制和可扩展性。 `We.Retail`站点基于核心组件构建。
@@ -57,7 +66,7 @@ ht-degree: 5%
 
 1. 在感谢页面上，选择文本组件，并在该组件的“编辑”菜单中，单击取消继承图标。
 
-   [`We.Retail`具有全局化网站结构](/help/sites-developing/we-retail-globalized-site-structure.md)，内容通过名为inheritance[的机制从主语言网站推送到](/help/sites-administering/msm.md)活动副本。 因此，必须取消继承，用户才能手动编辑文本。
+   [`We.Retail`具有全局化网站结构](/help/sites-developing/we-retail-globalized-site-structure.md)，内容通过名为inheritance[&#128279;](/help/sites-administering/msm.md)的机制从主语言网站推送到活动副本。 因此，必须取消继承，用户才能手动编辑文本。
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 

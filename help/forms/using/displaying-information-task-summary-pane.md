@@ -9,13 +9,27 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 0ecca051-3ebc-4ace-b550-6e895c582e2c
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 0%
-
+source-wordcount: '266'
+ht-degree: 5%
 ---
-
 # 在任务摘要窗格中显示信息 {#displaying-information-in-the-task-summary-pane}
 
 在AEM Forms工作区中打开任务时，“任务摘要”窗格会显示任务的摘要。 这项与任务相关的附加信息为AEM Forms工作区的最终用户增添了更多价值。
@@ -32,7 +46,7 @@ AEM Forms工作区允许您在“任务摘要”窗格中显示自己选择的�
 1. 下面是在“任务摘要”页面上显示信息的示例。
 
    * 登录到`https://'[server]:[port]'/lc/crx/de`上的CRXDE Lite环境。
-   * `Create a node`**SampleSummary** ` under `/content` with type `nt：unstructured`. In the properties of this node, add `sling：resourceType` of type String and value `SampleSummary`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr：read` privileges.`
+   * `Create a node`**SampleSummary** ` under `/content` with type `nt:unstructured`. In the properties of this node, add `sling:resourceType` of type String and value `SampleSummary`. In the Access Control List of this node, add an entry for `PERM_WORKSPACE_USER` allowing `jcr:read` privileges.`
    * `/apps`下的&#x200B;`Create a folder`**SampleSummary**。 在`/apps/SampleSummary`的访问控制列表中，添加允许`jcr:readprivileges`的`PERM_WORKSPACE_USER`条目。
    * `Create a file `html.esp` at `/apps/SampleSummary`. For example, add the following lines in `html.esp`.`
 

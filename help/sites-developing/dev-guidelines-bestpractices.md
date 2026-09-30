@@ -1,5 +1,5 @@
 ---
-title: AEM 开发 - 准则和最佳实践
+title: AEM 开发——准则和最佳做法
 description: 在AEM上进行开发的准则和最佳实践
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 7fd478a6-ddc6-4c7f-b09b-e4de6ec0e897
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 1%
-
 ---
-
-# AEM 开发 - 准则和最佳实践{#aem-development-guidelines-and-best-practices}
+# AEM 开发——准则和最佳做法{#aem-development-guidelines-and-best-practices}
 
 ## 使用模板和组件的准则 {#guidelines-for-using-templates-and-components}
 
@@ -63,21 +72,21 @@ Adobe Experience Manager (AEM)组件和模板构成了一个功能强大的工�
 
   这涉及覆盖组件定义：
 
-   * 通过复制现有组件在`/apps/<website-name>/components/<MyComponent>`中创建组件文件夹：
+  * 通过复制现有组件在`/apps/<website-name>/components/<MyComponent>`中创建组件文件夹：
 
-      * 例如，要自定义文本组件复制，请执行以下操作：
+    * 例如，要自定义文本组件复制，请执行以下操作：
 
-         * 从 `/libs/foundation/components/text`
-         * 至`/apps/myProject/components/text`
+      * 从 `/libs/foundation/components/text`
+      * 至`/apps/myProject/components/text`
 
 * [自定义错误处理程序显示的页面](/help/sites-developing/customizing-errorhandler-pages.md#how-to-customize-pages-shown-by-the-error-handler)
 
   这种情况涉及覆盖servlet：
 
-   * 在存储库中，复制一个或多个默认脚本：
+  * 在存储库中，复制一个或多个默认脚本：
 
-      * 从 `/libs/sling/servlet/errorhandler/`
-      * 至`/apps/sling/servlet/errorhandler/`
+    * 从 `/libs/sling/servlet/errorhandler/`
+    * 至`/apps/sling/servlet/errorhandler/`
 
 >[!CAUTION]
 >
@@ -112,7 +121,7 @@ Adobe Experience Manager (AEM)组件和模板构成了一个功能强大的工�
 >如果您使用[查询生成器](/help/sites-developing/querybuilder-api.md)，则使用JCR查询，因为查询生成器会在幕后生成JCR查询。
 >
 
-## 安全性注意事项 {#security-considerations}
+## 安全考虑事项 {#security-considerations}
 
 >[!NOTE]
 >

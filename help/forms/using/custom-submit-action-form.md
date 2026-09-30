@@ -5,13 +5,31 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components,Form Data Model
 exl-id: dc3bd697-5b1a-4efe-9554-c6aa1575c1c0
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 1%
-
+source-wordcount: '1696'
+ht-degree: 2%
 ---
-
 # 为自适应表单编写自定义提交操作{#writing-custom-submit-action-for-adaptive-forms}
 
 ## 应用到 {#applies-to}
@@ -54,7 +72,7 @@ ht-degree: 1%
 
 ### 操作字段 {#action-fields}
 
-提交操作可以将隐藏的输入字段(使用HTML [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)标记)添加到渲染的表单HTML。 这些隐藏字段可以包含处理表单提交时所需的值。 提交表单时，这些字段值作为请求参数发布回来，提交操作可在提交处理期间使用这些参数。 输入字段称为操作字段。
+提交操作可以将隐藏的输入字段（使用HTML [input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input)标记）添加到渲染的表单HTML。 这些隐藏字段可以包含处理表单提交时所需的值。 提交表单时，这些字段值作为请求参数发布回来，提交操作可在提交处理期间使用这些参数。 输入字段称为操作字段。
 
 例如，如果提交操作还捕获了填写表单所用的时间，则可以添加隐藏的输入字段`startTime`和`endTime`。
 
@@ -96,10 +114,10 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 * **dialog.xml**：此脚本类似于CQ组件对话框。 它提供作者自定义的配置信息。 选择提交操作后，这些字段显示在“自适应表单编辑”对话框的“提交操作”选项卡中。
 * **post.POST.jsp**： Submit servlet使用您提交的数据以及前面几节中的附加数据调用此脚本。 在此页中对运行操作的任何提及都表示运行post.POST.jsp脚本。 要将提交操作注册到自适应表单，以在“自适应表单编辑”对话框中显示，请将这些属性添加到`sling:Folder`：
 
-   * 类型为String的&#x200B;**guideComponentType**，值为&#x200B;**fd/af/components/guidesubmittype**
-   * **guideDataModel**，类型为String，它指定提交操作适用的自适应表单的类型。 基于XFA的自适应表单支持&#x200B;**xfa**，而基于XSD的自适应表单支持&#x200B;**xsd**。 不使用XDP或XSD的自适应表单支持&#x200B;**basic**。 要在多种类型的自适应表单上显示操作，请添加相应的字符串。 用逗号分隔每个字符串。 例如，要使操作在基于XFA和XSD的自适应表单上可见，请分别指定值&#x200B;**xfa**&#x200B;和&#x200B;**xsd**。
+  * 类型为String的&#x200B;**guideComponentType**，值为&#x200B;**fd/af/components/guidesubmittype**
+  * **guideDataModel**，类型为String，它指定提交操作适用的自适应表单的类型。 基于XFA的自适应表单支持&#x200B;**xfa**，而基于XSD的自适应表单支持&#x200B;**xsd**。 不使用XDP或XSD的自适应表单支持&#x200B;**basic**。 要在多种类型的自适应表单上显示操作，请添加相应的字符串。 用逗号分隔每个字符串。 例如，要使操作在基于XFA和XSD的自适应表单上可见，请分别指定值&#x200B;**xfa**&#x200B;和&#x200B;**xsd**。
 
-   * 字符串类型的&#x200B;**jcr:description**。 此属性的值显示在“自适应表单编辑”对话框的“提交操作”选项卡的“提交操作”列表中。 开箱即用的操作存在于CRX存储库中的位置&#x200B;**/libs/fd/af/components/guidesubmittype**。
+  * 字符串类型的&#x200B;**jcr:description**。 此属性的值显示在“自适应表单编辑”对话框的“提交操作”选项卡的“提交操作”列表中。 开箱即用的操作存在于CRX存储库中的位置&#x200B;**/libs/fd/af/components/guidesubmittype**。
 
 ## 创建自定义提交操作 {#creating-a-custom-submit-action}
 

@@ -1,5 +1,5 @@
 ---
-title: 创作 — 环境和工具
+title: 创作——环境与工具
 description: “网站”控制台允许您管理和导航您的网站。 使用两个窗格，可以扩展网站的结构并对所需元素执行操作。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,18 +10,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: c4ac3f14-f45a-44f6-a232-69cae483a776
-source-git-commit: dc46c3e2689df1069eea6980ef615f639db42e92
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 5%
-
+source-wordcount: '950'
+ht-degree: 6%
 ---
+# 创作——环境与工具 {#authoring-the-environment-and-tools}
 
-# 创作 — 环境和工具 {#authoring-the-environment-and-tools}
+AEM的创作环境提供了各种可用于组织和编辑内容的机制。 可以从各种控制台和页面编辑器访问提供的工具。
 
-AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可以从各种控制台和页面编辑器访问提供的工具。
-
-## 站点管理 {#site-administration}
+## 网站管理 {#site-administration}
 
 通过&#x200B;**网站**&#x200B;控制台，您可以管理和导航您的网站。 使用这两个窗格，可以展开网站的结构并对所需元素执行操作：
 
@@ -39,7 +48,7 @@ AEM 的创作环境提供了各种可用于组织和编辑内容的机制。可�
 
 可从AEM中直接访问各种&#x200B;**帮助**&#x200B;资源：
 
-除了从控制台工具栏[访问](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
+除了从控制台工具栏[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)访问帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
 
 ![Sidekick已折叠](do-not-localize/sidekick-collapsed-2.png)
 
@@ -172,12 +181,12 @@ AEM会显示直接引用所选页面以及任何间接引用的所有页面。 �
 
 在某些情况下，可以从Sidekick执行进一步操作，包括：
 
-* [启动项](/help/sites-classic-ui-authoring/classic-launches.md)
+* [发布项](/help/sites-classic-ui-authoring/classic-launches.md)
 * [Live Copy](/help/sites-administering/msm.md)
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
 
-在网站控制台[中可以看到其他](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)页面间关系。
+在网站控制台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他页面间关系。
 
 ## 审核日志 {#audit-log}
 

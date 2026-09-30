@@ -9,14 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 23fab14d-3658-4fd3-88c1-fc71f1ac0400
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1949'
 ht-degree: 0%
-
 ---
-
 # 配置业务日程表 {#configuring-business-calendars}
 
 *工作日历*&#x200B;为您的组织定义工作日和非工作日（例如，法定假日、周末和公司停业日）。 使用业务日历时，AEM表单在执行某些日期计算时会跳过非业务日。 在Workbench中，您可以指定是将业务日历用于与用户相关的事件（如任务提醒、截止日期和升级），还是用于与用户无关的操作（如计时器事件和等待服务）。
@@ -25,7 +40,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用业务日历计算日期和时间时，AEM Forms会使用运行服务器的日期和时间，但不会调整时区之间的差异。 例如，如果任务提醒安排在伦敦运行的服务器上在上午10:00发生，但接收提醒的用户位于纽约市，则用户将在本地时间上午5:00收到提醒。
+>使用业务日历计算日期和时间时，AEM Forms会使用运行服务器的日期和时间，但不会调整时区之间的差异。 例如，如果任务提醒安排在伦敦运行的服务器上于上午10:00发生，但接收提醒的用户位于纽约市，则用户将在本地时间上午5:00收到提醒。
 
 ## 使用默认业务日历 {#using-the-default-business-calendar}
 
@@ -78,7 +93,7 @@ AEM Forms提供了一个默认的业务日历（名为&#x200B;*内置日历*）�
 
    如果选择此选项，则发生在指定时间范围之前的事件将被移动到时间范围的开始，而发生在时间范围之后的事件将被移动到下一个工作日的开始时间。
 
-   例如，考虑这样一个情况：在星期二凌晨2:00为用户分配了任务，并且该任务的提醒被设置为两个工作日。 如果没有工作时间，提醒将会在星期四凌晨2:00时发生。 如果营业时间设置为上午8:00至下午5:00，则提醒将被推送到星期四上午8:00。 如果没有营业时间，如果提醒事件是在星期二下午6:00创建的，则提醒将在星期四营业时间之后进行。 如果营业时间设置为上午8:00至下午5:00，则提醒将在星期五上午8:00进行。
+   例如，假定用户在星期二凌晨2:00分配了任务，并且该任务的提醒设置为两个工作日。 如果没有上班时间，提醒将会在周四凌晨2点进行。 如果工作时间设置为上午8:00到下午5:00，则提醒将被推送到星期四上午8:00。 如果没有工作时间，如果提醒事件是在星期二下午6:00创建的，则提醒将在星期四工作时间之后进行。 如果工作时间设置为上午8:00到下午5:00，则提醒将在星期五上午8:00进行。
 
 1. 在左侧的日历中，双击任何其他非工作日，例如假日。 您不能选择过去的天数。 您选择的非工作日会显示在右侧的列表中，其中日期在一行中显示两次。 选择左侧的日期以键入非工作日的名称或描述。
 

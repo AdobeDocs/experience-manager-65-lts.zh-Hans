@@ -1,36 +1,54 @@
 ---
-title: 为We.Finance参考网站的住房抵押贷款工作流配置Microsoft Dynamics 365
-description: 了解如何通过自适应表单为We.Finance参考网站的住房抵押贷款工作流使用Microsoft&amp；reg； Dynamics 365服务。
+title: 为 We.Finance 参考网站的住房按揭工作流配置 Microsoft Dynamics 365
+description: 了解如何通过自适应表单为We.Finance参考网站的住房抵押贷款工作流使用Microsoft&reg； Dynamics 365服务。
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: develop, Configuration
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
 exl-id: 1021fbb4-a12a-4758-8f36-dc9ad73681cd
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 0%
-
+source-wordcount: '415'
+ht-degree: 7%
 ---
+# 为 We.Finance 参考网站的住房按揭工作流配置 Microsoft Dynamics 365 {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
 
-# 为We.Finance参考网站的住房抵押贷款工作流配置Microsoft Dynamics 365 {#configure-microsoft-dynamics-for-the-home-mortgage-workflow-of-the-we-finance-reference-site}
-
-了解如何通过自适应表单为We.Finance参考网站的住房抵押贷款工作流使用Microsoft® Dynamics 365服务
+了解如何通过自适应表单为We.Finance参考网站的住房抵押贷款工作流使用® Dynamics 365服务
 
 ## 概述 {#overview}
 
-Microsoft® Dynamics 365是一款客户关系管理(CRM)和企业资源规划(ERP)软件，可提供用于创建和管理客户帐户、联系人、潜在客户、机会和案例的企业解决方案。
+® Dynamics 365是一款客户关系管理(CRM)和企业资源规划(ERP)软件，可提供用于创建和管理客户帐户、联系人、潜在客户、机会和案例的企业解决方案。
 
-AEM Forms提供云服务以将Dynamics 365与[Forms数据集成](/help/forms/using/data-integration.md)模块集成。 在将“住房抵押贷款应用程序演练”与Microsoft® Dynamics结合使用之前，您需要配置Microsoft® Dynamics 365以与We.Finance参考网站一起使用。
+AEM Forms提供云服务以将Dynamics 365与[Forms数据集成](/help/forms/using/data-integration.md)模块集成。 在将“住房抵押贷款应用程序演练”与® Dynamics结合使用之前，您需要配置Microsoft® Dynamics 365以与We.Finance参考网站一起使用。
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 在开始设置和配置Dynamics 365之前，请确保您具有：
 
 * AEM 6.3 Forms Service Pack 1及更高版本
-* Microsoft® Dynamics 365帐户
-* 已向Microsoft® Azure Active Directory注册Dynamics 365服务应用程序
+* ® Dynamics 365帐户
+* 已向® Azure Active Directory注册Dynamics 365服务应用程序
 * 已注册应用程序的客户端ID和客户端密码
 
 ## 将住房抵押贷款计算器与您的网站主页链接 {#link-the-home-mortgage-calculator-with-your-site-home-page}
@@ -57,18 +75,18 @@ AEM Forms提供云服务以将Dynamics 365与[Forms数据集成](/help/forms/usi
    >
    >计算器字段与FDM的绑定是通过We.Finance引用站点包预配置的。 要查看绑定，您可以在创作模式下打开表单并查看字段绑定引用。
 
-1. 要创建用于存储房屋抵押贷款申请的申请人记录的自定义实体，请将AEMFormsFSIRefsite_1_0.zip解决方案包导入您的Microsoft® Dynamics实例：
+1. 要创建用于存储房屋抵押贷款申请的申请人记录的自定义实体，请将AEMFormsFSIRefsite_1_0.zip解决方案包导入您的® Dynamics实例：
 
    1. 从以下位置下载包：
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/AEMFormsFSIRefsite_1_0.zip`
 
-   1. 将解决方案包导入Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到&#x200B;**设置** > **解决方案**，然后选择&#x200B;**导入**。
+   1. 将解决方案包导入® Dynamics实例。 在® Dynamics实例中，转到&#x200B;**设置** > **解决方案**，然后选择&#x200B;**导入**。
 
-1. 要设置重新网站中使用的用户联系人详细信息，请将Sarah Rose Contact.CSV包导入您的Microsoft® Dynamics实例：
+1. 要设置重新网站中使用的用户联系人详细信息，请将Sarah Rose Contact.CSV包导入您的® Dynamics实例：
 
    1. 从以下位置下载包：
 
       `https://'[server]:[port]'/content/aemforms-refsite-collaterals/we-finance/home-mortgage/ms-dynamics/Sarah%20Rose%20Contact.csv`
 
-   1. 将程序包导入您的Microsoft® Dynamics实例。 在Microsoft® Dynamics实例中，转到&#x200B;**Sales** > **Contacts**，然后选择&#x200B;**导入数据**。
+   1. 将程序包导入您的® Dynamics实例。 在® Dynamics实例中，转到&#x200B;**Sales** > **Contacts**，然后选择&#x200B;**导入数据**。

@@ -1,5 +1,5 @@
 ---
-title: 跟踪退回的电子邮件
+title: 跟踪退回电子邮件
 description: 当您向许多用户发送新闻稿时，通常列表中会有一些无效的电子邮件地址。 向这些地址发送新闻稿会退回。 AEM可以管理这些跳出，并可在超出配置的跳出计数器后停止向这些地址发送新闻稿。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
 exl-id: b8d9df45-8b71-4f93-b94a-ecaf3da9b67b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 0%
-
+source-wordcount: '714'
+ht-degree: 1%
 ---
-
-# 跟踪退回的电子邮件{#tracking-bounced-emails}
+# 跟踪退回电子邮件{#tracking-bounced-emails}
 
 >[!NOTE]
 >
@@ -64,7 +75,7 @@ ht-degree: 0%
 
    允许您设置要搜索的标志。
 
-   `imap.flag.SEEN`：将新/未查看的消息设为false，已读取的消息设为true
+   新/未查看的消息为`imap.flag.SEEN`:Set false，已读取的消息为true
 
    有关标记的完整列表，请参阅[https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html)。
 

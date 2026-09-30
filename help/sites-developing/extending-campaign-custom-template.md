@@ -10,17 +10,26 @@ feature: Developing
 role: Developer
 exl-id: 59a79455-c108-4f4b-93c1-d8c6f23aec88
 index: false
-source-git-commit: b8671573afd711dec4b883b3b382304e13889852
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '307'
 ht-degree: 9%
-
 ---
-
 
 # 使用 Adobe Campaign 表单组件创建自定义 AEM 页面模板{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-本页说明如何通过检查Geometrixx-outdoors模板([)的实施方式，生成使用](/help/sites-authoring/adobe-campaign-components.md)Adobe Campaign Form`/apps/geometrixx-outdoors/components/page_campaign_profile`组件的自定义页面模板，并指出创建自己的自定义模板时可能需要的重要信息。
+本页说明如何通过检查Geometrixx-outdoors模板(`/apps/geometrixx-outdoors/components/page_campaign_profile`)的实施方式，生成使用[Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md)组件的自定义页面模板，并指出创建自己的自定义模板时可能需要的重要信息。
 
 >[!CAUTION]
 >

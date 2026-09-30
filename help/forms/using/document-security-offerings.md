@@ -10,13 +10,26 @@ feature: Document Security
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 6653649a-5076-48e3-a7ed-5b74d4d2e8e1
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 0%
-
+source-wordcount: '1253'
+ht-degree: 2%
 ---
-
 # 文档安全产品{#document-security-offerings}
 
 Adobe Experience Manager Forms document security确保只有授权用户才能使用您的文档。 使用Document Security，您可以安全地分发以支持的格式保存的任何信息。 支持的文件格式包括Adobe可移植文档格式(PDF)和Microsoft®Word、Excel和PowerPoint文件。
@@ -55,9 +68,9 @@ AEM Forms Document Security提供了多种应用安全策略的工具。 您可�
 
   您可以从[Adobe Acrobat网站](https://www.adobe.com/acrobat/free-trial-download.html)购买并下载Adobe。 Adobe Acrobat文章[为PDF设置安全策略](https://helpx.adobe.com/cn/acrobat/using/setting-security-policies-pdfs.html)提供了有关在Adobe Acrobat中创建和应用策略的详细信息。
 
-* **Document Security Extension for Microsoft® Office**：您可以使用Document Security Extension for Microsoft® Office，在Microsoft® Office程序中将预定义策略应用于Microsoft® Office文件。 该扩展可确保只有授权人员才能使用受策略保护的Microsoft®Word、Excel和PowerPoint文件。 只有安装了此插件的授权用户才能使用受策略保护的文件。
+* **Document Security Extension for ® Office**：您可以使用Document Security Extension for Microsoft® Office，在Microsoft® Office程序中将预定义策略应用于Microsoft® Office文件。 该扩展可确保只有授权人员才能使用受策略保护的®Word、Excel和PowerPoint文件。 只有安装了此插件的授权用户才能使用受策略保护的文件。
 
-  Document Security Extension可作为Microsoft® Office插件使用。 联系[AEM客户支持](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html)以获取扩展。 稍后，您可以访问[Document Security Extension for Microsoft® Office](https://experienceleague.adobe.com/docs/experience-manager-document-security/using/download-installer.html?lang=zh-Hans)帮助，了解有关安装、配置和使用该扩展的信息。
+  Document Security Extension可作为® Office插件使用。 联系[AEM客户支持](https://helpx.adobe.com/ca/marketing-cloud/contact-support.html)以获取扩展。 稍后，您可以访问[Document Security Extension for ® Office](https://experienceleague.adobe.com/docs/experience-manager-document-security/using/download-installer.html?lang=zh-Hans)帮助，了解有关安装、配置和使用该扩展的信息。
 
 * **可移植保护库：** PPL在本地保护文档，而不将文档发送到AEM Forms服务器。 只有安全凭据和策略详细信息通过网络传递。 PPL还允许您将策略检索访问权限限制为仅登录用户。 您可以根据已登录AEM用户的用户的上下文来获取策略。
 
@@ -69,12 +82,12 @@ AEM Forms Document Security提供了多种应用安全策略的工具。 您可�
 
 * 对于&#x200B;**PDF文档**，您可以使用Adobe Acrobat DC、Acrobat Reader和Acrobat Reader Mobile查看受保护的PDF文档。 大多数用户在其设备上已安装Acrobat Reader，因此他们无需获取或学习其他软件即可查看受保护的文档。 您还可以从[Acrobat Reader下载网站](https://get.adobe.com/reader/)下载Acrobat Reader。
 
-* 对于&#x200B;**Microsoft® Office文档**，您需要使用Microsoft® Office和AEM Forms Document Security Extension for Microsoft® Office。 Document Security Extension可作为Microsoft® Office插件使用。 您可以从Adobe网站下载扩展。
+* 对于&#x200B;**® Office文档**，您需要使用Microsoft® Office和AEM Forms Document Security Extension for Microsoft® Office。 Document Security Extension可作为® Office插件使用。 您可以从Adobe网站下载扩展。
 
 ### 索引受保护的文档 {#index-protected-documents}
 
-Microsoft® Windows全文搜索引擎(SharePoint Index server)和Adobe Experience Manager (AEM)可以对常用的文档格式(如纯文本文件、Microsoft®Office文档和PDF文档)执行全文搜索。 您可以使用Document Security索引器启用全文搜索引擎来搜索受保护的PDF文档：
+® Windows全文搜索引擎(SharePoint Index server)和Adobe Experience Manager (AEM)可以对常用的文档格式（如纯文本文件、Microsoft®Office文档和PDF文档）执行全文搜索。 您可以使用Document Security索引器启用全文搜索引擎来搜索受保护的PDF文档：
 
-* **iFilter索引器：**&#x200B;您可以使用iFilter索引器为受保护的PDF文档编制索引，并使Microsoft® Windows全文搜索引擎(桌面索引服务和SharePoint索引服务器)能够搜索受保护的PDF文档。 有关详细信息，请参阅受保护文档的[AEM SharePoint IFilter](assets/sharepoint-ifilter-doc-security.pdf)。
+* **iFilter索引器：**&#x200B;您可以使用iFilter索引器为受保护的PDF文档编制索引，并使Microsoft® Windows全文搜索引擎（桌面索引服务和SharePoint索引服务器）能够搜索受保护的PDF文档。 有关详细信息，请参阅受保护文档的[AEM SharePoint IFilter](assets/sharepoint-ifilter-doc-security.pdf)。
 
 * **AEM Forms Document Security Indexer：**&#x200B;您可以使用AEM Forms Document Security indexer为受保护的PDF文档编制索引，并使Adobe Experience Manager能够搜索受保护的PDF文档。 索引器是AEM Forms Document Security产品的一部分。 JEE安装程序上的AEM Forms中包含这些组件。

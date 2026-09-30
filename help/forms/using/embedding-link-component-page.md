@@ -9,16 +9,29 @@ solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
 exl-id: a6ae1633-63a8-4364-b298-bc569459a136
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 0%
-
+source-wordcount: '412'
+ht-degree: 4%
 ---
-
 # 在页面中嵌入链接组件{#embedding-link-component-in-a-page}
 
-## 前提条件 {#prerequisites}
+## 先决条件 {#prerequisites}
 
 链接组件是Document Services类别的成员。 确保Document Services类别在AEM组件浏览器中可见。 如果未列出该类别，请按照[启用表单门户组件](/help/forms/using/enabling-forms-portal-components.md)中列出的步骤操作。
 
@@ -56,6 +69,6 @@ ht-degree: 0%
 * 如果在“表单路径”中指定的路径指向文档，且该文档具有PDF作为其允许的渲染格式，请确保选择PDF作为渲染类型。
 * 可以在多个位置指定表单的提交URL，其优先顺序如下：
 
-   1. 表单中嵌入的提交URL（在提交按钮中）具有最高优先级。
-   1. Forms Manager中提到的提交URL具有中优先级。
-   1. Forms Portal中提到的提交URL的优先级最低。
+  1. 表单中嵌入的提交URL（在提交按钮中）具有最高优先级。
+  1. Forms Manager中提到的提交URL具有中优先级。
+  1. Forms Portal中提到的提交URL的优先级最低。

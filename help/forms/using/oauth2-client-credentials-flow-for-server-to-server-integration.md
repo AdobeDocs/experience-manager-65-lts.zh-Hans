@@ -5,13 +5,26 @@ solution: Experience Manager, Experience Manager Forms
 feature: Form Data Model
 role: Admin, User, Developer
 exl-id: 56b4a767-1210-47f3-b022-766b0dda9943
-source-git-commit: 96fe29ceae4c38238ccc40d456f2ad8e276788c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 63%
-
+source-wordcount: '457'
+ht-degree: 60%
 ---
-
 # 使用OAuth 2.0客户端凭据流集成Salesforce  {#configure-salesforce-with-ouath-2.0-client-credential}
 
 ## 应用到 {#applies-to}
@@ -20,7 +33,7 @@ ht-degree: 63%
 
 有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/aem-forms-salesforce-integration)。
 
-您可以使用 OAuth 2.0 客户端凭据将 AEM Forms 与 Salesforce 应用程序集成。OAuth 2.0 客户端凭据是一种标准且安全的直接通信方法，无需用户参与。
+您可以使用 OAuth 2.0 客户端凭据将 AEM Forms 与 Salesforce 应用程序集成。 OAuth 2.0 客户端凭据是一种标准且安全的直接通信方法，无需用户参与。
 
 ![设置AEM Forms与Salesforce应用程序之间的通信时的工作流](/help/forms/using/assets/salesforce-workflow.png)
 
@@ -29,7 +42,7 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 与授权代码流身份验证相比，使用 OAuth 2.0 客户端凭据进行身份验证可获得多个好处：
 
 * OAuth 2.0 客户端凭据身份验证允许每个用户拥有超过五个连接。
-* AEM 数据源配置继续处理 AEM 用户的停用、访问权限更改、密码更新。
+* AEM 数据源配置在 AEM 用户停用、访问权限更改或密码更新时仍可继续工作。
 
 ## 前提条件 {#prerequisites}
 
@@ -37,7 +50,7 @@ AEM Forms交换在Salesforce连接应用程序中定义的客户端凭据（使�
 
 * 为您的组织创建[采用 OAuth 2.0 客户端凭据流的 Salesforce 连接的应用程序](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5)和仅 API 用户，并获取应用程序的消费方密钥和消费方密码。
 
-* 确保已适当配置 Swagger 文件以匹配您组织的 API。或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api)，该文件专门用于您的 AEM 环境。
+* 确保已适当配置 Swagger 文件以匹配您组织的 API。 或者，您可以选择从头[创建一个 Swagger 文件](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api)，该文件专门用于您的 AEM 环境。
 
 >[!NOTE]
 >

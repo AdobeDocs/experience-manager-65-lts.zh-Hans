@@ -1,5 +1,5 @@
 ---
-title: 在AEM中启用CRXDE Lite
+title: 在 AEM 中启用 CRXDE Lite
 description: 了解如何在Adobe Experience Manager中启用CRXDE Lite。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,14 +9,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
 exl-id: 109ab777-c7be-4725-8b91-c4e5d6a735ab
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 0%
-
+ht-degree: 6%
 ---
-
-# 在AEM中启用CRXDE Lite{#enabling-crxde-lite-in-aem}
+# 在 AEM 中启用 CRXDE Lite{#enabling-crxde-lite-in-aem}
 
 为了确保AEM安装尽可能安全，安全核对清单建议在生产环境中禁用WebDAV[。](/help/sites-administering/security-checklist.md#disable-webdav)
 
@@ -79,4 +88,4 @@ ht-degree: 0%
 有关AEM 6安全功能的更多信息，请参阅以下页面：
 
 * [AEM安全核对清单](/help/sites-administering/security-checklist.md)
-* [在生产就绪模式下运行AEM](/help/sites-administering/production-ready.md)
+* [在生产就绪模式下运行 AEM](/help/sites-administering/production-ready.md)

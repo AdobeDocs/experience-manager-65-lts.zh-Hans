@@ -10,14 +10,31 @@ role: Developer
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench, APIs & Integrations
 hide: true
+removedfrom6.5.2025: 'yes'
 exl-id: 071781e8-990d-4d01-b46e-be1c57bdbe3a
-source-git-commit: 26f8a32961cf18c2f1930ab7bc910333b3ccf188
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 36ac8e9c-5c7a-56d8-af5e-39399fd7b101
+    internal-label: Workbench
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1869'
+source-wordcount: '1870'
 ht-degree: 0%
-
 ---
-
 # 创建可渲染Forms的Web应用程序 {#creating-web-applications-thatrenders-forms}
 
 **本文档中的示例和示例仅适用于JEE环境上的AEM Forms。**
@@ -52,9 +69,9 @@ ht-degree: 0%
 
 本节使用位于以下位置的示例文件：
 
-&lt;*Forms Designer安装目录*>/Samples/Forms/Purchase Order/Form Fragments
+&lt;*Forms Designer安装目录*>/Samples/Forms/采购订单/表单片段
 
-其中&lt;*安装目录*>是安装路径。 出于客户端应用程序的目的，已从此安装位置复制了采购订单Dynamic.xdp文件，并将其部署到名为&#x200B;*Applications/FormsApplication*&#x200B;的Forms应用程序。 采购订单Dynamic.xdp文件放置在名为FormsFolder的文件夹中。 同样，片段放置在名为Fragments的文件夹中，如下图所示。
+其中&lt;*install directory*>是安装路径。 出于客户端应用程序的目的，已从此安装位置复制了采购订单Dynamic.xdp文件，并将其部署到名为&#x200B;*Applications/FormsApplication*&#x200B;的Forms应用程序。 采购订单Dynamic.xdp文件放置在名为FormsFolder的文件夹中。 同样，片段放置在名为Fragments的文件夹中，如下图所示。
 
 ![cw_cw_fragmentsrepository](assets/cw_cw_fragmentsrepository.png)
 

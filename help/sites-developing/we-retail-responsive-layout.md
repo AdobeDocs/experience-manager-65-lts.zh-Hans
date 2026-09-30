@@ -1,5 +1,5 @@
 ---
-title: 在We.Retail中尝试响应式布局
+title: 在 We.Retail 中试用响应式布局
 description: 了解如何使用We.Retail在Adobe Experience Manager中试用响应式布局。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -9,16 +9,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 25e035ce-0445-43a3-bd75-513a2e601b6a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 6%
-
+source-wordcount: '261'
+ht-degree: 13%
 ---
+# 在 We.Retail 中试用响应式布局{#trying-out-responsive-layout-in-we-retail}
 
-# 在We.Retail中尝试响应式布局{#trying-out-responsive-layout-in-we-retail}
-
-所有We.Retail页面都使用布局容器组件来实施响应式设计。 布局容器提供了一个段落系统，允许您在响应式网格内放置组件。 此网格可以根据设备/窗口大小和格式重新安排布局。该组件与页面编辑器中的&#x200B;**布局**&#x200B;模式结合使用，允许您创建和编辑依赖于设备的响应式布局。
+所有We.Retail页面都使用布局容器组件来实施响应式设计。 布局容器提供了一个段落系统，允许您在响应式网格内放置组件。 此网格可以根据设备/窗口大小和格式重新安排布局。 该组件与页面编辑器中的&#x200B;**布局**&#x200B;模式结合使用，允许您创建和编辑依赖于设备的响应式布局。
 
 ## 正在尝试 {#trying-it-out}
 

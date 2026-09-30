@@ -10,18 +10,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 20aea30b-9cfe-45c1-aa8d-08085f8e3e7d
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 9%
-
+source-wordcount: '1032'
+ht-degree: 8%
 ---
-
 # 发布页面{#publishing-pages}
 
 在创作环境中创建并审查内容后，将其放到公共网站（发布环境）上。
 
-这称为“发布页面”。当您要从发布环境中删除页面时，此过程称为“取消发布”。在发布和取消发布时，页面会保留在创作环境中以供进一步更改，直到将其删除为止。
+这称为“发布页面”。 当您要从发布环境中删除页面时，此过程称为“取消发布”。 在发布和取消发布时，页面会保留在创作环境中以供进一步更改，直到将其删除为止。
 
 您还可以立即发布/取消发布页面，或者在预定义的未来日期/时间发布/取消发布页面。
 
@@ -32,7 +41,7 @@ ht-degree: 9%
 >* **发布/取消发布**
 >  这些是在发布环境中公开提供（或不公开提供）您的内容的主要操作术语。
 >
->* **激活／取消激活**
+>* **激活/取消激活**
 >  这两个术语与发布/取消发布同义。
 >
 >* **复制**

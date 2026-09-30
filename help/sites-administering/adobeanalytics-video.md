@@ -1,5 +1,5 @@
 ---
-title: 为Adobe Analytics配置视频跟踪
+title: 为 Adobe Analytics 配置视频跟踪
 description: 了解如何为SiteCatalyst配置视频跟踪。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,23 @@ solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
 exl-id: 420dc7d6-0e9e-47be-baef-4c79296eb69a
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 0%
-
+source-wordcount: '1817'
+ht-degree: 1%
 ---
-
-# 为Adobe Analytics配置视频跟踪{#configuring-video-tracking-for-adobe-analytics}
+# 为 Adobe Analytics 配置视频跟踪{#configuring-video-tracking-for-adobe-analytics}
 
 有多种方法可用于跟踪视频事件，其中2种是旧版Adobe Analytics的旧版选项。 这些旧版选项为：旧版里程碑和旧版秒数。
 
@@ -79,7 +88,7 @@ XX后缀是定义里程碑的跟踪偏移。 例如，指定4、8、16、20和28
    <th>Adobe Analytics资产</th>
   </tr>
   <tr>
-   <td>eventdata.videoName </td>
+   <td>事件数据。视频名称 </td>
    <td>如果在DAM中设置，则映射到此的变量将包含视频的<strong>用户友好的</strong>名称（<strong>标题</strong>）；如果未设置，则将发送视频的<strong>文件名</strong>。 仅在播放视频开始时发送一次。</td>
   </tr>
   <tr>
@@ -87,7 +96,7 @@ XX后缀是定义里程碑的跟踪偏移。 例如，指定4、8、16、20和28
    <td>映射到此的变量将包含文件名。 仅与eventdata.events.a.media.view一起发送 </td>
   </tr>
   <tr>
-   <td>eventdata.videoFilePath </td>
+   <td>事件数据。视频文件路径 </td>
    <td>映射到此的变量将包含文件在服务器上的路径。 仅与eventdata.events.a.media.view一起发送 </td>
   </tr>
   <tr>
@@ -153,7 +162,7 @@ XX后缀是定义里程碑的跟踪偏移。 例如，指定4、8、16、20和28
    <th>Adobe Analytics资产</th>
   </tr>
   <tr>
-   <td>eventdata.videoName </td>
+   <td>事件数据。视频名称 </td>
    <td>prop2</td>
   </tr>
   <tr>
@@ -161,7 +170,7 @@ XX后缀是定义里程碑的跟踪偏移。 例如，指定4、8、16、20和28
    <td>prop3 </td>
   </tr>
   <tr>
-   <td>eventdata.videoFilePath </td>
+   <td>事件数据。视频文件路径 </td>
    <td>prop4</td>
   </tr>
   <tr>
@@ -293,26 +302,26 @@ eventdata.events.milestoneXX
 
    此外，发送到Adobe Analytics的信息的可自定义性较低；只有3个变量可用于映射：
 
-<table>
- <tbody>
-  <tr>
-   <td>eventdata.videoName <br /> </td>
-   <td>如果在DAM中设置了，则映射到此的变量将包含视频的<strong>用户友好的</strong>名称（<strong>标题</strong>）；如果未设置标题，则将发送视频的<strong>文件名</strong>。 仅在播放视频开始时发送一次。<br /> </td>
-  </tr>
-  <tr>
-   <td>eventdata.videoFileName </td>
-   <td>映射到此的变量将包含文件名。 仅在播放视频开始时发送一次。</td>
-  </tr>
-  <tr>
-   <td>eventdata.videoFilePath </td>
-   <td>映射到此的变量将包含文件在服务器上的路径。 仅在播放视频开始时发送一次。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td>eventdata.videoName <br /> </td>
+      <td>如果在DAM中设置了，则映射到此的变量将包含视频的<strong>用户友好的</strong>名称（<strong>标题</strong>）；如果未设置标题，则将发送视频的<strong>文件名</strong>。 仅在播放视频开始时发送一次。<br /> </td>
+   </tr>
+   <tr>
+      <td>eventdata.videoFileName </td>
+      <td>映射到此的变量将包含文件名。 仅在播放视频开始时发送一次。</td>
+   </tr>
+   <tr>
+      <td>事件数据。视频文件路径 </td>
+      <td>映射到此的变量将包含文件在服务器上的路径。 仅在播放视频开始时发送一次。</td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->您可以通过以下方式设置视频的&#x200B;**用户友好**&#x200B;名称：打开视频以在DAM中进行编辑，并将&#x200B;**标题**&#x200B;元数据字段设置为所需名称。 您还需要保存完成时所做的更改。
+   >[!NOTE]
+   >
+   >您可以通过以下方式设置视频的&#x200B;**用户友好**&#x200B;名称：打开视频以在DAM中进行编辑，并将&#x200B;**标题**&#x200B;元数据字段设置为所需名称。 您还需要保存完成时所做的更改。
 
 1. 将这些变量映射到prop 1至3
 
@@ -328,7 +337,7 @@ eventdata.events.milestoneXX
 
    * *Length* — 视频文件的长度，以秒为单位(*100*)
 
-   * *播放器名称* — 用于播放视频文件的视频播放器(*HTML5视频*)
+   * *播放器名称* — 用于播放视频文件的视频播放器（*HTML5视频*）
 
    * *播放的总秒数* — 播放视频的总秒数(*25*)
 
@@ -350,26 +359,26 @@ eventdata.events.milestoneXX
 
    发送到Adobe Analytics的信息不太可自定义。 只有3个变量可用于映射：
 
-<table>
- <tbody>
-  <tr>
-   <td>eventdata.videoName <br /> </td>
-   <td>如果在DAM中设置了，则映射到此的变量将包含视频的<strong>用户友好的</strong>名称（<strong>标题</strong>）；如果未设置标题，则将发送视频的<strong>文件名</strong>。 仅在播放视频开始时发送一次。<br /> </td>
-  </tr>
-  <tr>
-   <td>eventdata.videoFileName </td>
-   <td>映射到此的变量将包含文件名。 仅在播放视频开始时发送一次。</td>
-  </tr>
-  <tr>
-   <td>eventdata.videoFilePath </td>
-   <td>映射到此的变量将包含文件在服务器上的路径。 仅在播放视频开始时发送一次。</td>
-  </tr>
- </tbody>
-</table>
+   <table>
+   <tbody>
+   <tr>
+      <td>eventdata.videoName <br /> </td>
+      <td>如果在DAM中设置了，则映射到此的变量将包含视频的<strong>用户友好的</strong>名称（<strong>标题</strong>）；如果未设置标题，则将发送视频的<strong>文件名</strong>。 仅在播放视频开始时发送一次。<br /> </td>
+   </tr>
+   <tr>
+      <td>eventdata.videoFileName </td>
+      <td>映射到此的变量将包含文件名。 仅在播放视频开始时发送一次。</td>
+   </tr>
+   <tr>
+      <td>事件数据。视频文件路径 </td>
+      <td>映射到此的变量将包含文件在服务器上的路径。 仅在播放视频开始时发送一次。</td>
+   </tr>
+   </tbody>
+   </table>
 
->[!NOTE]
->
->您可以通过以下方式设置视频的&#x200B;**用户友好**&#x200B;名称：打开视频以在DAM中进行编辑，并将&#x200B;**标题**&#x200B;元数据字段设置为所需名称。 您还需要保存完成时所做的更改。
+   >[!NOTE]
+   >
+   >您可以通过以下方式设置视频的&#x200B;**用户友好**&#x200B;名称：打开视频以在DAM中进行编辑，并将&#x200B;**标题**&#x200B;元数据字段设置为所需名称。 您还需要保存完成时所做的更改。
 
 1. 将这些变量映射到prop1、prop2和prop3
 

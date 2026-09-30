@@ -1,5 +1,5 @@
 ---
-title: 创建HTML5表单的自定义配置文件
+title: 为 HTML5 Forms 创建自定义轮廓
 description: HTML5表单配置文件是Apache Sling中的资源节点。 它代表HTML5 Forms渲染服务的自定义版本。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,18 +9,33 @@ feature: HTML5 Forms,Mobile Forms
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 1f7c1213-4100-45d2-8083-531ff8d413e0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 0%
-
+source-wordcount: '657'
+ht-degree: 2%
 ---
-
-# 创建HTML5表单的自定义配置文件 {#creating-a-custom-profile-for-html-forms}
+# 为 HTML5 Forms 创建自定义轮廓 {#creating-a-custom-profile-for-html-forms}
 
 配置文件是[Apache Sling](https://sling.apache.org/)中的资源节点。 它代表HTML5 Forms呈现服务的自定义版本。 您可以使用HTML5 Forms呈现版本服务自定义HTML5表单的外观、行为和交互。 JCR存储库的`/content`文件夹中存在配置文件节点。 您可以将节点直接放置到`/content`文件夹或`/content`文件夹的任何子文件夹下。
 
-配置文件节点具有&#x200B;**sling：resourceSuperType**&#x200B;属性，默认值为&#x200B;**xfaforms/profile**。 节点的渲染脚本位于/libs/xfaforms/profile。
+配置文件节点具有&#x200B;**sling:resourceSuperType**&#x200B;属性，默认值为&#x200B;**xfaforms/profile**。 节点的渲染脚本位于/libs/xfaforms/profile。
 
 Sling脚本是JSP脚本。 这些JSP脚本用作容器，用于组合所请求表单的HTML和所需的JS/CSS工件。 这些Sling脚本也称为&#x200B;**配置文件渲染器脚本**。 配置文件渲染器调用Forms OSGi服务来渲染请求的表单。
 
@@ -64,7 +79,7 @@ footer.jsp模块为空。 它允许您添加仅用于用户交互的脚本。
 
 1. 复制节点默认值，并将该节点粘贴到名为&#x200B;*hrform*&#x200B;的不同文件夹(*/content/profiles*)中。
 
-1. 选择新节点&#x200B;*hrform*，然后添加一个字符串属性： *sling：resourceType*，其值： *hrform/demo*。
+1. 选择新节点&#x200B;*hrform*，然后添加一个字符串属性： *sling:resourceType*，其值为： *hrform/demo*。
 
 1. 单击工具栏菜单中的“全部保存”以保存更改。
 

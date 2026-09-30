@@ -9,13 +9,27 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 735e4c4a-6580-4698-a1bf-75c4b1e47b5b
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 1%
-
+source-wordcount: '392'
+ht-degree: 2%
 ---
-
 # 更新常规设置{#updating-general-settings}
 
 通过AEM Forms应用程序的常规设置，您可以指定获取附件、离线模式、登录屏幕、默认类别和自动保存频率等设置。
@@ -50,9 +64,9 @@ ht-degree: 1%
 * **登陆屏幕**：为应用程序设置开始位置（[主屏幕](../../forms/using/home-screen.md)）。
 可用选项：
 
-   * Forms
-   * 任务
-   * 收藏夹
+  * Forms
+  * 任务
+  * 收藏夹
 
 * **默认类别**：允许您选择要在主屏幕上显示的表单类别。 选择全部时，您可以在主屏幕中看到所有表单。 系统会根据应用程序中加载的表单填充类别。 Forms在应用程序中可用，具体取决于在AEM Forms服务器中指定的表单设置。
 

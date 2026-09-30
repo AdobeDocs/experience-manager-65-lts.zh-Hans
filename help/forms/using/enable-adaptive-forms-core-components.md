@@ -6,13 +6,27 @@ role: Admin, Developer
 feature: Adaptive Forms,Core Components
 solution: Experience Manager, Experience Manager Forms
 exl-id: a163598d-0a6e-45a8-b3b2-1f260007952b
-source-git-commit: 30ec8835be1af46e497457f639d90c1ee8b9dd6e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 13%
-
+source-wordcount: '1057'
+ht-degree: 17%
 ---
-
 # 在AEM 6.5 Forms上启用自适应Forms核心组件 {#enable-adaptive-forms-core-components}
 
 ## 应用到 {#applies-to}
@@ -106,7 +120,7 @@ ht-degree: 13%
 
       >[!WARNING]
       >
-      >* 使用版本45创建Archetype项目时，`[AEM Archetype Project Folder]/pom.xml`最初将forms核心组件版本设置为1.1.28。在构建或部署原型项目之前，请将Forms核心组件版本更新为1.1.26。您可以在[AEM 6.5 Forms版本历史记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hans#aem-as-form-version-history)中找到最新版本。
+      >* 使用版本45创建Archetype项目时，`[AEM Archetype Project Folder]/pom.xml`最初将forms核心组件版本设置为1.1.28。 在构建或部署原型项目之前，请将Forms核心组件版本更新为1.1.26。 您可以在[AEM 6.5 Forms版本历史记录](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=zh-Hans#aem-as-form-version-history)中找到最新版本。
 
       >[!NOTE]
       >
@@ -150,7 +164,7 @@ ht-degree: 13%
 ### 在启用核心组件上添加了哪些功能？
 
 
-为您的环境启用自适应表单核心组件时，将有一个空白的基于核心组件的自适应表单模板和 Canvas 3.0 主题添加到您的环境。为您的环境启用自适应表单核心组件后，您可以：
+为您的环境启用自适应表单核心组件时，将有一个空白的基于核心组件的自适应表单模板和 Canvas 3.0 主题添加到您的环境。 为您的环境启用自适应表单核心组件后，您可以：
 
 * 创建基于核心组件的自适应Forms。
 * 创建基于核心组件的自适应表单模板。

@@ -9,13 +9,24 @@ role: User, Admin
 feature: Selectors
 solution: Experience Manager, Experience Manager Assets
 exl-id: 2651bfe9-98c8-4bb0-ab8a-9f9d96bfcba8
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 355c23b3-51d6-5ae4-b5c4-05944b12ea8d
+    internal-label: Selectors
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 6%
-
 ---
-
 # 使用选择器 {#working-with-selectors}
 
 使用交互式图像、交互式视频或轮播横幅时，您可以选择资产，并选择要链接到的热点和图像映射的站点和产品。 使用图像集、旋转集和多媒体集时，您还可以使用资产选择器选择资产。

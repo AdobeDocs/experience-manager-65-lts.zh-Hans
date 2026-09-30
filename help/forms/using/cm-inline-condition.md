@@ -9,13 +9,26 @@ feature: Correspondence Management
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: 2d05a36e-c02e-41ef-a03d-2a799aa6eab3
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
 workflow-type: tm+mt
 source-wordcount: '1670'
 ht-degree: 1%
-
 ---
-
 # 交互式通信和书信中的内联条件与重复{#inline-condition-and-repeat-in-interactive-communications-and-letters}
 
 ## 内联条件 {#inline-conditions}
@@ -204,7 +217,7 @@ AEM Forms允许您在文本模块中使用内联条件来自动呈现依赖于�
 
    ![6_repeatoutputpreview](assets/6_repeatoutputpreview.png)
 
-   静态文本与事务详细信息重复。 重复静态文本可通过在此过程中对文本进行重复来简化。 条件${DD_creditcard_TransactionAmount > 0.5}可确保信件中未呈现低于USD .5的事务。
+   静态文本与事务详细信息重复。 重复静态文本可通过在此过程中对文本进行重复来简化。 条件${DD_creditcard_TransactionAmount > 0.5}可确保信件中不会呈现USD .5以下的交易。
 
    >[!NOTE]
    >
