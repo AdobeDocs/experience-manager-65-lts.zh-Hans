@@ -17,9 +17,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2978'
 ht-degree: 1%
 ---
 # 配置富文本编辑器 {#configure-the-rich-text-editor}
@@ -185,9 +185,9 @@ RTE功能通过一系列插件提供，每个插件都具有功能属性。 您�
 
 >[!NOTE]
 >
->[核心组件文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=zh-Hans#the-text-component-and-the-rich-text-editor)允许模板编辑器在GUI中将多个RTE插件配置为内容策略，从而无需技术配置。 内容策略可以与RTE UI配置配合使用，如本文档所述。
+>[核心组件文本组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor)允许模板编辑器在GUI中将多个RTE插件配置为内容策略，从而无需技术配置。 内容策略可以与RTE UI配置配合使用，如本文档所述。
 >
->有关详细信息，请参阅本文档的[RTE UI设置和内容策略](/help/sites-administering/rich-text-editor.md)部分，以及[创建页面模板](/help/sites-authoring/templates.md)和[核心组件开发人员文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=zh-Hans)。
+>有关详细信息，请参阅本文档的[RTE UI设置和内容策略](/help/sites-administering/rich-text-editor.md)部分，以及[创建页面模板](/help/sites-authoring/templates.md)和[核心组件开发人员文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)。
 
 >[!NOTE]
 >
@@ -263,7 +263,7 @@ RTE中的可用选项会从用户界面配置下游流向内容策略。
 * 如果RTE的用户界面配置已移除或未启用某个项目，则内容策略无法对其进行配置。
 * 作者只能访问由用户界面配置和内容策略提供的功能。
 
-例如，您可以看到[文本核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=zh-Hans#the-text-component-and-the-rich-text-editor)。
+例如，您可以看到[文本核心组件文档](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html#the-text-component-and-the-rich-text-editor)。
 
 ## 自定义工具栏图标和命令之间的映射 {#iconstoolbar}
 
@@ -327,12 +327,12 @@ RTE中的可用选项会从用户界面配置下游流向内容策略。
 
 ## 更多信息 {#further-information}
 
-有关配置RTE的更多信息，请参阅[AEM Widget API](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)参考。
+有关配置RTE的更多信息，请参阅[AEM Widget API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)参考。
 
 具体来说，要查看插件及相关可用选项，请执行以下操作：
 
-* [CQ.form.RichText](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.RichText)组件提供了一个表单字段，用于编辑样式化文本信息(RTF)。 要了解富文本表单的所有可用参数，请参阅配置选项。
-* 富文本组件使用[CQ.form.rte.plugins.Plugin](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的插件提供多种功能。 对于每个插件：
+* [CQ.form.RichText](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.RichText)组件提供了一个表单字段，用于编辑样式化文本信息(RTF)。 要了解富文本表单的所有可用参数，请参阅配置选项。
+* 富文本组件使用[CQ.form.rte.plugins.Plugin](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html?class=CQ.form.rte.plugins.Plugin)下列出的插件提供多种功能。 对于每个插件：
 
   * 有关可以启用（或禁用）的功能的详细信息，请参阅功能
   * 有关相应插件的详细配置，请参阅所有可用参数的配置选项

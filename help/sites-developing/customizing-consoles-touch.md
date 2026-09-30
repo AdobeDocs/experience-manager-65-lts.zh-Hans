@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '687'
 ht-degree: 24%
 ---
 # 自定义控制台 {#customizing-the-consoles}
@@ -48,7 +48,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 >
 >* 正在使用和创建[clientlibs](/help/sites-developing/clientlibs.md)。
 >* 使用和创建[叠加图](/help/sites-developing/overlays.md)。
->* [Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/index.html)
+>* [Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/index.html)
 >
 
 
@@ -73,7 +73,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 >[!NOTE]
 >
->有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://experienceleague.adobe.com/zh-hans/docs/experience-cloud-kcs/kbarticles/ka-16935)。
+>有关更多提示和工具，请参阅知识库文章[AEM TouchUI问题疑难解答](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935)。
 
 ## 自定义控制台的默认视图 {#customizing-the-default-view-for-a-console}
 
@@ -159,7 +159,7 @@ Clientlibs允许您扩展默认实施以实现新功能，同时重用标准函�
 
 1. 可选：
 
-   * 如果要插入其他数据，您需要使用编写[PageInforProvider](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
+   * 如果要插入其他数据，您需要使用编写[PageInforProvider](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/api/PageInfoProvider.html)
      `pageInfoProviderType`属性。
 
    例如，请参阅下面的附加类/捆绑包（来自GitHub）。

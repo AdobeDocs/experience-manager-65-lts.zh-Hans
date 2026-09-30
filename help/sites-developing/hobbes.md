@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '790'
 ht-degree: 4%
 ---
 # 测试您的 UI{#testing-your-ui}
@@ -39,7 +39,7 @@ AEM测试框架使用Hobbes.js，这是一个使用JavaScript编写的测试库�
 
 >[!NOTE]
 >
->有关API的完整详细信息，请参阅Hobbes.js [文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
+>有关API的完整详细信息，请参阅Hobbes.js [文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/test-api/index.html)。
 
 ## 测试结构 {#structure-of-tests}
 
@@ -112,7 +112,7 @@ AEM测试框架使用Hobbes.js，这是一个使用JavaScript编写的测试库�
 
 以下过程将引导您使用[We.Retail内容](/help/sites-developing/we-retail.md)创建和执行测试包，但您可以轻松修改测试以使用其他网页。
 
-有关创建您自己的测试包的完整详细信息，请参阅[Hobbes.js API文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html)。
+有关创建您自己的测试包的完整详细信息，请参阅[Hobbes.js API文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/test-api/index.html)。
 
 1. 打开 CRXDE Lite。 ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
 1. 右键单击`/etc/clientlibs`文件夹，然后单击&#x200B;**创建>创建文件夹**。 键入`myTests`作为名称，然后单击&#x200B;**确定**。

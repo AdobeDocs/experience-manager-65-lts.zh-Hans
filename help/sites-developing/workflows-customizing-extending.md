@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3619'
 ht-degree: 2%
 ---
 # 扩展工作流功能{#extending-workflow-functionality}
@@ -85,9 +85,9 @@ ht-degree: 2%
 
 以下对象在ECMA脚本中可用（取决于步骤类型）：
 
-* [工作项](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkItem.html)工作项
-* [工作流会话](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/WorkflowSession.html)工作流会话
-* [工作流数据](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkflowData.html)工作流数据
+* [工作项](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkItem.html)工作项
+* [工作流会话](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/workflow/WorkflowSession.html)工作流会话
+* [工作流数据](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/workflow/exec/WorkflowData.html)工作流数据
 * `args`：具有进程参数的数组。
 
 * `sling`：访问其他osgi服务。
@@ -105,7 +105,7 @@ ht-degree: 2%
 
 ## 创建自定义工作流步骤组件 {#creating-custom-workflow-step-components}
 
-可以使用与任何其他组件[&#128279;](/help/sites-developing/components.md)相同的方式创建工作流步骤组件。
+可以使用与任何其他组件](/help/sites-developing/components.md)相同的方式创建工作流步骤组件[。
 
 要从（现有）基本步骤组件之一继承，请将以下属性添加到`cq:Component`节点：
 
@@ -266,7 +266,7 @@ ht-degree: 2%
 
 您可以使用工作流元数据来保留在工作流生命周期期间以及各个步骤之间所需的信息。 工作流步骤的常见要求是保留数据以供将来使用，或者从先前的步骤中检索保留的数据。
 
-工作流元数据存储在[`MetaDataMap`](#metadatamaps)对象中。 Java API提供了[`Workflow.getWorkflowData`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/exec/Workflow.html)方法以返回提供适当`MetaDataMap`对象的[`WorkflowData`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html)对象。 此`WorkflowData` `MetaDataMap`对象可用于步骤组件的OSGi服务或ECMA脚本。
+工作流元数据存储在[`MetaDataMap`](#metadatamaps)对象中。 Java API提供了[`Workflow.getWorkflowData`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/exec/Workflow.html)方法以返回提供适当`MetaDataMap`对象的[`WorkflowData`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/exec/WorkflowData.html)对象。 此`WorkflowData` `MetaDataMap`对象可用于步骤组件的OSGi服务或ECMA脚本。
 
 #### Java {#java}
 
@@ -671,8 +671,8 @@ function getParticipant() {
 >
 >以下工作流流程步骤接受工作流包以进行批量页面激活：
 >
->* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
->* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
+>* [`com.day.cq.wcm.workflow.process.ActivatePageProcess`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/workflow/process/ActivatePageProcess.html)
+>* [`com.day.cq.wcm.workflow.process.DeactivatePageProcess`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/workflow/process/DeactivatePageProcess.html)
 >
 
 您可以开发工作流步骤以获取资源包资源并对其进行处理。 `com.day.cq.workflow.collection`包的以下成员提供对工作流包的访问权限：
@@ -841,7 +841,7 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
    * `cq:icon`
 
-     用于指定步骤的[Coral图标](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html)。
+     用于指定步骤的[Coral图标](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/coral-ui/coralui3/Coral.Icon.html)。
 
    * `componentGroup`
 

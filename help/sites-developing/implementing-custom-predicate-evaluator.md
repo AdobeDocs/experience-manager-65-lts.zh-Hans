@@ -25,9 +25,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '820'
 ht-degree: 2%
 ---
 # 为查询生成器实施自定义谓词评估器{#implementing-a-custom-predicate-evaluator-for-the-query-builder}
@@ -68,7 +68,7 @@ GITHUB上的代码
 
 >[!NOTE]
 >
->有关`PredicateEvaluator`和`com.day.cq.search`包的详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html?com/day/cq/search/package-summary.html)。
+>有关`PredicateEvaluator`和`com.day.cq.search`包的详细信息，请参阅[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/index.html?com/day/cq/search/package-summary.html)。
 
 ### 为复制元数据实施自定义谓词计算器 {#implementing-a-custom-predicate-evaluator-for-replication-metadata}
 
@@ -153,7 +153,7 @@ pom.xml
 
 >[!NOTE]
 >
->以下过程说明如何构建`Xpath`表达式以筛选数据。 另一个选项是实施按行选择数据的`includes`方法。 有关详细信息，请参阅[Java™文档](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)。
+>以下过程说明如何构建`Xpath`表达式以筛选数据。 另一个选项是实施按行选择数据的`includes`方法。 有关详细信息，请参阅[Java™文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/search/eval/PredicateEvaluator.html#includes28comdaycqsearchpredicatejavaxjcrqueryrowcomdaycqsearchevalevaluationcontext29)。
 
 1. 创建扩展`com.day.cq.search.eval.AbstractPredicateEvaluator`的Java™类
 1. 使用`@Component`批注您的类，如下所示

@@ -17,9 +17,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '828'
 ht-degree: 7%
 ---
 # 扩展资产搜索 {#extending-assets-search}
@@ -61,7 +61,7 @@ ht-degree: 7%
 
 除了使用预先存在的谓词之外，[!DNL Experience Manager]开发人员还可以使用[查询生成器API](/help/sites-developing/querybuilder-api.md)创建自己的谓词。
 
-创建自定义谓词需要有关[Widget框架](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)的基本知识。
+创建自定义谓词需要有关[Widget框架](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html)的基本知识。
 
 最佳实践是复制并调整现有谓词。 示例谓词位于&#x200B;**/libs/cq/search/components/predicates**&#x200B;中。
 

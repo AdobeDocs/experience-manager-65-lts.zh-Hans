@@ -25,9 +25,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2267'
+source-wordcount: '2268'
 ht-degree: 2%
 ---
 # 使用批处理API生成多个交互式通信 {#use-batch-api-to-generate-multiple-ic}
@@ -99,7 +99,7 @@ ht-degree: 2%
    1. 登录到AEM Forms创作实例。
    1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。 选择&#x200B;**[!UICONTROL 新建]**。
    1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。 例如 `c:\batchprocessing`。
-   1. 使用&#x200B;**字段在**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
+   1. 使用&#x200B;]**字段在**[!UICONTROL &#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
    1. 在&#x200B;**[!UICONTROL 服务名称]**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服务。
    1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched文件夹可以在Watched文件夹\input文件夹的子文件夹中找到输入文件。
 1. 配置高级参数：
@@ -159,7 +159,7 @@ ht-degree: 2%
    1. 登录到AEM Forms创作实例。
    1. 导航到&#x200B;**[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置Watched文件夹]**。 选择&#x200B;**[!UICONTROL 新建]**。
    1. 指定文件夹的&#x200B;**[!UICONTROL 名称]**&#x200B;和物理&#x200B;**[!UICONTROL 路径]**。 例如 `c:\batchprocessing`。
-   1. 使用&#x200B;**字段在**&#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
+   1. 使用&#x200B;]**字段在**[!UICONTROL &#x200B;处理文件中选择&#x200B;**[!UICONTROL 服务]**&#x200B;选项。
    1. 在&#x200B;**[!UICONTROL 服务名称]**&#x200B;字段中选择&#x200B;**[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]**&#x200B;服务。
    1. 指定&#x200B;**[!UICONTROL 输出文件模式]**。 例如，%F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns)指定Watched文件夹可以在Watched文件夹\input文件夹的子文件夹中找到输入文件。
 1. 配置高级参数：
@@ -185,13 +185,13 @@ ht-degree: 2%
 
 ## 使用REST请求调用批处理API
 
-您可以通过代表性状态传输(REST)请求调用[批处理API](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html)。 通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
+您可以通过代表性状态传输(REST)请求调用[批处理API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/index.html)。 通过它，您可以向其他用户提供REST端点来访问API，并配置您自己的方法来处理、存储和自定义交互式通信。 您可以开发自己的自定义Java™ servlet来在AEM实例上部署API。
 
 在部署Java™ Servlet之前，请确保交互式通信以及相应的数据文件已准备就绪。 执行以下步骤，以便创建和部署Java™ Servlet：
 
 1. 登录AEM实例并创建交互式通信。 要使用下面给出的示例代码中提到的交互式通信，[单击此处](assets/SimpleMediumIC.zip)。
-1. [在您的AEM实例上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hans)生成和部署AEM项目。
-1. 将[AEM Forms Client SDK版本6.0.12或更高版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)添加到AEM项目的POM文件的依赖项列表中。 例如，
+1. [在您的AEM实例上使用Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)生成和部署AEM项目。
+1. 将[AEM Forms Client SDK版本6.0.12或更高版本](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)添加到AEM项目的POM文件的依赖项列表中。 例如，
 
    ```xml
        <dependency>
@@ -341,7 +341,7 @@ ht-degree: 2%
    * 指定WEB选项时，将为每个记录生成一个JSON文件。 您可以使用JSON文件[预填充Web模板](#web-template)。
    * 当您同时指定PRINT和WEB选项时，将为每个记录生成PDF文档和JSON文件。
 
-1. [使用maven将更新的代码部署到AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html?lang=zh-Hans)。
+1. [使用maven将更新的代码部署到AEM实例](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html)。
 1. 要生成交互式通信，请调用批处理API。 批处理API打印会根据记录数量返回一系列son文件。 您可以使用JSON文件[预填充Web模板](#web-template)。 如果您使用上述代码，则API部署在`http://localhost:4502/bin/batchServlet`。 该代码会打印并返回PDF和JSON文件流。
 
 ### 预填充Web模板 {#web-template}
@@ -377,4 +377,4 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->默认情况下仅启用CRX协议。 要启用其他支持的协议，请参阅[使用配置管理器配置预填充服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=zh-Hans)。
+>默认情况下仅启用CRX协议。 要启用其他支持的协议，请参阅[使用配置管理器配置预填充服务](https://experienceleague.adobe.com/docs/experience-manager-65-lts/content/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html?lang=en)。

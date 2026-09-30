@@ -27,9 +27,9 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1033'
 ht-degree: 1%
 ---
 # OSGi上以Forms为中心的工作流 |处理用户数据 {#forms-centric-workflows-on-osgi-handling-user-data}
@@ -175,5 +175,5 @@ ht-degree: 1%
 您还可以使用API来访问和删除节点和属性。 有关更多信息，请参阅以下文档。
 
 * [如何以编程方式访问 AEM JCR](/help/sites-developing/access-jcr.md)
-* [删除节点和属性](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
-* [API参考](https://helpx.adobe.com/cn/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)
+* [删除节点和属性](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/10_Writing.html#10.9%20Removing%20Nodes%20and%20Properties)
+* [API参考](https://helpx.adobe.com/experience-manager/6-3/sites-developing/reference-materials/javadoc/overview-summary.html)

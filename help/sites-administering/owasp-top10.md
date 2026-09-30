@@ -23,9 +23,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '520'
 ht-degree: 4%
 ---
 # OWASP 十大安全风险{#owasp-top}
@@ -74,7 +74,7 @@ AEM使用可靠的身份验证技术，依赖于[Apache Jackrabbit](https://jack
 
 ## &#x200B;8. 限制URL访问失败 {#failure-to-restrict-url-access}
 
-存储库允许通过访问控制条目为任何给定路径上的任何给定用户或组设置[细粒度权限（由JCR指定）](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html)。 存储库强制执行访问限制。
+存储库允许通过访问控制条目为任何给定路径上的任何给定用户或组设置[细粒度权限（由JCR指定）](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/16_Access_Control_Management.html)。 存储库强制执行访问限制。
 
 ## &#x200B;9. 传输层保护不足 {#insufficient-transport-layer-protection}
 

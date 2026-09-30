@@ -24,9 +24,9 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2351'
+source-wordcount: '2352'
 ht-degree: 3%
 ---
 # 用户同步{#user-synchronization}
@@ -45,7 +45,7 @@ ht-degree: 3%
 
 ## Sling分发 {#sling-distribution}
 
-用户数据及其[ACL](/help/sites-administering/security.md)存储在Oak JCR下层的[Oak Core](/help/sites-deploying/platform.md)中，并使用[Oak API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/jackrabbit/oak/api/package-summary.html)访问。 由于更新不频繁，因此可以使用[Sling Content Distribution](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)&#x200B;(Sling Distribution)将用户数据与其他发布实例同步。
+用户数据及其[ACL](/help/sites-administering/security.md)存储在Oak JCR下层的[Oak Core](/help/sites-deploying/platform.md)中，并使用[Oak API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/org/apache/jackrabbit/oak/api/package-summary.html)访问。 由于更新不频繁，因此可以使用[Sling Content Distribution](https://github.com/apache/sling-old-svn-mirror/blob/trunk/contrib/extensions/distribution/README.md)&#x200B;(Sling Distribution)将用户数据与其他发布实例同步。
 
 与传统复制相比，使用Sling分发的用户同步具有以下优势：
 
@@ -87,7 +87,7 @@ ht-degree: 3%
 
 1. 确保安装了最新的代码：
 
-* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=zh-Hans)
+* [AEM平台更新](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html)
 
 ### &#x200B;1. Apache Sling 分发代理 - 同步代理工厂 {#apache-sling-distribution-agent-sync-agents-factory}
 
@@ -116,7 +116,7 @@ ht-degree: 3%
 
 在步骤3中使用授权用户在Author上配置Sling分发。
 
-* 每个发布实例上的&#x200B;**&#x200B;**
+* 每个发布实例上的&#x200B;****
 
   * 使用管理员权限登录
   * 访问[安全控制台](/help/sites-administering/security.md)

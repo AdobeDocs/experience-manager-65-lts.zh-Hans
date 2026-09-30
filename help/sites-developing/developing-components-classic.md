@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2449'
 ht-degree: 2%
 ---
 # 开发Adobe Experience Manager (AEM)组件（经典UI）{#developing-aem-components-classic-ui}
@@ -38,7 +38,7 @@ ht-degree: 2%
 >
 >尽管HTML模板语言(HTL)和JSP都可以用于开发经典UI的组件，但此页说明了使用JSP进行的开发。 这完全是因为在经典UI中使用JSP的历史记录。
 >
->HTL现在是适用于AEM的推荐脚本语言。 请参阅[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)和[开发AEM组件](/help/sites-developing/developing-components.md)以比较方法。
+>HTL现在是适用于AEM的推荐脚本语言。 请参阅[HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)和[开发AEM组件](/help/sites-developing/developing-components.md)以比较方法。
 
 ## 结构 {#structure}
 
@@ -101,7 +101,7 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
 
 * 通过`global.jsp`中引入的`currentPage`对象：
 
-  `currentPage`对象是页面的实例（请参阅[AEM API](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)）。 page类提供了一些访问内容的方法。
+  `currentPage`对象是页面的实例（请参阅[AEM API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/api/Page.html)）。 page类提供了一些访问内容的方法。
 
   示例：`String pageTitle = currentPage.getTitle();`
 
@@ -185,8 +185,8 @@ JSP脚本文件`global.jsp`用于为任何用于呈现组件的JSP脚本提供�
    >
    >的组件：
    >
-   >* 触屏优化UI使用[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)组件
-   >* 经典UI使用[ExtJS小组件](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html)
+   >* 触屏优化UI使用[Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)组件
+   >* 经典UI使用[ExtJS小组件](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/widgets-api/index.html)
 
    >[!NOTE]
    >

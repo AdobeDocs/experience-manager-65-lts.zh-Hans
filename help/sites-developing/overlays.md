@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '627'
 ht-degree: 1%
 ---
 # 叠加{#overlays}
@@ -35,7 +35,7 @@ Adobe Experience Manager (AEM)（以及之前的CQ）一直使用叠加原理来
 
 自AEM 6.0起，对叠加的实施和使用方式进行了更改：
 
-* AEM 6.0及更高版本 — 适用于[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)相关的叠加图（即支持触摸的UI）
+* AEM 6.0及更高版本 — 适用于[Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)相关的叠加图（即支持触摸的UI）
 
   * 方法
 
@@ -66,13 +66,13 @@ Adobe Experience Manager (AEM)（以及之前的CQ）一直使用叠加原理来
 
 >[!CAUTION]
 >
->[Sling资源合并器](/help/sites-developing/sling-resource-merger.md)和相关方法只能与[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)一起使用。 这意味着创建具有框架结构的叠加仅适用于支持触摸的标准用户界面。
+>[Sling资源合并器](/help/sites-developing/sling-resource-merger.md)和相关方法只能与[Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)一起使用。 这意味着创建具有框架结构的叠加仅适用于支持触摸的标准用户界面。
 >
 >其他区域（包括经典UI）的叠加包括复制相应的节点和整个子结构，然后进行所需的更改。
 
 叠加是进行许多更改的推荐方法，例如[配置控制台](/help/sites-developing/customizing-consoles-touch.md#create-a-custom-console)或[向侧面板中的资产浏览器创建选择类别](/help/sites-developing/customizing-page-authoring-touch.md#add-new-selection-category-to-asset-browser)（在创作页面时使用）。 它们必须是：
 
-* ***不要*&#x200B;在`/libs`分支中进行更改&#x200B;**&#x200B;您所做的任何更改都可能会丢失，因为每当您：
+* ***不要*&#x200B;在`/libs`分支中进行更改&#x200B;**您所做的任何更改都可能会丢失，因为每当您：
 
   * 在实例上升级
   * 应用修补程序

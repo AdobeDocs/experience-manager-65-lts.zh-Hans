@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 8%
 ---
 # 自定义欢迎控制台（经典 UI）{#customizing-the-welcome-console-classic-ui}
@@ -197,7 +197,7 @@ ht-degree: 8%
 
 ### 链接选择机制 {#link-selection-mechanism}
 
-在`/libs/cq/core/components/welcome/welcome.jsp`中，使用[ConsoleUtil](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/commons/ConsoleUtil.html)，该程序对具有下列属性的节点执行查询：
+在`/libs/cq/core/components/welcome/welcome.jsp`中，使用[ConsoleUtil](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/commons/ConsoleUtil.html)，该程序对具有下列属性的节点执行查询：
 
 * 值为`cq:Console`的`jcr:mixinTypes`
 

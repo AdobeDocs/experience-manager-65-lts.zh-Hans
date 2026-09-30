@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '821'
 ht-degree: 3%
 ---
 # 启动工作流{#starting-workflows}
@@ -44,13 +44,13 @@ ht-degree: 3%
 >
 >* [将工作流应用到页面](/help/sites-authoring/workflows-applying.md)
 >* [如何将工作流应用于DAM资源](/help/assets/assets-workflow.md)
->* [AEM 表单](https://helpx.adobe.com/cn/aem-forms/6-2/aem-workflows-submit-process-form.html)
+>* [AEM 表单](https://helpx.adobe.com/aem-forms/6-2/aem-workflows-submit-process-form.html)
 >* [翻译项目](/help/sites-administering/tc-manage.md)
 >
 
 ## 工作流模型 {#workflow-models}
 
-您可以基于“工作流模型”控制台上列出的模型[&#128279;](/help/sites-administering/workflows.md#workflow-models-and-instances)启动工作流。 唯一强制提供的信息是有效负载，不过也可以添加标题和/或评论。
+您可以基于“工作流模型”控制台上列出的模型](/help/sites-administering/workflows.md#workflow-models-and-instances)启动工作流[。 唯一强制提供的信息是有效负载，不过也可以添加标题和/或评论。
 
 ## 工作流启动器 {#workflows-launchers}
 
@@ -183,7 +183,7 @@ ht-degree: 3%
      此启动器属性是以逗号分隔的项目列表：&#39;&#39;
 
      * `property-name`忽略在指定的属性名称上触发的任何`jcr`事件。 &quot;
-     * `event-user-data:<*someValue*>`忽略任何包含通过[`ObservationManager` API](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))设置的`*<someValue*`> `user-data`的事件。
+     * `event-user-data:<*someValue*>`忽略任何包含通过[`ObservationManager` API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String))设置的`*<someValue*`> `user-data`的事件。
 
      例如：
 

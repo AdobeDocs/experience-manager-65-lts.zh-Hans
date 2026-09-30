@@ -20,16 +20,16 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1739'
 ht-degree: 6%
 ---
 # 自定义节点类型{#custom-node-types}
 
 由于Adobe Experience Manager (AEM)基于Sling并使用JCR存储库，因此两者提供的节点类型均可用于以下内容：
 
-* [JCR节点类型](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
+* [JCR节点类型](https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
 * [Sling节点类型](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 除了这些节点类型之外，AEM还提供了一系列自定义节点类型。

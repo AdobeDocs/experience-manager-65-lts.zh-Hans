@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '952'
 ht-degree: 3%
 ---
 # 以 JSON 格式获取页面信息{#obtaining-page-information-in-json-format}
@@ -43,7 +43,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 >* 本机移动设备应用程序
 >* AEM外部的其他渠道和接触点
 >
->请参阅Content Services[&#128279;](/help/sites-developing/json-exporter.md)的文档JSON导出程序。
+>请参阅Content Services](/help/sites-developing/json-exporter.md)的文档[JSON导出程序。
 
 ## 页面信息提供程序 {#page-information-providers}
 
@@ -563,7 +563,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 ### 示例PageInfoProvider实现 {#example-pageinfoprovider-implementation}
 
-以下Java类实现[PageInfoProvider](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/index.html)并返回当前页面资源的已发布URL。
+以下Java类实现[PageInfoProvider](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/index.html)并返回当前页面资源的已发布URL。
 
 ```java
 package com.adobe.example;

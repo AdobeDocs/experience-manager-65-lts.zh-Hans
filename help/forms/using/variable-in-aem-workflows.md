@@ -25,9 +25,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2214'
 ht-degree: 0%
 ---
 # AEM Forms工作流中的变量{#variables-in-aem-forms-workflows}
@@ -46,20 +46,20 @@ ht-degree: 0%
 * [使用“设置变量”工作流步骤设置变量](../../forms/using/variable-in-aem-workflows.md#set-a-variable)的值。
 * [在所有AEM Forms工作流步骤中使用变量](../../forms/using/variable-in-aem-workflows.md#use-a-variable)来检索存储的值，并在OR拆分和转到步骤中定义路由表达式。
 
-变量是现有[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)接口的扩展。 您可以在ECMAScript中使用[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)访问使用变量保存的元数据。
+变量是现有[MetaDataMap](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)接口的扩展。 您可以在ECMAScript中使用[MetaDataMap](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)访问使用变量保存的元数据。
 
 ## 创建变量 {#create-a-variable}
 
 您可以使用工作流模型Sidekick中提供的“变量”部分创建变量。 AEM工作流变量支持以下数据类型：
 
 * **原始数据类型**： Long、Double、Boolean、Date和String
-* **复杂数据类型**：[文档](https://helpx.adobe.com/cn/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
+* **复杂数据类型**：[文档](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemfd/docmanager/Document.html)、[XML](https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/Document.html)、[JSON](https://static.javadoc.io/com.google.code.gson/gson/2.3/com/google/gson/JsonObject.html)和表单数据模型实例。
 
 >[!NOTE]
 >
 >工作流仅支持日期类型变量使用ISO8601格式。
 
-文档和表单数据模型数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有原始和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
+文档和表单数据模型数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。  使用ArrayList数据类型创建变量集合。 您可以为所有原始和复杂数据类型创建ArrayList变量。 例如，创建一个ArrayList变量并选择String作为子类型以使用该变量存储多个字符串值。
 
 执行以下步骤可创建变量：
 
@@ -197,7 +197,7 @@ OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态
 
 ### 不支持变量的工作流步骤 {#workflow-steps-without-support-for-variables}
 
-您可以使用[MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)界面访问工作流步骤中不支持变量的变量。
+您可以使用[MetaDataMap](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)界面访问工作流步骤中不支持变量的变量。
 
 #### 检索变量值 {#retrieve-the-variable-value}
 
@@ -211,7 +211,7 @@ OR拆分在工作流中创建拆分，之后只有一个分支处于活动状态
 | 表单数据模型 | Packages.com.adobe.aem.dermis.api.FormDataModelInstance fdmObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.adobe.aem.dermis.api.FormDataModelInstance.class)； |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData()。getMetaDataMap()。get(variableName， Packages.com.google.gson.JsonObject.class)； |
 
-文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/cn/aem-forms/kb/aem-forms-releases.html)。
+文档和表单数据模型变量数据类型需要[AEM Forms附加组件包](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)。
 
 **示例**
 
@@ -241,7 +241,7 @@ workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 
 您可以使用API来设置变量，并传递它们以调用工作流实例。
 
-[workflowSession.startWorkflow](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-)使用模型、wfData和metaData作为参数。 使用MetaDataMap设置变量的值。
+[workflowSession.startWorkflow](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-)使用模型、wfData和metaData作为参数。 使用MetaDataMap设置变量的值。
 
 在此API中，使用metaData.put(variableName， value)将&#x200B;**variableName**&#x200B;变量设置为&#x200B;**value**；
 

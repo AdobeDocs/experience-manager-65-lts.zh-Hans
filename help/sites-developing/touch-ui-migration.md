@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '684'
 ht-degree: 11%
 ---
 # 迁移至触控用户界面{#migration-to-the-touch-ui}
@@ -125,7 +125,7 @@ ht-degree: 11%
 
   * 在触屏UI中提供了一个兼容层，用于在“触屏UI包装器”中打开经典UI对话框，但此功能有限，不建议长期使用。
 
-* [在触屏UI中自定义对话框字段](https://helpx.adobe.com/cn/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
+* [在触屏UI中自定义对话框字段](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [创建新的 Granite UI 字段组件](/help/sites-developing/granite-ui-component.md)
 * [自定义页面创作](/help/sites-developing/customizing-page-authoring-touch.md)（使用支持触屏的UI）
 
@@ -140,8 +140,8 @@ ht-degree: 11%
 虽然与迁移到触屏UI没有直接关系，但有些相关问题值得同时考虑，因为这也是推荐的实践：
 
 * [模板](/help/sites-developing/templates.md) - [可编辑的模板](/help/sites-developing/page-templates-editable.md)
-* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=zh-Hans)
+* [核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
@@ -152,10 +152,10 @@ ht-degree: 11%
 有关开发AEM的完整信息，请参阅以下内容下的资源收集：
 
 * [Developing用户指南](/help/sites-developing/getting-started.md)
-* [Granite UI文档](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
-* [AEM 6.5 Sites教程和视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=zh-Hans)
+* [Granite UI文档](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+* [AEM 6.5 Sites教程和视频](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [AEM Sites 开发入门——WKND 教程](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=zh-Hans)
+* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
 * [AEM 现代化工具](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]

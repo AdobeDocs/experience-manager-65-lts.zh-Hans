@@ -25,9 +25,9 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '993'
 ht-degree: 0%
 ---
 # Document Security |处理用户数据 {#document-security-handling-user-data}
@@ -141,7 +141,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
->要从`EdcAuditEntity`表中导出数据，请使用采用[EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)作为参数的[EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API以导出基于`principalId`、`policyId`或`licenseId`的审核数据。
+>要从`EdcAuditEntity`表中导出数据，请使用采用[EventSearchFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)作为参数的[EventManager.exportEvents](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API以导出基于`principalId`、`policyId`或`licenseId`的审核数据。
 
 要获取系统中某个用户的完整数据，必须访问用户管理数据库并从中导出数据。 有关详细信息，请参阅[Forms用户管理：处理用户数据](/help/forms/using/user-management-handling-user-data.md)。
 
@@ -166,7 +166,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
    >[!NOTE]
    >
-   >要从`EdcAuditEntity`表中删除数据，请使用采用[EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)作为参数的[EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API来删除基于`principalId`、`policyId`或`licenseId`的审核数据。
+   >要从`EdcAuditEntity`表中删除数据，请使用采用[EventSearchFilter](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html)作为参数的[EventManager.deleteEvents](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API来删除基于`principalId`、`policyId`或`licenseId`的审核数据。
 
 1. 活动和归档策略XML文件分别存储在`EdcPolicyXmlEntity`和`EdcPolicyArchiveEntity`数据库表中。 要从这些表中删除用户的数据，请执行以下操作：
 

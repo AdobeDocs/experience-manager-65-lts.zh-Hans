@@ -20,9 +20,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1262'
 ht-degree: 1%
 ---
 # 在AEM中使用Sling资源合并器{#using-the-sling-resource-merger-in-aem}
@@ -43,7 +43,7 @@ Sling资源合并器将叠加和覆盖资源（及其属性）与原始资源和
 
 >[!CAUTION]
 >
->Sling资源合并器和相关方法只能与[Granite](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/index.html)一起使用。 此情况还意味着该覆盖仅适用于标准的触屏优化UI，尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
+>Sling资源合并器和相关方法只能与[Granite](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/index.html)一起使用。 此情况还意味着该覆盖仅适用于标准的触屏优化UI，尤其是以这种方式定义的覆盖仅适用于组件的触屏优化对话框。
 >
 >要叠加或覆盖其他区域（包括触控式组件或经典UI的其他部分），请从原始节点复制相应的节点和结构。 将副本放置在定义自定义的位置。
 

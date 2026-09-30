@@ -20,14 +20,14 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '649'
 ht-degree: 7%
 ---
 # 使用隐藏条件 {#using-hide-conditions}
 
-隐藏条件可用于确定是否呈现组件资源。 例如，当模板作者在[模板编辑器](/help/sites-authoring/templates.md)中配置核心组件[列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hans)并决定禁用基于子页面构建列表的选项时。 在“设计”对话框中禁用此选项可设置属性，以便在呈现列表组件时，计算隐藏条件并且不显示显示子页面的选项。
+隐藏条件可用于确定是否呈现组件资源。 例如，当模板作者在[模板编辑器](/help/sites-authoring/templates.md)中配置核心组件[列表组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)并决定禁用基于子页面构建列表的选项时。 在“设计”对话框中禁用此选项可设置属性，以便在呈现列表组件时，计算隐藏条件并且不显示显示子页面的选项。
 
 ## 概述 {#overview}
 
@@ -43,7 +43,7 @@ ht-degree: 7%
 
 `com.adobe.granite.ui.components.FilteringResourceWrapper`负责根据位于要过滤的字段上的`granite:hide`属性的存在和值来过滤资源。 `/libs/cq/gui/components/authoring/dialog/dialog.jsp`的实现包括`FilteringResourceWrapper.`的实例
 
-该实现使用Granite [ELResolver API](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html)，并通过ExpressionCustomizer添加`cqDesign`自定义变量。
+该实现使用Granite [ELResolver API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/docs/server/el.html)，并通过ExpressionCustomizer添加`cqDesign`自定义变量。
 
 以下是位于`etc/design`下或作为内容策略的设计节点上隐藏条件的一些示例。
 
@@ -65,7 +65,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 ## 示例 {#example}
 
-隐藏条件的示例可在整个AEM中找到，特别是[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)。 例如，考虑[列表核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=zh-Hans)。
+隐藏条件的示例可在整个AEM中找到，特别是[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)。 例如，考虑[列表核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html)。
 
 [使用模板编辑器](/help/sites-authoring/templates.md)，模板作者可以在“设计”对话框中定义列表组件中哪些选项可供页面作者使用。 可以启用或禁用此类选项，例如是否允许列表为静态列表、子页面的列表、已标记页面的列表等。
 
@@ -86,7 +86,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 1. `disableChildren`的值是从设计配置中提取的，表达式`${cqDesign.disableChildren}`的计算结果为`false`，这意味着该选项将不会作为组件的一部分呈现。
 
-   您可以在GitHub[&#128279;](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中查看作为`granite:hide`属性值的隐藏表达式。
+   您可以在GitHub](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40)中查看作为`granite:hide`属性[值的隐藏表达式。
 
 1. 使用列表组件时，选项&#x200B;**子页面**&#x200B;不再为页面作者渲染。
 

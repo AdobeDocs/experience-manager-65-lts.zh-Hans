@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '951'
 ht-degree: 6%
 ---
 # 创作——环境与工具 {#authoring-the-environment-and-tools}
@@ -48,7 +48,7 @@ AEM的创作环境提供了各种可用于组织和编辑内容的机制。 可�
 
 可从AEM中直接访问各种&#x200B;**帮助**&#x200B;资源：
 
-除了从控制台工具栏[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)访问帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
+除了从控制台工具栏](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)访问[帮助外，您还可以从sidekick访问帮助(使用？ 图标)在编辑页面时：
 
 ![Sidekick已折叠](do-not-localize/sidekick-collapsed-2.png)
 
@@ -159,7 +159,7 @@ Sidekick的&#x200B;**组件**&#x200B;选项卡允许您浏览可添加到当前�
 
 >[!NOTE]
 >
->您还可以使用[SQL2](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)搜索。
+>您还可以使用[SQL2](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)搜索。
 
 ## 显示引用 {#showing-references}
 
@@ -186,7 +186,7 @@ AEM会显示直接引用所选页面以及任何间接引用的所有页面。 �
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
 
-在网站控制台[&#128279;](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他页面间关系。
+在网站控制台](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console)中可以看到其他[页面间关系。
 
 ## 审核日志 {#audit-log}
 

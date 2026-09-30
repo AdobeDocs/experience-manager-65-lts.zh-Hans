@@ -33,9 +33,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1110'
 ht-degree: 84%
 ---
 # 如何通过 AEM Assets API 更新您的内容 {#update-your-content}
@@ -283,7 +283,7 @@ API 引用文档中将定义受支持请求的准确格式。
 
 >[!NOTE]
 >
->有关更多详细信息，请参阅 API 引用。 具体而言，[Adobe Experience Manager Assets API – 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)。
+>有关更多详细信息，请参阅 API 引用。 具体而言，[Adobe Experience Manager Assets API – 内容片段](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/assets-api-content-fragments/index.html)。
 
 ### 读取/交付 {#read-delivery}
 
@@ -353,9 +353,9 @@ API 引用文档中将定义受支持请求的准确格式。
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 * [内容片段 REST API](/help/assets/assets-api-content-fragments.md)
   * [API 引用](/help/assets/assets-api-content-fragments.md#api-reference)
-* [Adobe Experience Manager Assets API — 内容片段](https://developer.adobe.com/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
+* [Adobe Experience Manager Assets API — 内容片段](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/assets-api-content-fragments/index.html)
 * [使用内容片段](/help/assets/content-fragments/content-fragments.md)
-* [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)
+* [AEM 核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM介绍](https://helpx.adobe.com/cn/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [视频 — 使用AEM开发CORS](https://helpx.adobe.com/cn/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 * [AEM as a Headless CMS 简介](/help/sites-developing/headless/introduction.md)

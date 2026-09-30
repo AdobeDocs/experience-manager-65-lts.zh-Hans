@@ -24,9 +24,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1903'
 ht-degree: 2%
 ---
 # 在创建通信UI中添加自定义操作按钮 {#add-custom-action-button-in-create-correspondence-ui}
@@ -437,11 +437,11 @@ LCA进程在LiveCycle服务器上运行，需要服务器地址和登录凭据�
    >
    >每次在服务器端进行更改时，请重新启动LiveCycle Server。
 
-   DSCSample.jar文件使用renderLetter API。 有关renderLetter API的详细信息，请参阅[接口LetterRenderService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
+   DSCSample.jar文件使用renderLetter API。 有关renderLetter API的详细信息，请参阅[接口LetterRenderService](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 #### 将DSC导入LiveCycle {#import-dsc-to-livecyle}
 
-DSCSample.jar文件使用renderLetter API根据DSC作为输入提供的XML数据将书信呈现为PDF字节。 有关renderLetter和其他API的详细信息，请参阅[书信渲染服务](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
+DSCSample.jar文件使用renderLetter API根据DSC作为输入提供的XML数据将书信呈现为PDF字节。 有关renderLetter和其他API的详细信息，请参阅[书信渲染服务](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/index.html?com/adobe/icc/ddg/api/LetterRenderService.html)。
 
 1. 启动Workbench并登录。
 1. 选择&#x200B;**窗口>显示视图>组件**。 “组件”视图将添加到Workbench ES2。

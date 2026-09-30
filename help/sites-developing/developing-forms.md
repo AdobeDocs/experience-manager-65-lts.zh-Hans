@@ -21,9 +21,9 @@ feature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 1%
 ---
 # 开发表单（经典 UI）{#developing-forms-classic-ui}
@@ -48,7 +48,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->本文档重点介绍如何在经典UI中使用[Foundation组件](/help/sites-authoring/default-components-foundation.md)来开发表单。 Adobe建议在触屏UI中使用新的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=zh-Hans)和[隐藏条件](/help/sites-developing/hide-conditions.md)进行表单开发。
+>本文档重点介绍如何在经典UI中使用[Foundation组件](/help/sites-authoring/default-components-foundation.md)来开发表单。 Adobe建议在触屏UI中使用新的[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)和[隐藏条件](/help/sites-developing/hide-conditions.md)进行表单开发。
 
 ## 预载表单值 {#preloading-form-values}
 
@@ -81,7 +81,7 @@ ht-degree: 1%
 
 1. 添加多值字符串(`String[]`)类型的新属性（例如`myList`）以包含下拉项列表。 内容也可以使用脚本导入，例如通过JSP脚本或shell脚本中的cURL导入。
 
-1. 在&#x200B;**项加载路径**&#x200B;字段中使用完整路径：
+1. 在&#x200B;**项加载路径**字段中使用完整路径：
 例如，`/etc/designs/geometrixx/formlistvalues/myList`
 
 请注意，如果`String[]`中的值采用如下格式：
@@ -324,7 +324,7 @@ ht-degree: 1%
 
 ### 开发脚本以用于Forms {#developing-scripts-for-use-with-forms}
 
-有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
+有关编写脚本时可以使用的API元素的更多信息，请参阅与表单相关的[javadocs](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/day/cq/wcm/foundation/forms/package-summary.html)。
 
 您可以将此用于操作，例如在提交表单之前调用服务，并在服务失败时取消服务：
 

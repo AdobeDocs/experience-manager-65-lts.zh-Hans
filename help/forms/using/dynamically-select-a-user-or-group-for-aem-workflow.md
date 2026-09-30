@@ -25,9 +25,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '948'
 ht-degree: 3%
 ---
 # 为以 AEM Forms 为中心的工作流步骤动态选择用户或用户组 {#dynamically-select-a-user-or-group-for-aem-forms-centric-workflow-steps}
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 在大型组织中，需要动态地为流程选择用户。 例如，根据代理与客户的接近程度选择现场代理为客户提供服务。 在这种情况下，将动态选择代理。
 
-在OSGi[&#128279;](/help/forms/using/aem-forms-workflow.md)上分配任务和以Forms为中心的工作流的Adobe Sign步骤，提供了用于动态选择用户的选项。 您可以使用ECMAScript或OSGi捆绑包为“分配任务”步骤动态选择被分配人，或为“签名文档”步骤选择签名者。
+在OSGi](/help/forms/using/aem-forms-workflow.md)上分配任务和[以Forms为中心的工作流的Adobe Sign步骤，提供了用于动态选择用户的选项。 您可以使用ECMAScript或OSGi捆绑包为“分配任务”步骤动态选择被分配人，或为“签名文档”步骤选择签名者。
 
 ## 使用ECMAScript动态选择用户或组 {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -131,9 +131,9 @@ function getAdobeSignRecipients() {
 
 ## 使用Java界面动态选择用户或组 {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-您可以使用[RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面动态选择用户或组以执行Adobe Sign和分配任务步骤。 您可以创建一个使用[RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口的OSGi捆绑包，并将其部署到AEM Forms服务器。 该选项可供在AEM工作流的`Assign Task`和Adobe Sign组件中选择。
+您可以使用[RecipientInfoSpecifier](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java界面动态选择用户或组以执行Adobe Sign和分配任务步骤。 您可以创建一个使用[RecipientInfoSpecifier](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口的OSGi捆绑包，并将其部署到AEM Forms服务器。 该选项可供在AEM工作流的`Assign Task`和Adobe Sign组件中选择。
 
-您需要[AEM Forms客户端SDK](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件来编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi捆绑包项目中。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
+您需要[AEM Forms客户端SDK](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#) jar和[granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/)文件来编译下面列出的代码示例。 将这些jar文件作为外部依赖项添加到OSGi捆绑包项目中。 您可以使用任何Java IDE创建OSGi捆绑包。 以下过程提供了使用Eclipse创建OSGi捆绑包的步骤：
 
 1. 打开Eclipse IDE。 导航到&#x200B;**[!UICONTROL 文件]**> **[!UICONTROL 新建项目]**。
 1. 在选择向导屏幕上，选择&#x200B;**[!UICONTROL Maven项目]**，然后单击&#x200B;**[!UICONTROL 下一步]**。
@@ -240,7 +240,7 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. 添加使用[RecipientInfoSpecificer](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口为“分配任务”步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java接口动态选择用户或组的示例](#-sample-scripts-for)。
+1. 添加使用[RecipientInfoSpecificer](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口为“分配任务”步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java接口动态选择用户或组的示例](#-sample-scripts-for)。
 1. 打开命令提示符并导航到包含OSGi捆绑包项目的目录。 使用以下命令创建OSGi捆绑包：
 
    `mvn clean install`

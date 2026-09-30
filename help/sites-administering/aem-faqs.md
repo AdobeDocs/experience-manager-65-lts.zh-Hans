@@ -16,9 +16,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1084'
 ht-degree: 1%
 ---
 # AEM 常见问题解答 {#aem-faqs}
@@ -114,9 +114,9 @@ AEM提供了各种机制，让您能够自定义创作实例的控制台和页�
 
 #### 基于CoralUI 2的组件与基于CoralUI 3的组件有何区别？ {#what-is-the-difference-between-coralui-and-coralui-based-components}
 
-为Coral3创建了一组新的Granite UI Foundation的Sling组件，该组件位于[/libs/granite/ui/components/coral/foundation下。](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
+为Coral3创建了一组新的Granite UI Foundation的Sling组件，该组件位于[/libs/granite/ui/components/coral/foundation下。](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html) 其中一组用于基于CoralUI 2的组件，另一组用于基于CoralUI 3的组件。 新集合将不仅仅是旧集合的复制粘贴，而是将被清理（例如，精简，删除已弃用的功能）。 因此，建议页面仅使用基于CoralUI 3或基于CoralUI 2的集。
 
-要了解详细信息，请参阅[基于CoralUI 3的迁移指南](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)。
+要了解详细信息，请参阅[基于CoralUI 3的迁移指南](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/legacy/coral2/migration.html)。
 
 #### 如何在AEM Assets中自定义搜索组件？ {#how-to-customize-the-search-component-in-aem-assets}
 

@@ -27,9 +27,9 @@ subfeature_v2:
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1005'
 ht-degree: 5%
 ---
 # 内容片段组件{#components-for-content-fragments}
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 >[!CAUTION]
 >
->现在建议使用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=zh-Hans)。 有关详细信息，请参阅[开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=zh-Hans)。
+>现在建议使用[内容片段核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)。 有关详细信息，请参阅[开发核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)。
 >
 >此部分详细介绍为与内容片段（**常规**&#x200B;组中的&#x200B;**内容片段**）一起使用而交付的原始组件。
 
@@ -145,4 +145,4 @@ Adobe Experience Manager (AEM) 内容片段[作为独立于页面的资产而创
 * `transformer-cfm-parfilter` — 如果指定了段落范围，则过滤掉不需要的段落（对内容片段组件可以这样做）
 * `transformer-cfm-assetprocessor` — 在内部用于检索嵌入到片段中的资源列表
 
-呈现过程通过[`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://developer.adobe.com/experience-manager/reference-materials/6-5-lts/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)公开，如有必要，自定义组件可以使用（例如）。
+呈现过程通过[`com.adobe.cq.dam.cfm.content.FragmentRenderService`](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5-lts/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html)公开，如有必要，自定义组件可以使用（例如）。
