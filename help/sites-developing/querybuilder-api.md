@@ -38,7 +38,7 @@ REST API通过HTTP提供对相同功能的访问，响应以JSON发送。
 
 >[!NOTE]
 >
->AEM Gem会话[使用AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html)轻松搜索表单，以查看查询生成器的详细概述。
+>AEM Gem会话[使用AEM查询生成器](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html?lang=zh-Hans)轻松搜索表单，以查看查询生成器的详细概述。
 
 ## 示例查询 {#sample-queries}
 
