@@ -24,9 +24,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 7326db91b35209d8d1316d8e1e75e31359ee0316
+source-git-commit: 1b62d0d980c9916d03ed6a14d7e42a4923967243
 workflow-type: tm+mt
-source-wordcount: '10769'
+source-wordcount: '10979'
 ht-degree: 2%
 ---
 # 安装和配置文档服务 {#installing-and-configuring-document-services}
@@ -219,7 +219,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 通常，您只需�
 >* Adobe Acrobat、Microsoft®Word、Excel和Powerpoint仅适用于Microsoft®Windows。 如果您使用的是基于UNIX的操作系统，请安装OpenOffice以将RTF文件和支持的® Office文件转换为PDF文档。
 >* 关闭在安装Adobe Acrobat和第三方软件后显示的所有对话框，这些对话框适用于配置为使用PDF Generator服务的所有用户。
 >* 至少启动一次所有已安装的软件。 关闭配置为使用PDF Generator服务的所有用户的所有对话框。
->* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/cn/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
+>* [检查Adobe Acrobat序列号到期日期](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html)并设置更新许可证的日期，或[根据到期日期迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)。
 
 安装Acrobat后，打开Microsoft® Word。 在&#x200B;**Acrobat**&#x200B;选项卡上，单击&#x200B;**创建PDF**，并将计算机上可用的.doc或.docx文件转换为PDF文档。 如果转换成功，AEM Forms可以将Acrobat与PDF Generator服务结合使用。
 
@@ -1078,7 +1078,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不立即停止服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在`[AEM-Installation-Directory]/crx-quickstart/logs/error`.log文件中并且日志稳定。
 
@@ -1122,6 +1122,27 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 1. 打开[AEM Forms PDF Generator配置](http://localhost:4502/libs/fd/pdfg/config/ui.html)页面。
 
 1. 在&#x200B;**[!UICONTROL 用户帐户]**&#x200B;选项卡中提供本地用户帐户的凭据，然后单击&#x200B;**[!UICONTROL 提交]**。 如果®Windows提示，则允许用户访问。 成功添加后，配置的用户显示在&#x200B;**[!UICONTROL 用户帐户]**&#x200B;选项卡的&#x200B;**[!UICONTROL 您的用户帐户]**&#x200B;部分下。
+
+### （仅限Windows）启用多线程PDF Generator转换
+
+要在AEM Forms作为Windows服务运行时运行多线程文档转换，PDF Generator在单个配置的用户帐户下处理转换。
+
+>[!NOTE]
+>
+> 在此模式下，**®Word** (doc/docx)和&#x200B;**Excel** (xls/xlsx)的多个实例在同一用户下运行并并发处理转换。 **® PowerPoint** (ppt/pptx)不支持此模式。 PDF Generator一次只能启动一个PowerPoint实例，因此PowerPoint不支持多线程转换。
+
+要为Word和Excel启用多线程转换，请执行以下操作：
+
+1. 为PDF Generator配置[本地用户帐户](#configure-a-local-user-account-to-run-the-pdf-generator-service)。
+1. 登录到AEM创作实例并导航到&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置PDF Generator]**。 默认 URL 为 <http://localhost:4502/libs/fd/pdfg/config/ui.html>。
+1. 在&#x200B;**[!UICONTROL 常规配置]**&#x200B;选项卡中，设置以下选项（为Word配置PDFMaker，为Excel配置Native2PDF）：
+
+   * **为PDFMaker启用单用户模式：** **true**
+   * **PDFMaker单个用户进程池大小：**&#x200B;已根据需要设置。 此值是可以同时运行转换的Word实例的最大数量。
+   * **为Native2PDF启用单用户模式：** **true**
+   * 根据需要设置&#x200B;**Native2PDF单用户进程池大小：**。 此值是可以同时运行转换的Excel实例的最大数量。
+
+1. 重新启动AEM Forms服务器。
 
 ### 配置超时设置 {#configure-the-time-out-settings}
 
@@ -1477,18 +1498,18 @@ Assembler服务依赖于Reader扩展服务、签名服务、Forms服务和输出
 
   * 使用以下命令生成prov.xml，并使用prov.xml文件重新存储现有安装，而不使用[迁移序列号](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)编号文章中提供的命令。
 
-        &grave;&grave;
+        ``
         
         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=xx_XX格式或ALL>格式的有限区域设置列表] [—provfile=&lt;到prov.xml的绝对路径>]
         
-        &grave;
+        `
     
   * 卷序列化包（使用prov.xml文件和新序列重新序列化现有安装）：以管理员身份从PRTK安装文件夹运行以下命令，以在客户端计算机上序列化和激活已部署的包：
 
-        &grave;&grave;
+        ``
         adobe_prtk —tool=VolumeSerialize —provfile=C:\prov.xml -stream
         
-        &grave;&grave;
+        ``
     
 * 对于大规模安装，请使用[Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html)删除Reader和Acrobat的早期版本。 自定义安装程序并将其部署到组织中的所有计算机。
 
@@ -1525,7 +1546,7 @@ ALC-PDG-015-003 — 系统无法打开输入文件。 再次提交文件或联�
 
 +++ 无法将XPS文件转换为PDF
 
-要解决此问题，请在Windows[&#128279;](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html)上创建特定于功能的注册表项。
+要解决此问题，请在Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html)上[创建特定于功能的注册表项。
 
 +++
 
