@@ -24,9 +24,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 7326db91b35209d8d1316d8e1e75e31359ee0316
+source-git-commit: 1b62d0d980c9916d03ed6a14d7e42a4923967243
 workflow-type: tm+mt
-source-wordcount: '10769'
+source-wordcount: '10979'
 ht-degree: 2%
 ---
 # 安装和配置文档服务 {#installing-and-configuring-document-services}
@@ -1122,6 +1122,27 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该资源包中包�
 1. 打开[AEM Forms PDF Generator配置](http://localhost:4502/libs/fd/pdfg/config/ui.html)页面。
 
 1. 在&#x200B;**[!UICONTROL 用户帐户]**&#x200B;选项卡中提供本地用户帐户的凭据，然后单击&#x200B;**[!UICONTROL 提交]**。 如果®Windows提示，则允许用户访问。 成功添加后，配置的用户显示在&#x200B;**[!UICONTROL 用户帐户]**&#x200B;选项卡的&#x200B;**[!UICONTROL 您的用户帐户]**&#x200B;部分下。
+
+### （仅限Windows）启用多线程PDF Generator转换
+
+要在AEM Forms作为Windows服务运行时运行多线程文档转换，PDF Generator在单个配置的用户帐户下处理转换。
+
+>[!NOTE]
+>
+> 在此模式下，**®Word** (doc/docx)和&#x200B;**Excel** (xls/xlsx)的多个实例在同一用户下运行并并发处理转换。 **® PowerPoint** (ppt/pptx)不支持此模式。 PDF Generator一次只能启动一个PowerPoint实例，因此PowerPoint不支持多线程转换。
+
+要为Word和Excel启用多线程转换，请执行以下操作：
+
+1. 为PDF Generator配置[本地用户帐户](#configure-a-local-user-account-to-run-the-pdf-generator-service)。
+1. 登录到AEM创作实例并导航到&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL 工具]** > **[!UICONTROL Forms]** > **[!UICONTROL 配置PDF Generator]**。 默认 URL 为 <http://localhost:4502/libs/fd/pdfg/config/ui.html>。
+1. 在&#x200B;**[!UICONTROL 常规配置]**&#x200B;选项卡中，设置以下选项（为Word配置PDFMaker，为Excel配置Native2PDF）：
+
+   * **为PDFMaker启用单用户模式：** **true**
+   * **PDFMaker单个用户进程池大小：**&#x200B;已根据需要设置。 此值是可以同时运行转换的Word实例的最大数量。
+   * **为Native2PDF启用单用户模式：** **true**
+   * 根据需要设置&#x200B;**Native2PDF单用户进程池大小：**。 此值是可以同时运行转换的Excel实例的最大数量。
+
+1. 重新启动AEM Forms服务器。
 
 ### 配置超时设置 {#configure-the-time-out-settings}
 
