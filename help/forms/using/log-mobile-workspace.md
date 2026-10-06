@@ -25,12 +25,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '214'
 ht-degree: 0%
 ---
 # 登录到Adobe Experience Manager Forms应用程序{#logging-in-to-aem-forms-app}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 启动Adobe Experience Manager (AEM) Forms应用程序时，必须首先提供登录凭据和AEM Forms服务器URL。
 
@@ -39,12 +44,12 @@ ht-degree: 0%
 1. 在移动设备上选择AEM Forms应用程序图标。
 1. 要登录应用程序，请输入用户名、密码和AEM Forms服务器URL。
 
-   >[!NOTE]
-   >
-   >移动设备应用程序会缓存您输入的所有AEM Forms Server URL。
-   >
-   >    * 要显示服务器URL的列表，请单击“服务器URL”文本框右角的列表箭头。
-   >    * 选择要通过应用程序登录的AEM Forms服务器URL。
+>[!NOTE]
+>
+>移动设备应用程序会缓存您输入的所有AEM Forms Server URL。
+>
+>    * 要显示服务器URL的列表，请单击“服务器URL”文本框右角的列表箭头。
+>    * 选择要通过应用程序登录的AEM Forms服务器URL。
 
 当您登录到应用程序时，您将被定向到&#x200B;[**主页**&#x200B;屏幕](../../forms/using/home-screen.md)。
 

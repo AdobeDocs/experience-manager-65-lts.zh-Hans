@@ -25,12 +25,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 2%
+source-wordcount: '953'
+ht-degree: 1%
 ---
 # 自定义品牌 {#branding-customization}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您可以自定义应用程序图标、应用程序名称、启动图像和登录页面，以便为AEM Forms应用程序提供独特的组织特定外观。 例如，您可以更改图像以使用您组织的徽标。 AEM Forms应用程序支持以下自定义设置：
 
@@ -60,9 +65,9 @@ ht-degree: 2%
 
    将它们上载到Capture项目以替换项目中的现有文件。
 
-   >[!NOTE]
-   >
-   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
+>[!NOTE]
+>
+>确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 在iOS设备或iOS模拟器上构建并运行AEM Forms应用程序。
 
@@ -80,9 +85,9 @@ ht-degree: 2%
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-xxhdpi`
    * `[User_Home]/Projects/[your-project]/src/android/res/drawable-xxxhdpi`
 
-   >[!NOTE]
-   >
-   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
+>[!NOTE]
+>
+>确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 重新构建AEM Forms应用程序。
 
@@ -96,9 +101,9 @@ ht-degree: 2%
 
    `%HOMEPATH%\adobe-lc-mobileworkspace-src-<version>\src\windows\MWSWindows\res\screens\windows`
 
-   >[!NOTE]
-   >
-   >确保图像的名称和分辨率与您在项目中替换的图像相匹配。
+>[!NOTE]
+>
+>确保图像的名称和分辨率与您在项目中替换的图像相匹配。
 
 1. 重新构建AEM Forms应用程序。
 

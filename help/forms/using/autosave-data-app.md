@@ -26,12 +26,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 2b710c6ef8d291a42b4a7658bf84f5e764422d5c
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 4%
+source-wordcount: '352'
+ht-degree: 3%
 ---
 # 在 AEM Forms 应用程序中使用自动保存{#using-autosave-in-aem-forms-app}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 当用户在Adobe Experience Manager Forms应用程序中输入数据时，自动保存功能会定期保存数据。 AEM Forms应用程序中的自动保存功能可帮助您避免在应用程序意外关闭时丢失数据。
 

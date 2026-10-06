@@ -8,14 +8,17 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: a804ba9b-c5c6-4d76-96e4-5d729b673ca4
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: d8150dc7cb8ec161b875263ecfaaca6424ff629f
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '785'
 ht-degree: 5%
-
 ---
-
 # 构建 AEM Forms Android 应用程序 {#build-the-aem-forms-android-app}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 要构建适用于AEM Forms的Android应用程序，请按照建议的顺序执行以下步骤。
 

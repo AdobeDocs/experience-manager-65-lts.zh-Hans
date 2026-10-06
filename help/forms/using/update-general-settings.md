@@ -25,12 +25,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '449'
 ht-degree: 2%
 ---
 # 更新常规设置{#updating-general-settings}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 通过AEM Forms应用程序的常规设置，您可以指定获取附件、离线模式、登录屏幕、默认类别和自动保存频率等设置。
 
@@ -51,9 +56,9 @@ ht-degree: 2%
 
    “常规设置”屏幕
 
-   >[!NOTE]
-   >
-   >这些选项在不同的移动设备上可能显示得不同。
+>[!NOTE]
+>
+>这些选项在不同的移动设备上可能显示得不同。
 
 ### 常规设置 {#general-settings}
 

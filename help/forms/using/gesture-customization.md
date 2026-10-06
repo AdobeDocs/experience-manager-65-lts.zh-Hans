@@ -25,12 +25,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '371'
 ht-degree: 1%
 ---
 # 自定义手势 {#gesture-customization}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 您可以自定义AEM Forms应用程序的手势，以便提供与该应用程序交互的不同方法。 例如，您可以添加新的手势以打开或关闭任务或起点。
 
@@ -50,9 +55,9 @@ ht-degree: 1%
    * 在Eclipse中，导航到&#x200B;**assets > www > wsmobile > js > runtime > views**&#x200B;文件夹。
    * 在Visual Studio中，导航到&#x200B;**MWSWindows > www > wsmobile > js >运行时>视图**&#x200B;文件夹。
 
-   >[!NOTE]
-   >
-   >task.js文件包含与任务或“起点”列表中列出的每个任务或“起点”相关联的骨干视图。
+>[!NOTE]
+>
+>task.js文件包含与任务或“起点”列表中列出的每个任务或“起点”相关联的骨干视图。
 
 1. 在`task.js`文件中，搜索视图的events属性。
 
