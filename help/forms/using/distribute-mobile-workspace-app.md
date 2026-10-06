@@ -1,5 +1,5 @@
 ---
-title: 分发AEM Forms应用程序
+title: 分发 AEM Forms 应用程序
 description: 使用移动设备管理(MDM)在移动设备上大规模部署应用程序。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,14 +8,17 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 840dadca-6691-4244-9383-7dbc8e14f0a0
-source-git-commit: c3e9029236734e22f5d266ac26b923eafbe0a459
+source-git-commit: d8150dc7cb8ec161b875263ecfaaca6424ff629f
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
-
+source-wordcount: '302'
+ht-degree: 2%
 ---
+# 分发 AEM Forms 应用程序 {#distribute-aem-forms-app}
 
-# 分发AEM Forms应用程序 {#distribute-aem-forms-app}
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 移动设备管理(MDM)允许在移动设备上大规模部署应用程序。
 

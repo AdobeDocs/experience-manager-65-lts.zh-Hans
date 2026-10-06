@@ -24,12 +24,17 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 2b710c6ef8d291a42b4a7658bf84f5e764422d5c
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '471'
 ht-degree: 2%
 ---
 # 使用表单 {#working-with-a-form}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 如果启用了表单应用程序中的表单同步功能，则会下载该表单，并且您可以直接使用它。
 
@@ -47,7 +52,7 @@ ht-degree: 2%
 
 1. 转到&#x200B;**https://[服务器]：[端口]/system/console/configMgr**。
 1. 搜索&#x200B;**[!UICONTROL Adobe Granite令牌身份验证处理程序]**，然后单击&#x200B;**[!UICONTROL 编辑]**。
-1. 从下拉菜单中选择&#x200B;**[!UICONTROL SameSite属性的**&#x200B;[!UICONTROL &#x200B; None &#x200B;]&#x200B;**选项作为登录令牌Cookie]**&#x200B;属性。
+1. 从下拉菜单中选择&#x200B;**[!UICONTROL SameSite属性的**[!UICONTROL  None ]**选项作为登录令牌Cookie]**&#x200B;属性。
 1. 单击&#x200B;**[!UICONTROL 保存]**。
 
 ![将图像与AFA Android应用程序同步](/help/forms/using/assets/afaandroid.png)

@@ -9,14 +9,17 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: c5092e61-c3f9-4770-91be-247e6a02cdb4
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '838'
 ht-degree: 5%
-
 ---
-
 # 设置 Xcode 项目并构建 iOS 应用程序{#set-up-the-xcode-project-and-build-the-ios-app}
+
+>[!NOTE]
+>
+>适用于iOS的AEM Forms应用程序已停用，并从Apple App Store中删除。
+>它不再可用于安装。
 
 AEM Forms提供了AEM Forms应用程序的完整源代码。 源包含用于构建自定义AEM Forms应用程序的所有组件。 源代码存档`adobe-lc-mobileworkspace-src-<version>.zip`是Software Distribution上`adobe-aemfd-forms-app-src-pkg-<version>.zip`包的一部分。
 
@@ -122,9 +125,9 @@ AEM Forms提供了AEM Forms应用程序的完整源代码。 源包含用于构�
    </dict>
    ```
 
-   >[!NOTE]
-   >
-   >仅当AEM Forms应用程序需要连接到未遵循App Transport Security要求的服务器时，才需要执行此步骤。
+>[!NOTE]
+>
+>仅当AEM Forms应用程序需要连接到未遵循App Transport Security要求的服务器时，才需要执行此步骤。
 
 1. 在&#x200B;**PROJECT**&#x200B;下，选择&#x200B;**AEM Forms**，并确保为&#x200B;**代码签名标识**、**Debug**、**Release**&#x200B;和&#x200B;**任何iOS SDK**&#x200B;选择适当的签名。
 1. 将预配的iPad连接到Mac计算机。

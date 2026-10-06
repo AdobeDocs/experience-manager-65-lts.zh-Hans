@@ -8,14 +8,17 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 425c6194-0b87-4b01-a013-f620755072b3
-source-git-commit: b8576049fba41b3bec16046316938274a5046513
+source-git-commit: 711891ad88f25baaedffb46ec9441c120af3eed4
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 4%
-
+source-wordcount: '646'
+ht-degree: 3%
 ---
-
 # 设置™ studio项目并构建Android™应用程序 {#set-up-the-android-studio-project-and-build-the-android-app}
+
+>[!NOTE]
+>
+>AEM Forms应用程序的Android和iOS版本已停用。 Android应用程序已于2026年9月从Google Play中取消发布，并且iOS应用程序已从Apple App Store中删除。
+>这些应用程序不再可用于安装。 有关Android应用的帮助，请联系[aemformsapp-android@adobe.com](mailto:aemformsapp-android@adobe.com)。
 
 本文用于构建AEM Forms应用程序6.3.1.1及更高版本。 要通过AEM Forms App 6.3的源代码构建应用程序，请参阅[设置Eclipse项目并构建Android™应用程序](/help/forms/using/setup-eclipse-project-build-installer.md)。
 
@@ -38,7 +41,7 @@ AEM Forms提供AEM Forms应用程序的完整源代码。 源包含用于构建�
 
 下图显示了`src`文件夹中`android`文件夹的目录结构。
 
-src![&#128279;](assets/android-folder.png)中Android文件夹的目录结构
+src](assets/android-folder.png)中Android文件夹的目录结构![
 
 ## 构建标准AEM Forms应用程序 {#set-up-the-xcode-project}
 
@@ -48,23 +51,23 @@ src![&#128279;](assets/android-folder.png)中Android文件夹的目录结构
 
 1. 将下载的`adobe-lc-mobileworkspace-src-<version>.zip`存档复制到：
 
-   对于Mac用户&#x200B;**&#x200B;**： `[User_Home]/Projects`
+   对于Mac用户&#x200B;****： `[User_Home]/Projects`
 
-   Windows®用户&#x200B;**&#x200B;**： `%HOMEPATH%\Projects`
+   Windows®用户&#x200B;****： `%HOMEPATH%\Projects`
 
-   >[!NOTE]
-   >
-   >对于Windows®，建议将Android™项目保留在系统驱动器中。
+>[!NOTE]
+>
+>对于Windows®，建议将Android™项目保留在系统驱动器中。
 
 1. 在以下目录中解压缩归档文件：
 
-   对于Mac用户&#x200B;**&#x200B;**： `[User_Home]/Projects/[your-project]`
+   对于Mac用户&#x200B;****： `[User_Home]/Projects/[your-project]`
 
-   Windows®用户&#x200B;**&#x200B;**： `%HOMEPATH%\Projects\[your-project]`
+   Windows®用户&#x200B;****： `%HOMEPATH%\Projects\[your-project]`
 
-   >[!NOTE]
-   >
-   >建议在将提取的Android项目导入Android™ Studio之前，先将其保留在系统驱动器中。
+>[!NOTE]
+>
+>建议在将提取的Android项目导入Android™ Studio之前，先将其保留在系统驱动器中。
 
 1. 启动™ Studio。
 
@@ -81,7 +84,7 @@ src![&#128279;](assets/android-folder.png)中Android文件夹的目录结构
 1. 在™ Studio中，选择&#x200B;**[!UICONTROL 导入项目（Eclipse ADT、Gradle等）]**。
 1. 在项目资源管理器中，选择要在&#x200B;**根目录**&#x200B;文本框中生成的项目的根目录：
 
-   对于Mac用户：**&#x200B;**&#x200B;[User_Home]/Projects/MobileWorkspace/src/android
+   对于Mac用户：****[User_Home]/Projects/MobileWorkspace/src/android
 
    对于Windows®用户&#x200B;**：** %HOMEPATH%\Projects\MobileWorkspace\src\android
 
@@ -103,6 +106,6 @@ src![&#128279;](assets/android-folder.png)中Android文件夹的目录结构
 
 您可以使用以下命令通过[™ Debug Bridge](https://developer.android.com/tools/adb)在Android™设备上安装应用程序：
 
-对于Mac用户&#x200B;**&#x200B;**： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
+对于Mac用户&#x200B;****： `adb install [User_Home]/Projects/[your-project]/adobe-lc-mobileworkspace-src-[version]/android/build/outputs/apk/android-debug.apk`
 
-Windows®用户&#x200B;**&#x200B;**： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
+Windows®用户&#x200B;****： `adb install %HOMEPATH%\Projects\[your-project]\adobe-lc-mobileworkspace-src-[version]\android\build\outputs\apk\android-debug.apk`
