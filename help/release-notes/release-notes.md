@@ -21,10 +21,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 606310b2214bc33ede4f2d99f7947fe05d668f64
+source-git-commit: 75901153628ecb69c0a30c28b1e0834f5fc27da5
 workflow-type: tm+mt
-source-wordcount: '7622'
-ht-degree: 21%
+source-wordcount: '7505'
+ht-degree: 20%
 ---
 
 # Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
@@ -342,14 +342,14 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 * Forms-25045：繁体中文（香港）翻译在升级后停止呈现，因此表单回退到默认语言。 现在，本地化文本可正确呈现。
 * Forms-25170：当开始实例计数为0时，调用`addInstance()`未显示动态添加的面板。 现在，已添加的面板会立即显示。
 * Forms-25225：服务器端重新验证移除了自适应Forms中片段外部的字段翻译，将标签恢复到基本语言。 这些翻译现在会被保留。
-* Forms-25233：在Open Services Gateway Initiative (OSGi)部署上，Assembler服务将主XDP与其直接片段拼合，但未解析嵌套片段引用，例如页眉、页脚和可重复使用的子表单，因此装配的输出中缺少这些引用。 嵌套片段现已解析。
+* Forms-25233：在OSGi部署上，汇编程序服务无法解析XDP文件中的嵌套片段引用，导致汇编输出中缺少这些引用。 嵌套片段现已解析。
 * Forms-25289： Forms渲染服务跨Service Pack针对相同的输入返回不同的输出，这将影响通信管理信件。 现在，渲染输出是一致的。
 * Forms-25290：重新打开时，已保存的通信管理信件会丢失空格，并且在某些位置显示误报的“x”。 保存的信件内容现在保持不变。
 * Forms-25346：升级Service Pack后，交互式通信(IC)字母在加载旋转图标上冻结，并且字母在预览中加载了丢失的间距。 现在可以正确加载和设置间距。
 * Forms-25431：“创建表单片段”向导在标题字段中的每个击键时发送一个网络请求。 已删除多余的呼叫。
 * Forms-25645：从内联上传的JSON架构创建基于核心组件的自适应表单片段失败，原因是“指定了ALC-FMG-700-009无效表单模型”。 现在接受内联JSON架构。
 * Forms-25646：根据JSON架构构建的基于核心组件的自适应表单片段在编辑器中显示了一个空的数据源面板。 该面板现在列出了架构数据源。
-* Forms-25674：交互式通信(IC)代理用户界面打开到一个空白页，因此代理无法查看IC内容。 代理用户界面现在呈现。
+* Forms-25674：交互式通信(IC)代理用户界面向空白页打开，阻止代理查看IC内容。 代理用户界面现在呈现。
 * Forms-25686：在“创建自适应表单片段”向导中切换架构类型选项时，没有清除上一个选项的状态，从而产生架构不匹配。 向导现在会重置非活动选项。
 * Forms-25757：应用主题不会更新基础客户端库，因此主题更改似乎没有效果。 主题现在可更新基本客户端库。
 * Forms-25825：移动设备汉堡菜单未响应点击，导致导航在移动设备上不可用。 该菜单现在会按预期打开。
@@ -361,7 +361,7 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 已在6.5 LTS Service Pack 3中为JEE上的AEM Forms修复以下问题：
 
-* Forms-27585：在JEE上的AEM Forms上，调用`submitForm()`的基于XFA的PDF forms未在Adobe Reader中显示提交结果（当脚本调用`closeDoc()`时，在Acrobat中也不显示）。 现在，提交结果可正确显示。
+* Forms-27585：在JEE上的AEM Forms上，当脚本调用`closeDoc()`时，基于XFA的PDF forms调用`submitForm()`无法在Adobe Reader或Acrobat中显示提交结果。 现在，提交结果可正确显示。
 * Forms-25998：在JEE上的AEM Forms上，在管理控制台中测试HSM连接时，在Java 21下注册Hardware Security Module (HSM)私钥证书失败，出现`IllegalAccessError`。 HSM私钥证书注册现在有效。
 * Forms-24993：在JEE上的AEM Forms上，在调用Web服务步骤中加载WSDL失败，出现`SAXException`（“文件过早结束”）。 WSDL现在可正确加载。
 * Forms-24518：在JEE上的AEM Forms (JBoss)上，由于旧版JSTL taglib URI，在新安装后，Reader扩展Web应用程序返回了“错误处理请求”。 Reader扩展Web应用程序现在加载。
@@ -373,17 +373,17 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 要在JEE上安装AEM Forms 6.5 LTS SP3，请按照以下顺序完成这些步骤：
 
-1. 使用AEM Forms 6.5 LTS SP3 JEE安装程序为应用程序服务器安装Service Pack（从[AEM Forms发行版](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)下载），按照JEE上的标准AEM Forms安装过程操作。
+1. 使用用于应用程序服务器的AEM Forms 6.5 LTS SP3 JEE安装程序安装Service Pack（从[AEM Forms版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)下载），并遵循JEE上的标准AEM Forms安装过程。
 1. 更新至最新的AEM Forms Workbench安装程序（可从相同[AEM Forms版本](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)页面获取）。
 1. 如果您的项目使用`adobe-livecycle-client.jar` SDK客户端库，请在项目的类路径中更新它。 最新版本位于`<AEM_Forms_Installation_dir>/sdk/client-libs/common/adobe-livecycle-client.jar`。
 
 #### 已知问题 {#forms-known-issues-65-lts-sp3}
 
-* 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将&#x200B;**PostScript (PS)、EPS和PRN文件转换为PDF**&#x200B;可能会失败。 `PsToPdfSvc`本机进程可能会意外终止，导致转换作业失败，并出现`ALC-PDG-003-011`和`ALC-PDG-001-028`等错误。 如需帮助，请联系Adobe客户支持。 (FORMS-28152)
+* 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将&#x200B;**PostScript (PS)、EPS和PRN文件转换为PDF**&#x200B;失败。 `PsToPdfSvc`本机进程可能会意外终止，导致转换作业失败，并出现`ALC-PDG-003-011`和`ALC-PDG-001-028`等错误。 如需帮助，请联系Adobe客户支持。 (FORMS-28152)
 
 #### 安全修复 {#forms-security-fixes-65-lts-sp3}
 
-此版本解决了AEM Forms中的安全漏洞，包括多个跨站点脚本(XSS)修复、服务器端请求伪造(SSRF)修复、XML外部实体(XXE)修复以及第三方库更新。
+此版本解决了AEM Forms（包括XSS、SSRF和XXE）中的安全漏洞以及更新库。
 
 
 
@@ -486,7 +486,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 ### Java™ 支持  {#java-support}
 
 * 支持 Java™ 17 和 Java™ 21。
-* 为了获得最佳性能，请用其他值覆盖默认 GC 值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
+* 为获得最佳性能，请使用不同的值覆盖默认的GC值。 有关详细信息，请参阅[安装和更新](/help/sites-deploying/custom-standalone-install.md)部分。
 * 如果 Oracle 未公开提供，Adobe 会分发 Java™ 17 和 Java™ 21 维护更新，以供客户在 AEM 相关项目中使用。
 
 ### Uberjar 包装 {#uber-jar-packaging}
@@ -531,7 +531,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 适用于：安装Service Pack 3 (SP3)的AEM 6.5 LTS（内部部署）客户。 SP3作为快速入门JAR提供。
 
 **为什么这个升级做法很重要**
-用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户通过替换Quickstart JAR、将其解压缩并重新启动来进行升级。 此方法与Adobe的标准升级过程保持一致。
+用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户通过替换Quickstart JAR、提取它并重新启动来进行升级。 此方法与Adobe的标准升级过程保持一致。
 
 
 **推荐的升级流程（创作或发布实例）**
@@ -662,29 +662,44 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 >
 > 为避免在升级到AEM 6.5 LTS SP2后内容加载失败，请从`Sling-Initial-Content`捆绑包中的JSON文件中删除所有注释。
 
+
 ### Jackson捆绑包升级会影响GlobalLink连接器 {#jackson-upgrade-globallink-connector}
 
-AEM 6.5 LTS SP3升级`jackson`捆绑包。 此更改会影响使用GlobalLink翻译连接器的部署。
+AEM 6.5 LTS SP3升级了jackson捆绑包。 此更改会影响使用GlobalLink翻译连接器的部署。
 
-如果您在低于3.4.0的版本中使用`gs4tr-globallink-adaptors-aem.core`捆绑包，请将该捆绑包升级到兼容版本。 版本3.4.0或更高版本适用于SP3中已升级的`jackson`捆绑包。
+如果您使用`gs4tr-globallink-adaptors-aem.core`捆绑包的版本低于3.4.4.7，请将该捆绑包升级到兼容版本。 版本3.4.4.7或更高版本适用于SP3中升级的jackson捆绑包。
 
 >[!NOTE]
 >
-> 在SP3更新之前或过程中，将`gs4tr-globallink-adaptors-aem.core`捆绑包升级到3.4.0或更高版本，以避免与GlobalLink连接器出现兼容性问题。
+>在SP3更新之前或期间，将`gs4tr-globallink-adaptors-aem.core`捆绑包升级到3.4.4.7或更高版本，以避免与GlobalLink连接器发生兼容性问题。
+
+<!--
+
+AEM 6.5 LTS SP3 upgrades the `jackson` bundle. This change affects deployments that use the GlobalLink translation connector.
+
+If you use the `gs4tr-globallink-adaptors-aem.core` bundle at a version earlier than 3.4.0, upgrade the bundle to a compatible version. Version 3.4.0 or later works with the upgraded `jackson` bundle in SP3.
+
+>[!NOTE]
+>
+> Upgrade the `gs4tr-globallink-adaptors-aem.core` bundle to 3.4.0 or later before or during the SP3 update to avoid compatibility issues with the GlobalLink connector.
 
 
-### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
+### Install required Oak indexes for Sites Headless APIs{#site-headless-api}
 
-一些迁移到 Sites Headless 的 API 需要额外的 Oak 索引，才能提供完整功能。
+Some APIs that moved to Sites Headless require additional Oak indexes for full functionality. 
 
-若要使用以下功能，请安装`cq-dam-cfm-indices`包：
+To use the following features, install the `cq-dam-cfm-indices` package:
 
-* 列出内容片段模型
-* 列出内容片段
-* 搜索 API
-* 工作流
+* List Content Fragment Models
+* List Content Fragments
+* Search API
+* Workflows
 
-从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip)。
+Download the index package [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip) from the Adobe Software Distribution portal. 
+
+-->
+
+&#x200B;###
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
