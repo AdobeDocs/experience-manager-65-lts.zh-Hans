@@ -698,7 +698,7 @@ AEM 6.5 LTS SP3升级`jackson`捆绑包。 此更改会影响使用GlobalLink翻
 
 -->
 
-###
+&#x200B;###
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
