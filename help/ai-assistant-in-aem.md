@@ -23,18 +23,18 @@ role_v2:
     internal-label: Developer
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 8781bd3762ec04424802d899d3517754e0c81fc5
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 100%
+source-wordcount: '1326'
+ht-degree: 75%
 ---
-# AEM 6.5 LTS 中的 AI 助手 {#about-ai-assistant-in-aem}
+# AEM 6.5人工智能助理 {#about-ai-assistant-in-aem}
 
 >[!IMPORTANT]
 >
 >不使用 Cloud Manager/Experience Hub 的 AEM 6.5 和 AEM 6.5 LTS 客户必须联系其 Adobe 客户成功工程师，获取 AI 助手访问权限。
 
-AEM (Adobe Experience Manager) AI 助手提供了一个对话界面，用于简化为您的 Adobe Experience Manager 相关查询找到相应的回答。 它可以帮助您立即获得与 AEM 产品相关的问题的回答（*提供给所有用户使用*），可自动创建支持工单（*提供给支持管理员使用*）。
+AEM 6.5/AEM 6.5 LTS中的AI Assistant提供了一个对话界面，旨在简化为Adobe Experience Manager相关查询查找答案的过程。 它可以帮助您立即获得与 AEM 产品相关的问题的回答（*提供给所有用户使用*），可自动创建支持工单（*提供给支持管理员使用*）。
 
 AI 助手支持 AEM as a Cloud Service，包括以下解决方案：
 
@@ -57,29 +57,27 @@ AI 助手支持 AEM as a Cloud Service，包括以下解决方案：
 
 要获得 AEM 中 AI 助手的访问权限，客户必须具备以下条件：
 
-* 在 AEM 中使用 AI 助手获取产品知识的权限。 此权限允许您在 AI 助手聊天中询问产品相关的问题。 此权限必须启用。
+* 访问产品知识，这允许您在AI Assistant聊天中询问产品相关问题。 默认情况下，您组织中的所有用户都可访问此访问权限。
 * 有权打开支持工单，这需要&#x200B;**支持管理员**&#x200B;的角色。
 
 >[!NOTE]
 >
->AEM 中的 AI 助手请求通过 Adobe Identity Management Services (IMS) 进行身份验证。 有关详细信息，请参阅 [Adobe Identity Management Services 概述](https://www.adobe.com/cn/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)。
+>AEM 中的 AI 助手请求通过 Adobe Identity Management Services (IMS) 进行身份验证。 有关详细信息，请参阅 [Adobe Identity Management Services 概述](https://www.adobe.com/cc-shared/assets/pdf/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf)。
 
 **要访问 AEM 中的 AI 助手：**
 
-1. 客户必须另外签订协议才能访问 Adobe Experience Manager 中的大多数 AI 驱动的和代理式功能。 请联系您的 Adobe 代表，获取更多详情。
+1. 客户必须另外签订协议才能访问 Adobe Experience Manager 中的大多数 AI 驱动的和代理式功能。 请联系您的 Adobe 代表，获取更多详情。 有关generative AI启用的工作方式，请参阅[CX Enterprise应用程序中的Generative AI](https://experienceleague.adobe.com/zh-hans/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)。
 
-1. 要使用 AEM 中的 AI 助手，必须具有通过 AI 助手访问产品知识的权限。 此权限在默认情况下已开启。
-
-   如果您希望控制谁可以访问产品知识，请使用与您的 Adobe ID 相关联的电子邮件地址给 [aemaiassistant@adobe.com](mailto:aemaiassistant@adobe.com) 发送电子邮件。 Adobe 可以启用用户级访问控制。 启用后，您的管理员可以按照[配置 AEM 中的 AI 助手](/help/ai-assistant-in-aem-admin.md)中说明的步骤授予用户级访问权限。
+1. 您的组织获得此协议后，所有用户都可以在默认情况下使用AI Assistant获取产品知识。 不需要额外的每个用户或每个组权限。
 
 
 ## 范围 {#scope}
 
-AEM 中的 AI 助手当前的功能范围主要是回答 AEM as a Cloud Service 的产品知识问题。 此范围包括了对关键领域的全面支持。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
+AEM中的AI助手当前的工作范围侧重于解决AEM as a Cloud Service的产品知识问题。 此范围包括了对关键领域的全面支持。<!--, such as Sites, Assets, Forms, Edge Delivery Services, Dynamic Media, and Cloud Manager. -->
 
 * **表面**：在 AEM Experience Hub、作者 UI、Cloud Manager 中可用。
-* **功能**：提供产品知识，是疑难解答和指导的第一站，自动创建支持工单和查找。
-* **价值**：节省时间，加快学习，缩短价值实现时间，减少手动创建支持工单的需求，提高创建支持工单的效率。
+* **功能**：用于故障排除和指导、自动创建支持票证以及票证查找的产品知识和主要资源。
+* **值**：节省时间，加快学习和采用速度，减少手动创建支持工单的需求，并提高创建支持工单的效率。
 
 ## 隐私、安全和治理{#privacy-security-governance}
 
@@ -87,14 +85,14 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 
 本文概述了您可以从 AEM 中的 AI 助手获得的特别重视可信度的各种功能：
 
-* AEM 中的 AI 助手不使用，也不会以训练为目的使用任何个人数据。
+* AEM中的AI助手不使用个人数据，包括用于培训目的。
 * AEM 中的 AI 助手无权访问消费者数据。
 * 需要明确的权限才能与 AEM 中的 AI 助手交互。
 * 用户提供的提示词（问题、查询等）不会与其他客户共享。
 
 <!-- See also [Security at Adobe whitepaper](). NEED ACTIVE LINK FROM ADRIAN NICOLAE TANASE. CURRENTLY 404. -->
 
-## 了解 AEM 中的 AI 助手提供的产品知识和自动创建支持工单的功能 {#ai-prod-insights}
+## 了解AEM中的AI助手，以获取产品知识和自动创建支持工单 {#ai-prod-insights}
 
 产品知识包含从 Adobe Experience League 文档派生的各种概念和主题。 这些问题可分类为以下几个子组：
 
@@ -111,14 +109,14 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 {style="table-layout:auto"}
 
 
-## 如何表述有效的问题 {#ai-craft-questions}
+## 如何撰写有效的问题 {#ai-craft-questions}
 
 要通过 AEM 中的 AI 助手获得最准确的回答，清晰地表述您的问题并提供上下文，这一点十分重要。 采用以下建议可确保您的查询语句清晰、有条有理：
 
 * 以简洁明了的方式清晰地表述您的任务或问题。
-* 避免使用含糊不清的词语或过于复杂的语法，使表述更加易于理解。
-* 提供有关您的任务或问题的相关上下文，因为这可以帮助 AEM 中的 AI 助手提供更准确、更相关的回答。
-例如，在提示词中说明您正在使用哪种 AEM 解决方案（Sites、Assets、Dynamic Media、Edge Delivery Services、Cloud Manager 或 Forms）会很有帮助。
+* 为了增进了解，请避免措辞模糊或语法过于复杂。
+* 包含有关您的任务或问题的相关上下文，因为这有助于AEM中的AI助手提供更精确且相关的答案。
+例如，在您的提示符下，命名您正在使用的AEM解决方案。
 
 ### 不受支持的问题示例 {#ai-unsupported-questions}
 
@@ -131,29 +129,9 @@ AEM 中的 AI 助手的设计特别强调隐私、安全和治理。
 
 ## 使用 AEM 中的 AI 助手 {#ai-use}
 
-<!--
-UNHIDE AFTER BETA or at GA
-### Enable AI Assistant in AEM access through Admin Console 
-
-To use AI Assistant in AEM, your organization must opt in at the Admin Console level. A product administrator creates (or chooses) a user group and grants it the new "AI Assistant" permission. Anyone added to that group instantly gains access to the Assistant across AEM. If the goal is company-wide availability, the admin simply assigns all users to that group.
-
-![AI Assistant in AEM in the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console.png)
-
-From an employee's perspective, the process is straightforward: identify the product administrator for Adobe Experience Manager in your organization and request to be added to the AI-enabled user group. Once you appear in that group, the Assistant icon shows up automatically the next time you sign in.
-
-Administrators should keep normal Cloud Manager governance in mind. Hold product administrator rights in the Admin Console to create profiles, manage user groups, or edit permissions. If users also need the Assistant's built-in **Create Support Ticket** feature, add the standard **Support Admin** role (standard Admin Console role) to the same individuals or group.
-
-![Technical support ticket creation in AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
-
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/accessing/overview). 
-
-See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md).
--->
-
-
 ### 开始一个 AEM 中的 AI 助手对话
 
-如果您想更改主题，可以重置 AEM 中的 AI 助手，开始一个新的对话。 当您对失败或提供错误信息的查询进行故障排除时，此功能特别有用。
+如果您想更改主题，可以重置 AEM 中的 AI 助手，开始一个新的对话。 在排除查询失败或提供的信息不准确时，此功能特别有用。
 
 **要开始一个 AEM 中的 AI 助手对话：**
 
@@ -207,12 +185,12 @@ AEM 中的 AI 助手包括一个可发现性功能，帮助您探索受支持的
 
 以下是关于 AI 助手的一些常见问题的解答：
 
-* **AEM 中的 AI 助手提供的是实时信息吗？**\
-  不行。 AI 助手从 Adobe Experience League 文档获取内容。 这个内容更新以后，可能需要一段时间才能在回答中反映出来。
+* **来自AEM中的AI助手的信息是实时的吗？**\
+  不行。 AI 助手从 Adobe Experience League 文档获取内容。 对内容的更新需要一些时间才能反映在其响应中。
 * **AEM 中的 AI 助手支持哪些 Adobe 应用程序？**\
-  目前，AI 助手支持 AEM as a Cloud Service 中的产品知识查询，包括 Sites、Assets、Dynamic Media、Cloud Manager 和 Forms。
+  目前，AI Assistant支持AEM as a Cloud Service中的产品知识查询。
 * **AEM 中的 AI 助手有哪些功能？**\
-  AEM 中的 AI 助手可回答与 Adobe 产品知识相关的查询。
+  AEM中的AI助手可回答与Adobe产品知识相关的查询。
 * **AEM 中的 AI 助手是否会将个人信息用于训练数据？**\
   不行。 AEM 中的 AI 助手不会将个人信息用于训练目的。 避免与 AEM 中的 AI 助手分享您自己或他人的个人信息，包括姓名或联系方式。
 

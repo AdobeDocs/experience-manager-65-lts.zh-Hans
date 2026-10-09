@@ -21,10 +21,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 75901153628ecb69c0a30c28b1e0834f5fc27da5
+source-git-commit: 60fd1764a1b2a6440d306d21a8a84a8f9d879811
 workflow-type: tm+mt
-source-wordcount: '7505'
-ht-degree: 20%
+source-wordcount: '7432'
+ht-degree: 21%
 ---
 
 # Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
@@ -662,19 +662,21 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 >
 > 为避免在升级到AEM 6.5 LTS SP2后内容加载失败，请从`Sling-Initial-Content`捆绑包中的JSON文件中删除所有注释。
 
+<!--
+### Jackson bundle upgrade affects the GlobalLink connector {#jackson-upgrade-globallink-connector}
 
-### Jackson捆绑包升级会影响GlobalLink连接器 {#jackson-upgrade-globallink-connector}
-
-AEM 6.5 LTS SP3升级了jackson捆绑包。 此更改会影响使用GlobalLink翻译连接器的部署。
-
-如果您使用`gs4tr-globallink-adaptors-aem.core`捆绑包的版本低于3.4.4.7，请将该捆绑包升级到兼容版本。 版本3.4.4.7或更高版本适用于SP3中升级的jackson捆绑包。
-
+AEM 6.5 LTS SP3 upgrades the jackson bundle. This change affects deployments that use the GlobalLink translation connector.
+ 
+If you use the `gs4tr-globallink-adaptors-aem.core` bundle at a version earlier than 3.4.4.7, upgrade the bundle to a compatible version. Version 3.4.4.7 or later works with the upgraded jackson bundle in SP3.
+ 
 >[!NOTE]
 >
->在SP3更新之前或期间，将`gs4tr-globallink-adaptors-aem.core`捆绑包升级到3.4.4.7或更高版本，以避免与GlobalLink连接器发生兼容性问题。
+>Upgrade the `gs4tr-globallink-adaptors-aem.core` bundle to 3.4.4.7 or later before or during the SP3 update to avoid compatibility issues with the GlobalLink connector.
+-->
+
+
 
 <!--
-
 AEM 6.5 LTS SP3 upgrades the `jackson` bundle. This change affects deployments that use the GlobalLink translation connector.
 
 If you use the `gs4tr-globallink-adaptors-aem.core` bundle at a version earlier than 3.4.0, upgrade the bundle to a compatible version. Version 3.4.0 or later works with the upgraded `jackson` bundle in SP3.
