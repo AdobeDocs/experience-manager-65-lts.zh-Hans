@@ -21,9 +21,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 60fd1764a1b2a6440d306d21a8a84a8f9d879811
+source-git-commit: 7fb04d7017fa8f6183508cf4f880077eb533c057
 workflow-type: tm+mt
-source-wordcount: '7432'
+source-wordcount: '7577'
 ht-degree: 21%
 ---
 
@@ -674,34 +674,31 @@ If you use the `gs4tr-globallink-adaptors-aem.core` bundle at a version earlier 
 >Upgrade the `gs4tr-globallink-adaptors-aem.core` bundle to 3.4.4.7 or later before or during the SP3 update to avoid compatibility issues with the GlobalLink connector.
 -->
 
+AEM 6.5 LTS SP3升级`jackson`捆绑包。 此更改会影响使用GlobalLink翻译连接器的部署。
 
-
-<!--
-AEM 6.5 LTS SP3 upgrades the `jackson` bundle. This change affects deployments that use the GlobalLink translation connector.
-
-If you use the `gs4tr-globallink-adaptors-aem.core` bundle at a version earlier than 3.4.0, upgrade the bundle to a compatible version. Version 3.4.0 or later works with the upgraded `jackson` bundle in SP3.
+如果您在低于3.4.0的版本中使用`gs4tr-globallink-adaptors-aem.core`捆绑包，请将该捆绑包升级到兼容版本。 版本3.4.0或更高版本适用于SP3中已升级的`jackson`捆绑包。
 
 >[!NOTE]
 >
-> Upgrade the `gs4tr-globallink-adaptors-aem.core` bundle to 3.4.0 or later before or during the SP3 update to avoid compatibility issues with the GlobalLink connector.
+> 在SP3更新之前或过程中，将`gs4tr-globallink-adaptors-aem.core`捆绑包升级到3.4.0或更高版本，以避免与GlobalLink连接器出现兼容性问题。
 
 
-### Install required Oak indexes for Sites Headless APIs{#site-headless-api}
+### 为 Sites Headless API 安装必需的 Oak 索引{#site-headless-api}
 
-Some APIs that moved to Sites Headless require additional Oak indexes for full functionality. 
+一些迁移到 Sites Headless 的 API 需要额外的 Oak 索引，才能提供完整功能。
 
-To use the following features, install the `cq-dam-cfm-indices` package:
+若要使用以下功能，请安装`cq-dam-cfm-indices`包：
 
-* List Content Fragment Models
-* List Content Fragments
-* Search API
-* Workflows
+* 列出内容片段模型
+* 列出内容片段
+* 搜索 API
+* 工作流
 
-Download the index package [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip) from the Adobe Software Distribution portal. 
+从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip)。
 
 -->
 
-&#x200B;###
+###
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
