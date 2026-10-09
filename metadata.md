@@ -1,7 +1,7 @@
 ---
 product: adobe experience manager
 description: Adobe Experience Manager 6.5 LTS文档
-git-repo: https://github.com/AdobeDocs/experience-manager-65-lts.en
+git-repo: https://github.com/AdobeDocs/experience-manager-65-lts.zh-Hans
 index: true
 type: Documentation
 solution: Experience Manager, Experience Manager 6.5 LTS
