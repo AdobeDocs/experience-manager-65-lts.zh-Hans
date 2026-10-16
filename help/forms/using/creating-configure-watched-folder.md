@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 * Watched文件夹是AEM表单的一项高级功能。 它需要AEM Forms附加组件包才能正常运行。 确保已安装并配置适当的AEM Forms附加组件包。
 * 您可以在共享存储或本地存储中创建watched文件夹。 确保配置为运行watched文件夹的AEM forms用户具有对watched文件夹的读写权限。
-* 您可以使用服务、工作流或脚本来自动执行监视文件夹的操作。 确保相应的服务、工作流或脚本已创建并准备运行。 有关创建服务、工作流和脚本的信息，请参阅[处理文件的各种方法](/help/forms/using/watched-folder-in-aem-forms.md#various-methods-for-processing-files)。
+* 您可以使用服务、工作流或脚本来自动执行监视文件夹的操作。 确保相应的服务、工作流或脚本已创建并准备运行。 有关创建服务、工作流和脚本的信息，请参阅[处理文件的各种方法](/help/forms/using/watched-folder-in-aem-forms.md#variousmethodsforprocessingfiles)。
 * 观察文件夹具有各种属性，请参阅[观察文件夹属性](watched-folder-in-aem-forms.md#watchedfolderproperties)。
 
 执行以下步骤可创建watched文件夹：

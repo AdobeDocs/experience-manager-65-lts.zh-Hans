@@ -22,7 +22,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 2%
@@ -42,17 +42,17 @@ ht-degree: 2%
 
 ## 迁移方法 {#approach-to-migration}
 
-您可以从AEM Forms 6.5.22.0[&#128279;](/help/forms/using/upgrade-forms-osgi.md)将[升级](../../forms/using/upgrade.md)到AEM Forms 6.5 LTS。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
+您可以从AEM Forms 6.5.22.0](/help/forms/using/upgrade-forms-osgi.md)将[升级](../../forms/using/upgrade.md)到[AEM Forms 6.5 LTS。 根据您是升级以前的安装还是执行了全新安装，您必须执行以下操作之一：
 
 **如果有就地升级**
 
-如果您执行了[就地升级](/help/sites-deploying/in-place-upgrade.md)，则升级的实例已经具有资源和文档。 但是，必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)（包括通信管理兼容包），然后才能使用资源和文档。
+如果您执行了[就地升级](/help/sites-deploying/in-place-upgrade.md)，则升级的实例已经具有资源和文档。 但是，必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)（包括通信管理兼容包），然后才能使用资源和文档。
 
 然后，您必须通过[运行迁移实用程序](#runningmigrationutility)来更新资源和文档。
 
 **如果存在非就地安装**
 
-如果安装不恰当（全新），则必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)（包括通信管理兼容包），然后才能使用资产和文档。
+如果安装不恰当（全新），则必须先安装[AEMFD兼容包](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)（包括通信管理兼容包），然后才能使用资产和文档。
 
 然后，您必须在新设置中导入资产包（zip或cmp），然后通过运行[迁移实用程序](#runningmigrationutility)来更新资产和文档。 Adobe建议仅在运行迁移实用程序后，才在新设置上创建资源。
 
@@ -102,7 +102,7 @@ ht-degree: 2%
 
 1. 执行以下操作以执行迁移：
 
-   * 要迁移&#x200B;**资源**，请选择“AEM Forms Assets迁移”，然后在下一个屏幕中选择“开始迁移”**&#x200B;**。 将迁移以下项：
+   * 要迁移&#x200B;**资源**，请选择“AEM Forms Assets迁移”，然后在下一个屏幕中选择“开始迁移”****。 将迁移以下项：
 
      * 自适应表单
      * 文档片段
@@ -181,7 +181,7 @@ ht-degree: 2%
 
 1. 确保布局和片段布局的XFA版本为3.3或更高版本。 如果您使用的是较旧版本的布局和片段布局，则呈现信件时可能会出现问题。 要将旧版XFA更新到最新版本，请完成以下步骤：
 
-   1. [从Forms用户界面下载XFA的zip文件](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p)。
+   1. [从Forms用户界面下载XFA的zip文件](../../forms/using/import-export-forms-templates.md#import-and-export-assets-in-correspondence-management)。
    1. 提取文件。
    1. 在最新的Designer中打开XFA文件并保存。 XFA的版本将更新到最新版本。
    1. 在Forms用户界面中上传XFA。

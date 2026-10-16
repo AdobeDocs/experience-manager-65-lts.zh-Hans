@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 2%
@@ -60,8 +60,8 @@ AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，�
 
 1. 在AEM服务器上，转到https://&lt;*主机名*>：&lt;*端口*>/libs/cq/core/content/tools/cloudservices.html。
 
-1. 在&#x200B;**Adobe Target**&#x200B;部分中，单击&#x200B;**显示配置**，然后单击&#x200B;**+**&#x200B;图标以添加配置。
-如果您是首次配置目标，请单击&#x200B;**立即配置。**
+1. 在&#x200B;**Adobe Target**&#x200B;部分中，单击&#x200B;**显示配置**，然后单击&#x200B;**+**图标以添加配置。
+如果您是首次配置目标，请单击**立即配置。**
 
 1. 在“创建配置”对话框中，为配置指定一个&#x200B;**标题**&#x200B;和一个&#x200B;**名称**（可选）。
 
@@ -78,7 +78,7 @@ AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，�
 1. 单击&#x200B;**AEM Forms目标配置**。
 1. 选择&#x200B;**目标框架**。
 1. 在&#x200B;**目标URL**&#x200B;字段中，指定运行A/B测试的所有URL。 例如，OSGi上的AEM Forms Server的https://&lt;*主机名*>：&lt;*端口*>/，或者JEE上的AEM Forms Server的https://&lt;*主机名*>：&lt;*端口*>/lc/。
-假定您要为发布实例配置Target URL，并且您的客户可以使用主机名或IP地址访问它。 在这种情况下，您必须将两者都配置为Target URL — 使用主机名和IP地址。 如果仅配置其中一个URL，则不会为来自其他URL的客户运行A/B测试。 单击&#x200B;**+**&#x200B;指定多个URL。
+假定您要为发布实例配置Target URL，并且您的客户可以使用主机名或IP地址访问它。 在这种情况下，您必须将两者都配置为Target URL — 使用主机名和IP地址。 如果仅配置其中一个URL，则不会为来自其他URL的客户运行A/B测试。 单击**+**&#x200B;指定多个URL。
 
 1. 单击&#x200B;**保存**。
 
@@ -96,7 +96,7 @@ AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，�
 
 >[!NOTE]
 >
->如果稍后更新已配置的目标URL，请确保更新任何运行的A/B测试，使其指向当前URL。 有关更新A/B测试的信息，请参阅[更新A/B测试](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p)。
+>如果稍后更新已配置的目标URL，请确保更新任何运行的A/B测试，使其指向当前URL。 有关更新A/B测试的信息，请参阅[更新A/B测试](/help/forms/using/ab-testing-adaptive-forms.md#update-a-b-test)。
 >
 
 ## 在AEM中创建受众 {#create-audiences-within-aem}
@@ -172,7 +172,7 @@ AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，�
 [![A/B测试报告](assets/ab-test-report-2.png)](assets/ab-test-report-3.png)
 
 1. 分析报表，并查看您是否有足够的数据点来将某个表现更好的体验声明为入选者。 您可以选择继续同一A/B测试更长时间，或声明入选者并结束A/B测试。
-1. 要声明入选者并结束A/B测试，请单击报表仪表板上的&#x200B;**结束A/B测试**&#x200B;按钮。 出现一个对话框，提示您声明两个体验之一为入选体验。 选择入选者并确认结束A/B测试。
-或者，您可以首先通过单击相应体验的&#x200B;**声明入选者**&#x200B;按钮来声明入选者。 它会提示您确认入选者。 单击&#x200B;**是**&#x200B;结束A/B测试。
+1. 要声明入选者并结束A/B测试，请单击报表仪表板上的&#x200B;**结束A/B测试**按钮。 出现一个对话框，提示您声明两个体验之一为入选体验。 选择入选者并确认结束A/B测试。
+或者，您可以首先通过单击相应体验的**声明入选者**&#x200B;按钮来声明入选者。 它会提示您确认入选者。 单击&#x200B;**是**&#x200B;结束A/B测试。
 
 如果您选择体验A作为入选者，则A/B测试将终止，并且以后，只有体验A会提供给受众。

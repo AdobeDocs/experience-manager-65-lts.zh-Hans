@@ -27,9 +27,9 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
-source-wordcount: '7272'
+source-wordcount: '7270'
 ht-degree: 0%
 ---
 # AEM Forms 中的观察文件夹{#watched-folder-in-aem-forms}
@@ -100,7 +100,7 @@ ht-degree: 0%
 >
 >如果托管Watched文件夹的服务器没有指定的任何运行模式，则Watched文件夹始终激活，而不管服务器上的运行模式如何。
 
-* **outputFilePattern （字符串）**：输出文件的模式。 您可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。 [文件和文件夹模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)还可以为输出文件指定目录结构。 它是必需属性。
+* **outputFilePattern （字符串）**：输出文件的模式。 您可以指定文件夹或文件模式。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。 [文件和文件夹模式](../../forms/using/watched-folder-in-aem-forms.md#file-and-folder-patterns)还可以为输出文件指定目录结构。 它是必需属性。
 
 * **stageFileExpirationDuration （Long，默认值–1）**：已选取进行处理的输入文件/文件夹应被视为已超时并标记为失败之前等待的秒数。 仅当此属性的值为正数时，此到期机制才会激活。
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 * **pollInterval (Long)**：扫描观察文件夹以进行输入的间隔（以秒为单位）。 除非启用“限制”设置，否则“轮询间隔”应大于处理平均作业的时间；否则，系统可能会过载。 默认值为 5。 有关其他信息，请参阅批量大小的说明。 轮询间隔的值必须大于或等于1。
 * **excludeFilePattern （字符串）**：以分号(；)分隔的模式列表，Watched文件夹使用该列表来确定要扫描和选取的文件和文件夹。 不会扫描任何具有此模式的文件或文件夹以进行处理。 当输入是具有多个文件的文件夹时，此设置很有用。 文件夹的内容可以复制到一个名称由Watched文件夹选取的文件夹中。 这样可防止Watched文件夹在将该文件夹完全复制到输入文件夹之前拾取要处理的文件夹。 默认值为null。
-您可以使用[文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)排除：
+您可以使用[文件模式](../../forms/using/watched-folder-in-aem-forms.md#file-and-folder-patterns)排除：
 
   * 具有特定文件扩展名的文件；例如，&#42;.dat、&#42;.xml、.pdf、&#42;.&#42;
   * 具有特定名称的文件；例如，data&#42;将排除名为data1、data2等的文件和文件夹。
@@ -122,7 +122,7 @@ ht-degree: 0%
     * &#42;.`[dD][Aa]`&#39;端口&#39;
     * &#42;.`[Xx][Mm][Ll]`
 
-有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)。
+有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#file-and-folder-patterns)。
 
 * **includeFilePattern （字符串）**：以分号(；)分隔的模式列表，Watched文件夹使用该模式来确定要扫描和选取的文件夹和文件。 例如，如果IncludeFilePattern是input&#42;，则选取与输入&#42;匹配的所有文件和文件夹。 这包括名为input1、input2等的文件和文件夹。 默认值为&#42;，表示所有文件和文件夹。 您可以使用文件模式来包括：
 
@@ -136,7 +136,7 @@ ht-degree: 0%
     * &#42;.`[dD][Aa]`&#39;端口&#39;
     * &#42;.`[Xx][Mm][Ll]`
 
-有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
+有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#file-and-folder-patterns)
 
 * **waitTime (Long)**：在创建文件夹或文件后，扫描文件夹或文件之前等待的时间（以毫秒为单位）。 例如，如果等待时间为3,600,000毫秒（1小时），文件是在一分钟前创建的，则将在59分钟或更长时间后提取此文件。 默认值为 0。 此设置对于确保将文件或文件夹完全复制到输入文件夹非常有用。 例如，如果您要处理一个大文件，而下载该文件需要10分钟，则将等待时间设置为10&#42;60 &#42;1000毫秒。 这样可防止Watched Folder在文件未满十分钟时扫描文件。
 * **purgeDuration (Long)**：结果文件夹中的文件和文件夹早于此值时会被清除。 此值以天为单位。 此设置有助于确保结果文件夹不会变满。 值为–1天表示从不删除结果文件夹。 默认值为 -1。
@@ -159,7 +159,7 @@ ht-degree: 0%
 
   例如，如果在2009年7月17日晚上8点，并且您指定C：/Test/WF0/failure/%Y/%M/%D/%H/，则结果文件夹为C：/Test/WF0/failure/2009/07/17/20
 
-  如果路径不是绝对路径而是相对路径，则在Watched文件夹内创建该文件夹。 默认值为result/%Y/%M/%D/，它是Watched文件夹内的Result文件夹。 有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)。
+  如果路径不是绝对路径而是相对路径，则在Watched文件夹内创建该文件夹。 默认值为result/%Y/%M/%D/，它是Watched文件夹内的Result文件夹。 有关文件模式的详细信息，请参阅[关于文件模式](../../forms/using/watched-folder-in-aem-forms.md#file-and-folder-patterns)。
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ ht-degree: 0%
 
   当文件被放入Watched文件夹时，它会列出输入中的文件，如果每秒都进行扫描，则可能会降低性能。 增加扫描间隔可以提高性能。 如果正在删除的文件量很小，请相应地调整批处理大小和轮询间隔。 例如，如果每秒丢弃10个文件，请尝试将pollInterval设置为1秒，并将Batch Size设置为10
 
-* **throttleOn (Boolean)**：选择此选项时，它会限制AEM Forms在任何给定时间处理的观察文件夹作业数。 最大作业数由“批次大小”值决定。 默认值为true。 （请参阅[关于限制](../../forms/using/watched-folder-in-aem-forms.md#p-about-throttling-p)。）
+* **throttleOn (Boolean)**：选择此选项时，它会限制AEM Forms在任何给定时间处理的观察文件夹作业数。 最大作业数由“批次大小”值决定。 默认值为true。 （请参阅[关于限制](../../forms/using/watched-folder-in-aem-forms.md#about-throttling)。）
 
 * **overwriteDuplicateFilename（布尔值）**：设置为True时，将覆盖结果文件夹和保留文件夹中的文件。 当设置为False时，使用具有数字索引后缀的文件和文件夹作为名称。 默认值为False。
 * **preserveOnFailure （布尔值）**：如果无法对服务运行操作，则保留输入文件。 默认值为true。
@@ -260,9 +260,9 @@ ht-degree: 0%
 public class OutputWriter implements ContentProcessor {
 ```
 
-在[配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)时，如果将inputProcessorId属性指定为(foo=bar)，将inputProcessorType属性指定为Service，则使用上述服务（自定义实现）处理Watched文件夹的输入文件。
+在[配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#create-watched-folder-configuration-node)时，如果将inputProcessorId属性指定为(foo=bar)，将inputProcessorType属性指定为Service，则使用上述服务（自定义实现）处理Watched文件夹的输入文件。
 
-以下示例也是ContentProcessor界面的自定义实现。 在示例中，服务接受输入文件，将文件复制到临时位置，并返回包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 在[观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)中配置了结果文件夹的物理路径。
+以下示例也是ContentProcessor界面的自定义实现。 在示例中，服务接受输入文件，将文件复制到临时位置，并返回包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 在[观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#create-watched-folder-configuration-node)中配置了结果文件夹的物理路径。
 
 ```java
 @Component(immediate = true)
@@ -289,7 +289,7 @@ public class TestContentProcessor1 implements ContentProcessor {
 * **getConfigParameters**：返回映射类型的不可变映射。 映射包含观察文件夹的配置参数。
 * **setResult**： ContentProcessor实现使用API将输出文档写入结果文件夹。 您可以为setResult API的输出文件提供一个名称。 API可能会根据指定的输出文件夹/文件模式选择使用或忽略提供的文件。 如果指定了文件夹模式，则输出文件的名称将如工作流中所述。 如果指定了文件模式，则输出文件的名称如文件模式中所述。
 
-以下代码是一个示例ECMAScript。 它接受输入文件，将文件复制到临时位置，并返回包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 在[观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#p-create-watched-folder-configuration-node-p)中配置了结果文件夹的物理路径。
+以下代码是一个示例ECMAScript。 它接受输入文件，将文件复制到临时位置，并返回包含文件内容的文档对象。 文档对象的内容将保存到结果文件夹中。 在[观察文件夹配置节点](../../forms/using/watched-folder-in-aem-forms.md#create-watched-folder-configuration-node)中配置了结果文件夹的物理路径。
 
 >[!NOTE]
 >
@@ -352,7 +352,7 @@ processWorkflowContext()的参数是com.adobe.aemfd.watchfolder.workflow.api.Wor
 * getMetadata：返回元数据变量的值。变量将传递到WorkflowContextService.execute()方法。
 * getCommittedVariables：返回表示由先前步骤设置的变量的只读对象映射。 如果变量未在前面的任何步骤中修改，则会返回在配置Watched文件夹时指定的默认值。
 * getCommittedResults：返回只读文档映射。 该映射表示通过上述步骤生成的输出文件。
-* setVariable： WorkflowContextProcessor实施使用变量来操作变量，这些变量表示在步骤之间流动的自定义动态数据。 变量的名称和类型与[配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)期间指定的变量的名称相同。 要更改变量的值，请使用非null值调用setVariable API。 要删除变量，请使用null值调用setVariable()。
+* setVariable： WorkflowContextProcessor实施使用变量来操作变量，这些变量表示在步骤之间流动的自定义动态数据。 变量的名称和类型与[配置Watched文件夹](../../forms/using/watched-folder-in-aem-forms.md#configure-the-watched-folder)期间指定的变量的名称相同。 要更改变量的值，请使用非null值调用setVariable API。 要删除变量，请使用null值调用setVariable()。
 
 以下ProcessorContext API也可用：
 
@@ -531,8 +531,8 @@ log.info("Exiting workflow script!")
 限制功能可防止Watched文件夹在前面的作业未完成时调用新作业。 观察文件夹检测正在进行的作业，并根据批处理大小减去正在进行的作业来处理新作业。 例如，在第二次调用中，如果完成的作业数只有三个，并且一个作业仍在进行中，则Watched Folder将仅调用另外三个作业。
 
 * 观察文件夹依赖于暂存文件夹中的文件数，以确定正在进行多少个作业。 如果文件在stage文件夹中保持未处理状态，Watched Folder将不再调用任何作业。 例如，如果批处理大小为4个且已停止三个作业，则Watched文件夹在后续调用中仅调用一个作业。 有多个情况可能会导致文件在stage文件夹中保持未处理状态。 当作业停止时，管理员可以在“进程管理”管理页面上终止进程，以便Watched Folder将文件移出stage文件夹。
-* 如果AEM Forms服务器在Watched Folder调用作业之前关闭，管理员可以将文件移出stage文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
-* 如果AEM Forms服务器正在运行，但在作业管理器服务回调时观察文件夹未运行（当服务未按顺序启动时会发生回调），则管理员可以将文件移出暂存文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#p-failure-points-and-recoveryfailure-points-and-recovery-p)。
+* 如果AEM Forms服务器在Watched Folder调用作业之前关闭，管理员可以将文件移出stage文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#failure-points-and-recoveryfailure-points-and-recovery)。
+* 如果AEM Forms服务器正在运行，但在作业管理器服务回调时观察文件夹未运行（当服务未按顺序启动时会发生回调），则管理员可以将文件移出暂存文件夹。 有关信息，请参阅[故障点和恢复](../../forms/using/watched-folder-in-aem-forms.md#failure-points-and-recoveryfailure-points-and-recovery)。
 
 ### 故障点和恢复故障点和恢复 {#failure-points-and-recoveryfailure-points-and-recovery}
 
@@ -615,9 +615,9 @@ log.info("Exiting workflow script!")
 
 执行以下步骤以使用PDF Generator配置Watched文件夹：
 
-1. [创建ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#p-create-an-ecmascript-p)
-1. [创建工作流](../../forms/using/watched-folder-in-aem-forms.md#p-create-a-workflow-p)
-1. [配置观察文件夹](../../forms/using/watched-folder-in-aem-forms.md#p-configure-the-watched-folder-p)
+1. [创建ECMAScript](../../forms/using/watched-folder-in-aem-forms.md#create-an-ecmascript)
+1. [创建工作流](../../forms/using/watched-folder-in-aem-forms.md#create-a-workflow)
+1. [配置观察文件夹](../../forms/using/watched-folder-in-aem-forms.md#configure-the-watched-folder)
 
 ### 创建ECMAScript {#create-an-ecmascript}
 
@@ -671,7 +671,7 @@ ECMAScript将使用PDF Generator的createPDF API将Microsoft Word (.docx)文档�
 
 1. 右键单击流程步骤并选择&#x200B;**编辑**。 出现“Step Properties（步骤属性）”窗口。
 
-1. 在“流程”选项卡中，选择ECMAScript。 例如，在[创建ECMAScript](#p-create-an-ecmascript-p)中创建的pdfg-openOffice-sample.ecma脚本。 启用&#x200B;**处理程序前进**&#x200B;选项，然后单击&#x200B;**确定**。
+1. 在“流程”选项卡中，选择ECMAScript。 例如，在[创建ECMAScript](#create-an-ecmascript)中创建的pdfg-openOffice-sample.ecma脚本。 启用&#x200B;**处理程序前进**&#x200B;选项，然后单击&#x200B;**确定**。
 
    ![create-a-workflow3-pdf](assets/create-a-workflow3-pdf.png)
 

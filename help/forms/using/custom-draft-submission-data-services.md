@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 5%
@@ -41,7 +41,7 @@ AEM Forms允许用户将自适应表单另存为草稿。 草稿功能为用户�
 
 但是，AEM Forms Portal组件提供了数据服务，通过这些数据服务，您可以自定义存储草稿和提交的用户数据的实施。 例如，您可以将数据存储在组织中当前实施的数据存储中。
 
-要自定义用户数据的存储，您必须实施[草稿数据](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p)和[提交数据](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p)服务。
+要自定义用户数据的存储，您必须实施[草稿数据](/help/forms/using/custom-draft-submission-data-services.md#draft-data-service)和[提交数据](/help/forms/using/custom-draft-submission-data-services.md#submission-data-service)服务。
 
 ## 先决条件 {#prerequisites}
 

@@ -25,7 +25,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1450'
 ht-degree: 7%
@@ -113,7 +113,7 @@ AEM Forms附加组件包是部署在AEM上的应用程序。 该软件包包含A
 1. 打开[包管理器](/help/sites-administering/package-manager.md)，然后单击&#x200B;**[!UICONTROL 上传包]**&#x200B;以上传包。
 1. 选择该包并点击&#x200B;**[!UICONTROL 安装]**。
 
-   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=zh-Hans)文章中列出的直接链接下载包。
+   您还可以通过[AEM Forms发行版](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)文章中列出的直接链接下载包。
 
 1. 安装包后，系统会提示您重新启动AEM实例。 **不要立即重新启动服务器。** 在停止AEM Forms服务器之前，请等待ServiceEvent REGISTERED和ServiceEvent UNREGISTERED消息停止出现在[AEM-Installation-Directory]/crx-quickstart/logs/error.log文件中，并且日志稳定。
 
@@ -189,7 +189,7 @@ Dispatcher是Adobe Experience Manager的缓存和负载平衡工具，与企业�
 
 如果交互式通信提供的体验不吸引人，您的客户可能会放弃交互式通信。 虽然这令客户感到沮丧，但也提高了贵组织的支持量和成本。 确定并提供提高转化率的正确客户体验是关键而富有挑战性的。 AEM forms拥有此问题的关键。
 
-AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，跨多个数字渠道提供个性化且富有吸引力的客户体验。 要使用Adobe Target个性化交互式通信，请[将Adobe Target与AEM Forms集成](../../forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
+AEM Forms与Adobe Target（一种Adobe Experience Cloud解决方案）集成，跨多个数字渠道提供个性化且富有吸引力的客户体验。 要使用Adobe Target个性化交互式通信，请[将Adobe Target与AEM Forms集成](../../forms/using/ab-testing-adaptive-forms.md#set-up-and-integrate-target-in-aem-forms)。
 
 #### 为表单数据模型配置SSL通信  {#configure-ssl-communcation-for-form-data-model}
 

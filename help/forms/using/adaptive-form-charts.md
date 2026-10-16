@@ -25,7 +25,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -35,7 +35,7 @@ ht-degree: 0%
 ![主页图像](assets/charts_hero_image.jpg)
 
 图表或图形是数据的可视化表示形式。 它允许您将大量信息压缩为易于理解的视觉格式，使您能够更好地可视化、解释和分析复杂数据。
-AEM Forms附加组件包提供了一个现成的Chart组件。 您可以在自适应表单和文档中使用以在&#x200B;**可重复面板**&#x200B;和&#x200B;**表**&#x200B;中直观地呈现二维数据。 图表组件允许您添加和配置以下类型的图表：
+AEM Forms附加组件包提供了一个现成的Chart组件。 您可以在自适应表单和文档中使用以在**可重复面板**&#x200B;和&#x200B;**表**&#x200B;中直观地呈现二维数据。 图表组件允许您添加和配置以下类型的图表：
 
 1. 饼图
 1. 列
@@ -148,7 +148,7 @@ AEM Forms附加组件包提供了一个现成的Chart组件。 您可以在自�
 
 ### 自定义函数 {#custom-functions}
 
-除了在图表中使用默认函数之外，您还可以在JavaScript中编写[自定义函数](/help/forms/using/rule-editor.md#custom-functions-in-rule-editor-custom-functions)，并在图表组件的函数列表中提供它们。
+除了在图表中使用默认函数之外，您还可以在JavaScript中编写[自定义函数](/help/forms/using/rule-editor.md#custom-functions)，并在图表组件的函数列表中提供它们。
 
 函数将一个或多个值和类别名称作为输入并返回一个值。 例如：
 

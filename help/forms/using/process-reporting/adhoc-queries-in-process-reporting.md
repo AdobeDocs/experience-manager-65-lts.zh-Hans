@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 0%
@@ -40,9 +40,9 @@ ht-degree: 0%
 
 此外，可以使用进程和任务属性过滤器定义临时查询。 然后，可以保存这些过滤器，并用于在以后运行报表。
 
-[**进程搜索**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-search-p)：使用基于进程属性的用户定义的搜索筛选器搜索进程实例。
+[**进程搜索**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#process-task-search)：使用基于进程属性的用户定义的搜索筛选器搜索进程实例。
 
-[**进程详细信息**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#p-process-task-details-p)：通过指定进程ID查看进程实例的详细信息。
+[**进程详细信息**](/help/forms/using/process-reporting/adhoc-queries-in-process-reporting.md#process-task-details)：通过指定进程ID查看进程实例的详细信息。
 
 **任务搜索**：使用用户定义的基于任务属性的搜索筛选器搜索任务实例。
 
@@ -165,7 +165,7 @@ ht-degree: 0%
    ![task_search_result](assets/task_search_result.png)
 
 1. 单击左上角的边栏按钮![lc_pr_rail_button](assets/lc_pr_rail_button.png)以折叠&#x200B;**我的筛选器**&#x200B;窗格并展开&#x200B;**报表**&#x200B;面板的可用空间。
-1. 使用&#x200B;**报表**&#x200B;面板右上角的选项对查询结果执行操作。
+1. 使用**报表**面板右上角的选项对查询结果执行操作。
 
    * **刷新**：使用存储中的最新数据刷新报告
 

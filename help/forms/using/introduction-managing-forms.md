@@ -25,7 +25,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 1%
@@ -114,8 +114,8 @@ AEM“工具”面板包含用于各种组件的工具。 要导航到特定于A
   ![AEM Forms工具](assets/aem_forms_tools_new.png)
 
 * **配置PDF Generator：**&#x200B;管理员可以配置AEM [!DNL Forms] PDF Generator设置、添加用户帐户，以及将配置导入或导出到PDF Generator。
-* **发布通信管理Assets：** AEM [!DNL Forms]允许您同时发布来自创作实例的所有字母、文档片段和数据字典以及相关依赖项。 已发布的资产包括所有相应的管理资产和相关依赖项。 有关详细信息，请参阅[发布和取消发布表单和文档](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets)。
-* **导出通信管理Assets：**&#x200B;您可以从AEM [!DNL Forms]实例以包形式下载所有通信管理资源和相关依赖项。 有关详细步骤，请参阅[将资产导入和导出到AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
+* **发布通信管理Assets：** AEM [!DNL Forms]允许您同时发布来自创作实例的所有字母、文档片段和数据字典以及相关依赖项。 已发布的资产包括所有相应的管理资产和相关依赖项。 有关详细信息，请参阅[发布和取消发布表单和文档](../../forms/using/publishing-unpublishing-forms.md#publish-all-the-correspondence-management-assets)。
+* **导出通信管理Assets：**&#x200B;您可以从AEM [!DNL Forms]实例以包形式下载所有通信管理资源和相关依赖项。 有关详细步骤，请参阅[将资产导入和导出到AEM Forms](../../forms/using/import-export-forms-templates.md#import-and-export-assets-in-correspondence-management)
 
 ## 用户界面的常见元素 {#commonelements}
 

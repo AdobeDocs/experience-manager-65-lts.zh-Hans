@@ -25,14 +25,14 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 9%
 ---
 # 自动保存自适应表单 {#auto-save-an-adaptive-form}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 您可以配置自适应表单，以根据事件或预定义的时间间隔自动开始保存内容。 默认情况下，自适应表单的内容会在用户操作时保存，例如按保存按钮时。 自动保存选项在以下方面很有用：
 
@@ -58,7 +58,7 @@ ht-degree: 9%
    * 如果您选择&#x200B;**[!UICONTROL 基于时间的]**&#x200B;触发器，请指定时间间隔。
    * 如果您选择&#x200B;**[!UICONTROL 基于事件的]**&#x200B;触发器，请指定事件名称。
 
-   您还可以创建自己的自定义策略并将其添加到列表中。 有关详细信息，请参阅[实施自定义策略以自动保存表单](/help/forms/using/auto-save-an-adaptive-form.md#p-implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms-p)。
+   您还可以创建自己的自定义策略并将其添加到列表中。 有关详细信息，请参阅[实施自定义策略以自动保存表单](/help/forms/using/auto-save-an-adaptive-form.md#implement-a-custom-strategy-to-enable-autosave-for-adaptive-forms)。
 
 1. （仅限基于时间的自动保存）执行以下步骤来配置基于时间的自动保存选项。
 
@@ -66,7 +66,7 @@ ht-degree: 9%
 
 1. （仅限基于事件的自动保存）执行以下步骤来配置用于基于事件的自动保存的选项。
 
-   1. 在此事件&#x200B;**之后的**&#x200B;自动保存框中，指定一个[GuideBridge](https://helpx.adobe.com/cn/aem-forms/6/javascript-api/GuideBridge.html)事件。 每当表达式的计算结果为TRUE时，将保存表单。
+   1. 在此事件&#x200B;**之后的**&#x200B;自动保存框中，指定一个[GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html)事件。 每当表达式的计算结果为TRUE时，将保存表单。
 
 1. （可选）要自动保存匿名用户的内容，请选择&#x200B;**为匿名用户启用自动保存**&#x200B;选项，然后单击&#x200B;**[!UICONTROL 确定]**。
 
@@ -103,4 +103,4 @@ ht-degree: 9%
 
 1. 在编辑模式下，选择一个组件，然后选择![字段级](assets/field-level.png) > **[!UICONTROL 自适应表单容器]**，然后选择![cmppr](assets/cmppr.png)。
 1. 在属性中，打开&#x200B;**[!UICONTROL 基本]**&#x200B;部分。 在&#x200B;**[!UICONTROL 客户端库类别]**&#x200B;框中，输入创建客户端库文件夹时定义的类别属性的值。
-1. 打开自动保存部分。 在此事件&#x200B;**之后的**&#x200B;自动保存框中，指定已在客户端库中定义的自定义事件。 单击&#x200B;**[!UICONTROL 确定]**。
+1. 打开自动保存部分。 在此事件&#x200B;]**之后的**[!UICONTROL &#x200B;自动保存框中，指定已在客户端库中定义的自定义事件。 单击&#x200B;**[!UICONTROL 确定]**。

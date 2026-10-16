@@ -26,18 +26,18 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 6%
 ---
 # 将自适应表单与 XFA 表单模板同步{#synchronizing-adaptive-forms-with-xfa-form-templates}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 简介 {#introduction}
 
-您可以基于XFA表单模板（`*.XDP`文件）创建自适应表单。 通过重复使用，您可以保留在现有XFA表单中的投资。 有关如何使用XFA表单模板创建自适应表单的信息，[基于模板创建自适应表单](../../forms/using/creating-adaptive-form.md#p-create-an-adaptive-form-based-on-an-xfa-form-template-p)。
+您可以基于XFA表单模板（`*.XDP`文件）创建自适应表单。 通过重复使用，您可以保留在现有XFA表单中的投资。 有关如何使用XFA表单模板创建自适应表单的信息，[基于模板创建自适应表单](../../forms/using/creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)。
 
 您可以在自适应表单中重用XDP文件中的字段。 这些字段称为绑定字段。 从XDP文件复制绑定字段的属性（如脚本、标签和显示格式）。 您还可以选择覆盖其中某些属性的值。
 
@@ -55,11 +55,11 @@ AEM Forms提供了一种方法，帮助您将自适应表单的字段与稍后�
 
 * XFA（XML Forms架构）
 
-要使用文章中提供的示例，请下载示例包，如下一节[示例包](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-sample-package-p)中所述。
+要使用文章中提供的示例，请下载示例包，如下一节[示例包](../../forms/using/synchronizing-adaptive-forms-xfa.md#sample-package)中所述。
 
 ## 示例包 {#sample-package}
 
-文章通过一个示例演示了如何将自适应表单与更新的XFA表单模板同步。 示例中使用的资产位于一个包中，该包可从本文中的[下载](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-downloads-p)部分下载。
+文章通过一个示例演示了如何将自适应表单与更新的XFA表单模板同步。 示例中使用的资产位于一个包中，该包可从本文中的[下载](../../forms/using/synchronizing-adaptive-forms-xfa.md#downloads)部分下载。
 
 上传包后，您可以在AEM Forms UI中查看这些资源。
 
@@ -122,7 +122,7 @@ AEM Forms提供了一种方法，帮助您将自适应表单的字段与稍后�
 
 >[!NOTE]
 >
->标签AF数值字段未发生更改，因为您已从组件属性对话框中覆盖此属性，如[将内容添加到自适应表单](../../forms/using/synchronizing-adaptive-forms-xfa.md#p-add-content-to-adaptive-form-br-p)中所述。
+>标签AF数值字段未发生更改，因为您已从组件属性对话框中覆盖此属性，如[将内容添加到自适应表单](../../forms/using/synchronizing-adaptive-forms-xfa.md#add-content-to-adaptive-form-br)中所述。
 
 ### 将XDP文件中的新字段添加到自适应表单   {#adding-new-fields-from-xdp-file-to-adaptive-form-nbsp}
 

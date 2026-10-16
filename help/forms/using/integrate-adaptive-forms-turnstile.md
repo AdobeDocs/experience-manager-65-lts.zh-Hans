@@ -14,7 +14,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 15%
@@ -39,7 +39,7 @@ AEM Forms支持以下CAPTCHA解决方案：
 
 Cloudflare的Turnstile Captcha是一项安全措施，旨在保护表单和站点免受自动机器人、恶意攻击、垃圾邮件和不需要的自动流量的侵害。 在提交表单之前，它会呈现一个复选框以验证用户身份，确认其为真人后才允许提交表单。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440950?captions=chi_hans)
+>[!VIDEO](https://video.tv.adobe.com/v/3440940/)
 
 ### 将AEM Forms环境与Turnstile验证码集成的先决条件 {#prerequisite}
 
@@ -69,7 +69,7 @@ Cloudflare的Turnstile Captcha是一项安全措施，旨在保护表单和站�
       ![配置旋转门](assets/config-hcaptcha.png)
    1. 将&#x200B;**[!UICONTROL 小组件类型]**&#x200B;指定为托管、非交互或不可见。
    1. 提供其他详细信息，如&#x200B;**[!UICONTROL Title]**、**[!UICONTROL Name]**。
-   1. 为必备项[&#128279;](#prerequisite)中获取的Turnstile服务指定&#x200B;**[!UICONTROL 站点密钥]**&#x200B;和&#x200B;**[!UICONTROL 密钥]**。
+   1. 为必备项](#prerequisite)中获取的Turnstile服务[指定&#x200B;**[!UICONTROL 站点密钥]**&#x200B;和&#x200B;**[!UICONTROL 密钥]**。
    1. 单击&#x200B;**[!UICONTROL 创建]**。
 
       ![配置Cloud Service以将您的AEM Forms环境与Turnstile连接](assets/config-turntstile.png)
@@ -86,7 +86,7 @@ Cloudflare的Turnstile Captcha是一项安全措施，旨在保护表单和站�
 1. 选择自适应表单，然后单击&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 配置容器]**&#x200B;中，选择包含将AEM Forms与Turnstile连接的云配置的配置容器。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 
-   如果您没有用于配置Captcha服务的配置容器，请参阅[配置Turnstile](#configure-turnstile-steps-to-configure-hcaptcha)部分以了解如何创建配置容器。
+   如果您没有用于配置Captcha服务的配置容器，请参阅[配置Turnstile](#steps-to-configure-hcaptcha)部分以了解如何创建配置容器。
 
    ![选择配置容器](assets/captcha-properties.png)
 

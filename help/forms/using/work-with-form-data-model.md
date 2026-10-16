@@ -23,7 +23,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '4264'
 ht-degree: 1%
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model.html)。
 
 ![数据集成](do-not-localize/data-integeration.png)
 
@@ -122,7 +122,7 @@ ht-degree: 1%
 
 1. 在表单数据模型中，选择一个数据模型对象，然后选择&#x200B;**[!UICONTROL 创建子属性]**。
 1. 在&#x200B;**[!UICONTROL 创建子属性]**&#x200B;对话框中，在&#x200B;**[!UICONTROL 名称]**&#x200B;和&#x200B;**[!UICONTROL 类型]**&#x200B;字段中分别指定属性的名称和数据类型。 您可以选择为属性指定标题和描述。
-1. 如果属性是计算属性，则启用计算属性。 计算属性的值是根据规则或表达式计算的。 有关详细信息，请参阅[编辑属性](#edit-properties)。
+1. 如果属性是计算属性，则启用计算属性。 计算属性的值是根据规则或表达式计算的。 有关详细信息，请参阅[编辑属性](#properties)。
 1. 如果数据模型对象绑定到数据源，则添加的子属性将自动绑定到具有相同名称和数据类型的父数据模型对象的属性。
 
    要手动绑定子属性与数据模型对象属性，请选择&#x200B;**[!UICONTROL 绑定引用]**&#x200B;字段旁边的浏览图标。 **[!UICONTROL 选择对象]**&#x200B;对话框列出了父数据模型对象的所有属性。 选择要绑定的属性，然后选择勾号图标。 请注意，您只能选择与子资产具有相同数据类型的资产。
@@ -179,7 +179,7 @@ ht-degree: 1%
 
    为员工数据源配置的读写服务
 
-1. 为读取服务参数选择![aem_6_3_edit](assets/aem_6_3_edit.png)以将参数绑定到用户配置文件属性、请求属性或文本值[&#128279;](#bindargument)，并指定绑定值。
+1. 为读取服务参数选择![aem_6_3_edit](assets/aem_6_3_edit.png)以将参数绑定到用户配置文件属性、请求属性或文本值](#bindargument)，并指定绑定值。[
 1. 选择&#x200B;**[!UICONTROL 完成]**&#x200B;以保存参数，选择&#x200B;**[!UICONTROL 完成]**&#x200B;以保存属性，选择&#x200B;**[!UICONTROL 保存]**&#x200B;以保存表单数据模型。
 
 ### 绑定读取服务参数 {#bindargument}

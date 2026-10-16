@@ -26,20 +26,20 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 7%
 ---
 # 使用延迟加载改进大型表单的性能{#improve-performance-of-large-forms-with-lazy-loading}
 
-<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=zh-Hans)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
+<span class="preview">Adobe 建议使用现代、可扩展的数据捕获[核心组件](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)，以[创建新的自适应表单](/help/forms/using/create-an-adaptive-form-core-components.md)或[将自适应表单添加到 AEM Sites 页面](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)。 这些组件代表了自适应表单创建方面的一大进步，可确保提供令人印象深刻的用户体验。 本文介绍了使用基础组件创作自适应表单的旧方法。</span>
 
 ## 应用到 {#applies-to}
 
 该文档适用于&#x200B;**AEM 6.5 LTS Forms**。
 
-有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/lazy-loading-adaptive-forms.html?lang=zh-Hans)。
+有关AEM as a Cloud Service文档，请参阅Cloud Service上的[AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/lazy-loading-adaptive-forms.html)。
 
 ## 延迟加载简介 {#introduction-to-lazy-loading}
 
@@ -59,7 +59,7 @@ ht-degree: 7%
 * **标识和标记全局值**
 基于Forms的交易涉及动态元素，用于从用户捕获相关数据并对其进行处理以简化表单填写体验。 例如，您的表单在片段X中有字段A，其值决定了另一个片段中字段B的有效性。 在这种情况下，如果片段X标记为延迟加载，则即使未加载片段X，字段A的值也必须可用于验证字段B。 要实现此目的，您可以将字段A标记为全局，这样可以确保在未加载片段X时，其值可用于验证字段B。
 
-  有关如何使字段值全局的信息，请参阅[配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p)。
+  有关如何使字段值全局的信息，请参阅[配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#configuring-lazy-loading)。
 
 * **写入规则以控制字段的可见性**
 Forms包含某些字段和部分，不适用于所有用户且在所有条件下均适用。 Forms作者和开发人员使用可见性或显示隐藏规则，根据用户输入控制他们的可见性。 例如，Office Address字段不会显示在表单的“就业状态”字段中选择“失业”的用户面前。 有关编写规则的更多信息，请参阅[使用规则编辑器](../../forms/using/rule-editor.md)。
@@ -93,7 +93,7 @@ Forms包含某些字段和部分，不适用于所有用户且在所有条件下
 处理延迟加载时要牢记的一些限制、建议和要点如下：
 
 * 在基于XFA的自适应表单上使用基于XSD架构的自适应表单来配置大型表单上的延迟加载。 在基于XFA的自适应表单中，由于延迟加载实施导致的性能增益相对低于在基于XSD的自适应表单中的增益。
-* 对于自适应表单中片段没有根面板的导航&#x200B;**布局，而在一页上使用** Responsive -everything，请勿对该片段进行延迟加载。 作为响应式布局配置的结果，所有片段将以自适应表单同时加载。 它还会导致性能降低。
+* 对于自适应表单中片段没有根面板的导航&#x200B;]**布局，而在一页上使用**[!UICONTROL  Responsive -everything，请勿对该片段进行延迟加载。 作为响应式布局配置的结果，所有片段将以自适应表单同时加载。 它还会导致性能降低。
 * 建议不要在自适应表单的第一个片段上配置延迟加载。
 * 建议不要在加载自适应表单时呈现的第一个面板中为片段配置延迟加载。
 * 片段层次结构中最多支持两个级别的延迟加载。

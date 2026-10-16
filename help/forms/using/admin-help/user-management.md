@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 用户管理允许您使用安全断言标记语言(SAML)，在AEM表单模块与受Netegrity SiteMinder保护的应用程序之间启用单点登录(SSO)。 在实施SSO时，AEM表单用户登录页面不是必需的，并且如果用户已通过公司门户进行身份验证，则不会显示。
 
-有关提高DB2的数据库和目录同步性能的信息，请参阅[IBM DB2数据库：运行用于常规维护的命令](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance)。
+有关提高DB2的数据库和目录同步性能的信息，请参阅[IBM DB2数据库：运行用于常规维护的命令](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db-database-running-commands-for-regular-maintenance)。
 
 ## 为启用了SSL的LDAP服务器配置用户管理 {#configuring-user-management-for-an-ssl-enabled-ldap-server}
 

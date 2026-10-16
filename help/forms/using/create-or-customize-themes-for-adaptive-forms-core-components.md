@@ -22,7 +22,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2092'
 ht-degree: 7%
@@ -93,7 +93,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 
 * 安装[Apache Maven.](https://maven.apache.org/download.cgi)的最新版本 Apache Maven是一种常用于Java™项目的构建自动化工具。 安装最新版本可确保您具有主题自定义所需的依赖项。
 
-* 了解如何在Adobe Experience Manager[&#128279;](/help/sites-developing/clientlibs.md)中创建客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
+* 了解如何在Adobe Experience Manager](/help/sites-developing/clientlibs.md)中创建[客户端库。 AEM提供了客户端库，这使您可以在存储库中存储客户端代码，将其整理到不同类别中，并定义何时以及如何向客户端提供每种类别的代码。
 
 * 安装纯文本编辑器。 例如，® Visual Studio Code。 使用Microsoft等纯文本编辑器®Visual Studio Code为编辑和修改主题文件提供了用户友好的环境。
 
@@ -115,7 +115,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 1. [自定义主题的外观](#customize-the-theme)
 1. [为本地部署准备主题](#generate-the-clientlib)
 1. [在本地环境中部署主题](#deploy-the-theme-on-a-local-environment)
-1. [在生产环境中部署主题](#5-deploy-a-theme-on-your-production-environment)
+1. [在生产环境中部署主题](#deploy-theme)
 
 <!--
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)
@@ -141,7 +141,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
       git clone [Path of Git Repository of the theme]
    ```
 
-   将主题&rbrack;的Git存储库的&lbrack;路径替换为主题的相应Git存储库的实际URL
+   将主题]的Git存储库的[路径替换为主题的相应Git存储库的实际URL
 
    例如，要克隆画布主题，请执行以下命令：
 
@@ -356,4 +356,4 @@ The selected theme is applied to the Adaptive Form.
 * [创建或自定义基于核心组件的自适应Forms的主题](create-or-customize-themes-for-adaptive-forms-core-components.md)
 * [为基于核心组件的自适应Forms创建模板](template-editor.md)
 * [创建自适应表单或将其添加到AEM Sites页面或体验片段](create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [主题模板和表单数据模型示例](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=zh-Hans)
+* [主题模板和表单数据模型示例](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)

@@ -23,14 +23,14 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2167'
 ht-degree: 6%
 ---
 # 使用组装服务{#using-assembler-service}
 
-Assembler服务允许您组合、重新排列和扩充PDF和XDP文档，并获取有关PDF文档的信息。 提交给Assembler服务的每个作业包括Document Description XML (DDX)文档、源文档和外部资源（字符串和图形）。 有关汇编程序服务的详细信息，请参阅[汇编程序服务概述](../../forms/using/overview-aem-document-services.md#p-assembler-service-p)。
+Assembler服务允许您组合、重新排列和扩充PDF和XDP文档，并获取有关PDF文档的信息。 提交给Assembler服务的每个作业包括Document Description XML (DDX)文档、源文档和外部资源（字符串和图形）。 有关汇编程序服务的详细信息，请参阅[汇编程序服务概述](../../forms/using/overview-aem-document-services.md#assembler-service)。
 
 您可以将Assemble服务用于以下操作：
 

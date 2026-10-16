@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 2%
@@ -68,7 +68,7 @@ ht-degree: 2%
 
    在&#x200B;**[!UICONTROL 主题]**&#x200B;和&#x200B;**[!UICONTROL 电子邮件模板]**&#x200B;字段中分别指定电子邮件的主题和正文。
 
-   您还可以在字段中指定变量占位符，在这种情况下，当最终用户成功提交表单时，将处理字段的值。 有关详细信息，请参阅[使用自适应表单字段名称动态创建电子邮件内容](../../forms/using/form-submission-receipt-via-email.md#p-using-adaptive-form-field-names-to-dynamically-create-email-content-p)。
+   您还可以在字段中指定变量占位符，在这种情况下，当最终用户成功提交表单时，将处理字段的值。 有关详细信息，请参阅[使用自适应表单字段名称动态创建电子邮件内容](../../forms/using/form-submission-receipt-via-email.md#using-adaptive-form-field-names-to-dynamically-create-email-content)。
 
    如果表单包含文件附件，并且您希望在电子邮件中附加这些文件，请选择&#x200B;**[!UICONTROL 包含附件]**。
 

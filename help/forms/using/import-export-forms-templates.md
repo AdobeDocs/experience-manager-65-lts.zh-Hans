@@ -27,7 +27,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2481'
 ht-degree: 1%
@@ -53,11 +53,11 @@ ht-degree: 1%
 1. 选择表单资源并选择&#x200B;**下载**&#x200B;图标。
 1. 在下载资产中，选择以下选项之一，然后选择&#x200B;**下载**。
 
-   * **下载为CRX包：**&#x200B;使用相应选项将所有选定的资源和相关依赖项从一个AEM Forms实例下载并移动到另一个实例。 它将所有资源和文件夹下载为crx包。 任何表单资源，包括在AEM中创作的表单（自适应表单、交互式通信和自适应表单片段）、表单集、表单模板、PDF文档和资源（XSD、XFS、图像），都可以从AEM Forms UI中作为包下载。
+   * **下载为CRX包：**使用相应选项将所有选定的资源和相关依赖项从一个AEM Forms实例下载并移动到另一个实例。 它将所有资源和文件夹下载为crx包。 任何表单资源，包括在AEM中创作的表单（自适应表单、交互式通信和自适应表单片段）、表单集、表单模板、PDF文档和资源（XSD、XFS、图像），都可以从AEM Forms UI中作为包下载。
      将资源下载为包的优势在于，它还可以下载选定要下载的资源已使用的资源。 例如，如果您有一个自适应表单，该表单使用表单模板、XSD和图像。 当您选择此自适应表单并将其下载为包时，下载的包中还包含表单模板、XSD和图像。 与资源关联的所有元数据属性（包括自定义属性）也会下载。
 
-   * **将资源下载为二进制文件：**&#x200B;使用选项仅下载表单模板(XDP)、PDF forms (PDF)、文档(PDF)和资源（图像、架构、样式表）。 您可以使用外部应用程序编辑这些资源。 它将具有二进制文件的表单资产（如XSD、XDP、图像、PDF和XDP）下载为.zip文件。
-     无法使用&#x200B;**将资产下载为二进制文件**&#x200B;选项下载自适应表单、交互式通信、自适应表单片段、主题和表单集。 要下载这些资源，您应该使用&#x200B;**下载为CRX包**&#x200B;选项。
+   * **将资源下载为二进制文件：**使用选项仅下载表单模板(XDP)、PDF forms (PDF)、文档(PDF)和资源（图像、架构、样式表）。 您可以使用外部应用程序编辑这些资源。 它将具有二进制文件的表单资产（如XSD、XDP、图像、PDF和XDP）下载为.zip文件。
+     无法使用**将资产下载为二进制文件**&#x200B;选项下载自适应表单、交互式通信、自适应表单片段、主题和表单集。 要下载这些资源，您应该使用&#x200B;**下载为CRX包**&#x200B;选项。
 
    选定的资产将下载为存档（.zip文件）。
 
@@ -136,7 +136,7 @@ ht-degree: 1%
 
 使用此选项可从AEM表单实例中作为包下载所有相应的管理资源和相关依赖项。
 
-例如，如果通信管理具有一个使用图像和文本的字母，则下载的包还包含与字母相关的图像和文本。 与资源关联的所有元数据属性（包括自定义属性）也会下载。 下载包(.cmp)后，您可以[将该包导入其他AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+例如，如果通信管理具有一个使用图像和文本的字母，则下载的包还包含与字母相关的图像和文本。 与资源关联的所有元数据属性（包括自定义属性）也会下载。 下载包(.cmp)后，您可以[将该包导入其他AEM Forms实例](../../forms/using/import-export-forms-templates.md#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management)。
 
 要将所有相应的管理资产和相关依赖项下载为包，请完成以下步骤：
 
@@ -161,7 +161,7 @@ ht-degree: 1%
 
 1. 选择&#x200B;**下载导出的包**&#x200B;链接以下载包文件。
 
-   要将包中的资源添加到通信管理的另一个实例，请[将该包导入到AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+   要将包中的资源添加到通信管理的另一个实例，请[将该包导入到AEM Forms实例](../../forms/using/import-export-forms-templates.md#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management)。
 
 ### 将文档片段、信件和/或数据字典导入通信管理 {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 

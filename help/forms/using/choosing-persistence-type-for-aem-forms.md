@@ -25,7 +25,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 6%
@@ -71,7 +71,7 @@ ht-degree: 6%
  </tbody>
 </table>
 
-TarMK旨在提高性能，而MongoMK和RDBMK旨在实现可扩展性。 Adobe强烈建议将TarMK作为所有AEM Forms部署方案（对于Author和Publish实例）的默认持久性技术，但[选择Mongo或关系数据库微内核而非TarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p)部分中概述的使用情况除外。
+TarMK旨在提高性能，而MongoMK和RDBMK旨在实现可扩展性。 Adobe强烈建议将TarMK作为所有AEM Forms部署方案（对于Author和Publish实例）的默认持久性技术，但[选择Mongo或关系数据库微内核而非TarMK](#choosing-mongo-or-a-relational-database-microkernel-over-tarmk)部分中概述的使用情况除外。
 
 有关受支持的微内核列表，请参阅OSGi技术要求上的[AEM Forms](/help/sites-deploying/technical-requirements.md) <!--or [AEM Forms on JEE supported platform combinations](/help/forms/using/aem-forms-jee-supported-platforms.md) articles-->。
 

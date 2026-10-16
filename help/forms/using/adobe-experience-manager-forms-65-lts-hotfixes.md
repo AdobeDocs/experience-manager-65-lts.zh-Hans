@@ -21,7 +21,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 13%
@@ -31,7 +31,7 @@ ht-degree: 13%
 本文列出为解决已知问题、提高系统稳定性和增强AEM Forms 6.5 LTS的整体性能而实施的关键修复。
 
 
-本文适用于AEM Forms 6.5 LTS。 对于AEM 6.5（非LTS）部署，请参阅[Adobe Experience Manager Forms修补程序](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)。
+本文适用于AEM Forms 6.5 LTS。 对于AEM 6.5（非LTS）部署，请参阅[Adobe Experience Manager Forms修补程序](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix)。
 
 >[!NOTE]
 >
@@ -125,7 +125,7 @@ ht-degree: 13%
 
 请执行以下步骤以下载并安装该热修复补丁：
 
-1. 从软件分发链接下载[热修复补丁](#hotfix-for-adaptive-forms)。
+1. 从软件分发链接下载[热修复补丁](#hotfix-for-aem-forms)。
 1. 提取热修复补丁存档文件，以获取 Experience Manager 包（.zip）和捆绑包（.jar）文件。
 1. 通过[包管理器](https://experienceleague.adobe.com/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager.html?lang=es#accessing)上传并安装包（.zip）。
 1. 打开配置管理器捆绑包 `https://server:host/system/console/bundles`，上传并安装捆绑包（.jar）。 热修复补丁即已安装完成。

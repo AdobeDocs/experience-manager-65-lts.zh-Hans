@@ -20,7 +20,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '6927'
 ht-degree: 0%
@@ -65,7 +65,7 @@ ht-degree: 0%
 
    浏览器中的默认拼写检查器会检查文本编辑器中的拼写。 要管理拼写和语法检查，您可以编辑浏览器的拼写检查器设置或安装浏览器插件/加载项以检查拼写和语法。
 
-   您还可以使用文本编辑器中的各种键盘快捷键来管理、编辑文本和设置文本格式。 有关通信管理键盘快捷键中[文本编辑器](/help/forms/using/keyboard-shortcuts.md#p-formatting-p)键盘快捷键的详细信息。
+   您还可以使用文本编辑器中的各种键盘快捷键来管理、编辑文本和设置文本格式。 有关通信管理键盘快捷键中[文本编辑器](/help/forms/using/keyboard-shortcuts.md#formatting)键盘快捷键的详细信息。
 
 1. 将打开一个文本编辑器，输入文本。 使用页面顶部的工具栏设置文本、插入条件、链接和分页符的格式。
 
@@ -133,7 +133,7 @@ ht-degree: 0%
 
    数据字典的示例数据文件中指定的占位符元素
 
-   书信![&#128279;](assets/placeholder_elements_in_text.png)中的占位符元素
+   书信](assets/placeholder_elements_in_text.png)中的![占位符元素
 
    CCR视图中的占位符元素值通过数据字典变量填充，如示例数据文件中所指定
 
@@ -501,7 +501,7 @@ DD有一个收集元素Nominied_details，它有一个复合元素，该复合�
 
    然后选择DD并导出示例数据。 您获取的XML文件包含Employee数据和三个Nominee_details实例（默认情况下，将下载3个实例）。 您可以根据需要添加或删除)。 更新值，然后在DD中导入测试数据。 CMP文件是包，其中包含DD。 因此，将DD导入通信管理。
 
-   有关使用数据字典和测试数据的详细信息，请参阅[数据字典](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)。
+   有关使用数据字典和测试数据的详细信息，请参阅[数据字典](/help/forms/using/data-dictionary.md#working-with-test-data)。
 
    ![数据字典结构](assets/dd.jpeg)
 

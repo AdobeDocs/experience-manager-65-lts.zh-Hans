@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 2%
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 确保表单中使用的字体在托管AEM表单的J2EE应用程序服务器中可用。 例如，请考虑以下方案。 表单设计人员将字体添加到Designer使用的字体目录中，并创建在单独的计算机上使用该字体的表单。 要使Output服务使用该字体，请将其放置在Customer fonts目录中。 如果Customer fonts目录不存在，请在托管AEM表单的J2EE应用程序服务器上创建一个目录。
 
-有关其他字体设置的信息，请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)。
+有关其他字体设置的信息，请参阅[配置常规AEM表单设置](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#general-aem-forms-settings)。
 
 **指定Customer fonts目录的位置**
 
