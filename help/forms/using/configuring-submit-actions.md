@@ -28,7 +28,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2700'
 ht-degree: 49%
@@ -186,7 +186,7 @@ ht-degree: 49%
 
 自适应表单编辑器提供&#x200B;**调用 Microsoft® Power Automate Flow** 提交操作，以将自适应表单数据、附件和记录文档发送到 Power Automate Cloud Flow。 要使用提交操作将捕获的数据发送到® Power Automate，[将您的AEM Forms实例连接到Microsoft® Power Automate](/help/forms/using/forms-microsoft-power-automate-integration.md)
 
-在成功配置后，使用[调用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action)提交操作将数据发送到 Power Automate Flow。
+在成功配置后，使用[调用 Microsoft® Power Automate 流程](/help/forms/using/forms-microsoft-power-automate-integration.md#use-the-invoke-microsoft-power-automate-flow-submit-action)提交操作将数据发送到 Power Automate Flow。
 
 ## 提交到®SharePoint列表{#submit-to-sharedrive}
 

@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '3758'
 ht-degree: 2%
@@ -288,7 +288,7 @@ AEM Forms应用程序与AEM Forms服务器同步，并允许您更改帐户中�
 
 ### 清除工作流实例 {#purge-workflow-instances}
 
-最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参阅[定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular)清除工作流实例。
+最大限度地减少工作流实例的数量可以提高工作流引擎的性能，因此，您可以定期从存储库中清除已完成或正在运行的工作流实例。 有关详细信息，请参阅[定期清除工作流实例](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances)清除工作流实例。
 
 ## 将敏感数据参数化为工作流变量并存储在外部数据存储中 {#externalize-wf-variables}
 

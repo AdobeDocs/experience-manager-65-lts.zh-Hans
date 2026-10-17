@@ -22,7 +22,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '4013'
 ht-degree: 2%
@@ -244,7 +244,7 @@ ht-degree: 2%
 * 构成信件部分的其他XDP （[布局片段](document-fragments.md#document-fragments)）。 在[Designer](https://www.adobe.com/go/learn_aemforms_designer_65)中创建XDP\Layouts。
 * 相关的[数据字典](/help/forms/using/data-dictionary.md)（可选）。
 * 您要在通信中使用的[数据模块](/help/forms/using/document-fragments.md)。
-* [测试数据](/help/forms/using/data-dictionary.md#p-working-with-test-data-p)是其中移植了测试数据的XML文件。 如果您使用数据字典，则需要测试数据。
+* [测试数据](/help/forms/using/data-dictionary.md#working-with-test-data)是其中移植了测试数据的XML文件。 如果您使用数据字典，则需要测试数据。
 
 ## 创建书信模板 {#create-a-letter-template}
 
@@ -275,7 +275,7 @@ ht-degree: 2%
 
    ![警报消息：书信创建成功](assets/createcorrespondencecreated.png)
 
-   **下一步**：当您选择&#x200B;**打开**&#x200B;时，通信管理将显示布局的表示形式，其中列出了布局(XDP)中的所有组件。 继续插入[数据模块和布局片段并配置它们](/help/forms/using/create-letter.md#p-insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them-p)。
+   **下一步**：当您选择&#x200B;**打开**&#x200B;时，通信管理将显示布局的表示形式，其中列出了布局(XDP)中的所有组件。 继续插入[数据模块和布局片段并配置它们](/help/forms/using/create-letter.md#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them)。
 
 ### 在信件中插入数据模块和布局片段并进行配置 {#insert-data-modules-and-layout-fragments-in-a-letter-and-configure-them}
 

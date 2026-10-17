@@ -23,7 +23,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1629'
 ht-degree: 2%
@@ -256,4 +256,4 @@ AEM [!DNL Forms]提供了一个直观的用户界面，用于[从配置的数据
 
 >[!NOTE]
 >
-> 您可以使用自适应表单中的表单数据模型创建和使用SharePoint列表配置，以在SharePoint列表中保存数据或生成的记录文档。 有关详细步骤，请参阅[将自适应表单连接到® SharePoint列表](/help/forms/using/configuring-submit-actions.md#create-a-sharepoint-list-configuration)。
+> 您可以使用自适应表单中的表单数据模型创建和使用SharePoint列表配置，以在SharePoint列表中保存数据或生成的记录文档。 有关详细步骤，请参阅[将自适应表单连接到® SharePoint列表](/help/forms/using/configuring-submit-actions.md#connect-af-sharepoint-list)。

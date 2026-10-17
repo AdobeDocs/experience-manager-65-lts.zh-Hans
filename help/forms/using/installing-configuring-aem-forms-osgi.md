@@ -28,7 +28,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 10%
@@ -254,7 +254,7 @@ AEM Forms与Adobe Analytics集成，允许您捕获和跟踪已发布表单和�
 
 如果您的表单提供的体验不吸引人，则客户可能会放弃表单。 虽然这令客户感到沮丧，但也可能会增加贵组织的支持量和成本。 确定并提供提高转化率的正确客户体验是关键而富有挑战性的。 AEM forms拥有此问题的关键。
 
-AEM forms与Adobe Marketing Cloud解决方案Adobe Target集成，跨多个数字渠道提供个性化且引人入胜的客户体验。 要使用Adobe Target对自适应表单进行A/B测试，[将Adobe Target与AEM Forms集成](/help/forms/using/ab-testing-adaptive-forms.md#setupandintegratetargetinaemforms)。
+AEM forms与Adobe Marketing Cloud解决方案Adobe Target集成，跨多个数字渠道提供个性化且引人入胜的客户体验。 要使用Adobe Target对自适应表单进行A/B测试，[将Adobe Target与AEM Forms集成](/help/forms/using/ab-testing-adaptive-forms.md#set-up-and-integrate-target-in-aem-forms)。
 
 ## 后续步骤 {#next-steps}
 

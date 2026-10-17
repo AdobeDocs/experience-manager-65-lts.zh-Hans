@@ -25,7 +25,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '6510'
 ht-degree: 1%
@@ -34,11 +34,11 @@ ht-degree: 1%
 
 本文档中的示例和示例可帮助您了解在OSGi环境上的AEM Forms上使用AEM Document Services 。 有关JEE环境上的AEM Forms的示例和示例，请参阅
 
-* [签名服务Java API快速入门](/help/forms/developing/signature-service-java-api-quick.md#programming-aem-forms-jee)
+* [签名服务Java API快速入门](/help/forms/developing/signature-service-java-api-quick.md#signature-service-java-api-quickstart-soap)
 
-* [加密服务Java API快速入门](/help/forms/developing/encryption-service-java-api-quick.md#developer-reference)
+* [加密服务Java API快速入门](/help/forms/developing/encryption-service-java-api-quick.md#encryption-service-java-api-quickstart-soap)
 
-* [Acrobat Reader扩展服务Java API快速入门](/help/forms/developing/acrobat-reader-dc-extensions-service.md#developer-reference)
+* [Acrobat Reader扩展服务Java API快速入门](/help/forms/developing/acrobat-reader-dc-extensions-service.md#acrobat-reader-dc-extensions-servicejava-api-quick-start-soap)
 
 ## 先决条件 {#prerequisite}
 
@@ -58,31 +58,31 @@ DocAssurance服务包括以下服务：
 
 您可以使用DocAssurance服务执行以下操作：
 
-* [添加不可见签名](/help/forms/using/aem-document-services-programmatically.md#p-adding-an-invisible-signature-field-p)
+* [添加不可见签名](/help/forms/using/aem-document-services-programmatically.md#adding-an-invisible-signature-field)
 
-* [添加签名字段](/help/forms/using/aem-document-services-programmatically.md#p-adding-a-signature-field-nbsp-p)
+* [添加签名字段](/help/forms/using/aem-document-services-programmatically.md#adding-a-signature-field-nbsp)
 * [应用文档时间戳](/help/forms/using/aem-document-services-programmatically.md#apply-document-timestamp)
 
-* [获取签名](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-p)
-* [获取签名字段列表](/help/forms/using/aem-document-services-programmatically.md#p-getting-signature-field-list-nbsp-p)
-* [修改签名字段](/help/forms/using/aem-document-services-programmatically.md#p-modifying-signature-fields-nbsp-p)
+* [获取签名](/help/forms/using/aem-document-services-programmatically.md#getting-signature)
+* [获取签名字段列表](/help/forms/using/aem-document-services-programmatically.md#getting-signature-field-list-nbsp)
+* [修改签名字段](/help/forms/using/aem-document-services-programmatically.md#modifying-signature-fields-nbsp)
 
-* [安全文档](/help/forms/using/aem-document-services-programmatically.md#p-securing-documents-p)
+* [安全文档](/help/forms/using/aem-document-services-programmatically.md#securing-documents)
 
-* [获取凭据使用权限](/help/forms/using/aem-document-services-programmatically.md#p-getting-credential-usage-rights-p)
+* [获取凭据使用权限](/help/forms/using/aem-document-services-programmatically.md#getting-credential-usage-rights)
 
-* [获取文档使用权限](/help/forms/using/aem-document-services-programmatically.md#p-getting-document-usage-rights-p)
+* [获取文档使用权限](/help/forms/using/aem-document-services-programmatically.md#getting-document-usage-rights)
 
-* [删除使用权限](/help/forms/using/aem-document-services-programmatically.md#p-removing-usage-rights-p)
-* [验证数字签名](/help/forms/using/aem-document-services-programmatically.md#p-verifying-digital-signatures-p)
-* [验证多个数字签名](/help/forms/using/aem-document-services-programmatically.md#p-verifying-multiple-digital-signatures-p)
-* [删除数字签名](/help/forms/using/aem-document-services-programmatically.md#p-removing-digital-signatures-p)
+* [删除使用权限](/help/forms/using/aem-document-services-programmatically.md#removing-usage-rights)
+* [验证数字签名](/help/forms/using/aem-document-services-programmatically.md#verifying-digital-signatures)
+* [验证多个数字签名](/help/forms/using/aem-document-services-programmatically.md#verifying-multiple-digital-signatures)
+* [删除数字签名](/help/forms/using/aem-document-services-programmatically.md#removing-digital-signatures)
 
-* [获取认证签名字段](/help/forms/using/aem-document-services-programmatically.md#p-getting-certifying-signature-field-p)
-* [获取PDF加密类型](/help/forms/using/aem-document-services-programmatically.md#p-getting-pdf-encryption-type-p)
-* [删除密码加密](/help/forms/using/aem-document-services-programmatically.md#p-removing-password-encryption-from-pdf-p)
+* [获取认证签名字段](/help/forms/using/aem-document-services-programmatically.md#getting-certifying-signature-field)
+* [获取PDF加密类型](/help/forms/using/aem-document-services-programmatically.md#getting-pdf-encryption-type)
+* [删除密码加密](/help/forms/using/aem-document-services-programmatically.md#removing-password-encryption-from-pdf)
 
-* [删除证书加密](/help/forms/using/aem-document-services-programmatically.md#p-removing-certificate-encryption-p)
+* [删除证书加密](/help/forms/using/aem-document-services-programmatically.md#removing-certificate-encryption)
 
 >[!NOTE]
 >
@@ -3651,17 +3651,17 @@ public class GetPDFEncryption {
 
 Output服务提供用于渲染.pdf、.pcl、.zpl和.ps格式的XDP文件的API。 该服务支持以下API：
 
-* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)：**&#x200B;通过将表单设计与存储在网络位置、本地文件系统或HTTP位置上的数据合并为文本值来生成PDF文档。
+* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#generatepdfoutput)：**&#x200B;通过将表单设计与存储在网络位置、本地文件系统或HTTP位置上的数据合并为文本值来生成PDF文档。
 
-* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p)：**&#x200B;通过将表单设计与应用程序中存储的数据合并来生成PDF文档。
-* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutputbatch-p)：**&#x200B;将表单设计与数据合并以创建PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)：**&#x200B;从表单设计和存储在网络位置、本地文件系统或HTTP位置的数据文件生成PCL、PostScript或ZPL输出作为文本值。
+* **[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#generatepdfoutput)：**&#x200B;通过将表单设计与应用程序中存储的数据合并来生成PDF文档。
+* **[generatePDFOutputBatch](/help/forms/using/aem-document-services-programmatically.md#generatepdfoutputbatch)：**&#x200B;将表单设计与数据合并以创建PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#generateprintedoutput)：**&#x200B;从表单设计和存储在网络位置、本地文件系统或HTTP位置的数据文件生成PCL、PostScript或ZPL输出作为文本值。
 
-* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#p-generateprintedoutput-p)：**&#x200B;从表单设计和存储在应用程序中的数据文件中生成PCL、PostScript和ZPL输出。
+* **[generatePrintedOutput](/help/forms/using/aem-document-services-programmatically.md#generateprintedoutput)：**&#x200B;从表单设计和存储在应用程序中的数据文件中生成PCL、PostScript和ZPL输出。
 
 ### generatePDFOutput {#generatepdfoutput}
 
-generatePDFOutput API通过将表单设计和数据合并来生成PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。 将表单设计或存储在网络位置、本地文件系统或HTTP位置上的数据作为文字值使用generatePDFOutput API。 如果表单设计和XML数据存储在应用程序中，请使用[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
+generatePDFOutput API通过将表单设计和数据合并来生成PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。 将表单设计或存储在网络位置、本地文件系统或HTTP位置上的数据作为文字值使用generatePDFOutput API。 如果表单设计和XML数据存储在应用程序中，请使用[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#generatepdfoutput) API。
 
 **语法：** `Document generatePDFOutput(String uriOrFileName, Document data, PDFOutputOptions options);`
 
@@ -3768,7 +3768,7 @@ generatePDFOutput API通过将表单设计和数据合并来生成PDF文档。 �
 
 ### generatePDFOutput {#generatepdfoutput-1}
 
-generatePDFOutput API通过将表单设计和数据合并来生成PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。 将generatePrintedOutput API用于表单设计或存储在应用程序中的数据。 如果表单设计和XML数据存储在网络位置、本地或HTTP位置作为文本值，请使用[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#p-generatepdfoutput-p) API。
+generatePDFOutput API通过将表单设计和数据合并来生成PDF文档。 （可选）为每个记录生成元数据文件，或将输出保存到PDF文件。 将generatePrintedOutput API用于表单设计或存储在应用程序中的数据。 如果表单设计和XML数据存储在网络位置、本地或HTTP位置作为文本值，请使用[generatePDFOutput](/help/forms/using/aem-document-services-programmatically.md#generatepdfoutput) API。
 
 **语法：** `Document generatePDFOutput(Document inputdocument, Document data, PDFOutputOptions options)`
 
@@ -4310,8 +4310,8 @@ String outputFolder="C:/Output";
 
 Forms服务提供多个API，可将数据导入交互式PDF表单或从其中导出数据。 交互式PDF表单是一种PDF文档，其中包含一个或多个用于显示和收集用户信息的字段。 该服务支持以下API：
 
-* **[exportData](/help/forms/using/aem-document-services-programmatically.md#p-exportdata-p)：**&#x200B;从PDF表单中导出数据。
-* **[importData](/help/forms/using/aem-document-services-programmatically.md#p-importdata-p)：**&#x200B;将数据导入交互式PDF表单。
+* **[exportData](/help/forms/using/aem-document-services-programmatically.md#exportdata)：**&#x200B;从PDF表单中导出数据。
+* **[importData](/help/forms/using/aem-document-services-programmatically.md#importdata)：**&#x200B;将数据导入交互式PDF表单。
 
 ### exportData {#exportdata}
 

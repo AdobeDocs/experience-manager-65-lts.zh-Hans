@@ -23,7 +23,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '3906'
 ht-degree: 0%
@@ -49,7 +49,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果数据字典未与信件关联，则打开信件预览。 否则，如果信件基于数据字典，则“通信管理”会在“预览”菜单中显示“预览”和“自定义”选项，您可以选择两个选项之一。 您还可以将测试数据与数据字典关联。 当[数据字典关联了测试数据](../../forms/using/data-dictionary.md#p-working-with-test-data-p)时，在选择预览选项时，将打开普通预览并填充测试数据。
+   >如果数据字典未与信件关联，则打开信件预览。 否则，如果信件基于数据字典，则“通信管理”会在“预览”菜单中显示“预览”和“自定义”选项，您可以选择两个选项之一。 您还可以将测试数据与数据字典关联。 当[数据字典关联了测试数据](../../forms/using/data-dictionary.md#working-with-test-data)时，在选择预览选项时，将打开普通预览并填充测试数据。
 
 1. 为了能够在预览通信时呈现通信，您应当是管理员或以下组之一的成员：
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
    如果您没有所需的权限，请向管理员请求相应的访问权限。 有关创建用户并将其添加到组的详细信息，请参阅[将用户或组添加到组](/help/sites-administering/security.md)。 如果您尝试在没有适当权限的情况下渲染通信，则会显示404错误页面。
 
-1. 如果已选择&#x200B;**预览** > **自定义**，则会打开一个对话框。 在对话框中，选择与数据字典对应的数据文件以预览字母，然后选择&#x200B;**预览**。 基于特定信件的数据字典创建数据文件。 有关数据文件的详细信息，请参阅[数据字典](../../forms/using/data-dictionary.md#p-working-with-test-data-p)。
+1. 如果已选择&#x200B;**预览** > **自定义**，则会打开一个对话框。 在对话框中，选择与数据字典对应的数据文件以预览字母，然后选择&#x200B;**预览**。 基于特定信件的数据字典创建数据文件。 有关数据文件的详细信息，请参阅[数据字典](../../forms/using/data-dictionary.md#working-with-test-data)。
 
    ![预览书信](assets/8_previewcustomdatafile.png)
 
@@ -254,7 +254,7 @@ ht-degree: 0%
 
    ![显式分页符](assets/8_pagebreak.png)
 
-1. 要将信件另存为草稿（稍后可继续处理），请选择“另存为草稿”。 若要使用此选项，您的信件需要[已发布](../../forms/using/publishing-unpublishing-forms.md#publishanasset)。 有关详细信息，请参阅[保存草稿和提交信件实例](#savingdrafts)下的草稿实例。
+1. 要将信件另存为草稿（稍后可继续处理），请选择“另存为草稿”。 若要使用此选项，您的信件需要[已发布](../../forms/using/publishing-unpublishing-forms.md#publish-an-asset)。 有关详细信息，请参阅[保存草稿和提交信件实例](#savingdrafts)下的草稿实例。
 
    ![saveasdraft](assets/saveasdraft.png)
 
@@ -284,7 +284,7 @@ ht-degree: 0%
 
 有两种类型的信件实例可以保存：草稿实例和提交实例。
 
-* **草稿实例**：草稿实例捕获您正在预览的信件的当前状态。 要保存草稿实例，请先确保信件及其引用的所有资产均处于“已发布”状态。 有关发布书信的信息，请参阅[发布资产](../../forms/using/publishing-unpublishing-forms.md#publishanasset)。 您需要先发布信件，然后才能将其另存为草稿，因为发布信件时，需要先创建该信件的版本、其相关资源和数据。 您或其他用户无法编辑信件的已发布版本，并且以后可以在与已发布版本没有任何意外差异的情况下还原。 您可以稍后返回此实例，然后从所离开的位置继续。
+* **草稿实例**：草稿实例捕获您正在预览的信件的当前状态。 要保存草稿实例，请先确保信件及其引用的所有资产均处于“已发布”状态。 有关发布书信的信息，请参阅[发布资产](../../forms/using/publishing-unpublishing-forms.md#publish-an-asset)。 您需要先发布信件，然后才能将其另存为草稿，因为发布信件时，需要先创建该信件的版本、其相关资源和数据。 您或其他用户无法编辑信件的已发布版本，并且以后可以在与已发布版本没有任何意外差异的情况下还原。 您可以稍后返回此实例，然后从所离开的位置继续。
 
 * **提交实例**：提交实例在提交时捕获书信的状态。 提交实例存储信件实例在经过后处理后的PDF状态，以及用户在创建通信用户界面中输入的数据。
 

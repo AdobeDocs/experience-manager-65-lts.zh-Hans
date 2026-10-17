@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -42,11 +42,11 @@ ht-degree: 2%
 
 “进程报告”包含以下模块：
 
-* [ProcessDataPublisher服务](#processdatapublisher-service-br-p)
-* [ProcessDataStorage服务](#processdatastorageprovider-service-br-p)
-* [OSGi服务](#osgi-service-br-p)
-* [查询数据servlet](#querydataservlet-service-br-p)
-* [Process Reporting用户界面](#process-reporting-user-interface-br-p)
+* [ProcessDataPublisher服务](#processdatapublisher-service-br)
+* [ProcessDataStorage服务](#processdatastorageprovider-service-br)
+* [OSGi服务](#osgi-service-br)
+* [查询数据servlet](#querydataservlet-service-br)
+* [Process Reporting用户界面](#process-reporting-user-interface-br)
 
 ## 流程报告体系结构 {#process-reporting-architecture-br}
 
@@ -58,13 +58,13 @@ ht-degree: 2%
 
 ProcessDataPublisher服务器定期在AEM Forms数据库上运行，并提取自上次运行服务以来更改的数据。 然后，它将数据发布到Process Data Storage服务。
 
-有关配置服务的详细信息，请参阅[配置ProcessDataPublisher服务](/help/forms/using/process-reporting/install-start-process-reporting.md#p-reportconfiguration-service-p)。
+有关配置服务的详细信息，请参阅[配置ProcessDataPublisher服务](/help/forms/using/process-reporting/install-start-process-reporting.md#reportconfiguration-service)。
 
 ### ProcessDataStorageProvider服务 {#processdatastorageprovider-service-br}
 
 ProcessDataStorageProvider服务从ProcessDataPublisher服务接收流程数据，并将该数据保存到Process Reporting存储库。
 
-有关配置服务的详细信息，请参阅[配置ProcessDataStorageProvider服务](/help/forms/using/process-reporting/install-start-process-reporting.md#p-to-configure-the-process-reporting-repository-locations-p)。
+有关配置服务的详细信息，请参阅[配置ProcessDataStorageProvider服务](/help/forms/using/process-reporting/install-start-process-reporting.md#to-configure-the-process-reporting-repository-locations)。
 
 ### OSGi服务 {#osgi-service-br}
 

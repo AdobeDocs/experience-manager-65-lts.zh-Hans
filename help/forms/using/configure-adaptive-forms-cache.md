@@ -27,7 +27,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 3%
@@ -70,7 +70,7 @@ ht-degree: 3%
   * 使用URL格式`http://host:port/content/forms/af/<afName>.<locale>.html`而不是`http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`请求自适应表单的本地化版本
   * [禁止对格式为`http://host:port/content/forms/af/<adaptivefName>.html`的URL使用浏览器区域设置](supporting-new-language-localization.md#how-localization-of-adaptive-form-works)。
   * 当您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`，并且在配置管理器中禁用了&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，会提供自适应表单的非本地化版本。 非本地化语言是开发自适应表单时使用的语言。 不会考虑为您的浏览器配置的区域设置（浏览器区域设置），并且会提供自适应表单的非本地化版本。
-  * 当您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`并在配置管理器中启用&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，会提供自适应表单的本地化版本（如果可用）。 本地化的自适应表单的语言基于为您的浏览器配置的区域设置（浏览器区域设置）。 它可能会导致[仅缓存自适应表单]的第一个实例。 若要防止实例上发生此问题，请参阅[疑难解答](#only-first-insatnce-of-adptive-forms-is-cached)。
+  * 当您使用URL格式`http://host:port/content/forms/af/<adaptivefName>.html`并在配置管理器中启用&#x200B;**[!UICONTROL 使用浏览器区域设置]**&#x200B;时，会提供自适应表单的本地化版本（如果可用）。 本地化的自适应表单的语言基于为您的浏览器配置的区域设置（浏览器区域设置）。 它可能会导致[仅缓存自适应表单]的第一个实例。 若要防止实例上发生此问题，请参阅[疑难解答](#only-first-instance-of-adaptive-forms-is-cached)。
 
 ### 在Dispatcher中启用缓存
 

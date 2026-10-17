@@ -32,7 +32,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 1%
@@ -148,11 +148,11 @@ CSS自定义的顶级步骤包括：
 * 将样式项添加到此CSS。 有关更多信息，请参阅了解CSS样式。
 * 在`html.jsp`中更新其引用。
 
-有关进行这些自定义的确切步骤，请参阅[AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md)。 AEM Forms工作区附带的CSS文件位于/libs/ws/css/。 对于与CSS相关的自定义设置，请使用[Ship包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)。 有关CSS相关自定义的特定示例，请参阅本文末尾的相关帮助主题。
+有关进行这些自定义的确切步骤，请参阅[AEM Forms工作区自定义的一般步骤](../../forms/using/generic-steps-html-workspace-customization.md)。 AEM Forms工作区附带的CSS文件位于/libs/ws/css/。 对于与CSS相关的自定义设置，请使用[Ship包](../../forms/using/introduction-customizing-html-workspace.md#crx-package)。 有关CSS相关自定义的特定示例，请参阅本文末尾的相关帮助主题。
 
 #### 图像 {#image}
 
-您可以自定义AEM Forms工作区以添加用户头像或添加贵组织的徽标。 对于这些自定义设置，请使用[发运包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)。
+您可以自定义AEM Forms工作区以添加用户头像或添加贵组织的徽标。 对于这些自定义设置，请使用[发运包](../../forms/using/introduction-customizing-html-workspace.md#crx-package)。
 
 自定义图像的顶级步骤如下：
 
@@ -173,7 +173,7 @@ HTML模板可帮助定义工作区用户界面的外观和布局。 通过更新
 * 在用户定义的文件夹中添加新模板。
 * 对复制的文件进行相关更新，例如，新模板的路径。
 
-有关此类自定义的特定示例，请参阅本文结尾提供的帮助主题。 根据要自定义的模板，选择[发运包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)或[开发包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)。
+有关此类自定义的特定示例，请参阅本文结尾提供的帮助主题。 根据要自定义的模板，选择[发运包](../../forms/using/introduction-customizing-html-workspace.md#crx-package)或[开发包](../../forms/using/introduction-customizing-html-workspace.md#crx-package)。
 
 ### 语义更改 {#semantic-changes}
 
@@ -202,7 +202,7 @@ HTML模板可帮助定义工作区用户界面的外观和布局。 通过更新
 
 它主要用于自定义，因为它提供生成以下内容的功能：
 
-* 用于发送、调试和开发配置文件的CRX包（在[CRX包](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)中提到）。
+* 用于发送、调试和开发配置文件的CRX包（在[CRX包](../../forms/using/introduction-customizing-html-workspace.md#crx-package)中提到）。
 * 自定义代码的缩小版本（用于语义更改）。
 
 #### WS内容 {#ws-content}

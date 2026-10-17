@@ -25,7 +25,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 3%
@@ -240,7 +240,7 @@ function getAdobeSignRecipients() {
    </project>
    ```
 
-1. 添加使用[RecipientInfoSpecificer](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口为“分配任务”步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java接口动态选择用户或组的示例](#-sample-scripts-for)。
+1. 添加使用[RecipientInfoSpecificer](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java接口为“分配任务”步骤动态选择用户或组的源代码。 有关示例代码，请参阅[使用Java接口动态选择用户或组的示例](#sample-java-code-to-dynamically-choose-a-user-or-a-group)。
 1. 打开命令提示符并导航到包含OSGi捆绑包项目的目录。 使用以下命令创建OSGi捆绑包：
 
    `mvn clean install`

@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 1%
@@ -179,7 +179,7 @@ maven原型是创建自定义外观的起点。 要使用的原型的详细信�
    * `getEventMap`方法会将构件触发的事件映射到自适应表单模型所需的事件。 默认值映射默认小组件的标准HTML事件，如果触发了备用事件，则需要更新。
    * `showDisplayValue`和`showValue`应用display and edit picture子句，可以覆盖为具有替代行为。
 
-   * 当发生`commit`事件时，`getCommitValue`方法由自适应表单框架调用。 通常，它是退出事件（除了下拉列表、单选按钮和复选框元素，在更改时会发生退出事件）。 有关详细信息，请参阅[自适应Forms表达式](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p)。
+   * 当发生`commit`事件时，`getCommitValue`方法由自适应表单框架调用。 通常，它是退出事件（除了下拉列表、单选按钮和复选框元素，在更改时会发生退出事件）。 有关详细信息，请参阅[自适应Forms表达式](../../forms/using/adaptive-form-expressions.md#value-commit-script)。
 
    * 模板文件提供了各种方法的实现示例。 删除不进行扩展的方法。
 

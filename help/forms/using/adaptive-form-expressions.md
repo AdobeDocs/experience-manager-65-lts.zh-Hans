@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d1f055e0688c24b55f80c7e2be974fe1d28ae8d5
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2871'
 ht-degree: 3%
@@ -219,7 +219,7 @@ click表达式处理对按钮的单击事件执行的操作。 GuideBridge开箱
 
 ### 验证表达式 {#validation-expressions}
 
-字段的验证也可以使用不同字段上的表达式来计算。 这些表达式写入组件的&#x200B;**编辑**&#x200B;对话框的&#x200B;**脚本**&#x200B;选项卡的&#x200B;**验证脚本**&#x200B;字段中。 字段的验证状态取决于表达式返回的值。 有关如何编写此类表达式的信息，请参阅[验证表达式](../../forms/using/adaptive-form-expressions.md#p-validate-expression-p)。
+字段的验证也可以使用不同字段上的表达式来计算。 这些表达式写入组件的&#x200B;**编辑**&#x200B;对话框的&#x200B;**脚本**&#x200B;选项卡的&#x200B;**验证脚本**&#x200B;字段中。 字段的验证状态取决于表达式返回的值。 有关如何编写此类表达式的信息，请参阅[验证表达式](../../forms/using/adaptive-form-expressions.md#validate-expression)。
 
 ## 附加信息 {#additional-information}
 

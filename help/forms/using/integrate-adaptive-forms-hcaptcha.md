@@ -14,7 +14,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 20%
@@ -84,7 +84,7 @@ AEM 6.5自适应Forms支持hCaptcha&amp;reg。 您可以用它来在提交表单
 1. 在&#x200B;**[!UICONTROL 配置容器]**&#x200B;中，选择配置容器，该配置容器包含用于将AEM Forms与hCaptcha连接的云配置。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 
-   如果您没有hCaptcha的配置容器，请参阅[使用hCaptcha连接AEM Forms环境®](#configure-hcaptcha-steps-to-configure-hcaptcha)部分，了解如何创建配置容器。
+   如果您没有hCaptcha的配置容器，请参阅[使用hCaptcha连接AEM Forms环境®](#connect-your-forms-environment-with-hcaptcha-service)部分，了解如何创建配置容器。
 
    ![选择配置容器](/help/forms/using/assets/captcha-properties.png)
 

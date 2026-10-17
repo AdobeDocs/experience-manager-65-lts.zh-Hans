@@ -24,7 +24,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 10%
@@ -126,7 +126,7 @@ ht-degree: 10%
 
 1. 选择&#x200B;**[!UICONTROL 创建]**。 将创建一个主题，并出现一个对话框以打开表单进行编辑。 选择&#x200B;**[!UICONTROL 打开]**&#x200B;以在新选项卡中打开新创建的主题。 主题将在主题编辑器中打开。 对于样式，主题编辑器使用AEM [!DNL Forms]随附的现成自适应表单。
 
-   有关使用主题编辑器UI的信息，请参阅[关于主题编辑器](/help/forms/using/themes.md#aboutthethemeeditor)。
+   有关使用主题编辑器UI的信息，请参阅[关于主题编辑器](/help/forms/using/themes.md#about-the-theme-editor)。
 
 1. 选择&#x200B;**[!UICONTROL 主题选项]** ![主题选项](assets/theme-options.png) > **[!UICONTROL 配置]**。 在&#x200B;**[!UICONTROL 预览表单]**&#x200B;字段中，选择&#x200B;**shipping-address-add-update-form**&#x200B;自适应表单，选择![aem_6_3_forms_save](assets/aem_6_3_forms_save.png)，然后选择&#x200B;**[!UICONTROL 保存]**。 现在，主题编辑器配置为使用您自己的自适应表单，而不是默认的自适应表单。 选择&#x200B;**[!UICONTROL 取消]**&#x200B;以返回主题编辑器。
 

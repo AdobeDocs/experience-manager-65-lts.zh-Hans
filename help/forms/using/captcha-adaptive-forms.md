@@ -29,7 +29,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 12%
@@ -123,7 +123,7 @@ reCAPTCHA Enterprise服务一旦启用，就可用于自适应表单。 请参�
    1. 将版本选择为reCAPTCHA v2，指定reCAPTCHA服务（在步骤1中获得）的名称、站点密钥和密钥，然后选择&#x200B;**[!UICONTROL 创建]**&#x200B;以创建云服务配置。
    1. 在“编辑组件”对话框中，指定在步骤1中获取的站点密钥和密钥。 选择&#x200B;**[!UICONTROL 保存设置]**，然后选择&#x200B;**确定**&#x200B;以完成配置。
 
-   配置reCAPTCHA服务后，便可在自适应表单中使用。 有关详细信息，请参阅[在自适应表单中使用CAPTCHA](#using-captcha)。
+   配置reCAPTCHA服务后，便可在自适应表单中使用。 有关详细信息，请参阅[在自适应表单中使用CAPTCHA](#using-captcha-in-adaptive-forms)。
 
 ![reCAPTCHA v2](/help/forms/using/assets/recaptcha-v2.png)
 

@@ -22,7 +22,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 2%
@@ -181,7 +181,7 @@ ht-degree: 2%
 
 1. 确保布局和片段布局的XFA版本为3.3或更高版本。 如果您使用的是较旧版本的布局和片段布局，则呈现信件时可能会出现问题。 要将旧版XFA更新到最新版本，请完成以下步骤：
 
-   1. [从Forms用户界面下载XFA的zip文件](../../forms/using/import-export-forms-templates.md#p-import-and-export-assets-in-correspondence-management-p)。
+   1. [从Forms用户界面下载XFA的zip文件](../../forms/using/import-export-forms-templates.md#import-and-export-assets-in-correspondence-management)。
    1. 提取文件。
    1. 在最新的Designer中打开XFA文件并保存。 XFA的版本将更新到最新版本。
    1. 在Forms用户界面中上传XFA。

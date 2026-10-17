@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 24%
@@ -412,7 +412,7 @@ OSGi和AEM Forms JEE工作流上以表单为中心的AEM工作流（JEE流程管
 1. 本机AEM Forms文档服务适用于OSGi上以表单为中心的AEM工作流和JEE工作流上的AEM Forms 。 AEM Workflow在OSGi和AEM Forms JEE（流程管理）工作流中使用本机文档服务来处理以表单为中心的AEM工作流。
 1. AEM Forms JEE工作流只能渲染自适应表单。 它不支持将自适应表单渲染为PDF文档。
 1. AEM Forms JEE工作流没有适用于Adobe Sign的单独步骤。 您需要支持Adobe Sign的自适应表单才能使用AEM Forms JEE工作流。 有关详细信息，请参阅[Adobe Sign文档](../../forms/using/working-with-adobe-sign.md#add-and-configure-the-signature-step-component)。
-1. 您可以使用[调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#p-invoke-form-data-model-service-step-p)步骤来调用Web服务服务，并从第三方应用程序中发布或检索数据。
+1. 您可以使用[调用表单数据模型服务](../../forms/using/aem-forms-workflow-step-reference.md#invoke-form-data-model-service-step)步骤来调用Web服务服务，并从第三方应用程序中发布或检索数据。
 1. 您可以使用[发送电子邮件](../../forms/using/aem-forms-workflow-step-reference.md#send-email-step)步骤发送电子邮件。
 
 ## AEM收件箱和AEM Forms应用程序功能之间的差异 {#differences-between-aem-inbox-and-aem-forms-app-features}

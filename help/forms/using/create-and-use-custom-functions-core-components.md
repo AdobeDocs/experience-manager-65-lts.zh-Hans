@@ -18,7 +18,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '3533'
 ht-degree: 2%
@@ -94,7 +94,7 @@ AEM Forms 6.5包括JavaScript函数，这些函数允许您使用规则编辑器
   * date[]：表示日期值的数组。
   * array：表示包含各种类型值的泛型数组。
   * 对象：表示传递到自定义函数的表单对象，而不是直接传递其值。
-  * 范围：表示全局对象，其中包含只读变量，如表单实例、目标字段实例以及在自定义函数中执行表单修改的方法。 此变量声明为JavaScript注释中的最后一个参数，对自适应表单的规则编辑器不可见。 scope参数可访问表单或组件的对象，以触发表单处理所需的规则或事件。 有关Globals对象及其使用方法的详细信息，[单击此处](/help/forms/using/create-and-use-custom-functions-core-components.md#field-and-global-scope-objects-in-custom-functions-support-field-and-global-objects)
+  * 范围：表示全局对象，其中包含只读变量，如表单实例、目标字段实例以及在自定义函数中执行表单修改的方法。 此变量声明为JavaScript注释中的最后一个参数，对自适应表单的规则编辑器不可见。 scope参数可访问表单或组件的对象，以触发表单处理所需的规则或事件。 有关Globals对象及其使用方法的详细信息，[单击此处](/help/forms/using/create-and-use-custom-functions-core-components.md#support-field-and-global-objects)
 
 参数类型为&#x200B;**不区分大小写**，参数名称中不允许有空格。
 
@@ -543,7 +543,7 @@ var c = {
 
 ![正在添加自定义函数客户端库](/help/forms/using//assets/calculateage-customfunction.png)
 
-现在，让我们了解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke-form-data-model-service-invoke)中使用规则编辑器的调用服务来配置和使用自定义函数
+现在，让我们了解如何在AEM Forms 6.5[&#128279;](/help/forms/using/rule-editor-core-components.md#invoke)中使用规则编辑器的调用服务来配置和使用自定义函数
 
 ## 在自适应表单中使用自定义函数 {#use-custom-functions}
 

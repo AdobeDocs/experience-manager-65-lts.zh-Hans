@@ -22,7 +22,7 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2092'
 ht-degree: 7%
@@ -115,7 +115,7 @@ AEM Forms 6.5为基于核心组件的自适应Forms提供了以下列出的主�
 1. [自定义主题的外观](#customize-the-theme)
 1. [为本地部署准备主题](#generate-the-clientlib)
 1. [在本地环境中部署主题](#deploy-the-theme-on-a-local-environment)
-1. [在生产环境中部署主题](#5-deploy-a-theme-on-your-production-environment)
+1. [在生产环境中部署主题](#deploy-theme)
 
 <!--
  ![Theme Customization workflow](/help/forms/using/assets/custom-theme-steps.png)

@@ -23,7 +23,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '3826'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 1. 作者[通过上传架构或从头开始创建数据字典](#createdatadictionary)。
 1. 作者根据数据字典创建信件及交互式通信，并根据需要关联信件及交互式通信中的数据字典元素。
 1. 作者可以下载基于数据字典模式的示例数据XML文件。 作者可以修改示例数据XML文件，该文件可以作为测试数据与数据字典关联。 在信件预览期间也会使用相同的参数。
-1. 在[预览信件](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p)时，作者选择预览包含数据的信件（自定义预览）。 此时会打开书信，其中预填充了作者提供的数据。 这将在创建通信界面中打开。 预览此信件的工程师可以修改此信件中的内容、数据和附件，并可以提交最终信件。 有关创建信件的详细信息，请参阅[创建信件](../../forms/using/create-letter.md)。
+1. 在[预览信件](../../forms/using/create-letter.md#types-of-linkage-available-for-each-of-the-fields)时，作者选择预览包含数据的信件（自定义预览）。 此时会打开书信，其中预填充了作者提供的数据。 这将在创建通信界面中打开。 预览此信件的工程师可以修改此信件中的内容、数据和附件，并可以提交最终信件。 有关创建信件的详细信息，请参阅[创建信件](../../forms/using/create-letter.md)。
 
 ## 先决条件 {#prerequisite}
 

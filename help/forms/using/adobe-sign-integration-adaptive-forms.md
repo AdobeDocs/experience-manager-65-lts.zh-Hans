@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2207'
 ht-degree: 18%
@@ -231,7 +231,7 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 
 #### 使用收到的凭据将AEM Forms与适用于政府的Adobe Acrobat Sign Solutions连接
 
-1. 在浏览器中打开`re-direct URL`。 您在[在AEM实例](#create-redirect-url)部分中创建重定向URL的最后一步中创建并记下了`re-direct URL`。
+1. 在浏览器中打开`re-direct URL`。 您在[在AEM实例](#create-a-redirect-url-for-your-aem-instance)部分中创建重定向URL的最后一步中创建并记下了`re-direct URL`。
 
 1. 在&#x200B;**[!UICONTROL 创建Adobe Sign配置]**&#x200B;页面的&#x200B;**[!UICONTROL 常规]**&#x200B;选项卡中，为该配置指定一个&#x200B;**[!UICONTROL 名称]**，然后选择&#x200B;**[!UICONTROL 下一步]**。 您可以选择指定&#x200B;**[!UICONTROL 标题]**&#x200B;并浏览以选择配置的&#x200B;**[!UICONTROL 缩略图]**。 单击&#x200B;**[!UICONTROL 下一步]**。
 
@@ -282,7 +282,7 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 1. 发布配置。
 1. 使用[复制](/help/sites-deploying/replication.md)在相应的发布实例上创建相同的配置。
 
-现在，您可以[在自适应表单](working-with-adobe-sign.md)或[Adobe Acrobat Sign Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)中添加AEM字段。 确保将用于Cloud Service配置的配置容器添加到为[!DNL Adobe Acrobat Sign]启用的所有自适应Forms。 您可以在自适应表单的属性中指定配置容器。
+现在，您可以[在自适应表单](working-with-adobe-sign.md)或[Adobe Acrobat Sign Workflow](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step)中添加AEM字段。 确保将用于Cloud Service配置的配置容器添加到为[!DNL Adobe Acrobat Sign]启用的所有自适应Forms。 您可以在自适应表单的属性中指定配置容器。
 
 
 ## 配置[!DNL Adobe Sign]计划程序以同步签名状态 {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
@@ -301,5 +301,5 @@ Adobe Acrobat Sign政府解决方案团队要求为Adobe Acrobat Sign应用程�
 ## 相关文章 {#related-articles}
 
 * [在自适应表单中使用 Adobe Sign](../../forms/using/working-with-adobe-sign.md)
-* [使用以表单为中心的工作流的Adobe Sign](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)
+* [使用以表单为中心的工作流的Adobe Sign](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step)
 * [将Adobe Sign与AEM Forms结合使用（视频）](https://helpx.adobe.com/experience-manager/kt/forms/using/adobe-sign-integration-feature-video.html)

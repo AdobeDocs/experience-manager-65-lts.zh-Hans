@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 2%
@@ -58,6 +58,6 @@ ht-degree: 2%
 
 在AEM Forms中，XFA表单模板可由自适应表单或其他XFA表单模板引用。 此外，模板可以引用资源或其他XFA模板。
 
-不建议删除自适应表单引用的XFA表单，因为它可能会损坏自适应表单。 当自适应表单引用XFA表单时，其字段会被绑定。 删除XFA后，自适应表单无法将其字段与XFA字段同步，并显示此类字段的错误消息。 要了解有关引用的XFA删除的影响以及脏的AF的更多信息，请参阅[更新引用的XFA表单](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p)。
+不建议删除自适应表单引用的XFA表单，因为它可能会损坏自适应表单。 当自适应表单引用XFA表单时，其字段会被绑定。 删除XFA后，自适应表单无法将其字段与XFA字段同步，并显示此类字段的错误消息。 要了解有关引用的XFA删除的影响以及脏的AF的更多信息，请参阅[更新引用的XFA表单](/help/forms/using/get-xdp-pdf-documents-aem.md#updating-referenced-xfa-forms)。
 
 要删除此类XFA表单，请更新自适应表单并删除与XFA字段的绑定。

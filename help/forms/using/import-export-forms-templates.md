@@ -27,7 +27,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2481'
 ht-degree: 1%
@@ -136,7 +136,7 @@ ht-degree: 1%
 
 使用此选项可从AEM表单实例中作为包下载所有相应的管理资源和相关依赖项。
 
-例如，如果通信管理具有一个使用图像和文本的字母，则下载的包还包含与字母相关的图像和文本。 与资源关联的所有元数据属性（包括自定义属性）也会下载。 下载包(.cmp)后，您可以[将该包导入其他AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+例如，如果通信管理具有一个使用图像和文本的字母，则下载的包还包含与字母相关的图像和文本。 与资源关联的所有元数据属性（包括自定义属性）也会下载。 下载包(.cmp)后，您可以[将该包导入其他AEM Forms实例](../../forms/using/import-export-forms-templates.md#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management)。
 
 要将所有相应的管理资产和相关依赖项下载为包，请完成以下步骤：
 
@@ -161,7 +161,7 @@ ht-degree: 1%
 
 1. 选择&#x200B;**下载导出的包**&#x200B;链接以下载包文件。
 
-   要将包中的资源添加到通信管理的另一个实例，请[将该包导入到AEM Forms实例](../../forms/using/import-export-forms-templates.md#p-upload-forms-documents-assets-p)。
+   要将包中的资源添加到通信管理的另一个实例，请[将该包导入到AEM Forms实例](../../forms/using/import-export-forms-templates.md#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management)。
 
 ### 将文档片段、信件和/或数据字典导入通信管理 {#import-document-fragments-letters-and-or-data-dictionaries-into-correspondence-management}
 

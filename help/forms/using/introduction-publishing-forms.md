@@ -24,7 +24,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 5%
@@ -84,7 +84,7 @@ Forms门户允许您将表单从表单存储库列出到门户页面上。 它�
 1. **启用Forms Portal组件**：现成可用的Forms Portal组件不可用。 [为AEM Sites页面启用AEM sidekick](/help/forms/using/enabling-forms-portal-components.md)中的组件。
 1. **在页面上列出表单（创建Forms Portal页面）：**&#x200B;您可以在AEM Sites和非AEM网站页面上列出表单。 该列表包含发布实例上可用的表单。 用户可以打开表单并开始填写这些表单。 每当用户打开表单时，都会创建一个表单的新实例：
 
-   1. **在AEM Sites页面上列出表单**：将&#x200B;**[Search &amp; Lister](../../forms/using/creating-form-portal-page.md)**&#x200B;组件添加到该页面并在其中配置&#x200B;**[列表窗格](../../forms/using/creating-form-portal-page.md#p-list-pane-p)**，以便在页面上列出表单。 向&#x200B;**搜索和列表程序**&#x200B;组件添加并配置&#x200B;**搜索窗格**&#x200B;组件，以便向该页面添加搜索功能。 包含Forms Portal组件的页面称为[Forms Portal页面](../../forms/using/creating-form-portal-page.md)。
+   1. **在AEM Sites页面上列出表单**：将&#x200B;**[Search &amp; Lister](../../forms/using/creating-form-portal-page.md)**&#x200B;组件添加到该页面并在其中配置&#x200B;**[列表窗格](../../forms/using/creating-form-portal-page.md#list-pane)**，以便在页面上列出表单。 向&#x200B;**搜索和列表程序**&#x200B;组件添加并配置&#x200B;**搜索窗格**&#x200B;组件，以便向该页面添加搜索功能。 包含Forms Portal组件的页面称为[Forms Portal页面](../../forms/using/creating-form-portal-page.md)。
 
    1. **在非AEM Sites页面上列出表单：**&#x200B;使用[Forms Portal搜索API](/help/forms/using/listing-forms-webpage-using-apis.md)在非AEM Sites页面上查询、检索和列出表单。
 

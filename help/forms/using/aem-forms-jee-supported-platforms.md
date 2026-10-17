@@ -27,7 +27,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 7326db91b35209d8d1316d8e1e75e31359ee0316
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2993'
 ht-degree: 4%
@@ -314,7 +314,7 @@ Adobe Experience Manager Forms需要由Java™开发工具包(JDK)分发提供�
 
 - JEE上的AEM Forms在指定的受支持软件的主版本和次版本之上支持更新和修复包。 但是，除非另外指定，否则不支持更新到下一个主要或次要版本。
 - 基于群集的安装不支持TarMK持久性。 有关支持的持久性的信息，请参阅[为AEM Forms安装选择持久性类型](/help/forms/using/choosing-persistence-type-for-aem-forms.md)。
-- 根据Adobe的[第三方软件支持政策](#third-party-patch-support-policy-third-party-patch-support-policy)，AEM Forms on JEE支持各种第三方软件。
+- 根据Adobe的[第三方软件支持政策](#third-party-patch-support-policy)，AEM Forms on JEE支持各种第三方软件。
 - 根据第三方供应商提供的支持，在JEE支持平台上使用AEM Forms 。 第三方供应商可能不允许某些组合。 例如，许多供应商尚未通过Oracle认证其应用程序服务器。 因此，JEE上的AEM Forms也不支持这些组合。 要确保您选择支持的软件版本，请同时查看第三方供应商的支持列表。
 - JEE上的AEM Forms不支持TarMK冷备用。
 - JEE上的AEM Forms不支持垂直群集。

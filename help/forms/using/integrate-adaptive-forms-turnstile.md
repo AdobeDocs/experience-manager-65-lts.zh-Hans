@@ -14,7 +14,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 15%
@@ -86,7 +86,7 @@ Cloudflare的Turnstile Captcha是一项安全措施，旨在保护表单和站�
 1. 选择自适应表单，然后单击&#x200B;**[!UICONTROL 属性]**。 在&#x200B;**[!UICONTROL 配置容器]**&#x200B;中，选择包含将AEM Forms与Turnstile连接的云配置的配置容器。
 1. 单击&#x200B;**[!UICONTROL 保存并关闭]**。
 
-   如果您没有用于配置Captcha服务的配置容器，请参阅[配置Turnstile](#configure-turnstile-steps-to-configure-hcaptcha)部分以了解如何创建配置容器。
+   如果您没有用于配置Captcha服务的配置容器，请参阅[配置Turnstile](#steps-to-configure-hcaptcha)部分以了解如何创建配置容器。
 
    ![选择配置容器](assets/captcha-properties.png)
 

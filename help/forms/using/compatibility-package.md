@@ -21,7 +21,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 19%
@@ -32,7 +32,7 @@ ht-degree: 19%
 
 在AEM Forms 6.5 LTS中，交互式通信是创建客户通信的默认和推荐方法。 若要继续使用AEM Forms 6.5 LTS中的字母，您需要安装最新的[AEMFD兼容包](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases)。
 
-AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4、6.3和6.2中的以下资源](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms)
+AEMFD兼容包还允许您[在AEM Forms 6.5 LTS上使用AEM Forms 6.5.22.0、6.4、6.3和6.2中的以下资源](../../forms/using/compatibility-package.md#add-support-for-aem-forms-and-assets-in-aem-forms-6.5.lts)
 
 * 文档片段
 * 书信

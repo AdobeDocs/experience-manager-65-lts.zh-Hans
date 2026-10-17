@@ -18,7 +18,7 @@ level_v2:
     internal-label: Beginner
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
     internal-label: Intermediate
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '5748'
 ht-degree: 3%
@@ -66,11 +66,11 @@ ht-degree: 3%
 >
 >可用的规则类型（包括在规则编辑器中定义的条件和操作）还取决于创建规则的表单对象的类型。 规则编辑器仅显示有效的规则类型和选项，用于为特定表单对象类型编写条件和操作语句。 例如，您看不到面板对象的“验证并设置类型的值”。
 
-有关规则编辑器中可用规则类型的详细信息，请参阅规则编辑器中的[可用规则类型](rule-editor.md#p-available-rule-types-in-rule-editor-p)。
+有关规则编辑器中可用规则类型的详细信息，请参阅规则编辑器中的[可用规则类型](rule-editor.md#available-rule-types-in-rule-editor)。
 
 ### 选择规则结构的准则 {#guidelines-for-choosing-a-rule-construct}
 
-虽然您可以使用任何规则构建来实现大多数用例，但以下是选择一种构建而不是另一种构建的一些准则。 有关规则编辑器中可用规则的更多信息，请参阅规则编辑器中的[可用规则类型](rule-editor.md#p-available-rule-types-in-rule-editor-p)。
+虽然您可以使用任何规则构建来实现大多数用例，但以下是选择一种构建而不是另一种构建的一些准则。 有关规则编辑器中可用规则的更多信息，请参阅规则编辑器中的[可用规则类型](rule-editor.md#available-rule-types-in-rule-editor)。
 
 * 创建规则时，一个典型的经验法则是考虑您所编写规则的对象的上下文。 假定您要根据用户在字段A中指定的值隐藏或显示字段B。在这种情况下，您要评估字段A的条件，并根据它返回的值，触发字段B的操作。
 
@@ -111,7 +111,7 @@ ht-degree: 3%
 
 ## 规则编辑器中的可用规则类型 {#available-rule-types-in-rule-editor}
 
-规则编辑器提供了一组可用于编写规则的预定义规则类型。 让我们详细了解一下每种规则类型。 有关在规则编辑器中编写规则的更多信息，请参阅[编写规则](rule-editor.md#p-write-rules-p)。
+规则编辑器提供了一组可用于编写规则的预定义规则类型。 让我们详细了解一下每种规则类型。 有关在规则编辑器中编写规则的更多信息，请参阅[编写规则](rule-editor.md#write-rules)。
 
 ### [!UICONTROL 如果] {#whenruletype}
 
@@ -413,7 +413,7 @@ To define a rule based on a form data model:
 
    ![create-rules](assets/create-rules.png)
 
-   此视图中列出了选定表单对象上的任何现有规则。 有关管理现有规则的信息，请参阅[管理规则](rule-editor.md#p-manage-rules-p)。
+   此视图中列出了选定表单对象上的任何现有规则。 有关管理现有规则的信息，请参阅[管理规则](rule-editor.md#manage-rules)。
 
 1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;以编写新规则。 默认情况下，首次启动规则编辑器时会打开规则编辑器用户界面的可视化编辑器。
 
@@ -443,7 +443,7 @@ To define a rule based on a form data model:
 >
 >您可以在Forms的“对象”和“函数”选项卡中对对象和函数名称和标题执行文本搜索。
 
-在表单对象的左树中，您可以选择表单对象以显示应用于每个对象的规则。 您不仅可以浏览各种表单对象的规则，还可以复制粘贴表单对象之间的规则。 有关详细信息，请参阅[复制粘贴规则](rule-editor.md#p-copy-paste-rules-p)。
+在表单对象的左树中，您可以选择表单对象以显示应用于每个对象的规则。 您不仅可以浏览各种表单对象的规则，还可以复制粘贴表单对象之间的规则。 有关详细信息，请参阅[复制粘贴规则](rule-editor.md#copy-paste-rules)。
 
 ### C.表单对象和功能切换 {#c-form-objects-and-functions-toggle-br}
 
@@ -453,7 +453,7 @@ To define a rule based on a form data model:
 
 可视规则编辑器是规则编辑器用户界面的可视编辑器模式中用于编写规则的区域。 它允许您选择规则类型并相应地定义条件和操作。 在规则中定义条件和操作时，您可以从表单对象和函数窗格中拖放表单对象和函数。
 
-有关使用可视规则编辑器的详细信息，请参阅[编写规则](rule-editor.md#p-write-rules-p)。
+有关使用可视规则编辑器的详细信息，请参阅[编写规则](rule-editor.md#write-rules)。
 <!-- 
 ### E. Visual-code editors switcher {#e-visual-code-editors-switcher}
 
@@ -470,7 +470,7 @@ Users in the forms-power-users group can access code editor. For other users, co
 
 ### E.完成和取消按钮 {#done-and-cancel-buttons}
 
-**[!UICONTROL 完成]**&#x200B;按钮用于保存规则。 您可以保存不完整的规则。 但是，不完整部分无效，因此不会运行。 当您下次从同一表单对象启动规则编辑器时，会列出表单对象中已保存的规则。 您可以在该视图中管理现有规则。 有关详细信息，请参阅[管理规则](rule-editor.md#p-manage-rules-p)。
+**[!UICONTROL 完成]**&#x200B;按钮用于保存规则。 您可以保存不完整的规则。 但是，不完整部分无效，因此不会运行。 当您下次从同一表单对象启动规则编辑器时，会列出表单对象中已保存的规则。 您可以在该视图中管理现有规则。 有关详细信息，请参阅[管理规则](rule-editor.md#manage-rules)。
 
 使用&#x200B;**[!UICONTROL 取消]**&#x200B;按钮可放弃对规则所做的任何更改并关闭规则编辑器。
 
@@ -853,7 +853,7 @@ var c = {
 
    ![复制规则](assets/copyrule.png)
 
-   有关管理现有规则的信息，请参阅[管理规则](rule-editor.md#p-manage-rules-p)。
+   有关管理现有规则的信息，请参阅[管理规则](rule-editor.md#manage-rules)。
 
 1. 选中规则标题旁边的复选框，将显示用于管理规则的选项。 选择&#x200B;**[!UICONTROL 复制]**。
 

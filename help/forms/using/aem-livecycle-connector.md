@@ -24,7 +24,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 1%
@@ -66,7 +66,7 @@ AEM LiveCycle Connector是[AEM Forms附加组件包](/help/forms/using/installin
 
 AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务（可使用标准OSGi方式访问）简化了流程。 LiveCycle Connector提供以下功能：
 
-* 作为OSGi服务的客户端实例：打包为OSGI捆绑包的客户端在[Acrobat服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)部分中列出。 每个客户端jar都在OSGi服务注册表中将客户端实例注册为OSGi服务。
+* 作为OSGi服务的客户端实例：打包为OSGI捆绑包的客户端在[Acrobat服务列表](/help/forms/using/aem-livecycle-connector.md#document-services-list)部分中列出。 每个客户端jar都在OSGi服务注册表中将客户端实例注册为OSGi服务。
 * 用户凭据传播：在中心位置管理连接到LiveCycle服务器所需的连接详细信息。
 * ServiceClientFactory服务：要启动进程，客户端应用程序可以访问ServiceClientFactory实例。
 
@@ -94,7 +94,7 @@ AEM LiveCycle Connector通过将这些客户端实例公开为OSGi服务（可�
    </dependency>
    ```
 
-   要启动服务，请为该服务添加相应的Maven依赖项。 有关依赖项列表，请参阅[Acrobat服务列表](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p)。 例如，对于生成PDF服务，请添加以下依赖项：
+   要启动服务，请为该服务添加相应的Maven依赖项。 有关依赖项列表，请参阅[Acrobat服务列表](/help/forms/using/aem-livecycle-connector.md#document-services-list)。 例如，对于生成PDF服务，请添加以下依赖项：
 
    ```xml
    <dependency>

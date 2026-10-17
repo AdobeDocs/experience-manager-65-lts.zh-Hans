@@ -28,7 +28,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 5%
@@ -41,7 +41,7 @@ AEM Forms管理员自定义工作区，以创建两个不同的URL，并使两�
 
 按照以下步骤配置AEM Forms工作区。
 
-1. 在服务器上安装AEM Forms工作区的开发包。 请参阅[开发包](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)，获取创建该开发包的说明。
+1. 在服务器上安装AEM Forms工作区的开发包。 请参阅[开发包](/help/forms/using/introduction-customizing-html-workspace.md#crx-package)，获取创建该开发包的说明。
 1. 通过访问`https://'[server]:[port]'/lc/crx/de/index.jsp`，以管理员身份登录CRXDE Lite。
 1. 在/content处复制节点ws，并在/content处粘贴。 将节点重命名为ws2。 单击&#x200B;**[!UICONTROL 全部保存]**。 在此节点的属性中，将`sling:resourceType`的值更改为ws2。 单击&#x200B;**[!UICONTROL 全部保存]**。
 

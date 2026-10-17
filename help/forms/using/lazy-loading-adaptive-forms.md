@@ -26,7 +26,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 7%
@@ -59,7 +59,7 @@ ht-degree: 7%
 * **标识和标记全局值**
 基于Forms的交易涉及动态元素，用于从用户捕获相关数据并对其进行处理以简化表单填写体验。 例如，您的表单在片段X中有字段A，其值决定了另一个片段中字段B的有效性。 在这种情况下，如果片段X标记为延迟加载，则即使未加载片段X，字段A的值也必须可用于验证字段B。 要实现此目的，您可以将字段A标记为全局，这样可以确保在未加载片段X时，其值可用于验证字段B。
 
-  有关如何使字段值全局的信息，请参阅[配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#p-configuring-lazy-loading-p)。
+  有关如何使字段值全局的信息，请参阅[配置延迟加载](../../forms/using/lazy-loading-adaptive-forms.md#configuring-lazy-loading)。
 
 * **写入规则以控制字段的可见性**
 Forms包含某些字段和部分，不适用于所有用户且在所有条件下均适用。 Forms作者和开发人员使用可见性或显示隐藏规则，根据用户输入控制他们的可见性。 例如，Office Address字段不会显示在表单的“就业状态”字段中选择“失业”的用户面前。 有关编写规则的更多信息，请参阅[使用规则编辑器](../../forms/using/rule-editor.md)。

@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 5%
@@ -289,7 +289,7 @@ AEM Forms环境包含自环境设置以来的数据。
 
 上次更新时间显示将数据更新推入Process Reporting存储库的上次日期和时间。
 
-有关数据发布服务以及如何计划此服务的详细信息，请参阅“开始使用流程报告”一文中的[计划流程数据发布](/help/forms/using/process-reporting/install-start-process-reporting.md#p-schedule-process-data-publishing-p)。
+有关数据发布服务以及如何计划此服务的详细信息，请参阅“开始使用流程报告”一文中的[计划流程数据发布](/help/forms/using/process-reporting/install-start-process-reporting.md#schedule-process-data-publishing)。
 
 **进程报告用户：**&#x200B;登录用户名显示在上次更新时间的右侧。
 

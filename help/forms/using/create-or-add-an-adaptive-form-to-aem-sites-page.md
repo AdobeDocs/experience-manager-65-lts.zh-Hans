@@ -24,7 +24,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 4083c0007e6f07f55a94b61e8605d4fb0af7e166
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2970'
 ht-degree: 25%
@@ -57,7 +57,7 @@ AEM Forms 会提供自适应表单容器和自适应表单嵌入组件。 您可
 * **多站点管理和Live Copy：** AEM Sites提供强大的[多站点管理和Live Copy功能](/help/sites-administering/msm.md)，使您能够在单个环境中创建和管理多个网站。 此功能现在允许您跨不同站点重用表单，确保一致性并减少重复工作。 通过集中化的控制和管理，您可以跨多个网站高效地维护和更新表单。
 * **主题：** AEM Sites页面提供了一个框架，用于跨多个网页设计和维护一致的可视样式。 它们定义了颜色、字体、样式表和其他对网站整体外观和体验有所贡献的可视元素。 [您可以为自适应表单使用为AEM Sites页面设计的主题，从而节省时间和精力](/help/sites-authoring/style-system.md)。
 * **标记：** AEM Sites页面允许您[为页面、资源或其他内容分配标记或标签](/help/sites-authoring/tags.md)。 标记是关键字或元数据标签，它们提供了一种根据特定标准对内容进行分类和整理的方法。 您可以为AEM中的页面、资源或任何其他内容项分配一个或多个标记，以改进搜索并对资源分类。
-* **锁定和解锁内容：** AEM Sites允许用户在AEM Sites环境中[控制对页面的访问和修改](/help/sites-authoring/editing-content.md#locking-a-page-locking-a-page)。 锁定页面时，即表示页面不会遭到其他用户未经授权的更改或编辑。 只有锁定了内容的用户或指定的管理员才能解锁内容以允许修改。
+* **锁定和解锁内容：** AEM Sites允许用户在AEM Sites环境中[控制对页面的访问和修改](/help/sites-authoring/editing-content.md#locking-a-page)。 锁定页面时，即表示页面不会遭到其他用户未经授权的更改或编辑。 只有锁定了内容的用户或指定的管理员才能解锁内容以允许修改。
 
 
 ## 在AEM页面编辑器中添加自适应表单的各种选项

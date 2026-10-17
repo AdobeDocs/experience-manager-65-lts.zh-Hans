@@ -27,7 +27,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '6814'
 ht-degree: 2%
@@ -215,7 +215,7 @@ _
 
 **删除实例**&#x200B;删除指定的可重复面板或表行的实例。
 
-**导航到**&#x200B;导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或外部URL。 有关详细信息，请参阅[将按钮添加到交互式通信](../../forms/using/create-interactive-communication.md#addbuttontothewebchannel)。
+**导航到**&#x200B;导航到其他交互式通信、自适应表单、其他资产（如图像或文档片段）或外部URL。 有关详细信息，请参阅[将按钮添加到交互式通信](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel)。
 
 ### 设置值 {#set-value-of}
 

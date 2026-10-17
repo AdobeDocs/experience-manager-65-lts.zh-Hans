@@ -27,7 +27,7 @@ role_v2:
     internal-label: Admin
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 6%
@@ -81,13 +81,13 @@ AEM Forms当前支持英语(en)、西班牙语(es)、法语(fr)、意大利语(i
 
 要在自适应表单运行时添加对新区域设置的支持，请执行以下操作：
 
-1. [向GuideLocalizationService服务添加区域设置](../../forms/using/supporting-new-language-localization.md#p-add-a-locale-to-the-guide-localization-service-br-p)
+1. [向GuideLocalizationService服务添加区域设置](../../forms/using/supporting-new-language-localization.md#add-a-locale-to-the-guide-localization-service-br)
 
-1. [为区域设置添加XFA客户端库](../../forms/using/supporting-new-language-localization.md#p-add-xfa-client-library-for-a-locale-br-p)
+1. [为区域设置添加XFA客户端库](../../forms/using/supporting-new-language-localization.md#add-xfa-client-library-for-a-locale-br)
 
-1. [为区域设置添加自适应表单客户端库](../../forms/using/supporting-new-language-localization.md#p-add-adaptive-form-client-library-for-a-locale-br-p)
-1. [为字典添加区域设置支持](../../forms/using/supporting-new-language-localization.md#p-add-locale-support-for-the-dictionary-br-p)
-1. [重新启动服务器](../../forms/using/supporting-new-language-localization.md#p-restart-the-server-p)
+1. [为区域设置添加自适应表单客户端库](../../forms/using/supporting-new-language-localization.md#add-adaptive-form-client-library-for-a-locale-br)
+1. [为字典添加区域设置支持](../../forms/using/supporting-new-language-localization.md#add-locale-support-for-the-dictionary-br)
+1. [重新启动服务器](../../forms/using/supporting-new-language-localization.md#restart-the-server)
 
 ### 向指南本地化服务添加区域设置 {#add-a-locale-to-the-guide-localization-service-br}
 

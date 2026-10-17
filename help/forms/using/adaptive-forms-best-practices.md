@@ -16,7 +16,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '5707'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Adobe Experience Manager (AEM)表单可帮助您将复杂的交易转换为简�
   * 要在/libs中自定义现成自适应表单组件的布局，除[默认布局](/help/forms/using/layout-capabilities-adaptive-forms.md)之外，还[创建自定义布局组件](/help/forms/using/custom-layout-components-forms.md)。
   * 通过创建自定义小部件或外观引入自定义交互。 不建议修改默认组件。 有关详细信息，请参阅[外观框架](/help/forms/using/introduction-widgets.md)。
 
-* 有关处理PII数据的建议，请参阅[处理个人身份信息](/help/forms/using/adaptive-forms-best-practices.md#p-handling-personally-identifiable-information-p)。
+* 有关处理PII数据的建议，请参阅[处理个人身份信息](/help/forms/using/adaptive-forms-best-practices.md#handling-personally-identifiable-information)。
 
 ### 创建表单模板
 
@@ -288,7 +288,7 @@ AEM Forms提供了一个[规则编辑器](/help/forms/using/rule-editor.md)，�
 
 需要服务器端验证，以防止任何绕过客户端验证的尝试以及任何可能危及数据提交和业务规则违规的行为。 服务器端验证通过加载所需的客户端库在服务器上执行。
 
-* 在客户端库中包含用于验证自适应表单中表达式的函数，并在自适应表单容器对话框中指定客户端库。 有关详细信息，请参阅[服务器端重新验证](/help/forms/using/configuring-submit-actions.md#p-server-side-revalidation-in-adaptive-form-p)。
+* 在客户端库中包含用于验证自适应表单中表达式的函数，并在自适应表单容器对话框中指定客户端库。 有关详细信息，请参阅[服务器端重新验证](/help/forms/using/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form)。
 * 服务器端验证会验证表单模型。 建议为验证创建单独的客户端库，并且不要在同一客户端库中将其与HTML样式和DOM操作等其他内容混合。
 
 ### 本地化自适应表单 {#localizing-adaptive-forms}

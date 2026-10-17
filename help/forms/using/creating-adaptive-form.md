@@ -27,7 +27,7 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 11%
@@ -57,7 +57,7 @@ ht-degree: 11%
    >对于默认安装，登录名为`admin`，密码为`admin`。
 
 1. 选择&#x200B;**[!UICONTROL 创建]**&#x200B;并选择&#x200B;**[!UICONTROL 自适应表单]**。
-1. 此时会显示一个用于选择模板的选项。 有关模板的更多信息，请参阅[自适应表单模板](creating-adaptive-form.md#p-adaptive-form-templates-p)。 选择一个模板以将其选中，然后选择下一步。
+1. 此时会显示一个用于选择模板的选项。 有关模板的更多信息，请参阅[自适应表单模板](creating-adaptive-form.md#adaptive-form-templates)。 选择一个模板以将其选中，然后选择下一步。
 1. 将显示“添加属性”选项。 指定以下属性字段的值。 标题和名称字段是必填字段：
 
    * **[!UICONTROL 标题：]**&#x200B;指定表单的显示名称。 标题可帮助您在 [!DNL Experience Manager Forms] 用户界面中标识表单。

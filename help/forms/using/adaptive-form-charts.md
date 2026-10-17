@@ -25,7 +25,7 @@ role_v2:
     internal-label: User
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 2e690827bfa8f3d8227860de4efb802758ae0095
+source-git-commit: 436319b5001c99eb6f12b8f575c0045877bd7eb3
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -148,7 +148,7 @@ AEM Forms附加组件包提供了一个现成的Chart组件。 您可以在自�
 
 ### 自定义函数 {#custom-functions}
 
-除了在图表中使用默认函数之外，您还可以在JavaScript中编写[自定义函数](/help/forms/using/rule-editor.md#custom-functions-in-rule-editor-custom-functions)，并在图表组件的函数列表中提供它们。
+除了在图表中使用默认函数之外，您还可以在JavaScript中编写[自定义函数](/help/forms/using/rule-editor.md#custom-functions)，并在图表组件的函数列表中提供它们。
 
 函数将一个或多个值和类别名称作为输入并返回一个值。 例如：
 
