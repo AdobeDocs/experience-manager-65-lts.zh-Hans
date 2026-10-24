@@ -21,9 +21,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: a09b87b0103e007d357b8901233ae890998a307d
+source-git-commit: 7c3cc17781a4f5ca68ed738e76063a75c18beaeb
 workflow-type: tm+mt
-source-wordcount: '7815'
+source-wordcount: '7886'
 ht-degree: 21%
 ---
 
@@ -382,6 +382,8 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 #### 已知问题 {#forms-known-issues-65-lts-sp3}
 
 * 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将&#x200B;**PostScript (PS)、EPS和PRN文件转换为PDF**&#x200B;失败。 `PsToPdfSvc`本机进程可能会意外终止，导致转换作业失败，并出现`ALC-PDG-003-011`和`ALC-PDG-001-028`等错误。 如需帮助，请联系Adobe客户支持。 (FORMS-28152)
+
+* 在JEE 6.5 LTS SP3 **上的** AEM Forms上，如果将经过数字签名的PDF附加到AEM Forms JEE Workspace中的任务，则上传状态仍将停滞不前或出现“文件无效”错误而失败。 因此，无法将较大的签名PDF附件添加到任务中。 此问题已在更高版本中修复。 有关当前版本的修补程序，请与Adobe支持部门联系。 (FORMS-28517)
 
 在JEE上的AEM Forms上，Reader扩展在WebSphere® Liberty Profile (WLP)平台上不起作用。 LTS SP3中包含的EAR文件在其类路径上缺少所需的Bouncy Castle库。
 
