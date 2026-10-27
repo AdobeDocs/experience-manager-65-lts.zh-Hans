@@ -706,7 +706,7 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip)。
 
 
-###
+&#x200B;###
 
 ### 在使用仅 SSL 功能的情况下，Dispatcher 连接失败（已在 AEM 6.5 LTS SP1 及更高版本中修复）{#ssl-only-feature}
 
