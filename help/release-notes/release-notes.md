@@ -3,6 +3,7 @@ title: Adobe Experience Manager 6.5 LTS SP3的最新发行说明
 description: 查找Adobe Experience Manager 6.5 LTS Service Pack 3的最新发行信息。
 solution: Experience Manager
 feature: Release Information
+owner: Rick Brough
 role: User,Admin,Developer
 exl-id: b5a8f555-c061-4fe2-a100-cc01335959cb
 product_v2:
@@ -21,10 +22,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 7c3cc17781a4f5ca68ed738e76063a75c18beaeb
+source-git-commit: dc085d8f240ae633d82c0b03e8e30ccb82a92008
 workflow-type: tm+mt
-source-wordcount: '7886'
-ht-degree: 21%
+source-wordcount: '7820'
+ht-degree: 20%
 ---
 
 # Adobe Experience Manager 6.5 LTS SP3的最新发行说明 {#release-notes}
@@ -43,7 +44,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
-> **强制修补程序** — 为避免在待机联机压缩期间出现SNFE (SegmentNotFoundException)问题，请安装[已知问题 — 联机压缩期间存储库损坏](#repository-corruption-during-online-compaction-granite-73045)中描述的修补程序。
+> **强制修补程序** — 为避免在待机联机压缩期间出现SNFE (SegmentNotFoundException)问题，请安装[已知问题 — 联机压缩期间存储库损坏](#repository-corruption-during-online-compaction-on-standby)中描述的修补程序。
 
 ## [!DNL Adobe Experience Manager] 6.5 LTS SP3中包含的内容 {#what-is-new}
 
@@ -93,7 +94,7 @@ ht-degree: 21%
 
 * 自定义属性编辑器现在支持键盘交互及其格式控件。 作者可以在工具栏选项之间移动焦点、选择文本样式以及仅使用键盘设置属性值格式。 (SITES-40333)主要
 
-* 现在，当可用的交互需要拖放时，键盘焦点会跳过侧面板组件列表。 此更改可防止键盘用户输入无法使用的组件选择工作流。 (SITES-40752)
+* 现在，当可用的交互需要手动移动时，键盘焦点会跳过侧面板“组件”列表。 此更改可防止键盘用户输入无法使用的组件选择工作流。 (SITES-40752)
 * 现在，关闭叠加操作会将焦点恢复到其触发控制。 键盘和屏幕阅读器用户不再返回叠加图或失去其在界面中的位置。 (SITES-40819)
 * 键盘导航不再将焦点移动到隐藏的页面内容。 此更改将保持可预测的焦点顺序，并防止导航中断。 (SITES-41430)
 * “锁定”按钮现在可根据屏幕阅读器的标题提供精确的反馈。 用户会听到清晰的操作标签，而不是冗长的描述。 (SITES-41431)
@@ -148,7 +149,7 @@ ht-degree: 21%
 * 标题菜单按钮不再告诉屏幕阅读器它们打开了对话框。 屏幕阅读器而是会朗读每个按钮的展开或折叠状态，这可以准确描述菜单行为。 (SITES-24742)
 * “删除”按钮上的文本现在可以在其红色背景中提供足够的对比度。 在确认删除之前，用户可以更轻松地识别操作。 (SITES-24772)
 * 画布卡不再显示指向同一目标的单独图像和标题链接。 单个链接可减少重复的键盘停止和重复的屏幕阅读器公告。 (SITES-24947)
-* 列表视图现在显示具有更突出视觉效果的拖放按钮。 更新了图标大小、重量和对比度，使控件更易于查找和使用。 (SITES-24951)
+* 列表视图现在显示具有更突出视觉效果的手动移动按钮。 更新了图标大小、重量和对比度，使控件更易于查找和使用。 (SITES-24951)
 * 标题按钮现在提供简洁的辅助访问名称：搜索、应用程序、帮助、收件箱和用户。 屏幕阅读器不再在键盘导航期间朗读“可点击”或“图形”等冗余术语。 (SITES-24715)
 * 应用程序导航中的链接现在可显示更强的视觉重点。 增加文本大小和粗细，可提高视力缺佳或色觉差异的用户的可读性。 (SITES-24723)
 * 收件箱链接现在使用语义列表标记。 屏幕阅读器可以将链接识别为相关组，宣布项目计数，并支持更高效的导航。 (SITES-24730)
@@ -242,7 +243,7 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 #### 组件控制台{#sites-component-console-65-lts-sp3}
 
-内容查找器现在会列出名称中包含不可编码字符的资产，而不会失败或生成异常。 “组件实时使用情况”页面还连续加载大型结果集，而不会在滚动期间显示空行。 (SITES-44672)主要
+内容查找器现在会列出名称中包含不可编码字符的资产，而不会失败或生成异常。 “组件实时使用情况”页面还连续加载大型结果集，而不会在滚动期间显示空行。 (SITES-44672)
 
 <!--
 #### Content API{#sites-content-api-65-lts-sp3}
@@ -325,51 +326,51 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 #### 增强功能 {#forms-enhancements-65-lts-sp3}
 
-* Forms-24360：添加了对Microsoft Office 2024的PDF Generator (PDFG)支持。 这适用于OSGi和JEE部署。
-* Forms-24949：在Forms 6.5 LTS中添加了AEM Forms Builder代理支持。 这会为代理所需的Forms Manager HTTP API和表单生成人工智能(GenAI) HTTP API提供支持。
-* Forms-25180：向AEM Forms用户界面添加了`daysUntilSigningDeadline`值，以便作者可以向收件人显示Adobe Sign签名截止日期前的剩余天数。
-* Forms-25182、FORMS-25181：现在，当配置了单个用户帐户时，PDF Generator (PDFG)支持多线程文档转换。 这适用于OSGi和JEE部署。
-* Forms-27595：为AEM Forms Document Security中的动态水印添加了&#x200B;**用户配置文件描述**&#x200B;属性，因此水印可以包含用户的配置文件描述。
+* 添加了对Microsoft Office 2024的PDF Generator (PDFG)支持。 这适用于OSGi和JEE部署。 (FORMS-24360)
+* 在AEM Forms 6.5 LTS上添加了Forms Builder代理支持。 这会为代理所需的Forms Manager HTTP API和表单生成人工智能(GenAI) HTTP API提供支持。 (FORMS-24949)
+* 已将`daysUntilSigningDeadline`值添加到AEM Forms用户界面，以便作者可以向收件人显示Adobe Sign签名截止日期剩下多少天。 (FORMS-25180)
+* 当使用单个用户帐户配置时，PDF Generator (PDFG)现在支持多线程文档转换。 这适用于OSGi和JEE部署。 （FORMS-25182和FORMS-25181）
+* 在AEM Forms Document Security中为动态水印添加了&#x200B;**用户配置文件描述**&#x200B;属性，因此水印可以包含用户的配置文件描述。 (FORMS-27595)
 * 除了Oracle数据库之外，WebSphere® Liberty Profile (WLP)现在还支持Microsoft® SQL Server。
 
 #### 修复的问题 {#forms-fixed-issues-65-lts-sp3}
 
-* Forms-23726：由于`xsom`库冲突，在自适应Forms属性中应用XML架构失败。 现在可以选择架构。
-* Forms-24296： Foundation组件文件附件字段在上传时接受了不允许的文件类型（例如`.xsd`），并且仅在提交时拒绝了这些类型，这与其他阻止的类型不同。 现在，不允许的类型在上传时会被阻止。
-* Forms-24603：在通信管理信函中，包含条件的文本片段在另存为草稿时丢失了行分隔符。 草稿现在保留原始换行符。
-* Forms-24783：从基于Open Services Gateway Initiative (OSGi)的Forms工作流中的`assignTask`步骤中删除了文件附件。 附件现在通过任务分配保留。
-* Forms-24877：应用显示模式时，日期选取器日历图标未显示任何可访问的标签，因此NVDA屏幕阅读器仅声明“可点击”。 图标现在提供描述性标签。
-* Forms-24913：在Adobe Sign步骤之后，AEM Forms工作流停止，因为从未返回签名状态。 现在，签名完成后，工作流会继续运行。
-* Forms-25033：在键盘选项卡顺序中跳过了涂写签名组件，这给仅使用键盘的用户造成了辅助功能障碍。 选项卡导航现在可到达字段。
-* Forms-25045：繁体中文（香港）翻译在升级后停止呈现，因此表单回退到默认语言。 现在，本地化文本可正确呈现。
-* Forms-25170：当开始实例计数为0时，调用`addInstance()`未显示动态添加的面板。 现在，已添加的面板会立即显示。
-* Forms-25225：服务器端重新验证移除了自适应Forms中片段外部的字段翻译，将标签恢复到基本语言。 这些翻译现在会被保留。
-* Forms-25233：在OSGi部署上，汇编程序服务无法解析XDP文件中的嵌套片段引用，导致汇编输出中缺少这些引用。 嵌套片段现已解析。
-* Forms-25289： Forms渲染服务跨Service Pack针对相同的输入返回不同的输出，这将影响通信管理信件。 现在，渲染输出是一致的。
-* Forms-25290：重新打开时，已保存的通信管理信件会丢失空格，并且在某些位置显示误报的“x”。 保存的信件内容现在保持不变。
-* Forms-25346：升级Service Pack后，交互式通信(IC)字母在加载旋转图标上冻结，并且字母在预览中加载了丢失的间距。 现在可以正确加载和设置间距。
-* Forms-25431：“创建表单片段”向导在标题字段中的每个击键时发送一个网络请求。 已删除多余的呼叫。
-* Forms-25645：从内联上传的JSON架构创建基于核心组件的自适应表单片段失败，原因是“指定了ALC-FMG-700-009无效表单模型”。 现在接受内联JSON架构。
-* Forms-25646：根据JSON架构构建的基于核心组件的自适应表单片段在编辑器中显示了一个空的数据源面板。 该面板现在列出了架构数据源。
-* Forms-25674：交互式通信(IC)代理用户界面向空白页打开，阻止代理查看IC内容。 代理用户界面现在呈现。
-* Forms-25686：在“创建自适应表单片段”向导中切换架构类型选项时，没有清除上一个选项的状态，从而产生架构不匹配。 向导现在会重置非活动选项。
-* Forms-25757：应用主题不会更新基础客户端库，因此主题更改似乎没有效果。 主题现在可更新基本客户端库。
-* Forms-25825：移动设备汉堡菜单未响应点击，导致导航在移动设备上不可用。 该菜单现在会按预期打开。
-* Forms-26333：取消发布表单后，发布操作消失，从而阻止重新发布。 现在，取消发布后即可发布。
-* Forms-26763：在Designer中，对静态文本对象内的超链接上的粗体格式在对文本进行任何编辑后丢失。 现在，粗体格式保留在编辑中。
-* Forms-26817：在自适应表单上单击“重置”会清除图像组件中作者配置的图像并留下损坏的图像，而其他字段会正确重置。 重置现在会保留配置的映像。
-* Forms-26852：在“代理”用户界面中，日期/时间字段显示的日期比存储的值早一天。 字段现在显示正确的日期。
-* Forms-26733、FORMS-26734：已将Apache Log4j更新至版本2.25.5。
+* 由于`xsom`库冲突，在自适应Forms属性中应用XML架构失败。 现在可以选择架构。 (FORMS-23726)
+* Foundation组件文件附件字段在上传时接受不允许的文件类型（例如`.xsd`），并且仅在提交时拒绝它们，这与其他阻止的类型不同。 现在，不允许的类型在上传时会被阻止。 (FORMS-24296)
+* 在通信管理信件中，包含条件的文本片段在另存为草稿时丢失了行符号。 草稿现在保留原始换行符。 (FORMS-24603)
+* 从基于Open Services Gateway Initiative (OSGi)的Forms工作流中的`assignTask`步骤中删除了文件附件。 附件现在通过任务分配保留。 (FORMS-24783)
+* 应用显示模式时，日期选取器日历图标未显示任何可访问的标签，因此NVDA屏幕阅读器仅声明“可点击”。 图标现在提供描述性标签。 (FORMS-24877)
+* 在Adobe Sign步骤之后，AEM Forms工作流停止，因为从未返回签名状态。 现在，签名完成后，工作流会继续运行。 (FORMS-24913)
+* 在键盘选项卡顺序中跳过了Scribble Signature组件，这给仅使用键盘的用户造成了辅助功能障碍。 选项卡导航现在可到达字段。 (FORMS-25033)
+* 繁体中文（香港）翻译在升级后停止呈现，因此表单回退到默认语言。 现在，本地化文本可正确呈现。 (FORMS-25045)
+* 当开始实例计数为0时，调用`addInstance()`未显示动态添加的面板。 现在，已添加的面板会立即显示。 (FORMS-25170)
+* 服务器端重新验证删除了位于自适应Forms中的片段之外的字段翻译，将标签恢复到基本语言。 这些翻译现在会被保留。 (FORMS-25225)
+* 在OSGi部署中，汇编程序服务无法解析XDP文件中的嵌套片段引用，导致汇编输出中缺少这些引用。 嵌套片段现已解析。 (FORMS-25233)
+* Forms渲染服务跨服务包对相同的输入返回了不同的输出，从而影响通信管理信件。 现在，渲染输出是一致的。 (FORMS-25289)
+* 重新打开时，已保存的通信管理信件丢失了空格，并且在某些位置显示了一个误区“x”。 保存的信件内容现在保持不变。 (FORMS-25290)
+* Service Pack升级后，交互式通信(IC)字母在加载旋转图标上冻结，在预览中加载了丢失间距的字母。 现在可以正确加载和设置间距。 (FORMS-25346)
+* 创建表单片段向导在标题字段中的每个击键时发送一个网络请求。 已删除多余的呼叫。 (FORMS-25431)
+* 从内联上传的JSON架构创建基于核心组件的自适应表单片段失败，原因是“指定了ALC-FMG-700-009无效的表单模型”。 现在接受内联JSON架构。 (FORMS-25645)
+* 基于JSON架构构建的核心组件的自适应表单片段在编辑器中显示一个空的数据源面板。 该面板现在列出了架构数据源。 (FORMS-25646)
+* 交互式通信(IC)代理用户界面向空白页打开，阻止代理查看IC内容。 代理用户界面现在呈现。 (FORMS-25674)
+* 在创建自适应表单片段向导中切换架构类型选项时，不会清除上一个选项的状态，从而导致架构不匹配。 向导现在会重置非活动选项。 (FORMS-25686)
+* 应用主题不会更新基础客户端库，因此主题更改似乎没有效果。 主题现在可更新基本客户端库。 (FORMS-25757)
+* 移动汉堡菜单没有响应点击，导致导航在移动设备上不可用。 该菜单现在会按预期打开。 (FORMS-25825)
+* 取消发布表单后，发布操作消失，这会阻止重新发布。 现在，取消发布后即可发布。 (FORMS-26333)
+* 在Designer中，对静态文本对象内的超链接进行编辑后，其粗体格式会丢失。 现在，粗体格式保留在编辑中。 (FORMS-26763)
+* 单击自适应表单上的重置可清除图像组件中作者配置的图像并留下损坏的图像，而其他字段可正确重置。 重置现在会保留配置的映像。 (FORMS-26817)
+* 在“代理”用户界面中，日期/时间字段显示的日期比存储的值早一天。 字段现在显示正确的日期。 (FORMS-26852)
+* 已将Apache Log4j更新到版本2.25.5。 （FORMS-26733和FORMS-26734）
 
 已在6.5 LTS Service Pack 3中为JEE上的AEM Forms修复以下问题：
 
-* Forms-27585：在JEE上的AEM Forms上，当脚本调用`closeDoc()`时，基于XFA的PDF forms调用`submitForm()`无法在Adobe Reader或Acrobat中显示提交结果。 现在，提交结果可正确显示。
-* Forms-25998：在JEE上的AEM Forms上，在管理控制台中测试HSM连接时，在Java 21下注册Hardware Security Module (HSM)私钥证书失败，出现`IllegalAccessError`。 HSM私钥证书注册现在有效。
-* Forms-24993：在JEE上的AEM Forms上，在调用Web服务步骤中加载WSDL失败，出现`SAXException`（“文件过早结束”）。 WSDL现在可正确加载。
-* Forms-24518：在JEE上的AEM Forms (JBoss)上，由于旧版JSTL taglib URI，在新安装后，Reader扩展Web应用程序返回了“错误处理请求”。 Reader扩展Web应用程序现在加载。
-* Forms-27495：在JEE上的AEM Forms上，启用单用户模式后，PDF Generator未转换Excel (`.xlsx`)文件，转换将无限期挂起。 Excel转换现在在单用户模式下完成。
-* Forms-27098：在JEE上的AEM Forms上，由于具有SOAP SDK (`/sdk`)身份验证入口，以管理员身份登录到`/lc`失败。 管理员登录现在成功。
-* Forms-25869：在JEE上的AEM Forms上，PDF Generator包含更新的转化引擎修复，以提高转化的可靠性。
+* 在JEE上的AEM Forms上，当脚本调用`closeDoc()`时，基于XFA的PDF forms调用`submitForm()`无法在Acrobat Reader或Acrobat中显示提交结果。 现在，提交结果可正确显示。 (FORMS-27585)
+* 在JEE上的AEM Forms上，在管理控制台中测试HSM连接时，在Java 21下注册Hardware Security Module (HSM)私钥证书失败，出现`IllegalAccessError`。 HSM私钥证书注册现在有效。 (FORMS-25998)
+* 在JEE上的AEM Forms上，在调用Web服务步骤中加载WSDL失败，出现`SAXException`（“文件过早结束”）。 WSDL现在可正确加载。 (FORMS-24993)
+* 在JEE上的AEM Forms (JBoss)上，由于旧版JSTL taglib URI，Reader扩展Web应用程序在全新安装后返回了“错误处理请求”。 Reader扩展Web应用程序现在加载。 (FORMS-24518)
+* 在JEE上的AEM Forms上，启用单用户模式后，PDF Generator未转换Excel (`.xlsx`)文件，转换将无限期挂起。 Excel转换现在在单用户模式下完成。 (FORMS-27495)
+* 在JEE上的AEM Forms上，由于具有SOAP SDK (`/sdk`)身份验证入口，以管理员身份登录到`/lc`失败。 管理员登录现在成功。 (FORMS-27098)
+* 在JEE上的AEM Forms上，PDF Generator包含更新的转化引擎修复，以提高转化的可靠性。 (FORMS-25869)
 
 在JEE上&#x200B;**安装AEM Forms 6.5 LTS SP3**
 
@@ -383,7 +384,7 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 * 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将&#x200B;**PostScript (PS)、EPS和PRN文件转换为PDF**&#x200B;失败。 `PsToPdfSvc`本机进程可能会意外终止，导致转换作业失败，并出现`ALC-PDG-003-011`和`ALC-PDG-001-028`等错误。 如需帮助，请联系Adobe客户支持。 (FORMS-28152)
 
-* 在JEE 6.5 LTS SP3 **上的** AEM Forms上，如果将经过数字签名的PDF附加到AEM Forms JEE Workspace中的任务，则上传状态仍将停滞不前或出现“文件无效”错误而失败。 因此，无法将较大的签名PDF附件添加到任务中。 此问题已在更高版本中修复。 有关当前版本的修补程序，请与Adobe支持部门联系。 (FORMS-28517)
+* 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将经过数字签名的PDF上传到AEM Forms JEE Workspace中的任务失败或挂起。 因此，无法将较大的签名PDF附件添加到任务中。 此问题已在更高版本中修复。 有关当前版本的修补程序，请与Adobe支持部门联系。 (FORMS-28517)
 
 在JEE上的AEM Forms上，Reader扩展在WebSphere® Liberty Profile (WLP)平台上不起作用。 LTS SP3中包含的EAR文件在其类路径上缺少所需的Bouncy Castle库。
 
@@ -396,7 +397,7 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
    bcmail-jdk18on-1.84.jar bcprov-jdk18on-1.84.jar bcpkix-jdk18on-1.84.jar bcutil-jdk18on-1.84.jar
    ```
 
-1. 将修改后的EAR文件重新部署到WebSphere® Liberty配置文件`dropins`文件夹：
+1. 将修改后的EAR文件重新部署到WebSphere® Liberty配置文件`dropins`文件夹
    1. 停止WebSphere® Liberty配置文件服务器并从`<WebSphere Liberty Profile install location>\usr\servers\aemforms\dropins`中删除`adobe-livecycle-websphere.ear`。
    1. 从`<WebSphere Liberty Profile install location>\usr\servers\<server-name>\apps\expanded\`中删除`adobe-livecycle-websphere.ear`目录。
    1. 将修改后的EAR文件从步骤2复制到`<WebSphere Liberty Profile install location>\usr\servers\aemforms\dropins`。
@@ -404,9 +405,7 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 
 #### 安全修复 {#forms-security-fixes-65-lts-sp3}
 
-此版本解决了AEM Forms（包括XSS、SSRF和XXE）中的安全漏洞以及更新库。
-
-
+此版本解决了AEM Forms安全漏洞（包括XSS、SSRF和XXE）以及更新库。
 
 
 ### 基础 {#foundation-65-lts-sp3}
@@ -551,7 +550,7 @@ Eclipse Jetty 11.0.x 被用作快速入门的 servlet 引擎。
 
 适用于：安装Service Pack 3 (SP3)的AEM 6.5 LTS（内部部署）客户。 SP3作为快速入门JAR提供。
 
-**为什么这个升级做法很重要**
+**为什么此升级实践很重要**
 用于 AEM 6.5 LTS 的 SP2 以 Quickstart JAR 形式提供，而不是需要通过包管理器安装的 ZIP 文件。 内部部署客户通过替换Quickstart JAR、提取它并重新启动来进行升级。 此方法与Adobe的标准升级过程保持一致。
 
 
@@ -667,19 +666,15 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 ## 已知问题 {#known-issues}
 
-### 在线压缩待机期间存储库损坏(GRANITE-73045) {#repository-corruption-during-online-compaction-granite-73045}
+### 在线压缩待机期间存储库损坏 {#repository-corruption-during-online-compaction-on-standby}
 
-如果实例以前作为TarMK冷备用运行，并且后来被提升为主实例，则用户在联机压缩期间可能会遇到存储库损坏的情况。 在这种场景中可能会发生 `SegmentNotFoundException` (SNFE)，可能导致存储库损坏。
+如果实例以前作为TarMK冷备用运行且后来升级为主实例，则联机压缩可能会损坏具有`SegmentNotFoundException` (SNFE)的JCR存储库。
 
-要解决此问题，请从[软件分发](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/granite-74457/cq-6.5.lts.3-hotfix-GRANITE-74457-1.0.zip)安装热修复程序。 由于热修复程序包含一个低级 `oak-segment-tar` 捆绑包，因此实例会在安装后重新启动。
+**解决方法**
 
-应用程序时，计划好实例的停机时间。 对于离线压缩，请使用相应的 [`oak-run` jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/granite-74457/oak-run-2.4.1-B002.jar)，也在软件分发中提供。
-
->[!NOTE]
->
-> * 对于任何`oak-run`操作，请使用[`oak-run` 2.4.1-B002 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/granite-74457/oak-run-2.4.1-B002.jar)。
->
-> * 通过设置系统属性 `oak.segment.cleanup.skipDanglingFutureReclaim=true` 启动 AEM。
+1. 从Software Distribution安装[修补程序](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/granite-74457/cq-6.5.lts.3-hotfix-GRANITE-74457-1.0.zip)。 它包含一个较低级别的`oak-segment-tar`捆绑包，因此实例会在安装后重新启动 — 为停机时间进行规划。
+1. 启动AEM时设置系统属性`oak.segment.cleanup.skipDanglingFutureReclaim=true`。 在AEM启动时，此标志是必需的，而不是在运行离线压缩时。
+1. 对于任何`oak-run`操作，请使用软件分发中的匹配[`oak-run` 2.4.1-B002 jar](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq660/hotfixes/granite-74457/oak-run-2.4.1-B002.jar)。
 
 ### AEM Forms
 
@@ -710,7 +705,6 @@ Adobe 不断审阅并改进产品功能，更新或取代旧版功能，提供�
 
 从 Adobe 软件分发门户下载索引包 [cq-dam-cfm-indices](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fcq-dam-cfm-indices-1.1.5.zip)。
 
--->
 
 &#x200B;###
 
