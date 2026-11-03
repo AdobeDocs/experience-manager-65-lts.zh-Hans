@@ -7,9 +7,9 @@ user-guide-description: 使用Adobe Experience Manager 6.5 LTS文档了解它的
 breadcrumb-title: 用户指南
 user-guide-title: AEM 6.5 LTS
 nudge: true
-source-git-commit: 82ad777feafc14635e26f445a1be6001a2b82672
+source-git-commit: bac5d173f2b6c822f2aa59a6647b5cb127788d2d
 workflow-type: tm+mt
-source-wordcount: '7809'
+source-wordcount: '7768'
 ht-degree: 66%
 ---
 # Adobe Experience Manager 6.5 LTS文档 {#content}
@@ -772,13 +772,7 @@ ht-degree: 66%
     + [启用 AEM 来搜索受文档安全功能保护的 PDF 和 Microsoft Office 文档](/help/forms/using/enable-search-for-drm-protected-pdf-and-office-documents-in-aem.md)
     + [代表其他用户保护文档](/help/forms/using/protect-document-on-behalf-of-another-user.md)
   + Forms Designer {#use-forms-designer}
-    + [Forms Designer 帮助](/help/forms/using/forms-designer-help.md)
-    + [使用Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
-    + [Designer快速入门教程](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
-    + [Designer示例](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
-    + [Designer脚本基础知识](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65_cn)
-    + [Designer脚本参考](https://www.adobe.com/go/learn_aemforms_scriptingReference_65_cn)
-    + [Designer FormCalc参考](https://www.adobe.com/go/learn_aemforms_formCalc_65_cn)
+    + [Forms 设计器帮助](/help/forms/using/forms-designer-help.md)
     + [在 HTML5 Forms 中使用潦草签名](/help/forms/using/scribble-signature.md)
     + [在 Designer 中更改 Page Zero 内容](/help/forms/using/changing-page-zero-content-designer.md)
     + 辅助功能的最佳做法 {#accessibility-best-practices}
