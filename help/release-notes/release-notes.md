@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: dc085d8f240ae633d82c0b03e8e30ccb82a92008
+source-git-commit: 5bc7e1ae18a7ee667241c2c82b55d3f32e71ce41
 workflow-type: tm+mt
-source-wordcount: '7820'
+source-wordcount: '7863'
 ht-degree: 20%
 ---
 
@@ -381,6 +381,8 @@ Headless内容片段REST API捆绑包删除过时的功能切换和相关条件�
 1. 如果您的项目使用`adobe-livecycle-client.jar` SDK客户端库，请在项目的类路径中更新它。 最新版本位于`<AEM_Forms_Installation_dir>/sdk/client-libs/common/adobe-livecycle-client.jar`。
 
 #### 已知问题 {#forms-known-issues-65-lts-sp3}
+
+* 在&#x200B;**JEE上的AEM Forms 6.5 LTS SP3和Windows**&#x200B;上的OSGi上，将现有PDF Generator文档导出为其他支持的文件格式时，PDF (PDFG)会挂起。 导出操作未完成，并且未返回转换的输出文件。 (FORMS-29849)
 
 * 在JEE 6.5 LTS SP3 **上的** AEM Forms上，将&#x200B;**PostScript (PS)、EPS和PRN文件转换为PDF**&#x200B;失败。 `PsToPdfSvc`本机进程可能会意外终止，导致转换作业失败，并出现`ALC-PDG-003-011`和`ALC-PDG-001-028`等错误。 如需帮助，请联系Adobe客户支持。 (FORMS-28152)
 
